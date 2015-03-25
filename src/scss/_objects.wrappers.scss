@@ -1,0 +1,9 @@
+.o-wrapper {
+    padding-right: 5%;
+    padding-left:  5%;
+
+    @include media-query(md) {
+        padding-right: 10%;
+        padding-left:  10%;
+    }
+}

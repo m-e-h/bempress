@@ -1,0 +1,22 @@
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl,
+blockquote, p, address,
+table,
+fieldset, figure,
+pre {
+    margin-bottom: $base-spacing-unit;
+}
+
+ul, ol,
+dd {
+    margin-left: $base-spacing-unit;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: $base-spacing-unit 0;
+    padding: 0;
+}

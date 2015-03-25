@@ -1,0 +1,158 @@
+/*
+Theme Name: BEMpress
+Theme URI: https://github.com/m-e-h/bempress
+Author: Marty Helmick
+Author URI: https://github.com/m-e-h
+Description: Starter Theme focused on OOCSS and such.
+Version: 0.1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: bempress
+GitHub Theme URI: https://github.com/m-e-h/bempress
+Tags:
+*/
+
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Default..............inuitcss’ default settings.
+ * Global...............Globally-available variables and settings/config.
+ * Colors...............Manage our color palette in isolation.
+ *
+ * TOOLS
+ * Mixins...............inuitcss’ default mixins.
+ * Aliases..............Aliases onto longer inuitcss variables and mixins.
+ *
+ * GENERIC
+ * Normalize.css........A level playing field.
+ * Reset................A pared back reset to remove margins.
+ * Box-sizing...........Better default `box-sizing`.
+ * Shared...............Sensibly and tersely share global commonalities.
+ *
+ * ELEMENTS
+ * Page.................Page-level styles (HTML element).
+ * Headings.............Heading styles
+ * Type.................Misc type styles
+ * Links................Hyperlink styles
+ * Lists................inuitcss list styles
+ * Images...............inuitcss images
+ * Quotes...............Styling for blockquotes, etc.
+ *
+ * OBJECTS
+ * Wrappers.............Wrappers and page constraints.
+ * Layout...............inuitcss’ layout tool.
+ * Media................The media object.
+ *
+ * COMPONENTS
+ * Page-title............Page header styles.
+ * Promo................Lead promo blocks on the home page.
+ * Buttons..............Extension of inuitcss’ buttons.
+ * Avatars..............User profile pics.
+ *
+ * TRUMPS
+ * Links................Links, you know.
+ * Widths...............Simple width helper classes.
+ */
+
+
+
+
+
+/**
+ * #SETTINGS
+ */
+@import "bower/inuit-defaults/settings.defaults";
+@import "settings.global";
+@import "settings.colors";
+@import "settings.responsive";
+
+
+
+
+
+/**
+ * #TOOLS
+ */
+@import "bower/inuit-functions/tools.functions";
+@import "bower/inuit-mixins/tools.mixins";
+@import "bower/inuit-responsive-tools/tools.responsive";
+@import "tools.mixins";
+@import "tools.aliases";
+
+
+
+
+/**
+ * #GENERIC
+ */
+@import "bower/inuit-normalize/generic.normalize";
+@import "generic.reset";
+@import "generic.sanitize";
+
+
+
+
+
+/**
+ * #ELEMENTS
+ */
+@import "bower/inuit-page/base.page";
+@import "elements.page";
+@import "bower/inuit-headings/base.headings";
+@import "elements.headings";
+@import "elements.links";
+@import "bower/inuit-lists/base.lists";
+@import "bower/inuit-images/base.images";
+@import "elements.lists";
+@import "elements.images";
+@import "elements.quotes";
+
+
+
+
+
+/**
+ * #OBJECTS
+ */
+@import "bower/inuit-buttons/objects.buttons";
+@import "objects.layout";
+@import "bower/inuit-box/objects.box";
+@import "bower/inuit-media/objects.media";
+@import "objects.tables";
+@import "objects.media";
+@import "objects.forms";
+@import "bower/inuit-flag/objects.flag";
+@import "bower/inuit-list-ui/objects.list-ui";
+@import "objects.wrappers";
+@import "objects.cards";
+
+
+
+
+
+/**
+ * #COMPONENTS
+ */
+@import "components.page-title";
+@import "components.buttons";
+@import "components.testimonials";
+@import "components.avatars";
+@import "components.site-nav";
+@import "components.meta";
+@import "components.code";
+
+
+
+
+
+/**
+ * #TRUMPS
+ */
+
+//@import "bower/inuit-widths/trumps.widths";
+@import "trumps.links";
+@import "trumps.widths";
+@import "bower/inuit-spacing/trumps.spacing";
+@import "trumps.helpers";
+@import "trumps.headings";

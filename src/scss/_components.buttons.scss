@@ -1,0 +1,17 @@
+.btn {
+    outline: 0;
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: darken($btn-bg, 10)
+    }
+}
+
+.c-btn,
+button,
+.button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    @extend .btn;
+}

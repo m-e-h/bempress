@@ -1,0 +1,68 @@
+// /*------------------------------------*\
+//     #MIXINS
+// \*------------------------------------*/
+
+// Create a fully formed type style (sizing and vertical rhythm) by passing in a
+// single value, e.g.:
+//
+// .foo {
+//     @include font-size(10px);
+// }
+
+@mixin font-size($inuit-font-size, $inuit-line-height: auto) {
+    @include inuit-font-size($inuit-font-size, $inuit-line-height: auto);
+}
+
+@mixin font-size-sm {
+    @include inuit-font-size($base-font-size - 2);
+}
+
+@mixin font-size-md {
+    @include inuit-font-size($base-font-size);
+}
+
+@mixin font-size-lg {
+    @include inuit-font-size($inuit-heading-size-3);
+}
+
+@mixin font-size-xl {
+    @include inuit-font-size($inuit-heading-size-1);
+}
+
+// Clearfix
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+// Just some helpers...
+@mixin sm {
+    @include media-query(sm) {
+        @content;
+    }
+}
+
+@mixin md {
+    @include media-query(md) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @include media-query(lg) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @include media-query(xl) {
+        @content;
+    }
+}

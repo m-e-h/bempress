@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    #META-DATA
+\*------------------------------------*/
+
+.entry-meta {
+  color: $color-text-light;
+  font-weight: normal;
+  @include font-size($base-font-size - 2);
+  text-transform: uppercase;
+
+  a {
+  color: currentColor;
+  font-weight: inherit;
+  }
+}
+
+.entry-meta__item {
+  margin-right: 5px;
+}

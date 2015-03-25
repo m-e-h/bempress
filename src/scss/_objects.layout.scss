@@ -1,0 +1,357 @@
+/*------------------------------------*\
+    $CSSWIZARDRY-GRIDS
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * INTRODUCTION.........How the grid system works.
+ * VARIABLES............Your settings.
+ * MIXINS...............Library mixins.
+ * GRID SETUP...........Build the grid structure.
+ * WIDTHS...............Build our responsive widths around our breakpoints.
+ * PUSH.................Push classes.
+ * PULL.................Pull classes.
+ */
+
+
+
+
+
+/*------------------------------------*\
+    $INTRODUCTION
+\*------------------------------------*/
+/**
+ * csswizardry grids provides you with widths to suit a number of breakpoints
+ * designed around devices of a size you specify. Out of the box, csswizardry
+ * grids caters to the following types of device:
+ *
+ * sm     --  sm-based devices, like phones and small tablets
+ * md      --  md-based devices, like iPads or mdtops
+ * lg --  all of the above
+ * xl     --  stationary devices, like xltop computers
+ * regular  --  any/all types of device
+ *
+ * These namespaces are then used in the library to give you the ability to
+ * manipulate your layouts based around them, for example:
+ *
+   <div class="grid__item  one-whole  md--one-half  xl--one-third">
+ *
+ * This would give you a grid item which is 100% width unless it is on a md
+ * device, at which point it become 50% wide, or it is on a xltop device, at
+ * which point it becomes 33.333% width.
+ *
+ * csswizardry grids also has push and pull classes which allow you to nudge
+ * grid items left and right by a defined amount. These follow the same naming
+ * convention as above, but are prepended by either `push--` or `pull--`, for
+ * example:
+ *
+   `class="grid__item  one-half  push--one-half"`
+ *
+ * This would give you a grid item which is 50% width and pushed over to the
+ * right by 50%.
+ *
+ * All classes in csswizardry grids follow this patten, so you should fairly
+ * quickly be able to piece together any combinations you can imagine, for
+ * example:
+ *
+   `class="grid__item  one-whole  md--one-half  xl--one-third  push--xl--one-third"`
+ *
+   `class="grid__item  one-quarter  sm--one-half  push--sm--one-half"`
+ *
+   `class="grid__item  sm--one-third  xl--five-twelfths"`
+ */
+
+
+
+
+
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+/**
+ * If you are building a non-responsive site but would still like to use
+ * csswizardry-grids, set this to ‘false’:
+ */
+$responsive:            true !default;
+
+
+/**
+ * Is this build mobile first? Setting to ‘true’ means that all grids will be
+ * 100% width if you do not apply a more specific class to them.
+ */
+$mobile-first:          true !default;
+
+
+/**
+ * Set the spacing between your grid items.
+ */
+$gutter:                24px !default;
+
+
+/**
+ * Would you like Sass’ silent classes, or regular CSS classes?
+ */
+$use-silent-classes:    false !default;
+
+
+/**
+ * Would you like push and pull classes enabled?
+ */
+$push:                  true !default;
+$pull:                  true !default;
+
+
+/**
+ * Using `inline-block` means that the grid items need their whitespace removing
+ * in order for them to work correctly. Set the following to true if you are
+ * going to achieve this by manually removing/commenting out any whitespace in
+ * your HTML yourself.
+ *
+ * Setting this to false invokes a hack which cannot always be guaranteed,
+ * please see the following for more detail:
+ *
+ * github.com/csswizardry/csswizardry-grids/commit/744d4b23c9d2b77d605b5991e54a397df72e0688
+ * github.com/csswizardry/inuit.css/issues/170#issuecomment-14859371
+ */
+$use-markup-fix:        true !default;
+
+
+/**
+ * Define your breakpoints. The first value is the prefix that shall be used for
+ * your classes (e.g. `.sm--one-half`), the second value is the media query
+ * that the breakpoint fires at.
+ */
+// $breakpoints: (
+//     'sm' '(max-width: 480px)',
+//     'md' '(min-width: 481px)',
+//     'lg' '(min-width: 1023px)',
+//     'xl' '(min-width: 1024px)'
+// ) !default;
+
+
+/**
+ * Define which namespaced breakpoints you would like to generate for each of
+ * widths, push and pull. This is handy if you only need pull on, say, xl, or
+ * you only need a new width breakpoint at mobile sizes. It allows you to only
+ * compile as much CSS as you need. All are turned on by default, but you can
+ * add and remove breakpoints at will.
+ *
+ * Push and pull shall only be used if `$push` and/or `$pull` and `$responsive`
+ * have been set to ‘true’.
+ */
+$breakpoint-has-widths: ('sm', 'md', 'lg', 'xl') !default;
+$breakpoint-has-push:   ('sm', 'md', 'lg', 'xl') !default;
+$breakpoint-has-pull:   ('sm', 'md', 'lg', 'xl') !default;
+
+
+/**
+ * You do not need to edit anything from this line onward; csswizardry-grids is
+ * good to go. Happy griddin’!
+ */
+$class-type: if($use-silent-classes, unquote("%"), unquote("."));
+
+
+
+
+
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/**
+ * These mixins are for the library to use only, you should not need to modify
+ * them at all.
+ *
+ * Enclose a block of code with a media query as named in `$breakpoints`.
+ */
+@mixin grid-media-query($media-query) {
+    $breakpoint-found: false;
+
+    @each $breakpoint in $breakpoints {
+        $name: nth($breakpoint, 1);
+        $declaration: nth($breakpoint, 2);
+
+        @if $media-query == $name and $declaration {
+            $breakpoint-found: true;
+
+            @media only #{$declaration} {
+                @content;
+            }
+        }
+    }
+
+    @if not $breakpoint-found {
+        @warn "Breakpoint ‘#{$media-query}’ does not exist";
+    }
+}
+
+
+/**
+ * Drop relative positioning into silent classes which can’t take advantage of
+ * the `[class*="push--"]` and `[class*="pull--"]` selectors.
+ */
+@mixin silent-relative {
+    @if $use-silent-classes {
+        position:relative;
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    $GRID SETUP
+\*------------------------------------*/
+/**
+ * 1. Allow the grid system to be used on lists.
+ * 3. Apply a negative `margin-left` to negate the columns’ gutters.
+ */
+.o-grid {
+    list-style:none;                /* [1] */
+    margin-left:-$gutter;           /* [3] */
+
+    @if not $use-markup-fix {
+        letter-spacing:-0.31em;
+    }
+}
+
+@if not $use-markup-fix {
+    /* Opera hack */
+    .opera:-o-prefocus,
+    .o-grid {
+        word-spacing:-0.43em;
+    }
+}
+
+
+    /**
+     * 1. Cause columns to stack side-by-side.
+     * 2. Space columns apart.
+     * 3. Align columns to the tops of each other.
+     * 4. Full-width unless told to behave otherwise.
+     */
+    .o-grid__item {
+        display:inline-block;           /* [1] */
+        padding-left:$gutter;           /* [2] */
+        vertical-align:top;             /* [3] */
+
+        @if $mobile-first {
+            width:100%;                 /* [4] */
+        }
+
+        @if not $use-markup-fix {
+            letter-spacing:normal;
+            word-spacing:normal;
+        }
+    }
+
+/**
+ * Reversed grids allow you to structure your source in the opposite order to
+ * how your rendered layout will appear. Extends `.grid`.
+ */
+.o-grid--flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+
+    > .o-grid__item {
+        //width: auto;
+          //flex: 0 0 auto;
+    }
+}
+
+/**
+ * Reversed grids allow you to structure your source in the opposite order to
+ * how your rendered layout will appear. Extends `.grid`.
+ */
+.o-grid--rev {
+    direction:rtl;
+    text-align:left;
+
+    > .o-grid__item {
+        direction:ltr;
+        text-align:left;
+    }
+}
+
+
+/**
+ * Gutterless grids have all the properties of regular grids, minus any spacing.
+ * Extends `.grid`.
+ */
+.o-grid--full {
+    margin-left:0;
+
+    > .o-grid__item {
+        padding-left:0;
+    }
+}
+
+
+/**
+ * Align the entire grid to the right. Extends `.grid`.
+ */
+.o-grid--right {
+    text-align:right;
+
+    > .o-grid__item {
+        text-align:left;
+    }
+}
+
+
+/**
+ * Centered grids align grid items centrally without needing to use push or pull
+ * classes. Extends `.grid`.
+ */
+.o-grid--center {
+    text-align:center;
+
+    > .o-grid__item {
+        text-align:left;
+    }
+}
+
+
+/**
+ * Align grid cells vertically (`.grid--middle` or `.grid--bottom`). Extends
+ * `.grid`.
+ */
+.o-grid--middle {
+
+    > .o-grid__item {
+        vertical-align:middle;
+    }
+}
+
+.o-grid--bottom {
+
+    > .o-grid__item {
+        vertical-align:bottom;
+    }
+}
+
+
+/**
+ * Create grids with narrower gutters. Extends `.grid`.
+ */
+.o-grid--narrow {
+    margin-left:-($gutter / 2);
+
+    > .o-grid__item {
+        padding-left:$gutter / 2;
+    }
+}
+
+
+/**
+ * Create grids with wider gutters. Extends `.grid`.
+ */
+.o-grid--wide {
+    margin-left:-($gutter * 2);
+
+    > .o-grid__item {
+        padding-left:$gutter * 2;
+    }
+}
+

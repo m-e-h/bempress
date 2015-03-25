@@ -1,0 +1,119 @@
+/**
+ * 5.0 Forms
+ */
+input:not(.submit),
+select,
+textarea {
+	background-color: $grey-50;
+	border-radius: $base-radius;
+	@include font-size($base-font-size);
+	margin: 0;
+	max-width: 100%;
+	vertical-align: baseline;
+	margin-bottom: $base-spacing-unit;
+}
+
+input:not(.submit) {
+	line-height: normal;
+}
+
+input:not(.submit),
+textarea {
+	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)); /* Removing the inner shadow on iOS inputs */
+	border: 1px solid $grey-100;
+	color: $grey-600;
+}
+
+input:not(.submit):focus,
+textarea:focus {
+	background-color: #fff;
+	border: 1px solid $color-primary;
+	color: $color-text;
+}
+
+input:not(.submit):focus,
+select:focus {
+	outline: 2px solid $color-primary;
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled] {
+	cursor: default;
+	opacity: .5;
+}
+
+input[type="search"] {
+	-webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	padding: $base-spacing-unit--tiny;
+	//width: 100%;
+}
+
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+	outline: 0;
+}
+
+.post-password-form {
+	position: relative;
+}
+
+label {
+	color: $color-gray;
+	display: block;
+	@include font-size($base-font-size - 2);
+	font-weight: 700;
+	margin-bottom: $base-spacing-unit--tiny;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+.post-password-form input[type="submit"] {
+	padding: 0.7917em;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	padding: 0;
+}
+
+.search-form input[type="submit"],
+.widget .search-form input[type="submit"] {
+	padding: 0;
+}
+
+
+fieldset {
+  padding: 0;
+  border-width: 0; }

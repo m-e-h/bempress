@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+  <g id="bounds" display="none"><rect display="inline" fill="none" width="512" height="512"/></g><g id="Layer_2">
+    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 192 405.332031 C 186.339844 405.332031 180.917969 403.089844 176.917969 399.089844 L 48.917969 271.082031 C 40.585938 262.753906 40.585938 249.246094 48.917969 240.917969 C 57.246094 232.585938 70.757812 232.585938 79.082031 240.917969 L 192 353.835938 L 432.917969 112.917969 C 441.246094 104.585938 454.757812 104.585938 463.082031 112.917969 C 471.414062 121.246094 471.414062 134.757812 463.082031 143.089844 L 207.082031 399.089844 C 203.082031 403.089844 197.660156 405.332031 192 405.332031 Z M 192 405.332031 "/>
+  </g>
+</svg>

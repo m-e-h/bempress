@@ -1,0 +1,30 @@
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, figure,
+table, caption {
+    font-weight: normal;
+    margin: 0;
+}
+
+/////*
+// * Remove the gap between audio, canvas, iframes,
+// * images, videos and the bottom of their containers:
+// * https://github.com/h5bp/html5-boilerplate/issues/440
+// */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+
+* {
+  position:relative;
+  //overflow:hidden;
+  flex-shrink: 0;
+}
