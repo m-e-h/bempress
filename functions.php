@@ -47,8 +47,8 @@ function bempress_setup() {
 	add_theme_support( 'site-logo' );
 
 	// Add navigation menus.
-	register_nav_menu( 'primary',   _x( 'Primary Menu', 'nav menu location', 'bempress' ) );
-	register_nav_menu( 'secondary', _x( 'Secondary Menu', 'nav menu location', 'bempress' ) );
+	register_nav_menu( 'primary',   _x( 'Primary Location', 'nav menu location', 'bempress' ) );
+	register_nav_menu( 'secondary', _x( 'Secondary Location', 'nav menu location', 'bempress' ) );
 
 	$formats = array(
 		'aside',

@@ -11,22 +11,24 @@ class AttrTrumps {
 	/* Attributes for major structural elements. */
 	public $body                  	= '';	// get_body_class()
 	public $site_container    		= '';	// site-container
-	public $site_inner   			= ' o-grid o-wrapper o-grid--flex';	// site-inner
-	public $site_inner_full_width		= ' o-grid--wide'; 	// content
-	public $site_inner_single_column 	= ' o-grid--narrow'; 	// content
-	public $site_inner_sidebar_right 	= ' '; 	// content
-	public $site_inner_sidebar_left 	= ' o-grid--rev'; 	// content
-	public $wrap                	= ' o-wrapper'; 	// site-header
+	public $site_inner   			= ' grid grid--flex';	// site-inner
+	public $site_inner_full_width		= ' wrapper--wide';
+	public $site_inner_single_column 	= ' wrapper';
+	public $site_inner_sidebar_right 	= ' wrapper';
+	public $site_inner_sidebar_left 	= ' wrapper grid--rev';
+	public $wrap                	= ' wrapper';
+	public $header_wrap                	= ' wrapper--wide';
 	public $header                	= ''; 	// site-header
 	public $footer                	= ''; 	// site-footer
-	public $content 				= ' o-grid__item'; 	// content
-	public $content_full_width		= ''; 	// content
-	public $content_single_column 	= ''; 	// content
+	public $content 				= ' grid__item'; 	// content
+	public $content_full_width		= ' u-1/1'; 	// content
+	public $content_single_column 	= ' u-1/1'; 	// content
 	public $content_sidebar_right 	= ' md--u-2/3'; 	// content
-	public $content_sidebar_left 	= ' u-2/3 o-grid__item--rev'; 	// content
-	public $sidebar 				= ' o-grid__item';	// sidebar sidebar__{$context}
-	public $sidebar_full_width  	= ' u-1/3';	// sidebar sidebar__{$context}
-	public $sidebar_single_column  	= ' u-1/3';	// sidebar sidebar__{$context}
+	public $content_sidebar_left 	= ' u-2/3 grid__item--rev'; 	// content
+	public $main                	= ' white shadow--z2';
+	public $sidebar 				= ' white shadow--z2 grid__item';	// sidebar sidebar__{$context}
+	public $sidebar_full_width  	= ' u-1/1';	// sidebar sidebar__{$context}
+	public $sidebar_single_column  	= ' u-1/1';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_right 	= ' u-1/3';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_left	= ' u-1/3';	// sidebar sidebar__{$context}
 	public $sidebar_footer          = '';	// sidebar sidebar__{$context}
@@ -64,10 +66,11 @@ class AttrTrumps {
 		add_filter( 'hybrid_attr_body',				[ $this, 'body' ] );
 		add_filter( 'hybrid_attr_site-container', 	[ $this, 'site_container' ] );
 		add_filter( 'hybrid_attr_site-inner', 		[ $this, 'site_inner' ] );
-		add_filter( 'hybrid_attr_wrap',				[ $this, 'wrap' ] );
+		add_filter( 'hybrid_attr_wrap',				[ $this, 'wrap' ], 10, 2 );
 		add_filter( 'hybrid_attr_header',			[ $this, 'header' ] );
 		add_filter( 'hybrid_attr_footer',			[ $this, 'footer' ] );
-		add_filter( 'hybrid_attr_content',			[ $this, 'content' ] );
+		add_filter( 'hybrid_attr_primary',			[ $this, 'content' ] );
+		add_filter( 'hybrid_attr_main',				[ $this, 'main' ] );
 		add_filter( 'hybrid_attr_sidebar',			[ $this, 'sidebar' ], 10, 2 );
 		add_filter( 'hybrid_attr_menu',				[ $this, 'menu' ], 10, 2 );
 		add_filter( 'hybrid_attr_loop-meta',		[ $this, 'loop_meta' ] );
@@ -126,8 +129,16 @@ class AttrTrumps {
 	}
 
 
-	public function wrap( $attr ) {
-		$attr['class']    .= $this->wrap;
+
+
+	public function wrap( $attr, $context ) {
+		if ( empty( $context ) ) {
+			return $attr;
+		}
+
+		if ( 'header' === $context ) {
+		$attr['class']    .= $this->header_wrap;
+		}
 		return $attr;
 	}
 
@@ -162,6 +173,10 @@ class AttrTrumps {
 		return $attr;
 	}
 
+	public function main( $attr ) {
+		$attr['class']    .= $this->main;
+		return $attr;
+	}
 
 	public function sidebar( $attr, $context ) {
 		if ( empty( $context ) ) {
@@ -169,6 +184,7 @@ class AttrTrumps {
 		}
 
 		if ( 'primary' === $context ) {
+			$attr['id'] = 'secondary';
 			$attr['class']    .= $this->sidebar;
 			if ( '1c'	== get_theme_mod( 'theme_layout' ) ) :
 				$attr['class']	.= $this->sidebar_full_width;
@@ -331,6 +347,14 @@ $right = $layoutclasses->site_inner_sidebar_right;
 $left = $layoutclasses->site_inner_sidebar_left;
 $single = $layoutclasses->site_inner_single_column;
 $wide = $layoutclasses->site_inner_full_width;
+$widecontent = $layoutclasses->content_full_width;
+$widesidebar = $layoutclasses->sidebar_full_width;
+$content_single_column = $layoutclasses->content_single_column;
+$sidebar_single_column = $layoutclasses->sidebar_single_column;
+$content_sidebar_right = $layoutclasses->content_sidebar_right;
+$content_sidebar_left = $layoutclasses->content_sidebar_left;
+$sidebar_sidebar_right = $layoutclasses->sidebar_sidebar_right;
+$sidebar_sidebar_left = $layoutclasses->sidebar_sidebar_left;
 ?>
 
 <script type="text/javascript">
@@ -345,24 +369,54 @@ wp.customize(
 				jQuery('#site-inner').removeClass(<?php echo json_encode($wide); ?>);
 				jQuery('#site-inner').removeClass(<?php echo json_encode($single); ?>);
 				jQuery( '#site-inner' ).addClass(<?php echo json_encode($left); ?>);
+				jQuery( '#content' ).removeClass(<?php echo json_encode($widecontent); ?>);
+				jQuery( '#sidebar-primary' ).removeClass(<?php echo json_encode($widesidebar); ?>);
+				jQuery( '#content' ).removeClass(<?php echo json_encode($content_sidebar_left); ?>);
+				jQuery( '#sidebar-primary' ).removeClass(<?php echo json_encode($sidebar_sidebar_left); ?>);
+				jQuery( '#content' ).addClass(<?php echo json_encode($content_sidebar_right); ?>);
+				jQuery( '#sidebar-primary' ).addClass(<?php echo json_encode($sidebar_sidebar_right); ?>);
+				jQuery( '#sidebar-primary' ).removeClass(<?php echo json_encode($sidebar_single_column); ?>);
+				jQuery( '#content' ).removeClass(<?php echo json_encode($content_single_column); ?>);
 			}
 			else if(to == '2c-l') {
 				jQuery('#site-inner').removeClass(<?php echo json_encode($left); ?>);
 				jQuery('#site-inner').removeClass(<?php echo json_encode($wide); ?>);
 				jQuery('#site-inner').removeClass(<?php echo json_encode($single); ?>);
 				jQuery( '#site-inner' ).addClass(<?php echo json_encode($right); ?>);
+				jQuery( '#content' ).removeClass(<?php echo json_encode($widecontent); ?>);
+				jQuery( '#sidebar-primary' ).removeClass(<?php echo json_encode($widesidebar); ?>);
+				jQuery( '#content' ).removeClass(<?php echo json_encode($content_sidebar_right); ?>);
+				jQuery( '#sidebar-primary' ).removeClass(<?php echo json_encode($sidebar_sidebar_right); ?>);
+				jQuery( '#content' ).addClass(<?php echo json_encode($content_sidebar_left); ?>);
+				jQuery( '#sidebar-primary' ).addClass(<?php echo json_encode($sidebar_sidebar_left); ?>);
+				jQuery( '#sidebar-primary' ).removeClass(<?php echo json_encode($sidebar_single_column); ?>);
+				jQuery( '#content' ).removeClass(<?php echo json_encode($content_single_column); ?>);
 			}
 			if(to == '1c') {
 				jQuery('#site-inner').removeClass(<?php echo json_encode($right); ?>);
 				jQuery('#site-inner').removeClass(<?php echo json_encode($left); ?>);
 				jQuery('#site-inner').removeClass(<?php echo json_encode($single); ?>);
 				jQuery( '#site-inner' ).addClass(<?php echo json_encode($wide); ?>);
+				jQuery( '#content' ).removeClass(<?php echo json_encode($content_sidebar_right); ?>);
+				jQuery( '#sidebar-primary' ).removeClass(<?php echo json_encode($sidebar_sidebar_right); ?>);
+				jQuery( '#content' ).removeClass(<?php echo json_encode($content_sidebar_left); ?>);
+				jQuery( '#sidebar-primary' ).removeClass(<?php echo json_encode($sidebar_sidebar_left); ?>);
+				jQuery( '#content' ).addClass(<?php echo json_encode($widecontent); ?>);
+				jQuery( '#sidebar-primary' ).addClass(<?php echo json_encode($widesidebar); ?>);
+				jQuery( '#sidebar-primary' ).removeClass(<?php echo json_encode($sidebar_single_column); ?>);
+				jQuery( '#content' ).removeClass(<?php echo json_encode($content_single_column); ?>);
 			}
 			else if(to == '1c-narrow') {
 				jQuery('#site-inner').removeClass(<?php echo json_encode($right); ?>);
 				jQuery('#site-inner').removeClass(<?php echo json_encode($left); ?>);
 				jQuery('#site-inner').removeClass(<?php echo json_encode($wide); ?>);
 				jQuery( '#site-inner' ).addClass(<?php echo json_encode($single); ?>);
+				jQuery( '#content' ).removeClass(<?php echo json_encode($widecontent); ?>);
+				jQuery( '#sidebar-primary' ).removeClass(<?php echo json_encode($widesidebar); ?>);
+				jQuery( '#sidebar-primary' ).removeClass(<?php echo json_encode($widesidebar); ?>);
+				jQuery( '#content' ).removeClass(<?php echo json_encode($content_sidebar_left); ?>);
+				jQuery( '#sidebar-primary' ).addClass(<?php echo json_encode($sidebar_single_column); ?>);
+				jQuery( '#content' ).addClass(<?php echo json_encode($content_single_column); ?>);
 			}
 			}
 		);

@@ -13,11 +13,15 @@
  */
 ?>
 
-		<?php tha_footer_before(); ?>
+		</div><!-- #site-inner -->
+
+<?php
+tha_footer_before(); ?>
 
 		<footer <?php hybrid_attr( 'footer' ); ?>>
 
-			<?php tha_footer_top(); ?>
+<?php
+tha_footer_top(); ?>
 
 			<div <?php hybrid_attr( 'wrap', 'footer' ); ?>>
 
@@ -34,15 +38,19 @@
 
 			</div><!-- .wrap -->
 
-			<?php tha_footer_bottom(); ?>
+<?php
+tha_footer_bottom(); ?>
 
 		</footer><!-- .footer -->
 
-		<?php tha_footer_after(); ?>
+<?php
+tha_footer_after(); ?>
 
 	</div><!-- .site-container -->
 
-	<?php tha_body_bottom(); ?>
+<?php
+tha_body_bottom(); ?>
+
 	<?php wp_footer(); ?>
 
 </body>

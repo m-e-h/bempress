@@ -1,9 +1,16 @@
-.o-wrapper {
+.wrapper {
+    max-width: $max-width;
+    margin: 0 auto;
     padding-right: 5%;
     padding-left:  5%;
 
-    @include media-query(md) {
-        padding-right: 10%;
-        padding-left:  10%;
+    @include lg {
+        padding-right: 0;
+        padding-left:  0;
     }
+}
+
+.wrapper--wide {
+    padding-right: 5%;
+    padding-left:  5%;
 }

@@ -1,26 +1,52 @@
+/*------------------------------------*\
+    #BLOCKQUOTES
+\*------------------------------------*/
+
 blockquote {
-    quotes: "“" "”";
+    //font-family: Georgia, Times, "Times New Roman", serif;
+    //color: $color-text-light;
+    margin-bottom: $base-spacing-unit;
+    border-left: 5px solid currentColor;
+    padding-left: 20px;
 
     p {
-        text-indent: -0.42em;
+        color: $color-text-light;
+        font-weight: 500;
 
-        &:before {
-            content: open-quote;
-        }
-
-        &:after {
-            content: no-close-quote;
-        }
-
-        &:last-of-type {
+        + p {
             margin-bottom: 0;
-
-            &:after {
-                content: close-quote;
-            }
-
         }
+    }
+}
 
+blockquote blockquote {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+blockquote cite {
+    display: block;
+    font-family: $font-body;
+    font-style: normal;
+    font-size: 80%;
+    font-weight: 500;
+    margin-top: 12px;
+    padding-top: 13px;
+    margin-top: $base-spacing-unit--small;
+}
+
+blockquote cite::before {
+    content: "\2014";
+    padding-right: 10px;
+}
+
+@include md {
+    .pullquote.alignright {
+        max-width: 50%;
     }
 
+    .pullquote.alignleft {
+        max-width: 50%;
+    }
 }

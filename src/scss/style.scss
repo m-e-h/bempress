@@ -115,6 +115,8 @@ Tags:
 /**
  * #OBJECTS
  */
+@import "objects.grid";
+@import "objects.shadows";
 @import "bower/inuit-buttons/objects.buttons";
 @import "objects.layout";
 @import "bower/inuit-box/objects.box";
@@ -141,6 +143,7 @@ Tags:
 @import "components.site-nav";
 @import "components.meta";
 @import "components.code";
+@import "components.breadcrumbs";
 
 
 
@@ -156,3 +159,4 @@ Tags:
 @import "bower/inuit-spacing/trumps.spacing";
 @import "trumps.helpers";
 @import "trumps.headings";
+@import "trumps.spacing-responsive";

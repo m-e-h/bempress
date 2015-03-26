@@ -7,56 +7,58 @@
  * @link        https://flagshipwp.com/
  * @since       1.0.0
  */
-?>
 
-<?php get_header(); ?>
+get_header(); ?>
 
-<div <?php hybrid_attr( 'site-inner' ); ?>>
+<?php
+tha_content_before(); ?>
 
-	<?php tha_content_before(); ?>
-
-	<main <?php hybrid_attr( 'content' ); ?>>
-
-		<?php tha_content_top(); ?>
+	<div <?php hybrid_attr( 'primary' ); ?>>
 
 		<?php hybrid_get_menu( 'breadcrumbs' ); ?>
 
-		<?php
-			if ( !is_front_page() && !is_singular() && !is_404() ) :
-				get_template_part( 'templates/loop-meta' );
-			endif;
-		?>
+		<main <?php hybrid_attr( 'main' ); ?>>
 
-		<?php if ( have_posts() ) : ?>
+<?php
+tha_content_top(); ?>
 
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php
+				if ( !is_front_page() && !is_singular() && !is_404() ) :
+					get_template_part( 'templates/loop-meta' );
+				endif;
+			?>
 
-				<?php tha_entry_before(); ?>
+			<?php if ( have_posts() ) : ?>
 
-				<?php hybrid_get_content_template(); ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php tha_entry_after(); ?>
+<?php
+tha_entry_before(); ?>
 
+					<?php hybrid_get_content_template(); ?>
 
-			<?php endwhile; ?>
+<?php
+tha_entry_after(); ?>
 
-			<?php flagship_posts_navigation(); ?>
+				<?php endwhile; ?>
 
-		<?php else : ?>
+				<?php flagship_posts_navigation(); ?>
 
-			<?php get_template_part( 'content/error' ); ?>
+			<?php else : ?>
 
-		<?php endif; ?>
+				<?php get_template_part( 'content/error' ); ?>
 
-		<?php tha_content_bottom(); ?>
+			<?php endif; ?>
 
-	</main><!-- #content -->
+<?php
+tha_content_bottom(); ?>
 
-	<?php tha_content_after(); ?>
+		</main><!-- #content -->
+	</div>
+
+<?php
+tha_content_after(); ?>
 
 	<?php hybrid_get_sidebar( 'primary' ); ?>
 
-</div><!-- #site-inner -->
-
-<?php
-get_footer();
+<?php get_footer();

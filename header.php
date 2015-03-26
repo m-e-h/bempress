@@ -22,7 +22,8 @@
 
 <body <?php hybrid_attr( 'body' ); ?>>
 
-	<?php tha_body_top(); ?>
+<?php
+tha_body_top(); ?>
 
 	<div <?php hybrid_attr( 'site-container' ); ?>>
 
@@ -32,13 +33,14 @@
 			</a>
 		</div><!-- .skip-link -->
 
-		<?php tha_header_before(); ?>
+<?php
+tha_header_before(); ?>
 
 		<header <?php hybrid_attr( 'header' ); ?>>
-
 			<div <?php hybrid_attr( 'wrap', 'header' ); ?>>
 
-				<?php tha_header_top(); ?>
+<?php
+tha_header_top(); ?>
 
 				<div <?php hybrid_attr( 'branding' ); ?>>
 					<?php flagship_the_logo(); ?>
@@ -48,10 +50,13 @@
 
 				<?php hybrid_get_menu( 'primary' ); ?>
 
-				<?php tha_header_bottom(); ?>
+<?php
+tha_header_bottom(); ?>
 
-			</div>
-
+			</div><!-- .wrap -->
 		</header><!-- #header -->
 
-		<?php tha_header_after(); ?>
+<?php
+tha_header_after(); ?>
+
+		<div <?php hybrid_attr( 'site-inner' ); ?>>
