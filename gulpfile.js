@@ -16,7 +16,6 @@ var composer = require('gulp-composer');
 var csscomb = require('gulp-csscomb');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
-var bower = require('gulp-bower');
 var reload = browserSync.reload;
 
 var AUTOPREFIXER_BROWSERS = [
@@ -65,11 +64,6 @@ gulp.task('tha', function () {
   	'src/composer/zamoose/themehookalliance/tha-theme-hooks.php'
   	])
     .pipe(gulp.dest('inc'));
-});
-
-gulp.task('bower', function() {
-  return bower('bower_components')
-    .pipe(gulp.dest('src/scss/bower'))
 });
 
 // Compile and Automatically Prefix Stylesheets
@@ -122,5 +116,5 @@ gulp.task('serve', ['default'], function () {
 
 // Build Production Files, the Default Task
 gulp.task('default', function (cb) {
-  runSequence('composer', ['bower', 'scripts', 'images', 'styles', 'hybrid', 'tha'], cb);
+  runSequence('composer', ['scripts', 'images', 'styles', 'hybrid', 'tha'], cb);
 });

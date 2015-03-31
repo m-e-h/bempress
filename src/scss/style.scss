@@ -19,40 +19,54 @@ Tags:
  * Default..............inuitcss’ default settings.
  * Global...............Globally-available variables and settings/config.
  * Colors...............Manage our color palette in isolation.
+ * Responsive...........Setup some breakpoints.
  *
  * TOOLS
+ * Functions.............
  * Mixins...............inuitcss’ default mixins.
+ * Responsive............
  * Aliases..............Aliases onto longer inuitcss variables and mixins.
+ * Widths...............inuitcss images
  *
  * GENERIC
- * Normalize.css........A level playing field.
- * Reset................A pared back reset to remove margins.
- * Box-sizing...........Better default `box-sizing`.
- * Shared...............Sensibly and tersely share global commonalities.
+ * Reset................A level playing field.
+ * Sanitize.............Render elements consistently and with best practices.
  *
  * ELEMENTS
  * Page.................Page-level styles (HTML element).
  * Headings.............Heading styles
- * Type.................Misc type styles
  * Links................Hyperlink styles
  * Lists................inuitcss list styles
  * Images...............inuitcss images
  * Quotes...............Styling for blockquotes, etc.
  *
  * OBJECTS
- * Wrappers.............Wrappers and page constraints.
- * Layout...............inuitcss’ layout tool.
+ * Grid...............inuitcss’ layout tool.
+ * Shadows..............
+ * Buttons..............
+ * Layout...............Site layouts.
+ * Tables...............
  * Media................The media object.
+ * Forms................
+ * Wrappers.............Wrappers and page constraints.
+ * Cards................
  *
  * COMPONENTS
- * Page-title............Page header styles.
- * Promo................Lead promo blocks on the home page.
+ * Page-title...........Page header styles.
  * Buttons..............Extension of inuitcss’ buttons.
+ * Testimonials.........
  * Avatars..............User profile pics.
+ * Site-nav.............
+ * Meta.................
+ * Code.................
+ * Breadcrumbs..........
  *
  * TRUMPS
  * Links................Links, you know.
  * Widths...............Simple width helper classes.
+ * Helpers...............
+ * Headings..............
+ * Spacing...............
  */
 
 
@@ -62,7 +76,7 @@ Tags:
 /**
  * #SETTINGS
  */
-@import "bower/inuit-defaults/settings.defaults";
+@import "settings.defaults";
 @import "settings.global";
 @import "settings.colors";
 @import "settings.responsive";
@@ -74,10 +88,9 @@ Tags:
 /**
  * #TOOLS
  */
-@import "bower/inuit-functions/tools.functions";
-@import "bower/inuit-mixins/tools.mixins";
-@import "tools.responsive";
+@import "tools.functions";
 @import "tools.mixins";
+@import "tools.responsive";
 @import "tools.aliases";
 @import "tools.widths";
 
@@ -97,13 +110,9 @@ Tags:
 /**
  * #ELEMENTS
  */
-@import "bower/inuit-page/base.page";
 @import "elements.page";
-@import "bower/inuit-headings/base.headings";
 @import "elements.headings";
 @import "elements.links";
-@import "bower/inuit-lists/base.lists";
-@import "bower/inuit-images/base.images";
 @import "elements.lists";
 @import "elements.images";
 @import "elements.quotes";
@@ -117,15 +126,11 @@ Tags:
  */
 @import "objects.grid";
 @import "objects.shadows";
-@import "bower/inuit-buttons/objects.buttons";
+@import "objects.buttons";
 @import "objects.layout";
-@import "bower/inuit-box/objects.box";
-@import "bower/inuit-media/objects.media";
 @import "objects.tables";
 @import "objects.media";
 @import "objects.forms";
-@import "bower/inuit-flag/objects.flag";
-@import "bower/inuit-list-ui/objects.list-ui";
 @import "objects.wrappers";
 @import "objects.cards";
 
@@ -153,10 +158,8 @@ Tags:
  * #TRUMPS
  */
 
-//@import "bower/inuit-widths/trumps.widths";
 @import "trumps.links";
 @import "trumps.widths";
-//@import "bower/inuit-spacing/trumps.spacing";
 @import "trumps.helpers";
 @import "trumps.headings";
 @import "trumps.spacing-responsive";
