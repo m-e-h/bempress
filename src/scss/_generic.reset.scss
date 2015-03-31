@@ -1,27 +1,25 @@
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-dl, dd, ol, ul,
-form, figure,
-table, caption {
-    font-weight: normal;
-    margin: 0;
+/*Pieces of normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+a{background-color:transparent;}
+a:active,a:hover{outline:0;}
+abbr[title]{border-bottom: 1px dotted;}
+b,strong{font-weight:bold;}
+dfn{font-style:italic;}
+sub,sup{font-size:75%;line-height:0;vertical-align:baseline;}
+sup{top:-0.5em;}
+sub{bottom:-0.25em;}
+img{border:0;}
+svg:not(:root){overflow:hidden;}
+button{overflow:visible;}
+select{text-transform:none;}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+
+h1, h2, h3, h4, h5, h6
+{
+    font-weight: inherit;
 }
-
-/////*
-// * Remove the gap between audio, canvas, iframes,
-// * images, videos and the bottom of their containers:
-// * https://github.com/h5bp/html5-boilerplate/issues/440
-// */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
-
 
 * {
   position:relative;
