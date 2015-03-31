@@ -6,76 +6,65 @@
 //     #MEDIA-QUERIES
 // \*------------------------------------*/
 
-$small: 35.5em !default;
-$medium: 48em !default;
-$wide: 64em !default;
-$huge: 80em !default;
 
-@mixin media-query($media-query) {
-    @if $media-query == small {
-        @media only screen and (max-width: $medium - 1) {
-            @content;
+
+@mixin media-query($mq) {
+
+    $breakpoint-found: false;
+
+    // Loop through the list of breakpoints we’ve provided in our settings file.
+    @each $breakpoint in $breakpoints {
+
+        // Grab the alias and the condition from their respective locations in
+        // the list.
+        $alias:     nth($breakpoint, 1);
+        $condition: nth($breakpoint, 2);
+
+        // If the media query we’ve specified has an alias and a condition...
+        @if $mq == $alias and $condition {
+
+            // ...tell the mixin that we’ve found it...
+            $breakpoint-found: true;
+
+            // ...and spit it out here.
+            @media #{$condition} {
+                @content;
+            }
+
         }
+
     }
 
-    @if $media-query == medium {
-        @media only screen and (min-width: $medium) {
-            @content;
-        }
+    // If the user specifies a non-exitent alias, send them a warning.
+    @if $breakpoint-found == false{
+        @warn "Oops! Breakpoint ‘#{$mq}’ does not exist."
     }
 
-    @if $media-query == medium-only {
-        @media only screen and (min-width: $medium) and (max-width: $wide - 1) {
-            @content;
-        }
-    }
-
-    @if $media-query == wide {
-        @media only screen and (min-width: $wide) {
-            @content;
-        }
-    }
-
-    @if $media-query == huge {
-        @media only screen and (min-width: $huge) {
-            @content;
-        }
-    }
 }
+
+
 
 // Just some helpers...
 @mixin sm {
-    @include media-query(small) {
-        @content;
-    }
-}
-
-@mixin sm-only {
-    @include media-query(small-only) {
+    @include media-query(sm) {
         @content;
     }
 }
 
 @mixin md {
-    @include media-query(medium) {
-        @content;
-    }
-}
-
-@mixin md-only {
-    @include media-query(medium-only) {
+    @include media-query(md) {
         @content;
     }
 }
 
 @mixin lg {
-    @include media-query(wide) {
+    @include media-query(lg) {
         @content;
     }
 }
 
 @mixin xl {
-    @include media-query(huge) {
+    @include media-query(lg) {
         @content;
     }
 }

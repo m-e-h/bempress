@@ -76,9 +76,10 @@ Tags:
  */
 @import "bower/inuit-functions/tools.functions";
 @import "bower/inuit-mixins/tools.mixins";
-@import "bower/inuit-responsive-tools/tools.responsive";
+@import "tools.responsive";
 @import "tools.mixins";
 @import "tools.aliases";
+@import "tools.widths";
 
 
 
@@ -86,7 +87,6 @@ Tags:
 /**
  * #GENERIC
  */
-@import "bower/inuit-normalize/generic.normalize";
 @import "generic.reset";
 @import "generic.sanitize";
 
@@ -156,7 +156,7 @@ Tags:
 //@import "bower/inuit-widths/trumps.widths";
 @import "trumps.links";
 @import "trumps.widths";
-@import "bower/inuit-spacing/trumps.spacing";
+//@import "bower/inuit-spacing/trumps.spacing";
 @import "trumps.helpers";
 @import "trumps.headings";
-//@import "trumps.spacing-responsive";
+@import "trumps.spacing-responsive";
