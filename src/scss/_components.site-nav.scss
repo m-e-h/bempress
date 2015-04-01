@@ -39,6 +39,7 @@
     text-decoration: none;
     white-space: nowrap;
     padding: .5em 1em;
+    color: currentColor;
 }
 
 
@@ -86,6 +87,7 @@
     margin: 0;
     padding: 0;
     z-index: 3;
+    border-radius: $base-radius;
     @include shadow-z2();
 }
 
@@ -99,7 +101,7 @@
 .menu-active > .sub-menu {
     display: block;
     position: absolute;
-    background-color: #fff;
+    @extend .bg-white;
 }
 
 /* Vertical Menus - show the dropdown arrow */

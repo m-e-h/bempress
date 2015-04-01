@@ -1455,7 +1455,8 @@ input[type="submit"]:focus {
 .menu__item > a,
 .menu__heading {
     display: block;
-    padding: 0.5em 1em; 
+    padding: 0.5em 1em;
+    color: currentColor; 
     white-space: nowrap;
     text-decoration: none;
 }
@@ -1498,6 +1499,7 @@ input[type="submit"]:focus {
     left: 100%;
     margin: 0;
     padding: 0;
+    border-radius: 3px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23);
 }
 
@@ -1511,7 +1513,6 @@ input[type="submit"]:focus {
 .menu-active > .sub-menu {
     display: block;
     position: absolute;
-    background-color: #fff;
 }
 
 /* Vertical Menus - show the dropdown arrow */
@@ -1997,8 +1998,24 @@ kbd {
     border-radius: 3px;
 }
 
-.bg-white {
+.bg-white,
+.menu-item-has-children:hover > .sub-menu,
+.menu-active > .sub-menu {
+    color: #525252; 
     background-color: #fff;
+}
+
+.bg-primary {
+    color: #fff; 
+    background-color: #476fba;
+}
+
+.bg-primary--dark {
+    background-color: #385996;
+}
+
+.bg-primary--light {
+    background-color: #6c8cc8;
 }
 
 /*------------------------------------*\
