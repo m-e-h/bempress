@@ -1317,23 +1317,23 @@ fieldset {
 /**
  * #COMPONENTS
  */
-.c-page-title {
+.page-title {
     margin-bottom: 24px;
 }
 
-.c-page-title__main,
-.c-page-title__sub {
+.page-title__main,
+.page-title__sub {
     margin-bottom: 0; 
     font-weight: normal;
 }
 
-.c-page-title__main {
+.page-title__main {
     font-size: 36px;
     font-size: 2.25rem;
     line-height: 1.3333333333;
 }
 
-.c-page-title__sub {
+.page-title__sub {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 1.2;

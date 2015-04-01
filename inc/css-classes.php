@@ -39,9 +39,9 @@ class AttrTrumps {
 	public $menu_li_social          	= '';	// menu-item
 
 	/* Header attributes. */
-	public $branding              		= ' c-page-title';	// site-branding
-	public $site_title            		= ' c-page-title__main';	// site-title
-	public $site_description      		= ' c-page-title__sub';	// site-description
+	public $branding              		= ' page-title';	// site-branding
+	public $site_title            		= ' page-title__main';	// site-title
+	public $site_description      		= ' page-title__sub';	// site-description
 
 	/* Loop attributes. */
 	public $loop_meta             		= '';	// loop-meta
