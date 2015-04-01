@@ -184,17 +184,6 @@ $class-type: if($use-silent-classes, unquote("%"), unquote("."));
 }
 
 
-/**
- * Drop relative positioning into silent classes which can’t take advantage of
- * the `[class*="push--"]` and `[class*="pull--"]` selectors.
- */
-@mixin silent-relative {
-    @if $use-silent-classes {
-        position:relative;
-    }
-}
-
-
 
 
 
@@ -241,6 +230,10 @@ $class-type: if($use-silent-classes, unquote("%"), unquote("."));
         @if not $use-markup-fix {
             letter-spacing:normal;
             word-spacing:normal;
+        }
+
+        &--flexed {
+            flex: 1;
         }
     }
 

@@ -29,32 +29,12 @@
 				'menu_id'         => 'primary',
 				'menu_class'      => 'menu__list menu-primary__list',
 				'fallback_cb'     => '',
+                'items_wrap'      => '<div class="wrapper"><ul id="%s" class="%s">%s</ul></div>'
 			)
 		);
 		?>
 
 	</nav><!-- #menu-primary -->
 
-<?php elseif ( current_user_can( 'edit_theme_options' ) ) : ?>
-
-	<div class="header-right">
-		<p class="no-menu">
-
-			<?php _e( "Ready to add your primary menu? Let's get started!", 'bempress' ); ?>
-
-			<?php
-			printf(	'<a class="button" href="%1$s">%2$s</a>',
-				flagship_get_customizer_link(  array(
-					'focus_type'   => 'section',
-					'focus_target' => 'nav',
-				) ),
-				__( 'Add a Menu', 'bempress' )
-			);
-			?>
-
-		</p>
-	</div><!-- .header-right -->
-
-	<?php
-
+<?php
 endif;

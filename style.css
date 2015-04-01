@@ -669,10 +669,6 @@ blockquote cite::before {
  *
  * Enclose a block of code with a media query as named in `$breakpoints`.
  */
-/**
- * Drop relative positioning into silent classes which can’t take advantage of
- * the `[class*="push--"]` and `[class*="pull--"]` selectors.
- */
 /*------------------------------------*\
     $GRID SETUP
 \*------------------------------------*/
@@ -698,6 +694,12 @@ blockquote cite::before {
     /* [1] */
     vertical-align: top;
     /* [4] */
+}
+.grid__item--flexed {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 /**
@@ -797,6 +799,9 @@ blockquote cite::before {
     padding-left: 48px;
 }
 
+/*------------------------------------*\
+    #BOX SHADOWS
+\*------------------------------------*/
 .shadow--z1 {
     box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
 }
@@ -1488,11 +1493,12 @@ input[type="submit"]:focus {
 .sub-menu {
     display: none;
     position: absolute;
-    z-index: 3; 
+    z-index: 3;
     top: 0;
     left: 100%;
     margin: 0;
     padding: 0;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23);
 }
 
 .menu--horizontal .sub-menu {

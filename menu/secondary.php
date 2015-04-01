@@ -35,6 +35,5 @@
 
 	</nav><!-- #menu-secondary -->
 
-	<?php
-
+<?php
 endif;
