@@ -89,8 +89,10 @@
 
 
 
+.br {
+    border-radius: $base-radius;
+}
 
-
-.white {
+.bg-white {
     background-color: $white;
 }

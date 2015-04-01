@@ -41,30 +41,3 @@
     }
 
 }
-
-
-
-// Just some helpers...
-@mixin sm {
-    @include media-query(sm) {
-        @content;
-    }
-}
-
-@mixin md {
-    @include media-query(md) {
-        @content;
-    }
-}
-
-@mixin lg {
-    @include media-query(lg) {
-        @content;
-    }
-}
-
-@mixin xl {
-    @include media-query(lg) {
-        @content;
-    }
-}

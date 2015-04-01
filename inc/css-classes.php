@@ -9,53 +9,53 @@
 class AttrTrumps {
 
 	/* Attributes for major structural elements. */
-	public $body                  	= '';	// get_body_class()
-	public $site_container    		= '';	// site-container
-	public $site_inner   			= ' grid grid--flex';	// site-inner
+	public $body                  		= '';	// get_body_class()
+	public $site_container    			= '';	// site-container
+	public $site_inner   				= ' grid grid--flex';	// site-inner
 	public $site_inner_full_width		= ' wrapper--wide';
 	public $site_inner_single_column 	= ' wrapper';
 	public $site_inner_sidebar_right 	= ' wrapper';
 	public $site_inner_sidebar_left 	= ' wrapper grid--rev';
-	public $wrap                	= ' wrapper';
+	public $wrap                		= ' wrapper';
 	public $header_wrap                	= ' wrapper--wide';
-	public $header                	= ''; 	// site-header
-	public $footer                	= ''; 	// site-footer
-	public $content 				= ' grid__item'; 	// content
-	public $content_full_width		= ' u-1of1'; 	// content
-	public $content_single_column 	= ' u-1of1'; 	// content
-	public $content_sidebar_right 	= ' u-2of3-md'; 	// content
-	public $content_sidebar_left 	= ' u-2of3-md grid__item--rev'; 	// content
-	public $main                	= ' white shadow--z2 u-p- u-md-p+ u-mr+-md';
-	public $sidebar 				= ' white shadow--z2 grid__item u-p- u-md-p+';	// sidebar sidebar__{$context}
-	public $sidebar_full_width  	= ' u-1of1';	// sidebar sidebar__{$context}
-	public $sidebar_single_column  	= ' u-1of1';	// sidebar sidebar__{$context}
-	public $sidebar_sidebar_right 	= ' u-1of3-md';	// sidebar sidebar__{$context}
-	public $sidebar_sidebar_left	= ' u-1of3-md';	// sidebar sidebar__{$context}
-	public $sidebar_footer          = '';	// sidebar sidebar__{$context}
-	public $menu_primary 			= ' menu--horizontal';	// menu menu-{$context}
-	public $menu_secondary 			= ' menu--horizontal';	// menu menu-{$context}
-	public $menu_li_primary         = 'menu__item';	// menu-item
-	public $menu_li_secondary       = 'menu__item';	// menu-item
-	public $menu_li_social          = '';	// menu-item
+	public $header                		= ' u-mb u-mb+@md'; 	// site-header
+	public $footer                		= ''; 	// site-footer
+	public $content 					= ' grid__item'; 	// content
+	public $content_full_width			= ' u-1of1'; 	// content
+	public $content_single_column 		= ' u-1of1'; 	// content
+	public $content_sidebar_right 		= ' u-2of3@md u-pr+@md'; 	// content
+	public $content_sidebar_left 		= ' u-2of3@md grid__item--rev'; 	// content
+	public $main                		= ' bg-white br shadow--z2 u-p- u-p+@md u-mb u-mb+@md';
+	public $sidebar 					= ' bg-white br shadow--z2 grid__item u-p- u-p+@md u-mb u-mb+@md';	// sidebar sidebar__{$context}
+	public $sidebar_full_width  		= ' u-1of1';	// sidebar sidebar__{$context}
+	public $sidebar_single_column  		= ' u-1of1';	// sidebar sidebar__{$context}
+	public $sidebar_sidebar_right 		= ' u-1of3@md';	// sidebar sidebar__{$context}
+	public $sidebar_sidebar_left		= ' u-1of3@md';	// sidebar sidebar__{$context}
+	public $sidebar_footer          	= '';	// sidebar sidebar__{$context}
+	public $menu_primary 				= ' menu--horizontal';	// menu menu-{$context}
+	public $menu_secondary 				= ' menu--horizontal';	// menu menu-{$context}
+	public $menu_li_primary         	= 'menu__item';	// menu-item
+	public $menu_li_secondary       	= 'menu__item';	// menu-item
+	public $menu_li_social          	= '';	// menu-item
 
 	/* Header attributes. */
-	public $branding              	= ' c-page-title';	// site-branding
-	public $site_title            	= ' c-page-title__main';	// site-title
-	public $site_description      	= ' c-page-title__sub';	// site-description
+	public $branding              		= ' c-page-title';	// site-branding
+	public $site_title            		= ' c-page-title__main';	// site-title
+	public $site_description      		= ' c-page-title__sub';	// site-description
 
 	/* Loop attributes. */
-	public $loop_meta             	= '';	// loop-meta
-	public $loop_title            	= '';	// loop-title
-	public $loop_description      	= '';	// loop-description
+	public $loop_meta             		= '';	// loop-meta
+	public $loop_title            		= '';	// loop-title
+	public $loop_description      		= '';	// loop-description
 
 	/* Post-specific attributes. */
-	public $post                  	= '';	// get_post_class()
-	public $entry_title           	= '';	// entry-title
-	public $entry_author          	= ' entry-meta__item entry-meta__author';	// entry-author
-	public $entry_published       	= ' entry-meta__item entry-meta__date';	// entry-published updated
-	public $entry_content         	= '';	// entry-content
-	public $entry_summary         	= '';	// entry-summary
-	public $entry_terms           	= '';	// entry-terms
+	public $post                  		= '';	// get_post_class()
+	public $entry_title           		= '';	// entry-title
+	public $entry_author          		= ' entry-meta__item entry-meta__author';	// entry-author
+	public $entry_published       		= ' entry-meta__item entry-meta__date';	// entry-published updated
+	public $entry_content         		= '';	// entry-content
+	public $entry_summary         		= '';	// entry-summary
+	public $entry_terms           		= '';	// entry-terms
 
 
 

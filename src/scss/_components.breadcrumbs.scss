@@ -6,22 +6,20 @@
     text-transform: uppercase;
     overflow: hidden;
     color: $color-text;
-
-    @include sm {
-        margin-top: 60px + $base-spacing-unit--small;
-        margin-bottom: -60px;
-    }
-
-    //@include margin-space($base-spacing-unit--tiny + 5px n $base-spacing-unit--tiny * -0.5);
     list-style: none;
     cursor: default;
     font-weight: 500;
     @include font-size($base-font-size - 1);
-    //max-width: $site-width;
-    //@include padding-space(n $base-spacing-unit--small);
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: $base-spacing-unit;
+    padding: $base-spacing-unit--tiny;
+    background-color: rgba(#fff, .5);
+    border-radius: $base-radius;
 
+    @include md {
+        margin-bottom: $base-spacing-unit--large;
+    }
     & > span {
         display: inline-block;
     }

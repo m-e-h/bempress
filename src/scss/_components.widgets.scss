@@ -1,0 +1,11 @@
+/*------------------------------------*\
+    #WIDGETS
+\*------------------------------------*/
+
+.widget {
+    margin-bottom: $base-spacing-unit;
+
+    @include md {
+        margin-bottom: $base-spacing-unit--large;
+    }
+}
