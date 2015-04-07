@@ -16,15 +16,15 @@
 
 	<?php if ( is_singular( get_post_type() ) ) : ?>
 
-		<?php get_template_part( 'content/parts/single', 'header' ); ?>
+		<?php get_template_part( 'templates/single', 'header' ); ?>
 
-		<?php get_template_part( 'content/parts/single', 'content' ); ?>
+		<?php get_template_part( 'templates/single', 'content' ); ?>
 
-		<?php get_template_part( 'content/parts/single', 'footer' ); ?>
+		<?php get_template_part( 'templates/single', 'footer' ); ?>
 
     <?php else : // If not viewing a single post. ?>
 
-		<?php get_template_part( 'content/parts/single', 'content' ); ?>
+		<?php get_template_part( 'templates/single', 'content' ); ?>
 
 		<?php endif; // End single post check. ?>
 
