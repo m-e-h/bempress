@@ -1317,6 +1317,13 @@ fieldset {
     text-align: center;
 }
 
+/*------------------------------------*\
+    $ARTICLES
+\*------------------------------------*/
+.entry-title {
+    margin-bottom: 0;
+}
+
 /**
  * #COMPONENTS
  */
@@ -1533,11 +1540,10 @@ input[type="submit"]:focus {
 \*------------------------------------*/
 .entry-meta {
     color: #9f9f9f;
-    font-size: 14px;
-    font-size: 0.875rem;
+    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: normal;
-    line-height: 1.7142857143;
-    text-transform: uppercase;
+    line-height: 1.6;
 }
 .entry-meta a {
     color: currentColor;
