@@ -161,6 +161,7 @@ h6 {
 
 * {
     position: relative;
+    word-wrap: break-word; 
 
     -ms-flex-negative: 0;
     -webkit-flex-shrink: 0;
@@ -485,21 +486,17 @@ li > ol {
  */
 img {
     max-width: 100%;
+    /* [2] */
+    height: auto; 
     /* [1] */
     font-style: italic;
-    /* [2] */
 }
 
 /**
- * 1. Google Maps breaks if `max-width: 100%` acts upon it; use their selector
+ * Google Maps breaks if `max-width: 100%` acts upon it; use their selector
  *    to remove the effects.
- * 2. If a `width` and/or `height` attribute have been explicitly defined, let’s
- *    not make the image fluid.
  */
-.gm-style img,
-img[width],
-img[height] {
-    /* [2] */
+.gm-style img {
     max-width: none;
 }
 
@@ -1035,9 +1032,10 @@ input:not(.submit) {
 
 input:not(.submit),
 textarea {
+    width: 100%; 
     /* Removing the inner shadow on iOS inputs */
     border: 1px solid #ebebeb;
-    color: #6c6c6c; 
+    color: #6c6c6c;
     background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
 }
 
@@ -1337,6 +1335,9 @@ fieldset {
     font-size: 2.25rem;
     line-height: 1.3333333333;
 }
+.page-title__main a {
+    color: currentColor;
+}
 
 .page-title__sub {
     font-size: 20px;
@@ -1542,9 +1543,6 @@ input[type="submit"]:focus {
     color: currentColor;
     font-weight: inherit;
 }
-.entry-meta__item {
-    margin-right: 5px;
-}
 
 /*------------------------------------*\
     #CODE
@@ -1600,10 +1598,11 @@ kbd {
     margin-right: auto;
     margin-bottom: 24px;
     margin-left: auto;
-    padding: 6px;
-    border-radius: 3px; 
+    padding: 6px 12px;
+    border-radius: 3px;
     color: #525252;
     background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24); 
     font-size: 15px;
     font-size: 0.9375rem;
     font-weight: 500;
@@ -1633,7 +1632,7 @@ kbd {
 }
 .breadcrumbs .sep {
     padding: 0 5px;
-    color: #525252;
+    color: #d2d2d2;
 }
 .breadcrumbs .trail-end {
     color: #9f9f9f; 
@@ -2001,20 +2000,22 @@ kbd {
 .bg-white,
 .menu-item-has-children:hover > .sub-menu,
 .menu-active > .sub-menu {
-    color: #525252; 
+    color: rgba(0, 0, 0, 0.85); 
     background-color: #fff;
 }
 
 .bg-primary {
-    color: #fff; 
+    color: rgba(255, 255, 255, 0.85); 
     background-color: #476fba;
 }
 
 .bg-primary--dark {
+    color: rgba(255, 255, 255, 0.85); 
     background-color: #385996;
 }
 
 .bg-primary--light {
+    color: rgba(255, 255, 255, 0.85); 
     background-color: #6c8cc8;
 }
 

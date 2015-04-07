@@ -22,6 +22,7 @@ textarea {
 	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)); /* Removing the inner shadow on iOS inputs */
 	border: 1px solid $grey-100;
 	color: $grey-600;
+    width: 100%;
 }
 
 input:not(.submit):focus,

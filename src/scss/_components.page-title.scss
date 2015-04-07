@@ -10,6 +10,9 @@
 
     .page-title__main {
         @include font-size($heading-size-1);
+        a {
+            color: currentColor;
+        }
     }
 
     .page-title__sub {
