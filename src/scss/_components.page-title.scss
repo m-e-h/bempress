@@ -1,20 +1,20 @@
-.page-title {
-    margin-bottom:  $base-spacing-unit;
+/*------------------------------------*\
+    #SITE-TITLE
+\*------------------------------------*/
+
+.page-title__main,
+.page-title__sub {
+    font-weight: normal;
+    margin-bottom: 0;
 }
 
-    .page-title__main,
-    .page-title__sub {
-        font-weight: normal;
-        margin-bottom: 0;
+.page-title__main {
+    @include font-size($heading-size-1);
+    a {
+        color: currentColor;
     }
+}
 
-    .page-title__main {
-        @include font-size($heading-size-1);
-        a {
-            color: currentColor;
-        }
-    }
-
-    .page-title__sub {
-        @include font-size($heading-size-4);
-    }
+.page-title__sub {
+    @include font-size($heading-size-4);
+}

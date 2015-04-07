@@ -38,11 +38,13 @@
     display: block;
     text-decoration: none;
     white-space: nowrap;
-    padding: .5em 1em;
+    padding: 1em;
     color: currentColor;
 }
 
-
+.sub-menu > .menu__item > a {
+    padding: .5em 1em;
+}
 
 
 /**

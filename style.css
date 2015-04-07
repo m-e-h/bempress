@@ -1151,6 +1151,7 @@ fieldset {
 }
 
 .wrapper--wide {
+    max-width: none;
     padding-right: 5%;
     padding-left: 5%;
 }
@@ -1320,17 +1321,12 @@ fieldset {
 /*------------------------------------*\
     $ARTICLES
 \*------------------------------------*/
-.entry-title {
-    margin-bottom: 0;
-}
-
 /**
  * #COMPONENTS
  */
-.page-title {
-    margin-bottom: 24px;
-}
-
+/*------------------------------------*\
+    #SITE-TITLE
+\*------------------------------------*/
 .page-title__main,
 .page-title__sub {
     margin-bottom: 0; 
@@ -1463,10 +1459,14 @@ input[type="submit"]:focus {
 .menu__item > a,
 .menu__heading {
     display: block;
-    padding: 0.5em 1em;
+    padding: 1em;
     color: currentColor; 
     white-space: nowrap;
     text-decoration: none;
+}
+
+.sub-menu > .menu__item > a {
+    padding: 0.5em 1em;
 }
 
 /**
@@ -1536,18 +1536,35 @@ input[type="submit"]:focus {
 }
 
 /*------------------------------------*\
-    #META-DATA
+    #META
 \*------------------------------------*/
 .entry-meta {
+    margin-bottom: 0;
     color: #9f9f9f;
     font-size: 15px;
     font-size: 0.9375rem;
     font-weight: normal;
+    font-style: italic; 
     line-height: 1.6;
+    text-align: center;
 }
 .entry-meta a {
     color: currentColor;
     font-weight: inherit;
+}
+
+.badge a {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 2px solid #e4e9eb;
+    border-radius: 3px;
+    font-size: 11px;
+    font-size: 0.6875rem;
+    line-height: 2.1818181818;
+    line-height: 100%;
+    vertical-align: middle;
+    letter-spacing: 1px; 
+    text-transform: uppercase;
 }
 
 /*------------------------------------*\

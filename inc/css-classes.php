@@ -17,7 +17,7 @@ class AttrTrumps {
 	public $site_inner_sidebar_right 	= ' wrapper';
 	public $site_inner_sidebar_left 	= ' wrapper grid--rev';
 	public $wrap                		= ' wrapper';
-	public $header_wrap                	= ' wrapper--wide';
+	public $header_wrap                	= '';
 	public $header                		= ' bg-primary--light u-mb u-mb+@md'; 	// site-header
 	public $footer                		= ''; 	// site-footer
 	public $content 					= ' grid__item'; 	// content
@@ -39,7 +39,7 @@ class AttrTrumps {
 	public $menu_li_social          	= '';	// menu-item
 
 	/* Header attributes. */
-	public $branding              		= ' page-title';	// site-branding
+	public $branding              		= ' page-title u-p- u-p@md';	// site-branding
 	public $site_title            		= ' page-title__main';	// site-title
 	public $site_description      		= ' page-title__sub';	// site-description
 
@@ -55,7 +55,7 @@ class AttrTrumps {
 	public $entry_published       		= ' u-mr- entry-meta__item entry-meta__date';	// entry-published updated
 	public $entry_content         		= '';	// entry-content
 	public $entry_summary         		= '';	// entry-summary
-	public $entry_terms           		= '';	// entry-terms
+	public $entry_terms           		= ' badge';	// entry-terms
 
 
 
