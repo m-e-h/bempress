@@ -2,16 +2,10 @@
 /**
  * A template part to display comment pagination.
  *
- * @package     BEMpress
- * @subpackage  HybridCore
- * @copyright   Copyright (c) 2015, Flagship Software, LLC
- * @license     GPL-2.0+
- * @link        https://flagshipwp.com/
- * @since       1.0.0
+ * @package BEMpress
  */
-?>
 
-<?php if ( get_option( 'page_comments' ) && 1 < get_comment_pages_count() ) : ?>
+if ( get_option( 'page_comments' ) && 1 < get_comment_pages_count() ) : ?>
 
 	<nav id="comments-nav" class="comments-nav pagination" role="navigation" aria-labelledby="comments-nav-title">
 

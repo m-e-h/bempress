@@ -44,15 +44,15 @@ class AttrTrumps {
 	public $site_description      		= ' page-title__sub';	// site-description
 
 	/* Loop attributes. */
-	public $loop_meta             		= '';	// loop-meta
+	public $loop_meta             		= ' u-p u-mb+ br bg-white';	// loop-meta
 	public $loop_title            		= '';	// loop-title
 	public $loop_description      		= '';	// loop-description
 
 	/* Post-specific attributes. */
 	public $post                  		= ' bg-white br shadow--z1 u-p- u-p+@md u-mb u-mb+@md';	// get_post_class()
 	public $entry_title           		= '';	// entry-title
-	public $entry_author          		= ' entry-meta__item entry-meta__author';	// entry-author
-	public $entry_published       		= ' entry-meta__item entry-meta__date';	// entry-published updated
+	public $entry_author          		= ' u-mr- entry-meta__item entry-meta__author';	// entry-author
+	public $entry_published       		= ' u-mr- entry-meta__item entry-meta__date';	// entry-published updated
 	public $entry_content         		= '';	// entry-content
 	public $entry_summary         		= '';	// entry-summary
 	public $entry_terms           		= '';	// entry-terms
