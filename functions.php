@@ -2,12 +2,7 @@
 /**
  * Theme Setup Functions and Definitions.
  *
- * @package     BEMpress
- * @subpackage  HybridCore
- * @copyright   Copyright (c) 2015, Flagship Software, LLC
- * @license     GPL-2.0+
- * @link        https://flagshipwp.com/
- * @since       1.0.0
+ * @package BEMpress
  */
 
 // Include Hybrid Core.
@@ -47,8 +42,8 @@ function bempress_setup() {
 	add_theme_support( 'site-logo' );
 
 	// Add navigation menus.
-	register_nav_menu( 'primary',   _x( 'Primary Location', 'nav menu location', 'bempress' ) );
-	register_nav_menu( 'secondary', _x( 'Secondary Location', 'nav menu location', 'bempress' ) );
+	register_nav_menu( 'primary',   _x( 'Primary', 'nav menu location', 'bempress' ) );
+	register_nav_menu( 'secondary', _x( 'Secondary', 'nav menu location', 'bempress' ) );
 
 	$formats = array(
 		'aside',

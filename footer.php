@@ -2,26 +2,17 @@
 /**
  * The template for displaying the footer.
  *
- * Contains the closing of the #content div and all content after
- *
- * @package     BEMpress
- * @subpackage  HybridCore
- * @copyright   Copyright (c) 2015, Flagship Software, LLC
- * @license     GPL-2.0+
- * @link        https://flagshipwp.com/
- * @since       1.0.0
+ * @package BEMpress
  */
 ?>
 
 		</div><!-- #site-inner -->
 
-<?php
-tha_footer_before(); ?>
+        <?php tha_footer_before(); ?>
 
 		<footer <?php hybrid_attr( 'footer' ); ?>>
 
-<?php
-tha_footer_top(); ?>
+            <?php tha_footer_top(); ?>
 
 			<div <?php hybrid_attr( 'wrap', 'footer' ); ?>>
 
@@ -38,18 +29,15 @@ tha_footer_top(); ?>
 
 			</div><!-- .wrap -->
 
-<?php
-tha_footer_bottom(); ?>
+            <?php tha_footer_bottom(); ?>
 
 		</footer><!-- .footer -->
 
-<?php
-tha_footer_after(); ?>
+        <?php tha_footer_after(); ?>
 
 	</div><!-- .site-container -->
 
-<?php
-tha_body_bottom(); ?>
+    <?php tha_body_bottom(); ?>
 
 	<?php wp_footer(); ?>
 

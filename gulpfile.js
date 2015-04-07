@@ -1,7 +1,5 @@
 /**
- *
- *  Abraham
- *
+ * BEMpress
  */
 
 'use strict';
