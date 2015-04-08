@@ -62,7 +62,9 @@ $color-links-active:        $color-primary;
 // Objects
 
 $color-hr:                  $color-grey-ui;
-
+$color-bg:                  $grey-100;
+$color-code-bg:             $grey-800;
+$color-code-text:           set-text-color($color-code-bg);
 
 
 

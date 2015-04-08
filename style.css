@@ -377,8 +377,9 @@ textarea {
     #PAGE
 \*------------------------------------*/
 html {
-    min-height: 100%; 
+    min-height: 100%;
     color: #333;
+    background-color: #fff; 
     font-size: 1em;
     line-height: 1.5;
 }
@@ -1600,8 +1601,6 @@ pre {
     margin-bottom: 24px;
     padding: 5px 12px;
     border-radius: 3px;
-    color: #171d20;
-    background-color: #f3f5f6;
     font-size: 15px;
     font-size: 0.9375rem;
     line-height: 1.6;
@@ -1613,8 +1612,8 @@ code {
     display: inline-block;
     padding: 0 2px;
     border-radius: 3px;
-    color: #171d20;
-    background-color: #f3f5f6;
+    color: rgba(255, 255, 255, 0.9);
+    background-color: #393939;
     font-weight: normal; 
     -moz-tab-size: 4;
     tab-size: 4;

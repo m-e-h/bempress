@@ -3,21 +3,19 @@
 \*------------------------------------*/
 
 .form-allowed-tags code, pre {
-    background-color: $blue-grey-50;
     @include font-size(15px);
     margin-bottom: $base-spacing-unit;
     max-width: 100%;
     overflow: auto;
     border-radius: $base-radius;
     padding: 5px $base-spacing-unit--small;
-    color: $blue-grey-900;
     position: relative;
     tab-size: 4;
 }
 
 code {
-    background-color: $blue-grey-50;
-    color: $blue-grey-900;
+    background-color: $color-code-bg;
+    color: $color-code-text;
     padding: 0 2px;
     display: inline-block;
     border-radius: $base-radius;
