@@ -38,6 +38,8 @@ class AttrTrumps {
 	public $menu_li_secondary       	= 'menu__item';	// menu-item
 	public $menu_li_social          	= '';	// menu-item
 
+    public $author_box                  = ' bg-white br shadow--z1 u-p- u-p+@md u-mb u-mb+@md';
+
 	/* Header attributes. */
 	public $branding              		= ' page-title u-p u-p+@md';	// site-branding
 	public $site_title            		= ' page-title__main';	// site-title
@@ -74,6 +76,8 @@ class AttrTrumps {
 		add_filter( 'hybrid_attr_sidebar',			[ $this, 'sidebar' ], 10, 2 );
 		add_filter( 'hybrid_attr_menu',				[ $this, 'menu' ], 10, 2 );
 		add_filter( 'hybrid_attr_loop-meta',		[ $this, 'loop_meta' ] );
+
+        add_filter( 'hybrid_attr_author-box',       [ $this, 'author_box' ], 10, 2 );
 
 		/* Components. */
 		add_filter( 'nav_menu_css_class',			[ $this, 'menu_li' ], 10, 2 );
@@ -128,7 +132,10 @@ class AttrTrumps {
 		return $attr;
 	}
 
-
+    public function author_box( $attr, $context ) {
+        $attr['class']    .= $this->author_box;
+        return $attr;
+    }
 
 
 	public function wrap( $attr, $context ) {

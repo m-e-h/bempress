@@ -23,7 +23,6 @@ add_filter( 'hybrid_attr_primary',        	'flagship_attr_primary' );
 add_filter( 'hybrid_attr_main',             'flagship_attr_main' );
 add_filter( 'hybrid_attr_sidebar',          'flagship_attr_sidebar_class', 10, 2 );
 add_filter( 'hybrid_attr_menu',             'flagship_attr_menu_class', 10, 2 );
-add_filter( 'nav_menu_link_attributes',     'flagship_add_menu_atts', 10, 3 );
 // Post-specific attributes.
 add_filter( 'hybrid_attr_entry-summary',    'flagship_attr_entry_summary_class' );
 // Other attributes.
@@ -145,23 +144,6 @@ function flagship_attr_menu_class( $attr, $context ) {
 	}
 	$attr['class'] .= " menu-{$context}";
 	return $attr;
-}
-
-/**
- * Add URL itemprop to WordPress menu items.
- *
- * @since  1.4.0
- * @access public
- * @param  $atts array Existing link attributes.
- * @return $atts array Amended comment attributes.
- */
-function flagship_add_menu_atts( $atts, $item, $args ) {
-	// Return early if we're not working with an actual navigation menu.
-	if ( ! isset( $args->menu_class ) || false === stripos( $args->menu_class, 'menu' ) ) {
-		return $atts;
-	}
-	$atts['itemprop'] = 'url';
-	return $atts;
 }
 
 /**
