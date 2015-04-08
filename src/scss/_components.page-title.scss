@@ -9,12 +9,17 @@
 }
 
 .page-title__main {
-    @include font-size($heading-size-1);
+    @include font-size($heading-size-1, false);
+    line-height: 1;
     a {
         color: currentColor;
+        &:hover {
+            opacity: .8;
+        }
     }
 }
 
 .page-title__sub {
     @include font-size($heading-size-4);
+    opacity: .8;
 }

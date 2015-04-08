@@ -1320,7 +1320,7 @@ fieldset {
     top: 15px;
     height: 100%; 
     margin: 0 auto;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 /**
@@ -1339,12 +1339,17 @@ fieldset {
     font-size: 36px;
     font-size: 2.25rem;
     line-height: 1.3333333333;
+    line-height: 1;
 }
 .page-title__main a {
     color: currentColor;
 }
+.page-title__main a:hover {
+    opacity: 0.8;
+}
 
 .page-title__sub {
+    opacity: 0.8; 
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 1.2;
@@ -2057,6 +2062,21 @@ kbd {
 .bg-primary--light {
     color: rgba(255, 255, 255, 0.9); 
     background-color: #6c8cc8;
+}
+
+.bg-secondary {
+    color: rgba(255, 255, 255, 0.9); 
+    background-color: #319b5c;
+}
+
+.bg-secondary--dark {
+    color: rgba(255, 255, 255, 0.9); 
+    background-color: #257445;
+}
+
+.bg-secondary--light {
+    color: rgba(255, 255, 255, 0.9); 
+    background-color: #3dc273;
 }
 
 /*------------------------------------*\

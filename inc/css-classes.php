@@ -32,14 +32,14 @@ class AttrTrumps {
 	public $sidebar_sidebar_right 		= ' u-1of3@md';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_left		= ' u-1of3@md';	// sidebar sidebar__{$context}
 	public $sidebar_footer          	= ' grid grid--flex';	// sidebar sidebar__{$context}
-	public $menu_primary 				= ' shadow--z1 bg-primary menu--horizontal';	// menu menu-{$context}
+	public $menu_primary 				= ' shadow--z1 bg-secondary--light menu--horizontal';	// menu menu-{$context}
 	public $menu_secondary 				= ' menu--horizontal';	// menu menu-{$context}
 	public $menu_li_primary         	= 'menu__item';	// menu-item
 	public $menu_li_secondary       	= 'menu__item';	// menu-item
 	public $menu_li_social          	= '';	// menu-item
 
 	/* Header attributes. */
-	public $branding              		= ' page-title u-p- u-p@md';	// site-branding
+	public $branding              		= ' page-title u-p u-p+@md';	// site-branding
 	public $site_title            		= ' page-title__main';	// site-title
 	public $site_description      		= ' page-title__sub';	// site-description
 

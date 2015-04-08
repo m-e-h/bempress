@@ -115,3 +115,18 @@
     background-color: $color-primary-light;
     color: set-text-color($color-primary);
 }
+
+.bg-secondary {
+    background-color: $color-secondary;
+    color: set-text-color($color-secondary);
+}
+
+.bg-secondary--dark {
+    background-color: $color-secondary-dark;
+    color: set-text-color($color-secondary-dark);
+}
+
+.bg-secondary--light {
+    background-color: $color-secondary-light;
+    color: set-text-color($color-secondary-light);
+}
