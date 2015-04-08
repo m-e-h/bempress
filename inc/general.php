@@ -3,11 +3,6 @@
  * General Theme-Specific Functions.
  *
  * @package     BEMpress
- * @subpackage  HybridCore
- * @copyright   Copyright (c) 2015, Flagship Software, LLC
- * @license     GPL-2.0+
- * @link        https://flagshipwp.com/
- * @since       1.0.0
  */
 
 add_action( 'init', 'bempress_register_image_sizes', 5 );
@@ -55,4 +50,80 @@ function bempress_do_sticky_banner() {
 		<p class="ribbon-content"><?php _e( 'Sticky', 'bempress' ); ?></p>
 	</div>
 	<?php
+}
+
+
+
+
+
+
+
+
+
+
+
+add_action( 'tha_entry_bottom', 'abraham_do_format_icon' );
+
+
+function abraham_do_format_icon() { ?>
+<span class="entry-format"><?php abe_post_format_link(); ?></span>
+<?php
+}
+/**
+ * Outputs an svg link to the post format archive.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
+function abe_post_format_link() {
+    echo abe_get_post_format_link();
+}
+/**
+ * Generates a link to the current post format's archive.  If the post doesn't have a post format, the link
+ * will go to the post permalink.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return string
+ */
+function abe_get_post_format_link() {
+    $format = get_post_format();
+    get_template_part( 'images/vector/svg', $format );
+    $url    = empty( $format ) ? get_permalink() : get_post_format_link( $format );
+    return sprintf( '<a href="%s" class="post-format-link"></a>', esc_url( $url ) );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+function bempress_responsive_videos_init() {
+
+    /* If the theme does support 'bempress-responsive-videos', wrap the videos */
+    add_filter( 'wp_video_shortcode', 'bempress_responsive_videos_embed_html' );
+    add_filter( 'embed_oembed_html',  'bempress_responsive_videos_embed_html' );
+    add_filter( 'video_embed_html',   'bempress_responsive_videos_embed_html' );
+    /* Wrap videos in Buddypress */
+    add_filter( 'bp_embed_oembed_html', 'bempress_responsive_videos_embed_html' );
+}
+add_action( 'after_setup_theme', 'bempress_responsive_videos_init', 99 );
+/**
+ * Adds a wrapper to videos and enqueue script
+ *
+ * @return string
+ */
+function bempress_responsive_videos_embed_html( $html ) {
+    if ( empty( $html ) || ! is_string( $html ) ) {
+        return $html;
+    }
+    return '<div class="featured-media__ratio featured-media__ratio--16by9"></div>' . $html;
 }

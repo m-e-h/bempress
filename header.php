@@ -32,6 +32,9 @@
         <?php tha_header_before(); ?>
 
 		<header <?php hybrid_attr( 'header' ); ?>>
+
+            <?php hybrid_get_menu( 'primary' ); ?>
+
 			<div <?php hybrid_attr( 'wrap', 'header' ); ?>>
 
                 <?php tha_header_top(); ?>
@@ -45,8 +48,6 @@
                 <?php tha_header_bottom(); ?>
 
 			</div><!-- .wrap -->
-
-            <?php hybrid_get_menu( 'primary' ); ?>
 
 		</header><!-- #header -->
 

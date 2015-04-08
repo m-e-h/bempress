@@ -797,6 +797,76 @@ blockquote cite::before {
 }
 
 /*------------------------------------*\
+    $MEDIA EMBEDS
+\*------------------------------------*/
+/**
+ * Flexible media embeds
+ *
+ * For use with media embeds – such as videos, slideshows, or even images –
+ * that need to retain a specific aspect ratio but adapt to the width of their
+ * containing element.
+ *
+ * Based on: http://alistapart.com/article/creating-intrinsic-ratios-for-video
+ */
+.featured-media {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+/**
+ * The aspect-ratio hack is applied to an empty element because it allows
+ * the component to respect `max-height`. Default aspect ratio is 1:1.
+ */
+.featured-media__ratio {
+    display: block;
+    width: 100%; 
+    padding-bottom: 100%;
+}
+
+/**
+ * Modifier: 3:1 aspect ratio
+ */
+.featured-media__ratio--3by1 {
+    padding-bottom: -webkit-calc(100% / 3);
+    padding-bottom: calc(100% / 3);
+}
+
+/**
+ * Modifier: 2:1 aspect ratio
+ */
+.featured-media__ratio--2by1 {
+    padding-bottom: 50%;
+}
+
+/**
+ * Modifier: 16:9 aspect ratio
+ */
+.featured-media__ratio--16by9 {
+    padding-bottom: 56.25%;
+}
+
+/**
+ * Modifier: 4:3 aspect ratio
+ */
+.featured-media__ratio--4by3 {
+    padding-bottom: 75%;
+}
+
+/**
+ * Fit the content to the aspect ratio
+ */
+.featured-media-content,
+.featured-media > iframe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+}
+
+/*------------------------------------*\
     #BOX SHADOWS
 \*------------------------------------*/
 .shadow--z1 {
@@ -822,89 +892,6 @@ blockquote cite::before {
 /*------------------------------------*\
     #BUTTONS
 \*------------------------------------*/
-/**
- * A simple button object.
- */
-/**
- * 1. Allow us to style box model properties.
- * 2. Line different sized buttons up a little nicer.
- * 3. Make buttons inherit font styles (often necessary when styling `input`s as
- *    buttons).
- * 4. Reset/normalize some styles.
- * 5. Force all button-styled elements to appear clickable.
- * 6. Fixes odd inner spacing in IE7.
- * 7. Subtract the border size from the padding value so that buttons do not
- *    grow larger as we add borders.
- */
-.btn,
-button,
-.button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-    display: inline-block;
-    /* [5] */
-    overflow: visible;
-    /* [4] */
-    margin: 0;
-    /* [6] */
-    padding: 12px 24px;
-    border: none;
-    /* [4] */
-    border-radius: 3px; 
-    /* [7] */
-    background-color: #476fba;
-    /* [2] */
-    font: inherit;
-    /* [3] */
-    text-align: center;
-    /* [1] */
-    vertical-align: middle;
-    /* [4] */
-    cursor: pointer;
-}
-.btn,
-button,
-.button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"],
-.btn:hover,
-button:hover,
-.button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover,
-.btn:active,
-button:active,
-.button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active,
-.btn:focus,
-button:focus,
-.button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus {
-    /* [4] */
-    color: #fff; 
-    text-decoration: none;
-}
-
-/**
- * Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding.
- */
-.btn::-moz-focus-inner,
-button::-moz-focus-inner,
-.button::-moz-focus-inner,
-input[type="button"]::-moz-focus-inner,
-input[type="reset"]::-moz-focus-inner,
-input[type="submit"]::-moz-focus-inner {
-    padding: 0; 
-    border: 0;
-}
-
 /*------------------------------------*\
     $LAYOUTS
 \*------------------------------------*/
@@ -1321,6 +1308,21 @@ fieldset {
 /*------------------------------------*\
     $ARTICLES
 \*------------------------------------*/
+.entry-format {
+    position: absolute;
+    left: 0; 
+    width: 100%;
+    height: 60px;
+}
+
+.entry-format svg {
+    display: block;
+    top: 15px;
+    height: 100%; 
+    margin: 0 auto;
+    opacity: 0.7;
+}
+
 /**
  * #COMPONENTS
  */
@@ -1354,7 +1356,21 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    outline: 0;
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 3px;
+    outline: 0; 
+    color: rgba(255, 255, 255, 0.9);
+    /* [5] */
+    background-color: #476fba;
+    /* [2] */
+    font: inherit;
+    /* [3] */
+    text-align: center;
+    /* [1] */
+    vertical-align: middle;
+    /* [4] */
+    cursor: pointer;
 }
 .btn:hover,
 button:hover,
@@ -1374,6 +1390,7 @@ button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus {
+    color: rgba(255, 255, 255, 0.9); 
     background-color: #385996;
 }
 
@@ -2023,22 +2040,22 @@ kbd {
 .bg-white,
 .menu-item-has-children:hover > .sub-menu,
 .menu-active > .sub-menu {
-    color: rgba(0, 0, 0, 0.85); 
+    color: rgba(0, 0, 0, 0.9); 
     background-color: #fff;
 }
 
 .bg-primary {
-    color: rgba(255, 255, 255, 0.85); 
+    color: rgba(255, 255, 255, 0.9); 
     background-color: #476fba;
 }
 
 .bg-primary--dark {
-    color: rgba(255, 255, 255, 0.85); 
+    color: rgba(255, 255, 255, 0.9); 
     background-color: #385996;
 }
 
 .bg-primary--light {
-    color: rgba(255, 255, 255, 0.85); 
+    color: rgba(255, 255, 255, 0.9); 
     background-color: #6c8cc8;
 }
 

@@ -44,8 +44,8 @@
 //
 @function set-text-color($color) {
   @if (lightness($color) > 51) {
-    @return rgba(#000000, .85); // Lighter backgorund, return dark color
+    @return rgba(#000000, .9); // Lighter backgorund, return dark color
   } @else {
-    @return rgba(#ffffff, .85); // Darker background, return light color
+    @return rgba(#ffffff, .9); // Darker background, return light color
   }
 }

@@ -80,6 +80,8 @@ function bempress_setup() {
 
 	// https://github.com/FlagshipWP/flagship-library/wiki/Flagship-Footer-Widgets
 	add_theme_support( 'flagship-footer-widgets', 3 );
+
+    //add_theme_support( 'bempress-responsive-videos' );
 }
 
 add_action( 'after_setup_theme', 'bempress_includes', 10 );
