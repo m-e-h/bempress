@@ -9,6 +9,7 @@
     border-radius: $base-radius;
     padding: ($base-spacing-unit / 2) $base-spacing-unit;
     outline: 0;
+    transition: $base-transition;
     &:hover,
     &:active,
     &:focus {

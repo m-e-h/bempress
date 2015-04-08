@@ -1,11 +1,15 @@
-a {
+a:not(.button) {
     text-decoration: none;
-    color: $color-link;
-    transition: color 0.2s;
+    color: inherit;
+    transition: opacity $base-transition;
 
     &:hover,
     &:focus {
-        color: $color-link-hover;
+        opacity: $base-opacity;
     }
 
+}
+
+.entry-content a:not(.button) {
+    color: $color-links;
 }

@@ -455,15 +455,19 @@ h6 {
     line-height: 1.7142857143;
 }
 
-a {
-    color: #476fba;
+a:not(.button) {
+    color: inherit;
     text-decoration: none;
-    -webkit-transition: color 0.2s;
-    transition: color 0.2s;
+    -webkit-transition: opacity 0.22222222s;
+    transition: opacity 0.22222222s;
 }
-a:hover,
-a:focus {
-    color: #314e83;
+a:not(.button):hover,
+a:not(.button):focus {
+    opacity: 0.7;
+}
+
+.entry-content a:not(.button) {
+    color: #385996;
 }
 
 ul {
@@ -889,9 +893,6 @@ blockquote cite::before {
     box-shadow: 0 19px 19px 0 rgba(0, 0, 0, 0.3), 0 15px 6px 0 rgba(0, 0, 0, 0.22);
 }
 
-/*------------------------------------*\
-    #BUTTONS
-\*------------------------------------*/
 /*------------------------------------*\
     $LAYOUTS
 \*------------------------------------*/
@@ -1344,9 +1345,6 @@ fieldset {
 .page-title__main a {
     color: currentColor;
 }
-.page-title__main a:hover {
-    opacity: 0.8;
-}
 
 .page-title__sub {
     opacity: 0.8; 
@@ -1364,7 +1362,7 @@ input[type="submit"] {
     display: inline-block;
     padding: 12px 24px;
     border-radius: 3px;
-    outline: 0; 
+    outline: 0;
     color: rgba(255, 255, 255, 0.9);
     /* [5] */
     background-color: #476fba;
@@ -1376,6 +1374,8 @@ input[type="submit"] {
     vertical-align: middle;
     /* [4] */
     cursor: pointer;
+    -webkit-transition: 0.22222222s;
+    transition: 0.22222222s;
 }
 .btn:hover,
 button:hover,
