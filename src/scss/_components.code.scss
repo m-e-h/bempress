@@ -14,8 +14,7 @@
 }
 
 code {
-    background-color: $color-code-bg;
-    color: $color-code-text;
+    @include bg-text($color-code-bg);
     padding: 0 2px;
     display: inline-block;
     border-radius: $base-radius;

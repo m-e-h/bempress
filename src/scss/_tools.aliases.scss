@@ -64,7 +64,6 @@ $color-links-active:        $color-primary;
 $color-hr:                  $color-grey-ui;
 $color-bg:                  $grey-100;
 $color-code-bg:             $grey-800;
-$color-code-text:           set-text-color($color-code-bg);
 
 
 
@@ -77,12 +76,10 @@ $footer-widget-bg:          $color-primary-light;
 
 
 // Buttons
-$btn-text:                  $white;
 $btn-bg:                    $color-primary;
-$btn-bg-hover:              $color-primary-light;
+$btn-bg-hover:              $color-primary-dark;
 $btn-bg-active:             $color-primary-dark;
 $btn-primary-bg:            $color-primary;
-$btn-primary-text:          $white;
 
 
 
@@ -123,21 +120,4 @@ $color-shadow:          rgba(0, 0, 0, 0.05);
 
 
 
-// UI
-$color-ui:          $color-gray-light;
 
-// Text
-$color-text:        $color-gray-dark;
-
-// Links
-$color-link:        $color-brand;
-$color-link-hover:  $color-brand-shadow;
-
-// Buttons
-$color-btn:         $color-brand;
-$color-btn-hover:   $color-brand-shadow;
-
-$inuit-btn-background:      $btn-bg;
-$inuit-btn-color:           $btn-text;
-$inuit-btn-border-width:    0;
-$inuit-btn-radius:          $base-radius;

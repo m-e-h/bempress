@@ -108,3 +108,11 @@
 @mixin shadow-z5() {
   box-shadow: 0 19px 19px 0 rgba(0,0,0,0.30), 0 15px 6px 0 rgba(0,0,0,0.22);
 }
+
+
+
+
+@mixin bg-text($bg-color) {
+  background: $bg-color;
+  color: set-text-color($bg-color);
+}

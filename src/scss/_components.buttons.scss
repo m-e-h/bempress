@@ -4,8 +4,7 @@
     font: inherit; /* [3] */
     text-align: center; /* [4] */
     cursor: pointer; /* [5] */
-    background-color: $btn-bg;
-    color: set-text-color($btn-bg);
+    @include bg-text($btn-bg);
     border-radius: $base-radius;
     padding: ($base-spacing-unit / 2) $base-spacing-unit;
     outline: 0;
@@ -13,8 +12,7 @@
     &:hover,
     &:active,
     &:focus {
-        background-color: darken($btn-bg, 10);
-        color: set-text-color($btn-bg);
+        @include bg-text($btn-bg-hover);
     }
 }
 

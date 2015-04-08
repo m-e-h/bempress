@@ -1031,7 +1031,7 @@ textarea {
 input:not(.submit):focus,
 textarea:focus {
     border: 1px solid #476fba;
-    color: #525252; 
+    color: #393939; 
     background-color: #fff;
 }
 
@@ -1366,7 +1366,7 @@ input[type="submit"] {
     outline: 0;
     color: rgba(255, 255, 255, 0.9);
     /* [5] */
-    background-color: #476fba;
+    background: #476fba;
     /* [2] */
     font: inherit;
     /* [3] */
@@ -1397,7 +1397,7 @@ input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus {
     color: rgba(255, 255, 255, 0.9); 
-    background-color: #385996;
+    background: #385996;
 }
 
 .c-testimonial {
@@ -1613,7 +1613,7 @@ code {
     padding: 0 2px;
     border-radius: 3px;
     color: rgba(255, 255, 255, 0.9);
-    background-color: #393939;
+    background: #393939;
     font-weight: normal; 
     -moz-tab-size: 4;
     tab-size: 4;
@@ -1644,7 +1644,7 @@ kbd {
     margin-left: auto;
     padding: 6px 12px;
     border-radius: 3px;
-    color: #525252;
+    color: #393939;
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24); 
     font-size: 15px;
