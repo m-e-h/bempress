@@ -103,27 +103,27 @@ function flagship_tiny_mce_formats( $args ) {
 				'title'    => __( 'Buttons', 'flagship-library' ),
 				'items'    => array(
 					array(
-						'title'    => __( 'Primary', 'flagship-library' ),
+						'title'    => __( 'Standard', 'flagship-library' ),
 						'selector' => 'a',
 						'classes'  => 'button',
 						'exact'    => true,
 					),
 					array(
-						'title'    => __( 'Primary Block', 'flagship-library' ),
+						'title'    => __( 'Standard Block', 'flagship-library' ),
 						'selector' => 'a',
 						'classes'  => 'button block',
 						'exact'    => true,
 					),
 					array(
-						'title'    => __( 'Secondary', 'flagship-library' ),
+						'title'    => __( 'Call to Action', 'flagship-library' ),
 						'selector' => 'a',
-						'classes'  => 'button secondary',
+						'classes'  => 'button secondary cta',
 						'exact'    => true,
 					),
 					array(
-						'title'    => __( 'Secondary Block', 'flagship-library' ),
+						'title'    => __( 'Call to Action Block', 'flagship-library' ),
 						'selector' => 'a',
-						'classes'  => 'button secondary block',
+						'classes'  => 'button secondary cta block',
 						'exact'    => true,
 					),
 				),

@@ -16,16 +16,13 @@
 <section <?php hybrid_attr( 'author-box', 'archive' ); ?>>
 
 	<div class="avatar-wrap">
-		<?php echo get_avatar( get_the_author_meta( 'email' ), 125, '', get_the_author() ); ?>
+		<?php echo get_avatar( get_the_author_meta( 'email' ), 100, '', get_the_author() ); ?>
 	</div><!-- .avatar-wrap -->
 
 	<div class="author-info">
 
 		<h3 class="author-box-title">
-			<?php _e( 'Written by ', 'flagship-library' ); ?>
-			<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
-				<span class="name" itemprop="name"><?php the_author(); ?></span>
-			</a>
+			<?php _e( 'Written by', 'flagship-library' ); ?> <?php the_author_posts_link(); ?>
 		</h3>
 
 		<?php if ( get_the_author_meta( 'description' ) ) : ?>

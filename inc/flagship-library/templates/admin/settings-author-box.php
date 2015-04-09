@@ -18,13 +18,13 @@
 	<tbody>
 		<tr>
 			<td>
-				<label for="meta[flagship_author_box_single]">
-					<input id="meta[flagship_author_box_single]" name="meta[flagship_author_box_single]" type="checkbox" value="1" <?php checked( $single_box ); ?> />
+				<label for="flagbox[flagship_author_box_single]">
+					<input id="flagbox[flagship_author_box_single]" name="flagbox[flagship_author_box_single]" type="checkbox" value="1" <?php checked( $single_box ); ?> />
 					<?php _e( 'Enable Author Box on this User\'s Posts?', 'flagship-library' ); ?>
 				</label><br />
 
-				<label for="meta[flagship_author_box_archive]">
-					<input id="meta[flagship_author_box_archive]" name="meta[flagship_author_box_archive]" type="checkbox" value="1" <?php checked( $archive_box ); ?> />
+				<label for="flagbox[flagship_author_box_archive]">
+					<input id="flagbox[flagship_author_box_archive]" name="flagbox[flagship_author_box_archive]" type="checkbox" value="1" <?php checked( $archive_box ); ?> />
 					<?php _e( 'Enable Author Box on this User\'s Archives?', 'flagship-library' ); ?>
 				</label>
 			</td>

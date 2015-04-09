@@ -34,28 +34,22 @@ function bempress_excerpt_length( $length ) {
 	return 60;
 }
 
-//add_action( 'tha_entry_top', 'bempress_do_sticky_banner' );
+
+
+
 /**
- * Add markup for a sticky ribbon on sticky posts in archive views.
+ * Get default footer text
  *
- * @since   1.0.0
- * @return  void
+ * @return string $text
  */
-function bempress_do_sticky_banner() {
-	if ( is_singular() || ! is_sticky() ) {
-		return;
-	}
-	?>
-	<div class="corner-ribbon sticky">
-		<p class="ribbon-content"><?php _e( 'Sticky', 'bempress' ); ?></p>
-	</div>
-	<?php
+function bempress_get_default_footer_text() {
+    $text = sprintf(
+        __( 'Copyright &#169; %1$s %2$s.', 'abraham' ),
+    date_i18n( 'Y' ),
+    hybrid_get_site_link()
+    );
+    return $text;
 }
-
-
-
-
-
 
 
 
@@ -126,4 +120,55 @@ function bempress_responsive_videos_embed_html( $html ) {
         return $html;
     }
     return '<div class="featured-media__ratio featured-media__ratio--16by9"></div>' . $html;
+}
+
+
+
+
+
+
+
+
+
+// Attributes for major structural elements.
+add_filter( 'hybrid_attr_primary',          'flagship_attr_primary' );
+add_filter( 'hybrid_attr_main',             'flagship_attr_main' );
+
+
+/**
+ * Main content container of the page attributes.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  array $attr
+ * @return array
+ */
+function flagship_attr_primary( $attr ) {
+    $attr['id'] = 'primary';
+    $attr['class'] = 'content-area';
+    return $attr;
+}
+
+/**
+ * Main content container of the page attributes.
+ *
+ * @since  2.0.0
+ * @access public
+ * @param  array   $attr
+ * @return array
+ */
+function flagship_attr_main( $attr ) {
+    $attr['id']       = 'main';
+    $attr['class']    = 'site-main';
+    $attr['role']     = 'main';
+    $attr['itemprop'] = 'mainContentOfPage';
+    if ( is_singular( 'post' ) || is_home() || is_archive() ) {
+        $attr['itemscope'] = '';
+        $attr['itemtype']  = 'http://schema.org/Blog';
+    }
+    elseif ( is_search() ) {
+        $attr['itemscope'] = 'itemscope';
+        $attr['itemtype']  = 'http://schema.org/SearchResultsPage';
+    }
+    return $attr;
 }

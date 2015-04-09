@@ -96,7 +96,9 @@ function bempress_includes() {
 	$includes_dir = trailingslashit( get_template_directory() ) . 'inc/';
 
 	// Load the main file in the Flagship library directory.
-	require_once $includes_dir . 'flagship-library/flagship-library.php';
+	//require_once $includes_dir . 'flagship-library/flagship-library.php';
+
+    require_once $includes_dir . 'flagship.php';
 
 	// Load all PHP files in the includes directory.
 	require_once $includes_dir . 'tha-theme-hooks.php';
@@ -105,6 +107,7 @@ function bempress_includes() {
 	require_once $includes_dir . 'widgetize.php';
 	require_once $includes_dir . 'css-classes.php';
 	require_once $includes_dir . 'html-min.php';
+    require_once $includes_dir . 'customizer/customizer.php';
 }
 
 // Add a hook for child themes to execute code.

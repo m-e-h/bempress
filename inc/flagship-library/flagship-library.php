@@ -15,7 +15,7 @@ if ( ! class_exists( 'Flagship_Library' ) ) {
 	/**
 	 * Class for common Flagship theme functionality.
 	 *
-	 * @version 1.4.1
+	 * @version 1.4.3
 	 */
 	class Flagship_Library {
 
@@ -25,7 +25,7 @@ if ( ! class_exists( 'Flagship_Library' ) ) {
 		 * @since 1.1.0
 		 * @type  string
 		 */
-		protected $version = '1.4.1';
+		protected $version = '1.4.3';
 
 		/**
 		 * Prefix to prevent conflicts.
@@ -68,6 +68,22 @@ if ( ! class_exists( 'Flagship_Library' ) ) {
 		 * @var   Flagship_Library
 		 */
 		public $author_box_admin;
+
+		/**
+		 * Placeholder for our breadcrumb display class instance.
+		 *
+		 * @since 1.4.0
+		 * @var   Flagship_Breadcrumb_Display
+		 */
+		public $breadcrumb_display;
+
+		/**
+		 * Placeholder for our footer widgets class instance.
+		 *
+		 * @since 1.4.0
+		 * @var   Flagship_Footer_Widgets
+		 */
+		public $footer_widgets;
 
 		/**
 		 * Placeholder for our site logo class instance.
@@ -241,6 +257,8 @@ if ( ! class_exists( 'Flagship_Library' ) ) {
 					'functions/seo.php',
 					'functions/template-entry.php',
 					'functions/template-general.php',
+					'functions/template.php',
+					'functions/deprecated.php',
 				)
 			);
 			// Include our library files.
@@ -259,6 +277,12 @@ if ( ! class_exists( 'Flagship_Library' ) ) {
 		private function extensions_includes() {
 			if ( current_theme_supports( 'flagship-author-box' ) ) {
 				require_once $this->dir . 'classes/author-box.php';
+			}
+			if ( current_theme_supports( 'breadcrumb-trail' ) ) {
+				require_once $this->dir . 'customizer/classes/breadcrumb-display.php';
+			}
+			if ( current_theme_supports( 'flagship-footer-widgets' ) ) {
+				require_once $this->dir . 'classes/footer-widgets.php';
 			}
 			if ( current_theme_supports( 'site-logo' ) ) {
 				add_action( 'init', array( $this, 'logo_includes' ), 12 );
@@ -320,6 +344,14 @@ if ( ! class_exists( 'Flagship_Library' ) ) {
 			if ( class_exists( 'Flagship_Author_Box', false ) ) {
 				$this->author_box = new Flagship_Author_Box;
 				$this->author_box->run();
+			}
+			if ( class_exists( 'Flagship_Breadcrumb_Display', false ) ) {
+				$this->breadcrumb_display = new Flagship_Breadcrumb_Display;
+				$this->breadcrumb_display->run();
+			}
+			if ( class_exists( 'Flagship_Footer_Widgets', false ) ) {
+				$this->footer_widgets = new Flagship_Footer_Widgets;
+				$this->footer_widgets->run();
 			}
 			add_action( 'init', array( $this, 'instantiate_logo' ), 13 );
 		}

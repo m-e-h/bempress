@@ -472,7 +472,11 @@ a:not(.button):focus {
 }
 
 ul {
-    margin-bottom: 24px;
+    margin-bottom: 24px; 
+    list-style: none;
+}
+
+.entry-content ul {
     padding-left: 16px; 
     list-style-position: outside;
 }
@@ -2076,6 +2080,57 @@ kbd {
 .bg-secondary--light {
     color: rgba(255, 255, 255, 0.9); 
     background-color: #3dc273;
+}
+
+.bg-accent {
+    color: rgba(255, 255, 255, 0.9); 
+    background-color: #ffe504;
+}
+
+.bg-accent--dark {
+    color: rgba(255, 255, 255, 0.9); 
+    background-color: #d0ba00;
+}
+
+.bg-accent--light {
+    color: rgba(0, 0, 0, 0.9); 
+    background-color: #ffea37;
+}
+
+.t-fill__1 {
+    fill: #476fba;
+}
+
+.t-fill__1--dark {
+    fill: #385996;
+}
+
+.t-fill__1--light {
+    fill: #6c8cc8;
+}
+
+.t-fill__2 {
+    fill: #319b5c;
+}
+
+.t-fill__2--dark {
+    fill: #257445;
+}
+
+.t-fill__2--light {
+    fill: #3dc273;
+}
+
+.t-fill__3 {
+    fill: #ffe504;
+}
+
+.t-fill__3--dark {
+    fill: #d0ba00;
+}
+
+.t-fill__3--light {
+    fill: #ffea37;
 }
 
 /*------------------------------------*\

@@ -162,6 +162,43 @@ function flagship_get_search_form() {
 }
 
 /**
+ * Display our breadcrumbs based on selections made in the WordPress customizer.
+ *
+ * @since  1.1.0
+ * @access public
+ * @return bool true if both our template tag and theme mod return true.
+ */
+function flagship_display_breadcrumbs() {
+	$breadcrumbs = flagship_library()->breadcrumb_display;
+	// Return early if our theme doesn't support breadcrumbs.
+	if ( ! is_object( $breadcrumbs ) ) {
+		return false;
+	}
+	// Grab our available breadcrumb display options.
+	$options = array_keys( $breadcrumbs->get_options() );
+	// Set up an array of template tags to map to our breadcrumb display options.
+	$tags = apply_filters( 'flagship_breadcrumb_tags',
+		array(
+			is_singular() && ! is_attachment() && ! is_page(),
+			is_page(),
+			is_home() && ! is_front_page(),
+			is_archive(),
+			is_404(),
+			is_attachment(),
+		)
+	);
+
+	// Loop through our theme mods to see if we have a match.
+	foreach ( array_combine( $options, $tags ) as $mod => $tag ) {
+		// Return true if we find an enabled theme mod within the correct section.
+		if ( 1 === absint( get_theme_mod( $mod, 0 ) ) && true === $tag ) {
+			return true;
+		}
+	}
+	return false;
+}
+
+/**
  * Outputs a navigation element for a singular entry.
  *
  * @since  1.3.0
@@ -360,11 +397,11 @@ function flagship_get_customizer_link( $args = array() ) {
 }
 
 /**
- * Returns a formatted theme credit link.
+ * Outputs a formatted theme credit link.
  *
  * @since  1.1.0
  * @access public
- * @return string
+ * @return void
  */
 function flagship_credit_link() {
 	echo flagship_get_credit_link();
@@ -380,8 +417,35 @@ function flagship_credit_link() {
 function flagship_get_credit_link() {
 	$link = sprintf( '<a class="author-link" href="%s" title="%s">%s</a>',
 		'https://flagshipwp.com',
-		__( 'Purpose-Built WordPress Theme by', 'flagship-library' ) . ' BEMpress',
-		'BEMpress'
+		__( 'Purpose-Built WordPress Theme by', 'flagship-library' ) . ' Flagship',
+		'Flagship'
 	);
 	return apply_filters( 'flagship_credit_link', $link );
+}
+
+/**
+* outputs a formatted link to the theme landing page.
+ *
+ * @since  1.4.3
+ * @access public
+ * @return void
+ */
+function flagship_theme_link() {
+	echo flagship_get_theme_link();
+}
+
+/**
+ * Returns a formatted link to the theme landing page.
+ *
+ * @since  1.4.3
+ * @access public
+ * @return string
+ */
+function flagship_get_theme_link() {
+	$link = sprintf( '<a class="theme-link" href="%s"title="%s">%s</a>',
+		html_entity_decode( 'https://flagshipwp.com/&#99;ompass/' ),
+		__( 'The Most Advanced WordPress Starter Theme Ever Created', 'flagship-library' ),
+		html_entity_decode( '&#67;ompass' )
+	);
+	return apply_filters( 'flagship_theme_link', $link );
 }

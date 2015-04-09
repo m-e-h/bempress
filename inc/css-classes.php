@@ -142,7 +142,7 @@ class AttrTrumps {
 		if ( empty( $context ) ) {
 			return $attr;
 		}
-
+        $attr['class']    .= $this->wrap;
 		if ( 'header' === $context ) {
 		$attr['class']    .= $this->header_wrap;
 		}

@@ -65,7 +65,7 @@ class Flagship_Search_Form {
 		$placeholder = apply_filters( 'flagship_search_text', __( 'Search this website', 'flagship-library' ) );
 
 		return sprintf(
-			'<input type="search" name="s" id="%s" class="search-form__input" placeholder="%s" autocomplete="off" value="%s" />',
+			'<input type="search" name="s" id="%s" placeholder="%s" autocomplete="off" value="%s" />',
 			esc_attr( $this->get_id() ),
 			esc_attr( $placeholder ),
 			esc_attr( $value )
@@ -81,7 +81,7 @@ class Flagship_Search_Form {
 	 */
 	protected function get_button() {
 		return sprintf(
-			'<button type="submit" class="search-form__submit" aria-label="%1$s"><span class="screen-reader-text">%2$s</span></button>',
+			'<button type="submit" aria-label="%1$s"><span class="screen-reader-text">%2$s</span></button>',
 			esc_attr( apply_filters( 'flagship_search_button_label', __( 'Search', 'flagship-library' ) ) ),
 			esc_attr( apply_filters( 'flagship_search_button_text', __( 'Search', 'flagship-library' ) ) )
 		);
