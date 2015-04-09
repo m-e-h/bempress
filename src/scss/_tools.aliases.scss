@@ -22,10 +22,10 @@ $base-spacing-unit--huge:       $inuit-base-spacing-unit--huge;
 $color-primary:             $base-blue;
 $color-primary-light:       lighten($color-primary, 10);
 $color-primary-dark:        darken($color-primary, 10);
-$color-secondary:           $green-600;
+$color-secondary:           $base-green;
 $color-secondary-light:     lighten($color-secondary, 10);
 $color-secondary-dark:      darken($color-secondary, 10);
-$color-accent:              $yellow-500;
+$color-accent:              $base-yellow;
 $color-accent-light:        lighten($color-accent, 10);
 $color-accent-dark:         darken($color-accent, 10);
 

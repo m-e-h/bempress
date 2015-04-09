@@ -1338,7 +1338,7 @@ fieldset {
 .page-title__main,
 .page-title__sub {
     margin-bottom: 0; 
-    font-weight: normal;
+    font-weight: 300;
 }
 
 .page-title__main {
@@ -2052,47 +2052,47 @@ kbd {
     background-color: #fff;
 }
 
-.bg-primary {
+.t-bg__1 {
     color: rgba(255, 255, 255, 0.9); 
     background-color: #476fba;
 }
 
-.bg-primary--dark {
+.t-bg__1--dark {
     color: rgba(255, 255, 255, 0.9); 
     background-color: #385996;
 }
 
-.bg-primary--light {
+.t-bg__1--light {
     color: rgba(255, 255, 255, 0.9); 
     background-color: #6c8cc8;
 }
 
-.bg-secondary {
-    color: rgba(255, 255, 255, 0.9); 
-    background-color: #319b5c;
-}
-
-.bg-secondary--dark {
-    color: rgba(255, 255, 255, 0.9); 
-    background-color: #257445;
-}
-
-.bg-secondary--light {
+.t-bg__2 {
     color: rgba(255, 255, 255, 0.9); 
     background-color: #3dc273;
 }
 
-.bg-accent {
+.t-bg__2--dark {
+    color: rgba(255, 255, 255, 0.9); 
+    background-color: #319b5c;
+}
+
+.t-bg__2--light {
+    color: rgba(0, 0, 0, 0.9); 
+    background-color: #64ce8f;
+}
+
+.t-bg__3 {
     color: rgba(255, 255, 255, 0.9); 
     background-color: #ffe504;
 }
 
-.bg-accent--dark {
+.t-bg__3--dark {
     color: rgba(255, 255, 255, 0.9); 
     background-color: #d0ba00;
 }
 
-.bg-accent--light {
+.t-bg__3--light {
     color: rgba(0, 0, 0, 0.9); 
     background-color: #ffea37;
 }
@@ -2110,15 +2110,15 @@ kbd {
 }
 
 .t-fill__2 {
-    fill: #319b5c;
+    fill: #3dc273;
 }
 
 .t-fill__2--dark {
-    fill: #257445;
+    fill: #319b5c;
 }
 
 .t-fill__2--light {
-    fill: #3dc273;
+    fill: #64ce8f;
 }
 
 .t-fill__3 {

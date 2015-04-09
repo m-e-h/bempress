@@ -45,7 +45,7 @@ function customizer_library_bempress_styles() {
 
 		Customizer_Library_Styles()->add( [
 			'selectors' => [
-				'a'
+				'.entry-content a'
 			],
 			'declarations' => [
 				'color' => $color600
@@ -54,39 +54,57 @@ function customizer_library_bempress_styles() {
 
 		Customizer_Library_Styles()->add( [
 			'selectors' => [
-				'a:hover'
+				'.t-bg__1'
 			],
 			'declarations' => [
-				'color' => $color400
+				'background-color' => $color500
 			]
 		] );
 
 		Customizer_Library_Styles()->add( [
 			'selectors' => [
-				'.t-primary-base'
+				'.t-bg__1--light'
 			],
 			'declarations' => [
-				'color' => $color500
+				'background-color' => $color400
 			]
 		] );
 
 		Customizer_Library_Styles()->add( [
 			'selectors' => [
-				'.t-primary-light'
+				'.t-bg__1--dark'
 			],
 			'declarations' => [
-				'color' => $color400
+				'background-color' => $color600
 			]
 		] );
 
-		Customizer_Library_Styles()->add( [
-			'selectors' => [
-				'.t-primary-dark'
-			],
-			'declarations' => [
-				'color' => $color600
-			]
-		] );
+        Customizer_Library_Styles()->add( [
+            'selectors' => [
+                '.t-fill__1'
+            ],
+            'declarations' => [
+                'fill' => $color500
+            ]
+        ] );
+
+        Customizer_Library_Styles()->add( [
+            'selectors' => [
+                '.t-fill__1--light'
+            ],
+            'declarations' => [
+                'fill' => $color400
+            ]
+        ] );
+
+        Customizer_Library_Styles()->add( [
+            'selectors' => [
+                '.t-fill__1--dark'
+            ],
+            'declarations' => [
+                'fill' => $color600
+            ]
+        ] );
 
 		Customizer_Library_Styles()->add( [
 			'selectors' => [
@@ -111,21 +129,6 @@ function customizer_library_bempress_styles() {
 				input[type="reset"]:hover,
 				input[type="submit"]:hover,
 				.button:hover'
-			],
-			'declarations' => [
-				'background-color' => $color400
-			]
-		] );
-
-		Customizer_Library_Styles()->add( [
-			'selectors' => [
-				'button:active,
-				.sidebar-primary__widget-title,
-				.comment-reply-link:active,
-				input[type="button"]:active,
-				input[type="reset"]:active,
-				input[type="submit"]:active,
-				.button:active'
 			],
 			'declarations' => [
 				'background-color' => $color600
@@ -175,50 +178,141 @@ function customizer_library_bempress_styles() {
 		$color800 	= $simple_color_adjuster->darken( $color, 30 );
 		$color900 	= $simple_color_adjuster->darken( $color, 40 );
 
-		Customizer_Library_Styles()->add( [
-			'selectors' => [
-				'.text-highlight,
-				blockquote,
-				.t-secondary-base,
-				.dropcap:first-letter'
-			],
-			'declarations' => [
-				'color' => $color600
-			]
-		] );
+        Customizer_Library_Styles()->add( [
+            'selectors' => [
+                '.t-bg__2'
+            ],
+            'declarations' => [
+                'background-color' => $color500
+            ]
+        ] );
 
-		Customizer_Library_Styles()->add( [
-			'selectors' => [
-				'.button.secondary,
-				.search-form button,
-				.sidebar-footer__widget'
-			],
-			'declarations' => [
-				'background-color' => $color500
-			]
-		] );
-		Customizer_Library_Styles()->add( [
-			'selectors' => [
-				'.button.secondary:hover,
-				.search-form button:hover'
-			],
-			'declarations' => [
-				'background-color' => $color400
-			]
-		] );
-		Customizer_Library_Styles()->add( [
-			'selectors' => [
-				'.button.secondary:active,
-				.search-form button:active,
-				.site-info,
-				.sidebar-footer__widget-title'
-			],
-			'declarations' => [
-				'background-color' => $color700
-			]
-		] );
+        Customizer_Library_Styles()->add( [
+            'selectors' => [
+                '.t-bg__2--light'
+            ],
+            'declarations' => [
+                'background-color' => $color400
+            ]
+        ] );
+
+        Customizer_Library_Styles()->add( [
+            'selectors' => [
+                '.t-bg__2--dark'
+            ],
+            'declarations' => [
+                'background-color' => $color600
+            ]
+        ] );
+
+        Customizer_Library_Styles()->add( [
+            'selectors' => [
+                '.t-fill__2'
+            ],
+            'declarations' => [
+                'fill' => $color500
+            ]
+        ] );
+
+        Customizer_Library_Styles()->add( [
+            'selectors' => [
+                '.t-fill__2--light'
+            ],
+            'declarations' => [
+                'fill' => $color400
+            ]
+        ] );
+
+        Customizer_Library_Styles()->add( [
+            'selectors' => [
+                '.t-fill__2--dark'
+            ],
+            'declarations' => [
+                'fill' => $color600
+            ]
+        ] );
 
 	}
+
+
+
+
+    // Secondary Color
+    $setting = 'accent-color';
+    $mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
+
+    if ( $mod !== customizer_library_get_default( $setting ) ) {
+
+        $color = sanitize_hex_color( $mod );
+        $rgb = join( ', ', hybrid_hex_to_rgb( $color ) );
+
+        $simple_color_adjuster = new Simple_Color_Adjuster;
+        $color50    = $simple_color_adjuster->lighten( $color, 45 );
+        $color100   = $simple_color_adjuster->lighten( $color, 40 );
+        $color200   = $simple_color_adjuster->lighten( $color, 30 );
+        $color300   = $simple_color_adjuster->lighten( $color, 20 );
+        $color400   = $simple_color_adjuster->lighten( $color, 10 );
+        $color500   = $color;
+        $color600   = $simple_color_adjuster->darken( $color, 10 );
+        $color700   = $simple_color_adjuster->darken( $color, 20 );
+        $color800   = $simple_color_adjuster->darken( $color, 30 );
+        $color900   = $simple_color_adjuster->darken( $color, 40 );
+
+        Customizer_Library_Styles()->add( [
+            'selectors' => [
+                '.t-bg__3'
+            ],
+            'declarations' => [
+                'background-color' => $color500
+            ]
+        ] );
+
+        Customizer_Library_Styles()->add( [
+            'selectors' => [
+                '.t-bg__3--light'
+            ],
+            'declarations' => [
+                'background-color' => $color400
+            ]
+        ] );
+
+        Customizer_Library_Styles()->add( [
+            'selectors' => [
+                '.t-bg__3--dark'
+            ],
+            'declarations' => [
+                'background-color' => $color600
+            ]
+        ] );
+
+        Customizer_Library_Styles()->add( [
+            'selectors' => [
+                '.t-fill__3'
+            ],
+            'declarations' => [
+                'fill' => $color500
+            ]
+        ] );
+
+        Customizer_Library_Styles()->add( [
+            'selectors' => [
+                '.t-fill__3--light'
+            ],
+            'declarations' => [
+                'fill' => $color400
+            ]
+        ] );
+
+        Customizer_Library_Styles()->add( [
+            'selectors' => [
+                '.t-fill__3--dark'
+            ],
+            'declarations' => [
+                'fill' => $color600
+            ]
+        ] );
+
+    }
 
 
 
@@ -226,7 +320,7 @@ function customizer_library_bempress_styles() {
 	// Primary Font
 	$setting = 'primary-font';
 	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
-	$stack = customizer_library_get_font_stack( $mod );
+	$stack1 = customizer_library_get_font_stack( $mod );
 
 	if ( $mod != customizer_library_get_default( $setting ) ) {
 
@@ -235,7 +329,7 @@ function customizer_library_bempress_styles() {
 				'body'
 			],
 			'declarations' => [
-				'font-family' => $stack
+				'font-family' => $stack1
 			]
 		] );
 	}
@@ -246,7 +340,7 @@ function customizer_library_bempress_styles() {
 	// Secondary Font
 	$setting = 'secondary-font';
 	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
-	$stack = customizer_library_get_font_stack( $mod );
+	$stack2 = customizer_library_get_font_stack( $mod );
 
 	if ( $mod != customizer_library_get_default( $setting ) ) {
 
@@ -255,52 +349,12 @@ function customizer_library_bempress_styles() {
 				'h1, h2, h3, h4, h5, h6, .dropcap:first-letter'
 			],
 			'declarations' => [
-				'font-family' => $stack
+				'font-family' => $stack2
 			]
 		] );
 
 	}
 
-
-
-
-	// Decorations
-	$setting = 'cards';
-	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
-
-	if ( $mod !== customizer_library_get_default( $setting ) ) {
-
-		Customizer_Library_Styles()->add( [
-			'selectors' => [
-				'.entry, .widget, .comments'
-			],
-			'declarations' => [
-				'background' => 'none',
-				'box-shadow' => 'none',
-				'border' => '0'
-			]
-		] );
-	}
-
-
-
-
-	// Card Shadows
-	$setting = 'shadows';
-	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
-
-	if ( $mod !== customizer_library_get_default( $setting ) ) {
-
-		Customizer_Library_Styles()->add( [
-			'selectors' => [
-				'.entry, .widget, .comments'
-			],
-			'declarations' => [
-				'box-shadow' => 'none',
-				'border' => '0'
-			]
-		] );
-	}
 }
 endif;
 

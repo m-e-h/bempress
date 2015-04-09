@@ -13,6 +13,7 @@ function customizer_library_bempress_options() {
 	// Theme defaults
 	$primary_color 		= '#476FBA';
 	$secondary_color 	= '#3DC273';
+    $accent_color       = '#FFE504';
 	$body_font			= 'Roboto';
 	$heading_font		= 'Raleway';
 
@@ -53,6 +54,14 @@ function customizer_library_bempress_options() {
 		'default' => $secondary_color,
 	];
 
+    $options['accent-color'] = [
+        'id' => 'accent-color',
+        'label'   => __( 'Accent Color', 'bempress' ),
+        'section' => $section,
+        'type'    => 'color',
+        'default' => $accent_color,
+    ];
+
 	// Typography
 	$section = 'typography';
 	$font_choices = customizer_library_get_font_choices();
@@ -81,47 +90,11 @@ function customizer_library_bempress_options() {
 		'default' => $heading_font
 	];
 
-	// Decorations
-	$section = 'decorations';
 
-	$sections[] = [
-		'id' => $section,
-		'title' => __( 'Decorations', 'bempress' ),
-		'priority' => '80'
-	];
-
-	$card_choices = [
-	    'card-choice-1' => 'Show Cards',
-	    'card-choice-2' => 'Do Not Show Cards'
-	];
-
-	$options['cards'] = [
-		'id' => 'cards',
-		'label'   => __( 'Content Cards', 'bempress' ),
-		'section' => $section,
-		'type'    => 'radio',
-		'choices' => $card_choices,
-    	'default' => 'card-choice-1',
-		'description'  => __( 'Displays articles and widgets as blocks of content.', 'bempress' ),
-	];
-
-	$shadow_choices = [
-	    'shadow-choice-1' => 'Shadows',
-	    'shadow-choice-2' => 'No Shadows'
-	];
-
-	$options['shadows'] = [
-		'id' => 'shadows',
-		'label'   => __( 'Card Shadows', 'bempress' ),
-		'section' => $section,
-		'type'    => 'radio',
-		'choices' => $shadow_choices,
-    	'default' => 'shadow-choice-1',
-		'description'  => __( 'Shows shadows behind the cards.', 'bempress' ),
-	];
 
 	// Footer Settings
 	$section = 'footer';
+
 	$sections[] = [
 		'id' => $section,
 		'title' => __( 'Footer', 'bempress' ),

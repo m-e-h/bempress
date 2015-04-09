@@ -101,47 +101,47 @@
     color: set-text-color($white);
 }
 
-.bg-primary {
+.t-bg__1 {
     background-color: $color-primary;
     color: set-text-color($color-primary);
 }
 
-.bg-primary--dark {
+.t-bg__1--dark {
     background-color: $color-primary-dark;
     color: set-text-color($color-primary);
 }
 
-.bg-primary--light {
+.t-bg__1--light {
     background-color: $color-primary-light;
     color: set-text-color($color-primary);
 }
 
-.bg-secondary {
+.t-bg__2 {
     background-color: $color-secondary;
     color: set-text-color($color-secondary);
 }
 
-.bg-secondary--dark {
+.t-bg__2--dark {
     background-color: $color-secondary-dark;
     color: set-text-color($color-secondary-dark);
 }
 
-.bg-secondary--light {
+.t-bg__2--light {
     background-color: $color-secondary-light;
     color: set-text-color($color-secondary-light);
 }
 
-.bg-accent {
+.t-bg__3 {
     background-color: $color-accent;
     color: set-text-color($color-accent);
 }
 
-.bg-accent--dark {
+.t-bg__3--dark {
     background-color: $color-accent-dark;
     color: set-text-color($color-accent-dark);
 }
 
-.bg-accent--light {
+.t-bg__3--light {
     background-color: $color-accent-light;
     color: set-text-color($color-accent-light);
 }
