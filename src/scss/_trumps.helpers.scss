@@ -130,3 +130,61 @@
     background-color: $color-secondary-light;
     color: set-text-color($color-secondary-light);
 }
+
+.bg-accent {
+    background-color: $color-accent;
+    color: set-text-color($color-accent);
+}
+
+.bg-accent--dark {
+    background-color: $color-accent-dark;
+    color: set-text-color($color-accent-dark);
+}
+
+.bg-accent--light {
+    background-color: $color-accent-light;
+    color: set-text-color($color-accent-light);
+}
+
+
+
+
+
+
+
+
+.t-fill__1 {
+    fill: $color-primary;
+}
+
+.t-fill__1--dark {
+    fill: $color-primary-dark;
+}
+
+.t-fill__1--light {
+    fill: $color-primary-light;
+}
+
+.t-fill__2 {
+    fill: $color-secondary;
+}
+
+.t-fill__2--dark {
+    fill: $color-secondary-dark;
+}
+
+.t-fill__2--light {
+    fill: $color-secondary-light;
+}
+
+.t-fill__3 {
+    fill: $color-accent;
+}
+
+.t-fill__3--dark {
+    fill: $color-accent-dark;
+}
+
+.t-fill__3--light {
+    fill: $color-accent-light;
+}

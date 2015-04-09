@@ -1,6 +1,10 @@
 ul {
-    list-style-position: outside;
+    list-style: none;
     margin-bottom: $base-spacing-unit;
+}
+
+.entry-content ul {
+    list-style-position: outside;
     padding-left: $base-font-size;
 }
 
