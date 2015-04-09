@@ -32,7 +32,7 @@ class AttrTrumps {
 	public $sidebar_sidebar_right 		= ' u-1of3@md';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_left		= ' u-1of3@md u-pr+@md';	// sidebar sidebar__{$context}
 	public $sidebar_footer          	= ' grid grid--flex';	// sidebar sidebar__{$context}
-	public $menu_primary 				= ' shadow--z1 t-bg__2--light menu--horizontal';	// menu menu-{$context}
+	public $menu_primary 				= ' shadow--z2 t-bg__2--light menu--horizontal';	// menu menu-{$context}
 	public $menu_secondary 				= ' menu--horizontal';	// menu menu-{$context}
 	public $menu_li_primary         	= 'menu__item';	// menu-item
 	public $menu_li_secondary       	= 'menu__item';	// menu-item

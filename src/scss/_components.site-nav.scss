@@ -90,7 +90,7 @@
     padding: 0;
     z-index: 3;
     border-radius: $base-radius;
-    @include shadow-z2();
+    @include shadow-z3();
 }
 
 .menu--horizontal .sub-menu {
