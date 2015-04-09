@@ -13,7 +13,7 @@ function customizer_library_bempress_options() {
 	// Theme defaults
 	$primary_color 		= '#476FBA';
 	$secondary_color 	= '#3DC273';
-    $accent_color       = '#FFE504';
+    $accent_color       = '#FF9E03';
 	$body_font			= 'Roboto';
 	$heading_font		= 'Raleway';
 

@@ -2,17 +2,10 @@
 //  #SITE COLORS
 // \*------------------------------------*/
 
-$base-font-size:  $inuit-base-font-size;
+$base-font-size:        $inuit-base-font-size;
 $base-line-height:      $inuit-base-line-height;
 $base-text-color:       $inuit-base-text-color;
 $base-background-color: $inuit-base-background-color;
-
-
-$base-spacing-unit:             $inuit-base-spacing-unit;
-$base-spacing-unit--tiny:       $inuit-base-spacing-unit--tiny;
-$base-spacing-unit--small:      $inuit-base-spacing-unit--small;
-$base-spacing-unit--large:      $inuit-base-spacing-unit--large;
-$base-spacing-unit--huge:       $inuit-base-spacing-unit--huge;
 
 
 
@@ -25,7 +18,7 @@ $color-primary-dark:        darken($color-primary, 10);
 $color-secondary:           $base-green;
 $color-secondary-light:     lighten($color-secondary, 10);
 $color-secondary-dark:      darken($color-secondary, 10);
-$color-accent:              $base-yellow;
+$color-accent:              $base-orange;
 $color-accent-light:        lighten($color-accent, 10);
 $color-accent-dark:         darken($color-accent, 10);
 

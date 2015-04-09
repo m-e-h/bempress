@@ -1133,8 +1133,6 @@ fieldset {
 .wrapper {
     max-width: 1240px;
     margin: 0 auto;
-    padding-right: 5%;
-    padding-left: 5%;
 }
 @media screen and (min-width: 80em) {
     .wrapper {
@@ -1316,17 +1314,25 @@ fieldset {
 \*------------------------------------*/
 .entry-format {
     position: absolute;
-    left: 0; 
-    width: 100%;
-    height: 60px;
-}
-
-.entry-format svg {
-    display: block;
-    top: 15px;
-    height: 100%; 
-    margin: 0 auto;
+    right: 0; 
+    bottom: 0;
+    width: 30px;
     opacity: 0.8;
+}
+@media screen and (min-width: 48em) {
+    .entry-format {
+        top: -20px;
+        right: 50%;
+        width: 50px;
+        height: 50px;
+        margin-right: -25px;
+        padding: 5px;
+        border-top: 2px solid #fff; 
+        border-radius: 50%;
+        opacity: 0.8;
+        background-color: #e4e9eb;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23);
+    }
 }
 
 /**
@@ -2084,17 +2090,17 @@ kbd {
 
 .t-bg__3 {
     color: rgba(255, 255, 255, 0.9); 
-    background-color: #ffe504;
+    background-color: #ff9e03;
 }
 
 .t-bg__3--dark {
     color: rgba(255, 255, 255, 0.9); 
-    background-color: #d0ba00;
+    background-color: #cf7f00;
 }
 
 .t-bg__3--light {
     color: rgba(0, 0, 0, 0.9); 
-    background-color: #ffea37;
+    background-color: #ffb236;
 }
 
 .t-fill__1 {
@@ -2122,15 +2128,15 @@ kbd {
 }
 
 .t-fill__3 {
-    fill: #ffe504;
+    fill: #ff9e03;
 }
 
 .t-fill__3--dark {
-    fill: #d0ba00;
+    fill: #cf7f00;
 }
 
 .t-fill__3--light {
-    fill: #ffea37;
+    fill: #ffb236;
 }
 
 /*------------------------------------*\

@@ -42,3 +42,11 @@ $inuit-base-spacing-unit--tiny:     round($inuit-base-spacing-unit / 4);
 $inuit-base-spacing-unit--small:    round($inuit-base-spacing-unit / 2);
 $inuit-base-spacing-unit--large:    round($inuit-base-spacing-unit * 2);
 $inuit-base-spacing-unit--huge:     round($inuit-base-spacing-unit * 4);
+
+
+$base-spacing-unit:             $inuit-base-spacing-unit;
+$base-spacing-unit--tiny:       $inuit-base-spacing-unit--tiny;
+$base-spacing-unit--small:      $inuit-base-spacing-unit--small;
+$base-spacing-unit--large:      $inuit-base-spacing-unit--large;
+$base-spacing-unit--huge:       $inuit-base-spacing-unit--huge;
+$base-spacing-unit--larger:    round($inuit-base-spacing-unit * 3);

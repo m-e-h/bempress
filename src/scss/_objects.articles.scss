@@ -7,16 +7,30 @@
 }
 
 .entry-format {
-  width: 100%;
-  height: 60px;
-  position: absolute;
-  left: 0;
+    position: absolute;
+    opacity: 0.8;
+    width: 30px;
+    bottom: 0;
+    right: 0;
+
+    @include md {
+        opacity: 0.8;
+        top: -20px;
+        width: 50px;
+        right: 50%;
+        margin-right: -25px;
+        height: 50px;
+        border-radius: 50%;
+        padding: 5px;
+        background-color: $blue-grey-100;
+        @include shadow-z2();
+        border-top: 2px solid #FFFFFF;
+    }
 }
 
 .entry-format svg {
-  display: block;
-  top: 15px;
-  opacity: 0.8;
-  margin: 0 auto;
-  height: 100%;
+  // display: block;
+  // top: 15px;
+  // margin: 0 auto;
+  // height: 100%;
 }

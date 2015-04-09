@@ -11,7 +11,7 @@ class AttrTrumps {
 	/* Attributes for major structural elements. */
 	public $body                  		= '';	// get_body_class()
 	public $site_container    			= '';	// site-container
-	public $site_inner   				= ' grid grid--flex';	// site-inner
+	public $site_inner   				= ' u-ph- grid grid--flex';	// site-inner
 	public $site_inner_full_width		= ' wrapper--wide';
 	public $site_inner_single_column 	= ' wrapper';
 	public $site_inner_sidebar_right 	= ' wrapper';
@@ -30,7 +30,7 @@ class AttrTrumps {
 	public $sidebar_full_width  		= ' u-1of1';	// sidebar sidebar__{$context}
 	public $sidebar_single_column  		= ' u-1of1';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_right 		= ' u-1of3@md';	// sidebar sidebar__{$context}
-	public $sidebar_sidebar_left		= ' u-1of3@md';	// sidebar sidebar__{$context}
+	public $sidebar_sidebar_left		= ' u-1of3@md u-pr+@md';	// sidebar sidebar__{$context}
 	public $sidebar_footer          	= ' grid grid--flex';	// sidebar sidebar__{$context}
 	public $menu_primary 				= ' shadow--z1 t-bg__2--light menu--horizontal';	// menu menu-{$context}
 	public $menu_secondary 				= ' menu--horizontal';	// menu menu-{$context}
@@ -51,7 +51,7 @@ class AttrTrumps {
 	public $loop_description      		= '';	// loop-description
 
 	/* Post-specific attributes. */
-	public $post                  		= ' bg-white br shadow--z1 u-p- u-p+@md u-mb u-mb+@md';	// get_post_class()
+	public $post                  		= ' bg-white br shadow--z1 u-p u-p+@md u-mb u-mb+@md';	// get_post_class()
 	public $entry_title           		= '';	// entry-title
 	public $entry_author          		= ' u-mr- entry-meta__item entry-meta__author';	// entry-author
 	public $entry_published       		= ' u-mr- entry-meta__item entry-meta__date';	// entry-published updated
