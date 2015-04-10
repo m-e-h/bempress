@@ -9,6 +9,7 @@
 
 /*.json         export-ignore
 /gulpfile.js    export-ignore
-/behat.yml      export-ignore
+/.gitignore     export-ignore
 /src            export-ignore
 /composer.lock  export-ignore
+/.editorconfig  export-ignore

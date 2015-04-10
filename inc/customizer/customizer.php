@@ -22,14 +22,7 @@ require get_template_directory() . '/inc/customizer/styles.php';
 // Additional filters and actions based on theme customizer selections.
 require get_template_directory() . '/inc/customizer/mods.php';
 
-else :
-
-add_action( 'customizer-library-notices', 'bempress_customizer_library_notice' );
 
 endif;
 
-function bempress_customizer_library_notice() {
 
-	_e( '<p>Notice: The "customizer-library" sub-module is not loaded.</p><p>Please add it to the "inc" directory: <a href="https://github.com/devinsays/customizer-library">https://github.com/devinsays/customizer-library</a>.</p>', 'bempress' );
-
-}
