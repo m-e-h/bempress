@@ -13,26 +13,26 @@
  *
  */
 
-.alpha {
+.h1, .site-title {
     @include font-size($heading-size-1);
 }
 
-.beta{
+.h2, .entry-title {
     @include font-size($heading-size-2);
 }
 
-.gamma {
+.h3, .widget-title {
     @include font-size($heading-size-3);
 }
 
-.delta {
+.h4 {
     @include font-size($heading-size-4);
 }
 
-.epsilon {
+.h5 {
     @include font-size($heading-size-5);
 }
 
-.zeta {
+.h6 {
     @include font-size($heading-size-6);
 }

@@ -1321,17 +1321,12 @@ fieldset {
 }
 @media screen and (min-width: 48em) {
     .entry-format {
-        top: -20px;
         right: 50%;
+        bottom: -20px;
         width: 50px;
-        height: 50px;
+        height: 50px; 
         margin-right: -25px;
-        padding: 5px;
-        border-top: 2px solid #fff; 
-        border-radius: 50%;
         opacity: 0.8;
-        background-color: #e4e9eb;
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23);
     }
 }
 
@@ -1347,12 +1342,6 @@ fieldset {
     font-weight: 300;
 }
 
-.page-title__main {
-    font-size: 36px;
-    font-size: 2.25rem;
-    line-height: 1.3333333333;
-    line-height: 1;
-}
 .page-title__main a {
     color: currentColor;
 }
@@ -2152,37 +2141,40 @@ kbd {
    <h2 class="alpha">Lorem ipsum</h2>
  *
  */
-.alpha {
+.h1,
+.site-title {
     font-size: 36px;
     font-size: 2.25rem;
     line-height: 1.3333333333;
 }
 
-.beta {
+.h2,
+.entry-title {
     font-size: 30px;
     font-size: 1.875rem;
     line-height: 1.6;
 }
 
-.gamma {
+.h3,
+.widget-title {
     font-size: 24px;
     font-size: 1.5rem;
     line-height: 1;
 }
 
-.delta {
+.h4 {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 1.2;
 }
 
-.epsilon {
+.h5 {
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.5;
 }
 
-.zeta {
+.h6 {
     font-size: 14px;
     font-size: 0.875rem;
     line-height: 1.7142857143;

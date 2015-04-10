@@ -9,8 +9,6 @@
 }
 
 .page-title__main {
-    @include font-size($heading-size-1, false);
-    line-height: 1;
     a {
         color: currentColor;
     }

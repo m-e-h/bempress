@@ -346,7 +346,7 @@ function customizer_library_bempress_styles() {
 
 		Customizer_Library_Styles()->add( [
 			'selectors' => [
-				'h1, h2, h3, h4, h5, h6, .dropcap:first-letter'
+				'h1, h2, h3, h4, h5, h6, .site-title, .entry-title, .widget-title, .dropcap:first-letter'
 			],
 			'declarations' => [
 				'font-family' => $stack2

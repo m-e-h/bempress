@@ -15,16 +15,16 @@
 
     @include md {
         opacity: 0.8;
-        top: -20px;
+        bottom: -20px;
         width: 50px;
         right: 50%;
         margin-right: -25px;
         height: 50px;
-        border-radius: 50%;
-        padding: 5px;
-        background-color: $blue-grey-100;
-        @include shadow-z2();
-        border-top: 2px solid #FFFFFF;
+        // border-radius: 50%;
+        // padding: 5px;
+        // background-color: $blue-grey-100;
+        // @include shadow-z2();
+        // border-top: 2px solid #FFFFFF;
     }
 }
 
