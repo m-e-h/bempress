@@ -6,3 +6,9 @@
 *.png binary
 *.gif binary
 *.ico binary
+
+/*.json         export-ignore
+/gulpfile.js    export-ignore
+/behat.yml      export-ignore
+/src            export-ignore
+/composer.lock  export-ignore
