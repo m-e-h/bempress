@@ -34,7 +34,6 @@
 
 		<footer class="entry-footer">
 			<p class="entry-meta">
-				<?php hybrid_post_format_link(); ?>
 				<a class="entry-permalink" href="<?php the_permalink(); ?>" rel="bookmark" itemprop="url"><?php _e( 'Permalink', 'bempress' ); ?></a>
 				<?php flagship_entry_comments_link(); ?>
 				<?php edit_post_link(); ?>
