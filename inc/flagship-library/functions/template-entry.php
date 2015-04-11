@@ -129,7 +129,7 @@ function flagship_get_entry_comments_link( $args = array() ) {
 			'hide_if_off' => 'enabled',
 			'more'        => __( '% Comments', 'flagship-library' ),
 			'one'         => __( '1 Comment', 'flagship-library' ),
-			'zero'        => __( 'Leave a Comment', 'flagship-library' ),
+			'zero'        => __( '☕', 'flagship-library' ),
 		)
 	);
 	$args = wp_parse_args( $args, $defaults );
