@@ -4,9 +4,7 @@
  *
  * @package BEMpress
  */
-?>
-
-<!doctype html>
+?><!doctype html>
 <?php tha_html_before(); ?>
 <html <?php language_attributes(); ?>>
 <head>
@@ -29,15 +27,13 @@
 			</a>
 		</div><!-- .skip-link -->
 
-        <?php tha_header_before(); ?>
+    <?php tha_header_before(); ?>
 
 		<header <?php hybrid_attr( 'header' ); ?>>
-
-
+		  
+		<?php tha_header_top(); ?>
 
 			<div <?php hybrid_attr( 'wrap', 'header' ); ?>>
-
-                <?php tha_header_top(); ?>
 
 				<div <?php hybrid_attr( 'branding' ); ?>>
 					<?php flagship_the_logo(); ?>
@@ -45,12 +41,14 @@
 					<?php hybrid_site_description(); ?>
 				</div><!-- #branding -->
 
-                <?php tha_header_bottom(); ?>
-
 			</div><!-- .wrap -->
-<?php hybrid_get_menu( 'primary' ); ?>
+			
+			<?php tha_header_bottom(); ?>
+			
+      <?php hybrid_get_menu( 'primary' ); ?>
+      
 		</header><!-- #header -->
 
-        <?php tha_header_after(); ?>
+    <?php tha_header_after(); ?>
 
 		<div <?php hybrid_attr( 'site-inner' ); ?>>
