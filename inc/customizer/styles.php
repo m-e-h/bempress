@@ -320,16 +320,16 @@ function customizer_library_bempress_styles() {
 	// Primary Font
 	$setting = 'primary-font';
 	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
-	$stack1 = customizer_library_get_font_stack( $mod );
+	$stack = customizer_library_get_font_stack( $mod );
 
 	if ( $mod != customizer_library_get_default( $setting ) ) {
 
 		Customizer_Library_Styles()->add( [
 			'selectors' => [
-				'body'
+				'body, .site-container'
 			],
 			'declarations' => [
-				'font-family' => $stack1
+				'font-family' => $stack
 			]
 		] );
 	}
@@ -340,7 +340,7 @@ function customizer_library_bempress_styles() {
 	// Secondary Font
 	$setting = 'secondary-font';
 	$mod = get_theme_mod( $setting, customizer_library_get_default( $setting ) );
-	$stack2 = customizer_library_get_font_stack( $mod );
+	$stack = customizer_library_get_font_stack( $mod );
 
 	if ( $mod != customizer_library_get_default( $setting ) ) {
 
@@ -349,7 +349,7 @@ function customizer_library_bempress_styles() {
 				'h1, h2, h3, h4, h5, h6, .site-title, .entry-title, .widget-title, .dropcap:first-letter'
 			],
 			'declarations' => [
-				'font-family' => $stack2
+				'font-family' => $stack
 			]
 		] );
 

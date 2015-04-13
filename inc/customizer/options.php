@@ -14,8 +14,6 @@ function customizer_library_bempress_options() {
 	$primary_color 		= '#476FBA';
 	$secondary_color 	= '#3DC273';
     $accent_color       = '#FF9E03';
-	$body_font			= 'Roboto';
-	$heading_font		= 'Raleway';
 
 	// Stores all the controls that will be added
 	$options = [];
@@ -78,7 +76,7 @@ function customizer_library_bempress_options() {
 		'section' => $section,
 		'type'    => 'select',
 		'choices' => $font_choices,
-		'default' => $body_font
+		'default' => 'sans-serif'
 	];
 
 	$options['secondary-font'] = [
@@ -87,7 +85,7 @@ function customizer_library_bempress_options() {
 		'section' => $section,
 		'type'    => 'select',
 		'choices' => $font_choices,
-		'default' => $heading_font
+		'default' => 'serif'
 	];
 
 
