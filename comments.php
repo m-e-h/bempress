@@ -5,7 +5,10 @@
  * @package BEMpress
  */
 
-if ( ! post_password_required() ) : ?>
+if ( post_password_required() ) {
+    return;
+}
+?>
 
     <?php tha_comments_before(); ?>
 

@@ -5,7 +5,6 @@
  * @package BEMpress
  */
 ?>
-
 <li <?php hybrid_attr( 'comment' ); ?>>
 
     <?php echo get_avatar( $comment, 48 ); ?>

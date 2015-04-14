@@ -2,7 +2,7 @@
 /**
  * A template part to display when comments are closed.
  *
- * @package     BEMpress
+ * @package BEMpress
  */
 
 if ( pings_open() && ! comments_open() ) : ?>
