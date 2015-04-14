@@ -12,7 +12,7 @@ if ( post_password_required() ) {
 
     <?php tha_comments_before(); ?>
 
-    <section id="comments" class="comments-area">
+    <section <?php hybrid_attr( 'comments-area' ); ?>>
 
         <?php if ( have_comments() ) : ?>
 

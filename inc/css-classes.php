@@ -59,6 +59,8 @@ class AttrTrumps {
 	public $entry_summary         		= '';	// entry-summary
 	public $entry_terms           		= ' badge';	// entry-terms
 
+    public $comments_area               = ' bg-white br shadow--z1 u-p u-p+@md u-mb u-mb+@md'; // entry-terms
+
 
 
 
@@ -95,6 +97,7 @@ class AttrTrumps {
 		add_filter( 'hybrid_attr_entry-content',	[ $this, 'entry_content' ] );
 		add_filter( 'hybrid_attr_entry-summary',	[ $this, 'entry_summary' ] );
 		add_filter( 'hybrid_attr_entry-terms',		[ $this, 'entry_terms' ] );
+        add_filter( 'hybrid_attr_comments-area',    [ $this, 'comments_area' ] );
 	}
 
 
@@ -148,6 +151,13 @@ class AttrTrumps {
 		}
 		return $attr;
 	}
+
+    public function comments_area( $attr ) {
+        $attr['class']    .= $this->comments_area;
+        return $attr;
+    }
+
+
 
 
 	public function header( $attr ) {

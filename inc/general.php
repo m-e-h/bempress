@@ -96,10 +96,6 @@ function abe_get_post_format_link() {
 
 
 
-
-
-
-
 function bempress_responsive_videos_init() {
 
     /* If the theme does support 'bempress-responsive-videos', wrap the videos */
@@ -120,4 +116,24 @@ function bempress_responsive_videos_embed_html( $html ) {
         return $html;
     }
     return '<div class="featured-media__ratio featured-media__ratio--16by9"></div>' . $html;
+}
+
+
+
+
+
+
+add_filter( 'hybrid_attr_comments-area',   'flagship_attr_comments_area' );
+/**
+ * Page site container element attributes.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  array $attr
+ * @return array
+ */
+function flagship_attr_comments_area( $attr ) {
+    $attr['id']    = 'comments-area';
+    $attr['class'] = 'comments-area';
+    return $attr;
 }
