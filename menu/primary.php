@@ -2,12 +2,7 @@
 /**
  * The primary nav menu template.
  *
- * @package     BEMpress
- * @subpackage  HybridCore
- * @copyright   Copyright (c) 2015, Flagship Software, LLC
- * @license     GPL-2.0+
- * @link        https://flagshipwp.com/
- * @since       1.0.0
+ * @package BEMpress
  */
 ?>
 <?php if ( has_nav_menu( 'primary' ) ) : ?>
@@ -22,16 +17,14 @@
 		</span>
 
 		<?php
-		wp_nav_menu(
-			array(
-				'theme_location'  => 'primary',
-				'container'       => '',
-				'menu_id'         => 'primary',
-				'menu_class'      => 'menu__list menu-primary__list',
-				'fallback_cb'     => '',
-                'items_wrap'      => '<div class="wrapper"><ul id="%s" class="%s">%s</ul></div>'
-			)
-		);
+		wp_nav_menu( [
+    		'theme_location'  => 'primary',
+    		'container'       => '',
+    		'menu_id'         => 'primary',
+    		'menu_class'      => 'menu__list menu-primary__list',
+    		'fallback_cb'     => '',
+            'items_wrap'      => '<div class="wrapper"><ul id="%s" class="%s">%s</ul></div>'
+		] );
 		?>
 
 	</nav><!-- #menu-primary -->

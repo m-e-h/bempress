@@ -23,18 +23,17 @@ add_action( 'after_setup_theme', 'bempress_includes', 10 );
 function bempress_setup() {
 	// http://themehybrid.com/docs/theme-layouts
 	add_theme_support(
-		'theme-layouts', 
-		[
+		'theme-layouts', [
 			'1c'        => __( '1 Column Wide',                'bempress' ),
 			'1c-narrow' => __( '1 Column Narrow',              'bempress' ),
 			'2c-l'      => __( '2 Columns: Content / Sidebar', 'bempress' ),
 			'2c-r'      => __( '2 Columns: Sidebar / Content', 'bempress' )
-		], 
+		],
 		['default' => is_rtl() ? '2c-r' :'2c-l']
 	);
 
 	// http://themehybrid.com/docs/hybrid_set_content_width
-	hybrid_set_content_width( 1140 );
+	//hybrid_set_content_width( 1140 );
 
 	// http://themehybrid.com/docs/hybrid-core-styles
 	add_theme_support( 'hybrid-core-styles', ['style', 'google-fonts',] );
@@ -48,9 +47,9 @@ function bempress_setup() {
 
 	// http://codex.wordpress.org/Post_Formats
 	add_theme_support(
-	  'post-formats', 
-    ['aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio']
-  );
+        'post-formats',
+        ['aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio']
+    );
 
 	// https://github.com/justintadlock/breadcrumb-trail
 	add_theme_support( 'breadcrumb-trail' );
@@ -65,12 +64,10 @@ function bempress_setup() {
 	add_theme_support( 'flagship-author-box' );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 
-	  'custom-background', apply_filters( 'bempress_custom_background_args', 
-  	[
-  		'default-color' => 'f5f5f5',
-  		'default-image' => '',
-  	] ) );
+	add_theme_support(
+        'custom-background', apply_filters( 'bempress_custom_background_args',
+            ['default-color' => 'f5f5f5', 'default-image' => '']
+    ) );
 }
 
 
@@ -82,14 +79,14 @@ function bempress_includes() {
 	$includes_dir = trailingslashit( get_template_directory() ) . 'inc/';
 
 	//require_once $includes_dir . 'flagship-library/flagship-library.php';
-  require_once $includes_dir . 'flagship.php';
+    require_once $includes_dir . 'flagship.php';
 	require_once $includes_dir . 'tha-theme-hooks.php';
 	require_once $includes_dir . 'general.php';
 	require_once $includes_dir . 'scripts.php';
 	require_once $includes_dir . 'widgetize.php';
 	require_once $includes_dir . 'css-classes.php';
 	require_once $includes_dir . 'html-min.php';
-  require_once $includes_dir . 'customizer/customizer.php';
+    require_once $includes_dir . 'customizer/customizer.php';
 }
 
 

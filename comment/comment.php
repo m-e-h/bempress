@@ -7,7 +7,7 @@
 ?>
 <li <?php hybrid_attr( 'comment' ); ?>>
 
-    <?php echo get_avatar( $comment, 48 ); ?>
+    <?= get_avatar( $comment, 48 ); ?>
 
     <article class="comment-container">
 

@@ -1,15 +1,8 @@
 <?php
 /**
- * Header Right Sidebar Template
+ * Footer Sidebar Template
  *
- * Currently not in use.
- *
- * @package     BEMpress
- * @subpackage  HybridCore
- * @copyright   Copyright (c) 2015, Flagship Software, LLC
- * @license     GPL-2.0+
- * @link        https://flagshipwp.com/
- * @since       1.0.0
+ * @package BEMpress
  */
 
 

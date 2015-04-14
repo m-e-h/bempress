@@ -2,79 +2,58 @@
 /**
  * Script and Style Loaders and Related Functions.
  *
- * @package     BEMpress
- * @subpackage  HybridCore
- * @copyright   Copyright (c) 2015, Flagship Software, LLC
- * @license     GPL-2.0+
- * @link        https://flagshipwp.com/
- * @since       1.0.0
+ * @package BEMpress
  */
 
 add_action( 'admin_init', 'bempress_add_editor_styles' );
+add_action( 'wp_enqueue_scripts', 'bempress_rtl_add_data' );
+add_action( 'wp_enqueue_scripts', 'bempress_enqueue_styles', 4 );
+add_action( 'wp_enqueue_scripts', 'bempress_enqueue_scripts' );
+
+
+
+
+
 /**
- * Replace the default theme stylesheet with a RTL version when a RTL
- * language is being used.
- *
- * @since  1.2.0
- * @access public
- * @return void
+ * Editor styles.
  */
 function bempress_add_editor_styles() {
 	// Set up editor styles
-	$editor_styles = array(
+	$editor_styles = [
 		'//fonts.googleapis.com/css?family=Raleway:400,600|Lato:400,400italic,700',
 		'assets/css/editor-style.css',
-	);
+	];
 
 	// Add the editor styles.
 	add_editor_style( $editor_styles );
 }
 
-add_action( 'wp_enqueue_scripts', 'bempress_rtl_add_data' );
+
 /**
  * Replace the default theme stylesheet with a RTL version when a RTL
  * language is being used.
- *
- * @since  1.0.0
- * @access public
- * @return void
  */
 function bempress_rtl_add_data() {
 	wp_style_add_data( 'style', 'rtl', 'replace' );
 	wp_style_add_data( 'style', 'suffix', hybrid_get_min_suffix() );
 }
 
-add_action( 'wp_enqueue_scripts', 'bempress_enqueue_styles', 4 );
+
 /**
- * Register our core parent theme styles.
- *
- * Normally we would enqueue all styles here, but because we've defined our base
- * styles in the theme setup function as Hybrid Core Styles, we only need to
- * register them. Hybrid Core will ensure they're loaded in the correct order.
- * Any non-global styles can still be enqueued manually in the usual way within
- * this function.
- *
- * @since  1.0.0
- * @access public
- * @see    http://themehybrid.com/docs/hybrid-core-styles
- * @return void
+ * Enqueue theme styles.
  */
 function bempress_enqueue_styles() {
 	wp_register_style(
 		'google-fonts',
 		'//fonts.googleapis.com/css?family=Raleway:400,600|Lato:400,400italic,700',
-		array(),
+		[],
 		null
 	);
 }
 
-add_action( 'wp_enqueue_scripts', 'bempress_enqueue_scripts' );
+
 /**
  * Enqueue theme scripts.
- *
- * @since  1.0.0
- * @access public
- * @return void
  */
 function bempress_enqueue_scripts() {
 	$js_dir = trailingslashit( get_template_directory_uri() ) . 'js/';
@@ -83,7 +62,7 @@ function bempress_enqueue_scripts() {
 	wp_enqueue_script(
 		'bempress',
 		$js_dir . "theme{$suffix}.js",
-		array( 'jquery' ),
+		[ 'jquery' ],
 		null,
 		true
 	);

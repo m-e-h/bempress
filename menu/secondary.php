@@ -2,12 +2,7 @@
 /**
  * The secondary nav menu template.
  *
- * @package     BEMpress
- * @subpackage  HybridCore
- * @copyright   Copyright (c) 2015, Flagship Software, LLC
- * @license     GPL-2.0+
- * @link        https://flagshipwp.com/
- * @since       1.0.0
+ * @package BEMpress
  */
 ?>
 <?php if ( has_nav_menu( 'secondary' ) ) : ?>
@@ -22,15 +17,13 @@
 		</span>
 
 		<?php
-		wp_nav_menu(
-			array(
-				'theme_location'  => 'secondary',
-				'container'       => '',
-				'menu_id'         => 'secondary',
-				'menu_class'      => 'menu__list menu-secondary__list',
-				'fallback_cb'     => '',
-			)
-		);
+		wp_nav_menu( [
+			'theme_location'  => 'secondary',
+			'container'       => '',
+			'menu_id'         => 'secondary',
+			'menu_class'      => 'menu__list menu-secondary__list',
+			'fallback_cb'     => '',
+		] );
 		?>
 
 	</nav><!-- #menu-secondary -->

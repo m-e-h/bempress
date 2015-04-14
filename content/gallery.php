@@ -30,13 +30,11 @@
 
 		<?php
 		// Display a featured image if we can find something to display.
-		get_the_image(
-			array(
-				'size'   => 'bempress-full',
-				'before' => '<div class="featured-media image">',
-				'after'  => '</div>',
-			)
-		);
+		get_the_image( [
+			'size'   => 'bempress-full',
+			'before' => '<div class="featured-media image">',
+			'after'  => '</div>',
+		] );
 		?>
 
 		<?php get_template_part( 'templates/archive', 'header' ); ?>

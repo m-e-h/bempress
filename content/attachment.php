@@ -2,12 +2,7 @@
 /**
  * A template part for displaying an entry in both single and archive posts.
  *
- * @package     BEMpress
- * @subpackage  HybridCore
- * @copyright   Copyright (c) 2015, Flagship Software, LLC
- * @license     GPL-2.0+
- * @link        https://flagshipwp.com/
- * @since       1.0.0
+ * @package BEMpress
  */
 ?>
 <article <?php hybrid_attr( 'post' ); ?>>
@@ -39,14 +34,12 @@
 
 		<?php
 		// Display a featured image if we can find something to display.
-		get_the_image(
-			array(
-				'size'   => 'bempress-full',
-				'order'  => array( 'featured', 'attachment' ),
-				'before' => '<div class="featured-media image">',
-				'after'  => '</div>',
-			)
-		);
+		get_the_image( [
+			'size'   => 'bempress-full',
+			'order'  => [ 'featured', 'attachment' ],
+			'before' => '<div class="featured-media image">',
+			'after'  => '</div>',
+		] );
 		?>
 
 		<?php get_template_part( 'templates/archive', 'header' ); ?>

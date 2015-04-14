@@ -12,12 +12,10 @@ if ( get_option( 'page_comments' ) && 1 < get_comment_pages_count() ) : ?>
 		<h3 id="comments-nav-title" class="screen-reader-text"><?php _e( 'Comments Navigation', 'bempress' ); ?></h3>
 
 		<?php
-		paginate_comments_links(
-			array(
-				'prev_text' => sprintf( '<span class="screen-reader-text">%s</span>' , __( 'Previous Comment Page', 'bempress' ) ),
-				'next_text' => sprintf( '<span class="screen-reader-text">%s</span>', __( 'Next Comment Page', 'bempress' ) ),
-			)
-		);
+		paginate_comments_links( [
+			'prev_text' => sprintf( '<span class="screen-reader-text">%s</span>' , __( 'Previous Comment Page', 'bempress' ) ),
+			'next_text' => sprintf( '<span class="screen-reader-text">%s</span>', __( 'Next Comment Page', 'bempress' ) ),
+		] );
 		?>
 
 	</nav><!-- .comments-nav -->

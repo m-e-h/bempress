@@ -2,28 +2,21 @@
 /**
  * A template to display taxonomy terms.
  *
- * @package     BEMpress
- * @subpackage  HybridCore
- * @copyright   Copyright (c) 2015, Flagship Software, LLC
- * @license     GPL-2.0+
- * @link        https://flagshipwp.com/
- * @since       1.0.0
+ * @package BEMpress
  */
 ?>
 
 <?php if ( is_taxonomy_hierarchical( get_queried_object()->taxonomy ) ) : ?>
 
 	<?php
-	$terms = wp_list_categories(
-		array(
-			'taxonomy'         => get_queried_object()->taxonomy,
-			'child_of'         => get_queried_object_id(),
-			'depth'            => 1,
-			'title_li'         => false,
-			'show_option_none' => false,
-			'echo'             => false,
-		)
-	);
+	$terms = wp_list_categories( [
+		'taxonomy'         => get_queried_object()->taxonomy,
+		'child_of'         => get_queried_object_id(),
+		'depth'            => 1,
+		'title_li'         => false,
+		'show_option_none' => false,
+		'echo'             => false,
+	] );
 	?>
 
 	<?php if ( ! empty( $terms ) ) : // If a list of child categories/terms was found. ?>
@@ -31,7 +24,7 @@
 		<nav <?php hybrid_attr( 'menu', 'sub-terms' ); ?>>
 
 			<ul id="menu-sub-terms-items" class="menu-items">
-				<?php echo $terms; ?>
+				<?= $terms; ?>
 			</ul><!-- .sub-terms -->
 
 		</nav><!-- .menu -->

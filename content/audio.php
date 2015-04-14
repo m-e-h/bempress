@@ -2,7 +2,7 @@
 /**
  * A template part for displaying an entry in both single and archive posts.
  *
- * @package     BEMpress
+ * @package BEMpress
  */
 ?>
 
@@ -12,14 +12,12 @@
 
     <?php
     // Display an audio player if we have an audio file.
-    echo $audio = hybrid_media_grabber(
-        array(
-            'type'        => 'audio',
-            'split_media' => true,
-            'before'      => '<div class="featured-media--audio">',
-            'after'       => '</div>',
-        )
-    );
+    echo $audio = hybrid_media_grabber( [
+        'type'        => 'audio',
+        'split_media' => true,
+        'before'      => '<div class="featured-media--audio">',
+        'after'       => '</div>',
+    ] );
     ?>
 
 	<?php if ( is_singular( get_post_type() ) ) : ?>

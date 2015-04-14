@@ -2,22 +2,12 @@
 /**
  * Register and Display Widget Areas.
  *
- * @package     BEMpress
- * @subpackage  HybridCore
- * @copyright   Copyright (c) 2015, Flagship Software, LLC
- * @license     GPL-2.0+
- * @link        https://flagshipwp.com/
- * @since       1.0.0
+ * @package BEMpress
  */
 
 add_action( 'widgets_init', 'bempress_register_sidebars', 5 );
-/**
- * Registers sidebars.
- *
- * @since  1.0.0
- * @access public
- * @return void
- */
+
+
 function bempress_register_sidebars() {
 	hybrid_register_sidebar( [
 		'id'          => 'primary',

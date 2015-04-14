@@ -20,13 +20,11 @@ if ( post_password_required() ) {
 
             <ol class="comment-list">
                 <?php
-                wp_list_comments(
-                    array(
-                        'style'        => 'ol',
-                        'callback'     => 'hybrid_comments_callback',
-                        'end-callback' => 'hybrid_comments_end_callback',
-                    )
-                );
+                wp_list_comments( [
+                    'style'        => 'ol',
+                    'callback'     => 'hybrid_comments_callback',
+                    'end-callback' => 'hybrid_comments_end_callback',
+                ] );
                 ?>
             </ol><!-- .comment-list -->
 
@@ -45,7 +43,3 @@ if ( post_password_required() ) {
     </section><!-- #comments -->
 
     <?php tha_comments_after(); ?>
-
-    <?php
-
-endif;

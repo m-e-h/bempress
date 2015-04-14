@@ -21,16 +21,14 @@ add_action( 'after_setup_theme', 'bempress_custom_header_setup', 15 );
  * @uses bempress_admin_header_image()
  */
 function bempress_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'bempress_custom_header_args',
-  	[
+	add_theme_support( 'custom-header', apply_filters( 'bempress_custom_header_args', [
   		'default-image'          => '',
   		'default-text-color'     => 'FFFFFF',
   		'width'                  => 1200,
   		'height'                 => 200,
   		'flex-height'            => true,
   		'wp-head-callback'       => 'bempress_header_style'
-  	]
-	) );
+  	] ) );
 }
 
 
@@ -69,7 +67,7 @@ function bempress_header_style() {
 	?>
         .site-title a,
         .site-description {
-            color: #<?php echo esc_attr( $header_text_color ); ?>;
+            color: #<?= esc_attr( $header_text_color ); ?>;
         }
 	<?php endif; ?>
 	<?php

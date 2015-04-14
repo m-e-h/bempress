@@ -2,20 +2,15 @@
 /**
  * A template part for displaying an entry in both single and archive posts.
  *
- * @package     BEMpress
- * @subpackage  HybridCore
- * @copyright   Copyright (c) 2015, Flagship Software, LLC
- * @license     GPL-2.0+
- * @link        https://flagshipwp.com/
- * @since       1.0.0
+ * @package BEMpress
  */
 
 
 $layoutcards = new Doc_Attributes;
-	public $post                  	= ' block__content';	// get_post_class()
-	public $entry_title           	= ' block__heading';	// entry-title
-	public $entry_author          	= ' block__meta entry-meta__item entry-meta__author';	// entry-author
-	public $entry_published       	= ' block__meta entry-meta__item entry-meta__date';	// entry-published updated
+	public $post               = ' block__content';	// get_post_class()
+	public $entry_title        = ' block__heading';	// entry-title
+	public $entry_author       = ' block__meta entry-meta__item entry-meta__author';	// entry-author
+	public $entry_published    = ' block__meta entry-meta__item entry-meta__date';	// entry-published updated
 
 
 ?>
@@ -23,14 +18,12 @@ $layoutcards = new Doc_Attributes;
 <div class="block">
 		<?php
 		// Display a featured image if we can find something to display.
-		get_the_image(
-			array(
-				'size'   => 'bempress-full',
-				'order'  => array( 'featured', 'attachment' ),
-				'before' => '<div class="block__img featured-media image">',
-				'after'  => '</div>',
-			)
-		);
+		get_the_image( [
+			'size'   => 'bempress-full',
+			'order'  => [ 'featured', 'attachment' ],
+			'before' => '<div class="block__img featured-media image">',
+			'after'  => '</div>',
+		] );
 		?>
 
 <article <?php hybrid_attr( 'post' ); ?>>
@@ -62,20 +55,16 @@ $layoutcards = new Doc_Attributes;
 
 	<footer class="block__footer">
 		<?php
-		hybrid_post_terms(
-			array(
-				'taxonomy' => 'category',
-				'before'   => '<p class="entry-meta categories">',
-				'after'    => '</p>',
-			)
-		);
-		hybrid_post_terms(
-			array(
-				'taxonomy' => 'post_tag',
-				'before'   => '<p class="entry-meta tags">',
-				'after'    => '</p>',
-			)
-		);
+		hybrid_post_terms( [
+			'taxonomy' => 'category',
+			'before'   => '<p class="entry-meta categories">',
+			'after'    => '</p>',
+		] );
+		hybrid_post_terms( [
+			'taxonomy' => 'post_tag',
+			'before'   => '<p class="entry-meta tags">',
+			'after'    => '</p>',
+		] );
 		?>
 	</footer><!-- .entry-footer -->
 

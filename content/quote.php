@@ -25,8 +25,8 @@
 				<?php flagship_entry_author(); ?>
 				<?php flagship_entry_published(); ?>
 				<?php edit_post_link(); ?>
-				<?php hybrid_post_terms( array( 'taxonomy' => 'category', ) ); ?>
-				<?php hybrid_post_terms( array( 'taxonomy' => 'post_tag', ) ); ?>
+				<?php hybrid_post_terms( [ 'taxonomy' => 'category', ] ); ?>
+				<?php hybrid_post_terms( [ 'taxonomy' => 'post_tag', ] ); ?>
 			</p>
 		</footer><!-- .entry-footer -->
 

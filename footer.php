@@ -5,7 +5,6 @@
  * @package BEMpress
  */
 ?>
-
 		</div><!-- #site-inner -->
 
         <?php tha_footer_before(); ?>

@@ -26,7 +26,7 @@
 		<?php if ( ! is_paged() && $desc = hybrid_get_loop_description() ) : ?>
 
 			<div <?php hybrid_attr( 'loop-description' ); ?>>
-				<?php echo $desc; ?>
+				<?= $desc; ?>
 			</div><!-- .loop-description -->
 
 		<?php endif; ?>

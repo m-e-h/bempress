@@ -10,7 +10,6 @@
 <head>
 <?php tha_head_top(); ?>
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-
 <?php wp_head(); ?>
 <?php tha_head_bottom(); ?>
 </head>
@@ -30,7 +29,7 @@
     <?php tha_header_before(); ?>
 
 		<header <?php hybrid_attr( 'header' ); ?>>
-		  
+
 		<?php tha_header_top(); ?>
 
 			<div <?php hybrid_attr( 'wrap', 'header' ); ?>>
@@ -42,11 +41,11 @@
 				</div><!-- #branding -->
 
 			</div><!-- .wrap -->
-			
+
 			<?php tha_header_bottom(); ?>
-			
+
       <?php hybrid_get_menu( 'primary' ); ?>
-      
+
 		</header><!-- #header -->
 
     <?php tha_header_after(); ?>

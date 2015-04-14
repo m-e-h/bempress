@@ -372,58 +372,58 @@ wp.customize(
 		value.bind(
 			function( to ) {
 			if(to == '2c-r') {
-				jQuery('#site-inner').removeClass(<?php echo json_encode($right); ?>);
-				jQuery('#site-inner').removeClass(<?php echo json_encode($wide); ?>);
-				jQuery('#site-inner').removeClass(<?php echo json_encode($single); ?>);
-				jQuery( '#site-inner' ).addClass(<?php echo json_encode($left); ?>);
-				jQuery( '#content' ).removeClass(<?php echo json_encode($widecontent); ?>);
-				jQuery( '#sidebar-primary' ).removeClass(<?php echo json_encode($widesidebar); ?>);
-				jQuery( '#content' ).removeClass(<?php echo json_encode($content_sidebar_left); ?>);
-				jQuery( '#sidebar-primary' ).removeClass(<?php echo json_encode($sidebar_sidebar_left); ?>);
-				jQuery( '#content' ).addClass(<?php echo json_encode($content_sidebar_right); ?>);
-				jQuery( '#sidebar-primary' ).addClass(<?php echo json_encode($sidebar_sidebar_right); ?>);
-				jQuery( '#sidebar-primary' ).removeClass(<?php echo json_encode($sidebar_single_column); ?>);
-				jQuery( '#content' ).removeClass(<?php echo json_encode($content_single_column); ?>);
+				jQuery('#site-inner').removeClass(<?= json_encode($right); ?>);
+				jQuery('#site-inner').removeClass(<?= json_encode($wide); ?>);
+				jQuery('#site-inner').removeClass(<?= json_encode($single); ?>);
+				jQuery( '#site-inner' ).addClass(<?= json_encode($left); ?>);
+				jQuery( '#content' ).removeClass(<?= json_encode($widecontent); ?>);
+				jQuery( '#sidebar-primary' ).removeClass(<?= json_encode($widesidebar); ?>);
+				jQuery( '#content' ).removeClass(<?= json_encode($content_sidebar_left); ?>);
+				jQuery( '#sidebar-primary' ).removeClass(<?= json_encode($sidebar_sidebar_left); ?>);
+				jQuery( '#content' ).addClass(<?= json_encode($content_sidebar_right); ?>);
+				jQuery( '#sidebar-primary' ).addClass(<?= json_encode($sidebar_sidebar_right); ?>);
+				jQuery( '#sidebar-primary' ).removeClass(<?= json_encode($sidebar_single_column); ?>);
+				jQuery( '#content' ).removeClass(<?= json_encode($content_single_column); ?>);
 			}
 			else if(to == '2c-l') {
-				jQuery('#site-inner').removeClass(<?php echo json_encode($left); ?>);
-				jQuery('#site-inner').removeClass(<?php echo json_encode($wide); ?>);
-				jQuery('#site-inner').removeClass(<?php echo json_encode($single); ?>);
-				jQuery( '#site-inner' ).addClass(<?php echo json_encode($right); ?>);
-				jQuery( '#content' ).removeClass(<?php echo json_encode($widecontent); ?>);
-				jQuery( '#sidebar-primary' ).removeClass(<?php echo json_encode($widesidebar); ?>);
-				jQuery( '#content' ).removeClass(<?php echo json_encode($content_sidebar_right); ?>);
-				jQuery( '#sidebar-primary' ).removeClass(<?php echo json_encode($sidebar_sidebar_right); ?>);
-				jQuery( '#content' ).addClass(<?php echo json_encode($content_sidebar_left); ?>);
-				jQuery( '#sidebar-primary' ).addClass(<?php echo json_encode($sidebar_sidebar_left); ?>);
-				jQuery( '#sidebar-primary' ).removeClass(<?php echo json_encode($sidebar_single_column); ?>);
-				jQuery( '#content' ).removeClass(<?php echo json_encode($content_single_column); ?>);
+				jQuery('#site-inner').removeClass(<?= json_encode($left); ?>);
+				jQuery('#site-inner').removeClass(<?= json_encode($wide); ?>);
+				jQuery('#site-inner').removeClass(<?= json_encode($single); ?>);
+				jQuery( '#site-inner' ).addClass(<?= json_encode($right); ?>);
+				jQuery( '#content' ).removeClass(<?= json_encode($widecontent); ?>);
+				jQuery( '#sidebar-primary' ).removeClass(<?= json_encode($widesidebar); ?>);
+				jQuery( '#content' ).removeClass(<?= json_encode($content_sidebar_right); ?>);
+				jQuery( '#sidebar-primary' ).removeClass(<?= json_encode($sidebar_sidebar_right); ?>);
+				jQuery( '#content' ).addClass(<?= json_encode($content_sidebar_left); ?>);
+				jQuery( '#sidebar-primary' ).addClass(<?= json_encode($sidebar_sidebar_left); ?>);
+				jQuery( '#sidebar-primary' ).removeClass(<?= json_encode($sidebar_single_column); ?>);
+				jQuery( '#content' ).removeClass(<?= json_encode($content_single_column); ?>);
 			}
 			if(to == '1c') {
-				jQuery('#site-inner').removeClass(<?php echo json_encode($right); ?>);
-				jQuery('#site-inner').removeClass(<?php echo json_encode($left); ?>);
-				jQuery('#site-inner').removeClass(<?php echo json_encode($single); ?>);
-				jQuery( '#site-inner' ).addClass(<?php echo json_encode($wide); ?>);
-				jQuery( '#content' ).removeClass(<?php echo json_encode($content_sidebar_right); ?>);
-				jQuery( '#sidebar-primary' ).removeClass(<?php echo json_encode($sidebar_sidebar_right); ?>);
-				jQuery( '#content' ).removeClass(<?php echo json_encode($content_sidebar_left); ?>);
-				jQuery( '#sidebar-primary' ).removeClass(<?php echo json_encode($sidebar_sidebar_left); ?>);
-				jQuery( '#content' ).addClass(<?php echo json_encode($widecontent); ?>);
-				jQuery( '#sidebar-primary' ).addClass(<?php echo json_encode($widesidebar); ?>);
-				jQuery( '#sidebar-primary' ).removeClass(<?php echo json_encode($sidebar_single_column); ?>);
-				jQuery( '#content' ).removeClass(<?php echo json_encode($content_single_column); ?>);
+				jQuery('#site-inner').removeClass(<?= json_encode($right); ?>);
+				jQuery('#site-inner').removeClass(<?= json_encode($left); ?>);
+				jQuery('#site-inner').removeClass(<?= json_encode($single); ?>);
+				jQuery( '#site-inner' ).addClass(<?= json_encode($wide); ?>);
+				jQuery( '#content' ).removeClass(<?= json_encode($content_sidebar_right); ?>);
+				jQuery( '#sidebar-primary' ).removeClass(<?= json_encode($sidebar_sidebar_right); ?>);
+				jQuery( '#content' ).removeClass(<?= json_encode($content_sidebar_left); ?>);
+				jQuery( '#sidebar-primary' ).removeClass(<?= json_encode($sidebar_sidebar_left); ?>);
+				jQuery( '#content' ).addClass(<?= json_encode($widecontent); ?>);
+				jQuery( '#sidebar-primary' ).addClass(<?= json_encode($widesidebar); ?>);
+				jQuery( '#sidebar-primary' ).removeClass(<?= json_encode($sidebar_single_column); ?>);
+				jQuery( '#content' ).removeClass(<?= json_encode($content_single_column); ?>);
 			}
 			else if(to == '1c-narrow') {
-				jQuery('#site-inner').removeClass(<?php echo json_encode($right); ?>);
-				jQuery('#site-inner').removeClass(<?php echo json_encode($left); ?>);
-				jQuery('#site-inner').removeClass(<?php echo json_encode($wide); ?>);
-				jQuery( '#site-inner' ).addClass(<?php echo json_encode($single); ?>);
-				jQuery( '#content' ).removeClass(<?php echo json_encode($widecontent); ?>);
-				jQuery( '#sidebar-primary' ).removeClass(<?php echo json_encode($widesidebar); ?>);
-				jQuery( '#sidebar-primary' ).removeClass(<?php echo json_encode($widesidebar); ?>);
-				jQuery( '#content' ).removeClass(<?php echo json_encode($content_sidebar_left); ?>);
-				jQuery( '#sidebar-primary' ).addClass(<?php echo json_encode($sidebar_single_column); ?>);
-				jQuery( '#content' ).addClass(<?php echo json_encode($content_single_column); ?>);
+				jQuery('#site-inner').removeClass(<?= json_encode($right); ?>);
+				jQuery('#site-inner').removeClass(<?= json_encode($left); ?>);
+				jQuery('#site-inner').removeClass(<?= json_encode($wide); ?>);
+				jQuery( '#site-inner' ).addClass(<?= json_encode($single); ?>);
+				jQuery( '#content' ).removeClass(<?= json_encode($widecontent); ?>);
+				jQuery( '#sidebar-primary' ).removeClass(<?= json_encode($widesidebar); ?>);
+				jQuery( '#sidebar-primary' ).removeClass(<?= json_encode($widesidebar); ?>);
+				jQuery( '#content' ).removeClass(<?= json_encode($content_sidebar_left); ?>);
+				jQuery( '#sidebar-primary' ).addClass(<?= json_encode($sidebar_single_column); ?>);
+				jQuery( '#content' ).addClass(<?= json_encode($content_single_column); ?>);
 			}
 			}
 		);

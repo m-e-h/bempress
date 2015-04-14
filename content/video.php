@@ -16,14 +16,12 @@
 
 	<?php
 	// Display a video if we have one.
-	echo $video = hybrid_media_grabber(
-		array(
-			'type'        => 'video',
-			'split_media' => true,
-			'before'      => '<div class="featured-media video">',
-			'after'       => '</div>',
-		)
-	);
+	echo $video = hybrid_media_grabber( [
+		'type'        => 'video',
+		'split_media' => true,
+		'before'      => '<div class="featured-media video">',
+		'after'       => '</div>',
+	] );
 	?>
 
 
@@ -42,14 +40,12 @@
 
 		<?php
 		// Display a featured image if we can find something to display.
-		get_the_image(
-			array(
-				'size'   => 'bempress-full',
-				'order'  => array( 'featured', 'attachment' ),
-				'before' => '<div class="featured-media image">',
-				'after'  => '</div>',
-			)
-		);
+		get_the_image( [
+			'size'   => 'bempress-full',
+			'order'  => [ 'featured', 'attachment' ],
+			'before' => '<div class="featured-media image">',
+			'after'  => '</div>',
+		] );
 		?>
 
 		<?php get_template_part( 'templates/archive', 'header' ); ?>
