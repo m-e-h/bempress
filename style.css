@@ -901,43 +901,6 @@ blockquote cite::before {
 /*------------------------------------*\
     $LAYOUTS
 \*------------------------------------*/
-table,
-th,
-td {
-    border: 1px solid #ebebeb;
-}
-
-table {
-    /* Prevents HTML tables from becoming too wide */
-    width: 100%; 
-    margin: 0 0 24px;
-    border-width: 1px 0 0 1px;
-    table-layout: fixed;
-    border-spacing: 0;
-    border-collapse: separate;
-}
-
-caption,
-th,
-td {
-    font-weight: normal;
-    text-align: left;
-}
-
-th {
-    border-width: 0 1px 1px 0;
-    font-weight: 700;
-}
-
-td {
-    border-width: 0 1px 1px 0;
-}
-
-th,
-td {
-    padding: 0.4em;
-}
-
 .o-media {
     display: table;
     width: 100%;
@@ -1338,7 +1301,8 @@ fieldset {
 \*------------------------------------*/
 .page-title__main,
 .page-title__sub {
-    margin-bottom: 0; 
+    display: inline-block; 
+    margin-bottom: 0;
     font-weight: 300;
 }
 
@@ -1351,6 +1315,10 @@ fieldset {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 1.2;
+}
+
+.site-logo-link {
+    display: inline-block;
 }
 
 .btn,

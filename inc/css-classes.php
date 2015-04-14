@@ -345,7 +345,7 @@ class AttrTrumps {
 }
 
 
-$ShinyAtts = new AttrTrumps();
+
 
 /* Add layout option in Customize. */
 add_action( 'customize_register', 'meh_layouts_customize_register' );

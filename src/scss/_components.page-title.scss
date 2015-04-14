@@ -6,6 +6,7 @@
 .page-title__sub {
     font-weight: 300;
     margin-bottom: 0;
+    display: inline-block;
 }
 
 .page-title__main {
@@ -17,4 +18,9 @@
 .page-title__sub {
     @include font-size($heading-size-4);
     opacity: .8;
+}
+
+
+.site-logo-link {
+  display: inline-block;
 }
