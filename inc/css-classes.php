@@ -24,13 +24,13 @@ class AttrTrumps {
 	public $content_full_width			= ' u-1of1'; 	// content
 	public $content_single_column 		= ' u-1of1'; 	// content
 	public $content_sidebar_right 		= ' u-2of3@md u-pr+@md'; 	// content
-	public $content_sidebar_left 		= ' u-2of3@md grid__item--rev'; 	// content
+	public $content_sidebar_left 		= ' u-2of3@md u-pl+@md'; 	// content
 	public $main                		= ' ';
 	public $sidebar 					= ' bg-white br shadow--z1 grid__item u-p- u-p+@md u-mb u-mb+@md';	// sidebar sidebar__{$context}
 	public $sidebar_full_width  		= ' u-1of1';	// sidebar sidebar__{$context}
 	public $sidebar_single_column  		= ' u-1of1';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_right 		= ' u-1of3@md';	// sidebar sidebar__{$context}
-	public $sidebar_sidebar_left		= ' u-1of3@md u-pr+@md';	// sidebar sidebar__{$context}
+	public $sidebar_sidebar_left		= ' u-1of3@md';	// sidebar sidebar__{$context}
 	public $sidebar_footer          	= ' grid grid--flex';	// sidebar sidebar__{$context}
 	public $menu_primary 				= ' shadow--z2 t-bg__2--light menu--horizontal';	// menu menu-{$context}
 	public $menu_secondary 				= ' menu--horizontal';	// menu menu-{$context}
@@ -71,7 +71,7 @@ class AttrTrumps {
 		add_filter( 'hybrid_attr_wrap',				[ $this, 'wrap' ], 10, 2 );
 		add_filter( 'hybrid_attr_header',			[ $this, 'header' ] );
 		add_filter( 'hybrid_attr_footer',			[ $this, 'footer' ] );
-		add_filter( 'hybrid_attr_primary',			[ $this, 'content' ] );
+		add_filter( 'hybrid_attr_content',			[ $this, 'content' ] );
 		add_filter( 'hybrid_attr_main',				[ $this, 'main' ] );
 		add_filter( 'hybrid_attr_sidebar',			[ $this, 'sidebar' ], 10, 2 );
 		add_filter( 'hybrid_attr_menu',				[ $this, 'menu' ], 10, 2 );

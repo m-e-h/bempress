@@ -7,13 +7,11 @@
 
 get_header(); ?>
 
-    <div <?php hybrid_attr( 'primary' ); ?>>
-
     <?php tha_content_before(); ?>
 
-        <?php hybrid_get_menu( 'breadcrumbs' ); ?>
+    <main <?php hybrid_attr( 'content' ); ?>>
 
-        <main <?php hybrid_attr( 'main' ); ?>>
+        <?php hybrid_get_menu( 'breadcrumbs' ); ?>
 
         <?php tha_content_top(); ?>
 
@@ -44,9 +42,6 @@ get_header(); ?>
         </main><!-- #main -->
 
     <?php tha_content_after(); ?>
-
-    </div><!-- #primary -->
-
 
 <?php hybrid_get_sidebar( 'primary' ); ?>
 
