@@ -1701,6 +1701,7 @@ kbd {
     display: -ms-flexbox;
     display: flex;
     flex-direction: column; 
+    width: 100%;
     min-width: 300px;
     margin-bottom: 24px;
     padding: 24px;
@@ -1716,6 +1717,7 @@ kbd {
 }
 @media screen and (min-width: 48em) {
     .widget {
+        min-width: 33%; 
         margin-bottom: 48px;
     }
 }
