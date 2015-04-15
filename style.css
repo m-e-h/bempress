@@ -968,7 +968,7 @@ blockquote cite::before {
 /**
  * 5.0 Forms
  */
-input:not(.submit),
+input:not([type="submit"]),
 select,
 textarea {
     max-width: 100%;
@@ -982,11 +982,11 @@ textarea {
     vertical-align: baseline;
 }
 
-input:not(.submit) {
+input:not([type="submit"]) {
     line-height: normal;
 }
 
-input:not(.submit),
+input:not([type="submit"]),
 textarea {
     width: 100%; 
     /* Removing the inner shadow on iOS inputs */
@@ -995,14 +995,14 @@ textarea {
     background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
 }
 
-input:not(.submit):focus,
+input:not([type="submit"]):focus,
 textarea:focus {
     border: 1px solid #476fba;
     color: #393939; 
     background-color: #fff;
 }
 
-input:not(.submit):focus,
+input:not([type="submit"]):focus,
 select:focus {
     outline: 2px solid #476fba;
 }
@@ -1052,10 +1052,6 @@ textarea:focus {
     outline: 0;
 }
 
-.post-password-form {
-    position: relative;
-}
-
 label {
     display: block;
     margin-bottom: 6px;
@@ -1090,12 +1086,14 @@ fieldset {
     border-width: 0;
 }
 
-.search-form {
+.search-form,
+.post-password-form {
     display: block;
     position: relative;
 }
 
-.search-form input[type=search] {
+.search-form input[type=search],
+.post-password-form input[type="password"] {
     width: 100%;
     margin: 0;
     padding: 10px;
@@ -1103,7 +1101,8 @@ fieldset {
     appearance: none;
 }
 
-.search-form button[type=submit] {
+.search-form button[type=submit],
+.post-password-form input[type="submit"] {
     position: absolute;
     top: 0;
     right: 0;
@@ -1112,6 +1111,11 @@ fieldset {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     outline: none;
+}
+
+.post-password-form input[type="submit"] {
+    top: auto; 
+    height: 40px;
 }
 
 .search-form button::before {
@@ -1569,8 +1573,13 @@ input[type="submit"]:focus {
 
 .pagination {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     text-align: center;
+}
+@media screen and (min-width: 48em) {
+    .pagination {
+        margin-bottom: 48px;
+    }
 }
 .pagination a {
     -webkit-transition: 0.22222222s;
@@ -1598,6 +1607,61 @@ input[type="submit"]:focus {
 
 .dots {
     background: none;
+}
+
+.post-navigation {
+    margin-bottom: 24px;
+}
+@media screen and (min-width: 48em) {
+    .post-navigation {
+        margin-bottom: 48px;
+    }
+}
+
+.post-navigation a {
+    display: block;
+    margin-bottom: 10px; 
+    padding: 15px 30px 15px;
+    background: rgba(23, 29, 32, 0.1);
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-next {
+    margin-right: 30px;
+}
+.nav-next a {
+    border-left: 15px solid #f5f5f5; 
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.nav-next a::after {
+    position: absolute;
+    top: 0; 
+    right: -30px;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid rgba(23, 29, 32, 0.1);
+    content: "";
+}
+
+.nav-previous {
+    margin-left: 30px;
+}
+.nav-previous a {
+    border-right: 15px solid #f5f5f5; 
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.nav-previous a::after {
+    position: absolute;
+    top: 0; 
+    left: -30px;
+    border-top: 30px solid transparent;
+    border-right: 30px solid rgba(23, 29, 32, 0.1);
+    border-bottom: 30px solid transparent;
+    content: "";
 }
 
 /*------------------------------------*\
@@ -1685,10 +1749,9 @@ kbd {
     margin-bottom: 24px;
     margin-left: auto;
     padding: 6px 12px;
-    border-radius: 3px;
+    border-radius: 3px; 
     color: #393939;
-    background-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24); 
+    background-color: rgba(255, 255, 255, 0.9);
     font-size: 15px;
     font-size: 0.9375rem;
     font-weight: 500;

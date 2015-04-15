@@ -1,7 +1,7 @@
 /**
  * 5.0 Forms
  */
-input:not(.submit),
+input:not([type="submit"]),
 select,
 textarea {
 	background-color: rgba($blue-grey-400, .2);
@@ -13,11 +13,11 @@ textarea {
 	margin-bottom: $base-spacing-unit;
 }
 
-input:not(.submit) {
+input:not([type="submit"]) {
 	line-height: normal;
 }
 
-input:not(.submit),
+input:not([type="submit"]),
 textarea {
 	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)); /* Removing the inner shadow on iOS inputs */
 	border: 1px solid $grey-100;
@@ -25,14 +25,14 @@ textarea {
     width: 100%;
 }
 
-input:not(.submit):focus,
+input:not([type="submit"]):focus,
 textarea:focus {
 	background-color: #fff;
 	border: 1px solid $color-primary;
 	color: $color-text;
 }
 
-input:not(.submit):focus,
+input:not([type="submit"]):focus,
 select:focus {
 	outline: 2px solid $color-primary;
 }
@@ -83,10 +83,6 @@ textarea:focus {
 	outline: 0;
 }
 
-.post-password-form {
-	position: relative;
-}
-
 label {
 	color: $color-gray;
 	display: block;
@@ -124,19 +120,22 @@ fieldset {
 
 
 
-.search-form {
+.search-form,
+.post-password-form {
   display: block;
   position: relative;
 }
 
-.search-form input[type=search] {
+.search-form input[type=search],
+.post-password-form input[type="password"] {
   margin: 0;
   padding: 10px;
   width: 100%;
   appearance: none;
 }
 
-.search-form button[type=submit] {
+.search-form button[type=submit],
+.post-password-form input[type="submit"] {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   outline: none;
@@ -147,6 +146,10 @@ fieldset {
   bottom: 0;
 }
 
+.post-password-form input[type="submit"] {
+  height: 40px;
+  top: auto;
+}
 
 .search-form button {
   @include font-icon($search);

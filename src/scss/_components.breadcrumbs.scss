@@ -14,9 +14,9 @@
     margin-right: auto;
     margin-bottom: $base-spacing-unit;
     padding: $base-spacing-unit--tiny $base-spacing-unit--small;
-    background-color: rgba($white, .5);
+    background-color: rgba($white, .9);
     border-radius: $base-radius;
-    @include shadow-z1();
+    //@include shadow-z1();
 
     @include md {
         margin-bottom: $base-spacing-unit--large;
