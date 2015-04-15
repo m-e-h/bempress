@@ -5,7 +5,7 @@
  * @package BEMpress
  */
 
-if ( post_password_required() ) {
+if ( post_password_required() || ( !have_comments() && !comments_open() && !pings_open() ) ) {
     return;
 }
 ?>
