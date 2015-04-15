@@ -55,26 +55,22 @@ function bempress_setup() {
 
     // https://developer.wordpress.org/themes/functionality/navigation-menus/
     register_nav_menus( [
-        'primary'   => _x( 'Primary', 'nav menu location', 'bempress' ),
-        'secondary' => _x( 'Secondary', 'nav menu location', 'bempress' ),
+        'primary'   => _x( 'Primary', 'bempress' ),
+        'secondary' => _x( 'Secondary', 'bempress' ),
     ] );
 
     // http://codex.wordpress.org/Post_Formats
-    add_theme_support(
-        'post-formats', ['aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio']
-    );
+    add_theme_support( 'post-formats', [
+        'aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio'
+    ] );
 
     // http://themehybrid.com/docs/theme-layouts
-    add_theme_support(
-        'theme-layouts',
-        [
+    add_theme_support( 'theme-layouts', [
             '1c'        => __( '1 Column Wide',                'bempress' ),
             '1c-narrow' => __( '1 Column Narrow',              'bempress' ),
             '2c-l'      => __( '2 Columns: Content / Sidebar', 'bempress' ),
             '2c-r'      => __( '2 Columns: Sidebar / Content', 'bempress' )
-        ],
-        ['default' => is_rtl() ? '2c-r' :'2c-l']
-    );
+    ], ['default' => is_rtl() ? '2c-r' :'2c-l'] );
 
     // Set up the WordPress core custom background feature.
     add_theme_support( 'custom-background', apply_filters( '_s_custom_background_args', [

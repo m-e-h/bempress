@@ -23,8 +23,8 @@ function bempress_register_sidebars() {
 		'id'			=> 'footer',
 		'name'			=> _x( 'Footer Widgets', 'sidebar', 'bempress' ),
 		'description' => __( 'You can see these at the bottom of the site.', 'bempress' ),
-		'before_widget' => '<section id="%1$s" class="widget widget-footer %2$s grid__item grid__item--flexed">',
-		'after_widget'	=> '</section>',
+		'before_widget' => '<section id="%1$s" class="widget widget-footer %2$s grid__item grid__item--flexed"><div class="br widget__wrap">',
+		'after_widget'	=> '</div></section>',
 		'before_title'  => '<h3 class="widget-title widget-footer__title">',
 		'after_title'   => '</h3>',
 	] );

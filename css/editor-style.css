@@ -7,3 +7,13 @@ body#tinymce {
   padding:   1.5rem 1.5rem 0;
   border:    none;
 }
+
+@media screen and (max-width: 740px) {
+    body, img, .wp-caption {
+        max-width: 100%;
+    }
+
+    img, .wp-caption {
+        width: auto !important;
+    }
+}

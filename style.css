@@ -1090,6 +1090,49 @@ fieldset {
     border-width: 0;
 }
 
+.search-form {
+    display: block;
+    position: relative;
+}
+
+.search-form input[type=search] {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+
+    appearance: none;
+}
+
+.search-form button[type=submit] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0; 
+    padding: 0 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    outline: none;
+}
+
+.search-form button::before {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: inherit;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+    text-decoration: none;
+    content: "\f002";
+    text-rendering: auto;
+
+    speak: none;
+}
+
+.search-form button[type=submit]::before {
+    font-size: 18px;
+    line-height: 1.625;
+}
+
 /*------------------------------------*\
     #Layout Wrappers
 \*------------------------------------*/
@@ -1301,8 +1344,7 @@ fieldset {
 \*------------------------------------*/
 .page-title__main,
 .page-title__sub {
-    display: inline-block; 
-    margin-bottom: 0;
+    margin-bottom: 0; 
     font-weight: 300;
 }
 
@@ -1654,12 +1696,45 @@ kbd {
     #WIDGETS
 \*------------------------------------*/
 .widget {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column; 
+    min-width: 300px;
     margin-bottom: 24px;
+    padding: 24px;
+
+    -webkit-box-direction: normal;
+    -webkit-box-flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-flex: 1 300px;
+    -ms-flex: 1 300px;
+    flex: 1 300px;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
 }
 @media screen and (min-width: 48em) {
     .widget {
         margin-bottom: 48px;
     }
+}
+.widget__wrap {
+    padding: 24px;
+    background-color: rgba(31, 31, 31, 0.3);
+
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.widget_search {
+    display: inline-block;
+}
+.widget_search > .widget__wrap {
+    padding: 0;
+    background: none;
 }
 
 /**

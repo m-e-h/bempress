@@ -4,8 +4,30 @@
 
 .widget {
     margin-bottom: $base-spacing-unit;
+    padding: $base-spacing-unit;
+    flex: 1 300px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+
 
     @include md {
         margin-bottom: $base-spacing-unit--large;
     }
+
+    &__wrap {
+        background-color: rgba($grey-900, .3);
+        padding: $base-spacing-unit;
+        flex: 1;
+    }
+}
+
+.widget_search {
+  display: inline-block;
+  //padding: 0;
+
+  > .widget__wrap {
+    padding: 0;
+    background: none;
+  }
 }

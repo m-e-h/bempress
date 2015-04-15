@@ -51,6 +51,28 @@
     @include inuit-font-size($inuit-heading-size-1);
 }
 
+
+// Icon Fonts
+$fa: FontAwesome;
+
+
+@mixin font-icon($icon: $circle, $font-family: $fa) {
+
+    &::before {
+        content: $icon;
+        display: inline-block;
+        font-family: $font-family;
+        font-size: inherit;
+        font-weight: normal;
+        speak: none;
+        text-decoration: none;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+
 // Clearfix
 @mixin clearfix {
     &:before,
