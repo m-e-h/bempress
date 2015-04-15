@@ -4,7 +4,7 @@
 
 .widget {
     margin-bottom: $base-spacing-unit;
-    padding: $base-spacing-unit;
+    padding: 0 $base-spacing-unit;
     flex: 1 300px;
     min-width: 300px;
     width: 100%;
@@ -18,7 +18,7 @@
     }
 
     &__wrap {
-        background-color: rgba($grey-900, .3);
+        background-color: rgba($blue-grey-900, .1);
         padding: $base-spacing-unit;
         flex: 1;
     }

@@ -117,3 +117,42 @@
 .menu--horizontal .menu-item-has-children > a:after {
     content: "\25BE";
 }
+
+
+
+
+// POST NAV
+
+.pagination {
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+
+  a {
+  transition: $base-transition;
+}
+
+  a:hover, a:focus {
+  background-color: $white;
+  opacity: 1;
+  color: black;
+}
+}
+
+.page-numbers {
+  background-color: rgba($white, .8);
+  border-radius: $base-radius;
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  margin-left: 3px;
+  margin-right: 3px;
+
+  &.current {
+  background-color: rgba($blue-grey-900, .1);
+}
+}
+
+.dots {
+    background: none;
+}

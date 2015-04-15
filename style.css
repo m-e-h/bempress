@@ -975,7 +975,7 @@ textarea {
     margin: 0;
     margin-bottom: 24px; 
     border-radius: 3px;
-    background-color: #f8f8f8;
+    background-color: rgba(139, 160, 171, 0.2);
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.5;
@@ -1567,6 +1567,39 @@ input[type="submit"]:focus {
     content: "\25BE";
 }
 
+.pagination {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.pagination a {
+    -webkit-transition: 0.22222222s;
+    transition: 0.22222222s;
+}
+.pagination a:hover,
+.pagination a:focus {
+    opacity: 1;
+    color: black; 
+    background-color: #fff;
+}
+
+.page-numbers {
+    display: inline-block;
+    margin-right: 3px; 
+    margin-bottom: 10px;
+    margin-left: 3px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.page-numbers.current {
+    background-color: rgba(23, 29, 32, 0.1);
+}
+
+.dots {
+    background: none;
+}
+
 /*------------------------------------*\
     #META
 \*------------------------------------*/
@@ -1704,7 +1737,7 @@ kbd {
     width: 100%;
     min-width: 300px;
     margin-bottom: 24px;
-    padding: 24px;
+    padding: 0 24px;
 
     -webkit-box-direction: normal;
     -webkit-box-flex: 1;
@@ -1723,7 +1756,7 @@ kbd {
 }
 .widget__wrap {
     padding: 24px;
-    background-color: rgba(31, 31, 31, 0.3);
+    background-color: rgba(23, 29, 32, 0.1);
 
     -webkit-box-flex: 1;
     -webkit-flex: 1;
