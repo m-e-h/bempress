@@ -8,22 +8,16 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+<article <?php hybrid_attr( 'post' ); ?>>
 
-		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php wpclt_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+    <?php tha_entry_top(); ?>
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+    <?php get_template_part( 'templates/archive', 'header' ); ?>
 
-	<footer class="entry-footer">
-		<?php wpclt_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+    <?php get_template_part( 'templates/archive', 'content' ); ?>
+
+    <?php get_template_part( 'templates/archive', 'footer' ); ?>
+
+    <?php tha_entry_bottom(); ?>
+
 </article><!-- #post-## -->
