@@ -1828,9 +1828,6 @@ kbd {
     -ms-flex: 1;
     flex: 1;
 }
-.widget-footer:nth-child(3n) {
-    padding-right: 0;
-}
 
 .widget_search {
     display: inline-block;

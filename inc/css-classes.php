@@ -31,7 +31,7 @@ class AttrTrumps {
 	public $sidebar_single_column  		= ' u-1of1';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_right 		= ' u-1of3@md';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_left		= ' u-1of3@md';	// sidebar sidebar__{$context}
-	public $sidebar_footer          	= ' u-ph- u-ph@md u-ph+@lg grid grid--flex';	// sidebar sidebar__{$context}
+	public $sidebar_footer          	= ' u-pl- u-pl@md u-pl+@lg grid grid--flex';	// sidebar sidebar__{$context}
 	public $menu_primary 				= ' shadow--z2 t-bg__2--light menu--horizontal';	// menu menu-{$context}
 	public $menu_secondary 				= ' menu--horizontal';	// menu menu-{$context}
 	public $menu_li_primary         	= 'menu__item';	// menu-item
