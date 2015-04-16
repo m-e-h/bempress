@@ -12,15 +12,20 @@
     @include font-size($base-font-size - 1);
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: $base-spacing-unit;
+    margin-bottom: $base-spacing-unit--small;
     padding: $base-spacing-unit--tiny $base-spacing-unit--small;
     background-color: rgba($white, .9);
     border-radius: $base-radius;
     //@include shadow-z1();
 
     @include md {
+        margin-bottom: $base-spacing-unit;
+    }
+
+        @include lg {
         margin-bottom: $base-spacing-unit--large;
     }
+
     & > span {
         display: inline-block;
     }

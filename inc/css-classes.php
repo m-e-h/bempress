@@ -11,47 +11,47 @@ class AttrTrumps {
 	/* Attributes for major structural elements. */
 	public $body                  		= '';	// get_body_class()
 	public $site_container    			= '';	// site-container
-	public $site_inner   				= ' u-ph- grid grid--flex';	// site-inner
+	public $site_inner   				= ' u-ph- u-ph@md u-ph+@lg grid grid--flex';	// site-inner
 	public $site_inner_full_width		= ' wrapper--wide';
 	public $site_inner_single_column 	= ' wrapper';
 	public $site_inner_sidebar_right 	= ' wrapper';
 	public $site_inner_sidebar_left 	= ' wrapper grid--rev';
 	public $wrap                		= ' wrapper';
 	public $header_wrap                	= '';
-	public $header                		= ' t-bg__1--light u-mb u-mb+@md'; 	// site-header
+	public $header                		= ' t-bg__1--light u-mb- u-mb@md u-mb+@lg'; 	// site-header
 	public $footer                		= ''; 	// site-footer
 	public $content 					= ' grid__item'; 	// content
 	public $content_full_width			= ' u-1of1'; 	// content
 	public $content_single_column 		= ' u-1of1'; 	// content
-	public $content_sidebar_right 		= ' u-2of3@md u-pr+@md'; 	// content
-	public $content_sidebar_left 		= ' u-2of3@md u-pl+@md'; 	// content
+	public $content_sidebar_right 		= ' u-2of3@md u-pr@md u-pr+@lg'; 	// content
+	public $content_sidebar_left 		= ' u-2of3@md u-pl@md u-pl+@lg'; 	// content
 	public $main                		= ' ';
-	public $sidebar 					= ' bg-white br shadow--z1 grid__item u-p- u-p+@md u-mb u-mb+@md';	// sidebar sidebar__{$context}
+	public $sidebar 					= ' grid__item';	// sidebar sidebar__{$context}
 	public $sidebar_full_width  		= ' u-1of1';	// sidebar sidebar__{$context}
 	public $sidebar_single_column  		= ' u-1of1';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_right 		= ' u-1of3@md';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_left		= ' u-1of3@md';	// sidebar sidebar__{$context}
-	public $sidebar_footer          	= ' grid grid--flex';	// sidebar sidebar__{$context}
+	public $sidebar_footer          	= ' u-ph- u-ph@md u-ph+@lg grid grid--flex';	// sidebar sidebar__{$context}
 	public $menu_primary 				= ' shadow--z2 t-bg__2--light menu--horizontal';	// menu menu-{$context}
 	public $menu_secondary 				= ' menu--horizontal';	// menu menu-{$context}
 	public $menu_li_primary         	= 'menu__item';	// menu-item
 	public $menu_li_secondary       	= 'menu__item';	// menu-item
 	public $menu_li_social          	= '';	// menu-item
 
-    public $author_box                  = ' bg-white br shadow--z1 u-p- u-p+@md u-mb u-mb+@md';
+    public $author_box                  = ' bg-white br shadow--z1 u-p- u-p@md u-p+@lg u-mb- u-mb@md u-mb+@lg';
 
 	/* Header attributes. */
-	public $branding              		= ' page-title u-p u-p+@md';	// site-branding
+	public $branding              		= ' page-title u-p- u-p@md u-p+@lg';	// site-branding
 	public $site_title            		= ' page-title__main';	// site-title
 	public $site_description      		= ' page-title__sub';	// site-description
 
 	/* Loop attributes. */
-	public $loop_meta             		= ' u-p u-mb+ br bg-white';	// loop-meta
+	public $loop_meta             		= ' u-p- u-p@md u-p+@lg u-mb- u-mb@md u-mb+@lg br bg-white';	// loop-meta
 	public $loop_title            		= '';	// loop-title
 	public $loop_description      		= '';	// loop-description
 
 	/* Post-specific attributes. */
-	public $post                  		= ' bg-white br shadow--z1 u-p u-p+@md u-mb u-mb+@md';	// get_post_class()
+	public $post                  		= ' bg-white br shadow--z1 u-p- u-p@md u-p+@lg u-mb- u-mb@md u-mb+@lg';	// get_post_class()
 	public $entry_title           		= '';	// entry-title
 	public $entry_author          		= ' u-mr- entry-meta__item entry-meta__author';	// entry-author
 	public $entry_published       		= ' u-mr- entry-meta__item entry-meta__date';	// entry-published updated
@@ -59,7 +59,7 @@ class AttrTrumps {
 	public $entry_summary         		= '';	// entry-summary
 	public $entry_terms           		= ' badge';	// entry-terms
 
-    public $comments_area               = ' bg-white br shadow--z1 u-p u-p+@md u-mb u-mb+@md'; // entry-terms
+    public $comments_area               = ' bg-white br shadow--z1 u-p- u-p@md u-p+@lg u-mb- u-mb@md u-mb+@lg'; // entry-terms
 
 
 
