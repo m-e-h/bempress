@@ -23,7 +23,7 @@ get_header(); ?>
 
                 <?php tha_entry_after(); ?>
 
-                <?php the_post_navigation(); ?>
+                <?php get_template_part( 'templates/loop-nav' ); ?>
 
                 <?php comments_template( '', true ); ?>
 

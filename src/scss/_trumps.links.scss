@@ -10,3 +10,9 @@
 .u-link-obvious {
     text-decoration: underline !important;
 }
+
+.navigation a {
+    &:hover{
+    opacity: 1;
+}
+}

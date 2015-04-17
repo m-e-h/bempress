@@ -1,17 +1,20 @@
 .btn {
-    display: inline-block; /* [1] */
-    vertical-align: middle; /* [2] */
-    font: inherit; /* [3] */
-    text-align: center; /* [4] */
-    cursor: pointer; /* [5] */
+    display: inline-block;
+    vertical-align: middle;
+    font: inherit;
+    text-align: center;
+    cursor: pointer;
     @include bg-text($btn-bg);
     border-radius: $base-radius;
+    border-width: 0;
     padding: ($base-spacing-unit / 2) $base-spacing-unit;
     outline: 0;
+    letter-spacing: 1px;
     transition: $base-transition;
     &:hover,
     &:active,
     &:focus {
+        opacity: 1;
         @include bg-text($btn-bg-hover);
     }
 }
@@ -22,4 +25,45 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
     @extend .btn;
+}
+
+.button--transparent {
+  color: inherit;
+  background-color: transparent;
+
+    &:hover,
+    &:active,
+    &:focus {
+  color: inherit;
+  background-color: $color-grey-ui;
+    }
+}
+
+
+.button--outline {
+  color: $btn-bg;
+  background-color: transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-color: currentColor;
+
+
+    &:hover,
+    &:active,
+    &:focus {
+  @include bg-text($btn-bg-hover);
+  background-color: $btn-bg-hover;
+  border-color: $btn-bg-hover;
+    }
+}
+
+.button--tiny {
+    padding: $base-spacing-unit--tiny $base-spacing-unit--small;
+    @include font-size($base-font-size - 5, 1);
+    text-transform: uppercase;
+}
+
+.button--muted {
+    background-color: $color-grey-ui;
+    border-color: $color-grey-ui;
 }

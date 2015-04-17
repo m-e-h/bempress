@@ -51,12 +51,13 @@
 
 
 // Icon Fonts
-$fa: FontAwesome;
+$fa: FontAwesome !default;
+//$before: true !default;
 
 
-@mixin font-icon($icon: $circle, $font-family: $fa) {
+@mixin font-icon($icon: $circle, $font-family: $fa, $placement: before) {
 
-    &::before {
+    &::#{$placement} {
         content: $icon;
         display: inline-block;
         font-family: $font-family;
