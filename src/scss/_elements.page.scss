@@ -3,9 +3,9 @@
 \*------------------------------------*/
 
 html {
-    font-size: ($inuit-base-font-size / 16px) * 1em;
-    line-height: $inuit-base-line-height / $inuit-base-font-size;
-    color: $inuit-base-text-color;
+    font-size: ($base-font-size / 16px) * 1em;
+    line-height: $base-line-height / $base-font-size;
+    color: $base-text-color;
     min-height: 100%;
     background-color: #ffffff;
 }

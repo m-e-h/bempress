@@ -4,8 +4,8 @@
  */
 ?>
 
-<footer class="entry-footer">
-    <p class="entry-meta">
+<footer class="entry__footer">
+    <p class="entry__meta">
         <?php flagship_entry_author(); ?>
         <?php flagship_entry_published(); ?>
         <?php flagship_entry_comments_link(); ?>

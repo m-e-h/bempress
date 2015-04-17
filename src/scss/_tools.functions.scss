@@ -2,13 +2,6 @@
 //    #FUNCTIONS
 //\*------------------------------------*/
 
-// inuitcss makes use of a few functions that are also available for you to use
-// later on in your extension of the framework.
-
-
-
-
-
 // Maths helpers.
 //
 // Halve and double numbers, returning rounded integers. E.g.:
@@ -17,20 +10,20 @@
 //     padding: halve(3.2px);
 // }
 //
-@function quarter($inuit-number) {
-    @return round($inuit-number / 4);
+@function quarter($number) {
+    @return round($number / 4);
 }
 
-@function halve($inuit-number) {
-    @return round($inuit-number / 2);
+@function halve($number) {
+    @return round($number / 2);
 }
 
-@function double($inuit-number) {
-    @return round($inuit-number * 2);
+@function double($number) {
+    @return round($number * 2);
 }
 
-@function quadruple($inuit-number) {
-    @return round($inuit-number * 4);
+@function quadruple($number) {
+    @return round($number * 4);
 }
 
 

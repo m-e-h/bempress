@@ -4,7 +4,7 @@
  */
 ?>
 
-	<footer class="entry-footer">
+	<footer class="entry__footer">
 
     <?php if ( has_term( '', 'category' ) || has_term( '', 'post_tag' ) ) : ?>
 
@@ -24,7 +24,7 @@
 
     endif; ?>
 
-        <p class="entry-meta">
+        <p class="entry__meta">
             <?php flagship_entry_author(); ?>
             <?php flagship_entry_published(); ?>
             <?php flagship_entry_comments_link(); ?>

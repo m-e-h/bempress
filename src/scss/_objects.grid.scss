@@ -20,8 +20,6 @@
     $INTRODUCTION
 \*------------------------------------*/
 /**
- * csswizardry grids provides you with widths to suit a number of breakpoints
- * designed around devices of a size you specify. Out of the box, csswizardry
  * grids caters to the following types of device:
  *
  * sm     --  sm-based devices, like phones and small tablets
@@ -30,8 +28,7 @@
  * xl     --  stationary devices, like xltop computers
  * regular  --  any/all types of device
  *
- * These namespaces are then used in the library to give you the ability to
- * manipulate your layouts based around them, for example:
+ * example:
  *
    <div class="grid__item  one-whole  md--one-half  xl--one-third">
  *
@@ -39,9 +36,6 @@
  * device, at which point it become 50% wide, or it is on a xltop device, at
  * which point it becomes 33.333% width.
  *
- * csswizardry grids also has push and pull classes which allow you to nudge
- * grid items left and right by a defined amount. These follow the same naming
- * convention as above, but are prepended by either `push--` or `pull--`, for
  * example:
  *
    `class="grid__item  one-half  push--one-half"`
@@ -49,8 +43,6 @@
  * This would give you a grid item which is 50% width and pushed over to the
  * right by 50%.
  *
- * All classes in csswizardry grids follow this patten, so you should fairly
- * quickly be able to piece together any combinations you can imagine, for
  * example:
  *
    `class="grid__item  one-whole  md--one-half  xl--one-third  push--xl--one-third"`

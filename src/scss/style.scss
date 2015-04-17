@@ -16,8 +16,7 @@ Tags:
  * CONTENTS
  *
  * SETTINGS
- * Default..............inuitcss’ default settings.
- * Global...............Globally-available variables and settings/config.
+ * Default..............Globally-available variables and settings/config.
  * Colors...............Manage our color palette in isolation.
  * Responsive...........Setup some breakpoints.
  *
@@ -76,11 +75,10 @@ Tags:
 /**
  * #SETTINGS
  */
-@import "settings.defaults";
-@import "settings.global";
 @import "settings.colors";
 @import "settings.responsive";
 @import "settings.icon-font";
+@import "settings.defaults";
 
 
 
@@ -91,7 +89,7 @@ Tags:
  */
 @import "tools.functions";
 @import "tools.mixins";
-@import "tools.responsive";
+@import "tools.spacing";
 @import "tools.aliases";
 @import "tools.widths";
 
@@ -101,7 +99,7 @@ Tags:
 /**
  * #GENERIC
  */
-@import "generic.reset";
+@import "generic.level";
 @import "generic.sanitize";
 
 
@@ -127,8 +125,6 @@ Tags:
  */
 @import "objects.grid";
 @import "objects.embed";
-@import "objects.shadows";
-@import "objects.layout";
 @import "objects.tables";
 @import "objects.media";
 @import "objects.forms";
@@ -144,6 +140,7 @@ Tags:
  * #COMPONENTS
  */
 @import "components.page-title";
+@import "components.shadows";
 @import "components.buttons";
 @import "components.testimonials";
 @import "components.avatars";
@@ -162,7 +159,5 @@ Tags:
  */
 
 @import "trumps.links";
-@import "trumps.widths";
 @import "trumps.helpers";
 @import "trumps.headings";
-@import "trumps.spacing-responsive";

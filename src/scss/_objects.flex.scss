@@ -1,0 +1,78 @@
+/*
+ * Basscss Flex Object
+ */
+
+.flex {
+    display: flex;
+}
+
+.flex--column {
+    flex-direction: column;
+}
+
+.flex--wrap {
+    flex-wrap: wrap;
+}
+
+.flex--center {
+    align-items: center;
+}
+
+.flex--baseline {
+    align-items: baseline;
+}
+
+.flex--stretch {
+    align-items: stretch;
+}
+
+.flex--start {
+    align-items: flex-start;
+}
+
+.flex--end {
+    align-items: flex-end;
+}
+
+.flex--justify {
+    justify-content: space-between;
+}
+
+.flex--first {
+    order: -1;
+}
+
+.flex--last {
+    order: 1024;
+}
+
+.flex--auto {
+    flex: 1 1 auto;
+}
+
+.flex--grow {
+    flex: 1 0 auto;
+}
+
+.flex--none {
+    flex: none;
+}
+
+@include sm {
+    .flex\@sm {
+        display: flex;
+    }
+}
+
+@include md {
+    .flex\@md {
+        display: flex;
+    }
+}
+
+@include lg {
+    .flex\@lg {
+        display: flex;
+    }
+}
+

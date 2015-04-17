@@ -16,8 +16,7 @@ Tags:
  * CONTENTS
  *
  * SETTINGS
- * Default..............inuitcss’ default settings.
- * Global...............Globally-available variables and settings/config.
+ * Default..............Globally-available variables and settings/config.
  * Colors...............Manage our color palette in isolation.
  * Responsive...........Setup some breakpoints.
  *
@@ -71,2262 +70,9 @@ Tags:
 /**
  * #SETTINGS
  */
-/*!
- * inuitcss, by @csswizardry
- *
- * github.com/inuitcss | inuitcss.com
- */
 /**
  * #TOOLS
  */
-/*------------------------------------*\
-    #RESPONSIVE
-\*------------------------------------*/
-/**
- * #GENERIC
- */
-/*Pieces of normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-html {
-    -webkit-text-size-adjust: 100%; 
-    -ms-text-size-adjust: 100%;
-}
-
-a {
-    background-color: transparent;
-}
-
-a:active,
-a:hover {
-    outline: 0;
-}
-
-abbr[title] {
-    border-bottom: 1px dotted;
-}
-
-b,
-strong {
-    font-weight: bold;
-}
-
-dfn {
-    font-style: italic;
-}
-
-sub,
-sup {
-    font-size: 75%;
-    line-height: 0;
-    vertical-align: baseline;
-}
-
-sup {
-    top: -0.5em;
-}
-
-sub {
-    bottom: -0.25em;
-}
-
-img {
-    border: 0;
-}
-
-svg:not(:root) {
-    overflow: hidden;
-}
-
-button {
-    overflow: visible;
-}
-
-select {
-    text-transform: none;
-}
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-    padding: 0; 
-    border: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: inherit;
-}
-
-* {
-    position: relative;
-    word-wrap: break-word; 
-
-    -ms-flex-negative: 0;
-    -webkit-flex-shrink: 0;
-    flex-shrink: 0;
-}
-
-/*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
-/*
- * Normalization
- */
-:root {
-    overflow-y: scroll;
-
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-}
-
-audio:not([controls]) {
-    display: none;
-}
-
-details {
-    display: block;
-}
-
-input[type="number"] {
-    width: auto;
-}
-input[type="search"] {
-    -webkit-appearance: textfield;
-}
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
-
-main {
-    display: block;
-}
-
-summary {
-    display: block;
-}
-
-pre {
-    overflow: auto;
-}
-
-progress {
-    display: inline-block;
-}
-
-small {
-    font-size: 75%;
-}
-
-template {
-    display: none;
-}
-
-textarea {
-    overflow: auto;
-}
-
-[hidden] {
-    display: none;
-}
-
-[unselectable] {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-/*
- * Universal inheritance
- */
-*,
-::before,
-::after {
-    box-sizing: inherit;
-}
-
-* {
-    font-size: inherit;
-    line-height: inherit;
-}
-
-::before,
-::after {
-    vertical-align: inherit; 
-    text-decoration: inherit;
-}
-
-/*
- * Opinionated defaults
- */
-*,
-::before,
-::after {
-    border-width: 0; 
-    border-style: solid;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-:root {
-    box-sizing: border-box;
-    font: 16px/1.5 sans-serif;
-    cursor: default;
-    text-rendering: optimizeLegibility;
-}
-
-a {
-    text-decoration: none;
-}
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
-
-button,
-input,
-select,
-textarea {
-    background-color: transparent;
-}
-
-button,
-input,
-select,
-textarea {
-    color: inherit;
-    font-family: inherit;
-    font-weight: inherit; 
-    font-style: inherit;
-}
-
-button,
-input,
-select,
-textarea {
-    min-height: 1.5em;
-}
-
-code,
-kbd,
-pre,
-samp {
-    font-family: monospace, monospace;
-}
-
-nav ol,
-nav ul {
-    list-style: none;
-}
-
-select {
-    -webkit-appearance: none; 
-    -moz-appearance: none;
-}
-select::-ms-expand {
-    display: none;
-}
-select::-ms-value {
-    color: currentColor;
-}
-
-table {
-    border-spacing: 0; 
-    border-collapse: collapse;
-}
-
-textarea {
-    resize: vertical;
-}
-
-::-moz-selection {
-    background-color: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background-color: #b3d4fc;
-    text-shadow: none;
-}
-
-@media screen {
-    [hidden~="screen"] {
-        display: inherit;
-    }
-    [hidden~="screen"]:not(:active):not(:focus):not(:target) {
-        clip: rect(0 0 0 0) !important;
-        position: absolute !important;
-    }
-}
-
-/**
- * #ELEMENTS
- */
-/*------------------------------------*\
-    #PAGE
-\*------------------------------------*/
-html {
-    min-height: 100%;
-    color: #333;
-    background-color: #fff; 
-    font-size: 1em;
-    line-height: 1.5;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-dl,
-blockquote,
-p,
-address,
-table,
-fieldset,
-figure,
-pre {
-    margin-bottom: 24px;
-}
-
-dd {
-    margin-left: 24px;
-}
-
-hr {
-    display: block;
-    height: 1px;
-    margin: 24px 0;
-    padding: 0; 
-    border: 0;
-    border-top: 1px solid #ccc;
-}
-
-/*------------------------------------*\
-    #HEADINGS
-\*------------------------------------*/
-/**
- * Headings 1–6.
- */
-h1 {
-    font-size: 36px;
-    font-size: 2.25rem;
-    line-height: 1.3333333333;
-}
-
-h2 {
-    font-size: 30px;
-    font-size: 1.875rem;
-    line-height: 1.6;
-}
-
-h3 {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1;
-}
-
-h4 {
-    font-size: 20px;
-    font-size: 1.25rem;
-    line-height: 1.2;
-}
-
-h5 {
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-h6 {
-    font-size: 14px;
-    font-size: 0.875rem;
-    line-height: 1.7142857143;
-}
-
-a:not(.button) {
-    color: inherit;
-    text-decoration: none;
-    -webkit-transition: opacity 0.22222222s;
-    transition: opacity 0.22222222s;
-}
-a:not(.button):hover,
-a:not(.button):focus {
-    opacity: 0.7;
-}
-
-.entry-content a:not(.button) {
-    color: #385996;
-}
-
-ul {
-    margin-bottom: 24px; 
-    list-style: none;
-}
-
-.entry-content ul {
-    padding-left: 16px; 
-    list-style-position: outside;
-}
-
-li > ul,
-li > ol {
-    margin-bottom: 0;
-}
-
-/*------------------------------------*\
-    #IMAGES
-\*------------------------------------*/
-/**
- * 1. Fluid images for responsive purposes.
- * 2. Offset `alt` text from surrounding copy.
- */
-img {
-    max-width: 100%;
-    /* [2] */
-    height: auto; 
-    /* [1] */
-    font-style: italic;
-}
-
-/**
- * Google Maps breaks if `max-width: 100%` acts upon it; use their selector
- *    to remove the effects.
- */
-.gm-style img {
-    max-width: none;
-}
-
-/*------------------------------------*\
-    #BLOCKQUOTES
-\*------------------------------------*/
-blockquote {
-    margin-bottom: 24px;
-    padding-left: 20px; 
-    border-left: 5px solid currentColor;
-}
-blockquote p {
-    color: #9f9f9f;
-    font-weight: 500;
-}
-blockquote p + p {
-    margin-bottom: 0;
-}
-
-blockquote blockquote {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
-blockquote cite {
-    display: block;
-    margin-top: 12px;
-    margin-top: 12px; 
-    padding-top: 13px;
-    font-family: "Roboto", sans-serif;
-    font-size: 80%;
-    font-weight: 500;
-    font-style: normal;
-}
-
-blockquote cite::before {
-    padding-right: 10px; 
-    content: "\2014";
-}
-
-@media screen and (min-width: 48em) {
-    .pullquote.alignright {
-        max-width: 50%;
-    }
-    .pullquote.alignleft {
-        max-width: 50%;
-    }
-}
-
-/**
- * #OBJECTS
- */
-/*------------------------------------*\
-    $CSSWIZARDRY-GRIDS
-\*------------------------------------*/
-/**
- * CONTENTS
- * INTRODUCTION.........How the grid system works.
- * VARIABLES............Your settings.
- * MIXINS...............Library mixins.
- * GRID SETUP...........Build the grid structure.
- * WIDTHS...............Build our responsive widths around our breakpoints.
- * PUSH.................Push classes.
- * PULL.................Pull classes.
- */
-/*------------------------------------*\
-    $INTRODUCTION
-\*------------------------------------*/
-/**
- * csswizardry grids provides you with widths to suit a number of breakpoints
- * designed around devices of a size you specify. Out of the box, csswizardry
- * grids caters to the following types of device:
- *
- * sm     --  sm-based devices, like phones and small tablets
- * md      --  md-based devices, like iPads or mdtops
- * lg --  all of the above
- * xl     --  stationary devices, like xltop computers
- * regular  --  any/all types of device
- *
- * These namespaces are then used in the library to give you the ability to
- * manipulate your layouts based around them, for example:
- *
-   <div class="grid__item  one-whole  md--one-half  xl--one-third">
- *
- * This would give you a grid item which is 100% width unless it is on a md
- * device, at which point it become 50% wide, or it is on a xltop device, at
- * which point it becomes 33.333% width.
- *
- * csswizardry grids also has push and pull classes which allow you to nudge
- * grid items left and right by a defined amount. These follow the same naming
- * convention as above, but are prepended by either `push--` or `pull--`, for
- * example:
- *
-   `class="grid__item  one-half  push--one-half"`
- *
- * This would give you a grid item which is 50% width and pushed over to the
- * right by 50%.
- *
- * All classes in csswizardry grids follow this patten, so you should fairly
- * quickly be able to piece together any combinations you can imagine, for
- * example:
- *
-   `class="grid__item  one-whole  md--one-half  xl--one-third  push--xl--one-third"`
- *
-   `class="grid__item  one-quarter  sm--one-half  push--sm--one-half"`
- *
-   `class="grid__item  sm--one-third  xl--five-twelfths"`
- */
-/*------------------------------------*\
-    $VARIABLES
-\*------------------------------------*/
-/**
- * If you are building a non-responsive site but would still like to use
- * csswizardry-grids, set this to ‘false’:
- */
-/**
- * Is this build mobile first? Setting to ‘true’ means that all grids will be
- * 100% width if you do not apply a more specific class to them.
- */
-/**
- * Set the spacing between your grid items.
- */
-/**
- * Would you like Sass’ silent classes, or regular CSS classes?
- */
-/**
- * Would you like push and pull classes enabled?
- */
-/**
- * Using `inline-block` means that the grid items need their whitespace removing
- * in order for them to work correctly. Set the following to true if you are
- * going to achieve this by manually removing/commenting out any whitespace in
- * your HTML yourself.
- *
- * Setting this to false invokes a hack which cannot always be guaranteed,
- * please see the following for more detail:
- *
- * github.com/csswizardry/csswizardry-grids/commit/744d4b23c9d2b77d605b5991e54a397df72e0688
- * github.com/csswizardry/inuit.css/issues/170#issuecomment-14859371
- */
-/**
- * Define your breakpoints. The first value is the prefix that shall be used for
- * your classes (e.g. `.sm--one-half`), the second value is the media query
- * that the breakpoint fires at.
- */
-/**
- * Define which namespaced breakpoints you would like to generate for each of
- * widths, push and pull. This is handy if you only need pull on, say, xl, or
- * you only need a new width breakpoint at mobile sizes. It allows you to only
- * compile as much CSS as you need. All are turned on by default, but you can
- * add and remove breakpoints at will.
- *
- * Push and pull shall only be used if `$push` and/or `$pull` and `$responsive`
- * have been set to ‘true’.
- */
-/**
- * You do not need to edit anything from this line onward; csswizardry-grids is
- * good to go. Happy griddin’!
- */
-/*------------------------------------*\
-    $MIXINS
-\*------------------------------------*/
-/**
- * These mixins are for the library to use only, you should not need to modify
- * them at all.
- *
- * Enclose a block of code with a media query as named in `$breakpoints`.
- */
-/*------------------------------------*\
-    $GRID SETUP
-\*------------------------------------*/
-/**
- * 1. Allow the grid system to be used on lists.
- * 3. Apply a negative `margin-left` to negate the columns’ gutters.
- */
-.grid {
-    list-style: none;
-    /* [1] */
-}
-
-/**
-     * 1. Cause columns to stack side-by-side.
-     * 2. Space columns apart.
-     * 3. Align columns to the tops of each other.
-     * 4. Full-width unless told to behave otherwise.
-     */
-.grid__item {
-    display: inline-block;
-    /* [3] */
-    width: 100%;
-    /* [1] */
-    vertical-align: top;
-    /* [4] */
-}
-.grid__item--flexed {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-}
-
-/**
- * Reversed grids allow you to structure your source in the opposite order to
- * how your rendered layout will appear. Extends `.grid`.
- */
-.grid--flex {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-
-    -ms-flex-pack: distribute;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
-}
-
-/**
- * Reversed grids allow you to structure your source in the opposite order to
- * how your rendered layout will appear. Extends `.grid`.
- */
-.grid--rev {
-    text-align: left; 
-
-    direction: rtl;
-}
-.grid--rev > .grid__item {
-    text-align: left; 
-
-    direction: ltr;
-}
-
-/**
- * Gutterless grids have all the properties of regular grids, minus any spacing.
- * Extends `.grid`.
- */
-.grid--full {
-    margin-left: 0;
-}
-.grid--full > .grid__item {
-    padding-left: 0;
-}
-
-/**
- * Align the entire grid to the right. Extends `.grid`.
- */
-.grid--right {
-    text-align: right;
-}
-.grid--right > .grid__item {
-    text-align: left;
-}
-
-/**
- * Centered grids align grid items centrally without needing to use push or pull
- * classes. Extends `.grid`.
- */
-.grid--center {
-    text-align: center;
-}
-.grid--center > .grid__item {
-    text-align: left;
-}
-
-/**
- * Align grid cells vertically (`.grid--middle` or `.grid--bottom`). Extends
- * `.grid`.
- */
-.grid--middle > .grid__item {
-    vertical-align: middle;
-}
-
-.grid--bottom > .grid__item {
-    vertical-align: bottom;
-}
-
-/**
- * Create grids with narrower gutters. Extends `.grid`.
- */
-.grid--narrow {
-    margin-left: -12px;
-}
-.grid--narrow > .grid__item {
-    padding-left: 12px;
-}
-
-/**
- * Create grids with wider gutters. Extends `.grid`.
- */
-.grid--wide {
-    margin-left: -48px;
-}
-.grid--wide > .grid__item {
-    padding-left: 48px;
-}
-
-/*------------------------------------*\
-    $MEDIA EMBEDS
-\*------------------------------------*/
-/**
- * Flexible media embeds
- *
- * For use with media embeds – such as videos, slideshows, or even images –
- * that need to retain a specific aspect ratio but adapt to the width of their
- * containing element.
- *
- * Based on: http://alistapart.com/article/creating-intrinsic-ratios-for-video
- */
-.featured-media {
-    display: block;
-    overflow: hidden;
-    position: relative;
-}
-
-/**
- * The aspect-ratio hack is applied to an empty element because it allows
- * the component to respect `max-height`. Default aspect ratio is 1:1.
- */
-.featured-media__ratio {
-    display: block;
-    width: 100%; 
-    padding-bottom: 100%;
-}
-
-/**
- * Modifier: 3:1 aspect ratio
- */
-.featured-media__ratio--3by1 {
-    padding-bottom: -webkit-calc(100% / 3);
-    padding-bottom: calc(100% / 3);
-}
-
-/**
- * Modifier: 2:1 aspect ratio
- */
-.featured-media__ratio--2by1 {
-    padding-bottom: 50%;
-}
-
-/**
- * Modifier: 16:9 aspect ratio
- */
-.featured-media__ratio--16by9 {
-    padding-bottom: 56.25%;
-}
-
-/**
- * Modifier: 4:3 aspect ratio
- */
-.featured-media__ratio--4by3 {
-    padding-bottom: 75%;
-}
-
-/**
- * Fit the content to the aspect ratio
- */
-.featured-media-content,
-.featured-media > iframe {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%; 
-    height: 100%;
-}
-
-/*------------------------------------*\
-    #BOX SHADOWS
-\*------------------------------------*/
-.shadow--z1 {
-    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
-}
-
-.shadow--z2 {
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23);
-}
-
-.shadow--z3 {
-    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 0 6px 3px 0 rgba(0, 0, 0, 0.23);
-}
-
-.shadow--z4 {
-    box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.25), 0 10px 5px 0 rgba(0, 0, 0, 0.22);
-}
-
-.shadow--z5 {
-    box-shadow: 0 19px 19px 0 rgba(0, 0, 0, 0.3), 0 15px 6px 0 rgba(0, 0, 0, 0.22);
-}
-
-/*------------------------------------*\
-    $LAYOUTS
-\*------------------------------------*/
-.o-media {
-    display: table;
-    width: 100%;
-}
-
-.o-media__img,
-.o-media__body {
-    display: table-cell;
-    vertical-align: top;
-}
-
-.o-media__img {
-    padding-right: 24px;
-}
-.o-media__img img {
-    display: block;
-    max-width: none;
-}
-
-.o-media__body {
-    width: 100%;
-}
-
-.gallery {
-    margin-bottom: 1.5em;
-}
-
-.gallery-item {
-    display: inline-block;
-    width: 100%; 
-    text-align: center;
-    vertical-align: top;
-}
-@media screen and (min-width: 48em) {
-    .gallery-columns-2 .gallery-item {
-        max-width: 50%;
-    }
-    .gallery-columns-3 .gallery-item {
-        max-width: 33.33%;
-    }
-    .gallery-columns-4 .gallery-item {
-        max-width: 25%;
-    }
-    .gallery-columns-5 .gallery-item {
-        max-width: 20%;
-    }
-    .gallery-columns-6 .gallery-item {
-        max-width: 16.66%;
-    }
-    .gallery-columns-7 .gallery-item {
-        max-width: 14.28%;
-    }
-    .gallery-columns-8 .gallery-item {
-        max-width: 12.5%;
-    }
-    .gallery-columns-9 .gallery-item {
-        max-width: 11.11%;
-    }
-}
-
-.gallery-caption {
-    display: block;
-}
-
-/**
- * 5.0 Forms
- */
-input:not([type="submit"]),
-select,
-textarea {
-    max-width: 100%;
-    margin: 0;
-    margin-bottom: 24px; 
-    border-radius: 3px;
-    background-color: rgba(139, 160, 171, 0.2);
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.5;
-    vertical-align: baseline;
-}
-
-input:not([type="submit"]) {
-    line-height: normal;
-}
-
-input:not([type="submit"]),
-textarea {
-    width: 100%; 
-    /* Removing the inner shadow on iOS inputs */
-    border: 1px solid #ebebeb;
-    color: #6c6c6c;
-    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
-}
-
-input:not([type="submit"]):focus,
-textarea:focus {
-    border: 1px solid #476fba;
-    color: #393939; 
-    background-color: #fff;
-}
-
-input:not([type="submit"]):focus,
-select:focus {
-    outline: 2px solid #476fba;
-}
-
-input[disabled],
-select[disabled],
-textarea[disabled] {
-    opacity: 0.5; 
-    cursor: default;
-}
-
-input[type="search"] {
-    -webkit-appearance: textfield;
-}
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-    padding: 0; 
-    border: 0;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-textarea {
-    padding: 6px;
-}
-
-textarea {
-    overflow: auto;
-    vertical-align: top;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-textarea:focus {
-    outline: 0;
-}
-
-label {
-    display: block;
-    margin-bottom: 6px;
-    color: #858585;
-    font-size: 14px;
-    font-size: 0.875rem;
-    font-weight: 700;
-    line-height: 1.7142857143;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-}
-
-.post-password-form input[type="submit"] {
-    position: absolute;
-    right: 0;
-    bottom: 0; 
-    padding: 0.7917em;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-    padding: 0;
-}
-
-.search-form input[type="submit"],
-.widget .search-form input[type="submit"] {
-    padding: 0;
-}
-
-fieldset {
-    padding: 0;
-    border-width: 0;
-}
-
-.search-form,
-.post-password-form {
-    display: block;
-    position: relative;
-}
-
-.search-form input[type=search],
-.post-password-form input[type="password"] {
-    width: 100%;
-    margin: 0;
-    padding: 10px;
-
-    appearance: none;
-}
-
-.search-form button[type=submit],
-.post-password-form input[type="submit"] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0; 
-    padding: 0 20px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    outline: none;
-}
-
-.post-password-form input[type="submit"] {
-    top: auto; 
-    height: 40px;
-}
-
-.search-form button::before {
-    display: inline-block;
-    font-family: FontAwesome;
-    font-size: inherit;
-    font-weight: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; 
-    text-decoration: none;
-    content: "\f002";
-    text-rendering: auto;
-
-    speak: none;
-}
-
-.search-form button[type=submit]::before {
-    font-size: 18px;
-    line-height: 1.625;
-}
-
-/*------------------------------------*\
-    #Layout Wrappers
-\*------------------------------------*/
-.wrapper {
-    max-width: 1240px;
-    margin: 0 auto;
-}
-@media screen and (min-width: 80em) {
-    .wrapper {
-        padding-right: 0;
-        padding-left: 0;
-    }
-}
-
-.wrapper--wide {
-    max-width: none;
-    padding-right: 5%;
-    padding-left: 5%;
-}
-
-/*------------------------------------*\
-    #BLOCK
-\*------------------------------------*/
-/**
- * The card object simply stacks an image on top of some text-like content.
- */
-/**
- * Stacked image-with-text object. A simple abstraction to cover a very commonly
- * occurring design pattern.
- */
-.card {
-    display: block;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    max-width: 100%;
-    min-height: 0;
-    margin: 1em 0; 
-    padding: 0;
-    border: none;
-    border-radius: 3px;
-    background: #fff;
-    box-shadow: 0 3px 0 0 #d4d4d5, 0 0 0 1px #d4d4d5;
-    -webkit-transition: box-shadow 0.2s ease;
-    transition: box-shadow 0.2s ease;
-
-    -webkit-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-}
-
-/**
-     * 1. Eliminate whitespace around images.
-     */
-.card__img {
-    /* [1] */
-    display: block;
-    position: relative;
-    padding: 0;
-    background: rgba(0, 0, 0, 0.05);
-    vertical-align: middle;
-    /**
-             * No space between the image and the text content.
-             */
-    /**
-             * Tiny space between the image and the text content.
-             */
-    /**
-             * Small space between the image and the text content.
-             */
-    /**
-             * Large space between the image and the text content.
-             */
-    /**
-             * Huge space between the image and the text content.
-             */
-}
-.card__img img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border: none; 
-    border-radius: 0.2857rem 0.2857rem 0 0;
-}
-.card--flush > .card__img {
-    margin-bottom: 0;
-}
-.card--tiny > .card__img {
-    margin-bottom: 6px;
-}
-.card--small > .card__img {
-    margin-bottom: 12px;
-}
-.card--large > .card__img {
-    margin-bottom: 48px;
-}
-.card--huge > .card__img {
-    margin-bottom: 96px;
-}
-
-/**
-     * Text-content.
-     */
-.card__content {
-    margin: 0;
-    padding: 1em;
-    border: none;
-    border-radius: 0; 
-    background: 0 0;
-    box-shadow: none;
-    font-size: 1em;
-
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    flex-grow: 1;
-    -ms-flex-positive: 1;
-}
-.card__content p {
-    margin-bottom: 0;
-}
-
-.card__heading {
-    display: block;
-    margin: 0; 
-    margin-top: -0.165em;
-    font-size: 1.2em;
-    font-weight: 700;
-    line-height: 1.33em;
-}
-
-.card__meta {
-    color: rgba(0, 0, 0, 0.4); 
-    font-size: 0.9em;
-}
-
-.card__body {
-    margin-top: 0.5em;
-}
-
-.card__footer {
-    position: static;
-    top: 0;
-    left: 0;
-    width: auto;
-    max-width: 100%;
-    min-height: 0 !important;
-    margin: 0;
-    padding: 0.75em 1em;
-    border-top: 1px solid rgba(0, 0, 0, 0.05); 
-    color: rgba(0, 0, 0, 0.4);
-    background: 0 0;
-    box-shadow: none;
-    -webkit-transition: color 0.2s ease;
-    transition: color 0.2s ease;
-
-    -webkit-box-flex: 0;
-    -webkit-flex-grow: 0;
-    flex-grow: 0;
-    -ms-flex-positive: 0;
-}
-.card__footer p {
-    margin-bottom: 0;
-}
-
-/**
-     * Right-aligned cards.
-     */
-.card--right {
-    text-align: right;
-}
-
-/**
-     * Center-aligned cards.
-     */
-.card--center {
-    text-align: center;
-}
-
-/*------------------------------------*\
-    $ARTICLES
-\*------------------------------------*/
-.entry-format {
-    position: absolute;
-    right: 0; 
-    bottom: 0;
-    width: 30px;
-    opacity: 0.8;
-}
-@media screen and (min-width: 48em) {
-    .entry-format {
-        right: 50%;
-        bottom: -20px;
-        width: 50px;
-        height: 50px; 
-        margin-right: -25px;
-        opacity: 0.8;
-    }
-}
-
-/**
- * #COMPONENTS
- */
-/*------------------------------------*\
-    #SITE-TITLE
-\*------------------------------------*/
-.page-title__main,
-.page-title__sub {
-    margin-bottom: 0; 
-    font-weight: 300;
-}
-
-.page-title__main a {
-    color: currentColor;
-}
-
-.page-title__sub {
-    opacity: 0.8; 
-    font-size: 20px;
-    font-size: 1.25rem;
-    line-height: 1.2;
-}
-
-.site-logo-link {
-    display: inline-block;
-}
-
-.btn,
-button,
-.button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 3px;
-    outline: 0;
-    color: rgba(255, 255, 255, 0.9);
-    /* [5] */
-    background: #476fba;
-    /* [2] */
-    font: inherit;
-    /* [3] */
-    text-align: center;
-    /* [1] */
-    vertical-align: middle;
-    /* [4] */
-    cursor: pointer;
-    -webkit-transition: 0.22222222s;
-    transition: 0.22222222s;
-}
-.btn:hover,
-button:hover,
-.button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover,
-.btn:active,
-button:active,
-.button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active,
-.btn:focus,
-button:focus,
-.button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus {
-    color: rgba(255, 255, 255, 0.9); 
-    background: #385996;
-}
-
-.c-testimonial {
-    padding: 24px;
-    border-radius: 3px;
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-.c-testimonial__text {
-    font-family: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;
-    font-size: 24px;
-    font-size: 1.5rem;
-    font-style: italic;
-    line-height: 1;
-    vertical-align: middle;
-}
-
-.c-testimonial__source {
-    display: block;
-    color: #858585; 
-    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
-    font-size: 12px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    font-style: normal;
-    line-height: 2;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-}
-.c-testimonial__source:before {
-    content: "— ";
-}
-
-.avatar {
-    display: block;
-    width: 64px;
-    height: 64px; 
-    border-radius: 100%;
-}
-
-.avatar--small {
-    width: 32px;
-    height: 32px;
-}
-
-.avatar--large {
-    width: 128px;
-    height: 128px;
-}
-
-/*------------------------------------*\
-    #SITE NAVIGATION
-\*------------------------------------*/
-.menu {
-    box-sizing: border-box;
-}
-
-.menu--fixed {
-    position: fixed;
-    z-index: 3; 
-    top: 0;
-    left: 0;
-}
-
-.menu__list,
-.menu__item {
-    position: relative;
-}
-
-.menu__list {
-    margin: 0;
-    padding: 0; 
-    list-style: none;
-}
-
-.menu__item {
-    height: 100%; 
-    margin: 0;
-    padding: 0;
-}
-
-.menu__item > a,
-.menu__heading {
-    display: block;
-    padding: 1em;
-    color: currentColor; 
-    white-space: nowrap;
-    text-decoration: none;
-}
-
-.sub-menu > .menu__item > a {
-    padding: 0.5em 1em;
-}
-
-/**
- * Dropdowns
- */
-.menu--horizontal {
-    width: 100%;
-    white-space: nowrap;
-}
-
-.menu--horizontal .menu__list {
-    display: inline-block;
-}
-
-/* Initial menus should be inline-block so that they are horizontal */
-.menu--horizontal .menu__item,
-.menu--horizontal .menu__heading,
-.menu--horizontal .menu-separator {
-    display: inline-block;
-    zoom: 1;
-    vertical-align: middle; 
-
-    *display: inline;
-}
-
-/**
- * Dropdowns
- */
-.menu__item .menu__item {
-    display: block;
-}
-
-.sub-menu {
-    display: none;
-    position: absolute;
-    z-index: 3;
-    top: 0;
-    left: 100%;
-    margin: 0;
-    padding: 0;
-    border-radius: 3px;
-    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 0 6px 3px 0 rgba(0, 0, 0, 0.23);
-}
-
-.menu--horizontal .sub-menu {
-    top: auto;
-    left: 0;
-    width: inherit;
-}
-
-.menu-item-has-children:hover > .sub-menu,
-.menu-active > .sub-menu {
-    display: block;
-    position: absolute;
-}
-
-/* Vertical Menus - show the dropdown arrow */
-.menu-item-has-children > a:after {
-    padding-left: 0.5em;
-    font-size: small; 
-    content: "\25B8";
-}
-
-/* Horizontal Menus - show the dropdown arrow */
-.menu--horizontal .menu-item-has-children > a:after {
-    content: "\25BE";
-}
-
-.pagination {
-    display: block;
-    margin-bottom: 24px;
-    text-align: center;
-}
-@media screen and (min-width: 48em) {
-    .pagination {
-        margin-bottom: 48px;
-    }
-}
-.pagination a {
-    -webkit-transition: 0.22222222s;
-    transition: 0.22222222s;
-}
-.pagination a:hover,
-.pagination a:focus {
-    opacity: 1;
-    color: black; 
-    background-color: #fff;
-}
-
-.page-numbers {
-    display: inline-block;
-    margin-right: 3px; 
-    margin-bottom: 10px;
-    margin-left: 3px;
-    padding: 10px 20px;
-    border-radius: 3px;
-    background-color: rgba(255, 255, 255, 0.8);
-}
-.page-numbers.current {
-    background-color: rgba(23, 29, 32, 0.1);
-}
-
-.dots {
-    background: none;
-}
-
-.post-navigation {
-    margin-bottom: 24px;
-}
-@media screen and (min-width: 48em) {
-    .post-navigation {
-        margin-bottom: 48px;
-    }
-}
-
-.post-navigation a {
-    display: block;
-    margin-bottom: 10px; 
-    padding: 15px 30px 15px;
-    background: rgba(23, 29, 32, 0.1);
-    font-size: 20px;
-    text-align: center;
-    text-decoration: none;
-}
-
-.nav-next {
-    margin-right: 30px;
-}
-.nav-next a {
-    border-left: 15px solid #f5f5f5; 
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-}
-.nav-next a::after {
-    position: absolute;
-    top: 0; 
-    right: -30px;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
-    border-left: 30px solid rgba(23, 29, 32, 0.1);
-    content: "";
-}
-
-.nav-previous {
-    margin-left: 30px;
-}
-.nav-previous a {
-    border-right: 15px solid #f5f5f5; 
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-}
-.nav-previous a::after {
-    position: absolute;
-    top: 0; 
-    left: -30px;
-    border-top: 30px solid transparent;
-    border-right: 30px solid rgba(23, 29, 32, 0.1);
-    border-bottom: 30px solid transparent;
-    content: "";
-}
-
-/*------------------------------------*\
-    #META
-\*------------------------------------*/
-.entry-meta {
-    margin-bottom: 0;
-    color: #9f9f9f;
-    font-size: 15px;
-    font-size: 0.9375rem;
-    font-weight: normal;
-    font-style: italic; 
-    line-height: 1.6;
-    text-align: center;
-}
-.entry-meta a {
-    color: currentColor;
-    font-weight: inherit;
-}
-
-.badge a {
-    display: inline-block;
-    padding: 6px 12px;
-    border: 2px solid #e4e9eb;
-    border-radius: 3px;
-    font-size: 11px;
-    font-size: 0.6875rem;
-    line-height: 2.1818181818;
-    line-height: 100%;
-    vertical-align: middle;
-    letter-spacing: 1px; 
-    text-transform: uppercase;
-}
-
-/*------------------------------------*\
-    #CODE
-\*------------------------------------*/
-.form-allowed-tags code,
-pre {
-    overflow: auto;
-    position: relative;
-    max-width: 100%;
-    margin-bottom: 24px;
-    padding: 5px 12px;
-    border-radius: 3px;
-    font-size: 15px;
-    font-size: 0.9375rem;
-    line-height: 1.6;
-    -moz-tab-size: 4;
-    tab-size: 4;
-}
-
-code {
-    display: inline-block;
-    padding: 0 2px;
-    border-radius: 3px;
-    color: rgba(255, 255, 255, 0.9);
-    background: #525252;
-    font-weight: normal; 
-    -moz-tab-size: 4;
-    tab-size: 4;
-}
-
-kbd {
-    margin: 0 0.25em;
-    padding: 0.3334em 0.5em;
-    border: 1px solid #c6d1d6;
-    border-radius: 3px;
-    color: #171d20;
-    background-color: #f3f5f6;
-    box-shadow: inset 0 1px 0 #fff;
-}
-
-.form-allowed-button {
-    color: #9f9f9f;
-    cursor: default;
-}
-
-/*------------------------------------*\
-    #BREADCRUMBS
-\*------------------------------------*/
-.breadcrumbs {
-    overflow: hidden;
-    margin-right: auto;
-    margin-bottom: 12px;
-    margin-left: auto;
-    padding: 6px 12px;
-    border-radius: 3px; 
-    color: #393939;
-    background-color: rgba(255, 255, 255, 0.9);
-    font-size: 15px;
-    font-size: 0.9375rem;
-    font-weight: 500;
-    line-height: 1.6;
-    text-transform: uppercase;
-    list-style: none;
-    cursor: default;
-}
-@media screen and (min-width: 48em) {
-    .breadcrumbs {
-        margin-bottom: 24px;
-    }
-}
-@media screen and (min-width: 64em) {
-    .breadcrumbs {
-        margin-bottom: 48px;
-    }
-}
-.breadcrumbs > span {
-    display: inline-block;
-}
-.breadcrumbs a {
-    opacity: 0.7;
-    color: currentColor;
-    font-weight: inherit;
-    text-decoration: none;
-    -webkit-transition: opacity 0.2s ease;
-    transition: opacity 0.2s ease;
-}
-.breadcrumbs a:hover {
-    opacity: 1;
-}
-.breadcrumbs .sep {
-    padding: 0 5px;
-    color: #d2d2d2;
-}
-.breadcrumbs .trail-end {
-    color: #9f9f9f; 
-    font-weight: 500;
-}
-
-/*------------------------------------*\
-    #WIDGETS
-\*------------------------------------*/
-.widget {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: column; 
-    width: 100%;
-    min-width: 300px;
-
-    -webkit-box-direction: normal;
-    -webkit-box-flex: 1;
-    -webkit-box-orient: vertical;
-    -webkit-flex: 1 300px;
-    -ms-flex: 1 300px;
-    flex: 1 300px;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-}
-@media screen and (min-width: 48em) {
-    .widget {
-        min-width: 33%;
-    }
-}
-.widget__wrap {
-    padding: 24px;
-    background-color: rgba(23, 29, 32, 0.1);
-
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-}
-
-.widget_search {
-    display: inline-block;
-}
-.widget_search > .widget__wrap {
-    padding: 0;
-    background: none;
-}
-
-.widget.widget_search {
-    padding: 0;
-}
-
-/**
- * #TRUMPS
- */
-.u-link-bare {
-    text-decoration: none !important;
-}
-
-.u-link-natural {
-    color: inherit !important; 
-    text-decoration: underline !important;
-}
-
-.u-link-obvious {
-    text-decoration: underline !important;
-}
-
-/*------------------------------------*\
-    #WIDTHS
-\*------------------------------------*/
-/**
- * A series of width helper classes that you can use to size things like grid
- * systems. Classes can take a fraction-like format (e.g. `.u-2/3`) or a spoken-
- * word format (e.g. `.u-2-of-3`). Use these in your markup:
- *
- * <div class="u-7/12">
- */
-.u-1of1 {
-    width: 100% !important;
-}
-
-.u-1of2 {
-    width: 50% !important;
-}
-
-.u-1of3 {
-    width: 33.3333333333% !important;
-}
-
-.u-2of3 {
-    width: 66.6666666667% !important;
-}
-
-.u-1of4 {
-    width: 25% !important;
-}
-
-.u-2of4 {
-    width: 50% !important;
-}
-
-.u-3of4 {
-    width: 75% !important;
-}
-
-.u-1of5 {
-    width: 20% !important;
-}
-
-.u-2of5 {
-    width: 40% !important;
-}
-
-.u-3of5 {
-    width: 60% !important;
-}
-
-.u-4of5 {
-    width: 80% !important;
-}
-
-/*------------------------------------*\
-    #WIDTHS-RESPONSIVE
-\*------------------------------------*/
-/**
- * Responsive width classes based on your responsive settings.
- */
-@media screen and (max-width: 35.5em) {
-    .u-1of1\@sm {
-        width: 100% !important;
-    }
-    .u-1of2\@sm {
-        width: 50% !important;
-    }
-    .u-1of3\@sm {
-        width: 33.3333333333% !important;
-    }
-    .u-2of3\@sm {
-        width: 66.6666666667% !important;
-    }
-    .u-1of4\@sm {
-        width: 25% !important;
-    }
-    .u-2of4\@sm {
-        width: 50% !important;
-    }
-    .u-3of4\@sm {
-        width: 75% !important;
-    }
-    .u-1of5\@sm {
-        width: 20% !important;
-    }
-    .u-2of5\@sm {
-        width: 40% !important;
-    }
-    .u-3of5\@sm {
-        width: 60% !important;
-    }
-    .u-4of5\@sm {
-        width: 80% !important;
-    }
-}
-
-@media screen and (min-width: 48em) {
-    .u-1of1\@md {
-        width: 100% !important;
-    }
-    .u-1of2\@md {
-        width: 50% !important;
-    }
-    .u-1of3\@md {
-        width: 33.3333333333% !important;
-    }
-    .u-2of3\@md {
-        width: 66.6666666667% !important;
-    }
-    .u-1of4\@md {
-        width: 25% !important;
-    }
-    .u-2of4\@md {
-        width: 50% !important;
-    }
-    .u-3of4\@md {
-        width: 75% !important;
-    }
-    .u-1of5\@md {
-        width: 20% !important;
-    }
-    .u-2of5\@md {
-        width: 40% !important;
-    }
-    .u-3of5\@md {
-        width: 60% !important;
-    }
-    .u-4of5\@md {
-        width: 80% !important;
-    }
-}
-
-@media screen and (min-width: 64em) {
-    .u-1of1\@lg {
-        width: 100% !important;
-    }
-    .u-1of2\@lg {
-        width: 50% !important;
-    }
-    .u-1of3\@lg {
-        width: 33.3333333333% !important;
-    }
-    .u-2of3\@lg {
-        width: 66.6666666667% !important;
-    }
-    .u-1of4\@lg {
-        width: 25% !important;
-    }
-    .u-2of4\@lg {
-        width: 50% !important;
-    }
-    .u-3of4\@lg {
-        width: 75% !important;
-    }
-    .u-1of5\@lg {
-        width: 20% !important;
-    }
-    .u-2of5\@lg {
-        width: 40% !important;
-    }
-    .u-3of5\@lg {
-        width: 60% !important;
-    }
-    .u-4of5\@lg {
-        width: 80% !important;
-    }
-}
-
-@media screen and (min-width: 80em) {
-    .u-1of1\@xl {
-        width: 100% !important;
-    }
-    .u-1of2\@xl {
-        width: 50% !important;
-    }
-    .u-1of3\@xl {
-        width: 33.3333333333% !important;
-    }
-    .u-2of3\@xl {
-        width: 66.6666666667% !important;
-    }
-    .u-1of4\@xl {
-        width: 25% !important;
-    }
-    .u-2of4\@xl {
-        width: 50% !important;
-    }
-    .u-3of4\@xl {
-        width: 75% !important;
-    }
-    .u-1of5\@xl {
-        width: 20% !important;
-    }
-    .u-2of5\@xl {
-        width: 40% !important;
-    }
-    .u-3of5\@xl {
-        width: 60% !important;
-    }
-    .u-4of5\@xl {
-        width: 80% !important;
-    }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    .u-1of1\@retina {
-        width: 100% !important;
-    }
-    .u-1of2\@retina {
-        width: 50% !important;
-    }
-    .u-1of3\@retina {
-        width: 33.3333333333% !important;
-    }
-    .u-2of3\@retina {
-        width: 66.6666666667% !important;
-    }
-    .u-1of4\@retina {
-        width: 25% !important;
-    }
-    .u-2of4\@retina {
-        width: 50% !important;
-    }
-    .u-3of4\@retina {
-        width: 75% !important;
-    }
-    .u-1of5\@retina {
-        width: 20% !important;
-    }
-    .u-2of5\@retina {
-        width: 40% !important;
-    }
-    .u-3of5\@retina {
-        width: 60% !important;
-    }
-    .u-4of5\@retina {
-        width: 80% !important;
-    }
-}
-
-/*------------------------------------*\
-    #HELPERS
-\*------------------------------------*/
-.clearfix:after {
-    display: table;
-    clear: both; 
-    content: "";
-}
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-.screen-reader-text,
-.visuallyhidden {
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    position: absolute;
-    width: 1px; 
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    overflow: visible;
-    clip: auto;
-    position: static;
-    width: auto; 
-    height: auto;
-    margin: 0;
-}
-
-.invisible {
-    visibility: hidden;
-}
-
-.clearfix:before,
-.clearfix:after,
-.clear:before,
-.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-    display: table; 
-    content: "";
-}
-
-.clearfix:after,
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
-    clear: both;
-}
-
-.alignleft {
-    display: inline;
-    float: left;
-    margin-right: 1.5em;
-}
-
-.alignright {
-    display: inline;
-    float: right;
-    margin-left: 1.5em;
-}
-
-.aligncenter {
-    display: block;
-    clear: both;
-    margin: 0 auto;
-}
-
-.br {
-    border-radius: 3px;
-}
-
-.bg-white,
-.menu-item-has-children:hover > .sub-menu,
-.menu-active > .sub-menu {
-    color: rgba(0, 0, 0, 0.9); 
-    background-color: #fff;
-}
-
-.t-bg__1 {
-    color: rgba(255, 255, 255, 0.9); 
-    background-color: #476fba;
-}
-
-.t-bg__1--dark {
-    color: rgba(255, 255, 255, 0.9); 
-    background-color: #385996;
-}
-
-.t-bg__1--light {
-    color: rgba(255, 255, 255, 0.9); 
-    background-color: #6c8cc8;
-}
-
-.t-bg__2 {
-    color: rgba(255, 255, 255, 0.9); 
-    background-color: #3dc273;
-}
-
-.t-bg__2--dark {
-    color: rgba(255, 255, 255, 0.9); 
-    background-color: #319b5c;
-}
-
-.t-bg__2--light {
-    color: rgba(0, 0, 0, 0.9); 
-    background-color: #64ce8f;
-}
-
-.t-bg__3 {
-    color: rgba(255, 255, 255, 0.9); 
-    background-color: #ff9e03;
-}
-
-.t-bg__3--dark {
-    color: rgba(255, 255, 255, 0.9); 
-    background-color: #cf7f00;
-}
-
-.t-bg__3--light {
-    color: rgba(0, 0, 0, 0.9); 
-    background-color: #ffb236;
-}
-
-.t-fill__1 {
-    fill: #476fba;
-}
-
-.t-fill__1--dark {
-    fill: #385996;
-}
-
-.t-fill__1--light {
-    fill: #6c8cc8;
-}
-
-.t-fill__2 {
-    fill: #3dc273;
-}
-
-.t-fill__2--dark {
-    fill: #319b5c;
-}
-
-.t-fill__2--light {
-    fill: #64ce8f;
-}
-
-.t-fill__3 {
-    fill: #ff9e03;
-}
-
-.t-fill__3--dark {
-    fill: #cf7f00;
-}
-
-.t-fill__3--light {
-    fill: #ffb236;
-}
-
-/*------------------------------------*\
-    #HEADINGS
-\*------------------------------------*/
-/**
- * Headings 1–6’s corresponding Greek-alphabet abstract classes for double-
- * stranded heading hierarchy: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
- *
- * Use these helper classes to cause other elements to adopt the styling of the
- * respective heading, e.g.:
- *
-   <h2 class="alpha">Lorem ipsum</h2>
- *
- */
-.h1,
-.site-title {
-    font-size: 36px;
-    font-size: 2.25rem;
-    line-height: 1.3333333333;
-}
-
-.h2,
-.entry-title {
-    font-size: 30px;
-    font-size: 1.875rem;
-    line-height: 1.6;
-}
-
-.h3,
-.widget-title {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1;
-}
-
-.h4 {
-    font-size: 20px;
-    font-size: 1.25rem;
-    line-height: 1.2;
-}
-
-.h5 {
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-.h6 {
-    font-size: 14px;
-    font-size: 0.875rem;
-    line-height: 1.7142857143;
-}
-
 /*------------------------------------*\
     #SPACING-RESPONSIVE
 \*------------------------------------*/
@@ -4034,4 +1780,2177 @@ kbd {
         padding-top: 0;
         padding-bottom: 0;
     }
+}
+
+@media screen and (max-width: 35.5em) {
+    .u-1of1\@sm {
+        width: 100% !important;
+    }
+    .u-1of2\@sm {
+        width: 50% !important;
+    }
+    .u-1of3\@sm {
+        width: 33.3333333333% !important;
+    }
+    .u-2of3\@sm {
+        width: 66.6666666667% !important;
+    }
+    .u-1of4\@sm {
+        width: 25% !important;
+    }
+    .u-2of4\@sm {
+        width: 50% !important;
+    }
+    .u-3of4\@sm {
+        width: 75% !important;
+    }
+    .u-1of5\@sm {
+        width: 20% !important;
+    }
+    .u-2of5\@sm {
+        width: 40% !important;
+    }
+    .u-3of5\@sm {
+        width: 60% !important;
+    }
+    .u-4of5\@sm {
+        width: 80% !important;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .u-1of1\@md {
+        width: 100% !important;
+    }
+    .u-1of2\@md {
+        width: 50% !important;
+    }
+    .u-1of3\@md {
+        width: 33.3333333333% !important;
+    }
+    .u-2of3\@md {
+        width: 66.6666666667% !important;
+    }
+    .u-1of4\@md {
+        width: 25% !important;
+    }
+    .u-2of4\@md {
+        width: 50% !important;
+    }
+    .u-3of4\@md {
+        width: 75% !important;
+    }
+    .u-1of5\@md {
+        width: 20% !important;
+    }
+    .u-2of5\@md {
+        width: 40% !important;
+    }
+    .u-3of5\@md {
+        width: 60% !important;
+    }
+    .u-4of5\@md {
+        width: 80% !important;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    .u-1of1\@lg {
+        width: 100% !important;
+    }
+    .u-1of2\@lg {
+        width: 50% !important;
+    }
+    .u-1of3\@lg {
+        width: 33.3333333333% !important;
+    }
+    .u-2of3\@lg {
+        width: 66.6666666667% !important;
+    }
+    .u-1of4\@lg {
+        width: 25% !important;
+    }
+    .u-2of4\@lg {
+        width: 50% !important;
+    }
+    .u-3of4\@lg {
+        width: 75% !important;
+    }
+    .u-1of5\@lg {
+        width: 20% !important;
+    }
+    .u-2of5\@lg {
+        width: 40% !important;
+    }
+    .u-3of5\@lg {
+        width: 60% !important;
+    }
+    .u-4of5\@lg {
+        width: 80% !important;
+    }
+}
+
+@media screen and (min-width: 80em) {
+    .u-1of1\@xl {
+        width: 100% !important;
+    }
+    .u-1of2\@xl {
+        width: 50% !important;
+    }
+    .u-1of3\@xl {
+        width: 33.3333333333% !important;
+    }
+    .u-2of3\@xl {
+        width: 66.6666666667% !important;
+    }
+    .u-1of4\@xl {
+        width: 25% !important;
+    }
+    .u-2of4\@xl {
+        width: 50% !important;
+    }
+    .u-3of4\@xl {
+        width: 75% !important;
+    }
+    .u-1of5\@xl {
+        width: 20% !important;
+    }
+    .u-2of5\@xl {
+        width: 40% !important;
+    }
+    .u-3of5\@xl {
+        width: 60% !important;
+    }
+    .u-4of5\@xl {
+        width: 80% !important;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .u-1of1\@retina {
+        width: 100% !important;
+    }
+    .u-1of2\@retina {
+        width: 50% !important;
+    }
+    .u-1of3\@retina {
+        width: 33.3333333333% !important;
+    }
+    .u-2of3\@retina {
+        width: 66.6666666667% !important;
+    }
+    .u-1of4\@retina {
+        width: 25% !important;
+    }
+    .u-2of4\@retina {
+        width: 50% !important;
+    }
+    .u-3of4\@retina {
+        width: 75% !important;
+    }
+    .u-1of5\@retina {
+        width: 20% !important;
+    }
+    .u-2of5\@retina {
+        width: 40% !important;
+    }
+    .u-3of5\@retina {
+        width: 60% !important;
+    }
+    .u-4of5\@retina {
+        width: 80% !important;
+    }
+}
+
+/**
+ * #GENERIC
+ */
+/*Pieces of normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+    -webkit-text-size-adjust: 100%; 
+    -ms-text-size-adjust: 100%;
+}
+
+a {
+    background-color: transparent;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+dfn {
+    font-style: italic;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+img {
+    border: 0;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+button {
+    overflow: visible;
+}
+
+select {
+    text-transform: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    padding: 0; 
+    border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+}
+
+* {
+    position: relative;
+    word-wrap: break-word; 
+
+    -ms-flex-negative: 0;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+}
+
+/*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
+/*
+ * Normalization
+ */
+:root {
+    overflow-y: scroll;
+
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+details {
+    display: block;
+}
+
+input[type="number"] {
+    width: auto;
+}
+input[type="search"] {
+    -webkit-appearance: textfield;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+main {
+    display: block;
+}
+
+summary {
+    display: block;
+}
+
+pre {
+    overflow: auto;
+}
+
+progress {
+    display: inline-block;
+}
+
+small {
+    font-size: 75%;
+}
+
+template {
+    display: none;
+}
+
+textarea {
+    overflow: auto;
+}
+
+[hidden] {
+    display: none;
+}
+
+[unselectable] {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*
+ * Universal inheritance
+ */
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+* {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+::before,
+::after {
+    vertical-align: inherit; 
+    text-decoration: inherit;
+}
+
+/*
+ * Opinionated defaults
+ */
+*,
+::before,
+::after {
+    border-width: 0; 
+    border-style: solid;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    box-sizing: border-box;
+    font: 16px/1.5 sans-serif;
+    cursor: default;
+    text-rendering: optimizeLegibility;
+}
+
+a {
+    text-decoration: none;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+button,
+input,
+select,
+textarea {
+    background-color: transparent;
+}
+
+button,
+input,
+select,
+textarea {
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit; 
+    font-style: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    min-height: 1.5em;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+}
+
+nav ol,
+nav ul {
+    list-style: none;
+}
+
+select {
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+}
+select::-ms-expand {
+    display: none;
+}
+select::-ms-value {
+    color: currentColor;
+}
+
+table {
+    border-spacing: 0; 
+    border-collapse: collapse;
+}
+
+textarea {
+    resize: vertical;
+}
+
+::-moz-selection {
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+@media screen {
+    [hidden~="screen"] {
+        display: inherit;
+    }
+    [hidden~="screen"]:not(:active):not(:focus):not(:target) {
+        clip: rect(0 0 0 0) !important;
+        position: absolute !important;
+    }
+}
+
+/**
+ * #ELEMENTS
+ */
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+html {
+    min-height: 100%;
+    color: #333;
+    background-color: #fff; 
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+blockquote,
+p,
+address,
+table,
+fieldset,
+figure,
+pre {
+    margin-bottom: 24px;
+}
+
+dd {
+    margin-left: 24px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    margin: 24px 0;
+    padding: 0; 
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+/*------------------------------------*\
+    #HEADINGS
+\*------------------------------------*/
+/**
+ * Headings 1–6.
+ */
+h1 {
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 1.3333333333;
+}
+
+h2 {
+    font-size: 30px;
+    font-size: 1.875rem;
+    line-height: 1.6;
+}
+
+h3 {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+h4 {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+
+h5 {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+h6 {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.7142857143;
+}
+
+a:not(.button) {
+    color: inherit;
+    text-decoration: none;
+    -webkit-transition: opacity 0.22222222s;
+    transition: opacity 0.22222222s;
+}
+a:not(.button):hover,
+a:not(.button):focus {
+    opacity: 0.7;
+}
+
+.entry-content a:not(.button) {
+    color: #385996;
+}
+
+ul {
+    margin-bottom: 24px; 
+    list-style: none;
+}
+
+.entry-content ul {
+    padding-left: 16px; 
+    list-style-position: outside;
+}
+
+li > ul,
+li > ol {
+    margin-bottom: 0;
+}
+
+/*------------------------------------*\
+    #IMAGES
+\*------------------------------------*/
+/**
+ * 1. Fluid images for responsive purposes.
+ * 2. Offset `alt` text from surrounding copy.
+ */
+img {
+    max-width: 100%;
+    /* [2] */
+    height: auto; 
+    /* [1] */
+    font-style: italic;
+}
+
+/**
+ * Google Maps breaks if `max-width: 100%` acts upon it; use their selector
+ *    to remove the effects.
+ */
+.gm-style img {
+    max-width: none;
+}
+
+/*------------------------------------*\
+    #BLOCKQUOTES
+\*------------------------------------*/
+blockquote {
+    margin-bottom: 24px;
+    padding-left: 20px; 
+    border-left: 5px solid currentColor;
+}
+blockquote p {
+    color: #9f9f9f;
+    font-weight: 500;
+}
+blockquote p + p {
+    margin-bottom: 0;
+}
+
+blockquote blockquote {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 12px;
+    margin-top: 12px; 
+    padding-top: 13px;
+    font-family: "Roboto", sans-serif;
+    font-size: 80%;
+    font-weight: 500;
+    font-style: normal;
+}
+
+blockquote cite::before {
+    padding-right: 10px; 
+    content: "\2014";
+}
+
+@media screen and (min-width: 48em) {
+    .pullquote.alignright {
+        max-width: 50%;
+    }
+    .pullquote.alignleft {
+        max-width: 50%;
+    }
+}
+
+/**
+ * #OBJECTS
+ */
+/*------------------------------------*\
+    $CSSWIZARDRY-GRIDS
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * INTRODUCTION.........How the grid system works.
+ * VARIABLES............Your settings.
+ * MIXINS...............Library mixins.
+ * GRID SETUP...........Build the grid structure.
+ * WIDTHS...............Build our responsive widths around our breakpoints.
+ * PUSH.................Push classes.
+ * PULL.................Pull classes.
+ */
+/*------------------------------------*\
+    $INTRODUCTION
+\*------------------------------------*/
+/**
+ * grids caters to the following types of device:
+ *
+ * sm     --  sm-based devices, like phones and small tablets
+ * md      --  md-based devices, like iPads or mdtops
+ * lg --  all of the above
+ * xl     --  stationary devices, like xltop computers
+ * regular  --  any/all types of device
+ *
+ * example:
+ *
+   <div class="grid__item  one-whole  md--one-half  xl--one-third">
+ *
+ * This would give you a grid item which is 100% width unless it is on a md
+ * device, at which point it become 50% wide, or it is on a xltop device, at
+ * which point it becomes 33.333% width.
+ *
+ * example:
+ *
+   `class="grid__item  one-half  push--one-half"`
+ *
+ * This would give you a grid item which is 50% width and pushed over to the
+ * right by 50%.
+ *
+ * example:
+ *
+   `class="grid__item  one-whole  md--one-half  xl--one-third  push--xl--one-third"`
+ *
+   `class="grid__item  one-quarter  sm--one-half  push--sm--one-half"`
+ *
+   `class="grid__item  sm--one-third  xl--five-twelfths"`
+ */
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+/**
+ * If you are building a non-responsive site but would still like to use
+ * csswizardry-grids, set this to ‘false’:
+ */
+/**
+ * Is this build mobile first? Setting to ‘true’ means that all grids will be
+ * 100% width if you do not apply a more specific class to them.
+ */
+/**
+ * Set the spacing between your grid items.
+ */
+/**
+ * Would you like Sass’ silent classes, or regular CSS classes?
+ */
+/**
+ * Would you like push and pull classes enabled?
+ */
+/**
+ * Using `inline-block` means that the grid items need their whitespace removing
+ * in order for them to work correctly. Set the following to true if you are
+ * going to achieve this by manually removing/commenting out any whitespace in
+ * your HTML yourself.
+ *
+ * Setting this to false invokes a hack which cannot always be guaranteed,
+ * please see the following for more detail:
+ *
+ * github.com/csswizardry/csswizardry-grids/commit/744d4b23c9d2b77d605b5991e54a397df72e0688
+ * github.com/csswizardry/inuit.css/issues/170#issuecomment-14859371
+ */
+/**
+ * Define your breakpoints. The first value is the prefix that shall be used for
+ * your classes (e.g. `.sm--one-half`), the second value is the media query
+ * that the breakpoint fires at.
+ */
+/**
+ * Define which namespaced breakpoints you would like to generate for each of
+ * widths, push and pull. This is handy if you only need pull on, say, xl, or
+ * you only need a new width breakpoint at mobile sizes. It allows you to only
+ * compile as much CSS as you need. All are turned on by default, but you can
+ * add and remove breakpoints at will.
+ *
+ * Push and pull shall only be used if `$push` and/or `$pull` and `$responsive`
+ * have been set to ‘true’.
+ */
+/**
+ * You do not need to edit anything from this line onward; csswizardry-grids is
+ * good to go. Happy griddin’!
+ */
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/**
+ * These mixins are for the library to use only, you should not need to modify
+ * them at all.
+ *
+ * Enclose a block of code with a media query as named in `$breakpoints`.
+ */
+/*------------------------------------*\
+    $GRID SETUP
+\*------------------------------------*/
+/**
+ * 1. Allow the grid system to be used on lists.
+ * 3. Apply a negative `margin-left` to negate the columns’ gutters.
+ */
+.grid {
+    list-style: none;
+    /* [1] */
+}
+
+/**
+     * 1. Cause columns to stack side-by-side.
+     * 2. Space columns apart.
+     * 3. Align columns to the tops of each other.
+     * 4. Full-width unless told to behave otherwise.
+     */
+.grid__item {
+    display: inline-block;
+    /* [3] */
+    width: 100%;
+    /* [1] */
+    vertical-align: top;
+    /* [4] */
+}
+.grid__item--flexed {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+/**
+ * Reversed grids allow you to structure your source in the opposite order to
+ * how your rendered layout will appear. Extends `.grid`.
+ */
+.grid--flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -ms-flex-pack: distribute;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+
+/**
+ * Reversed grids allow you to structure your source in the opposite order to
+ * how your rendered layout will appear. Extends `.grid`.
+ */
+.grid--rev {
+    text-align: left; 
+
+    direction: rtl;
+}
+.grid--rev > .grid__item {
+    text-align: left; 
+
+    direction: ltr;
+}
+
+/**
+ * Gutterless grids have all the properties of regular grids, minus any spacing.
+ * Extends `.grid`.
+ */
+.grid--full {
+    margin-left: 0;
+}
+.grid--full > .grid__item {
+    padding-left: 0;
+}
+
+/**
+ * Align the entire grid to the right. Extends `.grid`.
+ */
+.grid--right {
+    text-align: right;
+}
+.grid--right > .grid__item {
+    text-align: left;
+}
+
+/**
+ * Centered grids align grid items centrally without needing to use push or pull
+ * classes. Extends `.grid`.
+ */
+.grid--center {
+    text-align: center;
+}
+.grid--center > .grid__item {
+    text-align: left;
+}
+
+/**
+ * Align grid cells vertically (`.grid--middle` or `.grid--bottom`). Extends
+ * `.grid`.
+ */
+.grid--middle > .grid__item {
+    vertical-align: middle;
+}
+
+.grid--bottom > .grid__item {
+    vertical-align: bottom;
+}
+
+/**
+ * Create grids with narrower gutters. Extends `.grid`.
+ */
+.grid--narrow {
+    margin-left: -12px;
+}
+.grid--narrow > .grid__item {
+    padding-left: 12px;
+}
+
+/**
+ * Create grids with wider gutters. Extends `.grid`.
+ */
+.grid--wide {
+    margin-left: -48px;
+}
+.grid--wide > .grid__item {
+    padding-left: 48px;
+}
+
+/*------------------------------------*\
+    $MEDIA EMBEDS
+\*------------------------------------*/
+/**
+ * Flexible media embeds
+ *
+ * For use with media embeds – such as videos, slideshows, or even images –
+ * that need to retain a specific aspect ratio but adapt to the width of their
+ * containing element.
+ *
+ * Based on: http://alistapart.com/article/creating-intrinsic-ratios-for-video
+ */
+.featured-media {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+/**
+ * The aspect-ratio hack is applied to an empty element because it allows
+ * the component to respect `max-height`. Default aspect ratio is 1:1.
+ */
+.featured-media__ratio {
+    display: block;
+    width: 100%; 
+    padding-bottom: 100%;
+}
+
+/**
+ * Modifier: 3:1 aspect ratio
+ */
+.featured-media__ratio--3by1 {
+    padding-bottom: -webkit-calc(100% / 3);
+    padding-bottom: calc(100% / 3);
+}
+
+/**
+ * Modifier: 2:1 aspect ratio
+ */
+.featured-media__ratio--2by1 {
+    padding-bottom: 50%;
+}
+
+/**
+ * Modifier: 16:9 aspect ratio
+ */
+.featured-media__ratio--16by9 {
+    padding-bottom: 56.25%;
+}
+
+/**
+ * Modifier: 4:3 aspect ratio
+ */
+.featured-media__ratio--4by3 {
+    padding-bottom: 75%;
+}
+
+/**
+ * Fit the content to the aspect ratio
+ */
+.featured-media-content,
+.featured-media > iframe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+}
+
+.o-media {
+    display: table;
+    width: 100%;
+}
+
+.o-media__img,
+.o-media__body {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.o-media__img {
+    padding-right: 24px;
+}
+.o-media__img img {
+    display: block;
+    max-width: none;
+}
+
+.o-media__body {
+    width: 100%;
+}
+
+.gallery {
+    margin-bottom: 1.5em;
+}
+
+.gallery-item {
+    display: inline-block;
+    width: 100%; 
+    text-align: center;
+    vertical-align: top;
+}
+@media screen and (min-width: 48em) {
+    .gallery-columns-2 .gallery-item {
+        max-width: 50%;
+    }
+    .gallery-columns-3 .gallery-item {
+        max-width: 33.33%;
+    }
+    .gallery-columns-4 .gallery-item {
+        max-width: 25%;
+    }
+    .gallery-columns-5 .gallery-item {
+        max-width: 20%;
+    }
+    .gallery-columns-6 .gallery-item {
+        max-width: 16.66%;
+    }
+    .gallery-columns-7 .gallery-item {
+        max-width: 14.28%;
+    }
+    .gallery-columns-8 .gallery-item {
+        max-width: 12.5%;
+    }
+    .gallery-columns-9 .gallery-item {
+        max-width: 11.11%;
+    }
+}
+
+.gallery-caption {
+    display: block;
+}
+
+/**
+ * 5.0 Forms
+ */
+input:not([type="submit"]),
+select,
+textarea {
+    max-width: 100%;
+    margin: 0;
+    margin-bottom: 24px; 
+    border-radius: 3px;
+    background-color: rgba(139, 160, 171, 0.2);
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+    vertical-align: baseline;
+}
+
+input:not([type="submit"]) {
+    line-height: normal;
+}
+
+input:not([type="submit"]),
+textarea {
+    width: 100%; 
+    /* Removing the inner shadow on iOS inputs */
+    border: 1px solid #ebebeb;
+    color: #6c6c6c;
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+}
+
+input:not([type="submit"]):focus,
+textarea:focus {
+    border: 1px solid #476fba;
+    color: #393939; 
+    background-color: #fff;
+}
+
+input:not([type="submit"]):focus,
+select:focus {
+    outline: 2px solid #476fba;
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled] {
+    opacity: 0.5; 
+    cursor: default;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    padding: 0; 
+    border: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+    padding: 6px;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+    outline: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #858585;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.7142857143;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.post-password-form input[type="submit"] {
+    position: absolute;
+    right: 0;
+    bottom: 0; 
+    padding: 0.7917em;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    padding: 0;
+}
+
+.search-form input[type="submit"],
+.widget .search-form input[type="submit"] {
+    padding: 0;
+}
+
+fieldset {
+    padding: 0;
+    border-width: 0;
+}
+
+.search-form,
+.post-password-form {
+    display: block;
+    position: relative;
+}
+
+.search-form input[type=search],
+.post-password-form input[type="password"] {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+
+    appearance: none;
+}
+
+.search-form button[type=submit],
+.post-password-form input[type="submit"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0; 
+    padding: 0 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    outline: none;
+}
+
+.post-password-form input[type="submit"] {
+    top: auto; 
+    height: 40px;
+}
+
+.search-form button::before {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: inherit;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+    text-decoration: none;
+    content: "\f002";
+    text-rendering: auto;
+
+    speak: none;
+}
+
+.search-form button[type=submit]::before {
+    font-size: 18px;
+    line-height: 1.625;
+}
+
+/*------------------------------------*\
+    #Layout Wrappers
+\*------------------------------------*/
+.wrapper {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+@media screen and (min-width: 80em) {
+    .wrapper {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.wrapper--wide {
+    max-width: none;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+/*------------------------------------*\
+    #BLOCK
+\*------------------------------------*/
+/**
+ * The card object simply stacks an image on top of some text-like content.
+ */
+/**
+ * Stacked image-with-text object. A simple abstraction to cover a very commonly
+ * occurring design pattern.
+ */
+.card {
+    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 100%;
+    min-height: 0;
+    margin: 1em 0; 
+    padding: 0;
+    border: none;
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: 0 3px 0 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    -webkit-transition: box-shadow 0.2s ease;
+    transition: box-shadow 0.2s ease;
+
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+}
+
+/**
+     * 1. Eliminate whitespace around images.
+     */
+.card__img {
+    /* [1] */
+    display: block;
+    position: relative;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.05);
+    vertical-align: middle;
+    /**
+             * No space between the image and the text content.
+             */
+    /**
+             * Tiny space between the image and the text content.
+             */
+    /**
+             * Small space between the image and the text content.
+             */
+    /**
+             * Large space between the image and the text content.
+             */
+    /**
+             * Huge space between the image and the text content.
+             */
+}
+.card__img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none; 
+    border-radius: 0.2857rem 0.2857rem 0 0;
+}
+.card--flush > .card__img {
+    margin-bottom: 0;
+}
+.card--tiny > .card__img {
+    margin-bottom: 6px;
+}
+.card--small > .card__img {
+    margin-bottom: 12px;
+}
+.card--large > .card__img {
+    margin-bottom: 48px;
+}
+.card--huge > .card__img {
+    margin-bottom: 96px;
+}
+
+/**
+     * Text-content.
+     */
+.card__content {
+    margin: 0;
+    padding: 1em;
+    border: none;
+    border-radius: 0; 
+    background: 0 0;
+    box-shadow: none;
+    font-size: 1em;
+
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    -ms-flex-positive: 1;
+}
+.card__content p {
+    margin-bottom: 0;
+}
+
+.card__heading {
+    display: block;
+    margin: 0; 
+    margin-top: -0.165em;
+    font-size: 1.2em;
+    font-weight: 700;
+    line-height: 1.33em;
+}
+
+.card__meta {
+    color: rgba(0, 0, 0, 0.4); 
+    font-size: 0.9em;
+}
+
+.card__body {
+    margin-top: 0.5em;
+}
+
+.card__footer {
+    position: static;
+    top: 0;
+    left: 0;
+    width: auto;
+    max-width: 100%;
+    min-height: 0 !important;
+    margin: 0;
+    padding: 0.75em 1em;
+    border-top: 1px solid rgba(0, 0, 0, 0.05); 
+    color: rgba(0, 0, 0, 0.4);
+    background: 0 0;
+    box-shadow: none;
+    -webkit-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    flex-grow: 0;
+    -ms-flex-positive: 0;
+}
+.card__footer p {
+    margin-bottom: 0;
+}
+
+/**
+     * Right-aligned cards.
+     */
+.card--right {
+    text-align: right;
+}
+
+/**
+     * Center-aligned cards.
+     */
+.card--center {
+    text-align: center;
+}
+
+/*------------------------------------*\
+    $ARTICLES
+\*------------------------------------*/
+.entry-format {
+    position: absolute;
+    right: 0; 
+    bottom: 0;
+    width: 30px;
+    opacity: 0.8;
+}
+@media screen and (min-width: 48em) {
+    .entry-format {
+        right: 50%;
+        bottom: -20px;
+        width: 50px;
+        height: 50px; 
+        margin-right: -25px;
+        opacity: 0.8;
+    }
+}
+
+/**
+ * #COMPONENTS
+ */
+/*------------------------------------*\
+    #SITE-TITLE
+\*------------------------------------*/
+.page-title__main,
+.page-title__sub {
+    margin-bottom: 0; 
+    font-weight: 300;
+}
+
+.page-title__main a {
+    color: currentColor;
+}
+
+.page-title__sub {
+    opacity: 0.8; 
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+
+.site-logo-link {
+    display: inline-block;
+}
+
+/*------------------------------------*\
+    #BOX SHADOWS
+\*------------------------------------*/
+.shadow--z1 {
+    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+}
+
+.shadow--z2 {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23);
+}
+
+.shadow--z3 {
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 0 6px 3px 0 rgba(0, 0, 0, 0.23);
+}
+
+.shadow--z4 {
+    box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.25), 0 10px 5px 0 rgba(0, 0, 0, 0.22);
+}
+
+.shadow--z5 {
+    box-shadow: 0 19px 19px 0 rgba(0, 0, 0, 0.3), 0 15px 6px 0 rgba(0, 0, 0, 0.22);
+}
+
+.btn,
+button,
+.button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 3px;
+    outline: 0;
+    color: rgba(255, 255, 255, 0.9);
+    /* [5] */
+    background: #476fba;
+    /* [2] */
+    font: inherit;
+    /* [3] */
+    text-align: center;
+    /* [1] */
+    vertical-align: middle;
+    /* [4] */
+    cursor: pointer;
+    -webkit-transition: 0.22222222s;
+    transition: 0.22222222s;
+}
+.btn:hover,
+button:hover,
+.button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+.btn:active,
+button:active,
+.button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active,
+.btn:focus,
+button:focus,
+.button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+    color: rgba(255, 255, 255, 0.9); 
+    background: #385996;
+}
+
+.c-testimonial {
+    padding: 24px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.c-testimonial__text {
+    font-family: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+.c-testimonial__source {
+    display: block;
+    color: #858585; 
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+.c-testimonial__source:before {
+    content: "— ";
+}
+
+.avatar {
+    display: block;
+    width: 64px;
+    height: 64px; 
+    border-radius: 100%;
+}
+
+.avatar--small {
+    width: 32px;
+    height: 32px;
+}
+
+.avatar--large {
+    width: 128px;
+    height: 128px;
+}
+
+/*------------------------------------*\
+    #SITE NAVIGATION
+\*------------------------------------*/
+.menu {
+    box-sizing: border-box;
+}
+
+.menu--fixed {
+    position: fixed;
+    z-index: 3; 
+    top: 0;
+    left: 0;
+}
+
+.menu__list,
+.menu__item {
+    position: relative;
+}
+
+.menu__list {
+    margin: 0;
+    padding: 0; 
+    list-style: none;
+}
+
+.menu__item {
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+}
+
+.menu__item > a,
+.menu__heading {
+    display: block;
+    padding: 1em;
+    color: currentColor; 
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.sub-menu > .menu__item > a {
+    padding: 0.5em 1em;
+}
+
+/**
+ * Dropdowns
+ */
+.menu--horizontal {
+    width: 100%;
+    white-space: nowrap;
+}
+
+.menu--horizontal .menu__list {
+    display: inline-block;
+}
+
+/* Initial menus should be inline-block so that they are horizontal */
+.menu--horizontal .menu__item,
+.menu--horizontal .menu__heading,
+.menu--horizontal .menu-separator {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle; 
+
+    *display: inline;
+}
+
+/**
+ * Dropdowns
+ */
+.menu__item .menu__item {
+    display: block;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 3px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 0 6px 3px 0 rgba(0, 0, 0, 0.23);
+}
+
+.menu--horizontal .sub-menu {
+    top: auto;
+    left: 0;
+    width: inherit;
+}
+
+.menu-item-has-children:hover > .sub-menu,
+.menu-active > .sub-menu {
+    display: block;
+    position: absolute;
+}
+
+/* Vertical Menus - show the dropdown arrow */
+.menu-item-has-children > a:after {
+    padding-left: 0.5em;
+    font-size: small; 
+    content: "\25B8";
+}
+
+/* Horizontal Menus - show the dropdown arrow */
+.menu--horizontal .menu-item-has-children > a:after {
+    content: "\25BE";
+}
+
+.pagination {
+    display: block;
+    margin-bottom: 24px;
+    text-align: center;
+}
+@media screen and (min-width: 48em) {
+    .pagination {
+        margin-bottom: 48px;
+    }
+}
+.pagination a {
+    -webkit-transition: 0.22222222s;
+    transition: 0.22222222s;
+}
+.pagination a:hover,
+.pagination a:focus {
+    opacity: 1;
+    color: black; 
+    background-color: #fff;
+}
+
+.page-numbers {
+    display: inline-block;
+    margin-right: 3px; 
+    margin-bottom: 10px;
+    margin-left: 3px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.page-numbers.current {
+    background-color: rgba(23, 29, 32, 0.1);
+}
+
+.dots {
+    background: none;
+}
+
+.post-navigation {
+    margin-bottom: 24px;
+}
+@media screen and (min-width: 48em) {
+    .post-navigation {
+        margin-bottom: 48px;
+    }
+}
+
+.post-navigation a {
+    display: block;
+    margin-bottom: 10px; 
+    padding: 15px 30px 15px;
+    background: rgba(23, 29, 32, 0.1);
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-next {
+    margin-right: 30px;
+}
+.nav-next a {
+    border-left: 15px solid #f5f5f5; 
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.nav-next a::after {
+    position: absolute;
+    top: 0; 
+    right: -30px;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid rgba(23, 29, 32, 0.1);
+    content: "";
+}
+
+.nav-previous {
+    margin-left: 30px;
+}
+.nav-previous a {
+    border-right: 15px solid #f5f5f5; 
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.nav-previous a::after {
+    position: absolute;
+    top: 0; 
+    left: -30px;
+    border-top: 30px solid transparent;
+    border-right: 30px solid rgba(23, 29, 32, 0.1);
+    border-bottom: 30px solid transparent;
+    content: "";
+}
+
+/*------------------------------------*\
+    #META
+\*------------------------------------*/
+.entry__meta {
+    margin-bottom: 0;
+    color: #9f9f9f;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    font-weight: normal;
+    font-style: italic; 
+    line-height: 1.6;
+    text-align: center;
+}
+.entry__meta a {
+    color: currentColor;
+    font-weight: inherit;
+}
+
+.badge a {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 2px solid #e4e9eb;
+    border-radius: 3px;
+    font-size: 11px;
+    font-size: 0.6875rem;
+    line-height: 100%;
+    vertical-align: middle;
+    letter-spacing: 1px; 
+    text-transform: uppercase;
+}
+
+/*------------------------------------*\
+    #CODE
+\*------------------------------------*/
+.form-allowed-tags code,
+pre {
+    overflow: auto;
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 24px;
+    padding: 5px 12px;
+    border-radius: 3px;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    -moz-tab-size: 4;
+    tab-size: 4;
+}
+
+code {
+    display: inline-block;
+    padding: 0 2px;
+    border-radius: 3px;
+    color: rgba(255, 255, 255, 0.9);
+    background: #525252;
+    font-weight: normal; 
+    -moz-tab-size: 4;
+    tab-size: 4;
+}
+
+kbd {
+    margin: 0 0.25em;
+    padding: 0.3334em 0.5em;
+    border: 1px solid #c6d1d6;
+    border-radius: 3px;
+    color: #171d20;
+    background-color: #f3f5f6;
+    box-shadow: inset 0 1px 0 #fff;
+}
+
+.form-allowed-button {
+    color: #9f9f9f;
+    cursor: default;
+}
+
+/*------------------------------------*\
+    #BREADCRUMBS
+\*------------------------------------*/
+.breadcrumbs {
+    overflow: hidden;
+    margin-right: auto;
+    margin-bottom: 12px;
+    margin-left: auto;
+    padding: 6px 12px;
+    border-radius: 3px; 
+    color: #393939;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 15px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    line-height: 1.6;
+    text-transform: uppercase;
+    list-style: none;
+    cursor: default;
+}
+@media screen and (min-width: 48em) {
+    .breadcrumbs {
+        margin-bottom: 24px;
+    }
+}
+@media screen and (min-width: 64em) {
+    .breadcrumbs {
+        margin-bottom: 48px;
+    }
+}
+.breadcrumbs > span {
+    display: inline-block;
+}
+.breadcrumbs a {
+    opacity: 0.7;
+    color: currentColor;
+    font-weight: inherit;
+    text-decoration: none;
+    -webkit-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+}
+.breadcrumbs a:hover {
+    opacity: 1;
+}
+.breadcrumbs .sep {
+    padding: 0 5px;
+    color: #d2d2d2;
+}
+.breadcrumbs .trail-end {
+    color: #9f9f9f; 
+    font-weight: 500;
+}
+
+/*------------------------------------*\
+    #WIDGETS
+\*------------------------------------*/
+.widget {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    min-width: 300px;
+
+    -webkit-box-direction: normal;
+    -webkit-box-flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-flex: 1 300px;
+    -ms-flex: 1 300px;
+    flex: 1 300px;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+}
+@media screen and (min-width: 48em) {
+    .widget {
+        min-width: 33%;
+    }
+}
+.widget__wrap {
+    padding: 24px;
+    background-color: rgba(23, 29, 32, 0.1);
+
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.widget_search {
+    display: inline-block;
+}
+.widget_search > .widget__wrap {
+    padding: 0;
+    background: none;
+}
+
+.widget.widget_search {
+    padding: 0;
+}
+
+/**
+ * #TRUMPS
+ */
+.u-link-bare {
+    text-decoration: none !important;
+}
+
+.u-link-natural {
+    color: inherit !important; 
+    text-decoration: underline !important;
+}
+
+.u-link-obvious {
+    text-decoration: underline !important;
+}
+
+/*------------------------------------*\
+    #HELPERS
+\*------------------------------------*/
+.clearfix:after {
+    display: table;
+    clear: both; 
+    content: "";
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.screen-reader-text,
+.visuallyhidden {
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+    width: 1px; 
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    overflow: visible;
+    clip: auto;
+    position: static;
+    width: auto; 
+    height: auto;
+    margin: 0;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after,
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+    display: table; 
+    content: "";
+}
+
+.clearfix:after,
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+    clear: both;
+}
+
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+
+.aligncenter {
+    display: block;
+    clear: both;
+    margin: 0 auto;
+}
+
+.br {
+    border-radius: 3px;
+}
+
+.bg-white,
+.menu-item-has-children:hover > .sub-menu,
+.menu-active > .sub-menu {
+    color: rgba(0, 0, 0, 0.9); 
+    background-color: #fff;
+}
+
+.t-bg__1 {
+    color: rgba(255, 255, 255, 0.9); 
+    background-color: #476fba;
+}
+
+.t-bg__1--dark {
+    color: rgba(255, 255, 255, 0.9); 
+    background-color: #385996;
+}
+
+.t-bg__1--light {
+    color: rgba(255, 255, 255, 0.9); 
+    background-color: #6c8cc8;
+}
+
+.t-bg__2 {
+    color: rgba(255, 255, 255, 0.9); 
+    background-color: #3dc273;
+}
+
+.t-bg__2--dark {
+    color: rgba(255, 255, 255, 0.9); 
+    background-color: #319b5c;
+}
+
+.t-bg__2--light {
+    color: rgba(0, 0, 0, 0.9); 
+    background-color: #64ce8f;
+}
+
+.t-bg__3 {
+    color: rgba(255, 255, 255, 0.9); 
+    background-color: #ff9e03;
+}
+
+.t-bg__3--dark {
+    color: rgba(255, 255, 255, 0.9); 
+    background-color: #cf7f00;
+}
+
+.t-bg__3--light {
+    color: rgba(0, 0, 0, 0.9); 
+    background-color: #ffb236;
+}
+
+.t-fill__1 {
+    fill: #476fba;
+}
+
+.t-fill__1--dark {
+    fill: #385996;
+}
+
+.t-fill__1--light {
+    fill: #6c8cc8;
+}
+
+.t-fill__2 {
+    fill: #3dc273;
+}
+
+.t-fill__2--dark {
+    fill: #319b5c;
+}
+
+.t-fill__2--light {
+    fill: #64ce8f;
+}
+
+.t-fill__3 {
+    fill: #ff9e03;
+}
+
+.t-fill__3--dark {
+    fill: #cf7f00;
+}
+
+.t-fill__3--light {
+    fill: #ffb236;
+}
+
+/*------------------------------------*\
+    #HEADINGS
+\*------------------------------------*/
+/**
+ * Headings 1–6’s corresponding Greek-alphabet abstract classes for double-
+ * stranded heading hierarchy: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
+ *
+ * Use these helper classes to cause other elements to adopt the styling of the
+ * respective heading, e.g.:
+ *
+   <h2 class="alpha">Lorem ipsum</h2>
+ *
+ */
+.h1,
+.site-title {
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 1.3333333333;
+}
+
+.h2,
+.entry-title {
+    font-size: 30px;
+    font-size: 1.875rem;
+    line-height: 1.6;
+}
+
+.h3,
+.widget-title {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.h4 {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+
+.h5 {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.h6 {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.7142857143;
 }

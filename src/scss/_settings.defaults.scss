@@ -1,52 +1,40 @@
-/*!
- * inuitcss, by @csswizardry
- *
- * github.com/inuitcss | inuitcss.com
- */
 ///*------------------------------------*\
 //    #DEFAULTS
 //\*------------------------------------*/
 
-// These variables are inuitcss’ defaults; they should not be modified or
-// adjusted directly; you should predefine the variables in your own project.
-
+// Namespace.
+$namespace:               null !default;
 
 
 
 
 // High-level base settings.
-$inuit-base-font-size:          16px !default;
-$inuit-base-line-height:        24px !default;
-$inuit-base-text-color:         #333 !default;
-$inuit-base-background-color:   #fff !default;
+$base-font-size:          16px !default;
+$base-line-height:        24px !default;
+
+$base-text-color:         #333 !default;
+$base-background-color:   #fff !default;
+
+$base-radius:           3px;
+
+$base-opacity:          0.7;
+
+$base-transition:       0.22222222s;
+
+$font-body:             "Roboto", sans-serif;
+$font-heading:          "Raleway", sans-serif;
+$font__code:            "Courier 10 Pitch", Courier, monospace;
+$font__pre:             "Courier 10 Pitch", Courier, monospace;
+
+$max-width: 1240px;
 
 
 
 
-
-// Namespace.
-//
-// Would you like inuitcss’ classes to be prepended with a namespace? If so,
-// define it here.
-$inuit-namespace:               null !default;
-
-
-
-
-
-// These variables are framework variables, sourced from variables defined
-// above. Feel free to use these variables throughout your project, but do not
 // modify or reassign them.
-$inuit-base-spacing-unit:           $inuit-base-line-height;
-$inuit-base-spacing-unit--tiny:     round($inuit-base-spacing-unit / 4);
-$inuit-base-spacing-unit--small:    round($inuit-base-spacing-unit / 2);
-$inuit-base-spacing-unit--large:    round($inuit-base-spacing-unit * 2);
-$inuit-base-spacing-unit--huge:     round($inuit-base-spacing-unit * 4);
-
-
-$base-spacing-unit:             $inuit-base-spacing-unit;
-$base-spacing-unit--tiny:       $inuit-base-spacing-unit--tiny;
-$base-spacing-unit--small:      $inuit-base-spacing-unit--small;
-$base-spacing-unit--large:      $inuit-base-spacing-unit--large;
-$base-spacing-unit--huge:       $inuit-base-spacing-unit--huge;
-$base-spacing-unit--larger:    round($inuit-base-spacing-unit * 3);
+$base-spacing-unit:           $base-line-height;
+$base-spacing-unit--tiny:     round($base-spacing-unit / 4);
+$base-spacing-unit--small:    round($base-spacing-unit / 2);
+$base-spacing-unit--large:    round($base-spacing-unit * 2);
+$base-spacing-unit--larger:   round($base-spacing-unit * 3);
+$base-spacing-unit--huge:     round($base-spacing-unit * 4);

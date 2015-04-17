@@ -36,7 +36,7 @@ class AttrTrumps {
 	public $menu_secondary 				= ' menu--horizontal';	// menu menu-{$context}
 	public $menu_li_primary         	= 'menu__item';	// menu-item
 	public $menu_li_secondary       	= 'menu__item';	// menu-item
-	public $menu_li_social          	= '';	// menu-item
+	public $menu_li_social          	= 'menu__item--social';	// menu-item
 
     public $author_box                  = ' bg-white br shadow--z1 u-p- u-p@md u-p+@lg u-mb- u-mb@md u-mb+@lg';
 
@@ -52,9 +52,9 @@ class AttrTrumps {
 
 	/* Post-specific attributes. */
 	public $post                  		= ' bg-white br shadow--z1 u-p- u-p@md u-p+@lg u-mb- u-mb@md u-mb+@lg';	// get_post_class()
-	public $entry_title           		= '';	// entry-title
-	public $entry_author          		= ' u-mr- entry-meta__item entry-meta__author';	// entry-author
-	public $entry_published       		= ' u-mr- entry-meta__item entry-meta__date';	// entry-published updated
+	public $entry_title           		= ' entry__title';	// entry-title
+	public $entry_author          		= ' u-mr- entry__author';	// entry-author
+	public $entry_published       		= ' u-mr- entry__date';	// entry-published updated
 	public $entry_content         		= '';	// entry-content
 	public $entry_summary         		= '';	// entry-summary
 	public $entry_terms           		= ' badge';	// entry-terms

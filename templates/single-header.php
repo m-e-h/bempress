@@ -8,7 +8,7 @@ if ( is_front_page() ) {
 }
 ?>
 
-<header class="entry-header">
+<header class="entry__header">
 
 	<h1 <?php hybrid_attr( 'entry-title' ); ?>><?php single_post_title(); ?></h1>
 
