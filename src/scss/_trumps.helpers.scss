@@ -97,58 +97,47 @@
 // Colors
 
 .t-bg__white {
-    background-color: $white;
-    color: set-text-color($white);
+    @include bg-text($white);
 }
 
 .t-bg__tint {
-    background-color: $color-tint;
-    color: set-text-color($color-tint);
+    @include bg-text($color-tint);
 }
 
 .t-bg__1 {
-    background-color: $color-primary;
-    color: set-text-color($color-primary);
+    @include bg-text($color-primary);
 }
 
 .t-bg__1--dark {
-    background-color: $color-primary-dark;
-    color: set-text-color($color-primary);
+    @include bg-text($color-primary-dark);
 }
 
 .t-bg__1--light {
-    background-color: $color-primary-light;
-    color: set-text-color($color-primary);
+    @include bg-text($color-primary-light);
 }
 
 .t-bg__2 {
-    background-color: $color-secondary;
-    color: set-text-color($color-secondary);
+    @include bg-text($color-secondary);
 }
 
 .t-bg__2--dark {
-    background-color: $color-secondary-dark;
-    color: set-text-color($color-secondary-dark);
+    @include bg-text($color-secondary-dark);
 }
 
 .t-bg__2--light {
-    background-color: $color-secondary-light;
-    color: set-text-color($color-secondary-light);
+    @include bg-text($color-secondary-light);
 }
 
 .t-bg__3 {
-    background-color: $color-accent;
-    color: set-text-color($color-accent);
+    @include bg-text($color-accent);
 }
 
 .t-bg__3--dark {
-    background-color: $color-accent-dark;
-    color: set-text-color($color-accent-dark);
+    @include bg-text($color-accent-dark);
 }
 
 .t-bg__3--light {
-    background-color: $color-accent-light;
-    color: set-text-color($color-accent-light);
+    @include bg-text($color-accent-light);
 }
 
 

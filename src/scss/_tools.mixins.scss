@@ -134,6 +134,6 @@ $fa: FontAwesome !default;
 
 
 @mixin bg-text($bg-color) {
-  background: $bg-color;
+  background-color: $bg-color;
   color: set-text-color($bg-color);
 }

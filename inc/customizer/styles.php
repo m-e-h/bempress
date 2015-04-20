@@ -5,6 +5,7 @@
  * @package bempress
  */
 
+use Mexitek\PHPColors\Color;
 
 add_action( 'customizer_library_styles', 'customizer_library_bempress_styles' );
 
@@ -31,24 +32,24 @@ function customizer_library_bempress_styles() {
 	$color = sanitize_hex_color( $mod );
 	$rgb = join( ', ', hybrid_hex_to_rgb( $color ) );
 
-		$simple_color_adjuster = new Simple_Color_Adjuster;
-		$color50 	= $simple_color_adjuster->lighten( $color, 45 );
-		$color100 	= $simple_color_adjuster->lighten( $color, 40 );
-		$color200 	= $simple_color_adjuster->lighten( $color, 30 );
-		$color300 	= $simple_color_adjuster->lighten( $color, 20 );
-		$color400 	= $simple_color_adjuster->lighten( $color, 10 );
-		$color500 	= $color;
-		$color600 	= $simple_color_adjuster->darken( $color, 10 );
-		$color700 	= $simple_color_adjuster->darken( $color, 20 );
-		$color800 	= $simple_color_adjuster->darken( $color, 30 );
-		$color900 	= $simple_color_adjuster->darken( $color, 40 );
+        $primaryColor = new Color( $color );
+        $color50    = $primaryColor->lighten(45);
+        $color100   = $primaryColor->lighten(40);
+        $color200   = $primaryColor->lighten(30);
+        $color300   = $primaryColor->lighten(20);
+        $color400   = $primaryColor->lighten(10);
+        $color500   = $color;
+        $color600   = $primaryColor->darken(10);
+        $color700   = $primaryColor->darken(20);
+        $color800   = $primaryColor->darken(30);
+        $color900   = $primaryColor->darken(40);
 
 		Customizer_Library_Styles()->add( [
 			'selectors' => [
 				'.entry-content a'
 			],
 			'declarations' => [
-				'color' => $color600
+				'color' => '#'.$color600
 			]
 		] );
 
@@ -66,7 +67,7 @@ function customizer_library_bempress_styles() {
 				'.t-bg__1--light'
 			],
 			'declarations' => [
-				'background-color' => $color400
+				'background-color' => '#'.$color400
 			]
 		] );
 
@@ -75,7 +76,7 @@ function customizer_library_bempress_styles() {
 				'.t-bg__1--dark'
 			],
 			'declarations' => [
-				'background-color' => $color600
+				'background-color' => '#'.$color600
 			]
 		] );
 
@@ -93,7 +94,7 @@ function customizer_library_bempress_styles() {
                 '.t-fill__1--light'
             ],
             'declarations' => [
-                'fill' => $color400
+                'fill' => '#'.$color400
             ]
         ] );
 
@@ -102,7 +103,7 @@ function customizer_library_bempress_styles() {
                 '.t-fill__1--dark'
             ],
             'declarations' => [
-                'fill' => $color600
+                'fill' => '#'.$color600
             ]
         ] );
 
@@ -131,7 +132,7 @@ function customizer_library_bempress_styles() {
 				.button:hover'
 			],
 			'declarations' => [
-				'background-color' => $color600
+				'background-color' => '#'.$color600
 			]
 		] );
 
@@ -166,17 +167,17 @@ function customizer_library_bempress_styles() {
 		$color = sanitize_hex_color( $mod );
 		$rgb = join( ', ', hybrid_hex_to_rgb( $color ) );
 
-		$simple_color_adjuster = new Simple_Color_Adjuster;
-		$color50 	= $simple_color_adjuster->lighten( $color, 45 );
-		$color100 	= $simple_color_adjuster->lighten( $color, 40 );
-		$color200 	= $simple_color_adjuster->lighten( $color, 30 );
-		$color300 	= $simple_color_adjuster->lighten( $color, 20 );
-		$color400 	= $simple_color_adjuster->lighten( $color, 10 );
-		$color500 	= $color;
-		$color600 	= $simple_color_adjuster->darken( $color, 10 );
-		$color700 	= $simple_color_adjuster->darken( $color, 20 );
-		$color800 	= $simple_color_adjuster->darken( $color, 30 );
-		$color900 	= $simple_color_adjuster->darken( $color, 40 );
+        $secondaryColor = new Color( $mod );
+        $color50    = $secondaryColor->lighten(45);
+        $color100   = $secondaryColor->lighten(40);
+        $color200   = $secondaryColor->lighten(30);
+        $color300   = $secondaryColor->lighten(20);
+        $color400   = $secondaryColor->lighten(10);
+        $color500   = $color;
+        $color600   = $secondaryColor->darken(10);
+        $color700   = $secondaryColor->darken(20);
+        $color800   = $secondaryColor->darken(30);
+        $color900   = $secondaryColor->darken(40);
 
         Customizer_Library_Styles()->add( [
             'selectors' => [
@@ -192,7 +193,7 @@ function customizer_library_bempress_styles() {
                 '.t-bg__2--light'
             ],
             'declarations' => [
-                'background-color' => $color400
+                'background-color' => '#'.$color400
             ]
         ] );
 
@@ -201,7 +202,7 @@ function customizer_library_bempress_styles() {
                 '.t-bg__2--dark'
             ],
             'declarations' => [
-                'background-color' => $color600
+                'background-color' => '#'.$color600
             ]
         ] );
 
@@ -219,7 +220,7 @@ function customizer_library_bempress_styles() {
                 '.t-fill__2--light'
             ],
             'declarations' => [
-                'fill' => $color400
+                'fill' => '#'.$color400
             ]
         ] );
 
@@ -228,7 +229,7 @@ function customizer_library_bempress_styles() {
                 '.t-fill__2--dark'
             ],
             'declarations' => [
-                'fill' => $color600
+                'fill' => '#'.$color600
             ]
         ] );
 
@@ -246,17 +247,17 @@ function customizer_library_bempress_styles() {
         $color = sanitize_hex_color( $mod );
         $rgb = join( ', ', hybrid_hex_to_rgb( $color ) );
 
-        $simple_color_adjuster = new Simple_Color_Adjuster;
-        $color50    = $simple_color_adjuster->lighten( $color, 45 );
-        $color100   = $simple_color_adjuster->lighten( $color, 40 );
-        $color200   = $simple_color_adjuster->lighten( $color, 30 );
-        $color300   = $simple_color_adjuster->lighten( $color, 20 );
-        $color400   = $simple_color_adjuster->lighten( $color, 10 );
+        $accentColor = new Color( $mod );
+        $color50    = $accentColor->lighten(45);
+        $color100   = $accentColor->lighten(40);
+        $color200   = $accentColor->lighten(30);
+        $color300   = $accentColor->lighten(20);
+        $color400   = $accentColor->lighten(10);
         $color500   = $color;
-        $color600   = $simple_color_adjuster->darken( $color, 10 );
-        $color700   = $simple_color_adjuster->darken( $color, 20 );
-        $color800   = $simple_color_adjuster->darken( $color, 30 );
-        $color900   = $simple_color_adjuster->darken( $color, 40 );
+        $color600   = $accentColor->darken(10);
+        $color700   = $accentColor->darken(20);
+        $color800   = $accentColor->darken(30);
+        $color900   = $accentColor->darken(40);
 
         Customizer_Library_Styles()->add( [
             'selectors' => [
@@ -272,7 +273,7 @@ function customizer_library_bempress_styles() {
                 '.t-bg__3--light'
             ],
             'declarations' => [
-                'background-color' => $color400
+                'background-color' => '#'.$color400
             ]
         ] );
 
@@ -281,7 +282,7 @@ function customizer_library_bempress_styles() {
                 '.t-bg__3--dark'
             ],
             'declarations' => [
-                'background-color' => $color600
+                'background-color' => '#'.$color600
             ]
         ] );
 
@@ -299,7 +300,7 @@ function customizer_library_bempress_styles() {
                 '.t-fill__3--light'
             ],
             'declarations' => [
-                'fill' => $color400
+                'fill' => '#'.$color400
             ]
         ] );
 
@@ -308,7 +309,7 @@ function customizer_library_bempress_styles() {
                 '.t-fill__3--dark'
             ],
             'declarations' => [
-                'fill' => $color600
+                'fill' => '#'.$color600
             ]
         ] );
 

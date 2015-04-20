@@ -3264,7 +3264,7 @@ input[type="submit"] {
     border-radius: 3px;
     outline: 0;
     color: rgba(255, 255, 255, 0.9);
-    background: #476fba;
+    background-color: #476fba;
     font: inherit;
     text-align: center;
     vertical-align: middle;
@@ -3299,7 +3299,7 @@ input[type="reset"]:focus,
 input[type="submit"]:focus {
     opacity: 1;
     color: rgba(255, 255, 255, 0.9); 
-    background: #385996;
+    background-color: #385996;
 }
 
 .button--transparent,
@@ -3333,7 +3333,7 @@ input[type="submit"]:focus {
 .badge a:focus {
     border-color: #385996; 
     color: rgba(255, 255, 255, 0.9);
-    background: #385996;
+    background-color: #385996;
     background-color: #385996;
 }
 
@@ -3633,7 +3633,7 @@ code {
     padding: 0 2px;
     border-radius: 3px;
     color: rgba(255, 255, 255, 0.9);
-    background: #525252;
+    background-color: #525252;
     font-weight: normal; 
     -moz-tab-size: 4;
     tab-size: 4;
@@ -3888,7 +3888,7 @@ kbd {
 }
 
 .t-bg__1--light {
-    color: rgba(255, 255, 255, 0.9); 
+    color: rgba(0, 0, 0, 0.9); 
     background-color: #6c8cc8;
 }
 

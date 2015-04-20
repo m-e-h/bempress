@@ -14,7 +14,7 @@ require get_template_directory() . '/inc/customizer/customizer-library/customize
 require get_template_directory() . '/inc/customizer/options.php';
 
 // Custom color functions.
-require get_template_directory() . '/inc/customizer/colors.php';
+require get_template_directory() . '/inc/customizer/Color.php';
 
 // Output inline styles based on theme customizer selections.
 require get_template_directory() . '/inc/customizer/styles.php';
