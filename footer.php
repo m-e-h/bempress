@@ -17,16 +17,16 @@
 
 			<?php hybrid_get_sidebar( 'footer' ); ?>
 
-				<p class="credit">
-					<?php
-					printf(
-						__( 'Copyright &#169; %1$s %2$s.', 'abraham' ),
-						date_i18n( 'Y' ), hybrid_get_site_link()
-					);
-					?>
-				</p><!-- .credit -->
-
 			</div><!-- .wrap -->
+
+                <p class="credit t-bg__1--dark u-p- u-mb0">
+                    <?php
+                    printf(
+                        __( 'Copyright &#169; %1$s %2$s.', 'abraham' ),
+                        date_i18n( 'Y' ), hybrid_get_site_link()
+                    );
+                    ?>
+                </p><!-- .credit -->
 
             <?php tha_footer_bottom(); ?>
 

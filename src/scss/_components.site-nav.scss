@@ -103,7 +103,7 @@
 .menu-active > .sub-menu {
     display: block;
     position: absolute;
-    @extend .bg-white;
+    @extend .t-bg__white;
 }
 
 /* Vertical Menus - show the dropdown arrow */

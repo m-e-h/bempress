@@ -96,9 +96,14 @@
 
 // Colors
 
-.bg-white {
+.t-bg__white {
     background-color: $white;
     color: set-text-color($white);
+}
+
+.t-bg__tint {
+    background-color: $color-tint;
+    color: set-text-color($color-tint);
 }
 
 .t-bg__1 {

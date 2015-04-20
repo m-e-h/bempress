@@ -6,6 +6,10 @@ ul, ol {
 .entry-content ul, .entry-content ol {
     list-style-position: outside;
     padding-left: $base-font-size;
+
+    > li {
+        list-style-type: disc;
+    }
 }
 
 li {
@@ -15,4 +19,8 @@ li {
         margin-bottom: 0;
     }
 
+}
+
+.sidebar li {
+  margin-bottom: $base-spacing-unit--small;
 }

@@ -3,50 +3,6 @@
 \*------------------------------------*/
 
 
-
-// POST NAV
-
-// .pagination {
-//   display: block;
-//   margin-bottom: $base-spacing-unit;
-//   text-align: center;
-//   @include md {
-//     margin-bottom: $base-spacing-unit--large;
-//   }
-//   a {
-//   transition: $base-transition;
-// }
-
-//   a:hover, a:focus {
-//   background-color: $white;
-//   opacity: 1;
-//   color: black;
-// }
-// }
-
-// .page-numbers {
-//   background-color: rgba($white, .8);
-//   border-radius: $base-radius;
-//   display: inline-block;
-//   margin-bottom: 10px;
-//   padding: 10px 20px;
-//   margin-left: 3px;
-//   margin-right: 3px;
-
-//   &.current {
-//   background-color: rgba($blue-grey-900, .1);
-// }
-// }
-
-// .dots {
-//     background: none;
-// }
-
-
-
-
-
-
 // post-navigation
 .nav-links {
   display: flex;
@@ -92,6 +48,7 @@
     @include font-icon($chevron-right, $fa, after);
     &::after {
         padding-left: 5px;
+        vertical-align: bottom;
     }
 }
 
@@ -99,5 +56,6 @@
     @include font-icon($chevron-left);
     &::before {
         padding-right: 5px;
+        vertical-align: bottom;
     }
 }

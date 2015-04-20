@@ -102,8 +102,9 @@ gulp.task('scripts', function() {
 gulp.task('serve', ['default'], function () {
   browserSync({
     //proxy: "local.wordpress.dev"
-    proxy: "local.wordpress-trunk.dev"
+    //proxy: "local.wordpress-trunk.dev"
     //proxy: "doc-beta.dev"
+    proxy: "betainfo.dev"
      });
 
   gulp.watch(['**/*.php'], reload);
