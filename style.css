@@ -3518,8 +3518,7 @@ input[type="submit"]:focus {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    margin-top: -12px; 
-    margin-bottom: 12px;
+    margin-bottom: 12px; 
 
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -3659,13 +3658,11 @@ kbd {
 \*------------------------------------*/
 .breadcrumbs {
     overflow: hidden;
+    margin-top: -12px;
     margin-right: auto;
-    margin-bottom: 12px;
     margin-left: auto;
-    padding: 6px 12px;
-    border-radius: 3px; 
+    padding: 6px; 
     color: #393939;
-    background-color: rgba(255, 255, 255, 0.9);
     font-size: 15px;
     font-size: 0.9375rem;
     font-weight: 500;
@@ -3676,19 +3673,20 @@ kbd {
 }
 @media screen and (min-width: 48em) {
     .breadcrumbs {
-        margin-bottom: 24px;
+        margin-top: -24px;
+        padding: 12px;
     }
 }
 @media screen and (min-width: 64em) {
     .breadcrumbs {
-        margin-bottom: 48px;
+        margin-top: -48px;
     }
 }
 .breadcrumbs > span {
     display: inline-block;
 }
 .breadcrumbs a {
-    opacity: 0.7;
+    opacity: 0.8;
     color: currentColor;
     font-weight: inherit;
     text-decoration: none;
@@ -3703,7 +3701,7 @@ kbd {
     color: #d2d2d2;
 }
 .breadcrumbs .trail-end {
-    color: #9f9f9f; 
+    color: #858585; 
     font-weight: 500;
 }
 

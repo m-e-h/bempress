@@ -8,7 +8,6 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: $base-spacing-unit--small;
-    margin-top: -$base-spacing-unit--small;
   @include md {
     margin-bottom: $base-spacing-unit;
   }

@@ -12,18 +12,17 @@
     @include font-size($base-font-size - 1);
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: $base-spacing-unit--small;
-    padding: $base-spacing-unit--tiny $base-spacing-unit--small;
-    background-color: rgba($white, .9);
-    border-radius: $base-radius;
-    //@include shadow-z1();
+    margin-top: -$base-spacing-unit--small;
+    padding: $base-spacing-unit--tiny;
 
     @include md {
-        margin-bottom: $base-spacing-unit;
+        margin-top: -$base-spacing-unit;
+        padding: $base-spacing-unit--small;
     }
 
         @include lg {
-        margin-bottom: $base-spacing-unit--large;
+            margin-top: -$base-spacing-unit--large;
+            //margin-bottom: $base-spacing-unit--large;
     }
 
     & > span {
@@ -34,7 +33,7 @@
         text-decoration: none;
         color: currentColor;
         font-weight: inherit;
-        opacity: .7;
+        opacity: .8;
         transition: opacity 0.2s ease;
 
         &:hover {
@@ -49,6 +48,6 @@
 
     .trail-end {
         font-weight: 500;
-        color: $grey-400;
+        color: $color-text-light;
     }
 }
