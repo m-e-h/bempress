@@ -2408,7 +2408,7 @@ blockquote {
     border-left: 5px solid currentColor;
 }
 blockquote p {
-    color: #9f9f9f;
+    color: #858585;
     font-weight: 500;
 }
 blockquote p + p {
@@ -3597,7 +3597,7 @@ input[type="submit"]:focus {
 \*------------------------------------*/
 .entry__meta {
     margin-bottom: 0;
-    color: #9f9f9f;
+    color: #858585;
     font-size: 15px;
     font-size: 0.9375rem;
     font-weight: normal;
@@ -3650,7 +3650,7 @@ kbd {
 }
 
 .form-allowed-button {
-    color: #9f9f9f;
+    color: #858585;
     cursor: default;
 }
 
@@ -4008,4 +4008,34 @@ kbd {
     font-size: 14px;
     font-size: 0.875rem;
     line-height: 1.7142857143;
+}
+
+/*----------------------------------------------------*\
+    #To be place in a more appropriate stylesheet later
+\*----------------------------------------------------*/
+.gfield.field_sublabel_below .ginput_container label {
+    font-weight: normal;
+    text-align: center;
+}
+
+.gform_wrapper .ginput_container ul.gfield_radio label {
+    text-align: left;
+}
+
+.field_sublabel_below input {
+    margin-bottom: 0;
+}
+
+.gform_wrapper .ginput_list table.gfield_list tbody tr td.gfield_list_icons {
+    vertical-align: baseline !important;
+}
+
+.gform_wrapper li,
+.gform_wrapper form li {
+    margin-bottom: 24px;
+}
+
+.gform_wrapper li.gfield .gfield_description {
+    padding: 0; 
+    color: #858585;
 }
