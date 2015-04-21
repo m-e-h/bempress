@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d3128100030987cd474e715f1fe14dfc",
+    "hash": "aafced7d085c729c8c68d118c2119acd",
     "packages": [
         {
             "name": "composer/installers",
@@ -102,17 +102,50 @@
             "time": "2015-02-18 17:17:01"
         },
         {
+            "name": "flagshipwp/flagship-library",
+            "version": "1.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FlagshipWP/flagship-library.git",
+                "reference": "c88d898e26437a3d54c93a361c296b9cb2faf55e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FlagshipWP/flagship-library/zipball/c88d898e26437a3d54c93a361c296b9cb2faf55e",
+                "reference": "c88d898e26437a3d54c93a361c296b9cb2faf55e",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Robert Neu",
+                    "email": "rob@flagshipwp.com",
+                    "homepage": "https://flagshipwp.com"
+                }
+            ],
+            "description": "A helpful libray of functions and classes for Flagship themes.",
+            "homepage": "https://github.com/FlagshipWP/flagship-library",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2015-03-30 03:16:45"
+        },
+        {
             "name": "justintadlock/hybrid-core",
             "version": "dev-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/justintadlock/hybrid-core.git",
-                "reference": "e4daee4f5ae67a3199cf5d5aa20b3cbe5e8598e9"
+                "reference": "7aaa35a8ec2d4d8cf761aa5a74984a20fb8776ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/justintadlock/hybrid-core/zipball/e4daee4f5ae67a3199cf5d5aa20b3cbe5e8598e9",
-                "reference": "e4daee4f5ae67a3199cf5d5aa20b3cbe5e8598e9",
+                "url": "https://api.github.com/repos/justintadlock/hybrid-core/zipball/7aaa35a8ec2d4d8cf761aa5a74984a20fb8776ee",
+                "reference": "7aaa35a8ec2d4d8cf761aa5a74984a20fb8776ee",
                 "shasum": ""
             },
             "type": "library",
@@ -137,7 +170,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2015-03-16 19:04:39"
+            "time": "2015-04-20 17:07:30"
         },
         {
             "name": "zamoose/themehookalliance",
