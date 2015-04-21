@@ -24,6 +24,7 @@ add_filter( 'hybrid_attr_sidebar', 'hybrid_attr_sidebar', 5, 2 );
 add_filter( 'hybrid_attr_menu',    'hybrid_attr_menu',    5, 2 );
 
 /* Header attributes. */
+add_filter( 'hybrid_attr_head',             'hybrid_attr_head',             5 );
 add_filter( 'hybrid_attr_branding',         'hybrid_attr_branding',         5 );
 add_filter( 'hybrid_attr_site-title',       'hybrid_attr_site_title',       5 );
 add_filter( 'hybrid_attr_site-description', 'hybrid_attr_site_description', 5 );
@@ -106,14 +107,11 @@ function hybrid_attr_body( $attr ) {
 	$attr['itemscope'] = 'itemscope';
 	$attr['itemtype']  = 'http://schema.org/WebPage';
 
-	if ( is_singular( 'post' ) || is_home() || is_archive() ) {
-		$attr['itemscope'] = '';
-		$attr['itemtype']  = 'http://schema.org/Blog';
-	}
+	if ( is_singular( 'post' ) || is_home() || is_archive() )
+		$attr['itemtype'] = 'http://schema.org/Blog';
 
-	if ( is_search() ) {
-		$attr['itemtype']  = 'http://schema.org/SearchResultsPage';
-	}
+	elseif ( is_search() )
+		$attr['itemtype'] = 'http://schema.org/SearchResultsPage';
 
 	return $attr;
 }
@@ -170,9 +168,8 @@ function hybrid_attr_content( $attr ) {
 	$attr['class']    = 'content';
 	$attr['role']     = 'main';
 
-	if ( ! is_singular( 'post' ) && ! is_home() && ! is_archive() ) {
+	if ( !is_singular( 'post' ) && !is_home() && !is_archive() )
 		$attr['itemprop'] = 'mainContentOfPage';
-	}
 
 	return $attr;
 }
@@ -244,6 +241,22 @@ function hybrid_attr_menu( $attr, $context ) {
 }
 
 /* === header === */
+
+/**
+ * <head> attributes.
+ *
+ * @since  2.1.0
+ * @access public
+ * @param  array   $attr
+ * @return array
+ */
+function hybrid_attr_head( $attr ) {
+
+	$attr['itemscope'] = 'itemscope';
+	$attr['itemtype']  = 'http://schema.org/WebSite';
+
+	return $attr;
+}
 
 /**
  * Branding (usually a wrapper for title and tagline) attributes.
@@ -376,10 +389,9 @@ function hybrid_attr_post( $attr ) {
 
 			$attr['itemtype']  = 'http://schema.org/BlogPosting';
 
-			// Add itemprop if within the main query
-			if ( is_main_query() && ! is_search() ) {
+			/* Add itemprop if within the main query. */
+			if ( is_main_query() && !is_search() )
 				$attr['itemprop'] = 'blogPost';
-			}
 		}
 
 		elseif ( 'attachment' === get_post_type() && wp_attachment_is_image() ) {

@@ -24,6 +24,9 @@ add_filter( 'stylesheet_uri', 'hybrid_min_stylesheet_uri', 5, 2 );
 /* Filters the WP locale stylesheet. */
 add_filter( 'locale_stylesheet_uri', 'hybrid_locale_stylesheet_uri', 5 );
 
+/* Remove the default emoji styles. We'll handle this in the stylesheet. */
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
 /**
  * Registers stylesheets for the framework.  This function merely registers styles with WordPress using
  * the wp_register_style() function.  It does not load any stylesheets on the site.  If a theme wants to 
@@ -35,41 +38,27 @@ add_filter( 'locale_stylesheet_uri', 'hybrid_locale_stylesheet_uri', 5 );
  */
 function hybrid_register_styles() {
 
-	/* Get framework styles. */
-	$styles = hybrid_get_styles();
-
-	/* Get the minified suffix. */
 	$suffix = hybrid_get_min_suffix();
 
-	/* Loop through each style and register it. */
-	foreach ( $styles as $style => $args ) {
-
-		$defaults = array( 
-			'handle'  => $style, 
-			'src'     => trailingslashit( HYBRID_CSS ) . "{$style}{$suffix}.css",
-			'deps'    => null,
-			'version' => false,
-			'media'   => 'all'
-		);
-
-		$args = wp_parse_args( $args, $defaults );
-
-		wp_register_style(
-			sanitize_key( $args['handle'] ), 
-			esc_url( $args['src'] ), 
-			is_array( $args['deps'] ) ? $args['deps'] : null, 
-			preg_replace( '/[^a-z0-9_\-.]/', '', strtolower( $args['version'] ) ), 
-			esc_attr( $args['media'] )
-		);
-	}
+	/* Register styles for use by themes. */
+	wp_register_style( 'hybrid-reset',    trailingslashit( HYBRID_CSS)  . "reset{$suffix}.css",    null, '20110523'                                       );
+	wp_register_style( 'hybrid-one-five', trailingslashit( HYBRID_CSS ) . "one-five{$suffix}.css", null, '20131105'                                       );
+	wp_register_style( 'hybrid-gallery',  trailingslashit( HYBRID_CSS ) . "gallery{$suffix}.css",  null, '20130526'                                       );
+	wp_register_style( 'hybrid-parent',   hybrid_get_parent_stylesheet_uri(),                      null, wp_get_theme( get_template() )->get( 'Version' ) );
+	wp_register_style( 'hybrid-style',    get_stylesheet_uri(),                                    null, wp_get_theme()->get( 'Version' )                 );
 }
 
 /**
  * Tells WordPress to load the styles needed for the framework using the wp_enqueue_style() function.
  *
- * @since  1.5.0
- * @access public
- * @return void
+ * As of version 2.1.0, this function and the use of `add_theme_support( 'hybrid-core-styles' )` has 
+ * been deprecated. Theme authors should use `wp_enqueue_style()` to enqueue one of the appropriate 
+ * framework styles registered in `hybrid_register_styles()`.
+ *
+ * @since      1.5.0
+ * @deprecated 2.1.0
+ * @access     public
+ * @return     void
  */
 function hybrid_enqueue_styles() {
 
@@ -82,46 +71,30 @@ function hybrid_enqueue_styles() {
 
 	/* Loop through each of the core framework styles and enqueue them if supported. */
 	foreach ( $supports[0] as $style )
-		wp_enqueue_style( $style );
+		wp_enqueue_style( "hybrid-{$style}" );
 }
 
 /**
- * Returns an array of the core framework's available styles for use in themes.
+ * Returns the parent theme stylesheet URI.  Will return the active theme's stylesheet URI if no child 
+ * theme is active. Be sure to check `is_child_theme()` when using.
  *
- * @since  1.5.0
+ * @since  2.1.0
  * @access public
- * @return array
+ * @return string
  */
-function hybrid_get_styles() {
+function hybrid_get_parent_stylesheet_uri() {
 
 	/* Get the minified suffix. */
 	$suffix = hybrid_get_min_suffix();
 
-	/* Default styles available. */
-	$styles = array(
-		'one-five'   => array( 'version' => '20131105' ),
-		'gallery'    => array( 'version' => '20130526' ),
-	);
+	/* Get the parent theme stylesheet. */
+	$stylesheet_uri = trailingslashit( THEME_URI ) . 'style.css';
 
-	/* If a child theme is active, add the parent theme's style. */
-	if ( is_child_theme() ) {
-		$parent = wp_get_theme( get_template() );
+	/* If a '.min' version of the parent theme stylesheet exists, use it. */
+	if ( !empty( $suffix ) && file_exists( trailingslashit( THEME_DIR ) . "style{$suffix}.css" ) )
+		$stylesheet_uri = trailingslashit( THEME_URI ) . "style{$suffix}.css";
 
-		/* Get the parent theme stylesheet. */
-		$src = trailingslashit( THEME_URI ) . "style.css";
-
-		/* If a '.min' version of the parent theme stylesheet exists, use it. */
-		if ( !empty( $suffix ) && file_exists( trailingslashit( THEME_DIR ) . "style{$suffix}.css" ) )
-			$src = trailingslashit( THEME_URI ) . "style{$suffix}.css";
-
-		$styles['parent'] = array( 'src' => $src, 'version' => $parent->get( 'Version' ) );
-	}
-
-	/* Add the active theme style. */
-	$styles['style'] = array( 'src' => get_stylesheet_uri(), 'version' => wp_get_theme()->get( 'Version' ) );
-
-	/* Return the array of styles. */
-	return apply_filters( 'hybrid_styles', $styles );
+	return apply_filters( 'hybrid_get_parent_stylesheet_uri', $stylesheet_uri );
 }
 
 /**
