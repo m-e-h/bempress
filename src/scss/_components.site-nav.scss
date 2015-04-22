@@ -2,35 +2,9 @@
     #SITE NAVIGATION
 \*------------------------------------*/
 
-
-.menu {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.menu--fixed {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 3;
-}
-
-.menu__list,
-.menu__item {
-    position: relative;
-}
-
 .menu__list {
-    list-style: none;
     margin: 0;
     padding: 0;
-}
-
-.menu__item {
-    padding: 0;
-    margin: 0;
-    height: 100%;
 }
 
 .menu__item > a,
@@ -46,12 +20,7 @@
     padding: .5em 1em;
 }
 
-
-/**
- * Dropdowns
- */
-
- .menu--horizontal {
+.menu--horizontal {
     width: 100%;
     white-space: nowrap;
 }
@@ -59,20 +28,127 @@
 .menu--horizontal .menu__list {
     display: inline-block;
 }
-
 /* Initial menus should be inline-block so that they are horizontal */
+
 .menu--horizontal .menu__item,
 .menu--horizontal .menu__heading,
 .menu--horizontal .menu-separator {
-    display: inline-block;
-    *display: inline;
+    @include md {
+        display: inline-block;
+        *display: inline;
+    }
     zoom: 1;
     vertical-align: middle;
 }
 
+.header-wrap {
+    height: 60px;
+}
 
+.site-header.is-open,
+.site-header.is-open ~ .site-inner {
+    transform: translate(250px, 0);
+}
 
+.menu-toggle {
+    font-size: 11px;
+    border-radius: 0;
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    background-color: transparent;
+    transition: background-color 0.2s ease-out;
+    -webkit-tap-highlight-color: transparent;
+}
 
+.menu-toggle span {
+    display: block;
+}
+
+.menu-toggle span,
+.menu-toggle span:before,
+.menu-toggle span:after {
+    background-color: #fff;
+    width: 100%;
+    height: .2em;
+    transition: all 0.4s;
+}
+
+.menu-toggle span:before,
+.menu-toggle span:after {
+    position: absolute;
+    top: -.55em;
+    left: 0;
+    content: " ";
+}
+
+.menu-toggle span:after {
+    top: .55em;
+}
+
+.menu-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-toggle:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    outline: 0;
+}
+
+.menu-toggle:active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.is-open .menu-toggle span {
+    background: transparent;
+}
+
+.is-open .menu-toggle span:before {
+    transform: rotate(45deg) translate(0.5em, 0.4em);
+}
+
+.is-open .menu-toggle span:after {
+    transform: rotate(-45deg) translate(0.4em, -0.3em);
+}
+
+.menu-primary {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    height: 100%;
+    transform: translate(-250px, 0);
+}
+
+.menu-primary.is-open {
+    transform: translate(0, 0);
+}
+
+.site-header,
+.menu-primary.has-opened,
+.site-inner {
+    transition: transform 0.3s ease-out;
+}
+/** Larger Screens - desktops and tablets **/
+
+@include md {
+    .site-header.is-open, .site-header.is-open ~ .site-inner {
+        transform: translate(0px, 0);
+    }
+    .header-wrap {
+        height: 100%;
+    }
+    .menu-toggle {
+        display: none;
+    }
+    .menu-primary {
+        position: relative;
+        width: 100%;
+        transform: translate(0, 0);
+        transition: none;
+    }
+}
 /**
  * Dropdowns
  */
@@ -105,16 +181,15 @@
     position: absolute;
     @extend .t-bg__white;
 }
-
 /* Vertical Menus - show the dropdown arrow */
+
 .menu-item-has-children > a:after {
     padding-left: 0.5em;
     content: "\25B8";
     font-size: small;
 }
-
 /* Horizontal Menus - show the dropdown arrow */
+
 .menu--horizontal .menu-item-has-children > a:after {
     content: "\25BE";
 }
-

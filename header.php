@@ -34,6 +34,8 @@
 
 			<div <?php hybrid_attr( 'wrap', 'header' ); ?>>
 
+                <button class="menu-toggle" aria-controls="menu-primary" aria-expanded="false"><span></span></button>
+
 				<div <?php hybrid_attr( 'branding' ); ?>>
 					<?php flagship_the_logo(); ?>
 					<?php hybrid_site_title(); ?>
@@ -44,9 +46,9 @@
 
 			<?php tha_header_bottom(); ?>
 
-      <?php hybrid_get_menu( 'primary' ); ?>
-
 		</header><!-- #header -->
+
+      <?php hybrid_get_menu( 'primary' ); ?>
 
     <?php tha_header_after(); ?>
 

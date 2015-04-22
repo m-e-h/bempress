@@ -35,3 +35,9 @@ h1, h2, h3, h4, h5, h6{font-weight: inherit;}
   flex-shrink: 0;
   word-wrap: break-word;
 }
+
+/**
+ * Set the default behavior for touch-based browsing in IE 10 on devices
+ * running Windows 8.
+ */
+canvas {-ms-touch-action: double-tap-zoom;}

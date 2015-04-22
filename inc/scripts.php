@@ -58,14 +58,7 @@ function bempress_enqueue_styles() {
  * Enqueue theme scripts.
  */
 function bempress_enqueue_scripts() {
-	$js_dir = trailingslashit( get_template_directory_uri() ) . 'js/';
-	$suffix = hybrid_get_min_suffix();
+    $suffix = hybrid_get_min_suffix();
 
-	wp_enqueue_script(
-		'bempress',
-		$js_dir . "theme{$suffix}.js",
-		[ 'jquery' ],
-		null,
-		true
-	);
+    wp_enqueue_script( 'abraham-main', trailingslashit( get_template_directory_uri() ) . 'js/main.js', [], null, true );
 }
