@@ -11,11 +11,12 @@
     outline: 0;
     letter-spacing: 1px;
     transition: $base-transition;
-    &:hover,
-    &:active,
-    &:focus {
+    &:hover, &:active, &:focus {
         opacity: 1;
-        @include bg-text($btn-bg-hover);
+        background-color: $btn-bg-hover;
+    }
+    &:active {
+        background-color: $btn-bg-active;
     }
 }
 
@@ -28,32 +29,24 @@ input[type="submit"] {
 }
 
 .button--transparent {
-  color: inherit;
-  background-color: transparent;
-
-    &:hover,
-    &:active,
-    &:focus {
-  color: inherit;
-  background-color: $color-grey-ui;
+    color: inherit;
+    background-color: transparent;
+    &:hover, &:active, &:focus {
+        color: inherit;
+        background-color: $color-grey-ui;
     }
 }
 
-
 .button--outline {
-  color: $btn-bg;
-  background-color: transparent;
-  border-width: 2px;
-  border-style: solid;
-  border-color: currentColor;
-
-
-    &:hover,
-    &:active,
-    &:focus {
-  @include bg-text($btn-bg-hover);
-  background-color: $btn-bg-hover;
-  border-color: $btn-bg-hover;
+    color: $btn-bg;
+    background-color: transparent;
+    border-width: 2px;
+    border-style: solid;
+    border-color: currentColor;
+    &:hover, &:active, &:focus {
+        @include bg-text($btn-bg-hover);
+        background-color: $btn-bg-hover;
+        border-color: $btn-bg-hover;
     }
 }
 

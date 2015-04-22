@@ -1,15 +1,25 @@
 a {
     text-decoration: none;
     color: inherit;
-    transition: opacity $base-transition;
-
-    &:hover,
-    &:focus {
+    transition: $base-transition;
+    &:hover, &:focus {
         opacity: $base-opacity;
+        transition: $base-transition;
     }
-
 }
 
 .entry-content a:not(.button) {
     color: $color-links;
+    border-bottom: 1px solid transparent;
+    transition: $base-transition;
+    &:hover, &:focus {
+        color: $color-links-hover;
+        opacity: 1;
+        border-bottom-color: lighten($color-links-hover, 10);
+        transition: $base-transition;
+    }
+    &:active {
+        color: $color-primary;
+        transition: $base-transition;
+    }
 }

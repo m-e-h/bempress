@@ -6,6 +6,18 @@
  */
 
 add_action( 'init', 'bempress_register_image_sizes', 5 );
+
+add_filter( 'excerpt_length', 'bempress_excerpt_length' );
+
+add_filter( 'excerpt_more', 'bempress_excerpt_more' );
+
+add_action( 'tha_entry_bottom', 'abraham_do_format_icon' );
+
+add_action( 'after_setup_theme', 'bempress_responsive_videos_init', 99 );
+
+add_filter( 'hybrid_attr_comments-area', 'flagship_attr_comments_area' );
+
+
 /**
  * Register custom image sizes for the theme.
  *
@@ -21,7 +33,7 @@ function bempress_register_image_sizes() {
 	add_image_size( 'bempress-full', 1025, 500, true );
 }
 
-add_filter( 'excerpt_length', 'bempress_excerpt_length' );
+
 /**
  * Add a custom excerpt length.
  *
@@ -35,6 +47,14 @@ function bempress_excerpt_length( $length ) {
 }
 
 
+function bempress_excerpt_more( $more ) {
+    $link = sprintf( '<a href="%1$s" class="more-link">%2$s</a>',
+        esc_url( get_permalink( get_the_ID() ) ),
+        /* translators: %s: Name of current post */
+        sprintf( __( 'Continue reading %s', 'bempress' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
+        );
+    return '&hellip; ' . $link;
+}
 
 
 /**
@@ -56,7 +76,7 @@ function bempress_get_default_footer_text() {
 
 
 
-add_action( 'tha_entry_bottom', 'abraham_do_format_icon' );
+
 
 
 function abraham_do_format_icon() { ?>
@@ -105,7 +125,7 @@ function bempress_responsive_videos_init() {
     /* Wrap videos in Buddypress */
     add_filter( 'bp_embed_oembed_html', 'bempress_responsive_videos_embed_html' );
 }
-add_action( 'after_setup_theme', 'bempress_responsive_videos_init', 99 );
+
 /**
  * Adds a wrapper to videos and enqueue script
  *
@@ -123,9 +143,9 @@ function bempress_responsive_videos_embed_html( $html ) {
 
 
 
-add_filter( 'hybrid_attr_comments-area',   'flagship_attr_comments_area' );
+
 /**
- * Page site container element attributes.
+ * Comment area attributes.
  *
  * @since  1.0.0
  * @access public

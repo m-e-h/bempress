@@ -2347,16 +2347,34 @@ h6 {
 a {
     color: inherit;
     text-decoration: none;
-    -webkit-transition: opacity 0.22222222s;
-    transition: opacity 0.22222222s;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
 }
 a:hover,
 a:focus {
     opacity: 0.7;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
 }
 
 .entry-content a:not(.button) {
+    border-bottom: 1px solid transparent;
     color: #385996;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+}
+.entry-content a:not(.button):hover,
+.entry-content a:not(.button):focus {
+    border-bottom-color: #91a9d6;
+    opacity: 1;
+    color: #6c8cc8;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+}
+.entry-content a:not(.button):active {
+    color: #476fba;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
 }
 
 ul,
@@ -3402,8 +3420,8 @@ input[type="submit"] {
     vertical-align: middle;
     letter-spacing: 1px;
     cursor: pointer;
-    -webkit-transition: 0.22222222s;
-    transition: 0.22222222s;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
 }
 .btn:hover,
 button:hover,
@@ -3430,7 +3448,16 @@ input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus {
     opacity: 1;
-    color: rgba(255, 255, 255, 0.9); 
+    background-color: #6c8cc8;
+}
+.btn:active,
+button:active,
+.button:active,
+.page-numbers:active,
+.badge a:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
     background-color: #385996;
 }
 
@@ -3463,10 +3490,10 @@ input[type="submit"]:focus {
 .badge a:active,
 .button--outline:focus,
 .badge a:focus {
-    border-color: #385996; 
-    color: rgba(255, 255, 255, 0.9);
-    background-color: #385996;
-    background-color: #385996;
+    border-color: #6c8cc8; 
+    color: rgba(0, 0, 0, 0.9);
+    background-color: #6c8cc8;
+    background-color: #6c8cc8;
 }
 
 .button--tiny,

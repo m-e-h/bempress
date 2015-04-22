@@ -8,7 +8,10 @@
 
 <?php
 	if ( ! post_password_required() ) {
-		the_excerpt();
+		the_excerpt( sprintf(
+            __( 'Continue reading %s', 'yourtheme' ),
+            the_title( '<span class="screen-reader-text">', '</span>', false )
+        ) );
 	}
 ?>
 
