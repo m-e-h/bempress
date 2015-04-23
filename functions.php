@@ -73,7 +73,7 @@ function bempress_setup() {
     ], ['default' => is_rtl() ? '2c-r' :'2c-l'] );
 
     // Set up the WordPress core custom background feature.
-    add_theme_support( 'custom-background', apply_filters( '_s_custom_background_args', [
+    add_theme_support( 'custom-background', apply_filters( 'bempress_custom_background_args', [
         'default-color' => 'f5f5f5',
         'default-image' => '',
     ] ) );
@@ -89,13 +89,12 @@ function bempress_includes() {
 
 	//require_once $includes_dir . 'flagship-library/flagship-library.php';
     require_once $includes_dir . 'flagship.php';
-	require_once $includes_dir . 'tha-theme-hooks.php';
-	require_once $includes_dir . 'general.php';
-	require_once $includes_dir . 'scripts.php';
-	require_once $includes_dir . 'widgetize.php';
-	require_once $includes_dir . 'html-min.php';
+    require_once $includes_dir . 'tha-theme-hooks.php';
+    require_once $includes_dir . 'general.php';
+    require_once $includes_dir . 'scripts.php';
+    require_once $includes_dir . 'widgetize.php';
+    require_once $includes_dir . 'html-min.php';
     require_once $includes_dir . 'customizer/customizer.php';
-    require_once $includes_dir . 'customizer/custom-background.php';
 
     require_once $includes_dir . 'css-classes.php';
     new AttrTrumps();
