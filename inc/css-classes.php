@@ -13,12 +13,12 @@ class AttrTrumps {
 	public $site_container    			= '';	// site-container
 	public $site_inner   				= ' u-ph- u-ph@md u-ph+@lg grid grid--flex';	// site-inner
 	public $site_inner_full_width		= ' ';
-	public $site_inner_single_column 	= ' wrapper';
-	public $site_inner_sidebar_right 	= ' wrapper';
-	public $site_inner_sidebar_left 	= ' wrapper grid--rev';
-	public $wrap                		= ' wrapper';
+	public $site_inner_single_column 	= ' wrap';
+	public $site_inner_sidebar_right 	= ' wrap';
+	public $site_inner_sidebar_left 	= ' wrap grid--rev';
+	public $wrap                		= '';
 	public $header_wrap                	= ' flex';
-	public $header                		= ' t-bg__1'; 	// site-header
+	public $header                		= ' t-bg__1 u-mb- u-mb0@md'; 	// site-header
 	public $footer                		= ' t-bg__1 u-pt- u-pt@md u-pt+@lg'; 	// site-footer
 	public $content 					= ' grid__item'; 	// content
 	public $content_full_width			= ' u-1of1'; 	// content
@@ -52,11 +52,11 @@ class AttrTrumps {
 
 	/* Post-specific attributes. */
 	public $post                  		= ' t-bg__white br shadow--z1 u-p- u-p@md u-p+@lg u-mb- u-mb@md u-mb+@lg';	// get_post_class()
-	public $entry_title           		= ' wrapper entry__title';	// entry-title
+	public $entry_title           		= ' wrap entry__title';	// entry-title
 	public $entry_author          		= ' u-mr- entry__author';	// entry-author
 	public $entry_published       		= ' u-mr- entry__date';	// entry-published updated
-	public $entry_content         		= ' wrapper';	// entry-content
-	public $entry_summary         		= ' wrapper';	// entry-summary
+	public $entry_content         		= ' wrap';	// entry-content
+	public $entry_summary         		= ' wrap';	// entry-summary
 	public $entry_terms           		= ' badge';	// entry-terms
 
     public $comments_area               = ' t-bg__white br shadow--z1 u-p- u-p@md u-p+@lg u-mb- u-mb@md u-mb+@lg'; // entry-terms

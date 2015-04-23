@@ -1035,104 +1035,104 @@ Tags:
      * Remove margins.
      */
 @media screen and (max-width: 35.5em) {
-    .u\@sm-m0 {
+    .u-m0\@sm {
         margin: 0;
     }
-    .u\@sm-mt0 {
+    .u-mt0\@sm {
         margin-top: 0;
     }
-    .u\@sm-mr0 {
+    .u-mr0\@sm {
         margin-right: 0;
     }
-    .u\@sm-mb0 {
+    .u-mb0\@sm {
         margin-bottom: 0;
     }
-    .u\@sm-ml0 {
+    .u-ml0\@sm {
         margin-left: 0;
     }
-    .u\@sm-mh0 {
+    .u-mh0\@sm {
         margin-right: 0;
         margin-left: 0;
     }
-    .u\@sm-mv0 {
+    .u-mv0\@sm {
         margin-top: 0;
         margin-bottom: 0;
     }
 }
 
 @media screen and (min-width: 48em) {
-    .u\@md-m0 {
+    .u-m0\@md {
         margin: 0;
     }
-    .u\@md-mt0 {
+    .u-mt0\@md {
         margin-top: 0;
     }
-    .u\@md-mr0 {
+    .u-mr0\@md {
         margin-right: 0;
     }
-    .u\@md-mb0 {
+    .u-mb0\@md {
         margin-bottom: 0;
     }
-    .u\@md-ml0 {
+    .u-ml0\@md {
         margin-left: 0;
     }
-    .u\@md-mh0 {
+    .u-mh0\@md {
         margin-right: 0;
         margin-left: 0;
     }
-    .u\@md-mv0 {
+    .u-mv0\@md {
         margin-top: 0;
         margin-bottom: 0;
     }
 }
 
 @media screen and (min-width: 64em) {
-    .u\@lg-m0 {
+    .u-m0\@lg {
         margin: 0;
     }
-    .u\@lg-mt0 {
+    .u-mt0\@lg {
         margin-top: 0;
     }
-    .u\@lg-mr0 {
+    .u-mr0\@lg {
         margin-right: 0;
     }
-    .u\@lg-mb0 {
+    .u-mb0\@lg {
         margin-bottom: 0;
     }
-    .u\@lg-ml0 {
+    .u-ml0\@lg {
         margin-left: 0;
     }
-    .u\@lg-mh0 {
+    .u-mh0\@lg {
         margin-right: 0;
         margin-left: 0;
     }
-    .u\@lg-mv0 {
+    .u-mv0\@lg {
         margin-top: 0;
         margin-bottom: 0;
     }
 }
 
 @media screen and (min-width: 80em) {
-    .u\@xl-m0 {
+    .u-m0\@xl {
         margin: 0;
     }
-    .u\@xl-mt0 {
+    .u-mt0\@xl {
         margin-top: 0;
     }
-    .u\@xl-mr0 {
+    .u-mr0\@xl {
         margin-right: 0;
     }
-    .u\@xl-mb0 {
+    .u-mb0\@xl {
         margin-bottom: 0;
     }
-    .u\@xl-ml0 {
+    .u-ml0\@xl {
         margin-left: 0;
     }
-    .u\@xl-mh0 {
+    .u-mh0\@xl {
         margin-right: 0;
         margin-left: 0;
     }
-    .u\@xl-mv0 {
+    .u-mv0\@xl {
         margin-top: 0;
         margin-bottom: 0;
     }
@@ -2997,7 +2997,9 @@ textarea {
     vertical-align: baseline;
 }
 
-input:not([type="submit"]) {
+input:not([type="submit"]),
+select {
+    min-height: 40px; 
     line-height: normal;
 }
 
@@ -3111,7 +3113,6 @@ fieldset {
 .post-password-form input[type="password"] {
     width: 100%;
     margin: 0;
-    padding: 10px;
 
     appearance: none;
 }
@@ -3155,7 +3156,8 @@ fieldset {
 /*------------------------------------*\
     #Layout Wrappers
 \*------------------------------------*/
-.wrapper {
+.wrapper,
+.wrap {
     max-width: 1240px;
     margin-right: auto; 
     margin-left: auto;
@@ -3949,9 +3951,6 @@ kbd {
     .breadcrumbs {
         margin-top: -48px;
     }
-}
-.breadcrumbs > span {
-    display: inline-block;
 }
 .breadcrumbs a {
     opacity: 0.8;

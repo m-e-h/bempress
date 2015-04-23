@@ -19,5 +19,7 @@
     		'separator'     => '/',
     		'show_browse'   => false,
     		'show_on_front' => false,
+            'before' => '<div class="wrap">',
+            'after' => '</div>',
 		] );
 	}

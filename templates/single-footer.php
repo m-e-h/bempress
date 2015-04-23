@@ -11,13 +11,13 @@
 		<?php
 		hybrid_post_terms( [
             'taxonomy' => 'category',
-            'before'   => '<p class="tax-links tax-links--cat">',
+            'before'   => '<p class="tax-links wrap tax-links--cat">',
             'after'    => '</p>',
             'sep'        => _x( ' ', 'taxonomy terms separator', 'bempress' ),
 		] );
 		hybrid_post_terms( [
     		'taxonomy' => 'post_tag',
-    		'before'   => '<p class="tax-links tax-links--tag">',
+    		'before'   => '<p class="tax-links wrap tax-links--tag">',
     		'after'    => '</p>',
             'sep'        => _x( ' ', 'taxonomy terms separator', 'bempress' ),
 		] );

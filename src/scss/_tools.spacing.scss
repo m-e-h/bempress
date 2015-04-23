@@ -540,13 +540,13 @@ $generate-spacing-alias: null;
 
     @include generate-spacing() {
 
-        .#{$spacing-namespace}u\@#{$generate-spacing-alias}-m0       { margin:           0; }
-        .#{$spacing-namespace}u\@#{$generate-spacing-alias}-mt0      { margin-top:       0; }
-        .#{$spacing-namespace}u\@#{$generate-spacing-alias}-mr0      { margin-right:     0; }
-        .#{$spacing-namespace}u\@#{$generate-spacing-alias}-mb0      { margin-bottom:    0; }
-        .#{$spacing-namespace}u\@#{$generate-spacing-alias}-ml0      { margin-left:      0; }
-        .#{$spacing-namespace}u\@#{$generate-spacing-alias}-mh0      { margin-right:     0; margin-left:      0; }
-        .#{$spacing-namespace}u\@#{$generate-spacing-alias}-mv0      { margin-top:       0; margin-bottom:    0; }
+        .#{$spacing-namespace}u-m0\@#{$generate-spacing-alias}       { margin:           0; }
+        .#{$spacing-namespace}u-mt0\@#{$generate-spacing-alias}      { margin-top:       0; }
+        .#{$spacing-namespace}u-mr0\@#{$generate-spacing-alias}      { margin-right:     0; }
+        .#{$spacing-namespace}u-mb0\@#{$generate-spacing-alias}      { margin-bottom:    0; }
+        .#{$spacing-namespace}u-ml0\@#{$generate-spacing-alias}      { margin-left:      0; }
+        .#{$spacing-namespace}u-mh0\@#{$generate-spacing-alias}      { margin-right:     0; margin-left:      0; }
+        .#{$spacing-namespace}u-mv0\@#{$generate-spacing-alias}      { margin-top:       0; margin-bottom:    0; }
 
     }
 

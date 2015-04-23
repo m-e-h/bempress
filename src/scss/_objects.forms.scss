@@ -13,8 +13,10 @@ textarea {
 	margin-bottom: $base-spacing-unit;
 }
 
-input:not([type="submit"]) {
+input:not([type="submit"]),
+select {
 	line-height: normal;
+    min-height: 40px;
 }
 
 input:not([type="submit"]),
@@ -129,7 +131,7 @@ fieldset {
 .search-form input[type=search],
 .post-password-form input[type="password"] {
   margin: 0;
-  padding: 10px;
+  //padding: 10px;
   width: 100%;
   appearance: none;
 }
