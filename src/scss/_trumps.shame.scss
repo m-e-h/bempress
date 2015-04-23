@@ -36,3 +36,10 @@
     color: $color-text-light;
     padding: 0;
 }
+
+
+
+iframe[src*="google.com/maps"] {
+    max-width: 100%;
+    width: 100%;
+}

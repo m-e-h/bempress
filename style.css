@@ -4336,3 +4336,8 @@ kbd {
     padding: 0; 
     color: #858585;
 }
+
+iframe[src*="google.com/maps"] {
+    width: 100%; 
+    max-width: 100%;
+}
