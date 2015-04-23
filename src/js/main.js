@@ -293,7 +293,7 @@ if("document" in self){if(!("classList" in document.createElement("_"))){(functi
 
   var querySelector = document.querySelector.bind(document);
 
-  var navdrawerContainer = querySelector('.menu');
+  var navdrawerContainer = querySelector('.menu-primary');
   var body = document.body;
   var appbarElement = querySelector('#header');
   var menuBtn = querySelector('.menu-toggle');
