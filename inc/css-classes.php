@@ -11,7 +11,7 @@ class AttrTrumps {
 	/* Attributes for major structural elements. */
 	public $body                  		= '';	// get_body_class()
 	public $site_container    			= '';	// site-container
-	public $site_inner   				= ' u-ph- u-ph@md u-ph+@lg grid grid--flex';	// site-inner
+	public $site_inner   				= ' grid grid--flex';	// site-inner
 	public $site_inner_full_width		= ' ';
 	public $site_inner_single_column 	= ' wrap';
 	public $site_inner_sidebar_right 	= ' wrap';
@@ -32,13 +32,16 @@ class AttrTrumps {
 	public $sidebar_sidebar_right 		= ' u-1of3@md';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_left		= ' u-1of3@md';	// sidebar sidebar__{$context}
 	public $sidebar_footer          	= ' u-pl- u-pl@md u-pl+@lg grid grid--flex';	// sidebar sidebar__{$context}
-	public $menu_primary 				= ' shadow--z2 t-bg__1--dark menu--horizontal u-mb- u-mb@md u-mb+@lg';	// menu menu-{$context}
+	public $menu_primary 				= ' shadow--z2 t-bg__1--dark menu--horizontal u-mb@md u-mb+@lg';	// menu menu-{$context}
 	public $menu_secondary 				= ' menu--horizontal';	// menu menu-{$context}
 	public $menu_li_primary         	= 'menu__item';	// menu-item
 	public $menu_li_secondary       	= 'menu__item';	// menu-item
 	public $menu_li_social          	= 'menu__item--social';	// menu-item
 
-    public $author_box                  = ' t-bg__white br shadow--z1 u-p- u-p@md u-p+@lg u-mb- u-mb@md u-mb+@lg';
+    public $nav_single                  = ' wrap flex flex--justify u-mb- u-mb@md u-mb+@lg'; // menu-item
+    public $nav_archive                 = ' tryingit'; // menu-item
+
+    public $author_box                  = ' t-bg__white br u-p- u-p@md u-p+@lg u-mb- u-mb@md u-mb+@lg';
 
 	/* Header attributes. */
 	public $branding              		= ' page-title u-p- u-p@md u-p+@lg';	// site-branding
@@ -51,7 +54,7 @@ class AttrTrumps {
 	public $loop_description      		= '';	// loop-description
 
 	/* Post-specific attributes. */
-	public $post                  		= ' t-bg__white br shadow--z1 u-p- u-p@md u-p+@lg u-mb- u-mb@md u-mb+@lg';	// get_post_class()
+	public $post                  		= ' t-bg__white br u-p- u-p@md u-p+@lg u-mb- u-mb@md u-mb+@lg';	// get_post_class()
 	public $entry_title           		= ' wrap entry__title';	// entry-title
 	public $entry_author          		= ' u-mr- entry__author';	// entry-author
 	public $entry_published       		= ' u-mr- entry__date';	// entry-published updated
@@ -59,7 +62,7 @@ class AttrTrumps {
 	public $entry_summary         		= ' wrap';	// entry-summary
 	public $entry_terms           		= ' badge';	// entry-terms
 
-    public $comments_area               = ' t-bg__white br shadow--z1 u-p- u-p@md u-p+@lg u-mb- u-mb@md u-mb+@lg'; // entry-terms
+    public $comments_area               = ' t-bg__white br u-p- u-p@md u-p+@lg u-mb- u-mb@md u-mb+@lg'; // entry-terms
 
 
 
@@ -88,6 +91,8 @@ class AttrTrumps {
 		add_filter( 'hybrid_attr_site-description',	[ $this, 'site_description' ] );
 		add_filter( 'hybrid_attr_loop-title',		[ $this, 'loop_title' ] );
 		add_filter( 'hybrid_attr_loop-description',	[ $this, 'loop_description' ] );
+
+        add_filter( 'hybrid_attr_nav',              [ $this, 'nav' ], 10, 2 );
 
 		/* Post-specific. */
 		add_filter( 'hybrid_attr_post',				[ $this, 'post' ] );
@@ -151,6 +156,20 @@ class AttrTrumps {
 		}
 		return $attr;
 	}
+
+
+    public function nav( $attr, $context ) {
+
+
+        if ( 'single' === $context ) {
+        $attr['class']    .= $this->nav_single;
+        }
+        if ( 'archive' === $context ) {
+        $attr['class']    .= $this->nav_archive;
+        }
+        return $attr;
+    }
+
 
     public function comments_area( $attr ) {
         $attr['class']    .= $this->comments_area;
