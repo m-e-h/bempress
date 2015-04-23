@@ -7,7 +7,7 @@
 ?><!doctype html>
 <?php tha_html_before(); ?>
 <html <?php language_attributes(); ?>>
-<head>
+<head <?php hybrid_attr( 'head' ); ?>>
 <?php tha_head_top(); ?>
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <?php wp_head(); ?>
