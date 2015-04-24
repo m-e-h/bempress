@@ -32,23 +32,19 @@
 
 		<?php tha_header_top(); ?>
 
+<?php hybrid_get_menu( 'primary' ); ?>
+
 			<div <?php hybrid_attr( 'wrap', 'header' ); ?>>
 
                 <button class="menu-toggle" aria-controls="menu-primary" aria-expanded="false"><span></span></button>
 
-				<div <?php hybrid_attr( 'branding' ); ?>>
-					<?php flagship_the_logo(); ?>
-					<?php hybrid_site_title(); ?>
-					<?php hybrid_site_description(); ?>
-				</div><!-- #branding -->
+
 
 			</div><!-- .wrap -->
 
 			<?php tha_header_bottom(); ?>
 
 		</header><!-- #header -->
-
-      <?php hybrid_get_menu( 'primary' ); ?>
 
     <?php tha_header_after(); ?>
 

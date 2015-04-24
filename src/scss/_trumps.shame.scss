@@ -43,3 +43,22 @@ iframe[src*="google.com/maps"] {
     max-width: 100%;
     width: 100%;
 }
+
+.site-logo {
+    height: 70px;
+    width: 100%;
+}
+
+.site-logo-link {
+  display: inline-block;
+  max-width: 120px;
+  vertical-align: middle;
+}
+
+.site-branding {
+    display: inline-block;
+}
+
+.site-title {
+    display: inline-block;
+}

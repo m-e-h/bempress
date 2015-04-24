@@ -8,4 +8,5 @@
 
 # Generated theme files
 *.map
+composer.lock
 src/composer/

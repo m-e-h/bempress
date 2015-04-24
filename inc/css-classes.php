@@ -32,7 +32,7 @@ class AttrTrumps {
 	public $sidebar_sidebar_right 		= ' u-1of3@md';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_left		= ' u-1of3@md';	// sidebar sidebar__{$context}
 	public $sidebar_footer          	= ' u-pl- u-pl@md u-pl+@lg grid grid--flex';	// sidebar sidebar__{$context}
-	public $menu_primary 				= ' shadow--z2 t-bg__1--dark menu--horizontal u-mb@md u-mb+@lg';	// menu menu-{$context}
+	public $menu_primary 				= ' shadow--z2 t-bg__1--dark menu--horizontal u-mb@md u-mb+@lg flex flex--justify';	// menu menu-{$context}
 	public $menu_secondary 				= ' menu--horizontal';	// menu menu-{$context}
 	public $menu_li_primary         	= 'menu__item';	// menu-item
 	public $menu_li_secondary       	= 'menu__item';	// menu-item
@@ -44,7 +44,7 @@ class AttrTrumps {
     public $author_box                  = ' t-bg__white br u-p- u-p@md u-p+@lg u-mb- u-mb@md u-mb+@lg';
 
 	/* Header attributes. */
-	public $branding              		= ' page-title u-p- u-p@md u-p+@lg';	// site-branding
+	public $branding              		= ' page-title u-p-';	// site-branding
 	public $site_title            		= ' page-title__main';	// site-title
 	public $site_description      		= ' page-title__sub';	// site-description
 
