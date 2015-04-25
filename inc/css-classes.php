@@ -11,14 +11,14 @@ class AttrTrumps {
 	/* Attributes for major structural elements. */
 	public $body                  		= '';	// get_body_class()
 	public $site_container    			= '';	// site-container
-	public $site_inner   				= ' grid grid--flex';	// site-inner
+	public $site_inner   				= ' grid grid--flex u-mt- u-mt@md u-mt+@lg';	// site-inner
 	public $site_inner_full_width		= ' ';
 	public $site_inner_single_column 	= ' wrap';
 	public $site_inner_sidebar_right 	= ' wrap';
 	public $site_inner_sidebar_left 	= ' wrap grid--rev';
 	public $wrap                		= '';
 	public $header_wrap                	= ' wrapper--wide flex--justify u-p-';
-	public $header                		= ' shadow--z2 t-bg__1 u-mb- u-mb0@md'; 	// site-header
+	public $header                		= ' shadow--z2 t-bg__1'; 	// site-header
 	public $footer                		= ' t-bg__1 u-pt- u-pt@md u-pt+@lg'; 	// site-footer
 	public $content 					= ' grid__item'; 	// content
 	public $content_full_width			= ' u-1of1'; 	// content
@@ -32,11 +32,9 @@ class AttrTrumps {
 	public $sidebar_sidebar_right 		= ' u-1of3@md';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_left		= ' u-1of3@md';	// sidebar sidebar__{$context}
 	public $sidebar_footer          	= ' u-pl- u-pl@md u-pl+@lg grid grid--flex';	// sidebar sidebar__{$context}
-	public $menu_primary 				= ' menu--horizontal t-bg__1--dark u-mb@md u-mb+@lg';	// menu menu-{$context}
+	public $menu_primary 				= ' menu--horizontal t-bg__1--dark';	// menu menu-{$context}
 	public $menu_secondary 				= ' menu--horizontal';	// menu menu-{$context}
-	public $menu_li_primary         	= 'menu__item';	// menu-item
-	public $menu_li_secondary       	= 'menu__item';	// menu-item
-	public $menu_li_social          	= 'menu__item--social';	// menu-item
+	public $menu_li         			= 'menu__item';	// menu-item
 
     public $nav_single                  = ' wrap flex flex--justify u-mb- u-mb@md u-mb+@lg'; // menu-item
     public $nav_archive                 = ' tryingit'; // menu-item
@@ -50,8 +48,8 @@ class AttrTrumps {
 
 	/* Loop attributes. */
 	public $loop_meta             		= ' u-p- u-p@md u-p+@lg u-mb- u-mb@md u-mb+@lg br t-bg__2--light';	// loop-meta
-	public $loop_title            		= '';	// loop-title
-	public $loop_description      		= '';	// loop-description
+	public $loop_title            		= ' u-mb0';	// loop-title
+	public $loop_description      		= ' u-mt-';	// loop-description
 
 	/* Post-specific attributes. */
 	public $post                  		= ' t-bg__white br u-p- u-p@md u-p+@lg u-mb- u-mb@md u-mb+@lg';	// get_post_class()
@@ -264,14 +262,7 @@ class AttrTrumps {
 	/* === COMPONENTS === */
 
 	public function menu_li( $classes, $item ) {
-	    if ( $menu_name = 'primary' ) :
-			$classes[] = $this->menu_li_primary;
-		elseif ( $menu_name = 'secondary' ) :
-			$classes[] = $this->menu_li_secondary;
-		elseif ( $menu_name = 'social' ) :
-			$classes[] = $this->menu_li_social;
-		endif;
-
+		$classes[] = $this->menu_li;
 	    return $classes;
 	}
 
