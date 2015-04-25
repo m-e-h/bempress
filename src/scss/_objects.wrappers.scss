@@ -9,11 +9,13 @@
 }
 
 .wrapper--wide {
-    max-width: none;
+    max-width: 100%;
+    width: 100%;
 }
 
 .header-wrap {
 	display: block;
+    margin: 0;
 
 	@include md {
 		display: flex;

@@ -15,8 +15,16 @@
     color: currentColor;
 }
 
-.menu-secondary__list > li > a {
+.menu-secondary{
+    &__list {
+    align-self: center;
+    > li {
+    display: inline-block;
+    > a {
     @extend .button;
+    }
+}
+}
 }
 
 .sub-menu > .menu__item > a {

@@ -44,14 +44,6 @@ iframe[src*="google.com/maps"] {
     width: 100%;
 }
 
-.site-header {
-    display: flex;
-
-    @include md {
-        display: block;
-    }
-}
-
 .site-logo {
     height: 70px;
     width: 100%;
@@ -65,11 +57,13 @@ iframe[src*="google.com/maps"] {
 
 .site-branding {
     display: inline-block;
+    align-self: center;
 }
 
 .site-title {
     display: inline-block;
-    line-height: 1.5;
+    line-height: 1;
+    vertical-align: middle;
 }
 
 .widget ul:last-of-type, p:last-of-type {

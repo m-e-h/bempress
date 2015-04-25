@@ -17,8 +17,8 @@ class AttrTrumps {
 	public $site_inner_sidebar_right 	= ' wrap';
 	public $site_inner_sidebar_left 	= ' wrap grid--rev';
 	public $wrap                		= '';
-	public $header_wrap                	= ' wrapper--wide flex--justify u-p-';
-	public $header                		= ' shadow--z2 t-bg__1'; 	// site-header
+	public $header_wrap                	= ' wrapper--wide flex--justify';
+	public $header                		= ' shadow--z2 t-bg__1 flex@sm'; 	// site-header
 	public $footer                		= ' t-bg__1 u-pt- u-pt@md u-pt+@lg'; 	// site-footer
 	public $content 					= ' grid__item'; 	// content
 	public $content_full_width			= ' u-1of1'; 	// content
@@ -32,8 +32,8 @@ class AttrTrumps {
 	public $sidebar_sidebar_right 		= ' u-1of3@md';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_left		= ' u-1of3@md';	// sidebar sidebar__{$context}
 	public $sidebar_footer          	= ' u-pl- u-pl@md u-pl+@lg grid grid--flex';	// sidebar sidebar__{$context}
-	public $menu_primary 				= ' menu--horizontal t-bg__1--dark';	// menu menu-{$context}
-	public $menu_secondary 				= ' menu--horizontal';	// menu menu-{$context}
+	public $menu_primary 				= ' menu--horizontal t-bg__1--dark flex flex-j--center';	// menu menu-{$context}
+	public $menu_secondary 				= ' menu--horizontal u-p- u-1of1@sm flex flex-j--center';	// menu menu-{$context}
 	public $menu_li         			= 'menu__item';	// menu-item
 
     public $nav_single                  = ' wrap flex flex--justify u-mb- u-mb@md u-mb+@lg'; // menu-item
@@ -42,7 +42,7 @@ class AttrTrumps {
     public $author_box                  = ' t-bg__white br u-p- u-p@md u-p+@lg u-mb- u-mb@md u-mb+@lg';
 
 	/* Header attributes. */
-	public $branding              		= ' page-title';	// site-branding
+	public $branding              		= ' page-title u-p-';	// site-branding
 	public $site_title            		= ' page-title__main';	// site-title
 	public $site_description      		= ' page-title__sub';	// site-description
 
