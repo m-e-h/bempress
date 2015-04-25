@@ -32,11 +32,13 @@
 
 		<?php tha_header_top(); ?>
 
-			<div <?php hybrid_attr( 'wrap', 'header' ); ?>>
-			  
         <button class="menu-toggle" aria-controls="menu-primary" aria-expanded="false">
           <span></span>
         </button>
+        
+			<div <?php hybrid_attr( 'wrap', 'header' ); ?>>
+			  
+
 
         <div <?php hybrid_attr( 'branding' ); ?>>
             <?php flagship_the_logo(); ?>
