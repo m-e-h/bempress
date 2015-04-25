@@ -76,7 +76,6 @@ gulp.task('tha', function () {
 gulp.task('styles', function () {
   return gulp.src([
     'src/scss/*.scss',
-    'src/scss/**/*.css',
     'src/scss/style.scss'
   ])
     .pipe($.changed('styles', {extension: '.scss'}))
@@ -107,11 +106,11 @@ gulp.task('scripts', function() {
 });
 
 // Build and serve the output
-gulp.task('serve', ['default'], function () {
+gulp.task('serve', ['styles'], function () {
   browserSync({
     //proxy: "local.wordpress.dev"
-    proxy: "local.wordpress-trunk.dev"
-    //proxy: "doc-beta.dev"
+    //proxy: "local.wordpress-trunk.dev"
+    proxy: "doc.dev"
     //proxy: "betainfo.dev"
      });
 
@@ -123,5 +122,5 @@ gulp.task('serve', ['default'], function () {
 
 // Build Production Files, the Default Task
 gulp.task('default', function (cb) {
-  runSequence('composer', ['scripts', 'images', 'styles', 'hybrid', 'flagship', 'tha'], cb);
+  runSequence('styles', ['composer', 'scripts', 'images', 'hybrid', 'flagship', 'tha'], cb);
 });
