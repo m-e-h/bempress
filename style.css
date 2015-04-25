@@ -2990,7 +2990,7 @@ textarea {
     margin: 0;
     margin-bottom: 24px; 
     border-radius: 3px;
-    background-color: rgba(139, 160, 171, 0.2);
+    background-color: #e4e9eb;
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.5;
@@ -3165,8 +3165,18 @@ fieldset {
 
 .wrapper--wide {
     max-width: none;
-    padding-right: 5%;
-    padding-left: 5%;
+}
+
+.header-wrap {
+    display: block;
+}
+@media screen and (min-width: 48em) {
+    .header-wrap {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
 }
 
 /*------------------------------------*\
@@ -3475,7 +3485,7 @@ input[type="submit"]:active {
 .button--transparent:focus,
 .page-numbers:focus {
     color: inherit;
-    background-color: rgba(23, 29, 32, 0.1);
+    background-color: #e4e9eb;
 }
 
 .button--outline,
@@ -3509,8 +3519,8 @@ input[type="submit"]:active {
 
 .button--muted,
 .current {
-    border-color: rgba(23, 29, 32, 0.1); 
-    background-color: rgba(23, 29, 32, 0.1);
+    border-color: #e4e9eb; 
+    background-color: #e4e9eb;
 }
 
 .c-testimonial {
@@ -3583,7 +3593,6 @@ input[type="submit"]:active {
 }
 
 .menu--horizontal {
-    width: 100%;
     white-space: nowrap;
 }
 
@@ -3606,10 +3615,6 @@ input[type="submit"]:active {
 
         *display: inline;
     }
-}
-
-.header-wrap {
-    height: 60px;
 }
 
 .site-header.is-open,
@@ -4169,9 +4174,19 @@ kbd {
     background-color: #fff;
 }
 
-.t-bg__tint {
+.t-bg__grey {
+    color: rgba(0, 0, 0, 0.9); 
+    background-color: #9f9f9f;
+}
+
+.t-bg__grey--dark {
     color: rgba(255, 255, 255, 0.9); 
-    background-color: rgba(23, 29, 32, 0.3);
+    background-color: #525252;
+}
+
+.t-bg__grey--light {
+    color: rgba(0, 0, 0, 0.9); 
+    background-color: #ebebeb;
 }
 
 .t-bg__1 {
@@ -4359,4 +4374,5 @@ iframe[src*="google.com/maps"] {
 
 .site-title {
     display: inline-block;
+    line-height: 1.5;
 }

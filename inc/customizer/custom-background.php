@@ -25,7 +25,7 @@ function bempress_custom_background_setup() {
     add_theme_support(
         'custom-background',
         array(
-            'default-color'    => 'f5f5f5',
+            'default-color'    => 'ffffff',
             'default-image'    => '',
             'wp-head-callback' => 'bempress_custom_background_callback',
         )

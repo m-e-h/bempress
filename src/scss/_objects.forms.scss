@@ -4,7 +4,7 @@
 input:not([type="submit"]),
 select,
 textarea {
-	background-color: rgba($blue-grey-400, .2);
+	background-color: $color-grey-ui;
 	border-radius: $base-radius;
 	@include font-size($base-font-size);
 	margin: 0;

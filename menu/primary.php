@@ -21,7 +21,7 @@
     		'theme_location'  => 'primary',
     		'container'       => '',
     		'menu_id'         => 'primary',
-    		'menu_class'      => 'menu__list menu-primary__list',
+    		'menu_class'      => 'menu__list menu-primary__list flex flex--justify ',
     		'fallback_cb'     => '',
             'items_wrap'      => '<ul id="%s" class="%s">%s</ul>'
 		] );

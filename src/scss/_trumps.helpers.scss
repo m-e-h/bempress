@@ -100,8 +100,16 @@
     @include bg-text($white);
 }
 
-.t-bg__tint {
-    @include bg-text($color-tint);
+.t-bg__grey {
+    @include bg-text($color-grey);
+}
+
+.t-bg__grey--dark {
+    @include bg-text($color-grey-dark);
+}
+
+.t-bg__grey--light {
+    @include bg-text($color-grey-light);
 }
 
 .t-bg__1 {

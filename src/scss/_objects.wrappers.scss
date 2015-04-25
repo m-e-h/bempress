@@ -10,6 +10,12 @@
 
 .wrapper--wide {
     max-width: none;
-    padding-right: 5%;
-    padding-left:  5%;
+}
+
+.header-wrap {
+	display: block;
+
+	@include md {
+		display: flex;
+	}
 }
