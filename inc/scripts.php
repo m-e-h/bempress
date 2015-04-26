@@ -43,6 +43,9 @@ function bempress_rtl_add_data() {
  * Enqueue theme styles.
  */
 function bempress_enqueue_styles() {
+	
+	$suffix = hybrid_get_min_suffix();
+	
 	wp_register_style(
 		'google-fonts',
 		'//fonts.googleapis.com/css?family=Raleway:400,600|Lato:400,400italic,700',
@@ -51,6 +54,10 @@ function bempress_enqueue_styles() {
 	);
 
     wp_enqueue_style( 'bem-font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
+    
+	if ( is_child_theme() )
+		wp_enqueue_style( 'parent', trailingslashit( get_template_directory_uri() ) . "style{$suffix}.css" );
+	wp_enqueue_style( 'style', get_stylesheet_uri() );
 }
 
 
