@@ -3188,6 +3188,10 @@ fieldset {
     }
 }
 
+.site-container {
+    overflow: hidden;
+}
+
 /*------------------------------------*\
     #BLOCK
 \*------------------------------------*/
@@ -4404,6 +4408,7 @@ iframe[src*="google.com/maps"] {
     vertical-align: middle;
 }
 
+.widget li:last-of-type,
 .widget ul:last-of-type,
 p:last-of-type {
     margin-bottom: 0;
