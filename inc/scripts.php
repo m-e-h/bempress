@@ -19,10 +19,10 @@ add_action( 'wp_enqueue_scripts', 'bempress_enqueue_scripts' );
  */
 function bempress_add_editor_styles() {
 	// Set up editor styles
-	$editor_styles = [
-		'//fonts.googleapis.com/css?family=Raleway:400,600|Lato:400,400italic,700',
-		'assets/css/editor-style.css',
-	];
+    $editor_styles = [
+    '//fonts.googleapis.com/css?family=Raleway:400,600|Lato:400,400italic,700',
+    'css/editor-style.css',
+    ];
 
 	// Add the editor styles.
 	add_editor_style( $editor_styles );
@@ -34,8 +34,8 @@ function bempress_add_editor_styles() {
  * language is being used.
  */
 function bempress_rtl_add_data() {
-	wp_style_add_data( 'style', 'rtl', 'replace' );
-	wp_style_add_data( 'style', 'suffix', hybrid_get_min_suffix() );
+    wp_style_add_data( 'style', 'rtl', 'replace' );
+    wp_style_add_data( 'style', 'suffix', hybrid_get_min_suffix() );
 }
 
 
@@ -43,21 +43,23 @@ function bempress_rtl_add_data() {
  * Enqueue theme styles.
  */
 function bempress_enqueue_styles() {
-	
-	$suffix = hybrid_get_min_suffix();
-	
-	wp_register_style(
-		'google-fonts',
-		'//fonts.googleapis.com/css?family=Raleway:400,600|Lato:400,400italic,700',
-		[],
-		null
-	);
 
-    wp_enqueue_style( 'bem-font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
-    
-	if ( is_child_theme() )
-		wp_enqueue_style( 'parent', trailingslashit( get_template_directory_uri() ) . "style{$suffix}.css" );
-	wp_enqueue_style( 'style', get_stylesheet_uri() );
+    $suffix = hybrid_get_min_suffix();
+
+    wp_enqueue_style(
+        'bem-font-awesome',
+        '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'
+    );
+
+if ( is_child_theme() )
+    wp_enqueue_style(
+        'parent',
+        trailingslashit( get_template_directory_uri() ) . "style{$suffix}.css"
+    );
+    wp_enqueue_style(
+        'style',
+        get_stylesheet_uri()
+    );
 }
 
 
@@ -67,5 +69,8 @@ function bempress_enqueue_styles() {
 function bempress_enqueue_scripts() {
     $suffix = hybrid_get_min_suffix();
 
-    wp_enqueue_script( 'abraham-main', trailingslashit( get_template_directory_uri() ) . 'js/main.js', [], null, true );
+    wp_enqueue_script(
+        'bempress-main',
+        trailingslashit( get_template_directory_uri() ) . 'js/main.js', [], null, true
+    );
 }

@@ -15,17 +15,14 @@ new Hybrid();
 
 
 
-
 add_action( 'after_setup_theme', 'bempress_setup', 10 );
-
 add_action( 'after_setup_theme', 'bempress_includes', 10 );
+
+
 
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
- *
- * @since   1.0.0
- * @return  void
  */
 function bempress_setup() {
 

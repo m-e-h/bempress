@@ -5,7 +5,6 @@
  * @package BEMpress
  */
 
-
 if ( ! is_active_sidebar( 'footer' ) ) {
 		return;
 }
