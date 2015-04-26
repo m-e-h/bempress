@@ -47,7 +47,7 @@ class AttrTrumps {
 	public $site_description      		= ' page-title__sub';	// site-description
 
 	/* Loop attributes. */
-	public $loop_meta             		= ' u-p- u-p@md u-p+@lg u-mb- u-mb@md u-mb+@lg br t-bg__2--light';	// loop-meta
+	public $loop_meta             		= ' u-p- u-p@md u-ph+@lg u-mb- u-mb@md u-mb+@lg br t-bg__2--light';	// loop-meta
 	public $loop_title            		= ' u-mb0';	// loop-title
 	public $loop_description      		= ' u-mt-';	// loop-description
 
