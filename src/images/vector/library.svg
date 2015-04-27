@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1" class="toggle-img toggle-dpc" enable-background="new 0 0 48 48" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 48 48">
- <g transform="matrix(.91304 0 0 .94444 2.087 7.2222)" class="t-fill__3--light">
+ <g transform="matrix(.91304 0 0 .94444 2.087 7.2222)" class="t-fill__2--light">
   <rect y="38" x="1" height="2" width="46"/>
   <rect y="18" x="25" height="16" width="4"/>
   <rect y="18" x="31" height="16" width="4"/>
@@ -11,7 +11,7 @@
   <polygon points="24 4 43 13 43 16 5 16 5 13"/>
   <rect y="34" x="5" height="2" width="38"/>
  </g>
- <g transform="matrix(.91304 0 0 .94444 2.087 7.2222)" class="t-fill__3--dark">
+ <g transform="matrix(.91304 0 0 .94444 2.087 7.2222)" class="t-fill__2--dark">
   <rect y="16" x="25" height="2" width="4"/>
   <rect y="16" x="31" height="2" width="4"/>
   <rect y="16" x="37" height="2" width="4"/>
