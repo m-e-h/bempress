@@ -356,11 +356,13 @@ Tags:
 /**
      * Add small paddings.
      */
-.u-p- {
+.u-p-,
+.u-p\@all {
     padding: 12px;
 }
 
-.u-pt- {
+.u-pt-,
+.u-pt-wrap {
     padding-top: 12px;
 }
 
@@ -1170,10 +1172,12 @@ Tags:
 }
 
 @media screen and (min-width: 48em) {
-    .u-p\@md {
+    .u-p\@md,
+    .u-p\@all {
         padding: 24px;
     }
-    .u-pt\@md {
+    .u-pt\@md,
+    .u-pt-wrap {
         padding-top: 24px;
     }
     .u-pr\@md {
@@ -1517,10 +1521,12 @@ Tags:
 }
 
 @media screen and (min-width: 64em) {
-    .u-p\+\@lg {
+    .u-p\+\@lg,
+    .u-p\@all {
         padding: 48px;
     }
-    .u-pt\+\@lg {
+    .u-pt\+\@lg,
+    .u-pt-wrap {
         padding-top: 48px;
     }
     .u-pr\+\@lg {
