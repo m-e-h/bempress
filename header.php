@@ -50,8 +50,8 @@
 
 		</header><!-- #header -->
 
-		<?php hybrid_get_menu( 'primary' ); ?>
+        <?php tha_header_after(); ?>
 
-    <?php tha_header_after(); ?>
+		<?php hybrid_get_menu( 'primary' ); ?>
 
 		<div <?php hybrid_attr( 'site-inner' ); ?>>
