@@ -10,7 +10,7 @@
 
 
 // Do we want to use classes like `<div class="u-1/4">` instead of
-// `<div class="u-1-of-4">`?
+// `<div class="u-2of3@md">`?
 $use-fractions: false !default;
 
 // Depending on what we chose for `$use-fractions`, create the relevant
