@@ -20,7 +20,7 @@
     }
 }
 
-.h2, .entry-title {
+.h2, .entry__title {
     @include font-size($heading-size-3);
     @include md {
         @include font-size($heading-size-2);
