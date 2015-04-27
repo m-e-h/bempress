@@ -1,13 +1,13 @@
-.u-link-bare {
+.u-link--bare {
     text-decoration: none !important;
 }
 
-.u-link-natural {
+.u-link--natural {
     text-decoration: underline !important;
     color: inherit !important;
 }
 
-.u-link-obvious {
+.u-link--obvious {
     text-decoration: underline !important;
 }
 
@@ -15,4 +15,12 @@
     &:hover{
     opacity: 1;
 }
+}
+
+.u-link--object {
+    cursor: pointer;
+    &.is-active, &:hover, &:focus {
+        opacity: $base-opacity;
+        transition: $base-transition;
+    }
 }

@@ -3412,28 +3412,34 @@ fieldset {
     #BOX SHADOWS
 \*------------------------------------*/
 .shadow--z1 {
+    z-index: 5; 
     box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
 }
 
 .shadow--z2 {
+    z-index: 5; 
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23);
 }
 
 .shadow--z3 {
+    z-index: 5; 
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 0 6px 3px 0 rgba(0, 0, 0, 0.23);
 }
 
 .shadow--z4 {
+    z-index: 5; 
     box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.25), 0 10px 5px 0 rgba(0, 0, 0, 0.22);
 }
 
 .shadow--z5 {
+    z-index: 5; 
     box-shadow: 0 19px 19px 0 rgba(0, 0, 0, 0.3), 0 15px 6px 0 rgba(0, 0, 0, 0.22);
 }
 
 .btn,
 button,
 .button,
+.menu__item > a,
 .menu-secondary__list > li > a,
 .page-numbers,
 .badge a,
@@ -3458,6 +3464,7 @@ input[type="submit"] {
 .btn:hover,
 button:hover,
 .button:hover,
+.menu__item > a:hover,
 .menu-secondary__list > li > a:hover,
 .page-numbers:hover,
 .badge a:hover,
@@ -3467,6 +3474,7 @@ input[type="submit"]:hover,
 .btn:active,
 button:active,
 .button:active,
+.menu__item > a:active,
 .menu-secondary__list > li > a:active,
 .page-numbers:active,
 .badge a:active,
@@ -3476,6 +3484,7 @@ input[type="submit"]:active,
 .btn:focus,
 button:focus,
 .button:focus,
+.menu__item > a:focus,
 .menu-secondary__list > li > a:focus,
 .page-numbers:focus,
 .badge a:focus,
@@ -3488,28 +3497,43 @@ input[type="submit"]:focus {
 .btn:active,
 button:active,
 .button:active,
+.menu__item > a:active,
 .menu-secondary__list > li > a:active,
 .page-numbers:active,
 .badge a:active,
 input[type="button"]:active,
 input[type="reset"]:active,
-input[type="submit"]:active {
+input[type="submit"]:active,
+.btn.is-active,
+button.is-active,
+.is-active.button,
+.menu__item > a.is-active,
+.menu-secondary__list > li > a.is-active,
+.is-active.page-numbers,
+.badge a.is-active,
+input.is-active[type="button"],
+input.is-active[type="reset"],
+input.is-active[type="submit"] {
     background-color: #385996;
 }
 
 .button--transparent,
+.menu__item > a,
 .page-numbers {
     color: inherit;
     background-color: transparent;
 }
 .button--transparent:hover,
+.menu__item > a:hover,
 .page-numbers:hover,
 .button--transparent:active,
+.menu__item > a:active,
 .page-numbers:active,
 .button--transparent:focus,
+.menu__item > a:focus,
 .page-numbers:focus {
     color: inherit;
-    background-color: #e4e9eb;
+    background-color: rgba(228, 233, 235, 0.3);
 }
 
 .button--outline,
@@ -3545,6 +3569,60 @@ input[type="submit"]:active {
 .current {
     border-color: #e4e9eb; 
     background-color: #e4e9eb;
+}
+
+/* Underline From Center */
+.button--tab {
+    overflow: hidden;
+    position: relative;
+    background: none; 
+    box-shadow: 0 0 1px transparent;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.button--tab:hover,
+.button--tab:active,
+.button--tab.is-active,
+.button--tab:focus {
+    background-color: transparent;
+}
+
+.button--tab:before {
+    position: absolute;
+    z-index: -1;
+    right: 50%;
+    bottom: 0;
+    left: 50%;
+    height: 4px;
+    background: #fff;
+    content: "";
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out; 
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+}
+
+.button--tab:hover:before,
+.button--tab:focus:before,
+.button--tab.is-active:before,
+.button--tab:active:before {
+    right: 0; 
+    left: 0;
+}
+
+.button--tab:hover:before {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.button--tab:focus:before,
+.button--tab.is-active:before,
+.button--tab:active:before {
+    background: #fff;
 }
 
 .c-testimonial {
@@ -3601,14 +3679,6 @@ input[type="submit"]:active {
 .menu__list {
     margin: 0;
     padding: 0;
-}
-
-.menu__item > a {
-    display: block;
-    padding: 1em;
-    color: currentColor; 
-    white-space: nowrap;
-    text-decoration: none;
 }
 
 .menu-secondary__list {
@@ -3784,9 +3854,11 @@ input[type="submit"]:active {
 .sub-menu {
     display: none;
     position: absolute;
-    z-index: 3;
+    z-index: 10;
+    z-index: 5; 
     top: 0;
     left: 100%;
+    min-width: 180px;
     margin: 0;
     padding: 0;
     border-radius: 3px;
@@ -3800,7 +3872,7 @@ input[type="submit"]:active {
 }
 
 .menu-item-has-children:hover > .sub-menu,
-.menu-active > .sub-menu {
+.menu-item-has-children.is-active > .sub-menu {
     display: block;
     position: absolute;
 }
@@ -4092,21 +4164,32 @@ kbd {
 /**
  * #TRUMPS
  */
-.u-link-bare {
+.u-link--bare {
     text-decoration: none !important;
 }
 
-.u-link-natural {
+.u-link--natural {
     color: inherit !important; 
     text-decoration: underline !important;
 }
 
-.u-link-obvious {
+.u-link--obvious {
     text-decoration: underline !important;
 }
 
 .navigation a:hover {
     opacity: 1;
+}
+
+.u-link--object {
+    cursor: pointer;
+}
+.u-link--object.is-active,
+.u-link--object:hover,
+.u-link--object:focus {
+    opacity: 0.7;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
 }
 
 /*------------------------------------*\
@@ -4195,17 +4278,17 @@ kbd {
     margin: 0 auto;
 }
 
-.link {
-    cursor: pointer;
-}
-
 .br {
     border-radius: 3px;
 }
 
+.u-round {
+    border-radius: 50% !important;
+}
+
 .t-bg__white,
 .menu-item-has-children:hover > .sub-menu,
-.menu-active > .sub-menu {
+.menu-item-has-children.is-active > .sub-menu {
     color: rgba(0, 0, 0, 0.9); 
     background-color: #fff;
 }

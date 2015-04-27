@@ -8,11 +8,13 @@
 }
 
 .menu__item > a {
-    display: block;
-    text-decoration: none;
-    white-space: nowrap;
-    padding: 1em;
-    color: currentColor;
+    // display: block;
+    // text-decoration: none;
+    // white-space: nowrap;
+    // padding: 1em;
+    // color: currentColor;
+    @extend .button;
+    @extend .button--transparent;
 }
 
 .menu-secondary{
@@ -174,7 +176,8 @@
     top: 0;
     margin: 0;
     padding: 0;
-    z-index: 3;
+    z-index: 10;
+    min-width: 180px;
     border-radius: $base-radius;
     @include shadow-z3();
 }
@@ -186,7 +189,7 @@
 }
 
 .menu-item-has-children:hover > .sub-menu,
-.menu-active > .sub-menu {
+.menu-item-has-children.is-active > .sub-menu {
     display: block;
     position: absolute;
     @extend .t-bg__white;
