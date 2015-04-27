@@ -3,8 +3,10 @@
 \*------------------------------------*/
 
 html {
-    font-size: ($base-font-size / 16px) * 1em;
-    line-height: $base-line-height / $base-font-size;
+    @include font-size(15px);
+    @include md {
+        @include font-size($base-font-size);
+    }
     color: $base-text-color;
     min-height: 100%;
     background-color: #ffffff;

@@ -75,3 +75,9 @@ iframe[src*="google.com/maps"] {
     @extend .u-p\@md;
     @extend .u-p\+\@lg;
 }
+
+.u-ph\@all {
+    @extend .u-ph-;
+    @extend .u-ph\@md;
+    @extend .u-ph\+\@lg;
+}

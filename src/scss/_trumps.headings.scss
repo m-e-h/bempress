@@ -14,15 +14,24 @@
  */
 
 .h1, .site-title {
-    @include font-size($heading-size-1);
+    @include font-size($heading-size-2);
+    @include md {
+        @include font-size($heading-size-1);
+    }
 }
 
 .h2, .entry-title {
-    @include font-size($heading-size-2);
+    @include font-size($heading-size-3);
+    @include md {
+        @include font-size($heading-size-2);
+    }
 }
 
 .h3, .widget-title {
-    @include font-size($heading-size-3);
+    @include font-size($heading-size-4);
+    @include md {
+        @include font-size($heading-size-3);
+    }
 }
 
 .h4 {

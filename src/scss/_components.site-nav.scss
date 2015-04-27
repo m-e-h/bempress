@@ -13,6 +13,7 @@
     // white-space: nowrap;
     // padding: 1em;
     // color: currentColor;
+    width: 100%;
     @extend .button;
     @extend .button--transparent;
 }
@@ -38,7 +39,12 @@
 }
 
 .menu--horizontal .menu__list {
+    display: block;
+    width: 100%;
+    @include md {
     display: inline-block;
+    width: auto;
+}
 }
 /* Initial menus should be inline-block so that they are horizontal */
 
@@ -180,6 +186,10 @@
     min-width: 180px;
     border-radius: $base-radius;
     @include shadow-z3();
+
+    a {
+        width: 100%;
+    }
 }
 
 .menu--horizontal .sub-menu {

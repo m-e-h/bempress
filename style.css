@@ -378,7 +378,8 @@ Tags:
     padding-left: 12px;
 }
 
-.u-ph- {
+.u-ph-,
+.u-ph\@all {
     padding-right: 12px;
     padding-left: 12px;
 }
@@ -1189,7 +1190,8 @@ Tags:
     .u-pl\@md {
         padding-left: 24px;
     }
-    .u-ph\@md {
+    .u-ph\@md,
+    .u-ph\@all {
         padding-right: 24px;
         padding-left: 24px;
     }
@@ -1538,7 +1540,8 @@ Tags:
     .u-pl\+\@lg {
         padding-left: 48px;
     }
-    .u-ph\+\@lg {
+    .u-ph\+\@lg,
+    .u-ph\@all {
         padding-right: 48px;
         padding-left: 48px;
     }
@@ -2170,7 +2173,6 @@ textarea {
 
 :root {
     box-sizing: border-box;
-    font: 16px/1.5 sans-serif;
     cursor: default;
     text-rendering: optimizeLegibility;
 }
@@ -2274,8 +2276,16 @@ html {
     min-height: 100%;
     color: #333;
     background-color: #fff; 
-    font-size: 1em;
-    line-height: 1.5;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+@media screen and (min-width: 48em) {
+    html {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
 }
 
 h1,
@@ -3681,6 +3691,10 @@ input.is-active[type="submit"] {
     padding: 0;
 }
 
+.menu__item > a {
+    width: 100%;
+}
+
 .menu-secondary__list {
     -webkit-align-self: center;
     align-self: center; 
@@ -3699,7 +3713,14 @@ input.is-active[type="submit"] {
 }
 
 .menu--horizontal .menu__list {
-    display: inline-block;
+    display: block;
+    width: 100%;
+}
+@media screen and (min-width: 48em) {
+    .menu--horizontal .menu__list {
+        display: inline-block;
+        width: auto;
+    }
 }
 
 /* Initial menus should be inline-block so that they are horizontal */
@@ -3863,6 +3884,9 @@ input.is-active[type="submit"] {
     padding: 0;
     border-radius: 3px;
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 0 6px 3px 0 rgba(0, 0, 0, 0.23);
+}
+.sub-menu a {
+    width: 100%;
 }
 
 .menu--horizontal .sub-menu {
@@ -4408,23 +4432,47 @@ kbd {
  */
 .h1,
 .site-title {
-    font-size: 36px;
-    font-size: 2.25rem;
-    line-height: 1.3333333333;
-}
-
-.h2,
-.entry-title {
     font-size: 30px;
     font-size: 1.875rem;
     line-height: 1.6;
 }
+@media screen and (min-width: 48em) {
+    .h1,
+    .site-title {
+        font-size: 36px;
+        font-size: 2.25rem;
+        line-height: 1.3333333333;
+    }
+}
 
-.h3,
-.widget-title {
+.h2,
+.entry-title {
     font-size: 24px;
     font-size: 1.5rem;
     line-height: 1;
+}
+@media screen and (min-width: 48em) {
+    .h2,
+    .entry-title {
+        font-size: 30px;
+        font-size: 1.875rem;
+        line-height: 1.6;
+    }
+}
+
+.h3,
+.widget-title {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+@media screen and (min-width: 48em) {
+    .h3,
+    .widget-title {
+        font-size: 24px;
+        font-size: 1.5rem;
+        line-height: 1;
+    }
 }
 
 .h4 {
