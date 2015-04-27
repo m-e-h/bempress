@@ -5,14 +5,6 @@
  * @package BEMpress
  */
 
-
-$layoutcards = new Doc_Attributes;
-	public $post               = ' block__content';	// get_post_class()
-	public $entry_title        = ' block__heading';	// entry-title
-	public $entry_author       = ' block__meta entry-meta__item entry-meta__author';	// entry-author
-	public $entry_published    = ' block__meta entry-meta__item entry-meta__date';	// entry-published updated
-
-
 ?>
 
 <div class="block">
@@ -51,25 +43,5 @@ $layoutcards = new Doc_Attributes;
 	<?php tha_entry_bottom(); ?>
 </article><!-- .entry -->
 
-<?php if ( has_term( '', 'category' ) || has_term( '', 'post_tag' ) ) : ?>
-
-	<footer class="block__footer">
-		<?php
-		hybrid_post_terms( [
-			'taxonomy' => 'category',
-			'before'   => '<p class="entry-meta categories">',
-			'after'    => '</p>',
-		] );
-		hybrid_post_terms( [
-			'taxonomy' => 'post_tag',
-			'before'   => '<p class="entry-meta tags">',
-			'after'    => '</p>',
-		] );
-		?>
-	</footer><!-- .entry-footer -->
-
-<?php
-endif;
-?>
 </div>
 
