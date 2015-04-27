@@ -4266,6 +4266,10 @@ kbd {
     background-color: #ffb236;
 }
 
+.t-fill__white {
+    fill: #fff;
+}
+
 .t-fill__1 {
     fill: #476fba;
 }
