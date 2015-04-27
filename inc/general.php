@@ -11,7 +11,7 @@ add_filter( 'excerpt_length', 'bempress_excerpt_length' );
 
 add_filter( 'excerpt_more', 'bempress_excerpt_more' );
 
-add_action( 'tha_entry_bottom', 'abraham_do_format_icon' );
+//add_action( 'tha_entry_bottom', 'abraham_do_format_icon' );
 
 add_action( 'after_setup_theme', 'bempress_responsive_videos_init', 99 );
 
