@@ -22,6 +22,12 @@
 	}
 }
 
+.u-pt-wrap {
+    @extend .u-pt-;
+    @extend .u-pt\@md;
+    @extend .u-pt\+\@lg;
+}
+
 .site-container {
     overflow: hidden;
 }

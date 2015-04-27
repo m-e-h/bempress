@@ -69,3 +69,9 @@ iframe[src*="google.com/maps"] {
 .widget li:last-of-type, .widget ul:last-of-type, p:last-of-type {
     margin-bottom: 0;
 }
+
+.u-p\@all {
+    @extend .u-p-;
+    @extend .u-p\@md;
+    @extend .u-p\+\@lg;
+}
