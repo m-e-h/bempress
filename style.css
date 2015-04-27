@@ -4195,6 +4195,10 @@ kbd {
     margin: 0 auto;
 }
 
+.link {
+    cursor: pointer;
+}
+
 .br {
     border-radius: 3px;
 }
