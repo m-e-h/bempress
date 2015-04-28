@@ -106,6 +106,10 @@
     @include bg-text($color-grey);
 }
 
+.t-bg__tint {
+    @include bg-text($color-tint);
+}
+
 .t-bg__grey--dark {
     @include bg-text($color-grey-dark);
 }

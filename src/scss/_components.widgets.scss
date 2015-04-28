@@ -3,10 +3,6 @@
 \*------------------------------------*/
 
 .widget {
-    // margin-bottom: $base-spacing-unit;
-    // padding: 0 $base-spacing-unit;
-    //padding-top: 0;
-    flex: 1 300px;
     min-width: 300px;
     width: 100%;
     display: flex;
@@ -18,13 +14,12 @@
     }
 
     &__wrap {
-        background-color: rgba($blue-grey-900, .1);
-        padding: $base-spacing-unit;
-        flex: 1;
+        //display: block;
+        flex: 1 auto;
     }
 
 &-footer:nth-child(3n) {
-    //padding-right: 0;
+    padding-right: 0;
 }
 
 }
