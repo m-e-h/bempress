@@ -4568,3 +4568,15 @@ iframe[src*="google.com/maps"] {
 p:last-of-type {
     margin-bottom: 0;
 }
+
+.browserupgrade {
+    margin: 0.2em 0;
+    padding: 0.2em 0; 
+    color: #000;
+    background: #ccc;
+    text-align: center;
+}
+.browserupgrade a {
+    color: blue;
+    text-decoration: underline;
+}

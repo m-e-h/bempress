@@ -15,6 +15,9 @@
 </head>
 
 <body <?php hybrid_attr( 'body' ); ?>>
+    <!--[if lt IE 10]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://whatbrowser.org">Upgrade your browser</a> for a faster, safer, and better web experience.</p>
+    <![endif]-->
 
 <?php tha_body_top(); ?>
 
