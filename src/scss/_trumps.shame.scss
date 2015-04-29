@@ -95,3 +95,14 @@ iframe[src*="google.com/maps"] {
         text-decoration: underline;
     }
 }
+
+
+.widget-footer .menu a {
+    @include font-size($heading-size-4, false);
+    line-height: 2;
+
+    .menu-item-description {
+        @include font-size($base-font-size);
+    }
+}
+
