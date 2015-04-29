@@ -236,7 +236,10 @@ $class-type: if($use-silent-classes, unquote("%"), unquote("."));
 .grid--flex {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    //justify-content: space-around;
+        @include md {
+        flex-direction: row;
+    }
 
 
     > .grid__item {

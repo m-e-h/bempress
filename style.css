@@ -2049,9 +2049,14 @@ h6 {
 }
 
 * {
+    flex-direction: column; 
     position: relative;
-    word-wrap: break-word; 
+    word-wrap: break-word;
 
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     -ms-flex-negative: 0;
     -webkit-flex-shrink: 0;
     flex-shrink: 0;
@@ -2642,12 +2647,19 @@ blockquote cite::before {
     display: -ms-flexbox;
     display: flex;
 
-    -ms-flex-pack: distribute;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
+}
+@media screen and (min-width: 48em) {
+    .grid--flex {
+        flex-direction: row; 
+
+        -webkit-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+    }
 }
 
 /**
@@ -2738,6 +2750,16 @@ blockquote cite::before {
     display: -ms-flexbox;
     display: flex;
 }
+@media screen and (min-width: 48em) {
+    .flex {
+        flex-direction: row; 
+
+        -webkit-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+    }
+}
 
 .flex--column {
     flex-direction: column; 
@@ -2746,6 +2768,15 @@ blockquote cite::before {
     -webkit-box-orient: vertical;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
+}
+
+.flex--row {
+    flex-direction: row; 
+
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
 }
 
 .flex--wrap {
@@ -2766,6 +2797,19 @@ blockquote cite::before {
     -ms-flex-pack: center;
     -webkit-justify-content: center;
     justify-content: center;
+}
+
+.flex--j-between {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.flex--j-around {
+    -ms-flex-pack: distribute;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
 }
 
 .flex--baseline {
@@ -2794,13 +2838,6 @@ blockquote cite::before {
     align-items: flex-end; 
     -webkit-box-align: end;
     -ms-flex-align: end;
-}
-
-.flex--justify {
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
 }
 
 .flex--first {
@@ -2845,6 +2882,22 @@ blockquote cite::before {
         display: -ms-flexbox;
         display: flex;
     }
+    .flex--column\@sm {
+        flex-direction: column; 
+
+        -webkit-box-direction: normal;
+        -webkit-box-orient: vertical;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+    }
+    .flex--row\@sm {
+        flex-direction: row; 
+
+        -webkit-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+    }
 }
 
 @media screen and (min-width: 48em) {
@@ -2854,6 +2907,22 @@ blockquote cite::before {
         display: -ms-flexbox;
         display: flex;
     }
+    .flex--column\@md {
+        flex-direction: column; 
+
+        -webkit-box-direction: normal;
+        -webkit-box-orient: vertical;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+    }
+    .flex--row\@md {
+        flex-direction: row; 
+
+        -webkit-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+    }
 }
 
 @media screen and (min-width: 64em) {
@@ -2862,6 +2931,22 @@ blockquote cite::before {
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
+    }
+    .flex--column\@lg {
+        flex-direction: column; 
+
+        -webkit-box-direction: normal;
+        -webkit-box-orient: vertical;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+    }
+    .flex--row\@lg {
+        flex-direction: row; 
+
+        -webkit-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
     }
 }
 
@@ -3200,19 +3285,6 @@ fieldset {
     max-width: 100%;
 }
 
-.header-wrap {
-    display: block;
-    margin: 0;
-}
-@media screen and (min-width: 48em) {
-    .header-wrap {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-    }
-}
-
 .site-container {
     overflow: hidden;
 }
@@ -3466,6 +3538,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
     display: inline-block;
+    flex-direction: row; 
     padding: 12px 24px;
     border-width: 0;
     border-radius: 2px;
@@ -3479,6 +3552,11 @@ input[type="submit"] {
     cursor: pointer;
     -webkit-transition: 0.25s;
     transition: 0.25s;
+
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
 }
 .btn:hover,
 button:hover,
@@ -3750,7 +3828,8 @@ input.is-active[type="submit"] {
 }
 
 .site-header.is-open,
-.site-header.is-open ~ .site-inner {
+.site-header.is-open ~ .site-inner,
+.site-header.is-open ~ .site-footer {
     -webkit-transform: translate(250px, 0);
     -ms-transform: translate(250px, 0);
     transform: translate(250px, 0);
@@ -3844,7 +3923,8 @@ input.is-active[type="submit"] {
 
 .site-header,
 .menu-primary.has-opened,
-.site-inner {
+.site-inner,
+.site-footer {
     -webkit-transition: -webkit-transform 0.3s ease-out;
     transition: transform 0.3s ease-out;
 }
@@ -3852,7 +3932,8 @@ input.is-active[type="submit"] {
 /** Larger Screens - desktops and tablets **/
 @media screen and (min-width: 48em) {
     .site-header.is-open,
-    .site-header.is-open ~ .site-inner {
+    .site-header.is-open ~ .site-inner,
+    .site-header.is-open ~ .site-footer {
         -webkit-transform: translate(0px, 0);
         -ms-transform: translate(0px, 0);
         transform: translate(0px, 0);
@@ -4188,6 +4269,128 @@ kbd {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+/*------------------------------------*\
+    #TOOLTIPS
+\*------------------------------------*/
+[data-tip] {
+    position: relative;
+}
+[data-tip]:before,
+[data-tip]:after {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    opacity: 0;
+    -webkit-transition: all 0.25s ease 0s;
+    transition: all 0.25s ease 0s;
+    -webkit-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    transform: translateY(5px);
+}
+[data-tip]:before {
+    display: table-cell;
+    z-index: 5; 
+    padding: 12px;
+    border-radius: 2px;
+    color: #393939;
+    background: #fff;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 0 6px 3px 0 rgba(0, 0, 0, 0.23);
+    font-size: 14px;
+    text-align: left;
+    vertical-align: middle;
+    content: attr(data-tip-content);
+}
+[data-tip]:after {
+    margin-left: -5px; 
+    border-style: solid;
+    border-color: transparent;
+    content: "";
+}
+[data-tip]:hover.tip--bottom:before,
+[data-tip]:hover.tip--bottom:after,
+[data-tip].tip--visible.tip--bottom:before,
+[data-tip].tip--visible.tip--bottom:after {
+    -webkit-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    transform: translateY(5px);
+}
+[data-tip]:hover:before,
+[data-tip]:hover:after,
+[data-tip].tip--visible:before,
+[data-tip].tip--visible:after {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+[data-tip].tip--top:before {
+    bottom: 100%; 
+    margin-bottom: 10px;
+}
+[data-tip].tip--top:after {
+    bottom: 100%; 
+    border-width: 10px 5px 0 5px;
+    border-top-color: #fff;
+}
+[data-tip].tip--bottom:before {
+    margin-top: 10px;
+}
+[data-tip].tip--bottom:after {
+    border-width: 0 5px 10px 5px;
+    border-bottom-color: #fff;
+}
+[data-tip].tip--bottom:before,
+[data-tip].tip--bottom:after {
+    top: 100%;
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+[data-tip].tip--bottom.tip--right:after {
+    border-width: 0 5px 10px 0;
+}
+[data-tip].tip--bottom.tip--left:after {
+    border-width: 0 0 10px 5px;
+}
+[data-tip]:before {
+    width: 150px;
+    margin-left: -75px;
+}
+[data-tip].tip--small:before {
+    width: 75px;
+    margin-left: -37.5px;
+}
+[data-tip].tip--large:before {
+    width: 300px;
+    margin-left: -150px;
+}
+[data-tip].tip--right:before {
+    left: 100%;
+    margin-left: -17px;
+}
+[data-tip].tip--right:after {
+    left: 100%;
+    margin-left: -5px;
+    border-width: 10px 5px 0 0;
+}
+[data-tip].tip--left:before {
+    left: -150px;
+    margin-left: 17px;
+}
+[data-tip].tip--left:after {
+    left: 0;
+    margin-left: 0;
+    border-width: 10px 0 0 5px;
+}
+[data-tip].tip--left.tip--small:before {
+    left: -75px;
+}
+[data-tip].tip--left.tip--large:before {
+    left: -300px;
 }
 
 /**
@@ -4581,149 +4784,30 @@ p:last-of-type {
     text-decoration: underline;
 }
 
-/*
-tips - http://jh3y.github.io/tips
-Licensed under the MIT license
-jh3y (c) 2015.
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-*/
-[data-tip] {
+li.menu-item--has-description {
     position: relative;
+    margin-bottom: 0; 
+    border-top: 1px solid #eaeaea;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-[data-tip]:before,
-[data-tip]:after {
-    visibility: hidden;
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    box-sizing: border-box;
-    opacity: 0;
-    -webkit-transition: all 0.5s ease 0s;
-    transition: all 0.5s ease 0s;
-    -webkit-transform: translateY(0.3125rem);
-    -ms-transform: translateY(0.3125rem);
-    transform: translateY(0.3125rem);
+.menu-item--has-description:first-of-type {
+    border-top: 0;
 }
 
-[data-tip]:before {
-    display: table-cell;
-    padding: 0.625rem; 
-    border-radius: 0.3125rem;
-    color: #fff;
-    background: #555;
-    font-size: 0.875rem;
+.menu-item--has-description a {
+    display: block;
+    display: inline-block;
+    position: relative;
+    width: 90%;
+    text-align: left; 
+    text-decoration: none;
+    letter-spacing: 1.5px;
+}
+
+a.info {
+    width: 20px;
+    margin: 0;
+    padding: 0;
     text-align: center;
-    vertical-align: middle;
-    content: attr(data-tip-content);
-}
-
-[data-tip]:after {
-    margin-left: -0.3125rem; 
-    border-style: solid;
-    border-color: transparent;
-    content: "";
-}
-
-[data-tip]:hover.tip--bottom:before,
-[data-tip].tip--visible.tip--bottom:before,
-[data-tip]:hover.tip--bottom:after,
-[data-tip].tip--visible.tip--bottom:after {
-    -webkit-transform: translateY(0.3125rem);
-    -ms-transform: translateY(0.3125rem);
-    transform: translateY(0.3125rem);
-}
-
-[data-tip]:hover:before,
-[data-tip].tip--visible:before,
-[data-tip]:hover:after,
-[data-tip].tip--visible:after {
-    visibility: visible;
-    opacity: 1;
-    -webkit-transform: translateY(-0.3125rem);
-    -ms-transform: translateY(-0.3125rem);
-    transform: translateY(-0.3125rem);
-}
-
-[data-tip].tip--top:before {
-    bottom: 100%;
-    margin-bottom: 0.625rem;
-}
-
-[data-tip].tip--top:after {
-    bottom: 100%;
-    border-width: 0.625rem 0.3125rem 0rem 0.3125rem;
-    border-top-color: #555;
-}
-
-[data-tip].tip--bottom:before {
-    margin-top: 0.625rem;
-}
-
-[data-tip].tip--bottom:after {
-    border-width: 0rem 0.3125rem 0.625rem 0.3125rem;
-    border-bottom-color: #555;
-}
-
-[data-tip].tip--bottom:before,
-[data-tip].tip--bottom:after {
-    top: 100%;
-    -webkit-transform: translateY(-0.3125rem);
-    -ms-transform: translateY(-0.3125rem);
-    transform: translateY(-0.3125rem);
-}
-
-[data-tip].tip--bottom.tip--right:after {
-    border-width: 0rem 0.3125rem 0.625rem 0rem;
-}
-
-[data-tip].tip--bottom.tip--left:after {
-    border-width: 0rem 0rem 0.625rem 0.3125rem;
-}
-
-[data-tip]:before {
-    width: 9.375rem;
-    margin-left: -4.6875rem;
-}
-
-[data-tip].tip--small:before {
-    width: 4.6875rem;
-    margin-left: -2.34375rem;
-}
-
-[data-tip].tip--large:before {
-    width: 18.75rem;
-    margin-left: -9.375rem;
-}
-
-[data-tip].tip--right:before {
-    left: 100%;
-    margin-left: -0.9375rem;
-}
-
-[data-tip].tip--right:after {
-    left: 100%;
-    margin-left: -0.3125rem;
-    border-width: 0.625rem 0.3125rem 0rem 0rem;
-}
-
-[data-tip].tip--left:before {
-    left: -9.375rem;
-    margin-left: 0.9375rem;
-}
-
-[data-tip].tip--left:after {
-    left: 0;
-    margin-left: 0;
-    border-width: 0.625rem 0rem 0rem 0.3125rem;
-}
-
-[data-tip].tip--left.tip--small:before {
-    left: -4.6875rem;
-}
-
-[data-tip].tip--left.tip--large:before {
-    left: -18.75rem;
 }

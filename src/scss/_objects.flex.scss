@@ -4,10 +4,17 @@
 
 .flex {
     display: flex;
+    @include md {
+        flex-direction: row;
+    }
 }
 
 .flex--column {
     flex-direction: column;
+}
+
+.flex--row {
+    flex-direction: row;
 }
 
 .flex--wrap {
@@ -20,6 +27,14 @@
 
 .flex-j--center {
     justify-content: center;
+}
+
+.flex--j-between {
+    justify-content: space-between;
+}
+
+.flex--j-around {
+    justify-content: space-around;
 }
 
 .flex--baseline {
@@ -36,10 +51,6 @@
 
 .flex--end {
     align-items: flex-end;
-}
-
-.flex--justify {
-    justify-content: space-between;
 }
 
 .flex--first {
@@ -66,17 +77,41 @@
     .flex\@sm {
         display: flex;
     }
+
+    .flex--column\@sm {
+        flex-direction: column;
+    }
+
+    .flex--row\@sm {
+        flex-direction: row;
+    }
 }
 
 @include md {
     .flex\@md {
         display: flex;
     }
+
+    .flex--column\@md {
+        flex-direction: column;
+    }
+
+    .flex--row\@md {
+        flex-direction: row;
+    }
 }
 
 @include lg {
     .flex\@lg {
         display: flex;
+    }
+
+    .flex--column\@lg {
+        flex-direction: column;
+    }
+
+    .flex--row\@lg {
+        flex-direction: row;
     }
 }
 

@@ -64,7 +64,8 @@
 }
 
 .site-header.is-open,
-.site-header.is-open ~ .site-inner {
+.site-header.is-open ~ .site-inner,
+.site-header.is-open ~ .site-footer {
     transform: translate(250px, 0);
 }
 
@@ -145,13 +146,16 @@
 
 .site-header,
 .menu-primary.has-opened,
-.site-inner {
+.site-inner,
+.site-footer {
     transition: transform 0.3s ease-out;
 }
 /** Larger Screens - desktops and tablets **/
 
 @include md {
-    .site-header.is-open, .site-header.is-open ~ .site-inner {
+    .site-header.is-open,
+    .site-header.is-open ~ .site-inner,
+    .site-header.is-open ~ .site-footer {
         transform: translate(0px, 0);
     }
     .header-wrap {

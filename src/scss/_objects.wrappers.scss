@@ -13,14 +13,10 @@
     width: 100%;
 }
 
-.header-wrap {
-	display: block;
-    margin: 0;
-
-	@include md {
-		display: flex;
-	}
-}
+// .header-wrap {
+// 	display: block;
+//     margin: 0;
+// }
 
 .u-pt-wrap {
     @extend .u-pt-;

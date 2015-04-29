@@ -11,6 +11,7 @@
     outline: 0;
     letter-spacing: 1px;
     transition: $base-transition;
+    flex-direction: row;
     &:hover, &:active, &:focus {
         opacity: 1;
         background-color: $btn-bg-hover;
