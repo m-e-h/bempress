@@ -96,10 +96,4 @@ function bempress_includes() {
 do_action( 'flagship_after_setup_parent' );
 
 
-function bempress_nav_description( $item_output, $item, $depth, $args ) {
-    if ( $item->description ) {
-        $item_output = str_replace( $args->link_after . '</a>', '<p class="menu-item-description">' . $item->description . '</p>' . $args->link_after . '</a>', $item_output );
-    }
-    return $item_output;
-}
-add_filter( 'walker_nav_menu_start_el', 'bempress_nav_description', 10, 4 );
+
