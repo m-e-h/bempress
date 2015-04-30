@@ -25,6 +25,7 @@ $color-grey-darker:         $grey-800;
 $color-grey-dark:           $grey-700;
 $color-grey:                $grey-400;
 $color-grey-light:          $grey-100;
+$color-grey-lighter:          $grey-50;
 $color-grey-ui:             $blue-grey-100;
 $color-black:               $black;
 $color-white:               $white;
@@ -92,7 +93,8 @@ $format-audio:              $green-300;
 
 
 
-$color-tint:            rgba($grey-900, .3);
+$color-tint:            rgba($blue-grey-600, .6);
+$color-frost:           rgba($blue-grey-100, .6);
 $color-brand:           $blue-500;
 $color-brand-highlight: lighten($color-brand, 15%);
 $color-brand-shadow:     darken($color-brand, 15%);

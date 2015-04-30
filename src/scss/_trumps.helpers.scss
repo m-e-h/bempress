@@ -110,6 +110,10 @@
     @include bg-text($color-tint);
 }
 
+.t-bg__frost {
+    @include bg-text($color-frost);
+}
+
 .t-bg__grey--dark {
     @include bg-text($color-grey-dark);
 }
@@ -120,6 +124,10 @@
 
 .t-bg__1 {
     @include bg-text($color-primary);
+}
+
+.t-bg__1--glass {
+    @include bg-text(glass($color-primary-dark));
 }
 
 .t-bg__1--dark {
