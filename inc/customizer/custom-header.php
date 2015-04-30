@@ -24,9 +24,9 @@ function bempress_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'bempress_custom_header_args', [
   		'default-image'          => '',
   		'default-text-color'     => 'FFFFFF',
-  		'width'                  => 1200,
-  		'height'                 => 200,
-  		'flex-height'            => true,
+        'width'                  => 1920,
+        'height'                 => 500,
+        'flex-height'            => true,
   		'wp-head-callback'       => 'bempress_header_style'
   	] ) );
 }
@@ -65,7 +65,7 @@ function bempress_header_style() {
 		// If the user has set a custom color for the text use that
 		else :
 	?>
-        .site-title a,
+        .site-title,
         .site-description {
             color: #<?= esc_attr( $header_text_color ); ?>;
         }
@@ -75,8 +75,7 @@ function bempress_header_style() {
 		if ( get_header_image() ) :
 	?>
 		.site-header {
-			background: url(<?php header_image(); ?>) no-repeat scroll center;
-			background-size: cover;
+            background-image: url(<?php header_image(); ?>);
 		}
 		<?php endif; // End header image check. ?>
 	</style>

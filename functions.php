@@ -86,6 +86,7 @@ function bempress_includes() {
     require_once $includes_dir . 'widgetize.php';
     require_once $includes_dir . 'html-min.php';
     require_once $includes_dir . 'customizer/customizer.php';
+    require_once $includes_dir . 'customizer/custom-header.php';
     require_once $includes_dir . 'customizer/custom-background.php';
     require_once $includes_dir . 'css-classes.php';
     new AttrTrumps();
