@@ -13,8 +13,6 @@ get_header(); ?>
 
     <main <?php hybrid_attr( 'content' ); ?>>
 
-        <?php hybrid_get_menu( 'breadcrumbs' ); ?>
-
         <?php tha_content_top(); ?>
 
         <?php if ( have_posts() ) : ?>
