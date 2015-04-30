@@ -42,3 +42,14 @@
     @return rgba(#ffffff, .9); // Darker background, return light color
   }
 }
+
+// Determines text color based on bg color
+//
+// .button {
+//   background: $sample-color;
+//   color: set-text-color($sample-color);
+// }
+//
+@function glass($color) {
+    @return rgba($color, .9);
+}
