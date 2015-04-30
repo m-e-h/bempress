@@ -22,7 +22,7 @@ if ( pings_open() && ! comments_open() ) : ?>
 elseif ( ! comments_open() ) : ?>
 
     <p class="comments-closed">
-        <?php _e( 'Comments are closed.', 'bempress' ); ?>
+        <?php esc_html_e( 'Comments are closed.', 'bempress' ); ?>
     </p><!-- .comments-closed -->
 
     <?php

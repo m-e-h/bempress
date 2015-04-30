@@ -25,7 +25,7 @@
 
 		<div class="skip-link">
 			<a href="#content" class="button screen-reader-text">
-				<?php _e( 'Skip to content (Press enter)', 'bempress' ); ?>
+				<?php esc_html_e( 'Skip to content (Press enter)', 'bempress' ); ?>
 			</a>
 		</div><!-- .skip-link -->
 
