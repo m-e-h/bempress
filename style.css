@@ -4785,6 +4785,7 @@ iframe[src*="google.com/maps"] {
 }
 
 .action-bar-wrap {
+    z-index: 1; 
     border-bottom: 5px solid #42535b;
 }
 @media screen and (min-width: 48em) {
@@ -4807,7 +4808,6 @@ iframe[src*="google.com/maps"] {
 
 .site-logo-link {
     display: block;
-    z-index: 7;
     z-index: 5; 
     width: 80px;
     height: 80px;
@@ -4829,6 +4829,10 @@ iframe[src*="google.com/maps"] {
         height: 120px;
         margin-top: -60px;
     }
+}
+
+.hero-wrap {
+    z-index: 1;
 }
 
 .site-branding {
@@ -4870,8 +4874,21 @@ p:last-of-type {
     text-decoration: underline;
 }
 
-.hero-wrap {
-    min-height: 300px;
+.site-container {
+    background-color: #fff;
+}
+
+.glass-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+}
+
+#svg-image {
+    -webkit-filter: url(#svg-blur);
+    filter: url(#svg-blur);
 }
 
 li.menu-item--has-description {

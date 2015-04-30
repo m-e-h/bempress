@@ -70,14 +70,6 @@ function bempress_header_style() {
             color: #<?= esc_attr( $header_text_color ); ?>;
         }
 	<?php endif; ?>
-	<?php
-		// Is there an image?
-		if ( get_header_image() ) :
-	?>
-		.site-header {
-            background-image: url(<?php header_image(); ?>);
-		}
-		<?php endif; // End header image check. ?>
 	</style>
 	<?php
 }
