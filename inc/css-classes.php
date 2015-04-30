@@ -17,8 +17,9 @@ class AttrTrumps {
 	public $site_inner_sidebar_right 	= ' wrap';
 	public $site_inner_sidebar_left 	= ' wrap grid--rev';
 	public $wrap                		= '';
-	public $header_wrap                	= ' wrapper--wide flex@md flex--row flex--j-between';
-	public $header                		= ' shadow--z2 t-bg__1--dark flex@sm'; 	// site-header
+    public $action_bar_wrap             = ' wrapper--wide shadow--z2 t-bg__1--glass flex flex--row grid--right';
+	public $hero_wrap                	= ' t-bg__tint wrapper--wide u-p-';
+	public $header                		= ' '; 	// site-header
 	public $footer                		= ' t-bg__1'; 	// site-footer
 	public $content 					= ' grid__item'; 	// content
 	public $content_full_width			= ' u-1of1'; 	// content
@@ -32,7 +33,7 @@ class AttrTrumps {
 	public $sidebar_sidebar_right 		= ' u-1of3@md';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_left		= ' u-1of3@md';	// sidebar sidebar__{$context}
 	public $sidebar_horizontal          = ' u-pl- u-pl@md u-pl+@lg grid grid--flex';	// sidebar sidebar__{$context}
-	public $menu_primary 				= ' menu--horizontal u-ph@md flex flex--row flex-j--center t-bg__2--light';	// menu menu-{$context}
+	public $menu_primary 				= ' menu--horizontal u-ph@md shadow--z1 flex flex--row flex-j--center t-bg__grey--light';	// menu menu-{$context}
 	public $menu_secondary 				= ' menu--horizontal u-p- u-1of1@sm flex flex-j--center';	// menu menu-{$context}
 	public $menu_li         			= 'menu__item';	// menu-item
 
@@ -42,7 +43,7 @@ class AttrTrumps {
     public $author_box                  = ' t-bg__white br u-p@all u-mb- u-mb@md u-mb+@lg';
 
 	/* Header attributes. */
-	public $branding              		= ' page-title u-p-';	// site-branding
+	public $branding              		= ' u-pv@all';	// site-branding
 	public $site_title            		= ' page-title__main';	// site-title
 	public $site_description      		= ' page-title__sub';	// site-description
 
@@ -149,9 +150,12 @@ class AttrTrumps {
 			return $attr;
 		}
         $attr['class']    .= $this->wrap;
-		if ( 'header' === $context ) {
-		$attr['class']    .= $this->header_wrap;
+		if ( 'hero' === $context ) {
+		$attr['class']    .= $this->hero_wrap;
 		}
+        if ( 'action-bar' === $context ) {
+        $attr['class']    .= $this->action_bar_wrap;
+        }
 		return $attr;
 	}
 

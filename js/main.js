@@ -295,10 +295,9 @@ if("document" in self){if(!("classList" in document.createElement("_"))){(functi
 
   var navdrawerContainer = querySelector('.menu-primary');
   var body = document.body;
-  var appbarElement = querySelector('#header');
+  var appbarElement = querySelector('.action-bar');
   var menuBtn = querySelector('.menu-toggle');
-  var main = querySelector('#site-inner');
-  var footer = querySelector('.site-footer');
+  var main = querySelector('#site-container');
 
   function closeMenu() {
     body.classList.remove('is-open');
@@ -313,14 +312,13 @@ if("document" in self){if(!("classList" in document.createElement("_"))){(functi
     navdrawerContainer.classList.add('has-opened');
   }
 
-  footer.addEventListener('click', closeMenu);
   main.addEventListener('click', closeMenu);
   menuBtn.addEventListener('click', toggleMenu);
-  // navdrawerContainer.addEventListener('click', function (event) {
-  //   if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {
-  //     closeMenu();
-  //   }
-  // });
+  navdrawerContainer.addEventListener('click', function (event) {
+    if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {
+      closeMenu();
+    }
+  });
 })();
 
 /**

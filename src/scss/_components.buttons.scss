@@ -31,6 +31,7 @@ input[type="submit"] {
 }
 
 .button--transparent {
+    @extend .btn;
     color: inherit;
     background-color: transparent;
     &:hover, &:active, &:focus {
@@ -40,9 +41,10 @@ input[type="submit"] {
 }
 
 .button--outline {
+    @extend .btn;
     color: $btn-bg;
     background-color: transparent;
-    border-width: 2px;
+    border-width: 3px;
     border-style: solid;
     border-color: currentColor;
     &:hover, &:active, &:focus {
@@ -65,22 +67,21 @@ input[type="submit"] {
 
 /* Underline From Center */
 .button--tab {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  overflow: hidden;
-  background: none;
+    @extend .btn;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
 
-    &:hover,
-    &:active,
-    &.is-active,
-    &:focus {
-        background-color: transparent;
-    }
+        &:hover,
+        &:active,
+        &.is-active,
+        &:focus {
+            background-color: transparent;
+        }
 }
 .button--tab:before {
   content: "";
@@ -88,7 +89,7 @@ input[type="submit"] {
   z-index: -1;
   left: 50%;
   right: 50%;
-  bottom: 0;
+  top: 0;
   background: #ffffff;
   height: 4px;
   -webkit-transition-property: left, right;
