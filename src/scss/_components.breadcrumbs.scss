@@ -21,11 +21,13 @@
 
     @include lg {
         padding: $base-spacing-unit;
+        margin-top: 0;
         position: absolute;
         top: 0;
         z-index: 6;
         color: set-text-color($color-primary-dark);
-        @include font-size($heading-size-3);
+        @include font-size($heading-size-3, false);
+        line-height: 1.3;
     }
 
 

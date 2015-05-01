@@ -19,7 +19,7 @@ class AttrTrumps {
 	public $wrap                		= '';
     public $action_bar_wrap             = ' wrapper--wide shadow--z2 t-bg__1--glass flex flex--row grid--right';
 	public $hero_wrap                	= ' t-bg__tint wrapper--wide u-p-';
-	public $header                		= ' '; 	// site-header
+	public $header                		= ' t-bg__1'; 	// site-header
 	public $footer                		= ' t-bg__1'; 	// site-footer
 	public $content 					= ' grid__item'; 	// content
 	public $content_full_width			= ' u-1of1'; 	// content
@@ -43,7 +43,7 @@ class AttrTrumps {
     public $author_box                  = ' t-bg__white br u-p@all u-mb- u-mb@md u-mb+@lg';
 
 	/* Header attributes. */
-	public $branding              		= ' u-pv@all';	// site-branding
+	public $branding              		= ' ';	// site-branding
 	public $site_title            		= ' page-title__main';	// site-title
 	public $site_description      		= ' page-title__sub';	// site-description
 

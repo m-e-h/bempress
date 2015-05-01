@@ -106,6 +106,10 @@
     @include bg-text($color-grey);
 }
 
+.t-bg__shade {
+    @include bg-text($color-shade);
+}
+
 .t-bg__tint {
     @include bg-text($color-tint);
 }
@@ -120,6 +124,10 @@
 
 .t-bg__grey--light {
     @include bg-text($color-grey-light);
+}
+
+.t-bg__grey--lighter {
+    @include bg-text($color-grey-lighter);
 }
 
 .t-bg__1 {

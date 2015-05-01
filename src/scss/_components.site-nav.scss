@@ -17,7 +17,7 @@
     @extend .button--transparent;
 
     &:hover {
-        background-color: $color-tint;
+        background-color: $color-shade;
     }
 }
 

@@ -98,3 +98,12 @@ do_action( 'flagship_after_setup_parent' );
 
 
 
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
+function action_bar_right() {
+    do_action( 'action_bar_right' );
+}

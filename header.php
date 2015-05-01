@@ -21,8 +21,6 @@
 
 <?php tha_body_top(); ?>
 
-	<div <?php hybrid_attr( 'site-container' ); ?>>
-
 		<div class="skip-link">
 			<a href="#content" class="button screen-reader-text">
 				<?php esc_html_e( 'Skip to content (Press enter)', 'bempress' ); ?>
@@ -33,13 +31,20 @@
 
 		<header <?php hybrid_attr( 'header' ); ?>>
 
-			<div <?php hybrid_attr( 'wrap', 'header' ); ?>>
+            <div class="action-bar">
+        <div <?php hybrid_attr( 'wrap', 'action-bar' ); ?>>
+
+            <button class="menu-toggle" aria-controls="menu-primary" aria-expanded="false">
+            <span></span>
+            </button>
+
+            <?php action_bar_right(); ?>
+        </div>
+    </div>
 
             <?php tha_header_top(); ?>
 
-                <button class="menu-toggle" aria-controls="menu-primary" aria-expanded="false">
-                  <span></span>
-                </button>
+			<div <?php hybrid_attr( 'wrap', 'header' ); ?>>
 
                 <div <?php hybrid_attr( 'branding' ); ?>>
                     <?php flagship_the_logo(); ?>
@@ -47,9 +52,9 @@
                     <?php hybrid_site_description(); ?>
                 </div><!-- #branding -->
 
-            <?php tha_header_bottom(); ?>
-
 			</div><!-- .wrap -->
+
+            <?php tha_header_bottom(); ?>
 
 		</header><!-- #header -->
 
@@ -57,4 +62,8 @@
 
 		<?php hybrid_get_menu( 'primary' ); ?>
 
-		<div <?php hybrid_attr( 'site-inner' ); ?>>
+        <?php hybrid_get_menu( 'breadcrumbs' ); ?>
+
+        <div <?php hybrid_attr( 'site-container' ); ?>>
+
+		  <div <?php hybrid_attr( 'site-inner' ); ?>>

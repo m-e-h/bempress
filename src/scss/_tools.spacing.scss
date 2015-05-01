@@ -787,3 +787,22 @@ $generate-spacing-alias: null;
     }
 
 }
+
+
+.u-p\@all {
+    @extend .u-p-;
+    @extend .u-p\@md;
+    @extend .u-p\+\@lg;
+}
+
+.u-ph\@all {
+    @extend .u-ph-;
+    @extend .u-ph\@md;
+    @extend .u-ph\+\@lg;
+}
+
+.u-pv\@all {
+    @extend .u-pv-;
+    @extend .u-pv\@md;
+    @extend .u-pv\+\@lg;
+}
