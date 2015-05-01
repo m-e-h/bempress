@@ -27,6 +27,9 @@ function customizer_library_bempress_options() {
 	// Adds the sections to the $options array
 	$options['sections'] = $sections;
 
+
+
+
 	// Colors
 	$section = 'colors';
 
@@ -60,6 +63,55 @@ function customizer_library_bempress_options() {
         'default' => $accent_color,
     ];
 
+
+
+
+	// Action Panel
+	$section = 'action-panels';
+	$sections[] = [
+		'id' => $section,
+		'title' => __( 'Action Panels', 'bempress' ),
+		'priority' => '90'
+		'description' => __( 'Menu-bar for the dropdown widgets.', 'bempress' )
+	];
+	$options['panel-one-title'] = [
+		'id' => 'panel-one-title',
+		'label'   => __( 'Panel One Title', 'bempress' ),
+		'section' => $section,
+		'type'    => 'text',
+	];
+	$options['panel-one-toggle-icon'] = [
+		'id' => 'panel-one-toggle-icon',
+		'label'   => __( 'Panel One Toggle Icon', 'bempress' ),
+		'section' => $section,
+		'type'    => 'text',
+	];
+	$options['panel-two-title'] = [
+		'id' => 'panel-two-title',
+		'label'   => __( 'Panel Two Title', 'bempress' ),
+		'section' => $section,
+		'type'    => 'text',
+	];
+	$options['panel-two-toggle-icon'] = [
+		'id' => 'panel-two-toggle-icon',
+		'label'   => __( 'Panel Two Toggle Icon', 'bempress' ),
+		'section' => $section,
+		'type'    => 'text',
+	];
+	$options['panel-three-title'] = [
+		'id' => 'panel-three-title',
+		'label'   => __( 'Panel Three Title', 'bempress' ),
+		'section' => $section,
+		'type'    => 'text',
+	];
+	$options['panel-three-toggle-icon'] = [
+		'id' => 'panel-three-toggle-icon',
+		'label'   => __( 'Panel Three Toggle Icon', 'bempress' ),
+		'section' => $section,
+		'type'    => 'text',
+	];
+	
+	
 	// Typography
 	$section = 'typography';
 	$font_choices = customizer_library_get_font_choices();

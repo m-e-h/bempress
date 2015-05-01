@@ -31,7 +31,7 @@
 
 		<header <?php hybrid_attr( 'header' ); ?>>
 
-            <div class="action-bar">
+    <div class="action-bar">
         <div <?php hybrid_attr( 'wrap', 'action-bar' ); ?>>
 
             <button class="menu-toggle" aria-controls="menu-primary" aria-expanded="false">
@@ -66,4 +66,4 @@
 
         <div <?php hybrid_attr( 'site-container' ); ?>>
 
-		  <div <?php hybrid_attr( 'site-inner' ); ?>>
+            <div <?php hybrid_attr( 'site-inner' ); ?>>
