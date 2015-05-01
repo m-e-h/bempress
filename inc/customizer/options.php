@@ -71,7 +71,7 @@ function customizer_library_bempress_options() {
 	$sections[] = [
 		'id' => $section,
 		'title' => __( 'Action Panels', 'bempress' ),
-		'priority' => '90'
+		'priority' => '90',
 		'description' => __( 'Menu-bar for the dropdown widgets.', 'bempress' )
 	];
 	$options['panel-one-title'] = [
