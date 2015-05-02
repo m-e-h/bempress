@@ -116,6 +116,9 @@
     z-index: 1;
 }
 
+.site-branding {
+    display: inline-block;
+}
 .header-image {
   position: fixed;
   top: 0;
@@ -127,4 +130,5 @@
 .header-wrap {
   height: 100%;
   z-index: 5;
+  text-align: center;
 }

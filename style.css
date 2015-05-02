@@ -4953,6 +4953,10 @@ a.info {
     z-index: 1;
 }
 
+.site-branding {
+    display: inline-block;
+}
+
 .header-image {
     position: fixed;
     top: 0;
@@ -4962,6 +4966,7 @@ a.info {
 }
 
 .header-wrap {
-    z-index: 5; 
+    z-index: 5;
     height: 100%;
+    text-align: center;
 }
