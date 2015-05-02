@@ -4948,3 +4948,20 @@ a.info {
     background-position: center;
     background-size: 1920px auto;
 }
+
+.site-header {
+    z-index: 1;
+}
+
+.header-image {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header-wrap {
+    z-index: 5; 
+    height: 100%;
+}

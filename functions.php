@@ -68,6 +68,18 @@ function bempress_setup() {
             '2c-l'      => __( '2 Columns: Content / Sidebar', 'bempress' ),
             '2c-r'      => __( '2 Columns: Sidebar / Content', 'bempress' )
     ], ['default' => is_rtl() ? '2c-r' :'2c-l'] );
+
+    add_theme_support( 'custom-header', apply_filters( 'bempress_custom_header_args', [
+        'default-image'          => '',
+        'default-text-color'     => 'FFFFFF',
+        'width'                  => 1920,
+        'height'                 => 500,
+        'flex-width'             => true,
+        'flex-height'            => true,
+        'header-text'            => true,
+        'uploads'                => true,
+        'wp-head-callback'       => 'bempress_header_style'
+    ] ) );
 }
 
 

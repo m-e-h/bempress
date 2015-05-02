@@ -6,34 +6,6 @@
  * @package bempress
  */
 
-
-/* Call late so child themes can override. */
-add_action( 'after_setup_theme', 'bempress_custom_header_setup', 15 );
-
-
-
-
-/**
- * Set up the WordPress core custom header feature.
- *
- * @uses bempress_header_style()
- * @uses bempress_admin_header_style()
- * @uses bempress_admin_header_image()
- */
-function bempress_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'bempress_custom_header_args', [
-  		'default-image'          => '',
-  		'default-text-color'     => 'FFFFFF',
-        'width'                  => 1920,
-        'height'                 => 500,
-        'flex-height'            => true,
-  		'wp-head-callback'       => 'bempress_header_style'
-  	] ) );
-}
-
-
-
-
 if ( ! function_exists( 'bempress_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
