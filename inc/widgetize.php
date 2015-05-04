@@ -12,7 +12,7 @@ function bempress_register_sidebars() {
 	hybrid_register_sidebar( [
 		'id'          => 'primary',
 		'name'        => _x( 'Primary Sidebar', 'sidebar', 'bempress' ),
-		'before_widget'	=> '<section id="%1$s" class="widget widget-primary %2$s t-bg__2--light br u-p@all u-mb- u-mb@md u-mb+@lg shadow--z1">',
+		'before_widget'	=> '<section id="%1$s" class="widget widget-primary %2$s t-bg__white br u-p@all u-mb- u-mb@md u-mb+@lg shadow--z1">',
 		'after_widget'	=> '</section>',
 		'before_title'  => '<h3 class="widget-title widget-primary__title">',
 		'after_title'	=> '</h3>',

@@ -102,6 +102,10 @@
     @include bg-text($white);
 }
 
+.t-bg__off-white {
+    @include bg-text($color-off-white);
+}
+
 .t-bg__grey {
     @include bg-text($color-grey);
 }
@@ -152,6 +156,10 @@
 
 .t-bg__2--dark {
     @include bg-text($color-secondary-dark);
+}
+
+.t-bg__2--glass {
+    @include bg-text(glass($color-secondary-dark));
 }
 
 .t-bg__2--light {

@@ -18,8 +18,8 @@ class AttrTrumps {
 	public $site_inner_sidebar_left 	= ' wrap grid--rev';
 	public $wrap                		= '';
     public $action_bar_wrap             = ' wrapper--wide shadow--z2 t-bg__1--glass flex flex--row grid--right';
-	public $hero_wrap                	= ' t-bg__tint wrapper--wide u-p-';
-	public $header                		= ' t-bg__tint'; 	// site-header
+	public $hero_wrap                	= ' wrapper--wide u-p-';
+	public $header                		= ' '; 	// site-header
 	public $footer                		= ' t-bg__1'; 	// site-footer
 	public $content 					= ' grid__item'; 	// content
 	public $content_full_width			= ' u-1of1'; 	// content
@@ -33,14 +33,14 @@ class AttrTrumps {
 	public $sidebar_sidebar_right 		= ' u-1of3@md';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_left		= ' u-1of3@md';	// sidebar sidebar__{$context}
 	public $sidebar_horizontal          = ' u-pl- u-pl@md u-pl+@lg grid grid--flex';	// sidebar sidebar__{$context}
-	public $menu_primary 				= ' menu--horizontal u-ph@md shadow--z1 flex flex--row flex-j--center t-bg__grey--light';	// menu menu-{$context}
+	public $menu_primary 				= ' menu--horizontal u-ph@md shadow--z1 flex flex--row flex-j--center t-bg__white';	// menu menu-{$context}
 	public $menu_secondary 				= ' menu--horizontal u-p- u-1of1@sm flex flex-j--center';	// menu menu-{$context}
 	public $menu_li         			= 'menu__item';	// menu-item
 
     public $nav_single                  = ' wrap flex flex--justify u-mb- u-mb@md u-mb+@lg'; // menu-item
     public $nav_archive                 = ''; // menu-item
 
-    public $author_box                  = ' t-bg__white br u-p@all u-mb- u-mb@md u-mb+@lg';
+    public $author_box                  = ' br u-p@all u-mb- u-mb@md u-mb+@lg';
 
 	/* Header attributes. */
 	public $branding              		= ' ';	// site-branding
@@ -53,7 +53,7 @@ class AttrTrumps {
 	public $loop_description      		= ' u-mt-';	// loop-description
 
 	/* Post-specific attributes. */
-	public $post                  		= ' t-bg__white br u-p@all u-mb- u-mb@md u-mb+@lg';	// get_post_class()
+	public $post                  		= ' br u-p@all u-mb- u-mb@md u-mb+@lg';	// get_post_class()
 	public $entry_title           		= ' wrap entry__title';	// entry-title
 	public $entry_author          		= ' u-mr- entry__author';	// entry-author
 	public $entry_published       		= ' u-mr- entry__date';	// entry-published updated
@@ -61,7 +61,7 @@ class AttrTrumps {
 	public $entry_summary         		= ' wrap';	// entry-summary
 	public $entry_terms           		= ' badge';	// entry-terms
 
-    public $comments_area               = ' t-bg__white br u-p@all u-mb- u-mb@md u-mb+@lg'; // entry-terms
+    public $comments_area               = ' br u-p@all u-mb- u-mb@md u-mb+@lg'; // entry-terms
 
 
 
