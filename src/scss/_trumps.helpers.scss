@@ -178,7 +178,9 @@
     @include bg-text($color-accent-light);
 }
 
-
+.t-bg__3--glass {
+    @include bg-text(glass($color-accent-dark));
+}
 
 
 

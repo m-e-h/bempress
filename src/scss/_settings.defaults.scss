@@ -6,7 +6,17 @@
 $namespace:               null !default;
 
 
+// All z-index values should be set here
 
+$z-layers: (
+    'modal'         : 9000,
+    'overlay'       : 8000,
+    'dropdown'      : 7000,
+    'header'        : 6000,
+    'footer'        : 5000,
+    'default'       : 1,
+    'bottomless-pit': -10000
+);
 
 // High-level base settings.
 $base-font-size:          16px !default;
