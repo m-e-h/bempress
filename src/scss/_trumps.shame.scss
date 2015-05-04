@@ -151,10 +151,12 @@
   left: 0;
   right: 0;
   width: 100%;
+  height:auto;
 }
 
 .glass-image > .header-image {
     filter: url(#svg-blur);
+    height: 100%;
 }
 
 .header-wrap {
@@ -174,6 +176,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
   //filter: url(#svg-blur);
 }
 
