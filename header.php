@@ -59,7 +59,7 @@
 		</header><!-- #header -->
 
     <?php if ( get_header_image() ) : ?>
-        <img class="header-image" src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
+        <img class="header-image" src="<?php header_image(); ?>">
     <?php endif; // End header image check. ?>
 
         <?php tha_header_after(); ?>
