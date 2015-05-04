@@ -2344,7 +2344,7 @@ hr {
 }
 
 .site-container {
-    background-color: #fff;
+    background-color: #fffaf5;
 }
 
 /*------------------------------------*\
@@ -4625,6 +4625,11 @@ a.info {
     background-color: #fff;
 }
 
+.t-bg__off-white {
+    color: rgba(0, 0, 0, 0.9); 
+    background-color: #fffaf5;
+}
+
 .t-bg__grey {
     color: rgba(0, 0, 0, 0.9); 
     background-color: #d2d2d2;
@@ -4688,6 +4693,11 @@ a.info {
 .t-bg__2--dark {
     color: rgba(255, 255, 255, 0.9); 
     background-color: #319b5c;
+}
+
+.t-bg__2--glass {
+    color: rgba(255, 255, 255, 0.9); 
+    background-color: rgba(49, 155, 92, 0.9);
 }
 
 .t-bg__2--light {
@@ -4969,4 +4979,34 @@ a.info {
     z-index: 5;
     height: 100%;
     text-align: center;
+}
+
+.glass-image {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    -webkit-filter: url(#svg-blur);
+    filter: url(#svg-blur);
+}
+
+.hero-wrap .page-title__bg {
+    overflow: hidden; 
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    -webkit-filter: url(#svg-blur);
+    filter: url(#svg-blur);
+}
+
+.home .site-header {
+    background-color: transparent;
 }

@@ -48,7 +48,7 @@ function bempress_header_style() {
     ?>
         .hero-wrap,
         .page-title__bg {
-            background-image: url(<?php header_image(); ?>);
+            //background-image: url(<?php header_image(); ?>);
         }
         <?php endif; // End header image check. ?>
     </style>
