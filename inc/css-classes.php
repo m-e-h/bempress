@@ -19,7 +19,7 @@ class AttrTrumps {
 	public $wrap                		= '';
     public $action_bar_wrap             = ' wrapper--wide shadow--z2 t-bg__1--glass flex flex--row grid--right';
 	public $hero_wrap                	= ' wrapper--wide u-p-';
-	public $header                		= ' '; 	// site-header
+	public $header                		= ' t-bg__tint'; 	// site-header
 	public $footer                		= ' t-bg__1'; 	// site-footer
 	public $content 					= ' grid__item'; 	// content
 	public $content_full_width			= ' u-1of1'; 	// content

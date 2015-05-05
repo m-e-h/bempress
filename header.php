@@ -33,7 +33,6 @@
 
     <div class="action-bar">
         <div <?php hybrid_attr( 'wrap', 'action-bar' ); ?>>
-
             <button class="menu-toggle" aria-controls="menu-primary" aria-expanded="false">
             <span></span>
             </button>
@@ -47,7 +46,9 @@
 			<div <?php hybrid_attr( 'wrap', 'header' ); ?>>
 
                 <div <?php hybrid_attr( 'branding' ); ?>>
+                <div class="logo__wrap">
                     <?php flagship_the_logo(); ?>
+                </div>
                     <?php hybrid_site_title(); ?>
                     <?php hybrid_site_description(); ?>
                 </div><!-- #branding -->
