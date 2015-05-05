@@ -41,27 +41,21 @@
         </div>
     </div>
 
+            <div <?php hybrid_attr( 'wrap', 'header' ); ?>>
+
             <?php tha_header_top(); ?>
 
-			<div <?php hybrid_attr( 'wrap', 'header' ); ?>>
-
                 <div <?php hybrid_attr( 'branding' ); ?>>
-                <div class="logo__wrap">
                     <?php flagship_the_logo(); ?>
-                </div>
                     <?php hybrid_site_title(); ?>
                     <?php hybrid_site_description(); ?>
                 </div><!-- #branding -->
 
-			</div><!-- .wrap -->
-
             <?php tha_header_bottom(); ?>
 
-		</header><!-- #header -->
+            </div><!-- .wrap -->
 
-    <?php if ( get_header_image() ) : ?>
-        <img class="header-image" src="<?php header_image(); ?>">
-    <?php endif; // End header image check. ?>
+		</header><!-- #header -->
 
         <?php tha_header_after(); ?>
 

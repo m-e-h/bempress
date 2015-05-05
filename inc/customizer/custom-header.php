@@ -46,10 +46,12 @@ function bempress_header_style() {
         // Is there an image?
         if ( get_header_image() ) :
     ?>
-/*        .hero-wrap,
-        .page-title__bg {
-            //background-image: url(<?php header_image(); ?>);
-        }*/
+        .site-header {
+            background-image: url(<?php header_image(); ?>);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
         <?php endif; // End header image check. ?>
     </style>
 

@@ -3950,6 +3950,7 @@ input.is-active[type="submit"],
 
 .menu-primary {
     position: fixed;
+    z-index: 1;
     top: 0;
     bottom: 0;
     width: 250px;
@@ -4870,51 +4871,40 @@ a.info {
     }
 }
 
-.hero-wrap {
+.home {
     text-align: center;
     /* Put this on top of the blurred layer */
 }
-.hero-wrap .site-branding {
+.home .site-branding {
     overflow: hidden; 
     text-shadow: 0 2px rgba(62, 71, 76, 0.4);
 }
-.hero-wrap .site-title {
+.home .site-title {
     margin: 12px 0; 
     -webkit-transition: 0.35s;
     transition: 0.35s;
 }
-.hero-wrap .site-title:hover {
-    background-color: rgba(49, 155, 92, 0.8);
-    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 0 6px 3px 0 rgba(0, 0, 0, 0.23);
-}
-.hero-wrap .site-title a {
+.home .site-title a {
     font-weight: 400;
     letter-spacing: 2px;
 }
-.hero-wrap .widget li:last-of-type,
-.hero-wrap .widget ul:last-of-type,
-.hero-wrap p:last-of-type {
+.home .widget li:last-of-type,
+.home .widget ul:last-of-type,
+.home p:last-of-type {
     margin-bottom: 0;
 }
-.hero-wrap .site-logo-link {
-    width: 100%;
+.home .site-logo-link {
+    overflow: visible;
     padding: 5px 0;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%; 
     opacity: 1;
     -webkit-transition: 0.35s;
     transition: 0.35s;
 }
-.hero-wrap .site-logo-link:hover {
-    border-radius: 50% 50% 0 0; 
-    color: rgba(255, 255, 255, 0.9);
-    background-color: rgba(56, 89, 150, 0.8);
-    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 0 6px 3px 0 rgba(0, 0, 0, 0.23);
+.home .site-logo-link:hover > .site-logo {
+    opacity: 0.9; 
+    box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.25), 0 10px 5px 0 rgba(0, 0, 0, 0.22);
 }
-.hero-wrap .site-logo-link:hover > .site-logo {
-    opacity: 0.9;
-}
-.hero-wrap .toggles {
+.home .toggles {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -4933,23 +4923,15 @@ a.info {
     -webkit-justify-content: space-around;
     justify-content: space-around;
 }
-.hero-wrap .toggle {
-    margin-right: 12px;
+.home .toggle {
     padding: 0;
     border-radius: 2px 2px 0 0;
     text-align: center;
-    -webkit-transition: 0.35s;
-    transition: 0.35s; 
 
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-}
-.hero-wrap .toggle:hover,
-.hero-wrap .toggle.is-active {
-    color: rgba(255, 255, 255, 0.9); 
-    background-color: rgba(157, 141, 0, 0.8);
 }
 
 .toggle__title {
@@ -4958,16 +4940,13 @@ a.info {
     line-height: 1.7142857143;
 }
 
-.site-header {
-    z-index: 1;
-}
-
 .site-branding {
     display: inline-block;
 }
 
 .header-image {
     position: fixed;
+    z-index: -1; 
     top: 0;
     right: 0;
     left: 0;
@@ -4986,7 +4965,6 @@ a.info {
 
 .panel {
     display: none;
-    z-index: 8000; 
     width: 100%;
     margin: 0;
 }
@@ -4996,4 +4974,13 @@ a.info {
     max-width: 48px;
     max-height: 48px;
     margin: 0 auto;
+}
+
+.site-header {
+    background-attachment: scroll;
+}
+@media screen and (min-width: 48em) {
+    .site-header {
+        background-attachment: fixed;
+    }
 }

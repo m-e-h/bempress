@@ -37,7 +37,7 @@
 }
 
 
-.hero-wrap {
+.home {
     //padding: 70px;
     //min-height: 425px;
     // display: flex;
@@ -58,8 +58,8 @@
         transition: $base-transition;
         margin: $base-spacing-unit--small 0;
         &:hover {
-        background-color: glass($color-secondary-dark);
-        @include shadow-z3();
+        // background-color: glass($color-secondary-dark);
+        // @include shadow-z3();
     }
 
         a {
@@ -100,19 +100,20 @@
     .site-logo-link {
           padding: 5px 0;
           opacity: 1;
+          overflow: visible;
         //@include bg-text($color-frost);
         transition: $base-transition;
-          width: 100%;
-          border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
+  //         width: 100%;
+  //         border-top-left-radius: 50%;
+  // border-top-right-radius: 50%;
 
           &:hover {
-        @include shadow-z3();
-            @include bg-text(glass($color-primary-dark));
-            border-radius: 50% 50% 0 0;
+        // @include shadow-z3();
+        //     @include bg-text(glass($color-primary-dark));
+        //     border-radius: 50% 50% 0 0;
 
             > .site-logo {
-        //@include shadow-z3();
+        @include shadow-z4();
         opacity: .9;
             }
           }
@@ -132,14 +133,14 @@
     text-align: center;
     padding: 0;
     flex: 1;
-    margin-right: $base-spacing-unit--small;
+    //margin-right: $base-spacing-unit--small;
 
         //@include bg-text($color-frost);
-        transition: $base-transition;
+        //transition: $base-transition;
 
     &:hover,
     &.is-active {
-    @include bg-text(glass($color-accent-dark));
+    //@include bg-text(glass($color-accent-dark));
 }
 }
 
@@ -170,7 +171,7 @@
 }
 
 .site-header {
-    z-index: z("default");
+    //z-index: z("default");
 }
 
 .site-branding {
@@ -183,6 +184,7 @@
   right: 0;
   width: 100%;
   height:auto;
+  z-index: -1;
 }
 
 // .header-wrap {
@@ -237,7 +239,7 @@
     display: none;
     width: 100%;
     margin: 0;
-    z-index: z("overlay");
+    //z-index: z("overlay");
 }
 
 .toggle-img {
@@ -245,4 +247,14 @@
     max-width: 48px;
     max-height: 48px;
     margin: 0 auto;
+}
+
+
+
+.site-header {
+  background-attachment: scroll;
+
+@include md {
+  background-attachment: fixed;
+}
 }
