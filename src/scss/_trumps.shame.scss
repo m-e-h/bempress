@@ -8,27 +8,16 @@
     }
 }
 
-// .site-logo {
-//     width: 100%;
-//     height: 100%;
-// }
-
-
 .site-logo {
     width: 80px;
     height: 80px;
-    margin-top: $base-spacing-unit;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    //display: block;
     border: 5px solid $blue-grey-800;
     background-color: $white;
     padding: $base-spacing-unit--tiny;
-    opacity: .8;
     border-radius: 50%;
     @include shadow-z1();
-        transition: $base-transition;
-
+    transition: $base-transition;
     @include lg {
         width: 120px;
         height: 120px;
@@ -37,192 +26,74 @@
 }
 
 
-.home {
-    //padding: 70px;
-    //min-height: 425px;
-    // display: flex;
-    // justify-content: center;
+
+.header-wrap {
     text-align: center;
-    .site-branding {
-        text-shadow: 0 2px rgba(62, 71, 76, 0.4);
-        //position: relative;
-        //margin: 0 auto;
-        //align-self: center;
-        //border-radius: 50% 50% 0 0;
-        //border: 5px solid $blue-grey-800;
-        //@include shadow-z3();
-        overflow: hidden;
-    }
-    .site-title{
-        //@include bg-text($color-frost);
-        transition: $base-transition;
-        margin: $base-spacing-unit--small 0;
-        &:hover {
-        // background-color: glass($color-secondary-dark);
-        // @include shadow-z3();
-    }
-
-        a {
-            font-weight: 400;
-            letter-spacing: 2px;
-        }
-    }
-
-    .widget li:last-of-type,
-    .widget ul:last-of-type,
-    p:last-of-type {
-        margin-bottom: 0;
-    }
-
-    // .page-title__bg {
-    //   position: absolute;
-    //   top: 0;
-    //   right: 0;
-    //   bottom: 0;
-    //   left: 0;
-    //   //filter: url(#svg-blur);
-    //   overflow: hidden;
-    //   border-radius: 50% 50% 0 0;
-    // }
-
-    // .page-title__wrap {
-    //       border-radius: 50% 50% 0 0;
-    //       overflow: hidden;
-        /* Put this on top of the blurred layer */
-
-        //@include bg-text(rgba($color-primary-dark, .6));
-        //padding: $base-spacing-unit;
-        //position: relative;
-        //z-index: 100;
-        //padding: 1px $base-spacing-unit--large $base-spacing-unit--small;
-    //}
-
-    .site-logo-link {
-          padding: 5px 0;
-          opacity: 1;
-          overflow: visible;
-        //@include bg-text($color-frost);
-        transition: $base-transition;
-  //         width: 100%;
-  //         border-top-left-radius: 50%;
-  // border-top-right-radius: 50%;
-
-          &:hover {
-        // @include shadow-z3();
-        //     @include bg-text(glass($color-primary-dark));
-        //     border-radius: 50% 50% 0 0;
-
-            > .site-logo {
-        @include shadow-z4();
-        opacity: .9;
-            }
-          }
-    }
-
-.toggles {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-end;
-}
-
-
-.toggle {
-
-    border-radius: $base-radius $base-radius 0 0;
-    text-align: center;
-    padding: 0;
-    flex: 1;
-    //margin-right: $base-spacing-unit--small;
-
-        //@include bg-text($color-frost);
-        //transition: $base-transition;
-
-    &:hover,
-    &.is-active {
-    //@include bg-text(glass($color-accent-dark));
-}
-}
-
-
-}
-
-    .toggle__title {
-    @include font-size(14px);
-}
-// @media (max-width: 600px) {
-//     .hero-wrap {
-//         padding: 10px;
-//     }
-//     .page-title__bg {
-//         background-position: center -10px;
-//     }
-// }
-
-// .glass-image {
-//     display: none;
-// }
-
-
-
-
-.site-container {
-    //z-index: z("default");
-}
-
-.site-header {
-    //z-index: z("default");
 }
 
 .site-branding {
-    display: inline-block;
+    text-shadow: 0 2px rgba(62, 71, 76, 0.4);
+    //overflow: hidden;
 }
+
+.site-title {
+    margin: $base-spacing-unit--small 0;
+    a {
+        font-weight: 400;
+        letter-spacing: 2px;
+    }
+}
+
+.site-logo-link {
+    //padding: 5px 0;
+    opacity: .7;
+    position: absolute;
+    top: 65px;
+    z-index: 999;
+    left: 50%;
+    margin-left: -60px;
+    overflow: visible!important;
+    transition: $base-transition;
+    @include lg {
+        margin-top: -60px;
+    }
+    &:hover {
+            opacity: .9;
+        > .site-logo {
+            @include shadow-z4();
+        }
+    }
+}
+
+.home .site-logo-link {
+    //margin-top: 0;
+    position: relative;
+    margin: $base-spacing-unit 0 0;
+    top: 0;
+    left: 0;
+}
+
+.toggle__title {
+    @include font-size($base-font-size - 3);
+}
+
+.site-branding {
+    //display: inline-block;
+    padding: $base-spacing-unit;
+}
+
 .header-image {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height:auto;
-  z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
 }
 
-// .header-wrap {
-//   height: 100%;
-//   //z-index: 5;
-//   text-align: center;
-// }
-
-
-
-
-// .glass-image {
-//     display: inline-block;
-//   position: fixed;
-//   top: 0;
-//   right: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   z-index: -1;
-//   //filter: url(#svg-blur);
-// }
-
-
-
-
-// .home .site-header {
-//     background-color: transparent;
-// }
-
-
-
-
-
-// non-home pages
 .toggle {
     width: auto;
-    //height: 100%;
     margin: auto;
     border-radius: 0;
     padding-top: 5px;
@@ -230,16 +101,10 @@
     text-align: center;
 }
 
-// .toggle-title {
-//     display: block;
-//     //font-size: 13px;
-// }
-
 .panel {
     display: none;
     width: 100%;
     margin: 0;
-    //z-index: z("overlay");
 }
 
 .toggle-img {
@@ -249,12 +114,16 @@
     margin: 0 auto;
 }
 
-
-
 .site-header {
-  background-attachment: scroll;
+    background-attachment: scroll;
+    @include md {
+        background-attachment: fixed;
+    }
+}
 
-@include md {
-  background-attachment: fixed;
+.widget li:last-of-type,
+.widget ul:last-of-type,
+p:last-of-type {
+    margin-bottom: 0;
 }
-}
+

@@ -37,6 +37,7 @@
             <span></span>
             </button>
 
+            <?php action_bar_left(); ?>
             <?php action_bar_right(); ?>
         </div>
     </div>
@@ -46,11 +47,12 @@
             <?php tha_header_top(); ?>
 
                 <div <?php hybrid_attr( 'branding' ); ?>>
-                    <?php flagship_the_logo(); ?>
                     <?php hybrid_site_title(); ?>
                     <?php hybrid_site_description(); ?>
                 </div><!-- #branding -->
 
+
+        <?php hybrid_get_menu( 'breadcrumbs' ); ?>
             <?php tha_header_bottom(); ?>
 
             </div><!-- .wrap -->
@@ -60,8 +62,6 @@
         <?php tha_header_after(); ?>
 
 		<?php hybrid_get_menu( 'primary' ); ?>
-
-        <?php hybrid_get_menu( 'breadcrumbs' ); ?>
 
         <div <?php hybrid_attr( 'site-container' ); ?>>
 

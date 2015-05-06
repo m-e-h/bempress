@@ -17,8 +17,6 @@ new Hybrid();
 
 add_action( 'after_setup_theme', 'bempress_setup', 10 );
 add_action( 'after_setup_theme', 'bempress_includes', 10 );
-add_action( 'tha_header_top', 'doc_toggle_panel' );
-add_action( 'action_bar_right', 'doc_panel_toggles' );
 add_filter( 'walker_nav_menu_start_el', 'bempress_nav_description', 10, 4 );
 
 
@@ -99,6 +97,7 @@ function bempress_includes() {
     require_once $includes_dir . 'general.php';
     require_once $includes_dir . 'scripts.php';
     require_once $includes_dir . 'widgetize.php';
+    require_once $includes_dir . 'template-actions.php';
     require_once $includes_dir . 'html-min.php';
     require_once $includes_dir . 'customizer/customizer.php';
     require_once $includes_dir . 'customizer/custom-header.php';
@@ -118,19 +117,6 @@ function cc_mime_types($mimes) {
   return $mimes;
 }
 add_filter('upload_mimes', 'cc_mime_types');
-
-function action_bar_right() {
-    do_action( 'action_bar_right' );
-}
-
-
-function doc_toggle_panel() {
-    get_template_part( 'templates/toggle-panel' );
-}
-
-function doc_panel_toggles() {
-    get_template_part( 'templates/panel-toggles' );
-}
 
 
 
