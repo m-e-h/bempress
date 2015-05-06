@@ -17,6 +17,7 @@ new Hybrid();
 
 add_action( 'after_setup_theme', 'bempress_setup', 10 );
 add_action( 'after_setup_theme', 'bempress_includes', 10 );
+add_filter( 'walker_nav_menu_start_el', 'bempress_nav_description', 10, 4 );
 
 
 
@@ -96,6 +97,7 @@ function bempress_includes() {
     require_once $includes_dir . 'general.php';
     require_once $includes_dir . 'scripts.php';
     require_once $includes_dir . 'widgetize.php';
+    require_once $includes_dir . 'template-actions.php';
     require_once $includes_dir . 'html-min.php';
     require_once $includes_dir . 'customizer/customizer.php';
     require_once $includes_dir . 'customizer/custom-header.php';
@@ -116,6 +118,12 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
-function action_bar_right() {
-    do_action( 'action_bar_right' );
+
+
+
+function bempress_nav_description( $item_output, $item, $depth, $args ) {
+    if ( $item->description ) {
+        $item_output = str_replace( $args->link_after . '</a>', '</a><a data-tip="true" class="tip--left tip--large tip--bottom menu-item__description info" data-tip-content="' . $item->description . '"><i class="fa fa-info-circle"></i></a>' . $args->link_after , $item_output );
+    }
+    return $item_output;
 }

@@ -18,8 +18,8 @@ class AttrTrumps {
 	public $site_inner_sidebar_left 	= ' wrap grid--rev';
 	public $wrap                		= '';
     public $action_bar_wrap             = ' wrapper--wide shadow--z2 t-bg__1--glass flex flex--row grid--right';
-	public $hero_wrap                	= ' wrapper--wide u-p-';
-	public $header                		= ' '; 	// site-header
+	public $header_wrap                	= ' wrapper--wide u-p0 t-bg__tint';
+	public $header                		= ' t-bg__tint'; 	// site-header
 	public $footer                		= ' t-bg__1'; 	// site-footer
 	public $content 					= ' grid__item'; 	// content
 	public $content_full_width			= ' u-1of1'; 	// content
@@ -150,8 +150,8 @@ class AttrTrumps {
 			return $attr;
 		}
         $attr['class']    .= $this->wrap;
-		if ( 'hero' === $context ) {
-		$attr['class']    .= $this->hero_wrap;
+		if ( 'header' === $context ) {
+		$attr['class']    .= $this->header_wrap;
 		}
         if ( 'action-bar' === $context ) {
         $attr['class']    .= $this->action_bar_wrap;

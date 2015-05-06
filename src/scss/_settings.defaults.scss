@@ -6,7 +6,17 @@
 $namespace:               null !default;
 
 
+// All z-index values should be set here
 
+$z-layers: (
+    'modal'         : 9000,
+    'overlay'       : 8000,
+    'dropdown'      : 7000,
+    'header'        : 6000,
+    'footer'        : 5000,
+    'default'       : 1,
+    'bottomless-pit': -10000
+);
 
 // High-level base settings.
 $base-font-size:          16px !default;
@@ -19,7 +29,7 @@ $base-radius:           2px;
 
 $base-opacity:          0.7;
 
-$base-transition:       0.25s;
+$base-transition:       0.35s;
 
 $font-body:             "Roboto", sans-serif;
 $font-heading:          "Raleway", sans-serif;
