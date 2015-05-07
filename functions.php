@@ -80,7 +80,8 @@ function bempress_setup() {
         'header-text'            => true,
         'uploads'                => true,
         'wp-head-callback'       => 'bempress_header_style'
-    ] ) );
+        ]
+    ) );
 }
 
 
