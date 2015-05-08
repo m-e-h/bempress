@@ -3,10 +3,6 @@
 \*------------------------------------*/
 
 html {
-    @include font-size(15px);
-    @include md {
-        @include font-size($base-font-size);
-    }
     color: $base-text-color;
     min-height: 100%;
     background-color: #ffffff;
@@ -19,19 +15,4 @@ pre {
     margin-bottom: $base-spacing-unit;
 }
 
-dd {
-    margin-left: $base-spacing-unit;
-}
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: $base-spacing-unit 0;
-    padding: 0;
-}
-
-.site-container {
-    background-color: $color-off-white;
-}

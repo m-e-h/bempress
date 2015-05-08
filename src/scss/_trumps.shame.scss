@@ -2,6 +2,19 @@
     #To be place in a more appropriate stylesheet later
 \*----------------------------------------------------*/
 
+.browserupgrade {
+    margin: 0.2em 0;
+    text-align: center;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+
+    a {
+        color: blue;
+        text-decoration: underline;
+    }
+}
+
 .action-bar-wrap {
     @include md {
         display: block;
