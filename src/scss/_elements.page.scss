@@ -2,17 +2,111 @@
     #PAGE
 \*------------------------------------*/
 
+:root {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-y: scroll;
+    text-size-adjust: 100%;
+    box-sizing: border-box;
+    cursor: default;
+    font-family: $font-body;
+    text-rendering: optimizeLegibility;
+    @include font-size($base-font-size - 1);
+    @include md {
+        @include font-size($base-font-size);
+    }
+}
+
+/**
+ * Universal selector. This is applied to all elements.
+ */
+
+* {
+    position: relative;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+    word-wrap: break-word;
+    flex-direction: column;
+    //transition: $base-transition;
+    vertical-align: middle;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+    border-style: solid;
+    border-width: 0;
+}
+
+::after,
+::before {
+    text-decoration: inherit;
+    vertical-align: inherit;
+}
+
 html {
     color: $base-text-color;
     min-height: 100%;
     background-color: #ffffff;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
-h1, h2, h3, h4, h5, h6,
-dl, blockquote, p, address,
-table, fieldset, figure,
-pre {
-    margin-bottom: $base-spacing-unit;
+body {
+    color: $color-text;
+    font-family: $font-body;
+    font-size: $base-font-size;
+    font-style: normal;
+    font-weight: 400;
+    background-color: $color-bg;
 }
 
+hr {
+    display: block;
+    height: 1px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    margin: $base-spacing-unit 0;
+}
 
+span {
+  display: inline-block;
+}
+
+::-moz-selection {
+    background-color: #B3D4FC;
+    text-shadow: none;
+}
+
+::selection {
+    background-color: #B3D4FC;
+    text-shadow: none;
+}
+
+canvas {
+    -ms-touch-action: double-tap-zoom;
+}
+
+iframe[src*="google.com/maps"] {
+    max-width: 100%;
+    width: 100%;
+}
+
+[hidden],
+audio:not([controls]),
+template {
+    display: none;
+}
+
+@media screen {
+    [hidden~=screen] {
+        display: inherit;
+    }
+    [hidden~=screen]:not(:active):not(:focus):not(:target) {
+        clip: rect(0 0 0 0)!important;
+        position: absolute!important;
+    }
+}

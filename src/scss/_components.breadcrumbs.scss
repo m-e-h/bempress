@@ -2,59 +2,114 @@
     #BREADCRUMBS
 \*------------------------------------*/
 
+// .breadcrumbs {
+//     overflow: hidden;
+//     cursor: default;
+//     @include font-size($base-font-size - 1);
+//     margin-left: auto;
+//     margin-right: auto;
+//     padding: $base-spacing-unit--small;
+//     @include md {
+//         margin-top: $base-spacing-unit;
+//     }
+//     @include lg {
+//         padding: $base-spacing-unit;
+//         margin-top: 0;
+//         color: set-text-color($color-primary-dark);
+//     }
+//     .trail-end {
+//         @include font-size($heading-size-1, false);
+//         display: block;
+//     }
+//     a {
+//         color: currentColor;
+//         opacity: .8;
+//         &:hover {
+//             opacity: 1;
+//         }
+//     }
+//     .sep {
+//         padding: 0 5px;
+//         font-family: $fa;
+//     }
+// }
+
 .breadcrumbs {
-    //text-transform: uppercase;
-    overflow: hidden;
-    color: $color-text;
-    list-style: none;
-    cursor: default;
-    //font-weight: 500;
-    @include font-size($base-font-size - 1);
-    margin-left: auto;
-    margin-right: auto;
-    //margin-top: -$base-spacing-unit--small;
-    padding: $base-spacing-unit--small;
+  display: inline-block;
+  margin-bottom: 1.5em;
+    text-align: center;
+    a {
+      background-color: white;
+  border-left: 0;
+  border: 1px solid gainsboro;
+  color: #999;
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 2.25em;
+  margin-bottom: 2px;
+  margin-right: -5px;
+  padding: 0 0.5625em 0 1.125em;
+  position: relative;
+  text-decoration: none;
 
-        @include md {
-            margin-top: $base-spacing-unit;
-    }
+  &:before, &:after {
+  position: absolute;
+  top: 0px;
+  right: auto;
+  bottom: 0px;
+  left: 100%;
+  border-bottom: 1.125em solid transparent;
+  border-left: 0.5625em solid transparent;
+  border-top: 1.125em solid transparent;
+  content: '';
+  display: block;
+  margin: auto;
+  z-index: 2;
+}
 
-    @include lg {
-        padding: $base-spacing-unit;
-        margin-top: 0;
-        // position: absolute;
-        // top: 0;
-        // z-index: 6;
-        color: set-text-color($color-primary-dark);
+&:before {
+  border-left-color: gainsboro;
+  margin-left: 1px;
+  z-index: 1;
+}
 
-    }
+&:after {
+  border-left-color: white;
+}
 
-.trail-end {
-            @include font-size($heading-size-1, false);
-        line-height: 1.3;
+//   &:first-child {
+//     border-bottom-left-radius: 3px;
+//   border-left: 1px solid gainsboro;
+//   border-top-left-radius: 3px;
+//   padding-left: 1.125em;
+//   }
+
+//   &:last-child {
+//   background-color: white;
+//   border-bottom-right-radius: 3px;
+//   border-top-right-radius: 3px;
+//   color: #999;
+//   padding-right: 1.125em;
+// }
+
+// &:last-child:before, :last-child:after {
+//   border: none;
+// }
+
+&:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+}
 }
 
 
-    a {
-        text-decoration: none;
-        color: currentColor;
-        font-weight: inherit;
-        opacity: .8;
-        transition: opacity 0.2s ease;
+span.sep {
+    display: none;
+}
 
-        &:hover {
-            opacity: 1;
-        }
-    }
-
-    .sep {
-        padding: 0 5px;
-        font-family: $fa;
-        //color: $grey-200;
-    }
 
     .trail-end {
-        //font-weight: 500;
-        //color: $color-text-light;
+        @include font-size($heading-size-1, false);
+        display: block;
     }
-}

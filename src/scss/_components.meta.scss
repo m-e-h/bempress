@@ -3,34 +3,23 @@
 \*------------------------------------*/
 
 .entry__meta {
-  color: $color-text-light;
-  font-weight: normal;
-  @include font-size($base-font-size - 1);
-  margin-bottom: 0;
-  text-align: center;
-  font-style: italic;
-
-  a {
-  color: currentColor;
-  font-weight: inherit;
-  }
+    color: $color-text-light;
+    font-weight: normal;
+    @include font-size($base-font-size - 1);
+    margin-bottom: 0;
+    text-align: center;
+    font-style: italic;
+    a {
+        color: currentColor;
+        font-weight: inherit;
+    }
 }
-
 
 .badge {
     a {
-@extend .button;
-@extend .button--outline;
-@extend .button--tiny;
-  // display: inline-block;
-  // vertical-align: middle;
-  // @include font-size($base-font-size - 5, false);
-  // line-height: 100%;
-  // border: 2px solid $color-grey-ui;
-  // padding: $base-spacing-unit--tiny $base-spacing-unit--small;
-  // text-transform: uppercase;
-  // border-radius: $base-radius;
-  // //white-space: nowrap;
-  // letter-spacing: 1px;
+        @extend .button;
+        @extend .button--outline;
+        @extend .button--tiny;
+    }
 }
-}
+

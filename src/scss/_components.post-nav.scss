@@ -2,27 +2,21 @@
     #POST NAVIGATION
 \*------------------------------------*/
 
-
 // post-navigation
+.nav-single,
 .nav-links {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: $base-spacing-unit--small;
-  @include md {
-    margin-bottom: $base-spacing-unit;
-  }
-  @include lg {
-    margin-bottom: $base-spacing-unit--large;
-  }
+    text-align: center;
+    margin-bottom: $base-spacing-unit--small;
+    @include md {
+        margin-bottom: $base-spacing-unit;
+    }
+    @include lg {
+        margin-bottom: $base-spacing-unit--large;
+    }
 }
-
-.nav-previous span::before {
-
-}
-
 
 .pagination .nav-links {
-  justify-content: center;
+    //justify-content: center;
 }
 
 .page-numbers {
@@ -47,7 +41,7 @@
     @include font-icon($chevron-right, $fa, after);
     &::after {
         padding-left: 5px;
-        vertical-align: bottom;
+        vertical-align: baseline;
     }
 }
 
@@ -55,6 +49,7 @@
     @include font-icon($chevron-left);
     &::before {
         padding-right: 5px;
-        vertical-align: bottom;
+        vertical-align: baseline;
     }
 }
+

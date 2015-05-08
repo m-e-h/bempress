@@ -6,21 +6,17 @@
 $namespace:               null !default;
 
 
-// All z-index values should be set here
-
-$z-layers: (
-    'modal'         : 9000,
-    'overlay'       : 8000,
-    'dropdown'      : 7000,
-    'header'        : 6000,
-    'footer'        : 5000,
-    'default'       : 1,
-    'bottomless-pit': -10000
-);
 
 // High-level base settings.
 $base-font-size:          16px !default;
 $base-line-height:        24px !default;
+
+$heading-size-1:  36px !default;
+$heading-size-2:  30px !default;
+$heading-size-3:  24px !default;
+$heading-size-4:  20px !default;
+$heading-size-5:  16px !default;
+$heading-size-6:  14px !default;
 
 $base-text-color:         #333 !default;
 $base-background-color:   #fff !default;
@@ -47,3 +43,18 @@ $base-spacing-unit--small:    round($base-spacing-unit / 2);
 $base-spacing-unit--large:    round($base-spacing-unit * 2);
 $base-spacing-unit--larger:   round($base-spacing-unit * 3);
 $base-spacing-unit--huge:     round($base-spacing-unit * 4);
+
+
+
+
+// All z-index values should be set here
+
+$z-layers: (
+    'modal'         : 9000,
+    'overlay'       : 8000,
+    'dropdown'      : 7000,
+    'header'        : 6000,
+    'footer'        : 5000,
+    'default'       : 1,
+    'bottomless-pit': -10000
+);

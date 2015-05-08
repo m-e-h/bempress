@@ -2,28 +2,28 @@
     $ARTICLES
 \*------------------------------------*/
 
-.entry-title {}
+// .entry-title {}
 
-.entry-format {
-    position: absolute;
-    opacity: 0.8;
-    width: 30px;
-    bottom: 0;
-    right: 0;
-    @include md {
-        opacity: 0.8;
-        bottom: -20px;
-        width: 50px;
-        right: 50%;
-        margin-right: -25px;
-        height: 50px;
-    }
-}
+// .entry-format {
+//     position: absolute;
+//     opacity: 0.8;
+//     width: 30px;
+//     bottom: 0;
+//     right: 0;
+//     @include md {
+//         opacity: 0.8;
+//         bottom: -20px;
+//         width: 50px;
+//         right: 50%;
+//         margin-right: -25px;
+//         height: 50px;
+//     }
+// }
 
-.entry-format svg {
-    // display: block;
-    // top: 15px;
-    // margin: 0 auto;
-    // height: 100%;
-}
+// .entry-format svg {
+//     display: block;
+//     top: 15px;
+//     margin: 0 auto;
+//     height: 100%;
+// }
 

@@ -2,791 +2,112 @@
     #SPACING-RESPONSIVE
 \*------------------------------------*/
 
-/*------------------------------------*\
-    #SPACING
-\*------------------------------------*/
-
-/**
- * Margin and padding helper classes. Use these to tweak layout on a micro
- * level.
- *
- * `.(m|p)(t|r|b|l|h|v)(-|+|0) {}` = margin/padding top/right/bottom/left/horizontal/vertical less/more/none
- */
-
-// Predefine the variables below in order to alter and enable specific features.
-$spacing-namespace:               $namespace !default;
-
-$margin:                          $base-spacing-unit !default;
-$margin--small:                       halve($margin) !default;
-$margin--tiny:                      quarter($margin) !default;
-$margin--large:                      double($margin) !default;
-$margin--huge:                    quadruple($margin) !default;
-
-$padding:                         $base-spacing-unit !default;
-$padding--small:                      halve($padding) !default;
-$padding--tiny:                     quarter($padding) !default;
-$padding--large:                     double($padding) !default;
-$padding--huge:                   quadruple($padding) !default;
-
-$enable-margins:                  true !default;
-$enable-margins--tiny:            true !default;
-$enable-margins--small:           true !default;
-$enable-margins--large:           true !default;
-$enable-margins--huge:            true !default;
-
-$enable-margins--negative:        false !default;
-$enable-margins--negative-tiny:   false !default;
-$enable-margins--negative-small:  false !default;
-$enable-margins--negative-large:  false !default;
-$enable-margins--negative-huge:   false !default;
-
-$enable-margins--none:            true !default;
-
-$enable-paddings:                 true !default;
-$enable-paddings--tiny:           true !default;
-$enable-paddings--small:          true !default;
-$enable-paddings--large:          true !default;
-$enable-paddings--huge:           true !default;
-
-$enable-paddings--none:           true !default;
-
-
-
-
-
-@if ($enable-margins == true) {
-
-    /**
-     * Margin helper classes.
-     *
-     * Add margins.
-     */
-
-    .#{$spacing-namespace}u-m     { margin:           $margin; }
-    .#{$spacing-namespace}u-mt    { margin-top:       $margin; }
-    .#{$spacing-namespace}u-mr    { margin-right:     $margin; }
-    .#{$spacing-namespace}u-mb    { margin-bottom:    $margin; }
-    .#{$spacing-namespace}u-ml    { margin-left:      $margin; }
-    .#{$spacing-namespace}u-mh    { margin-right:     $margin; margin-left:      $margin; }
-    .#{$spacing-namespace}u-mv    { margin-top:       $margin; margin-bottom:    $margin; }
-
-}
-
-
-@if ($enable-margins--tiny == true) {
-
-    /**
-     * Add tiny margins.
-     */
-
-    .#{$spacing-namespace}u-m--   { margin:           $margin--tiny; }
-    .#{$spacing-namespace}u-mt--  { margin-top:       $margin--tiny; }
-    .#{$spacing-namespace}u-mr--  { margin-right:     $margin--tiny; }
-    .#{$spacing-namespace}u-mb--  { margin-bottom:    $margin--tiny; }
-    .#{$spacing-namespace}u-ml--  { margin-left:      $margin--tiny; }
-    .#{$spacing-namespace}u-mh--  { margin-right:     $margin--tiny; margin-left:     $margin--tiny; }
-    .#{$spacing-namespace}u-mv--  { margin-top:       $margin--tiny; margin-bottom:   $margin--tiny; }
-
-}
-
-
-@if ($enable-margins--small == true) {
-
-    /**
-     * Add small margins.
-     */
-
-    .#{$spacing-namespace}u-m-    { margin:           $margin--small; }
-    .#{$spacing-namespace}u-mt-   { margin-top:       $margin--small; }
-    .#{$spacing-namespace}u-mr-   { margin-right:     $margin--small; }
-    .#{$spacing-namespace}u-mb-   { margin-bottom:    $margin--small; }
-    .#{$spacing-namespace}u-ml-   { margin-left:      $margin--small; }
-    .#{$spacing-namespace}u-mh-   { margin-right:     $margin--small; margin-left:   $margin--small; }
-    .#{$spacing-namespace}u-mv-   { margin-top:       $margin--small; margin-bottom: $margin--small; }
-
-}
-
-
-@if ($enable-margins--large == true) {
-
-    /**
-     * Add large margins.
-     */
-
-    .#{$spacing-namespace}u-m#{\+}   { margin:           $margin--large; }
-    .#{$spacing-namespace}u-mt#{\+}  { margin-top:       $margin--large; }
-    .#{$spacing-namespace}u-mr#{\+}  { margin-right:     $margin--large; }
-    .#{$spacing-namespace}u-mb#{\+}  { margin-bottom:    $margin--large; }
-    .#{$spacing-namespace}u-ml#{\+}  { margin-left:      $margin--large; }
-    .#{$spacing-namespace}u-mh#{\+}  { margin-right:     $margin--large; margin-left:      $margin--large; }
-    .#{$spacing-namespace}u-mv#{\+}  { margin-top:       $margin--large; margin-bottom:    $margin--large; }
-
-}
-
-
-@if ($enable-margins--huge == true) {
-
-    /**
-     * Add huge margins.
-     */
-
-    .#{$spacing-namespace}u-m#{\+\+}     { margin:           $margin--huge; }
-    .#{$spacing-namespace}u-mt#{\+\+}    { margin-top:       $margin--huge; }
-    .#{$spacing-namespace}u-mr#{\+\+}    { margin-right:     $margin--huge; }
-    .#{$spacing-namespace}u-mb#{\+\+}    { margin-bottom:    $margin--huge; }
-    .#{$spacing-namespace}u-ml#{\+\+}    { margin-left:      $margin--huge; }
-    .#{$spacing-namespace}u-mh#{\+\+}    { margin-right:     $margin--huge; margin-left:   $margin--huge; }
-    .#{$spacing-namespace}u-mv#{\+\+}    { margin-top:       $margin--huge; margin-bottom: $margin--huge; }
-
-}
-
-
-@if ($enable-margins--none == true) {
-
-    /**
-     * Remove margins.
-     */
-
-    .#{$spacing-namespace}u-m0    { margin:           0; }
-    .#{$spacing-namespace}u-mt0   { margin-top:       0; }
-    .#{$spacing-namespace}u-mr0   { margin-right:     0; }
-    .#{$spacing-namespace}u-mb0   { margin-bottom:    0; }
-    .#{$spacing-namespace}u-ml0   { margin-left:      0; }
-    .#{$spacing-namespace}u-mh0   { margin-right:     0; margin-left:      0; }
-    .#{$spacing-namespace}u-mv0   { margin-top:       0; margin-bottom:    0; }
-
-}
-
-
-@if ($enable-margins--negative == true) {
-
-    /**
-     * Negative margins.
-     */
-
-    .#{$spacing-namespace}u--m    { margin:           -$margin; }
-    .#{$spacing-namespace}u--mt   { margin-top:       -$margin; }
-    .#{$spacing-namespace}u--mr   { margin-right:     -$margin; }
-    .#{$spacing-namespace}u--mb   { margin-bottom:    -$margin; }
-    .#{$spacing-namespace}u--ml   { margin-left:      -$margin; }
-    .#{$spacing-namespace}u--mh   { margin-right:     -$margin; margin-left:      -$margin; }
-    .#{$spacing-namespace}u--mv   { margin-top:       -$margin; margin-bottom:    -$margin; }
-
-}
-
-
-@if ($enable-margins--negative-tiny == true) {
-
-    /**
-     * Tiny negative margins.
-     */
-
-    .#{$spacing-namespace}u--m--  { margin:           -$margin--tiny; }
-    .#{$spacing-namespace}u--mt-- { margin-top:       -$margin--tiny; }
-    .#{$spacing-namespace}u--mr-- { margin-right:     -$margin--tiny; }
-    .#{$spacing-namespace}u--mb-- { margin-bottom:    -$margin--tiny; }
-    .#{$spacing-namespace}u--ml-- { margin-left:      -$margin--tiny; }
-    .#{$spacing-namespace}u--mh-- { margin-right:     -$margin--tiny; margin-left:     -$margin--tiny; }
-    .#{$spacing-namespace}u--mv-- { margin-top:       -$margin--tiny; margin-bottom:   -$margin--huge; }
-
-}
-
-
-@if ($enable-margins--negative-small == true) {
-
-    /**
-     * Small negative margins.
-     */
-
-    .#{$spacing-namespace}u--m-   { margin:           -$margin--small; }
-    .#{$spacing-namespace}u--mt-  { margin-top:       -$margin--small; }
-    .#{$spacing-namespace}u--mr-  { margin-right:     -$margin--small; }
-    .#{$spacing-namespace}u--mb-  { margin-bottom:    -$margin--small; }
-    .#{$spacing-namespace}u--ml-  { margin-left:      -$margin--small; }
-    .#{$spacing-namespace}u--mh-  { margin-right:     -$margin--small; margin-left:   -$margin--small; }
-    .#{$spacing-namespace}u--mv-  { margin-top:       -$margin--small; margin-bottom: -$margin--small; }
-
-}
-
-
-@if ($enable-margins--negative-large == true) {
-
-    /**
-     * Large negative margins.
-     */
-
-    .#{$spacing-namespace}u--m#{\+}  { margin:           -$margin--large; }
-    .#{$spacing-namespace}u--mt#{\+} { margin-top:       -$margin--large; }
-    .#{$spacing-namespace}u--mr#{\+} { margin-right:     -$margin--large; }
-    .#{$spacing-namespace}u--mb#{\+} { margin-bottom:    -$margin--large; }
-    .#{$spacing-namespace}u--ml#{\+} { margin-left:      -$margin--large; }
-    .#{$spacing-namespace}u--mh#{\+} { margin-right:     -$margin--large; margin-left:      -$margin--large; }
-    .#{$spacing-namespace}u--mv#{\+} { margin-top:       -$margin--large; margin-bottom:    -$margin--large; }
-
-}
-
-
-@if ($enable-margins--negative-huge == true) {
-
-    /**
-     * Huge negative margins.
-     */
-
-    .#{$spacing-namespace}u--m#{\+\+}    { margin:           -$margin--huge; }
-    .#{$spacing-namespace}u--mt#{\+\+}   { margin-top:       -$margin--huge; }
-    .#{$spacing-namespace}u--mr#{\+\+}   { margin-right:     -$margin--huge; }
-    .#{$spacing-namespace}u--mb#{\+\+}   { margin-bottom:    -$margin--huge; }
-    .#{$spacing-namespace}u--ml#{\+\+}   { margin-left:      -$margin--huge; }
-    .#{$spacing-namespace}u--mh#{\+\+}   { margin-right:     -$margin--huge; margin-left:   -$margin--huge; }
-    .#{$spacing-namespace}u--mv#{\+\+}   { margin-top:       -$margin--huge; margin-bottom: -$margin--huge; }
-
-}
-
-
-
-
-
-@if ($enable-paddings == true) {
-
-    /**
-     * Padding helper classes.
-     *
-     * Add paddings.
-     */
-
-    .#{$spacing-namespace}u-p     { padding:          $padding; }
-    .#{$spacing-namespace}u-pt    { padding-top:      $padding; }
-    .#{$spacing-namespace}u-pr    { padding-right:    $padding; }
-    .#{$spacing-namespace}u-pb    { padding-bottom:   $padding; }
-    .#{$spacing-namespace}u-pl    { padding-left:     $padding; }
-    .#{$spacing-namespace}u-ph    { padding-right:    $padding; padding-left:    $padding; }
-    .#{$spacing-namespace}u-pv    { padding-top:      $padding; padding-bottom:  $padding; }
-
-}
-
-
-@if ($enable-paddings--tiny == true) {
-
-    /**
-     * Add tiny paddings.
-     */
-
-    .#{$spacing-namespace}u-p--   { padding:           $padding--tiny; }
-    .#{$spacing-namespace}u-pt--  { padding-top:       $padding--tiny; }
-    .#{$spacing-namespace}u-pr--  { padding-right:     $padding--tiny; }
-    .#{$spacing-namespace}u-pb--  { padding-bottom:    $padding--tiny; }
-    .#{$spacing-namespace}u-pl--  { padding-left:      $padding--tiny; }
-    .#{$spacing-namespace}u-ph--  { padding-right:     $padding--tiny; padding-left:      $padding--tiny; }
-    .#{$spacing-namespace}u-pv--  { padding-top:       $padding--tiny; padding-bottom:    $padding--tiny; }
-
-}
-
-
-@if ($enable-paddings--small == true) {
-
-    /**
-     * Add small paddings.
-     */
-
-    .#{$spacing-namespace}u-p-    { padding:           $padding--small; }
-    .#{$spacing-namespace}u-pt-   { padding-top:       $padding--small; }
-    .#{$spacing-namespace}u-pr-   { padding-right:     $padding--small; }
-    .#{$spacing-namespace}u-pb-   { padding-bottom:    $padding--small; }
-    .#{$spacing-namespace}u-pl-   { padding-left:      $padding--small; }
-    .#{$spacing-namespace}u-ph-   { padding-right:     $padding--small; padding-left:    $padding--small; }
-    .#{$spacing-namespace}u-pv-   { padding-top:       $padding--small; padding-bottom:  $padding--small; }
-
-}
-
-
-@if ($enable-paddings--large == true) {
-
-    /**
-     * Add large paddings.
-     */
-
-    .#{$spacing-namespace}u-p#{\+}   { padding:           $padding--large; }
-    .#{$spacing-namespace}u-pt#{\+}  { padding-top:       $padding--large; }
-    .#{$spacing-namespace}u-pr#{\+}  { padding-right:     $padding--large; }
-    .#{$spacing-namespace}u-pb#{\+}  { padding-bottom:    $padding--large; }
-    .#{$spacing-namespace}u-pl#{\+}  { padding-left:      $padding--large; }
-    .#{$spacing-namespace}u-ph#{\+}  { padding-right:     $padding--large; padding-left:   $padding--large; }
-    .#{$spacing-namespace}u-pv#{\+}  { padding-top:       $padding--large; padding-bottom: $padding--large; }
-
-}
-
-
-@if ($enable-paddings--huge == true) {
-
-    /**
-     * Add huge paddings.
-     */
-
-    .#{$spacing-namespace}u-p#{\+\+}     { padding:           $padding--huge; }
-    .#{$spacing-namespace}u-pt#{\+\+}    { padding-top:       $padding--huge; }
-    .#{$spacing-namespace}u-pr#{\+\+}    { padding-right:     $padding--huge; }
-    .#{$spacing-namespace}u-pb#{\+\+}    { padding-bottom:    $padding--huge; }
-    .#{$spacing-namespace}u-pl#{\+\+}    { padding-left:      $padding--huge; }
-    .#{$spacing-namespace}u-ph#{\+\+}    { padding-right:     $padding--huge; padding-left:    $padding--huge; }
-    .#{$spacing-namespace}u-pv#{\+\+}    { padding-top:       $padding--huge; padding-bottom:  $padding--huge; }
-
-}
-
-
-@if ($enable-paddings--none == true) {
-
-    /**
-     * Remove paddings.
-     */
-
-    .#{$spacing-namespace}u-p0    { padding:          0; }
-    .#{$spacing-namespace}u-pt0   { padding-top:      0; }
-    .#{$spacing-namespace}u-pr0   { padding-right:    0; }
-    .#{$spacing-namespace}u-pb0   { padding-bottom:   0; }
-    .#{$spacing-namespace}u-pl0   { padding-left:     0; }
-    .#{$spacing-namespace}u-ph0   { padding-right:    0; padding-left:     0; }
-    .#{$spacing-namespace}u-pv0   { padding-top:      0; padding-bottom:   0; }
-
-}
-
-/*------------------------------------*\
-    #SPACING-RESPONSIVE
-\*------------------------------------*/
 
 
 /**
- * Margin and padding helper classes. Use these to tweak layout on a micro
- * level.
- *
- * `.(m|p)(t|r|b|l|h|v)(-|+|0) {}` = margin/padding top/right/bottom/left/horizontal/vertical less/more/none
+ * Breakpoints map
+ * @type Map
  */
+$breaks: (
+    "sm":        "screen and (max-width: 35.5em)",
+    "md":        "screen and (min-width: 48em)",
+    "lg":        "screen and (min-width: 64em)",
+    "xl":        "screen and (min-width: 80em)"
+) !default;
 
-// Predefine the variables below in order to alter and enable specific features.
-$enable-responsive-margins:                   true !default;
-$enable-responsive-margins--tiny:             true !default;
-$enable-responsive-margins--small:            true !default;
-$enable-responsive-margins--large:            true !default;
-$enable-responsive-margins--huge:             true !default;
+/**
+ * Helpers map
+ * @access private
+ * @type Map
+ */
+$helpers: (
+  "u-m": "margin",
+  "u-mt": "margin-top",
+  "u-mr": "margin-right",
+  "u-mb": "margin-bottom",
+  "u-ml": "margin-left",
+  "u-mh": "margin-right" "margin-left",
+  "u-mv": "margin-top" "margin-bottom",
 
-$enable-responsive-margins--negative:         false !default;
-$enable-responsive-margins--negative-tiny:    false !default;
-$enable-responsive-margins--negative-small:   false !default;
-$enable-responsive-margins--negative-large:   false !default;
-$enable-responsive-margins--negative-huge:    false !default;
+  "u-p": "padding",
+  "u-pt": "padding-top",
+  "u-pr": "padding-right",
+  "u-pb": "padding-bottom",
+  "u-pl": "padding-left",
+  "u-ph": "padding-right" "padding-left",
+  "u-pv": "padding-top" "padding-bottom"
+) !default;
 
-$enable-responsive-margins--none:             true !default;
+/**
+ * Sizes map
+ * @access private
+ * @type Map
+ */
+$sizes: (
+  "--": $base-spacing-unit--tiny,
+  "-": $base-spacing-unit--small,
+  "": $base-spacing-unit,
+  "#{\+}": $base-spacing-unit--large,
+  "#{\+\+}": $base-spacing-unit--huge,
+  "0": "0"
+) !default;
 
-$enable-responsive-paddings:                  true !default;
-$enable-responsive-paddings--tiny:            true !default;
-$enable-responsive-paddings--small:           true !default;
-$enable-responsive-paddings--large:           true !default;
-$enable-responsive-paddings--huge:            true !default;
 
-$enable-responsive-paddings--none:            true !default;
-
-
-
-
-
-
-// Keep a global variable for the spacing alias so the @content passed into the
-// `generate-spacing` mixin will generate correctly.
-$generate-spacing-alias: null;
-
-// Internally used mixin to quickly generate our different variants based upon
-// the breakpoints defined in `settings.responsive`.
-
-@mixin generate-spacing() {
-
-    // Loop through our previously-defined breakpoints.
-    @each $breakpoint in $breakpoints {
-
-        $generate-spacing-alias:      nth($breakpoint, 1);
-        $generate-spacing-condition:  nth($breakpoint, 2);
-
-        // This isn’t ideal, but we definitely don’t want to generate widths
-        // for retina devices. Exclude retina media-qeuries manually.
-        @if ($generate-spacing-alias != "retina") {
-
-            @include media-query($generate-spacing-alias) {
-                @content;
-            } // Close media query.
-
-        } // Close retina check.
-
-        // Reset the global spacing alias back to null;
-        $generate-spacing-alias: null;
-
-    } // Close breakpoints loop.
-
+/**
+ * Generate responsive variants for all breakpoints
+ * @requires $breaks
+ * @requires {mixin} inuit-generate-responsive-variant
+ */
+@mixin inuit-generate-responsive-variants {
+  @each $break-name, $break-value in $breaks {
+    @include inuit-generate-responsive-variant($break-name);
+  }
 }
 
 
 
+/**
+ * Generate responsive variants for given breakpoint
+ * @param {String} $break-name
+ * @requires $helpers
+ * @requires $inuit-spacing
+ */
+@mixin inuit-generate-responsive-variant($break-name) {
+  $break-value: map-get($breaks, $break-name);
 
+  // Output a new media query at root level
+  @at-root {
+    @media #{$break-value} {
 
-@if ($enable-responsive-margins == true) {
+@each $spacer, $size in $sizes {
 
-    /**
-     * Margin helper classes.
-     *
-     * Add margins.
-     */
+      // Loop over the helpers in $helpers
+      @each $alias, $property in $helpers {
 
-    @include generate-spacing() {
+        // Create a new class
+        .#{$alias}#{$spacer}#{\@}#{$break-name} {
 
-        .#{$spacing-namespace}u-m#{\@}#{$generate-spacing-alias}        { margin:           $margin; }
-        .#{$spacing-namespace}u-mt#{\@}#{$generate-spacing-alias}       { margin-top:       $margin; }
-        .#{$spacing-namespace}u-mr#{\@}#{$generate-spacing-alias}       { margin-right:     $margin; }
-        .#{$spacing-namespace}u-mb#{\@}#{$generate-spacing-alias}       { margin-bottom:    $margin; }
-        .#{$spacing-namespace}u-ml#{\@}#{$generate-spacing-alias}       { margin-left:      $margin; }
-        .#{$spacing-namespace}u-mh#{\@}#{$generate-spacing-alias}       { margin-right:     $margin; margin-left:      $margin; }
-        .#{$spacing-namespace}u-mv#{\@}#{$generate-spacing-alias}       { margin-top:       $margin; margin-bottom:    $margin; }
+          // If helper contains several properties, loop over them
+          @if length($property) > 1 {
+            @each $prop in $property {
+              #{$prop}: #{$size};
+            }
+          }
 
+          // If helper is a single property, output it
+          @else {
+            #{$property}: #{$size};
+          }
+        }
+      }
+      }
     }
-
+  }
 }
 
 
-@if ($enable-responsive-margins--tiny == true) {
+@include inuit-generate-responsive-variants;
 
-    /**
-     * Add tiny margins.
-     */
-
-    @include generate-spacing() {
-
-        .#{$spacing-namespace}u-m--#{\@}#{$generate-spacing-alias}      { margin:           $margin--tiny; }
-        .#{$spacing-namespace}u-mt--#{\@}#{$generate-spacing-alias}     { margin-top:       $margin--tiny; }
-        .#{$spacing-namespace}u-mr--#{\@}#{$generate-spacing-alias}     { margin-right:     $margin--tiny; }
-        .#{$spacing-namespace}u-mb--#{\@}#{$generate-spacing-alias}     { margin-bottom:    $margin--tiny; }
-        .#{$spacing-namespace}u-ml--#{\@}#{$generate-spacing-alias}     { margin-left:      $margin--tiny; }
-        .#{$spacing-namespace}u-mh--#{\@}#{$generate-spacing-alias}     { margin-right:     $margin--tiny; margin-left:     $margin--tiny; }
-        .#{$spacing-namespace}u-mv--#{\@}#{$generate-spacing-alias}     { margin-top:       $margin--tiny; margin-bottom:   $margin--tiny; }
-
-    }
-
-}
-
-
-@if ($enable-responsive-margins--small == true) {
-
-    /**
-     * Add small margins.
-     */
-
-    @include generate-spacing() {
-
-        .#{$spacing-namespace}u-m-#{\@}#{$generate-spacing-alias}       { margin:           $margin--small; }
-        .#{$spacing-namespace}u-mt-#{\@}#{$generate-spacing-alias}      { margin-top:       $margin--small; }
-        .#{$spacing-namespace}u-mr-#{\@}#{$generate-spacing-alias}      { margin-right:     $margin--small; }
-        .#{$spacing-namespace}u-mb-#{\@}#{$generate-spacing-alias}      { margin-bottom:    $margin--small; }
-        .#{$spacing-namespace}u-ml-#{\@}#{$generate-spacing-alias}      { margin-left:      $margin--small; }
-        .#{$spacing-namespace}u-mh-#{\@}#{$generate-spacing-alias}      { margin-right:     $margin--small; margin-left:   $margin--small; }
-        .#{$spacing-namespace}u-mv-#{\@}#{$generate-spacing-alias}      { margin-top:       $margin--small; margin-bottom: $margin--small; }
-
-    }
-
-}
-
-
-@if ($enable-responsive-margins--large == true) {
-
-    /**
-     * Add large margins.
-     */
-
-    @include generate-spacing() {
-
-        .#{$spacing-namespace}u-m#{\+}#{\@}#{$generate-spacing-alias}      { margin:           $margin--large; }
-        .#{$spacing-namespace}u-mt#{\+}#{\@}#{$generate-spacing-alias}     { margin-top:       $margin--large; }
-        .#{$spacing-namespace}u-mr#{\+}#{\@}#{$generate-spacing-alias}     { margin-right:     $margin--large; }
-        .#{$spacing-namespace}u-mb#{\+}#{\@}#{$generate-spacing-alias}     { margin-bottom:    $margin--large; }
-        .#{$spacing-namespace}u-ml#{\+}#{\@}#{$generate-spacing-alias}     { margin-left:      $margin--large; }
-        .#{$spacing-namespace}u-mh#{\+}#{\@}#{$generate-spacing-alias}     { margin-right:     $margin--large; margin-left:      $margin--large; }
-        .#{$spacing-namespace}u-mv#{\+}#{\@}#{$generate-spacing-alias}     { margin-top:       $margin--large; margin-bottom:    $margin--large; }
-
-    }
-
-}
-
-
-@if ($enable-responsive-margins--huge == true) {
-
-    /**
-     * Add huge margins.
-     */
-
-    @include generate-spacing() {
-
-        .#{$spacing-namespace}u-m#{\+\+}#{\@}#{$generate-spacing-alias}    { margin:           $margin--huge; }
-        .#{$spacing-namespace}u-mt#{\+\+}#{\@}#{$generate-spacing-alias}   { margin-top:       $margin--huge; }
-        .#{$spacing-namespace}u-mr#{\+\+}#{\@}#{$generate-spacing-alias}   { margin-right:     $margin--huge; }
-        .#{$spacing-namespace}u-mb#{\+\+}#{\@}#{$generate-spacing-alias}   { margin-bottom:    $margin--huge; }
-        .#{$spacing-namespace}u-ml#{\+\+}#{\@}#{$generate-spacing-alias}   { margin-left:      $margin--huge; }
-        .#{$spacing-namespace}u-mh#{\+\+}#{\@}#{$generate-spacing-alias}   { margin-right:     $margin--huge; margin-left:   $margin--huge; }
-        .#{$spacing-namespace}u-mv#{\+\+}#{\@}#{$generate-spacing-alias}   { margin-top:       $margin--huge; margin-bottom: $margin--huge; }
-
-    }
-
-}
-
-
-@if ($enable-responsive-margins--none == true) {
-
-    /**
-     * Remove margins.
-     */
-
-    @include generate-spacing() {
-
-        .#{$spacing-namespace}u-m0#{\@}#{$generate-spacing-alias}       { margin:           0; }
-        .#{$spacing-namespace}u-mt0#{\@}#{$generate-spacing-alias}      { margin-top:       0; }
-        .#{$spacing-namespace}u-mr0#{\@}#{$generate-spacing-alias}      { margin-right:     0; }
-        .#{$spacing-namespace}u-mb0#{\@}#{$generate-spacing-alias}      { margin-bottom:    0; }
-        .#{$spacing-namespace}u-ml0#{\@}#{$generate-spacing-alias}      { margin-left:      0; }
-        .#{$spacing-namespace}u-mh0#{\@}#{$generate-spacing-alias}      { margin-right:     0; margin-left:      0; }
-        .#{$spacing-namespace}u-mv0#{\@}#{$generate-spacing-alias}      { margin-top:       0; margin-bottom:    0; }
-
-    }
-
-}
-
-
-@if ($enable-responsive-margins--negative == true) {
-
-    /**
-     * Negative margins.
-     */
-
-    @include generate-spacing() {
-
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--m       { margin:           -$margin; }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mt      { margin-top:       -$margin; }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mr      { margin-right:     -$margin; }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mb      { margin-bottom:    -$margin; }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--ml      { margin-left:      -$margin; }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mh      { margin-right:     -$margin; margin-left:      -$margin; }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mv      { margin-top:       -$margin; margin-bottom:    -$margin; }
-
-    }
-
-}
-
-
-@if ($enable-responsive-margins--negative-tiny == true) {
-
-    /**
-     * Tiny negative margins.
-     */
-
-    @include generate-spacing() {
-
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--m--     { margin:           -$margin--tiny; }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mt--    { margin-top:       -$margin--tiny; }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mr--    { margin-right:     -$margin--tiny; }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mb--    { margin-bottom:    -$margin--tiny; }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--ml--    { margin-left:      -$margin--tiny; }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mh--    { margin-right:     -$margin--tiny; margin-left:     -$margin--tiny; }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mv--    { margin-top:       -$margin--tiny; margin-bottom:   -$margin--tiny; }
-
-    }
-
-}
-
-
-@if ($enable-responsive-margins--negative-small == true) {
-
-    /**
-     * Small negative margins.
-     */
-
-    @include generate-spacing() {
-
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--m-      { margin:           -$margin--small; }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mt-     { margin-top:       -$margin--small; }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mr-     { margin-right:     -$margin--small; }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mb-     { margin-bottom:    -$margin--small; }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--ml-     { margin-left:      -$margin--small; }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mh-     { margin-right:     -$margin--small; margin-left:   -$margin--small; }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mv-     { margin-top:       -$margin--small; margin-bottom: -$margin--small; }
-
-    }
-
-}
-
-
-@if ($enable-responsive-margins--negative-large == true) {
-
-    /**
-     * Large negative margins.
-     */
-
-    @include generate-spacing() {
-
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--m#{\+}     { margin:           double(-$margin); }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mt#{\+}    { margin-top:       double(-$margin); }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mr#{\+}    { margin-right:     double(-$margin); }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mb#{\+}    { margin-bottom:    double(-$margin); }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--ml#{\+}    { margin-left:      double(-$margin); }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mh#{\+}    { margin-right:     double(-$margin); margin-left:      double(-$margin); }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mv#{\+}    { margin-top:       double(-$margin); margin-bottom:    double(-$margin); }
-
-    }
-
-}
-
-
-@if ($enable-responsive-margins--negative-huge == true) {
-
-    /**
-     * Huge negative margins.
-     */
-
-    @include generate-spacing() {
-
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--m#{\+\+}   { margin:           quadruple(-$margin); }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mt#{\+\+}  { margin-top:       quadruple(-$margin); }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mr#{\+\+}  { margin-right:     quadruple(-$margin); }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mb#{\+\+}  { margin-bottom:    quadruple(-$margin); }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--ml#{\+\+}  { margin-left:      quadruple(-$margin); }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mh#{\+\+}  { margin-right:     quadruple(-$margin); margin-left:   quadruple(-$margin); }
-        .#{$spacing-namespace}u#{\@}#{$generate-spacing-alias}--mv#{\+\+}  { margin-top:       quadruple(-$margin); margin-bottom: quadruple(-$margin); }
-
-    }
-
-}
-
-
-
-
-
-@if ($enable-responsive-paddings == true) {
-
-    /**
-     * Padding helper classes.
-     *
-     * Add paddings.
-     */
-
-    @include generate-spacing() {
-
-        .#{$spacing-namespace}u-p#{\@}#{$generate-spacing-alias}       { padding:          $padding; }
-        .#{$spacing-namespace}u-pt#{\@}#{$generate-spacing-alias}      { padding-top:      $padding; }
-        .#{$spacing-namespace}u-pr#{\@}#{$generate-spacing-alias}      { padding-right:    $padding; }
-        .#{$spacing-namespace}u-pb#{\@}#{$generate-spacing-alias}      { padding-bottom:   $padding; }
-        .#{$spacing-namespace}u-pl#{\@}#{$generate-spacing-alias}      { padding-left:     $padding; }
-        .#{$spacing-namespace}u-ph#{\@}#{$generate-spacing-alias}      { padding-right:    $padding; padding-left:    $padding; }
-        .#{$spacing-namespace}u-pv#{\@}#{$generate-spacing-alias}      { padding-top:      $padding; padding-bottom:  $padding; }
-
-    }
-
-}
-
-
-@if ($enable-responsive-paddings--tiny == true) {
-
-    /**
-     * Add tiny paddings.
-     */
-
-    @include generate-spacing() {
-
-        .#{$spacing-namespace}u-p--#{\@}#{$generate-spacing-alias}     { padding:           $padding--tiny; }
-        .#{$spacing-namespace}u-pt--#{\@}#{$generate-spacing-alias}    { padding-top:       $padding--tiny; }
-        .#{$spacing-namespace}u-pr--#{\@}#{$generate-spacing-alias}    { padding-right:     $padding--tiny; }
-        .#{$spacing-namespace}u-pb--#{\@}#{$generate-spacing-alias}    { padding-bottom:    $padding--tiny; }
-        .#{$spacing-namespace}u-pl--#{\@}#{$generate-spacing-alias}    { padding-left:      $padding--tiny; }
-        .#{$spacing-namespace}u-ph--#{\@}#{$generate-spacing-alias}    { padding-right:     $padding--tiny; padding-left:      $padding--tiny; }
-        .#{$spacing-namespace}u-pv--#{\@}#{$generate-spacing-alias}    { padding-top:       $padding--tiny; padding-bottom:    $padding--tiny; }
-
-    }
-
-}
-
-
-@if ($enable-responsive-paddings--small == true) {
-
-    /**
-     * Add small paddings.
-     */
-
-    @include generate-spacing() {
-
-        .#{$spacing-namespace}u-p-#{\@}#{$generate-spacing-alias}      { padding:           $padding--small; }
-        .#{$spacing-namespace}u-pt-#{\@}#{$generate-spacing-alias}     { padding-top:       $padding--small; }
-        .#{$spacing-namespace}u-pr-#{\@}#{$generate-spacing-alias}     { padding-right:     $padding--small; }
-        .#{$spacing-namespace}u-pb-#{\@}#{$generate-spacing-alias}     { padding-bottom:    $padding--small; }
-        .#{$spacing-namespace}u-pl-#{\@}#{$generate-spacing-alias}     { padding-left:      $padding--small; }
-        .#{$spacing-namespace}u-ph-#{\@}#{$generate-spacing-alias}     { padding-right:     $padding--small; padding-left:    $padding--small; }
-        .#{$spacing-namespace}u-pv-#{\@}#{$generate-spacing-alias}     { padding-top:       $padding--small; padding-bottom:  $padding--small; }
-
-    }
-
-}
-
-
-@if ($enable-responsive-paddings--large == true) {
-
-    /**
-     * Add large paddings.
-     */
-
-    @include generate-spacing() {
-
-        .#{$spacing-namespace}u-p#{\+}#{\@}#{$generate-spacing-alias}     { padding:           $padding--large; }
-        .#{$spacing-namespace}u-pt#{\+}#{\@}#{$generate-spacing-alias}    { padding-top:       $padding--large; }
-        .#{$spacing-namespace}u-pr#{\+}#{\@}#{$generate-spacing-alias}    { padding-right:     $padding--large; }
-        .#{$spacing-namespace}u-pb#{\+}#{\@}#{$generate-spacing-alias}    { padding-bottom:    $padding--large; }
-        .#{$spacing-namespace}u-pl#{\+}#{\@}#{$generate-spacing-alias}    { padding-left:      $padding--large; }
-        .#{$spacing-namespace}u-ph#{\+}#{\@}#{$generate-spacing-alias}    { padding-right:     $padding--large; padding-left:   $padding--large; }
-        .#{$spacing-namespace}u-pv#{\+}#{\@}#{$generate-spacing-alias}    { padding-top:       $padding--large; padding-bottom: $padding--large; }
-
-    }
-
-}
-
-
-@if ($enable-responsive-paddings--huge == true) {
-
-    /**
-     * Add huge paddings.
-     */
-
-    @include generate-spacing() {
-
-        .#{$spacing-namespace}u-p#{\+\+}#{\@}#{$generate-spacing-alias}   { padding:           $padding--huge; }
-        .#{$spacing-namespace}u-pt#{\+\+}#{\@}#{$generate-spacing-alias}  { padding-top:       $padding--huge; }
-        .#{$spacing-namespace}u-pr#{\+\+}#{\@}#{$generate-spacing-alias}  { padding-right:     $padding--huge; }
-        .#{$spacing-namespace}u-pb#{\+\+}#{\@}#{$generate-spacing-alias}  { padding-bottom:    $padding--huge; }
-        .#{$spacing-namespace}u-pl#{\+\+}#{\@}#{$generate-spacing-alias}  { padding-left:      $padding--huge; }
-        .#{$spacing-namespace}u-ph#{\+\+}#{\@}#{$generate-spacing-alias}  { padding-right:     $padding--huge; padding-left:    $padding--huge; }
-        .#{$spacing-namespace}u-pv#{\+\+}#{\@}#{$generate-spacing-alias}  { padding-top:       $padding--huge; padding-bottom:  $padding--huge; }
-
-    }
-
-}
-
-
-@if ($enable-responsive-paddings--none == true) {
-
-    /**
-     * Remove paddings.
-     */
-
-    @include generate-spacing() {
-
-        .#{$spacing-namespace}u-p0#{\@}#{$generate-spacing-alias}      { padding:          0; }
-        .#{$spacing-namespace}u-pt0#{\@}#{$generate-spacing-alias}     { padding-top:      0; }
-        .#{$spacing-namespace}u-pr0#{\@}#{$generate-spacing-alias}     { padding-right:    0; }
-        .#{$spacing-namespace}u-pb0#{\@}#{$generate-spacing-alias}     { padding-bottom:   0; }
-        .#{$spacing-namespace}u-pl0#{\@}#{$generate-spacing-alias}     { padding-left:     0; }
-        .#{$spacing-namespace}u-ph0#{\@}#{$generate-spacing-alias}     { padding-right:    0; padding-left:     0; }
-        .#{$spacing-namespace}u-pv0#{\@}#{$generate-spacing-alias}     { padding-top:      0; padding-bottom:   0; }
-
-    }
-
-}
 
 
 .u-p#{\@}all {

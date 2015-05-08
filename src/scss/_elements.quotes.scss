@@ -2,16 +2,18 @@
     #BLOCKQUOTES
 \*------------------------------------*/
 
+
 blockquote {
-    //font-family: Georgia, Times, "Times New Roman", serif;
-    //color: $color-text-light;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
     margin-bottom: $base-spacing-unit;
-    border-left: 5px solid currentColor;
-    padding-left: 20px;
+    border-left: .2rem solid currentColor;
+    padding-left: $base-spacing-unit;
 
     p {
         color: $color-text-light;
         font-weight: 500;
+        @include font-size($base-font-size + 1);
 
         + p {
             margin-bottom: 0;

@@ -1,0 +1,90 @@
+// /*------------------------------------*\
+//  #TYPOGRAPHY
+// \*------------------------------------*/
+
+h1 {
+    @include font-size($heading-size-1);
+    margin: $base-spacing-unit 0 $base-spacing-unit--small;
+}
+
+h2 {
+    @include font-size($heading-size-2);
+    margin: $base-spacing-unit 0 $base-spacing-unit--tiny;
+}
+
+h3 {
+    @include font-size($heading-size-3);
+    margin: $base-spacing-unit 0 $base-spacing-unit--tiny;
+}
+
+h4 {
+    @include font-size($heading-size-4);
+    margin: $base-spacing-unit 0 $base-spacing-unit--tiny;
+}
+
+h5 {
+    @include font-size($heading-size-5);
+    margin: $base-spacing-unit 0 $base-spacing-unit--tiny;
+}
+
+h6 {
+    @include font-size($heading-size-6);
+    margin: $base-spacing-unit 0 $base-spacing-unit--tiny;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-heading;
+    font-style: normal;
+    font-weight: 500;
+    opacity: $base-opacity;
+}
+
+
+dl, blockquote, p, address,
+table, fieldset, figure,
+pre {
+    margin-bottom: $base-spacing-unit;
+}
+
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+dfn {
+    font-style: italic;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+small {
+    font-size: 75%;
+    color: #777;
+}
+
+big {
+    font-size: 125%;
+}

@@ -55,6 +55,7 @@ function bempress_setup() {
     register_nav_menus( [
         'primary'   => _x( 'Primary', 'bempress' ),
         'secondary' => _x( 'Secondary', 'bempress' ),
+        'panel-dpc' => _x( 'Panel Menu', 'bempress' ),
     ] );
 
     // http://codex.wordpress.org/Post_Formats

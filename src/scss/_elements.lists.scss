@@ -1,26 +1,29 @@
-ul, ol {
-    list-style: none;
+// /*------------------------------------*\
+//  #LISTS
+// \*------------------------------------*/
+
+dl {
     margin-bottom: $base-spacing-unit;
 }
 
-.entry-content ul, .entry-content ol {
-    list-style-position: outside;
-    padding-left: $base-font-size;
+dd {
+    margin-left: $base-spacing-unit--large;
+}
 
-    > li {
-        list-style-type: disc;
-    }
+ul,
+ol {
+    margin-bottom: $base-spacing-unit;
+    padding-left: $base-spacing-unit;
+    list-style-position: outside;
+    text-align: left;
 }
 
 li {
+
 
     > ul,
     > ol {
         margin-bottom: 0;
     }
 
-}
-
-.sidebar li {
-  margin-bottom: $base-spacing-unit--small;
 }

@@ -33,36 +33,27 @@ $enable-card--right:     true !default;
 .card {
     display: block;
     max-width: 100%;
-    position: relative;
     display: flex;
-    flex-direction: column;
     min-height: 0;
     background: #fff;
     padding: 0;
-    border: none;
     border-radius: $base-radius;
     box-shadow: 0 3px 0 0 #d4d4d5,0 0 0 1px #d4d4d5;
-    transition: box-shadow .2s ease;
+    transition: $base-transition;
     margin: 1em 0;
 }
 
 
-    /**
-     * 1. Eliminate whitespace around images.
-     */
-    .card__img {
-        vertical-align: middle; /* [1] */
 
+    .card__img {
         display: block;
-        position: relative;
-        padding: 0;
         background: rgba(0,0,0,.05);
 
         img {
             display: block;
             width: 100%;
             height: auto;
-            border-radius: .2857rem .2857rem 0 0;
+            border-radius: $base-radius $base-radius 0 0;
             border: none;
         }
 

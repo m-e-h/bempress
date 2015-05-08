@@ -109,9 +109,9 @@ gulp.task('scripts', function() {
 gulp.task('serve', ['styles'], function () {
   browserSync({
     //proxy: "local.wordpress.dev"
-    //proxy: "local.wordpress-trunk.dev"
-    proxy: "doc.dev"
-    //proxy: "betainfo.dev"
+    proxy: "local.wordpress-trunk.dev"
+    //proxy: "doc.dev"
+    //proxy: "hvm.hgv.dev"
      });
 
   gulp.watch(['**/*.php'], reload);

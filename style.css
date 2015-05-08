@@ -75,1709 +75,1150 @@ Tags:
  */
 /*------------------------------------*    #SPACING-RESPONSIVE
 \*------------------------------------*/
-/*------------------------------------*    #SPACING
-\*------------------------------------*/
 /**
- * Margin and padding helper classes. Use these to tweak layout on a micro
- * level.
- *
- * `.(m|p)(t|r|b|l|h|v)(-|+|0) {}` = margin/padding top/right/bottom/left/horizontal/vertical less/more/none
+ * Breakpoints map
+ * @type Map
  */
 /**
-     * Margin helper classes.
-     *
-     * Add margins.
-     */
-.u-m {
-    margin: 24px;
-}
-
-.u-mt {
-    margin-top: 24px;
-}
-
-.u-mr {
-    margin-right: 24px;
-}
-
-.u-mb {
-    margin-bottom: 24px;
-}
-
-.u-ml {
-    margin-left: 24px;
-}
-
-.u-mh {
-    margin-right: 24px;
-    margin-left: 24px;
-}
-
-.u-mv {
-    margin-top: 24px;
-    margin-bottom: 24px;
-}
-
-/**
-     * Add tiny margins.
-     */
-.u-m-- {
-    margin: 6px;
-}
-
-.u-mt-- {
-    margin-top: 6px;
-}
-
-.u-mr-- {
-    margin-right: 6px;
-}
-
-.u-mb-- {
-    margin-bottom: 6px;
-}
-
-.u-ml-- {
-    margin-left: 6px;
-}
-
-.u-mh-- {
-    margin-right: 6px;
-    margin-left: 6px;
-}
-
-.u-mv-- {
-    margin-top: 6px;
-    margin-bottom: 6px;
-}
-
-/**
-     * Add small margins.
-     */
-.u-m- {
-    margin: 12px;
-}
-
-.u-mt- {
-    margin-top: 12px;
-}
-
-.u-mr- {
-    margin-right: 12px;
-}
-
-.u-mb- {
-    margin-bottom: 12px;
-}
-
-.u-ml- {
-    margin-left: 12px;
-}
-
-.u-mh- {
-    margin-right: 12px;
-    margin-left: 12px;
-}
-
-.u-mv- {
-    margin-top: 12px;
-    margin-bottom: 12px;
-}
-
-/**
-     * Add large margins.
-     */
-.u-m\+ {
-    margin: 48px;
-}
-
-.u-mt\+ {
-    margin-top: 48px;
-}
-
-.u-mr\+ {
-    margin-right: 48px;
-}
-
-.u-mb\+ {
-    margin-bottom: 48px;
-}
-
-.u-ml\+ {
-    margin-left: 48px;
-}
-
-.u-mh\+ {
-    margin-right: 48px;
-    margin-left: 48px;
-}
-
-.u-mv\+ {
-    margin-top: 48px;
-    margin-bottom: 48px;
-}
-
-/**
-     * Add huge margins.
-     */
-.u-m\+\+ {
-    margin: 96px;
-}
-
-.u-mt\+\+ {
-    margin-top: 96px;
-}
-
-.u-mr\+\+ {
-    margin-right: 96px;
-}
-
-.u-mb\+\+ {
-    margin-bottom: 96px;
-}
-
-.u-ml\+\+ {
-    margin-left: 96px;
-}
-
-.u-mh\+\+ {
-    margin-right: 96px;
-    margin-left: 96px;
-}
-
-.u-mv\+\+ {
-    margin-top: 96px;
-    margin-bottom: 96px;
-}
-
-/**
-     * Remove margins.
-     */
-.u-m0 {
-    margin: 0;
-}
-
-.u-mt0 {
-    margin-top: 0;
-}
-
-.u-mr0 {
-    margin-right: 0;
-}
-
-.u-mb0 {
-    margin-bottom: 0;
-}
-
-.u-ml0 {
-    margin-left: 0;
-}
-
-.u-mh0 {
-    margin-right: 0;
-    margin-left: 0;
-}
-
-.u-mv0 {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-/**
-     * Padding helper classes.
-     *
-     * Add paddings.
-     */
-.u-p {
-    padding: 24px;
-}
-
-.u-pt {
-    padding-top: 24px;
-}
-
-.u-pr {
-    padding-right: 24px;
-}
-
-.u-pb {
-    padding-bottom: 24px;
-}
-
-.u-pl {
-    padding-left: 24px;
-}
-
-.u-ph {
-    padding-right: 24px;
-    padding-left: 24px;
-}
-
-.u-pv {
-    padding-top: 24px;
-    padding-bottom: 24px;
-}
-
-/**
-     * Add tiny paddings.
-     */
-.u-p-- {
-    padding: 6px;
-}
-
-.u-pt-- {
-    padding-top: 6px;
-}
-
-.u-pr-- {
-    padding-right: 6px;
-}
-
-.u-pb-- {
-    padding-bottom: 6px;
-}
-
-.u-pl-- {
-    padding-left: 6px;
-}
-
-.u-ph-- {
-    padding-right: 6px;
-    padding-left: 6px;
-}
-
-.u-pv-- {
-    padding-top: 6px;
-    padding-bottom: 6px;
-}
-
-/**
-     * Add small paddings.
-     */
-.u-p-,
-.u-p\@all {
-    padding: 12px;
-}
-
-.u-pt-,
-.u-pt-wrap {
-    padding-top: 12px;
-}
-
-.u-pr- {
-    padding-right: 12px;
-}
-
-.u-pb- {
-    padding-bottom: 12px;
-}
-
-.u-pl- {
-    padding-left: 12px;
-}
-
-.u-ph-,
-.u-ph\@all {
-    padding-right: 12px;
-    padding-left: 12px;
-}
-
-.u-pv-,
-.u-pv\@all {
-    padding-top: 12px;
-    padding-bottom: 12px;
-}
-
-/**
-     * Add large paddings.
-     */
-.u-p\+ {
-    padding: 48px;
-}
-
-.u-pt\+ {
-    padding-top: 48px;
-}
-
-.u-pr\+ {
-    padding-right: 48px;
-}
-
-.u-pb\+ {
-    padding-bottom: 48px;
-}
-
-.u-pl\+ {
-    padding-left: 48px;
-}
-
-.u-ph\+ {
-    padding-right: 48px;
-    padding-left: 48px;
-}
-
-.u-pv\+ {
-    padding-top: 48px;
-    padding-bottom: 48px;
-}
-
-/**
-     * Add huge paddings.
-     */
-.u-p\+\+ {
-    padding: 96px;
-}
-
-.u-pt\+\+ {
-    padding-top: 96px;
-}
-
-.u-pr\+\+ {
-    padding-right: 96px;
-}
-
-.u-pb\+\+ {
-    padding-bottom: 96px;
-}
-
-.u-pl\+\+ {
-    padding-left: 96px;
-}
-
-.u-ph\+\+ {
-    padding-right: 96px;
-    padding-left: 96px;
-}
-
-.u-pv\+\+ {
-    padding-top: 96px;
-    padding-bottom: 96px;
-}
-
-/**
-     * Remove paddings.
-     */
-.u-p0 {
-    padding: 0;
-}
-
-.u-pt0 {
-    padding-top: 0;
-}
-
-.u-pr0 {
-    padding-right: 0;
-}
-
-.u-pb0 {
-    padding-bottom: 0;
-}
-
-.u-pl0 {
-    padding-left: 0;
-}
-
-.u-ph0 {
-    padding-right: 0;
-    padding-left: 0;
-}
-
-.u-pv0 {
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-/*------------------------------------*    #SPACING-RESPONSIVE
-\*------------------------------------*/
-/**
- * Margin and padding helper classes. Use these to tweak layout on a micro
- * level.
- *
- * `.(m|p)(t|r|b|l|h|v)(-|+|0) {}` = margin/padding top/right/bottom/left/horizontal/vertical less/more/none
+ * Helpers map
+ * @access private
+ * @type Map
  */
 /**
-     * Margin helper classes.
-     *
-     * Add margins.
-     */
-@media screen and (max-width: 35.5em) {
-    .u-m\@ {
-        margin: 24px;
-    }
-    .u-mt\@ {
-        margin-top: 24px;
-    }
-    .u-mr\@ {
-        margin-right: 24px;
-    }
-    .u-mb\@ {
-        margin-bottom: 24px;
-    }
-    .u-ml\@ {
-        margin-left: 24px;
-    }
-    .u-mh\@ {
-        margin-right: 24px;
-        margin-left: 24px;
-    }
-    .u-mv\@ {
-        margin-top: 24px;
-        margin-bottom: 24px;
-    }
-}
-
-@media screen and (min-width: 48em) {
-    .u-m\@ {
-        margin: 24px;
-    }
-    .u-mt\@ {
-        margin-top: 24px;
-    }
-    .u-mr\@ {
-        margin-right: 24px;
-    }
-    .u-mb\@ {
-        margin-bottom: 24px;
-    }
-    .u-ml\@ {
-        margin-left: 24px;
-    }
-    .u-mh\@ {
-        margin-right: 24px;
-        margin-left: 24px;
-    }
-    .u-mv\@ {
-        margin-top: 24px;
-        margin-bottom: 24px;
-    }
-}
-
-@media screen and (min-width: 64em) {
-    .u-m\@ {
-        margin: 24px;
-    }
-    .u-mt\@ {
-        margin-top: 24px;
-    }
-    .u-mr\@ {
-        margin-right: 24px;
-    }
-    .u-mb\@ {
-        margin-bottom: 24px;
-    }
-    .u-ml\@ {
-        margin-left: 24px;
-    }
-    .u-mh\@ {
-        margin-right: 24px;
-        margin-left: 24px;
-    }
-    .u-mv\@ {
-        margin-top: 24px;
-        margin-bottom: 24px;
-    }
-}
-
-@media screen and (min-width: 80em) {
-    .u-m\@ {
-        margin: 24px;
-    }
-    .u-mt\@ {
-        margin-top: 24px;
-    }
-    .u-mr\@ {
-        margin-right: 24px;
-    }
-    .u-mb\@ {
-        margin-bottom: 24px;
-    }
-    .u-ml\@ {
-        margin-left: 24px;
-    }
-    .u-mh\@ {
-        margin-right: 24px;
-        margin-left: 24px;
-    }
-    .u-mv\@ {
-        margin-top: 24px;
-        margin-bottom: 24px;
-    }
-}
-
+ * Sizes map
+ * @access private
+ * @type Map
+ */
 /**
-     * Add tiny margins.
-     */
+ * Generate responsive variants for all breakpoints
+ * @requires $breaks
+ * @requires {mixin} inuit-generate-responsive-variant
+ */
+/**
+ * Generate responsive variants for given breakpoint
+ * @param {String} $break-name
+ * @requires $helpers
+ * @requires $inuit-spacing
+ */
 @media screen and (max-width: 35.5em) {
-    .u-m--\@ {
+    .u-m--\@sm {
         margin: 6px;
     }
-    .u-mt--\@ {
+    .u-mt--\@sm {
         margin-top: 6px;
     }
-    .u-mr--\@ {
+    .u-mr--\@sm {
         margin-right: 6px;
     }
-    .u-mb--\@ {
+    .u-mb--\@sm {
         margin-bottom: 6px;
     }
-    .u-ml--\@ {
+    .u-ml--\@sm {
         margin-left: 6px;
     }
-    .u-mh--\@ {
+    .u-mh--\@sm {
         margin-right: 6px;
         margin-left: 6px;
     }
-    .u-mv--\@ {
+    .u-mv--\@sm {
         margin-top: 6px;
         margin-bottom: 6px;
+    }
+    .u-p--\@sm {
+        padding: 6px;
+    }
+    .u-pt--\@sm {
+        padding-top: 6px;
+    }
+    .u-pr--\@sm {
+        padding-right: 6px;
+    }
+    .u-pb--\@sm {
+        padding-bottom: 6px;
+    }
+    .u-pl--\@sm {
+        padding-left: 6px;
+    }
+    .u-ph--\@sm {
+        padding-right: 6px;
+        padding-left: 6px;
+    }
+    .u-pv--\@sm {
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    .u-m-\@sm {
+        margin: 12px;
+    }
+    .u-mt-\@sm {
+        margin-top: 12px;
+    }
+    .u-mr-\@sm {
+        margin-right: 12px;
+    }
+    .u-mb-\@sm {
+        margin-bottom: 12px;
+    }
+    .u-ml-\@sm {
+        margin-left: 12px;
+    }
+    .u-mh-\@sm {
+        margin-right: 12px;
+        margin-left: 12px;
+    }
+    .u-mv-\@sm {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+    .u-p-\@sm {
+        padding: 12px;
+    }
+    .u-pt-\@sm {
+        padding-top: 12px;
+    }
+    .u-pr-\@sm {
+        padding-right: 12px;
+    }
+    .u-pb-\@sm {
+        padding-bottom: 12px;
+    }
+    .u-pl-\@sm {
+        padding-left: 12px;
+    }
+    .u-ph-\@sm {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+    .u-pv-\@sm {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    .u-m\@sm {
+        margin: 24px;
+    }
+    .u-mt\@sm {
+        margin-top: 24px;
+    }
+    .u-mr\@sm {
+        margin-right: 24px;
+    }
+    .u-mb\@sm {
+        margin-bottom: 24px;
+    }
+    .u-ml\@sm {
+        margin-left: 24px;
+    }
+    .u-mh\@sm {
+        margin-right: 24px;
+        margin-left: 24px;
+    }
+    .u-mv\@sm {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+    .u-p\@sm {
+        padding: 24px;
+    }
+    .u-pt\@sm {
+        padding-top: 24px;
+    }
+    .u-pr\@sm {
+        padding-right: 24px;
+    }
+    .u-pb\@sm {
+        padding-bottom: 24px;
+    }
+    .u-pl\@sm {
+        padding-left: 24px;
+    }
+    .u-ph\@sm {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+    .u-pv\@sm {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    .u-m\+\@sm {
+        margin: 48px;
+    }
+    .u-mt\+\@sm {
+        margin-top: 48px;
+    }
+    .u-mr\+\@sm {
+        margin-right: 48px;
+    }
+    .u-mb\+\@sm {
+        margin-bottom: 48px;
+    }
+    .u-ml\+\@sm {
+        margin-left: 48px;
+    }
+    .u-mh\+\@sm {
+        margin-right: 48px;
+        margin-left: 48px;
+    }
+    .u-mv\+\@sm {
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+    .u-p\+\@sm {
+        padding: 48px;
+    }
+    .u-pt\+\@sm {
+        padding-top: 48px;
+    }
+    .u-pr\+\@sm {
+        padding-right: 48px;
+    }
+    .u-pb\+\@sm {
+        padding-bottom: 48px;
+    }
+    .u-pl\+\@sm {
+        padding-left: 48px;
+    }
+    .u-ph\+\@sm {
+        padding-right: 48px;
+        padding-left: 48px;
+    }
+    .u-pv\+\@sm {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+    .u-m\+\+\@sm {
+        margin: 96px;
+    }
+    .u-mt\+\+\@sm {
+        margin-top: 96px;
+    }
+    .u-mr\+\+\@sm {
+        margin-right: 96px;
+    }
+    .u-mb\+\+\@sm {
+        margin-bottom: 96px;
+    }
+    .u-ml\+\+\@sm {
+        margin-left: 96px;
+    }
+    .u-mh\+\+\@sm {
+        margin-right: 96px;
+        margin-left: 96px;
+    }
+    .u-mv\+\+\@sm {
+        margin-top: 96px;
+        margin-bottom: 96px;
+    }
+    .u-p\+\+\@sm {
+        padding: 96px;
+    }
+    .u-pt\+\+\@sm {
+        padding-top: 96px;
+    }
+    .u-pr\+\+\@sm {
+        padding-right: 96px;
+    }
+    .u-pb\+\+\@sm {
+        padding-bottom: 96px;
+    }
+    .u-pl\+\+\@sm {
+        padding-left: 96px;
+    }
+    .u-ph\+\+\@sm {
+        padding-right: 96px;
+        padding-left: 96px;
+    }
+    .u-pv\+\+\@sm {
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+    .u-m0\@sm {
+        margin: 0;
+    }
+    .u-mt0\@sm {
+        margin-top: 0;
+    }
+    .u-mr0\@sm {
+        margin-right: 0;
+    }
+    .u-mb0\@sm {
+        margin-bottom: 0;
+    }
+    .u-ml0\@sm {
+        margin-left: 0;
+    }
+    .u-mh0\@sm {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .u-mv0\@sm {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .u-p0\@sm {
+        padding: 0;
+    }
+    .u-pt0\@sm {
+        padding-top: 0;
+    }
+    .u-pr0\@sm {
+        padding-right: 0;
+    }
+    .u-pb0\@sm {
+        padding-bottom: 0;
+    }
+    .u-pl0\@sm {
+        padding-left: 0;
+    }
+    .u-ph0\@sm {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .u-pv0\@sm {
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }
 
 @media screen and (min-width: 48em) {
-    .u-m--\@ {
+    .u-m--\@md {
         margin: 6px;
     }
-    .u-mt--\@ {
+    .u-mt--\@md {
         margin-top: 6px;
     }
-    .u-mr--\@ {
+    .u-mr--\@md {
         margin-right: 6px;
     }
-    .u-mb--\@ {
+    .u-mb--\@md {
         margin-bottom: 6px;
     }
-    .u-ml--\@ {
+    .u-ml--\@md {
         margin-left: 6px;
     }
-    .u-mh--\@ {
+    .u-mh--\@md {
         margin-right: 6px;
         margin-left: 6px;
     }
-    .u-mv--\@ {
+    .u-mv--\@md {
         margin-top: 6px;
         margin-bottom: 6px;
+    }
+    .u-p--\@md {
+        padding: 6px;
+    }
+    .u-pt--\@md {
+        padding-top: 6px;
+    }
+    .u-pr--\@md {
+        padding-right: 6px;
+    }
+    .u-pb--\@md {
+        padding-bottom: 6px;
+    }
+    .u-pl--\@md {
+        padding-left: 6px;
+    }
+    .u-ph--\@md {
+        padding-right: 6px;
+        padding-left: 6px;
+    }
+    .u-pv--\@md {
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    .u-m-\@md {
+        margin: 12px;
+    }
+    .u-mt-\@md {
+        margin-top: 12px;
+    }
+    .u-mr-\@md {
+        margin-right: 12px;
+    }
+    .u-mb-\@md {
+        margin-bottom: 12px;
+    }
+    .u-ml-\@md {
+        margin-left: 12px;
+    }
+    .u-mh-\@md {
+        margin-right: 12px;
+        margin-left: 12px;
+    }
+    .u-mv-\@md {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+    .u-p-\@md {
+        padding: 12px;
+    }
+    .u-pt-\@md {
+        padding-top: 12px;
+    }
+    .u-pr-\@md {
+        padding-right: 12px;
+    }
+    .u-pb-\@md {
+        padding-bottom: 12px;
+    }
+    .u-pl-\@md {
+        padding-left: 12px;
+    }
+    .u-ph-\@md {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+    .u-pv-\@md {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    .u-m\@md {
+        margin: 24px;
+    }
+    .u-mt\@md {
+        margin-top: 24px;
+    }
+    .u-mr\@md {
+        margin-right: 24px;
+    }
+    .u-mb\@md {
+        margin-bottom: 24px;
+    }
+    .u-ml\@md {
+        margin-left: 24px;
+    }
+    .u-mh\@md {
+        margin-right: 24px;
+        margin-left: 24px;
+    }
+    .u-mv\@md {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+    .u-p\@md,
+    .u-p\@all {
+        padding: 24px;
+    }
+    .u-pt\@md,
+    .u-pt-wrap {
+        padding-top: 24px;
+    }
+    .u-pr\@md {
+        padding-right: 24px;
+    }
+    .u-pb\@md {
+        padding-bottom: 24px;
+    }
+    .u-pl\@md {
+        padding-left: 24px;
+    }
+    .u-ph\@md,
+    .u-ph\@all {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+    .u-pv\@md,
+    .u-pv\@all {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    .u-m\+\@md {
+        margin: 48px;
+    }
+    .u-mt\+\@md {
+        margin-top: 48px;
+    }
+    .u-mr\+\@md {
+        margin-right: 48px;
+    }
+    .u-mb\+\@md {
+        margin-bottom: 48px;
+    }
+    .u-ml\+\@md {
+        margin-left: 48px;
+    }
+    .u-mh\+\@md {
+        margin-right: 48px;
+        margin-left: 48px;
+    }
+    .u-mv\+\@md {
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+    .u-p\+\@md {
+        padding: 48px;
+    }
+    .u-pt\+\@md {
+        padding-top: 48px;
+    }
+    .u-pr\+\@md {
+        padding-right: 48px;
+    }
+    .u-pb\+\@md {
+        padding-bottom: 48px;
+    }
+    .u-pl\+\@md {
+        padding-left: 48px;
+    }
+    .u-ph\+\@md {
+        padding-right: 48px;
+        padding-left: 48px;
+    }
+    .u-pv\+\@md {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+    .u-m\+\+\@md {
+        margin: 96px;
+    }
+    .u-mt\+\+\@md {
+        margin-top: 96px;
+    }
+    .u-mr\+\+\@md {
+        margin-right: 96px;
+    }
+    .u-mb\+\+\@md {
+        margin-bottom: 96px;
+    }
+    .u-ml\+\+\@md {
+        margin-left: 96px;
+    }
+    .u-mh\+\+\@md {
+        margin-right: 96px;
+        margin-left: 96px;
+    }
+    .u-mv\+\+\@md {
+        margin-top: 96px;
+        margin-bottom: 96px;
+    }
+    .u-p\+\+\@md {
+        padding: 96px;
+    }
+    .u-pt\+\+\@md {
+        padding-top: 96px;
+    }
+    .u-pr\+\+\@md {
+        padding-right: 96px;
+    }
+    .u-pb\+\+\@md {
+        padding-bottom: 96px;
+    }
+    .u-pl\+\+\@md {
+        padding-left: 96px;
+    }
+    .u-ph\+\+\@md {
+        padding-right: 96px;
+        padding-left: 96px;
+    }
+    .u-pv\+\+\@md {
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+    .u-m0\@md {
+        margin: 0;
+    }
+    .u-mt0\@md {
+        margin-top: 0;
+    }
+    .u-mr0\@md {
+        margin-right: 0;
+    }
+    .u-mb0\@md {
+        margin-bottom: 0;
+    }
+    .u-ml0\@md {
+        margin-left: 0;
+    }
+    .u-mh0\@md {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .u-mv0\@md {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .u-p0\@md {
+        padding: 0;
+    }
+    .u-pt0\@md {
+        padding-top: 0;
+    }
+    .u-pr0\@md {
+        padding-right: 0;
+    }
+    .u-pb0\@md {
+        padding-bottom: 0;
+    }
+    .u-pl0\@md {
+        padding-left: 0;
+    }
+    .u-ph0\@md {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .u-pv0\@md {
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }
 
 @media screen and (min-width: 64em) {
-    .u-m--\@ {
+    .u-m--\@lg {
         margin: 6px;
     }
-    .u-mt--\@ {
+    .u-mt--\@lg {
         margin-top: 6px;
     }
-    .u-mr--\@ {
+    .u-mr--\@lg {
         margin-right: 6px;
     }
-    .u-mb--\@ {
+    .u-mb--\@lg {
         margin-bottom: 6px;
     }
-    .u-ml--\@ {
+    .u-ml--\@lg {
         margin-left: 6px;
     }
-    .u-mh--\@ {
+    .u-mh--\@lg {
         margin-right: 6px;
         margin-left: 6px;
     }
-    .u-mv--\@ {
+    .u-mv--\@lg {
         margin-top: 6px;
         margin-bottom: 6px;
+    }
+    .u-p--\@lg {
+        padding: 6px;
+    }
+    .u-pt--\@lg {
+        padding-top: 6px;
+    }
+    .u-pr--\@lg {
+        padding-right: 6px;
+    }
+    .u-pb--\@lg {
+        padding-bottom: 6px;
+    }
+    .u-pl--\@lg {
+        padding-left: 6px;
+    }
+    .u-ph--\@lg {
+        padding-right: 6px;
+        padding-left: 6px;
+    }
+    .u-pv--\@lg {
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    .u-m-\@lg {
+        margin: 12px;
+    }
+    .u-mt-\@lg {
+        margin-top: 12px;
+    }
+    .u-mr-\@lg {
+        margin-right: 12px;
+    }
+    .u-mb-\@lg {
+        margin-bottom: 12px;
+    }
+    .u-ml-\@lg {
+        margin-left: 12px;
+    }
+    .u-mh-\@lg {
+        margin-right: 12px;
+        margin-left: 12px;
+    }
+    .u-mv-\@lg {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+    .u-p-\@lg {
+        padding: 12px;
+    }
+    .u-pt-\@lg {
+        padding-top: 12px;
+    }
+    .u-pr-\@lg {
+        padding-right: 12px;
+    }
+    .u-pb-\@lg {
+        padding-bottom: 12px;
+    }
+    .u-pl-\@lg {
+        padding-left: 12px;
+    }
+    .u-ph-\@lg {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+    .u-pv-\@lg {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    .u-m\@lg {
+        margin: 24px;
+    }
+    .u-mt\@lg {
+        margin-top: 24px;
+    }
+    .u-mr\@lg {
+        margin-right: 24px;
+    }
+    .u-mb\@lg {
+        margin-bottom: 24px;
+    }
+    .u-ml\@lg {
+        margin-left: 24px;
+    }
+    .u-mh\@lg {
+        margin-right: 24px;
+        margin-left: 24px;
+    }
+    .u-mv\@lg {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+    .u-p\@lg {
+        padding: 24px;
+    }
+    .u-pt\@lg {
+        padding-top: 24px;
+    }
+    .u-pr\@lg {
+        padding-right: 24px;
+    }
+    .u-pb\@lg {
+        padding-bottom: 24px;
+    }
+    .u-pl\@lg {
+        padding-left: 24px;
+    }
+    .u-ph\@lg {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+    .u-pv\@lg {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    .u-m\+\@lg {
+        margin: 48px;
+    }
+    .u-mt\+\@lg {
+        margin-top: 48px;
+    }
+    .u-mr\+\@lg {
+        margin-right: 48px;
+    }
+    .u-mb\+\@lg {
+        margin-bottom: 48px;
+    }
+    .u-ml\+\@lg {
+        margin-left: 48px;
+    }
+    .u-mh\+\@lg {
+        margin-right: 48px;
+        margin-left: 48px;
+    }
+    .u-mv\+\@lg {
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+    .u-p\+\@lg,
+    .u-p\@all {
+        padding: 48px;
+    }
+    .u-pt\+\@lg,
+    .u-pt-wrap {
+        padding-top: 48px;
+    }
+    .u-pr\+\@lg {
+        padding-right: 48px;
+    }
+    .u-pb\+\@lg {
+        padding-bottom: 48px;
+    }
+    .u-pl\+\@lg {
+        padding-left: 48px;
+    }
+    .u-ph\+\@lg,
+    .u-ph\@all {
+        padding-right: 48px;
+        padding-left: 48px;
+    }
+    .u-pv\+\@lg,
+    .u-pv\@all {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+    .u-m\+\+\@lg {
+        margin: 96px;
+    }
+    .u-mt\+\+\@lg {
+        margin-top: 96px;
+    }
+    .u-mr\+\+\@lg {
+        margin-right: 96px;
+    }
+    .u-mb\+\+\@lg {
+        margin-bottom: 96px;
+    }
+    .u-ml\+\+\@lg {
+        margin-left: 96px;
+    }
+    .u-mh\+\+\@lg {
+        margin-right: 96px;
+        margin-left: 96px;
+    }
+    .u-mv\+\+\@lg {
+        margin-top: 96px;
+        margin-bottom: 96px;
+    }
+    .u-p\+\+\@lg {
+        padding: 96px;
+    }
+    .u-pt\+\+\@lg {
+        padding-top: 96px;
+    }
+    .u-pr\+\+\@lg {
+        padding-right: 96px;
+    }
+    .u-pb\+\+\@lg {
+        padding-bottom: 96px;
+    }
+    .u-pl\+\+\@lg {
+        padding-left: 96px;
+    }
+    .u-ph\+\+\@lg {
+        padding-right: 96px;
+        padding-left: 96px;
+    }
+    .u-pv\+\+\@lg {
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+    .u-m0\@lg {
+        margin: 0;
+    }
+    .u-mt0\@lg {
+        margin-top: 0;
+    }
+    .u-mr0\@lg {
+        margin-right: 0;
+    }
+    .u-mb0\@lg {
+        margin-bottom: 0;
+    }
+    .u-ml0\@lg {
+        margin-left: 0;
+    }
+    .u-mh0\@lg {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .u-mv0\@lg {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .u-p0\@lg {
+        padding: 0;
+    }
+    .u-pt0\@lg {
+        padding-top: 0;
+    }
+    .u-pr0\@lg {
+        padding-right: 0;
+    }
+    .u-pb0\@lg {
+        padding-bottom: 0;
+    }
+    .u-pl0\@lg {
+        padding-left: 0;
+    }
+    .u-ph0\@lg {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .u-pv0\@lg {
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }
 
 @media screen and (min-width: 80em) {
-    .u-m--\@ {
+    .u-m--\@xl {
         margin: 6px;
     }
-    .u-mt--\@ {
+    .u-mt--\@xl {
         margin-top: 6px;
     }
-    .u-mr--\@ {
+    .u-mr--\@xl {
         margin-right: 6px;
     }
-    .u-mb--\@ {
+    .u-mb--\@xl {
         margin-bottom: 6px;
     }
-    .u-ml--\@ {
+    .u-ml--\@xl {
         margin-left: 6px;
     }
-    .u-mh--\@ {
+    .u-mh--\@xl {
         margin-right: 6px;
         margin-left: 6px;
     }
-    .u-mv--\@ {
+    .u-mv--\@xl {
         margin-top: 6px;
         margin-bottom: 6px;
     }
-}
-
-/**
-     * Add small margins.
-     */
-@media screen and (max-width: 35.5em) {
-    .u-m-\@ {
-        margin: 12px;
-    }
-    .u-mt-\@ {
-        margin-top: 12px;
-    }
-    .u-mr-\@ {
-        margin-right: 12px;
-    }
-    .u-mb-\@ {
-        margin-bottom: 12px;
-    }
-    .u-ml-\@ {
-        margin-left: 12px;
-    }
-    .u-mh-\@ {
-        margin-right: 12px;
-        margin-left: 12px;
-    }
-    .u-mv-\@ {
-        margin-top: 12px;
-        margin-bottom: 12px;
-    }
-}
-
-@media screen and (min-width: 48em) {
-    .u-m-\@ {
-        margin: 12px;
-    }
-    .u-mt-\@ {
-        margin-top: 12px;
-    }
-    .u-mr-\@ {
-        margin-right: 12px;
-    }
-    .u-mb-\@ {
-        margin-bottom: 12px;
-    }
-    .u-ml-\@ {
-        margin-left: 12px;
-    }
-    .u-mh-\@ {
-        margin-right: 12px;
-        margin-left: 12px;
-    }
-    .u-mv-\@ {
-        margin-top: 12px;
-        margin-bottom: 12px;
-    }
-}
-
-@media screen and (min-width: 64em) {
-    .u-m-\@ {
-        margin: 12px;
-    }
-    .u-mt-\@ {
-        margin-top: 12px;
-    }
-    .u-mr-\@ {
-        margin-right: 12px;
-    }
-    .u-mb-\@ {
-        margin-bottom: 12px;
-    }
-    .u-ml-\@ {
-        margin-left: 12px;
-    }
-    .u-mh-\@ {
-        margin-right: 12px;
-        margin-left: 12px;
-    }
-    .u-mv-\@ {
-        margin-top: 12px;
-        margin-bottom: 12px;
-    }
-}
-
-@media screen and (min-width: 80em) {
-    .u-m-\@ {
-        margin: 12px;
-    }
-    .u-mt-\@ {
-        margin-top: 12px;
-    }
-    .u-mr-\@ {
-        margin-right: 12px;
-    }
-    .u-mb-\@ {
-        margin-bottom: 12px;
-    }
-    .u-ml-\@ {
-        margin-left: 12px;
-    }
-    .u-mh-\@ {
-        margin-right: 12px;
-        margin-left: 12px;
-    }
-    .u-mv-\@ {
-        margin-top: 12px;
-        margin-bottom: 12px;
-    }
-}
-
-/**
-     * Add large margins.
-     */
-@media screen and (max-width: 35.5em) {
-    .u-m\+\@ {
-        margin: 48px;
-    }
-    .u-mt\+\@ {
-        margin-top: 48px;
-    }
-    .u-mr\+\@ {
-        margin-right: 48px;
-    }
-    .u-mb\+\@ {
-        margin-bottom: 48px;
-    }
-    .u-ml\+\@ {
-        margin-left: 48px;
-    }
-    .u-mh\+\@ {
-        margin-right: 48px;
-        margin-left: 48px;
-    }
-    .u-mv\+\@ {
-        margin-top: 48px;
-        margin-bottom: 48px;
-    }
-}
-
-@media screen and (min-width: 48em) {
-    .u-m\+\@ {
-        margin: 48px;
-    }
-    .u-mt\+\@ {
-        margin-top: 48px;
-    }
-    .u-mr\+\@ {
-        margin-right: 48px;
-    }
-    .u-mb\+\@ {
-        margin-bottom: 48px;
-    }
-    .u-ml\+\@ {
-        margin-left: 48px;
-    }
-    .u-mh\+\@ {
-        margin-right: 48px;
-        margin-left: 48px;
-    }
-    .u-mv\+\@ {
-        margin-top: 48px;
-        margin-bottom: 48px;
-    }
-}
-
-@media screen and (min-width: 64em) {
-    .u-m\+\@ {
-        margin: 48px;
-    }
-    .u-mt\+\@ {
-        margin-top: 48px;
-    }
-    .u-mr\+\@ {
-        margin-right: 48px;
-    }
-    .u-mb\+\@ {
-        margin-bottom: 48px;
-    }
-    .u-ml\+\@ {
-        margin-left: 48px;
-    }
-    .u-mh\+\@ {
-        margin-right: 48px;
-        margin-left: 48px;
-    }
-    .u-mv\+\@ {
-        margin-top: 48px;
-        margin-bottom: 48px;
-    }
-}
-
-@media screen and (min-width: 80em) {
-    .u-m\+\@ {
-        margin: 48px;
-    }
-    .u-mt\+\@ {
-        margin-top: 48px;
-    }
-    .u-mr\+\@ {
-        margin-right: 48px;
-    }
-    .u-mb\+\@ {
-        margin-bottom: 48px;
-    }
-    .u-ml\+\@ {
-        margin-left: 48px;
-    }
-    .u-mh\+\@ {
-        margin-right: 48px;
-        margin-left: 48px;
-    }
-    .u-mv\+\@ {
-        margin-top: 48px;
-        margin-bottom: 48px;
-    }
-}
-
-/**
-     * Add huge margins.
-     */
-@media screen and (max-width: 35.5em) {
-    .u-m\+\+\@ {
-        margin: 96px;
-    }
-    .u-mt\+\+\@ {
-        margin-top: 96px;
-    }
-    .u-mr\+\+\@ {
-        margin-right: 96px;
-    }
-    .u-mb\+\+\@ {
-        margin-bottom: 96px;
-    }
-    .u-ml\+\+\@ {
-        margin-left: 96px;
-    }
-    .u-mh\+\+\@ {
-        margin-right: 96px;
-        margin-left: 96px;
-    }
-    .u-mv\+\+\@ {
-        margin-top: 96px;
-        margin-bottom: 96px;
-    }
-}
-
-@media screen and (min-width: 48em) {
-    .u-m\+\+\@ {
-        margin: 96px;
-    }
-    .u-mt\+\+\@ {
-        margin-top: 96px;
-    }
-    .u-mr\+\+\@ {
-        margin-right: 96px;
-    }
-    .u-mb\+\+\@ {
-        margin-bottom: 96px;
-    }
-    .u-ml\+\+\@ {
-        margin-left: 96px;
-    }
-    .u-mh\+\+\@ {
-        margin-right: 96px;
-        margin-left: 96px;
-    }
-    .u-mv\+\+\@ {
-        margin-top: 96px;
-        margin-bottom: 96px;
-    }
-}
-
-@media screen and (min-width: 64em) {
-    .u-m\+\+\@ {
-        margin: 96px;
-    }
-    .u-mt\+\+\@ {
-        margin-top: 96px;
-    }
-    .u-mr\+\+\@ {
-        margin-right: 96px;
-    }
-    .u-mb\+\+\@ {
-        margin-bottom: 96px;
-    }
-    .u-ml\+\+\@ {
-        margin-left: 96px;
-    }
-    .u-mh\+\+\@ {
-        margin-right: 96px;
-        margin-left: 96px;
-    }
-    .u-mv\+\+\@ {
-        margin-top: 96px;
-        margin-bottom: 96px;
-    }
-}
-
-@media screen and (min-width: 80em) {
-    .u-m\+\+\@ {
-        margin: 96px;
-    }
-    .u-mt\+\+\@ {
-        margin-top: 96px;
-    }
-    .u-mr\+\+\@ {
-        margin-right: 96px;
-    }
-    .u-mb\+\+\@ {
-        margin-bottom: 96px;
-    }
-    .u-ml\+\+\@ {
-        margin-left: 96px;
-    }
-    .u-mh\+\+\@ {
-        margin-right: 96px;
-        margin-left: 96px;
-    }
-    .u-mv\+\+\@ {
-        margin-top: 96px;
-        margin-bottom: 96px;
-    }
-}
-
-/**
-     * Remove margins.
-     */
-@media screen and (max-width: 35.5em) {
-    .u-m0\@ {
-        margin: 0;
-    }
-    .u-mt0\@ {
-        margin-top: 0;
-    }
-    .u-mr0\@ {
-        margin-right: 0;
-    }
-    .u-mb0\@ {
-        margin-bottom: 0;
-    }
-    .u-ml0\@ {
-        margin-left: 0;
-    }
-    .u-mh0\@ {
-        margin-right: 0;
-        margin-left: 0;
-    }
-    .u-mv0\@ {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-}
-
-@media screen and (min-width: 48em) {
-    .u-m0\@ {
-        margin: 0;
-    }
-    .u-mt0\@ {
-        margin-top: 0;
-    }
-    .u-mr0\@ {
-        margin-right: 0;
-    }
-    .u-mb0\@ {
-        margin-bottom: 0;
-    }
-    .u-ml0\@ {
-        margin-left: 0;
-    }
-    .u-mh0\@ {
-        margin-right: 0;
-        margin-left: 0;
-    }
-    .u-mv0\@ {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-}
-
-@media screen and (min-width: 64em) {
-    .u-m0\@ {
-        margin: 0;
-    }
-    .u-mt0\@ {
-        margin-top: 0;
-    }
-    .u-mr0\@ {
-        margin-right: 0;
-    }
-    .u-mb0\@ {
-        margin-bottom: 0;
-    }
-    .u-ml0\@ {
-        margin-left: 0;
-    }
-    .u-mh0\@ {
-        margin-right: 0;
-        margin-left: 0;
-    }
-    .u-mv0\@ {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-}
-
-@media screen and (min-width: 80em) {
-    .u-m0\@ {
-        margin: 0;
-    }
-    .u-mt0\@ {
-        margin-top: 0;
-    }
-    .u-mr0\@ {
-        margin-right: 0;
-    }
-    .u-mb0\@ {
-        margin-bottom: 0;
-    }
-    .u-ml0\@ {
-        margin-left: 0;
-    }
-    .u-mh0\@ {
-        margin-right: 0;
-        margin-left: 0;
-    }
-    .u-mv0\@ {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-}
-
-/**
-     * Padding helper classes.
-     *
-     * Add paddings.
-     */
-@media screen and (max-width: 35.5em) {
-    .u-p\@ {
-        padding: 24px;
-    }
-    .u-pt\@ {
-        padding-top: 24px;
-    }
-    .u-pr\@ {
-        padding-right: 24px;
-    }
-    .u-pb\@ {
-        padding-bottom: 24px;
-    }
-    .u-pl\@ {
-        padding-left: 24px;
-    }
-    .u-ph\@ {
-        padding-right: 24px;
-        padding-left: 24px;
-    }
-    .u-pv\@ {
-        padding-top: 24px;
-        padding-bottom: 24px;
-    }
-}
-
-@media screen and (min-width: 48em) {
-    .u-p\@ {
-        padding: 24px;
-    }
-    .u-pt\@ {
-        padding-top: 24px;
-    }
-    .u-pr\@ {
-        padding-right: 24px;
-    }
-    .u-pb\@ {
-        padding-bottom: 24px;
-    }
-    .u-pl\@ {
-        padding-left: 24px;
-    }
-    .u-ph\@ {
-        padding-right: 24px;
-        padding-left: 24px;
-    }
-    .u-pv\@ {
-        padding-top: 24px;
-        padding-bottom: 24px;
-    }
-}
-
-@media screen and (min-width: 64em) {
-    .u-p\@ {
-        padding: 24px;
-    }
-    .u-pt\@ {
-        padding-top: 24px;
-    }
-    .u-pr\@ {
-        padding-right: 24px;
-    }
-    .u-pb\@ {
-        padding-bottom: 24px;
-    }
-    .u-pl\@ {
-        padding-left: 24px;
-    }
-    .u-ph\@ {
-        padding-right: 24px;
-        padding-left: 24px;
-    }
-    .u-pv\@ {
-        padding-top: 24px;
-        padding-bottom: 24px;
-    }
-}
-
-@media screen and (min-width: 80em) {
-    .u-p\@ {
-        padding: 24px;
-    }
-    .u-pt\@ {
-        padding-top: 24px;
-    }
-    .u-pr\@ {
-        padding-right: 24px;
-    }
-    .u-pb\@ {
-        padding-bottom: 24px;
-    }
-    .u-pl\@ {
-        padding-left: 24px;
-    }
-    .u-ph\@ {
-        padding-right: 24px;
-        padding-left: 24px;
-    }
-    .u-pv\@ {
-        padding-top: 24px;
-        padding-bottom: 24px;
-    }
-}
-
-/**
-     * Add tiny paddings.
-     */
-@media screen and (max-width: 35.5em) {
-    .u-p--\@ {
+    .u-p--\@xl {
         padding: 6px;
     }
-    .u-pt--\@ {
+    .u-pt--\@xl {
         padding-top: 6px;
     }
-    .u-pr--\@ {
+    .u-pr--\@xl {
         padding-right: 6px;
     }
-    .u-pb--\@ {
+    .u-pb--\@xl {
         padding-bottom: 6px;
     }
-    .u-pl--\@ {
+    .u-pl--\@xl {
         padding-left: 6px;
     }
-    .u-ph--\@ {
-        padding-right: 6px;
-        padding-left: 6px;
-    }
-    .u-pv--\@ {
-        padding-top: 6px;
-        padding-bottom: 6px;
-    }
-}
-
-@media screen and (min-width: 48em) {
-    .u-p--\@ {
-        padding: 6px;
-    }
-    .u-pt--\@ {
-        padding-top: 6px;
-    }
-    .u-pr--\@ {
-        padding-right: 6px;
-    }
-    .u-pb--\@ {
-        padding-bottom: 6px;
-    }
-    .u-pl--\@ {
-        padding-left: 6px;
-    }
-    .u-ph--\@ {
+    .u-ph--\@xl {
         padding-right: 6px;
         padding-left: 6px;
     }
-    .u-pv--\@ {
+    .u-pv--\@xl {
         padding-top: 6px;
         padding-bottom: 6px;
     }
-}
-
-@media screen and (min-width: 64em) {
-    .u-p--\@ {
-        padding: 6px;
+    .u-m-\@xl {
+        margin: 12px;
     }
-    .u-pt--\@ {
-        padding-top: 6px;
+    .u-mt-\@xl {
+        margin-top: 12px;
     }
-    .u-pr--\@ {
-        padding-right: 6px;
+    .u-mr-\@xl {
+        margin-right: 12px;
     }
-    .u-pb--\@ {
-        padding-bottom: 6px;
+    .u-mb-\@xl {
+        margin-bottom: 12px;
     }
-    .u-pl--\@ {
-        padding-left: 6px;
+    .u-ml-\@xl {
+        margin-left: 12px;
     }
-    .u-ph--\@ {
-        padding-right: 6px;
-        padding-left: 6px;
+    .u-mh-\@xl {
+        margin-right: 12px;
+        margin-left: 12px;
     }
-    .u-pv--\@ {
-        padding-top: 6px;
-        padding-bottom: 6px;
+    .u-mv-\@xl {
+        margin-top: 12px;
+        margin-bottom: 12px;
     }
-}
-
-@media screen and (min-width: 80em) {
-    .u-p--\@ {
-        padding: 6px;
-    }
-    .u-pt--\@ {
-        padding-top: 6px;
-    }
-    .u-pr--\@ {
-        padding-right: 6px;
-    }
-    .u-pb--\@ {
-        padding-bottom: 6px;
-    }
-    .u-pl--\@ {
-        padding-left: 6px;
-    }
-    .u-ph--\@ {
-        padding-right: 6px;
-        padding-left: 6px;
-    }
-    .u-pv--\@ {
-        padding-top: 6px;
-        padding-bottom: 6px;
-    }
-}
-
-/**
-     * Add small paddings.
-     */
-@media screen and (max-width: 35.5em) {
-    .u-p-\@ {
+    .u-p-\@xl {
         padding: 12px;
     }
-    .u-pt-\@ {
+    .u-pt-\@xl {
         padding-top: 12px;
     }
-    .u-pr-\@ {
+    .u-pr-\@xl {
         padding-right: 12px;
     }
-    .u-pb-\@ {
+    .u-pb-\@xl {
         padding-bottom: 12px;
     }
-    .u-pl-\@ {
+    .u-pl-\@xl {
         padding-left: 12px;
     }
-    .u-ph-\@ {
-        padding-right: 12px;
-        padding-left: 12px;
-    }
-    .u-pv-\@ {
-        padding-top: 12px;
-        padding-bottom: 12px;
-    }
-}
-
-@media screen and (min-width: 48em) {
-    .u-p-\@ {
-        padding: 12px;
-    }
-    .u-pt-\@ {
-        padding-top: 12px;
-    }
-    .u-pr-\@ {
-        padding-right: 12px;
-    }
-    .u-pb-\@ {
-        padding-bottom: 12px;
-    }
-    .u-pl-\@ {
-        padding-left: 12px;
-    }
-    .u-ph-\@ {
+    .u-ph-\@xl {
         padding-right: 12px;
         padding-left: 12px;
     }
-    .u-pv-\@ {
+    .u-pv-\@xl {
         padding-top: 12px;
         padding-bottom: 12px;
     }
-}
-
-@media screen and (min-width: 64em) {
-    .u-p-\@ {
-        padding: 12px;
+    .u-m\@xl {
+        margin: 24px;
     }
-    .u-pt-\@ {
-        padding-top: 12px;
+    .u-mt\@xl {
+        margin-top: 24px;
     }
-    .u-pr-\@ {
-        padding-right: 12px;
+    .u-mr\@xl {
+        margin-right: 24px;
     }
-    .u-pb-\@ {
-        padding-bottom: 12px;
+    .u-mb\@xl {
+        margin-bottom: 24px;
     }
-    .u-pl-\@ {
-        padding-left: 12px;
+    .u-ml\@xl {
+        margin-left: 24px;
     }
-    .u-ph-\@ {
-        padding-right: 12px;
-        padding-left: 12px;
+    .u-mh\@xl {
+        margin-right: 24px;
+        margin-left: 24px;
     }
-    .u-pv-\@ {
-        padding-top: 12px;
-        padding-bottom: 12px;
+    .u-mv\@xl {
+        margin-top: 24px;
+        margin-bottom: 24px;
     }
-}
-
-@media screen and (min-width: 80em) {
-    .u-p-\@ {
-        padding: 12px;
+    .u-p\@xl {
+        padding: 24px;
     }
-    .u-pt-\@ {
-        padding-top: 12px;
+    .u-pt\@xl {
+        padding-top: 24px;
     }
-    .u-pr-\@ {
-        padding-right: 12px;
+    .u-pr\@xl {
+        padding-right: 24px;
     }
-    .u-pb-\@ {
-        padding-bottom: 12px;
+    .u-pb\@xl {
+        padding-bottom: 24px;
     }
-    .u-pl-\@ {
-        padding-left: 12px;
+    .u-pl\@xl {
+        padding-left: 24px;
     }
-    .u-ph-\@ {
-        padding-right: 12px;
-        padding-left: 12px;
+    .u-ph\@xl {
+        padding-right: 24px;
+        padding-left: 24px;
     }
-    .u-pv-\@ {
-        padding-top: 12px;
-        padding-bottom: 12px;
+    .u-pv\@xl {
+        padding-top: 24px;
+        padding-bottom: 24px;
     }
-}
-
-/**
-     * Add large paddings.
-     */
-@media screen and (max-width: 35.5em) {
-    .u-p\+\@ {
+    .u-m\+\@xl {
+        margin: 48px;
+    }
+    .u-mt\+\@xl {
+        margin-top: 48px;
+    }
+    .u-mr\+\@xl {
+        margin-right: 48px;
+    }
+    .u-mb\+\@xl {
+        margin-bottom: 48px;
+    }
+    .u-ml\+\@xl {
+        margin-left: 48px;
+    }
+    .u-mh\+\@xl {
+        margin-right: 48px;
+        margin-left: 48px;
+    }
+    .u-mv\+\@xl {
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+    .u-p\+\@xl {
         padding: 48px;
     }
-    .u-pt\+\@ {
+    .u-pt\+\@xl {
         padding-top: 48px;
     }
-    .u-pr\+\@ {
+    .u-pr\+\@xl {
         padding-right: 48px;
     }
-    .u-pb\+\@ {
+    .u-pb\+\@xl {
         padding-bottom: 48px;
     }
-    .u-pl\+\@ {
+    .u-pl\+\@xl {
         padding-left: 48px;
     }
-    .u-ph\+\@ {
-        padding-right: 48px;
-        padding-left: 48px;
-    }
-    .u-pv\+\@ {
-        padding-top: 48px;
-        padding-bottom: 48px;
-    }
-}
-
-@media screen and (min-width: 48em) {
-    .u-p\+\@ {
-        padding: 48px;
-    }
-    .u-pt\+\@ {
-        padding-top: 48px;
-    }
-    .u-pr\+\@ {
-        padding-right: 48px;
-    }
-    .u-pb\+\@ {
-        padding-bottom: 48px;
-    }
-    .u-pl\+\@ {
-        padding-left: 48px;
-    }
-    .u-ph\+\@ {
+    .u-ph\+\@xl {
         padding-right: 48px;
         padding-left: 48px;
     }
-    .u-pv\+\@ {
+    .u-pv\+\@xl {
         padding-top: 48px;
         padding-bottom: 48px;
     }
-}
-
-@media screen and (min-width: 64em) {
-    .u-p\+\@ {
-        padding: 48px;
+    .u-m\+\+\@xl {
+        margin: 96px;
     }
-    .u-pt\+\@ {
-        padding-top: 48px;
+    .u-mt\+\+\@xl {
+        margin-top: 96px;
     }
-    .u-pr\+\@ {
-        padding-right: 48px;
+    .u-mr\+\+\@xl {
+        margin-right: 96px;
     }
-    .u-pb\+\@ {
-        padding-bottom: 48px;
+    .u-mb\+\+\@xl {
+        margin-bottom: 96px;
     }
-    .u-pl\+\@ {
-        padding-left: 48px;
+    .u-ml\+\+\@xl {
+        margin-left: 96px;
     }
-    .u-ph\+\@ {
-        padding-right: 48px;
-        padding-left: 48px;
+    .u-mh\+\+\@xl {
+        margin-right: 96px;
+        margin-left: 96px;
     }
-    .u-pv\+\@ {
-        padding-top: 48px;
-        padding-bottom: 48px;
+    .u-mv\+\+\@xl {
+        margin-top: 96px;
+        margin-bottom: 96px;
     }
-}
-
-@media screen and (min-width: 80em) {
-    .u-p\+\@ {
-        padding: 48px;
-    }
-    .u-pt\+\@ {
-        padding-top: 48px;
-    }
-    .u-pr\+\@ {
-        padding-right: 48px;
-    }
-    .u-pb\+\@ {
-        padding-bottom: 48px;
-    }
-    .u-pl\+\@ {
-        padding-left: 48px;
-    }
-    .u-ph\+\@ {
-        padding-right: 48px;
-        padding-left: 48px;
-    }
-    .u-pv\+\@ {
-        padding-top: 48px;
-        padding-bottom: 48px;
-    }
-}
-
-/**
-     * Add huge paddings.
-     */
-@media screen and (max-width: 35.5em) {
-    .u-p\+\+\@ {
+    .u-p\+\+\@xl {
         padding: 96px;
     }
-    .u-pt\+\+\@ {
+    .u-pt\+\+\@xl {
         padding-top: 96px;
     }
-    .u-pr\+\+\@ {
+    .u-pr\+\+\@xl {
         padding-right: 96px;
     }
-    .u-pb\+\+\@ {
+    .u-pb\+\+\@xl {
         padding-bottom: 96px;
     }
-    .u-pl\+\+\@ {
+    .u-pl\+\+\@xl {
         padding-left: 96px;
     }
-    .u-ph\+\+\@ {
-        padding-right: 96px;
-        padding-left: 96px;
-    }
-    .u-pv\+\+\@ {
-        padding-top: 96px;
-        padding-bottom: 96px;
-    }
-}
-
-@media screen and (min-width: 48em) {
-    .u-p\+\+\@ {
-        padding: 96px;
-    }
-    .u-pt\+\+\@ {
-        padding-top: 96px;
-    }
-    .u-pr\+\+\@ {
-        padding-right: 96px;
-    }
-    .u-pb\+\+\@ {
-        padding-bottom: 96px;
-    }
-    .u-pl\+\+\@ {
-        padding-left: 96px;
-    }
-    .u-ph\+\+\@ {
+    .u-ph\+\+\@xl {
         padding-right: 96px;
         padding-left: 96px;
     }
-    .u-pv\+\+\@ {
+    .u-pv\+\+\@xl {
         padding-top: 96px;
         padding-bottom: 96px;
     }
-}
-
-@media screen and (min-width: 64em) {
-    .u-p\+\+\@ {
-        padding: 96px;
+    .u-m0\@xl {
+        margin: 0;
     }
-    .u-pt\+\+\@ {
-        padding-top: 96px;
+    .u-mt0\@xl {
+        margin-top: 0;
     }
-    .u-pr\+\+\@ {
-        padding-right: 96px;
+    .u-mr0\@xl {
+        margin-right: 0;
     }
-    .u-pb\+\+\@ {
-        padding-bottom: 96px;
+    .u-mb0\@xl {
+        margin-bottom: 0;
     }
-    .u-pl\+\+\@ {
-        padding-left: 96px;
+    .u-ml0\@xl {
+        margin-left: 0;
     }
-    .u-ph\+\+\@ {
-        padding-right: 96px;
-        padding-left: 96px;
+    .u-mh0\@xl {
+        margin-right: 0;
+        margin-left: 0;
     }
-    .u-pv\+\+\@ {
-        padding-top: 96px;
-        padding-bottom: 96px;
+    .u-mv0\@xl {
+        margin-top: 0;
+        margin-bottom: 0;
     }
-}
-
-@media screen and (min-width: 80em) {
-    .u-p\+\+\@ {
-        padding: 96px;
-    }
-    .u-pt\+\+\@ {
-        padding-top: 96px;
-    }
-    .u-pr\+\+\@ {
-        padding-right: 96px;
-    }
-    .u-pb\+\+\@ {
-        padding-bottom: 96px;
-    }
-    .u-pl\+\+\@ {
-        padding-left: 96px;
-    }
-    .u-ph\+\+\@ {
-        padding-right: 96px;
-        padding-left: 96px;
-    }
-    .u-pv\+\+\@ {
-        padding-top: 96px;
-        padding-bottom: 96px;
-    }
-}
-
-/**
-     * Remove paddings.
-     */
-@media screen and (max-width: 35.5em) {
-    .u-p0\@ {
+    .u-p0\@xl {
         padding: 0;
     }
-    .u-pt0\@ {
+    .u-pt0\@xl {
         padding-top: 0;
     }
-    .u-pr0\@ {
+    .u-pr0\@xl {
         padding-right: 0;
     }
-    .u-pb0\@ {
+    .u-pb0\@xl {
         padding-bottom: 0;
     }
-    .u-pl0\@ {
+    .u-pl0\@xl {
         padding-left: 0;
     }
-    .u-ph0\@ {
+    .u-ph0\@xl {
         padding-right: 0;
         padding-left: 0;
     }
-    .u-pv0\@ {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-}
-
-@media screen and (min-width: 48em) {
-    .u-p0\@ {
-        padding: 0;
-    }
-    .u-pt0\@ {
-        padding-top: 0;
-    }
-    .u-pr0\@ {
-        padding-right: 0;
-    }
-    .u-pb0\@ {
-        padding-bottom: 0;
-    }
-    .u-pl0\@ {
-        padding-left: 0;
-    }
-    .u-ph0\@ {
-        padding-right: 0;
-        padding-left: 0;
-    }
-    .u-pv0\@ {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-}
-
-@media screen and (min-width: 64em) {
-    .u-p0\@ {
-        padding: 0;
-    }
-    .u-pt0\@ {
-        padding-top: 0;
-    }
-    .u-pr0\@ {
-        padding-right: 0;
-    }
-    .u-pb0\@ {
-        padding-bottom: 0;
-    }
-    .u-pl0\@ {
-        padding-left: 0;
-    }
-    .u-ph0\@ {
-        padding-right: 0;
-        padding-left: 0;
-    }
-    .u-pv0\@ {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-}
-
-@media screen and (min-width: 80em) {
-    .u-p0\@ {
-        padding: 0;
-    }
-    .u-pt0\@ {
-        padding-top: 0;
-    }
-    .u-pr0\@ {
-        padding-right: 0;
-    }
-    .u-pb0\@ {
-        padding-bottom: 0;
-    }
-    .u-pl0\@ {
-        padding-left: 0;
-    }
-    .u-ph0\@ {
-        padding-right: 0;
-        padding-left: 0;
-    }
-    .u-pv0\@ {
+    .u-pv0\@xl {
         padding-top: 0;
         padding-bottom: 0;
     }
@@ -1964,41 +1405,71 @@ Tags:
 }
 
 /**
- * #GENERIC
+ * #ELEMENTS
  */
-/**
- * Universal selector. This is applied to all elements.
- */
-* {
-    flex-direction: column;
-    position: relative;
-    vertical-align: middle; 
-    word-wrap: break-word;
-    -webkit-transition: 0.35s ease;
-    transition: 0.35s ease;
-
-    -webkit-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    -ms-flex-negative: 0;
-    -webkit-flex-shrink: 0;
-    flex-shrink: 0;
+h1 {
+    margin: 24px 0 12px; 
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 1.3333333333;
 }
 
-/*Pieces of normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-html {
-    -webkit-text-size-adjust: 100%; 
-    -ms-text-size-adjust: 100%;
+h2 {
+    margin: 24px 0 6px; 
+    font-size: 30px;
+    font-size: 1.875rem;
+    line-height: 1.6;
 }
 
-a {
-    background-color: transparent;
+h3 {
+    margin: 24px 0 6px; 
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1;
 }
 
-a:active,
-a:hover {
-    outline: 0;
+h4 {
+    margin: 24px 0 6px; 
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+
+h5 {
+    margin: 24px 0 6px; 
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+h6 {
+    margin: 24px 0 6px; 
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.7142857143;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    opacity: 0.7; 
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+dl,
+blockquote,
+p,
+address,
+table,
+fieldset,
+figure,
+pre {
+    margin-bottom: 24px;
 }
 
 abbr[title] {
@@ -2029,109 +1500,17 @@ sub {
     bottom: -0.25em;
 }
 
-img {
-    border: 0;
-}
-
-svg:not(:root) {
-    overflow: hidden;
-}
-
-button {
-    overflow: visible;
-}
-
-select {
-    text-transform: none;
-}
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-    padding: 0; 
-    border: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: inherit;
-}
-
-/*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
-pre,
-textarea {
-    overflow: auto;
-}
-
-[hidden],
-audio:not([controls]),
-template {
-    display: none;
-}
-
-details,
-main,
-summary {
-    display: block;
-}
-
-input[type=number] {
-    width: auto;
-}
-
-input[type=search] {
-    -webkit-appearance: textfield;
-}
-
-input[type=search]::-webkit-search-cancel-button,
-input[type=search]::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
-
-progress {
-    display: inline-block;
-}
-
 small {
     color: #777; 
     font-size: 75%;
 }
 
-textarea {
-    resize: vertical;
+big {
+    font-size: 125%;
 }
 
-[unselectable] {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-*,
-::after,
-::before {
-    box-sizing: inherit;
-    border-width: 0; 
-    border-style: solid;
-}
-
-* {
-    margin: 0;
-    padding: 0; 
-    font-size: inherit;
-    line-height: inherit;
-}
-
-::after,
-::before {
-    vertical-align: inherit; 
-    text-decoration: inherit;
-}
-
+/*------------------------------------*    #PAGE
+\*------------------------------------*/
 :root {
     overflow-y: scroll;
     box-sizing: border-box;
@@ -2155,59 +1534,70 @@ textarea {
     }
 }
 
-a {
-    text-decoration: none;
-}
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
-
-button,
-input,
-select,
-textarea {
-    min-height: 24px; 
+/**
+ * Universal selector. This is applied to all elements.
+ */
+* {
+    flex-direction: column;
+    position: relative;
+    margin: 0;
+    padding: 0;
     color: inherit;
-    background-color: transparent;
-    font-family: inherit;
-    font-weight: inherit;
-    font-style: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    vertical-align: middle; 
+    word-wrap: break-word;
+
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -ms-flex-negative: 0;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
 }
 
-code,
-kbd,
-pre,
-samp {
-    font-family: "Courier 10 Pitch", Courier, monospace;
+*,
+::after,
+::before {
+    box-sizing: inherit;
+    border-width: 0; 
+    border-style: solid;
 }
 
-nav ol,
-nav ul {
-    list-style: none;
+::after,
+::before {
+    vertical-align: inherit; 
+    text-decoration: inherit;
 }
 
-select {
-    -webkit-appearance: none; 
-    -moz-appearance: none;
+html {
+    min-height: 100%;
+    color: #333;
+    background-color: #fff;
+
+    -webkit-text-size-adjust: 100%; 
+    -ms-text-size-adjust: 100%;
 }
 
-select::-ms-expand {
-    display: none;
+body {
+    color: #1f1f1f;
+    background-color: #fffaf5; 
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
 }
 
-select::-ms-value {
-    color: currentColor;
+hr {
+    display: block;
+    height: 1px;
+    margin: 24px 0; 
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-table {
-    border-spacing: 0; 
-    border-collapse: collapse;
+span {
+    display: inline-block;
 }
 
 ::-moz-selection {
@@ -2218,6 +1608,21 @@ table {
 ::selection {
     background-color: #b3d4fc;
     text-shadow: none;
+}
+
+canvas {
+    -ms-touch-action: double-tap-zoom;
+}
+
+iframe[src*="google.com/maps"] {
+    width: 100%; 
+    max-width: 100%;
+}
+
+[hidden],
+audio:not([controls]),
+template {
+    display: none;
 }
 
 @media screen {
@@ -2230,128 +1635,19 @@ table {
     }
 }
 
-/**
- * Set the default behavior for touch-based browsing in IE 10 on devices
- * running Windows 8.
- */
-canvas {
-    -ms-touch-action: double-tap-zoom;
-}
-
-iframe[src*="google.com/maps"] {
-    width: 100%; 
-    max-width: 100%;
-}
-
-big {
-    font-size: 125%;
-}
-
-button,
-input,
-select,
-textarea {
-    min-height: 1.4em; 
-    border: 0.1rem solid #ccc;
-    color: inherit;
-    background-color: transparent;
-    font-family: inherit;
-    font-weight: inherit;
-    font-style: inherit;
-}
-
-body {
-    color: #333;
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    font-weight: 400; 
-    font-style: normal;
-}
-
-p {
-    margin-bottom: 24px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 2rem 0 24px; 
-    font-family: "Raleway", sans-serif;
-}
-
-h1 {
-    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
-    font-size: 3.6rem;
-    font-weight: 500; 
-    font-style: normal;
-}
-
-h2 {
-    font-size: 3rem;
-    font-weight: 500; 
-    font-style: normal;
-}
-
-h3 {
-    margin: 1.6rem 0 0.4rem; 
-    font-size: 2.4rem;
-    font-weight: 500;
-    font-style: normal;
-}
-
-h4 {
-    margin: 1.6rem 0 0.4rem; 
-    font-size: 1.8rem;
-    font-weight: 600;
-    font-style: normal;
-}
-
-h5 {
-    margin: 1.6rem 0 0.4rem; 
-    font-size: 1.4rem;
-    font-weight: 600;
-    font-style: normal;
-}
-
-h6 {
-    margin: 1.6rem 0 0.4rem; 
-    color: #777;
-    font-size: 1.2rem;
-    font-weight: 600;
-    font-style: normal;
-}
-
-pre {
-    display: block;
-    margin: 1.6rem 0;
-    padding: 1.6rem;
-    color: #444;
-    background: #efefef;
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-    font-size: 1.4rem;
-    word-wrap: break-word; 
-    word-break: break-all;
-}
-
-code {
-    color: #444;
-    background: #efefef;
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-    font-size: 1.4rem;
-    word-wrap: break-word; 
-    word-break: break-all;
-}
-
 a {
-    color: #1271db;
+    background-color: transparent;
+    text-decoration: none;
+    -webkit-transition: 0.35s;
+    transition: 0.35s;
 }
-
+a:active,
 a:hover,
 a:focus {
-    text-decoration: none;
+    outline: 0;
+    opacity: 0.7;
+    -webkit-transition: 0.35s;
+    transition: 0.35s;
 }
 
 dl {
@@ -2364,716 +1660,10 @@ dd {
 
 ul,
 ol {
-    margin-bottom: 0.8rem;
-    padding-left: 2rem;
-}
-
-blockquote {
-    margin: 24px 0;
-    padding-left: 24px; 
-    border-left: 0.2rem solid #1271db;
-    font-family: Georgia, Times, "Times New Roman", serif;
-    font-style: italic;
-}
-
-figcaption {
-    font-family: Georgia, Times, "Times New Roman", serif;
-}
-
-main,
-header,
-footer,
-article,
-section,
-aside,
-details,
-summary {
-    display: block;
-    width: 100%; 
-    height: auto;
-    margin: 0 auto;
-}
-
-main {
-    display: block;
-    max-width: 76.8rem;
-    margin: 0 auto;
-    padding: 0 1.6rem 1.6rem;
-}
-
-article {
-    display: inline-block;
-    float: left;
-    clear: left;
-    max-width: -webkit-calc(60% - 1rem);
-    max-width: calc(60% - 1rem); 
-    margin-bottom: 1.6rem;
-}
-
-aside {
-    display: inline-block;
-    float: right;
-    clear: right;
-    max-width: -webkit-calc(40% - 1rem);
-    max-width: calc(40% - 1rem); 
-    margin-bottom: 1.6rem;
-}
-
-section {
-    display: inline-block;
-    float: left;
-    clear: both;
-    max-width: 100%; 
-    margin-bottom: 1.6rem;
-}
-
-footer {
-    display: inline-block;
-    float: left;
-    clear: both;
-    max-width: 100%;
-    padding: 1rem 0;
-    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-hr {
-    display: block;
-    height: 1px;
-    margin: 24px 0; 
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    vertical-align: baseline;
-}
-
-@media screen and (max-width: 40rem) {
-    article,
-    section,
-    aside {
-        display: block;
-        clear: both;
-        max-width: 100%;
-    }
-    img {
-        margin-right: 1.6rem;
-    }
-}
-
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="url"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="week"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
-select {
-    display: inline-block;
-    padding: 0.8rem;
-    border: 0.1rem solid #ccc;
-    border-radius: 0;
-    vertical-align: middle;
-}
-
-input:not([type]) {
-    display: inline-block;
-    padding: 0.8rem;
-    border: 0.1rem solid #ccc;
-    border-radius: 0;
-    color: #444;
-    background-color: #fff;
-    background-clip: padding-box;
-    text-align: left; 
-
-    -webkit-appearance: none;
-}
-
-input[type="color"] {
-    padding: 0.8rem 1.6rem;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="week"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="color"]:focus,
-select:focus,
-textarea:focus {
-    border-color: #b3d4fc;
-}
-
-input:not([type]):focus {
-    border-color: #b3d4fc;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-    vertical-align: middle;
-}
-
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus {
-    outline: 0.1rem solid thin #444;
-}
-
-input[type="text"][disabled],
-input[type="password"][disabled],
-input[type="email"][disabled],
-input[type="url"][disabled],
-input[type="date"][disabled],
-input[type="month"][disabled],
-input[type="time"][disabled],
-input[type="datetime"][disabled],
-input[type="datetime-local"][disabled],
-input[type="week"][disabled],
-input[type="number"][disabled],
-input[type="search"][disabled],
-input[type="tel"][disabled],
-input[type="color"][disabled],
-select[disabled],
-textarea[disabled] {
-    color: #777;
-    background-color: #efefef;
-    cursor: not-allowed;
-}
-
-input:not([type])[disabled] {
-    color: #777;
-    background-color: #efefef;
-    cursor: not-allowed;
-}
-
-input[readonly],
-select[readonly],
-textarea[readonly] {
-    border-color: #ccc;
-    color: #777; 
-    background-color: #efefef;
-}
-
-input:focus:invalid,
-textarea:focus:invalid,
-select:focus:invalid {
-    border-color: #e9322d;
-    color: #b94a48;
-}
-
-input[type="file"]:focus:invalid:focus,
-input[type="radio"]:focus:invalid:focus,
-input[type="checkbox"]:focus:invalid:focus {
-    outline-color: #ff4136;
-}
-
-select {
-    border: 0.1rem solid #ccc; 
-    background-color: #fff;
-}
-
-select[multiple] {
-    height: auto;
-}
-
-label {
-    line-height: 2;
-}
-
-fieldset {
-    margin: 0;
-    padding: 0.8rem 0; 
-    border: 0;
-}
-
-legend {
-    display: block;
-    width: 100%; 
-    margin-bottom: 0.8rem;
-    padding: 0.8rem 0;
-    border-bottom: 0.1rem solid #ccc;
-    color: #444;
-}
-
-textarea {
-    display: block;
-    margin-bottom: 0.8rem;
-    padding: 0.8rem;
-    border: 0.1rem solid #ccc;
-    border-radius: 0;
-    vertical-align: middle;
-}
-
-input[type=submit],
-button {
-    display: inline-block;
-    margin-right: 0.4rem;
-    margin-bottom: 0.8rem;
-    padding: 0.8rem 1.6rem;
-    border: 0.2rem solid #444;
-    border-radius: 0;
-    color: #444;
-    background-color: transparent;
-    text-align: center;
-    vertical-align: baseline; 
-    text-decoration: none;
-    text-transform: uppercase;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-transition: 0.25s ease;
-    transition: 0.25s ease;
-
-    -webkit-user-drag: none;
-}
-
-input[type=submit] a,
-button a {
-    color: #444;
-}
-
-input[type=submit]::-moz-focus-inner,
-button::-moz-focus-inner {
-    padding: 0;
-}
-
-input[type=submit]:hover,
-button:hover {
-    border-color: #444;
-    color: #fff; 
-    background: #444;
-}
-
-input[type=submit]:hover a,
-button:hover a {
-    color: #fff;
-}
-
-input[type=submit]:active,
-button:active {
-    border-color: #6a6a6a;
-    color: #fff; 
-    background: #6a6a6a;
-}
-
-input[type=submit]:active a,
-button:active a {
-    color: #fff;
-}
-
-input[type=submit]:disabled,
-button:disabled {
-    opacity: 0.40; 
-    box-shadow: none;
-    cursor: not-allowed;
-}
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    padding-top: 1.6rem;
-    text-align: center; 
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav a {
-    padding: 0.8rem 1.6rem;
-    border-bottom: 0.2rem solid transparent;
-    color: #444;
-    text-decoration: none;
-}
-
-nav a:hover {
-    border-color: rgba(0, 0, 0, 0.2);
-}
-
-nav a:active {
-    border-color: rgba(0, 0, 0, 0.56);
-}
-
-table {
-    margin-bottom: 1.6rem;
-}
-
-caption {
-    padding: 0.8rem 0;
-}
-
-thead th {
-    color: #444; 
-    background: #efefef;
-}
-
-tr {
-    margin-bottom: 0.8rem; 
-    background: #fff;
-}
-
-th,
-td {
-    padding: 0.8rem 1.6rem;
-    border: 0.1rem solid #ccc;
-    text-align: center;
-    vertical-align: inherit;
-}
-
-tfoot tr {
-    background: none;
-}
-
-tfoot td {
-    padding: 1.6rem 0.4rem; 
-    color: #efefef;
-    font-size: 0.8rem;
-    font-style: italic;
-}
-
-/*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
-/*
- * Normalization
- */
-:root {
-    overflow-y: scroll;
-
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-}
-
-audio:not([controls]) {
-    display: none;
-}
-
-details {
-    display: block;
-}
-
-input[type="number"] {
-    width: auto;
-}
-
-input[type="search"] {
-    -webkit-appearance: textfield;
-}
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
-
-main {
-    display: block;
-}
-
-summary {
-    display: block;
-}
-
-pre {
-    overflow: auto;
-}
-
-progress {
-    display: inline-block;
-}
-
-small {
-    font-size: 75%;
-}
-
-template {
-    display: none;
-}
-
-textarea {
-    overflow: auto;
-}
-
-[hidden] {
-    display: none;
-}
-
-[unselectable] {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-/*
- * Universal inheritance
- */
-*,
-::before,
-::after {
-    box-sizing: inherit;
-}
-
-* {
-    font-size: inherit;
-    line-height: inherit;
-}
-
-::before,
-::after {
-    vertical-align: inherit; 
-    text-decoration: inherit;
-}
-
-/*
- * Opinionated defaults
- */
-*,
-::before,
-::after {
-    border-width: 0; 
-    border-style: solid;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-:root {
-    box-sizing: border-box;
-    font: 16px/1.5 sans-serif;
-    cursor: default;
-    text-rendering: optimizeLegibility;
-}
-
-html {
-    background-color: #fff;
-}
-
-a {
-    text-decoration: none;
-}
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
-
-button,
-input,
-select,
-textarea {
-    background-color: transparent;
-}
-
-button,
-input,
-select,
-textarea {
-    color: inherit;
-    font-family: inherit;
-    font-weight: inherit; 
-    font-style: inherit;
-}
-
-button,
-input,
-select,
-textarea {
-    min-height: 1.5em;
-}
-
-code,
-kbd,
-pre,
-samp {
-    font-family: monospace, monospace;
-}
-
-nav ol,
-nav ul {
-    list-style: none;
-}
-
-select {
-    -webkit-appearance: none; 
-    -moz-appearance: none;
-}
-select::-ms-expand {
-    display: none;
-}
-select::-ms-value {
-    color: currentColor;
-}
-
-table {
-    border-spacing: 0; 
-    border-collapse: collapse;
-}
-
-textarea {
-    resize: vertical;
-}
-
-::-moz-selection {
-    background-color: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background-color: #b3d4fc;
-    text-shadow: none;
-}
-
-@media screen {
-    [hidden~="screen"] {
-        display: inherit;
-    }
-    [hidden~="screen"]:not(:active):not(:focus):not(:target) {
-        clip: rect(0 0 0 0) !important;
-        position: absolute !important;
-    }
-}
-
-/**
- * #ELEMENTS
- */
-/*------------------------------------*    #PAGE
-\*------------------------------------*/
-html {
-    min-height: 100%;
-    color: #333;
-    background-color: #fff;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-dl,
-blockquote,
-p,
-address,
-table,
-fieldset,
-figure,
-pre {
     margin-bottom: 24px;
-}
-
-/*------------------------------------*    #HEADINGS
-\*------------------------------------*/
-/**
- * Headings 1–6.
- */
-h1 {
-    font-size: 36px;
-    font-size: 2.25rem;
-    line-height: 1.3333333333;
-}
-
-h2 {
-    font-size: 30px;
-    font-size: 1.875rem;
-    line-height: 1.6;
-}
-
-h3 {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1;
-}
-
-h4 {
-    font-size: 20px;
-    font-size: 1.25rem;
-    line-height: 1.2;
-}
-
-h5 {
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-h6 {
-    font-size: 14px;
-    font-size: 0.875rem;
-    line-height: 1.7142857143;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-    -webkit-transition: 0.35s;
-    transition: 0.35s;
-}
-a:hover,
-a:focus {
-    opacity: 0.7;
-    -webkit-transition: 0.35s;
-    transition: 0.35s;
-}
-
-.entry-content a:not(.button) {
-    border-bottom: 1px solid transparent;
-    color: #385996;
-    -webkit-transition: 0.35s;
-    transition: 0.35s;
-}
-.entry-content a:not(.button):hover,
-.entry-content a:not(.button):focus {
-    border-bottom-color: #91a9d6;
-    opacity: 1;
-    color: #6c8cc8;
-    -webkit-transition: 0.35s;
-    transition: 0.35s;
-}
-.entry-content a:not(.button):active {
-    color: #476fba;
-    -webkit-transition: 0.35s;
-    transition: 0.35s;
-}
-
-ul,
-ol {
-    margin-bottom: 24px; 
-    list-style: none;
-}
-
-.entry-content ul,
-.entry-content ol {
-    padding-left: 16px; 
+    padding-left: 24px;
+    text-align: left; 
     list-style-position: outside;
-}
-.entry-content ul > li,
-.entry-content ol > li {
-    list-style-type: disc;
 }
 
 li > ul,
@@ -3081,22 +1671,18 @@ li > ol {
     margin-bottom: 0;
 }
 
-.sidebar li {
-    margin-bottom: 12px;
-}
-
 /*------------------------------------*    #IMAGES
 \*------------------------------------*/
-/**
- * 1. Fluid images for responsive purposes.
- * 2. Offset `alt` text from surrounding copy.
- */
 img {
     max-width: 100%;
-    /* [2] */
-    height: auto; 
-    /* [1] */
+    height: auto;
+    border: 0;
     font-style: italic;
+    vertical-align: baseline;
+}
+
+svg:not(:root) {
+    overflow: hidden;
 }
 
 /**
@@ -3111,12 +1697,17 @@ img {
 \*------------------------------------*/
 blockquote {
     margin-bottom: 24px;
-    padding-left: 20px; 
-    border-left: 5px solid currentColor;
+    padding-left: 24px; 
+    border-left: 0.2rem solid currentColor;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-style: italic;
 }
 blockquote p {
-    color: #858585;
+    color: #6c6c6c;
+    font-size: 17px;
+    font-size: 1.0625rem;
     font-weight: 500;
+    line-height: 1.4117647059;
 }
 blockquote p + p {
     margin-bottom: 0;
@@ -3151,6 +1742,207 @@ blockquote cite::before {
     .pullquote.alignleft {
         max-width: 50%;
     }
+}
+
+table {
+    width: 100%;
+    margin-bottom: 24px;
+    border-spacing: 0; 
+    border-collapse: collapse;
+}
+
+caption {
+    padding: 12px 0;
+}
+
+thead th {
+    background-color: #efefef;
+}
+
+tr {
+    margin-bottom: 12px; 
+    background-color: #fff;
+}
+
+th,
+td {
+    padding: 12px 6px;
+    border: 0.1rem solid #e4e9eb;
+    text-align: center;
+}
+
+tfoot tr {
+    background: none;
+}
+
+tfoot td {
+    padding: 24px 6px; 
+    font-size: 14px;
+    font-style: italic;
+}
+
+input:not([type="submit"]),
+select,
+textarea {
+    display: inline-block;
+    width: 100%;
+    min-height: 48px;
+    padding: 0 24px; 
+    border: 1px solid #e4e9eb;
+    border-radius: 2px;
+    background-color: #e4e9eb;
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+}
+
+input[type="color"] {
+    padding: 12px 24px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #6c8cc8;
+    outline: 0;
+    background-color: #fff;
+}
+
+input[type=number] {
+    width: auto;
+}
+
+input[type=search] {
+    -webkit-appearance: textfield;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+progress {
+    display: inline-block;
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+    outline: 0.1rem solid thin #1f1f1f;
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled] {
+    color: #6c6c6c;
+    background-color: #ebebeb;
+    cursor: not-allowed;
+}
+
+input[readonly],
+select[readonly],
+textarea[readonly] {
+    border-color: #e4e9eb;
+    color: #6c6c6c; 
+    background-color: #ebebeb;
+}
+
+select {
+    border: 1px solid #e4e9eb;
+    background-color: #fff;
+    text-transform: none;
+
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+}
+
+select[multiple] {
+    height: auto;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select::-ms-value {
+    color: currentColor;
+}
+
+label {
+    line-height: 2;
+}
+
+fieldset {
+    padding: 12px 0;
+}
+
+legend {
+    display: block;
+    width: 100%; 
+    margin-bottom: 12px;
+    padding: 12px 0;
+    border-bottom: 0.1rem solid #e4e9eb;
+    color: #1f1f1f;
+}
+
+textarea {
+    overflow: auto; 
+    padding: 24px;
+    resize: vertical;
+}
+
+[unselectable] {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.search-form,
+.post-password-form {
+    display: block;
+}
+
+.search-form input[type=search],
+.post-password-form input[type="password"] {
+    width: 100%; 
+    margin: 0;
+}
+
+.search-form button[type=submit],
+.post-password-form input[type="submit"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0; 
+    padding: 0 24px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    outline: none;
+}
+
+.post-password-form input[type="submit"] {
+    top: auto; 
+    height: 48px;
+}
+
+.search-form button::before {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: inherit;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+    text-decoration: none;
+    content: "";
+    text-rendering: auto;
+
+    speak: none;
+}
+
+.search-form button[type=submit]::before {
+    font-size: 18px;
+    line-height: 1.625;
 }
 
 /**
@@ -3674,15 +2466,6 @@ blockquote cite::before {
     height: 100%;
 }
 
-table {
-    width: 100%;
-}
-
-td {
-    padding: 0.5em 0; 
-    text-align: center;
-}
-
 .o-media {
     display: table;
     width: 100%;
@@ -3751,179 +2534,6 @@ td {
     max-width: 100%;
 }
 
-/**
- * 5.0 Forms
- */
-input:not([type="submit"]),
-select,
-textarea {
-    max-width: 100%;
-    margin: 0;
-    margin-bottom: 24px; 
-    border-radius: 2px;
-    background-color: #e4e9eb;
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.5;
-    vertical-align: baseline;
-}
-
-input:not([type="submit"]),
-select {
-    min-height: 40px; 
-    line-height: normal;
-}
-
-input:not([type="submit"]),
-textarea {
-    width: 100%; 
-    /* Removing the inner shadow on iOS inputs */
-    border: 1px solid #ebebeb;
-    color: #6c6c6c;
-    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
-}
-
-input:not([type="submit"]):focus,
-textarea:focus {
-    border: 1px solid #476fba;
-    color: #393939; 
-    background-color: #fff;
-}
-
-input:not([type="submit"]):focus,
-select:focus {
-    outline: 2px solid #476fba;
-}
-
-input[disabled],
-select[disabled],
-textarea[disabled] {
-    opacity: 0.5; 
-    cursor: default;
-}
-
-input[type="search"] {
-    -webkit-appearance: textfield;
-}
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-    padding: 0; 
-    border: 0;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-textarea {
-    padding: 6px;
-}
-
-textarea {
-    overflow: auto;
-    vertical-align: top;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-textarea:focus {
-    outline: 0;
-}
-
-label {
-    display: block;
-    margin-bottom: 6px;
-    color: #858585;
-    font-size: 14px;
-    font-size: 0.875rem;
-    font-weight: 700;
-    line-height: 1.7142857143;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-}
-
-.post-password-form input[type="submit"] {
-    position: absolute;
-    right: 0;
-    bottom: 0; 
-    padding: 0.7917em;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-    padding: 0;
-}
-
-.search-form input[type="submit"],
-.widget .search-form input[type="submit"] {
-    padding: 0;
-}
-
-fieldset {
-    padding: 0;
-    border-width: 0;
-}
-
-.search-form,
-.post-password-form {
-    display: block;
-    position: relative;
-}
-
-.search-form input[type=search],
-.post-password-form input[type="password"] {
-    width: 100%;
-    margin: 0;
-
-    appearance: none;
-}
-
-.search-form button[type=submit],
-.post-password-form input[type="submit"] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0; 
-    padding: 0 20px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    outline: none;
-}
-
-.post-password-form input[type="submit"] {
-    top: auto; 
-    height: 40px;
-}
-
-.search-form button::before {
-    display: inline-block;
-    font-family: FontAwesome;
-    font-size: inherit;
-    font-weight: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; 
-    text-decoration: none;
-    content: "";
-    text-rendering: auto;
-
-    speak: none;
-}
-
-.search-form button[type=submit]::before {
-    font-size: 18px;
-    line-height: 1.625;
-}
-
 /*------------------------------------*    #Layout Wrappers
 \*------------------------------------*/
 .wrapper,
@@ -3957,35 +2567,20 @@ fieldset {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    position: relative;
     max-width: 100%;
     min-height: 0;
     margin: 1em 0; 
     padding: 0;
-    border: none;
     border-radius: 2px;
     background: #fff;
     box-shadow: 0 3px 0 0 #d4d4d5, 0 0 0 1px #d4d4d5;
-    -webkit-transition: box-shadow 0.2s ease;
-    transition: box-shadow 0.2s ease;
-
-    -webkit-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
+    -webkit-transition: 0.35s;
+    transition: 0.35s;
 }
 
-/**
-     * 1. Eliminate whitespace around images.
-     */
 .card__img {
-    /* [1] */
     display: block;
-    position: relative;
-    padding: 0;
     background: rgba(0, 0, 0, 0.05);
-    vertical-align: middle;
     /**
              * No space between the image and the text content.
              */
@@ -4007,7 +2602,7 @@ fieldset {
     width: 100%;
     height: auto;
     border: none; 
-    border-radius: 0.2857rem 0.2857rem 0 0;
+    border-radius: 2px 2px 0 0;
 }
 .card--flush > .card__img {
     margin-bottom: 0;
@@ -4105,24 +2700,6 @@ fieldset {
 
 /*------------------------------------*    $ARTICLES
 \*------------------------------------*/
-.entry-format {
-    position: absolute;
-    right: 0; 
-    bottom: 0;
-    width: 30px;
-    opacity: 0.8;
-}
-@media screen and (min-width: 48em) {
-    .entry-format {
-        right: 50%;
-        bottom: -20px;
-        width: 50px;
-        height: 50px; 
-        margin-right: -25px;
-        opacity: 0.8;
-    }
-}
-
 /**
  * #COMPONENTS
  */
@@ -4194,7 +2771,6 @@ input[type="submit"],
     background-color: #476fba;
     font: inherit;
     text-align: center;
-    vertical-align: middle;
     letter-spacing: 1px;
     cursor: pointer;
     -webkit-transition: 0.35s;
@@ -4391,18 +2967,15 @@ input.is-active[type="submit"],
 }
 
 .c-testimonial__text {
-    font-family: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;
     font-size: 24px;
     font-size: 1.5rem;
     font-style: italic;
     line-height: 1;
-    vertical-align: middle;
 }
 
 .c-testimonial__source {
     display: block;
     color: #858585; 
-    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
     font-size: 12px;
     font-size: 0.75rem;
     font-weight: bold;
@@ -4457,6 +3030,11 @@ input.is-active[type="submit"],
 
 .sub-menu > .menu__item > a {
     padding: 0.5em 1em;
+
+    -webkit-box-flex: 100;
+    -webkit-flex-grow: 100;
+    flex-grow: 100; 
+    -ms-flex-positive: 100;
 }
 
 .menu--horizontal {
@@ -4479,7 +3057,6 @@ input.is-active[type="submit"],
 .menu--horizontal .menu__heading,
 .menu--horizontal .menu-separator {
     zoom: 1;
-    vertical-align: middle;
 }
 @media screen and (min-width: 48em) {
     .menu--horizontal .menu__item,
@@ -4623,7 +3200,20 @@ input.is-active[type="submit"],
  * Dropdowns
  */
 .menu__item .menu__item {
-    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row; 
+
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+}
+.menu__item .menu__item > a {
+    width: auto;
+    text-align: left;
 }
 
 .sub-menu {
@@ -4638,9 +3228,6 @@ input.is-active[type="submit"],
     border-radius: 2px;
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 0 6px 3px 0 rgba(0, 0, 0, 0.23);
 }
-.sub-menu a {
-    width: 100%;
-}
 
 .menu--horizontal .sub-menu {
     top: auto;
@@ -4651,7 +3238,6 @@ input.is-active[type="submit"],
 .menu-item-has-children:hover > .sub-menu,
 .menu-item-has-children.is-active > .sub-menu {
     display: block;
-    position: absolute;
 }
 
 /* Vertical Menus - show the dropdown arrow */
@@ -4666,36 +3252,31 @@ input.is-active[type="submit"],
     content: "\25BE";
 }
 
+a.menu-item__description.info {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1; 
+    -ms-flex-positive: 1;
+}
+
 /*------------------------------------*    #POST NAVIGATION
 \*------------------------------------*/
+.nav-single,
 .nav-links {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
     margin-bottom: 12px; 
-
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
+    text-align: center;
 }
 @media screen and (min-width: 48em) {
+    .nav-single,
     .nav-links {
         margin-bottom: 24px;
     }
 }
 @media screen and (min-width: 64em) {
+    .nav-single,
     .nav-links {
         margin-bottom: 48px;
     }
-}
-
-.pagination .nav-links {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
 }
 
 .dots {
@@ -4726,7 +3307,7 @@ input.is-active[type="submit"],
 
 .next::after {
     padding-left: 5px;
-    vertical-align: bottom;
+    vertical-align: baseline;
 }
 
 .prev::before {
@@ -4745,14 +3326,14 @@ input.is-active[type="submit"],
 
 .prev::before {
     padding-right: 5px;
-    vertical-align: bottom;
+    vertical-align: baseline;
 }
 
 /*------------------------------------*    #META
 \*------------------------------------*/
 .entry__meta {
     margin-bottom: 0;
-    color: #858585;
+    color: #6c6c6c;
     font-size: 15px;
     font-size: 0.9375rem;
     font-weight: normal;
@@ -4767,10 +3348,38 @@ input.is-active[type="submit"],
 
 /*------------------------------------*    #CODE
 \*------------------------------------*/
+code,
+kbd,
+pre,
+samp {
+    font-family: "Courier 10 Pitch", Courier, monospace;
+}
+
+code,
+pre {
+    display: inline-block;
+    overflow: auto; 
+    padding: 0 0.5em;
+    border-radius: 2px;
+    color: rgba(0, 0, 0, 0.9);
+    background-color: #c6d1d6;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+kbd {
+    margin: 0 0.25em;
+    padding: 0.3334em 0.5em;
+    border: 1px solid #c6d1d6;
+    border-radius: 2px;
+    color: rgba(0, 0, 0, 0.9);
+    background-color: #f3f5f6;
+    box-shadow: inset 0 1px 0 #fff;
+}
+
 .form-allowed-tags code,
 pre {
     overflow: auto;
-    position: relative;
     max-width: 100%;
     margin-bottom: 24px;
     padding: 5px 12px;
@@ -4782,77 +3391,68 @@ pre {
     tab-size: 4;
 }
 
-code {
-    display: inline-block;
-    padding: 0 2px;
-    border-radius: 2px;
-    color: rgba(255, 255, 255, 0.9);
-    background-color: #525252;
-    font-weight: normal; 
-    -moz-tab-size: 4;
-    tab-size: 4;
-}
-
-kbd {
-    margin: 0 0.25em;
-    padding: 0.3334em 0.5em;
-    border: 1px solid #c6d1d6;
-    border-radius: 2px;
-    color: #171d20;
-    background-color: #f3f5f6;
-    box-shadow: inset 0 1px 0 #fff;
-}
-
 .form-allowed-button {
-    color: #858585;
+    color: #6c6c6c;
     cursor: default;
 }
 
 /*------------------------------------*    #BREADCRUMBS
 \*------------------------------------*/
 .breadcrumbs {
-    overflow: hidden;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 12px; 
-    color: #393939;
-    font-size: 15px;
-    font-size: 0.9375rem;
-    line-height: 1.6;
-    list-style: none;
-    cursor: default;
-}
-@media screen and (min-width: 48em) {
-    .breadcrumbs {
-        margin-top: 24px;
-    }
-}
-@media screen and (min-width: 64em) {
-    .breadcrumbs {
-        margin-top: 0;
-        padding: 24px;
-        color: rgba(255, 255, 255, 0.9);
-    }
-}
-.breadcrumbs .trail-end {
-    font-size: 36px;
-    font-size: 2.25rem;
-    line-height: 1.3;
+    display: inline-block;
+    margin-bottom: 1.5em;
+    text-align: center;
 }
 .breadcrumbs a {
-    opacity: 0.8;
-    color: currentColor;
-    font-weight: inherit;
+    display: inline-block;
+    position: relative;
+    margin-right: -5px;
+    margin-bottom: 2px;
+    padding: 0 0.5625em 0 1.125em;
+    border: 1px solid gainsboro;
+    border-left: 0;
+    color: #999;
+    background-color: white;
+    font-size: 0.8em;
+    line-height: 2.25em;
     text-decoration: none;
-    -webkit-transition: opacity 0.2s ease;
-    transition: opacity 0.2s ease;
+}
+.breadcrumbs a:before,
+.breadcrumbs a:after {
+    display: block;
+    position: absolute;
+    z-index: 2; 
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: 100%;
+    margin: auto;
+    border-top: 1.125em solid transparent;
+    border-bottom: 1.125em solid transparent;
+    border-left: 0.5625em solid transparent;
+    content: "";
+}
+.breadcrumbs a:before {
+    z-index: 1; 
+    margin-left: 1px;
+    border-left-color: gainsboro;
+}
+.breadcrumbs a:after {
+    border-left-color: white;
 }
 .breadcrumbs a:hover {
     opacity: 1;
+    text-decoration: underline;
 }
-.breadcrumbs .sep {
-    padding: 0 5px;
-    font-family: FontAwesome;
+
+span.sep {
+    display: none;
+}
+
+.trail-end {
+    display: block; 
+    font-size: 36px;
+    font-size: 2.25rem;
 }
 
 /*------------------------------------*    #WIDGETS
@@ -4861,15 +3461,9 @@ kbd {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;
-    flex-direction: column; 
+    display: flex; 
     width: 100%;
     min-width: 300px;
-
-    -webkit-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
 }
 @media screen and (min-width: 48em) {
     .widget {
@@ -4896,10 +3490,10 @@ kbd {
 
 .widget.widget_search {
     padding: 0;
+    background: none;
 }
 
 li.menu-item--has-description {
-    position: relative;
     margin-bottom: 0; 
     border-top: 1px solid #eaeaea;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -4912,7 +3506,6 @@ li.menu-item--has-description {
 .menu-item--has-description a {
     display: block;
     display: inline-block;
-    position: relative;
     width: 90%;
     text-align: left; 
     text-decoration: none;
@@ -4930,12 +3523,10 @@ a.info {
 /* this is so you can use CSS animations when toggling results */
 /* SearchWP LiveSearch */
 .searchwp-live-search-results {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
     width: 315px;
     min-height: 175px;
     max-height: 300px; 
-    border-radius: 3px;
+    border-radius: 2px;
     background: #fff;
     box-shadow: 0 0 2px 0 rgba(30, 30, 30, 0.4);
 }
@@ -4980,12 +3571,11 @@ a.info {
     display: table-cell;
     padding: 12px;
     border-radius: 2px;
-    color: #393939;
+    color: #1f1f1f;
     background: #fff;
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 0 6px 3px 0 rgba(0, 0, 0, 0.23); 
     font-size: 14px;
     text-align: left;
-    vertical-align: middle;
     content: attr(data-tip-content);
 }
 [data-tip]:after {
@@ -5102,7 +3692,7 @@ a.info {
 
 .gform_wrapper li.gfield .gfield_description {
     padding: 0; 
-    color: #858585;
+    color: #6c6c6c;
 }
 
 /**
@@ -5230,8 +3820,7 @@ a.info {
 }
 
 .t-bg__white,
-.menu-item-has-children:hover > .sub-menu,
-.menu-item-has-children.is-active > .sub-menu {
+.sub-menu {
     color: rgba(0, 0, 0, 0.9); 
     background-color: #fff;
 }
@@ -5378,16 +3967,6 @@ a.info {
 
 /*------------------------------------*    #HEADINGS
 \*------------------------------------*/
-/**
- * Headings 1–6’s corresponding Greek-alphabet abstract classes for double-
- * stranded heading hierarchy: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
- *
- * Use these helper classes to cause other elements to adopt the styling of the
- * respective heading, e.g.:
- *
-   <h2 class="alpha">Lorem ipsum</h2>
- *
- */
 .h1,
 .site-title {
     font-size: 30px;
@@ -5590,4 +4169,431 @@ a.info {
 .widget ul:last-of-type,
 p:last-of-type {
     margin-bottom: 0;
+}
+
+.credit {
+    text-align: center;
+}
+
+.entry-content a:not(.button) {
+    border-bottom: 1px solid transparent;
+    color: #385996;
+    -webkit-transition: 0.35s;
+    transition: 0.35s;
+}
+.entry-content a:not(.button):hover,
+.entry-content a:not(.button):focus {
+    border-bottom-color: #91a9d6;
+    opacity: 1;
+    color: #6c8cc8;
+    -webkit-transition: 0.35s;
+    transition: 0.35s;
+}
+.entry-content a:not(.button):active {
+    color: #476fba;
+    -webkit-transition: 0.35s;
+    transition: 0.35s;
+}
+
+.u-m {
+    margin: 24px;
+}
+
+.u-mt {
+    margin-top: 24px;
+}
+
+.u-mr {
+    margin-right: 24px;
+}
+
+.u-mb {
+    margin-bottom: 24px;
+}
+
+.u-ml {
+    margin-left: 24px;
+}
+
+.u-mh {
+    margin-right: 24px;
+    margin-left: 24px;
+}
+
+.u-mv {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+/**
+     * Add tiny margins.
+     */
+.u-m-- {
+    margin: 6px;
+}
+
+.u-mt-- {
+    margin-top: 6px;
+}
+
+.u-mr-- {
+    margin-right: 6px;
+}
+
+.u-mb-- {
+    margin-bottom: 6px;
+}
+
+.u-ml-- {
+    margin-left: 6px;
+}
+
+.u-mh-- {
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
+.u-mv-- {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+/**
+     * Add small margins.
+     */
+.u-m- {
+    margin: 12px;
+}
+
+.u-mt- {
+    margin-top: 12px;
+}
+
+.u-mr- {
+    margin-right: 12px;
+}
+
+.u-mb- {
+    margin-bottom: 12px;
+}
+
+.u-ml- {
+    margin-left: 12px;
+}
+
+.u-mh- {
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+.u-mv- {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+/**
+     * Add large margins.
+     */
+.u-m\+ {
+    margin: 48px;
+}
+
+.u-mt\+ {
+    margin-top: 48px;
+}
+
+.u-mr\+ {
+    margin-right: 48px;
+}
+
+.u-mb\+ {
+    margin-bottom: 48px;
+}
+
+.u-ml\+ {
+    margin-left: 48px;
+}
+
+.u-mh\+ {
+    margin-right: 48px;
+    margin-left: 48px;
+}
+
+.u-mv\+ {
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+/**
+     * Add huge margins.
+     */
+.u-m\+\+ {
+    margin: 96px;
+}
+
+.u-mt\+\+ {
+    margin-top: 96px;
+}
+
+.u-mr\+\+ {
+    margin-right: 96px;
+}
+
+.u-mb\+\+ {
+    margin-bottom: 96px;
+}
+
+.u-ml\+\+ {
+    margin-left: 96px;
+}
+
+.u-mh\+\+ {
+    margin-right: 96px;
+    margin-left: 96px;
+}
+
+.u-mv\+\+ {
+    margin-top: 96px;
+    margin-bottom: 96px;
+}
+
+/**
+     * Remove margins.
+     */
+.u-m0 {
+    margin: 0;
+}
+
+.u-mt0 {
+    margin-top: 0;
+}
+
+.u-mr0 {
+    margin-right: 0;
+}
+
+.u-mb0 {
+    margin-bottom: 0;
+}
+
+.u-ml0 {
+    margin-left: 0;
+}
+
+.u-mh0 {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.u-mv0 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/**
+     * Padding helper classes.
+     *
+     * Add paddings.
+     */
+.u-p {
+    padding: 24px;
+}
+
+.u-pt {
+    padding-top: 24px;
+}
+
+.u-pr {
+    padding-right: 24px;
+}
+
+.u-pb {
+    padding-bottom: 24px;
+}
+
+.u-pl {
+    padding-left: 24px;
+}
+
+.u-ph {
+    padding-right: 24px;
+    padding-left: 24px;
+}
+
+.u-pv {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+/**
+     * Add tiny paddings.
+     */
+.u-p-- {
+    padding: 6px;
+}
+
+.u-pt-- {
+    padding-top: 6px;
+}
+
+.u-pr-- {
+    padding-right: 6px;
+}
+
+.u-pb-- {
+    padding-bottom: 6px;
+}
+
+.u-pl-- {
+    padding-left: 6px;
+}
+
+.u-ph-- {
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+.u-pv-- {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+/**
+     * Add small paddings.
+     */
+.u-p-,
+.u-p\@all,
+.u-p\@all {
+    padding: 12px;
+}
+
+.u-pt-,
+.u-pt-wrap,
+.u-pt-wrap {
+    padding-top: 12px;
+}
+
+.u-pr- {
+    padding-right: 12px;
+}
+
+.u-pb- {
+    padding-bottom: 12px;
+}
+
+.u-pl- {
+    padding-left: 12px;
+}
+
+.u-ph-,
+.u-ph\@all,
+.u-ph\@all {
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+.u-pv-,
+.u-pv\@all,
+.u-pv\@all {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/**
+     * Add large paddings.
+     */
+.u-p\+ {
+    padding: 48px;
+}
+
+.u-pt\+ {
+    padding-top: 48px;
+}
+
+.u-pr\+ {
+    padding-right: 48px;
+}
+
+.u-pb\+ {
+    padding-bottom: 48px;
+}
+
+.u-pl\+ {
+    padding-left: 48px;
+}
+
+.u-ph\+ {
+    padding-right: 48px;
+    padding-left: 48px;
+}
+
+.u-pv\+ {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+/**
+     * Add huge paddings.
+     */
+.u-p\+\+ {
+    padding: 96px;
+}
+
+.u-pt\+\+ {
+    padding-top: 96px;
+}
+
+.u-pr\+\+ {
+    padding-right: 96px;
+}
+
+.u-pb\+\+ {
+    padding-bottom: 96px;
+}
+
+.u-pl\+\+ {
+    padding-left: 96px;
+}
+
+.u-ph\+\+ {
+    padding-right: 96px;
+    padding-left: 96px;
+}
+
+.u-pv\+\+ {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+/**
+     * Remove paddings.
+     */
+.u-p0 {
+    padding: 0;
+}
+
+.u-pt0 {
+    padding-top: 0;
+}
+
+.u-pr0 {
+    padding-right: 0;
+}
+
+.u-pb0 {
+    padding-bottom: 0;
+}
+
+.u-pl0 {
+    padding-left: 0;
+}
+
+.u-ph0 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.u-pv0 {
+    padding-top: 0;
+    padding-bottom: 0;
 }
