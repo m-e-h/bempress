@@ -73,11 +73,9 @@ Tags:
 /**
  * #TOOLS
  */
-/*------------------------------------*\
-    #SPACING-RESPONSIVE
+/*------------------------------------*    #SPACING-RESPONSIVE
 \*------------------------------------*/
-/*------------------------------------*\
-    #SPACING
+/*------------------------------------*    #SPACING
 \*------------------------------------*/
 /**
  * Margin and padding helper classes. Use these to tweak layout on a micro
@@ -489,8 +487,7 @@ Tags:
     padding-bottom: 0;
 }
 
-/*------------------------------------*\
-    #SPACING-RESPONSIVE
+/*------------------------------------*    #SPACING-RESPONSIVE
 \*------------------------------------*/
 /**
  * Margin and padding helper classes. Use these to tweak layout on a micro
@@ -504,104 +501,104 @@ Tags:
      * Add margins.
      */
 @media screen and (max-width: 35.5em) {
-    .u-m\@sm {
+    .u-m\@ {
         margin: 24px;
     }
-    .u-mt\@sm {
+    .u-mt\@ {
         margin-top: 24px;
     }
-    .u-mr\@sm {
+    .u-mr\@ {
         margin-right: 24px;
     }
-    .u-mb\@sm {
+    .u-mb\@ {
         margin-bottom: 24px;
     }
-    .u-ml\@sm {
+    .u-ml\@ {
         margin-left: 24px;
     }
-    .u-mh\@sm {
+    .u-mh\@ {
         margin-right: 24px;
         margin-left: 24px;
     }
-    .u-mv\@sm {
+    .u-mv\@ {
         margin-top: 24px;
         margin-bottom: 24px;
     }
 }
 
 @media screen and (min-width: 48em) {
-    .u-m\@md {
+    .u-m\@ {
         margin: 24px;
     }
-    .u-mt\@md {
+    .u-mt\@ {
         margin-top: 24px;
     }
-    .u-mr\@md {
+    .u-mr\@ {
         margin-right: 24px;
     }
-    .u-mb\@md {
+    .u-mb\@ {
         margin-bottom: 24px;
     }
-    .u-ml\@md {
+    .u-ml\@ {
         margin-left: 24px;
     }
-    .u-mh\@md {
+    .u-mh\@ {
         margin-right: 24px;
         margin-left: 24px;
     }
-    .u-mv\@md {
+    .u-mv\@ {
         margin-top: 24px;
         margin-bottom: 24px;
     }
 }
 
 @media screen and (min-width: 64em) {
-    .u-m\@lg {
+    .u-m\@ {
         margin: 24px;
     }
-    .u-mt\@lg {
+    .u-mt\@ {
         margin-top: 24px;
     }
-    .u-mr\@lg {
+    .u-mr\@ {
         margin-right: 24px;
     }
-    .u-mb\@lg {
+    .u-mb\@ {
         margin-bottom: 24px;
     }
-    .u-ml\@lg {
+    .u-ml\@ {
         margin-left: 24px;
     }
-    .u-mh\@lg {
+    .u-mh\@ {
         margin-right: 24px;
         margin-left: 24px;
     }
-    .u-mv\@lg {
+    .u-mv\@ {
         margin-top: 24px;
         margin-bottom: 24px;
     }
 }
 
 @media screen and (min-width: 80em) {
-    .u-m\@xl {
+    .u-m\@ {
         margin: 24px;
     }
-    .u-mt\@xl {
+    .u-mt\@ {
         margin-top: 24px;
     }
-    .u-mr\@xl {
+    .u-mr\@ {
         margin-right: 24px;
     }
-    .u-mb\@xl {
+    .u-mb\@ {
         margin-bottom: 24px;
     }
-    .u-ml\@xl {
+    .u-ml\@ {
         margin-left: 24px;
     }
-    .u-mh\@xl {
+    .u-mh\@ {
         margin-right: 24px;
         margin-left: 24px;
     }
-    .u-mv\@xl {
+    .u-mv\@ {
         margin-top: 24px;
         margin-bottom: 24px;
     }
@@ -611,104 +608,104 @@ Tags:
      * Add tiny margins.
      */
 @media screen and (max-width: 35.5em) {
-    .u-m--\@sm {
+    .u-m--\@ {
         margin: 6px;
     }
-    .u-mt--\@sm {
+    .u-mt--\@ {
         margin-top: 6px;
     }
-    .u-mr--\@sm {
+    .u-mr--\@ {
         margin-right: 6px;
     }
-    .u-mb--\@sm {
+    .u-mb--\@ {
         margin-bottom: 6px;
     }
-    .u-ml--\@sm {
+    .u-ml--\@ {
         margin-left: 6px;
     }
-    .u-mh--\@sm {
+    .u-mh--\@ {
         margin-right: 6px;
         margin-left: 6px;
     }
-    .u-mv--\@sm {
+    .u-mv--\@ {
         margin-top: 6px;
         margin-bottom: 6px;
     }
 }
 
 @media screen and (min-width: 48em) {
-    .u-m--\@md {
+    .u-m--\@ {
         margin: 6px;
     }
-    .u-mt--\@md {
+    .u-mt--\@ {
         margin-top: 6px;
     }
-    .u-mr--\@md {
+    .u-mr--\@ {
         margin-right: 6px;
     }
-    .u-mb--\@md {
+    .u-mb--\@ {
         margin-bottom: 6px;
     }
-    .u-ml--\@md {
+    .u-ml--\@ {
         margin-left: 6px;
     }
-    .u-mh--\@md {
+    .u-mh--\@ {
         margin-right: 6px;
         margin-left: 6px;
     }
-    .u-mv--\@md {
+    .u-mv--\@ {
         margin-top: 6px;
         margin-bottom: 6px;
     }
 }
 
 @media screen and (min-width: 64em) {
-    .u-m--\@lg {
+    .u-m--\@ {
         margin: 6px;
     }
-    .u-mt--\@lg {
+    .u-mt--\@ {
         margin-top: 6px;
     }
-    .u-mr--\@lg {
+    .u-mr--\@ {
         margin-right: 6px;
     }
-    .u-mb--\@lg {
+    .u-mb--\@ {
         margin-bottom: 6px;
     }
-    .u-ml--\@lg {
+    .u-ml--\@ {
         margin-left: 6px;
     }
-    .u-mh--\@lg {
+    .u-mh--\@ {
         margin-right: 6px;
         margin-left: 6px;
     }
-    .u-mv--\@lg {
+    .u-mv--\@ {
         margin-top: 6px;
         margin-bottom: 6px;
     }
 }
 
 @media screen and (min-width: 80em) {
-    .u-m--\@xl {
+    .u-m--\@ {
         margin: 6px;
     }
-    .u-mt--\@xl {
+    .u-mt--\@ {
         margin-top: 6px;
     }
-    .u-mr--\@xl {
+    .u-mr--\@ {
         margin-right: 6px;
     }
-    .u-mb--\@xl {
+    .u-mb--\@ {
         margin-bottom: 6px;
     }
-    .u-ml--\@xl {
+    .u-ml--\@ {
         margin-left: 6px;
     }
-    .u-mh--\@xl {
+    .u-mh--\@ {
         margin-right: 6px;
         margin-left: 6px;
     }
-    .u-mv--\@xl {
+    .u-mv--\@ {
         margin-top: 6px;
         margin-bottom: 6px;
     }
@@ -718,104 +715,104 @@ Tags:
      * Add small margins.
      */
 @media screen and (max-width: 35.5em) {
-    .u-m-\@sm {
+    .u-m-\@ {
         margin: 12px;
     }
-    .u-mt-\@sm {
+    .u-mt-\@ {
         margin-top: 12px;
     }
-    .u-mr-\@sm {
+    .u-mr-\@ {
         margin-right: 12px;
     }
-    .u-mb-\@sm {
+    .u-mb-\@ {
         margin-bottom: 12px;
     }
-    .u-ml-\@sm {
+    .u-ml-\@ {
         margin-left: 12px;
     }
-    .u-mh-\@sm {
+    .u-mh-\@ {
         margin-right: 12px;
         margin-left: 12px;
     }
-    .u-mv-\@sm {
+    .u-mv-\@ {
         margin-top: 12px;
         margin-bottom: 12px;
     }
 }
 
 @media screen and (min-width: 48em) {
-    .u-m-\@md {
+    .u-m-\@ {
         margin: 12px;
     }
-    .u-mt-\@md {
+    .u-mt-\@ {
         margin-top: 12px;
     }
-    .u-mr-\@md {
+    .u-mr-\@ {
         margin-right: 12px;
     }
-    .u-mb-\@md {
+    .u-mb-\@ {
         margin-bottom: 12px;
     }
-    .u-ml-\@md {
+    .u-ml-\@ {
         margin-left: 12px;
     }
-    .u-mh-\@md {
+    .u-mh-\@ {
         margin-right: 12px;
         margin-left: 12px;
     }
-    .u-mv-\@md {
+    .u-mv-\@ {
         margin-top: 12px;
         margin-bottom: 12px;
     }
 }
 
 @media screen and (min-width: 64em) {
-    .u-m-\@lg {
+    .u-m-\@ {
         margin: 12px;
     }
-    .u-mt-\@lg {
+    .u-mt-\@ {
         margin-top: 12px;
     }
-    .u-mr-\@lg {
+    .u-mr-\@ {
         margin-right: 12px;
     }
-    .u-mb-\@lg {
+    .u-mb-\@ {
         margin-bottom: 12px;
     }
-    .u-ml-\@lg {
+    .u-ml-\@ {
         margin-left: 12px;
     }
-    .u-mh-\@lg {
+    .u-mh-\@ {
         margin-right: 12px;
         margin-left: 12px;
     }
-    .u-mv-\@lg {
+    .u-mv-\@ {
         margin-top: 12px;
         margin-bottom: 12px;
     }
 }
 
 @media screen and (min-width: 80em) {
-    .u-m-\@xl {
+    .u-m-\@ {
         margin: 12px;
     }
-    .u-mt-\@xl {
+    .u-mt-\@ {
         margin-top: 12px;
     }
-    .u-mr-\@xl {
+    .u-mr-\@ {
         margin-right: 12px;
     }
-    .u-mb-\@xl {
+    .u-mb-\@ {
         margin-bottom: 12px;
     }
-    .u-ml-\@xl {
+    .u-ml-\@ {
         margin-left: 12px;
     }
-    .u-mh-\@xl {
+    .u-mh-\@ {
         margin-right: 12px;
         margin-left: 12px;
     }
-    .u-mv-\@xl {
+    .u-mv-\@ {
         margin-top: 12px;
         margin-bottom: 12px;
     }
@@ -825,104 +822,104 @@ Tags:
      * Add large margins.
      */
 @media screen and (max-width: 35.5em) {
-    .u-m\+\@sm {
+    .u-m\+\@ {
         margin: 48px;
     }
-    .u-mt\+\@sm {
+    .u-mt\+\@ {
         margin-top: 48px;
     }
-    .u-mr\+\@sm {
+    .u-mr\+\@ {
         margin-right: 48px;
     }
-    .u-mb\+\@sm {
+    .u-mb\+\@ {
         margin-bottom: 48px;
     }
-    .u-ml\+\@sm {
+    .u-ml\+\@ {
         margin-left: 48px;
     }
-    .u-mh\+\@sm {
+    .u-mh\+\@ {
         margin-right: 48px;
         margin-left: 48px;
     }
-    .u-mv\+\@sm {
+    .u-mv\+\@ {
         margin-top: 48px;
         margin-bottom: 48px;
     }
 }
 
 @media screen and (min-width: 48em) {
-    .u-m\+\@md {
+    .u-m\+\@ {
         margin: 48px;
     }
-    .u-mt\+\@md {
+    .u-mt\+\@ {
         margin-top: 48px;
     }
-    .u-mr\+\@md {
+    .u-mr\+\@ {
         margin-right: 48px;
     }
-    .u-mb\+\@md {
+    .u-mb\+\@ {
         margin-bottom: 48px;
     }
-    .u-ml\+\@md {
+    .u-ml\+\@ {
         margin-left: 48px;
     }
-    .u-mh\+\@md {
+    .u-mh\+\@ {
         margin-right: 48px;
         margin-left: 48px;
     }
-    .u-mv\+\@md {
+    .u-mv\+\@ {
         margin-top: 48px;
         margin-bottom: 48px;
     }
 }
 
 @media screen and (min-width: 64em) {
-    .u-m\+\@lg {
+    .u-m\+\@ {
         margin: 48px;
     }
-    .u-mt\+\@lg {
+    .u-mt\+\@ {
         margin-top: 48px;
     }
-    .u-mr\+\@lg {
+    .u-mr\+\@ {
         margin-right: 48px;
     }
-    .u-mb\+\@lg {
+    .u-mb\+\@ {
         margin-bottom: 48px;
     }
-    .u-ml\+\@lg {
+    .u-ml\+\@ {
         margin-left: 48px;
     }
-    .u-mh\+\@lg {
+    .u-mh\+\@ {
         margin-right: 48px;
         margin-left: 48px;
     }
-    .u-mv\+\@lg {
+    .u-mv\+\@ {
         margin-top: 48px;
         margin-bottom: 48px;
     }
 }
 
 @media screen and (min-width: 80em) {
-    .u-m\+\@xl {
+    .u-m\+\@ {
         margin: 48px;
     }
-    .u-mt\+\@xl {
+    .u-mt\+\@ {
         margin-top: 48px;
     }
-    .u-mr\+\@xl {
+    .u-mr\+\@ {
         margin-right: 48px;
     }
-    .u-mb\+\@xl {
+    .u-mb\+\@ {
         margin-bottom: 48px;
     }
-    .u-ml\+\@xl {
+    .u-ml\+\@ {
         margin-left: 48px;
     }
-    .u-mh\+\@xl {
+    .u-mh\+\@ {
         margin-right: 48px;
         margin-left: 48px;
     }
-    .u-mv\+\@xl {
+    .u-mv\+\@ {
         margin-top: 48px;
         margin-bottom: 48px;
     }
@@ -932,104 +929,104 @@ Tags:
      * Add huge margins.
      */
 @media screen and (max-width: 35.5em) {
-    .u-m\+\+\@sm {
+    .u-m\+\+\@ {
         margin: 96px;
     }
-    .u-mt\+\+\@sm {
+    .u-mt\+\+\@ {
         margin-top: 96px;
     }
-    .u-mr\+\+\@sm {
+    .u-mr\+\+\@ {
         margin-right: 96px;
     }
-    .u-mb\+\+\@sm {
+    .u-mb\+\+\@ {
         margin-bottom: 96px;
     }
-    .u-ml\+\+\@sm {
+    .u-ml\+\+\@ {
         margin-left: 96px;
     }
-    .u-mh\+\+\@sm {
+    .u-mh\+\+\@ {
         margin-right: 96px;
         margin-left: 96px;
     }
-    .u-mv\+\+\@sm {
+    .u-mv\+\+\@ {
         margin-top: 96px;
         margin-bottom: 96px;
     }
 }
 
 @media screen and (min-width: 48em) {
-    .u-m\+\+\@md {
+    .u-m\+\+\@ {
         margin: 96px;
     }
-    .u-mt\+\+\@md {
+    .u-mt\+\+\@ {
         margin-top: 96px;
     }
-    .u-mr\+\+\@md {
+    .u-mr\+\+\@ {
         margin-right: 96px;
     }
-    .u-mb\+\+\@md {
+    .u-mb\+\+\@ {
         margin-bottom: 96px;
     }
-    .u-ml\+\+\@md {
+    .u-ml\+\+\@ {
         margin-left: 96px;
     }
-    .u-mh\+\+\@md {
+    .u-mh\+\+\@ {
         margin-right: 96px;
         margin-left: 96px;
     }
-    .u-mv\+\+\@md {
+    .u-mv\+\+\@ {
         margin-top: 96px;
         margin-bottom: 96px;
     }
 }
 
 @media screen and (min-width: 64em) {
-    .u-m\+\+\@lg {
+    .u-m\+\+\@ {
         margin: 96px;
     }
-    .u-mt\+\+\@lg {
+    .u-mt\+\+\@ {
         margin-top: 96px;
     }
-    .u-mr\+\+\@lg {
+    .u-mr\+\+\@ {
         margin-right: 96px;
     }
-    .u-mb\+\+\@lg {
+    .u-mb\+\+\@ {
         margin-bottom: 96px;
     }
-    .u-ml\+\+\@lg {
+    .u-ml\+\+\@ {
         margin-left: 96px;
     }
-    .u-mh\+\+\@lg {
+    .u-mh\+\+\@ {
         margin-right: 96px;
         margin-left: 96px;
     }
-    .u-mv\+\+\@lg {
+    .u-mv\+\+\@ {
         margin-top: 96px;
         margin-bottom: 96px;
     }
 }
 
 @media screen and (min-width: 80em) {
-    .u-m\+\+\@xl {
+    .u-m\+\+\@ {
         margin: 96px;
     }
-    .u-mt\+\+\@xl {
+    .u-mt\+\+\@ {
         margin-top: 96px;
     }
-    .u-mr\+\+\@xl {
+    .u-mr\+\+\@ {
         margin-right: 96px;
     }
-    .u-mb\+\+\@xl {
+    .u-mb\+\+\@ {
         margin-bottom: 96px;
     }
-    .u-ml\+\+\@xl {
+    .u-ml\+\+\@ {
         margin-left: 96px;
     }
-    .u-mh\+\+\@xl {
+    .u-mh\+\+\@ {
         margin-right: 96px;
         margin-left: 96px;
     }
-    .u-mv\+\+\@xl {
+    .u-mv\+\+\@ {
         margin-top: 96px;
         margin-bottom: 96px;
     }
@@ -1039,104 +1036,104 @@ Tags:
      * Remove margins.
      */
 @media screen and (max-width: 35.5em) {
-    .u-m0\@sm {
+    .u-m0\@ {
         margin: 0;
     }
-    .u-mt0\@sm {
+    .u-mt0\@ {
         margin-top: 0;
     }
-    .u-mr0\@sm {
+    .u-mr0\@ {
         margin-right: 0;
     }
-    .u-mb0\@sm {
+    .u-mb0\@ {
         margin-bottom: 0;
     }
-    .u-ml0\@sm {
+    .u-ml0\@ {
         margin-left: 0;
     }
-    .u-mh0\@sm {
+    .u-mh0\@ {
         margin-right: 0;
         margin-left: 0;
     }
-    .u-mv0\@sm {
+    .u-mv0\@ {
         margin-top: 0;
         margin-bottom: 0;
     }
 }
 
 @media screen and (min-width: 48em) {
-    .u-m0\@md {
+    .u-m0\@ {
         margin: 0;
     }
-    .u-mt0\@md {
+    .u-mt0\@ {
         margin-top: 0;
     }
-    .u-mr0\@md {
+    .u-mr0\@ {
         margin-right: 0;
     }
-    .u-mb0\@md {
+    .u-mb0\@ {
         margin-bottom: 0;
     }
-    .u-ml0\@md {
+    .u-ml0\@ {
         margin-left: 0;
     }
-    .u-mh0\@md {
+    .u-mh0\@ {
         margin-right: 0;
         margin-left: 0;
     }
-    .u-mv0\@md {
+    .u-mv0\@ {
         margin-top: 0;
         margin-bottom: 0;
     }
 }
 
 @media screen and (min-width: 64em) {
-    .u-m0\@lg {
+    .u-m0\@ {
         margin: 0;
     }
-    .u-mt0\@lg {
+    .u-mt0\@ {
         margin-top: 0;
     }
-    .u-mr0\@lg {
+    .u-mr0\@ {
         margin-right: 0;
     }
-    .u-mb0\@lg {
+    .u-mb0\@ {
         margin-bottom: 0;
     }
-    .u-ml0\@lg {
+    .u-ml0\@ {
         margin-left: 0;
     }
-    .u-mh0\@lg {
+    .u-mh0\@ {
         margin-right: 0;
         margin-left: 0;
     }
-    .u-mv0\@lg {
+    .u-mv0\@ {
         margin-top: 0;
         margin-bottom: 0;
     }
 }
 
 @media screen and (min-width: 80em) {
-    .u-m0\@xl {
+    .u-m0\@ {
         margin: 0;
     }
-    .u-mt0\@xl {
+    .u-mt0\@ {
         margin-top: 0;
     }
-    .u-mr0\@xl {
+    .u-mr0\@ {
         margin-right: 0;
     }
-    .u-mb0\@xl {
+    .u-mb0\@ {
         margin-bottom: 0;
     }
-    .u-ml0\@xl {
+    .u-ml0\@ {
         margin-left: 0;
     }
-    .u-mh0\@xl {
+    .u-mh0\@ {
         margin-right: 0;
         margin-left: 0;
     }
-    .u-mv0\@xl {
+    .u-mv0\@ {
         margin-top: 0;
         margin-bottom: 0;
     }
@@ -1148,108 +1145,104 @@ Tags:
      * Add paddings.
      */
 @media screen and (max-width: 35.5em) {
-    .u-p\@sm {
+    .u-p\@ {
         padding: 24px;
     }
-    .u-pt\@sm {
+    .u-pt\@ {
         padding-top: 24px;
     }
-    .u-pr\@sm {
+    .u-pr\@ {
         padding-right: 24px;
     }
-    .u-pb\@sm {
+    .u-pb\@ {
         padding-bottom: 24px;
     }
-    .u-pl\@sm {
+    .u-pl\@ {
         padding-left: 24px;
     }
-    .u-ph\@sm {
+    .u-ph\@ {
         padding-right: 24px;
         padding-left: 24px;
     }
-    .u-pv\@sm {
+    .u-pv\@ {
         padding-top: 24px;
         padding-bottom: 24px;
     }
 }
 
 @media screen and (min-width: 48em) {
-    .u-p\@md,
-    .u-p\@all {
+    .u-p\@ {
         padding: 24px;
     }
-    .u-pt\@md,
-    .u-pt-wrap {
+    .u-pt\@ {
         padding-top: 24px;
     }
-    .u-pr\@md {
+    .u-pr\@ {
         padding-right: 24px;
     }
-    .u-pb\@md {
+    .u-pb\@ {
         padding-bottom: 24px;
     }
-    .u-pl\@md {
+    .u-pl\@ {
         padding-left: 24px;
     }
-    .u-ph\@md,
-    .u-ph\@all {
+    .u-ph\@ {
         padding-right: 24px;
         padding-left: 24px;
     }
-    .u-pv\@md,
-    .u-pv\@all {
+    .u-pv\@ {
         padding-top: 24px;
         padding-bottom: 24px;
     }
 }
 
 @media screen and (min-width: 64em) {
-    .u-p\@lg {
+    .u-p\@ {
         padding: 24px;
     }
-    .u-pt\@lg {
+    .u-pt\@ {
         padding-top: 24px;
     }
-    .u-pr\@lg {
+    .u-pr\@ {
         padding-right: 24px;
     }
-    .u-pb\@lg {
+    .u-pb\@ {
         padding-bottom: 24px;
     }
-    .u-pl\@lg {
+    .u-pl\@ {
         padding-left: 24px;
     }
-    .u-ph\@lg {
+    .u-ph\@ {
         padding-right: 24px;
         padding-left: 24px;
     }
-    .u-pv\@lg {
+    .u-pv\@ {
         padding-top: 24px;
         padding-bottom: 24px;
     }
 }
 
 @media screen and (min-width: 80em) {
-    .u-p\@xl {
+    .u-p\@ {
         padding: 24px;
     }
-    .u-pt\@xl {
+    .u-pt\@ {
         padding-top: 24px;
     }
-    .u-pr\@xl {
+    .u-pr\@ {
         padding-right: 24px;
     }
-    .u-pb\@xl {
+    .u-pb\@ {
         padding-bottom: 24px;
     }
-    .u-pl\@xl {
+    .u-pl\@ {
         padding-left: 24px;
     }
-    .u-ph\@xl {
+    .u-ph\@ {
         padding-right: 24px;
         padding-left: 24px;
     }
-    .u-pv\@xl {
+    .u-pv\@ {
         padding-top: 24px;
         padding-bottom: 24px;
     }
@@ -1259,104 +1252,104 @@ Tags:
      * Add tiny paddings.
      */
 @media screen and (max-width: 35.5em) {
-    .u-p--\@sm {
+    .u-p--\@ {
         padding: 6px;
     }
-    .u-pt--\@sm {
+    .u-pt--\@ {
         padding-top: 6px;
     }
-    .u-pr--\@sm {
+    .u-pr--\@ {
         padding-right: 6px;
     }
-    .u-pb--\@sm {
+    .u-pb--\@ {
         padding-bottom: 6px;
     }
-    .u-pl--\@sm {
+    .u-pl--\@ {
         padding-left: 6px;
     }
-    .u-ph--\@sm {
+    .u-ph--\@ {
         padding-right: 6px;
         padding-left: 6px;
     }
-    .u-pv--\@sm {
+    .u-pv--\@ {
         padding-top: 6px;
         padding-bottom: 6px;
     }
 }
 
 @media screen and (min-width: 48em) {
-    .u-p--\@md {
+    .u-p--\@ {
         padding: 6px;
     }
-    .u-pt--\@md {
+    .u-pt--\@ {
         padding-top: 6px;
     }
-    .u-pr--\@md {
+    .u-pr--\@ {
         padding-right: 6px;
     }
-    .u-pb--\@md {
+    .u-pb--\@ {
         padding-bottom: 6px;
     }
-    .u-pl--\@md {
+    .u-pl--\@ {
         padding-left: 6px;
     }
-    .u-ph--\@md {
+    .u-ph--\@ {
         padding-right: 6px;
         padding-left: 6px;
     }
-    .u-pv--\@md {
+    .u-pv--\@ {
         padding-top: 6px;
         padding-bottom: 6px;
     }
 }
 
 @media screen and (min-width: 64em) {
-    .u-p--\@lg {
+    .u-p--\@ {
         padding: 6px;
     }
-    .u-pt--\@lg {
+    .u-pt--\@ {
         padding-top: 6px;
     }
-    .u-pr--\@lg {
+    .u-pr--\@ {
         padding-right: 6px;
     }
-    .u-pb--\@lg {
+    .u-pb--\@ {
         padding-bottom: 6px;
     }
-    .u-pl--\@lg {
+    .u-pl--\@ {
         padding-left: 6px;
     }
-    .u-ph--\@lg {
+    .u-ph--\@ {
         padding-right: 6px;
         padding-left: 6px;
     }
-    .u-pv--\@lg {
+    .u-pv--\@ {
         padding-top: 6px;
         padding-bottom: 6px;
     }
 }
 
 @media screen and (min-width: 80em) {
-    .u-p--\@xl {
+    .u-p--\@ {
         padding: 6px;
     }
-    .u-pt--\@xl {
+    .u-pt--\@ {
         padding-top: 6px;
     }
-    .u-pr--\@xl {
+    .u-pr--\@ {
         padding-right: 6px;
     }
-    .u-pb--\@xl {
+    .u-pb--\@ {
         padding-bottom: 6px;
     }
-    .u-pl--\@xl {
+    .u-pl--\@ {
         padding-left: 6px;
     }
-    .u-ph--\@xl {
+    .u-ph--\@ {
         padding-right: 6px;
         padding-left: 6px;
     }
-    .u-pv--\@xl {
+    .u-pv--\@ {
         padding-top: 6px;
         padding-bottom: 6px;
     }
@@ -1366,104 +1359,104 @@ Tags:
      * Add small paddings.
      */
 @media screen and (max-width: 35.5em) {
-    .u-p-\@sm {
+    .u-p-\@ {
         padding: 12px;
     }
-    .u-pt-\@sm {
+    .u-pt-\@ {
         padding-top: 12px;
     }
-    .u-pr-\@sm {
+    .u-pr-\@ {
         padding-right: 12px;
     }
-    .u-pb-\@sm {
+    .u-pb-\@ {
         padding-bottom: 12px;
     }
-    .u-pl-\@sm {
+    .u-pl-\@ {
         padding-left: 12px;
     }
-    .u-ph-\@sm {
+    .u-ph-\@ {
         padding-right: 12px;
         padding-left: 12px;
     }
-    .u-pv-\@sm {
+    .u-pv-\@ {
         padding-top: 12px;
         padding-bottom: 12px;
     }
 }
 
 @media screen and (min-width: 48em) {
-    .u-p-\@md {
+    .u-p-\@ {
         padding: 12px;
     }
-    .u-pt-\@md {
+    .u-pt-\@ {
         padding-top: 12px;
     }
-    .u-pr-\@md {
+    .u-pr-\@ {
         padding-right: 12px;
     }
-    .u-pb-\@md {
+    .u-pb-\@ {
         padding-bottom: 12px;
     }
-    .u-pl-\@md {
+    .u-pl-\@ {
         padding-left: 12px;
     }
-    .u-ph-\@md {
+    .u-ph-\@ {
         padding-right: 12px;
         padding-left: 12px;
     }
-    .u-pv-\@md {
+    .u-pv-\@ {
         padding-top: 12px;
         padding-bottom: 12px;
     }
 }
 
 @media screen and (min-width: 64em) {
-    .u-p-\@lg {
+    .u-p-\@ {
         padding: 12px;
     }
-    .u-pt-\@lg {
+    .u-pt-\@ {
         padding-top: 12px;
     }
-    .u-pr-\@lg {
+    .u-pr-\@ {
         padding-right: 12px;
     }
-    .u-pb-\@lg {
+    .u-pb-\@ {
         padding-bottom: 12px;
     }
-    .u-pl-\@lg {
+    .u-pl-\@ {
         padding-left: 12px;
     }
-    .u-ph-\@lg {
+    .u-ph-\@ {
         padding-right: 12px;
         padding-left: 12px;
     }
-    .u-pv-\@lg {
+    .u-pv-\@ {
         padding-top: 12px;
         padding-bottom: 12px;
     }
 }
 
 @media screen and (min-width: 80em) {
-    .u-p-\@xl {
+    .u-p-\@ {
         padding: 12px;
     }
-    .u-pt-\@xl {
+    .u-pt-\@ {
         padding-top: 12px;
     }
-    .u-pr-\@xl {
+    .u-pr-\@ {
         padding-right: 12px;
     }
-    .u-pb-\@xl {
+    .u-pb-\@ {
         padding-bottom: 12px;
     }
-    .u-pl-\@xl {
+    .u-pl-\@ {
         padding-left: 12px;
     }
-    .u-ph-\@xl {
+    .u-ph-\@ {
         padding-right: 12px;
         padding-left: 12px;
     }
-    .u-pv-\@xl {
+    .u-pv-\@ {
         padding-top: 12px;
         padding-bottom: 12px;
     }
@@ -1473,108 +1466,104 @@ Tags:
      * Add large paddings.
      */
 @media screen and (max-width: 35.5em) {
-    .u-p\+\@sm {
+    .u-p\+\@ {
         padding: 48px;
     }
-    .u-pt\+\@sm {
+    .u-pt\+\@ {
         padding-top: 48px;
     }
-    .u-pr\+\@sm {
+    .u-pr\+\@ {
         padding-right: 48px;
     }
-    .u-pb\+\@sm {
+    .u-pb\+\@ {
         padding-bottom: 48px;
     }
-    .u-pl\+\@sm {
+    .u-pl\+\@ {
         padding-left: 48px;
     }
-    .u-ph\+\@sm {
+    .u-ph\+\@ {
         padding-right: 48px;
         padding-left: 48px;
     }
-    .u-pv\+\@sm {
+    .u-pv\+\@ {
         padding-top: 48px;
         padding-bottom: 48px;
     }
 }
 
 @media screen and (min-width: 48em) {
-    .u-p\+\@md {
+    .u-p\+\@ {
         padding: 48px;
     }
-    .u-pt\+\@md {
+    .u-pt\+\@ {
         padding-top: 48px;
     }
-    .u-pr\+\@md {
+    .u-pr\+\@ {
         padding-right: 48px;
     }
-    .u-pb\+\@md {
+    .u-pb\+\@ {
         padding-bottom: 48px;
     }
-    .u-pl\+\@md {
+    .u-pl\+\@ {
         padding-left: 48px;
     }
-    .u-ph\+\@md {
+    .u-ph\+\@ {
         padding-right: 48px;
         padding-left: 48px;
     }
-    .u-pv\+\@md {
+    .u-pv\+\@ {
         padding-top: 48px;
         padding-bottom: 48px;
     }
 }
 
 @media screen and (min-width: 64em) {
-    .u-p\+\@lg,
-    .u-p\@all {
+    .u-p\+\@ {
         padding: 48px;
     }
-    .u-pt\+\@lg,
-    .u-pt-wrap {
+    .u-pt\+\@ {
         padding-top: 48px;
     }
-    .u-pr\+\@lg {
+    .u-pr\+\@ {
         padding-right: 48px;
     }
-    .u-pb\+\@lg {
+    .u-pb\+\@ {
         padding-bottom: 48px;
     }
-    .u-pl\+\@lg {
+    .u-pl\+\@ {
         padding-left: 48px;
     }
-    .u-ph\+\@lg,
-    .u-ph\@all {
+    .u-ph\+\@ {
         padding-right: 48px;
         padding-left: 48px;
     }
-    .u-pv\+\@lg,
-    .u-pv\@all {
+    .u-pv\+\@ {
         padding-top: 48px;
         padding-bottom: 48px;
     }
 }
 
 @media screen and (min-width: 80em) {
-    .u-p\+\@xl {
+    .u-p\+\@ {
         padding: 48px;
     }
-    .u-pt\+\@xl {
+    .u-pt\+\@ {
         padding-top: 48px;
     }
-    .u-pr\+\@xl {
+    .u-pr\+\@ {
         padding-right: 48px;
     }
-    .u-pb\+\@xl {
+    .u-pb\+\@ {
         padding-bottom: 48px;
     }
-    .u-pl\+\@xl {
+    .u-pl\+\@ {
         padding-left: 48px;
     }
-    .u-ph\+\@xl {
+    .u-ph\+\@ {
         padding-right: 48px;
         padding-left: 48px;
     }
-    .u-pv\+\@xl {
+    .u-pv\+\@ {
         padding-top: 48px;
         padding-bottom: 48px;
     }
@@ -1584,104 +1573,104 @@ Tags:
      * Add huge paddings.
      */
 @media screen and (max-width: 35.5em) {
-    .u-p\+\+\@sm {
+    .u-p\+\+\@ {
         padding: 96px;
     }
-    .u-pt\+\+\@sm {
+    .u-pt\+\+\@ {
         padding-top: 96px;
     }
-    .u-pr\+\+\@sm {
+    .u-pr\+\+\@ {
         padding-right: 96px;
     }
-    .u-pb\+\+\@sm {
+    .u-pb\+\+\@ {
         padding-bottom: 96px;
     }
-    .u-pl\+\+\@sm {
+    .u-pl\+\+\@ {
         padding-left: 96px;
     }
-    .u-ph\+\+\@sm {
+    .u-ph\+\+\@ {
         padding-right: 96px;
         padding-left: 96px;
     }
-    .u-pv\+\+\@sm {
+    .u-pv\+\+\@ {
         padding-top: 96px;
         padding-bottom: 96px;
     }
 }
 
 @media screen and (min-width: 48em) {
-    .u-p\+\+\@md {
+    .u-p\+\+\@ {
         padding: 96px;
     }
-    .u-pt\+\+\@md {
+    .u-pt\+\+\@ {
         padding-top: 96px;
     }
-    .u-pr\+\+\@md {
+    .u-pr\+\+\@ {
         padding-right: 96px;
     }
-    .u-pb\+\+\@md {
+    .u-pb\+\+\@ {
         padding-bottom: 96px;
     }
-    .u-pl\+\+\@md {
+    .u-pl\+\+\@ {
         padding-left: 96px;
     }
-    .u-ph\+\+\@md {
+    .u-ph\+\+\@ {
         padding-right: 96px;
         padding-left: 96px;
     }
-    .u-pv\+\+\@md {
+    .u-pv\+\+\@ {
         padding-top: 96px;
         padding-bottom: 96px;
     }
 }
 
 @media screen and (min-width: 64em) {
-    .u-p\+\+\@lg {
+    .u-p\+\+\@ {
         padding: 96px;
     }
-    .u-pt\+\+\@lg {
+    .u-pt\+\+\@ {
         padding-top: 96px;
     }
-    .u-pr\+\+\@lg {
+    .u-pr\+\+\@ {
         padding-right: 96px;
     }
-    .u-pb\+\+\@lg {
+    .u-pb\+\+\@ {
         padding-bottom: 96px;
     }
-    .u-pl\+\+\@lg {
+    .u-pl\+\+\@ {
         padding-left: 96px;
     }
-    .u-ph\+\+\@lg {
+    .u-ph\+\+\@ {
         padding-right: 96px;
         padding-left: 96px;
     }
-    .u-pv\+\+\@lg {
+    .u-pv\+\+\@ {
         padding-top: 96px;
         padding-bottom: 96px;
     }
 }
 
 @media screen and (min-width: 80em) {
-    .u-p\+\+\@xl {
+    .u-p\+\+\@ {
         padding: 96px;
     }
-    .u-pt\+\+\@xl {
+    .u-pt\+\+\@ {
         padding-top: 96px;
     }
-    .u-pr\+\+\@xl {
+    .u-pr\+\+\@ {
         padding-right: 96px;
     }
-    .u-pb\+\+\@xl {
+    .u-pb\+\+\@ {
         padding-bottom: 96px;
     }
-    .u-pl\+\+\@xl {
+    .u-pl\+\+\@ {
         padding-left: 96px;
     }
-    .u-ph\+\+\@xl {
+    .u-ph\+\+\@ {
         padding-right: 96px;
         padding-left: 96px;
     }
-    .u-pv\+\+\@xl {
+    .u-pv\+\+\@ {
         padding-top: 96px;
         padding-bottom: 96px;
     }
@@ -1691,104 +1680,104 @@ Tags:
      * Remove paddings.
      */
 @media screen and (max-width: 35.5em) {
-    .u-p0\@sm {
+    .u-p0\@ {
         padding: 0;
     }
-    .u-pt0\@sm {
+    .u-pt0\@ {
         padding-top: 0;
     }
-    .u-pr0\@sm {
+    .u-pr0\@ {
         padding-right: 0;
     }
-    .u-pb0\@sm {
+    .u-pb0\@ {
         padding-bottom: 0;
     }
-    .u-pl0\@sm {
+    .u-pl0\@ {
         padding-left: 0;
     }
-    .u-ph0\@sm {
+    .u-ph0\@ {
         padding-right: 0;
         padding-left: 0;
     }
-    .u-pv0\@sm {
+    .u-pv0\@ {
         padding-top: 0;
         padding-bottom: 0;
     }
 }
 
 @media screen and (min-width: 48em) {
-    .u-p0\@md {
+    .u-p0\@ {
         padding: 0;
     }
-    .u-pt0\@md {
+    .u-pt0\@ {
         padding-top: 0;
     }
-    .u-pr0\@md {
+    .u-pr0\@ {
         padding-right: 0;
     }
-    .u-pb0\@md {
+    .u-pb0\@ {
         padding-bottom: 0;
     }
-    .u-pl0\@md {
+    .u-pl0\@ {
         padding-left: 0;
     }
-    .u-ph0\@md {
+    .u-ph0\@ {
         padding-right: 0;
         padding-left: 0;
     }
-    .u-pv0\@md {
+    .u-pv0\@ {
         padding-top: 0;
         padding-bottom: 0;
     }
 }
 
 @media screen and (min-width: 64em) {
-    .u-p0\@lg {
+    .u-p0\@ {
         padding: 0;
     }
-    .u-pt0\@lg {
+    .u-pt0\@ {
         padding-top: 0;
     }
-    .u-pr0\@lg {
+    .u-pr0\@ {
         padding-right: 0;
     }
-    .u-pb0\@lg {
+    .u-pb0\@ {
         padding-bottom: 0;
     }
-    .u-pl0\@lg {
+    .u-pl0\@ {
         padding-left: 0;
     }
-    .u-ph0\@lg {
+    .u-ph0\@ {
         padding-right: 0;
         padding-left: 0;
     }
-    .u-pv0\@lg {
+    .u-pv0\@ {
         padding-top: 0;
         padding-bottom: 0;
     }
 }
 
 @media screen and (min-width: 80em) {
-    .u-p0\@xl {
+    .u-p0\@ {
         padding: 0;
     }
-    .u-pt0\@xl {
+    .u-pt0\@ {
         padding-top: 0;
     }
-    .u-pr0\@xl {
+    .u-pr0\@ {
         padding-right: 0;
     }
-    .u-pb0\@xl {
+    .u-pb0\@ {
         padding-bottom: 0;
     }
-    .u-pl0\@xl {
+    .u-pl0\@ {
         padding-left: 0;
     }
-    .u-ph0\@xl {
+    .u-ph0\@ {
         padding-right: 0;
         padding-left: 0;
     }
-    .u-pv0\@xl {
+    .u-pv0\@ {
         padding-top: 0;
         padding-bottom: 0;
     }
@@ -1977,6 +1966,26 @@ Tags:
 /**
  * #GENERIC
  */
+/**
+ * Universal selector. This is applied to all elements.
+ */
+* {
+    flex-direction: column;
+    position: relative;
+    vertical-align: middle; 
+    word-wrap: break-word;
+    -webkit-transition: 0.35s ease;
+    transition: 0.35s ease;
+
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -ms-flex-negative: 0;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+}
+
 /*Pieces of normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
     -webkit-text-size-adjust: 100%; 
@@ -2020,7 +2029,7 @@ sub {
     bottom: -0.25em;
 }
 
-a img {
+img {
     border: 0;
 }
 
@@ -2051,18 +2060,174 @@ h6 {
     font-weight: inherit;
 }
 
-* {
-    flex-direction: column; 
-    position: relative;
-    word-wrap: break-word;
+/*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
+pre,
+textarea {
+    overflow: auto;
+}
 
-    -webkit-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    -ms-flex-negative: 0;
-    -webkit-flex-shrink: 0;
-    flex-shrink: 0;
+[hidden],
+audio:not([controls]),
+template {
+    display: none;
+}
+
+details,
+main,
+summary {
+    display: block;
+}
+
+input[type=number] {
+    width: auto;
+}
+
+input[type=search] {
+    -webkit-appearance: textfield;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+progress {
+    display: inline-block;
+}
+
+small {
+    color: #777; 
+    font-size: 75%;
+}
+
+textarea {
+    resize: vertical;
+}
+
+[unselectable] {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+    border-width: 0; 
+    border-style: solid;
+}
+
+* {
+    margin: 0;
+    padding: 0; 
+    font-size: inherit;
+    line-height: inherit;
+}
+
+::after,
+::before {
+    vertical-align: inherit; 
+    text-decoration: inherit;
+}
+
+:root {
+    overflow-y: scroll;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 1.6; 
+    cursor: default;
+    text-rendering: optimizeLegibility;
+
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+@media screen and (min-width: 48em) {
+    :root {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+button,
+input,
+select,
+textarea {
+    min-height: 24px; 
+    color: inherit;
+    background-color: transparent;
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: "Courier 10 Pitch", Courier, monospace;
+}
+
+nav ol,
+nav ul {
+    list-style: none;
+}
+
+select {
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select::-ms-value {
+    color: currentColor;
+}
+
+table {
+    border-spacing: 0; 
+    border-collapse: collapse;
+}
+
+::-moz-selection {
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+@media screen {
+    [hidden~=screen] {
+        display: inherit;
+    }
+    [hidden~=screen]:not(:active):not(:focus):not(:target) {
+        clip: rect(0 0 0 0) !important;
+        position: absolute !important;
+    }
 }
 
 /**
@@ -2078,16 +2243,512 @@ iframe[src*="google.com/maps"] {
     max-width: 100%;
 }
 
-.browserupgrade {
-    margin: 0.2em 0;
-    padding: 0.2em 0; 
-    color: #000;
-    background: #ccc;
+big {
+    font-size: 125%;
+}
+
+button,
+input,
+select,
+textarea {
+    min-height: 1.4em; 
+    border: 0.1rem solid #ccc;
+    color: inherit;
+    background-color: transparent;
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+}
+
+body {
+    color: #333;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400; 
+    font-style: normal;
+}
+
+p {
+    margin-bottom: 24px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 2rem 0 24px; 
+    font-family: "Raleway", sans-serif;
+}
+
+h1 {
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+    font-size: 3.6rem;
+    font-weight: 500; 
+    font-style: normal;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 500; 
+    font-style: normal;
+}
+
+h3 {
+    margin: 1.6rem 0 0.4rem; 
+    font-size: 2.4rem;
+    font-weight: 500;
+    font-style: normal;
+}
+
+h4 {
+    margin: 1.6rem 0 0.4rem; 
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-style: normal;
+}
+
+h5 {
+    margin: 1.6rem 0 0.4rem; 
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-style: normal;
+}
+
+h6 {
+    margin: 1.6rem 0 0.4rem; 
+    color: #777;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-style: normal;
+}
+
+pre {
+    display: block;
+    margin: 1.6rem 0;
+    padding: 1.6rem;
+    color: #444;
+    background: #efefef;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 1.4rem;
+    word-wrap: break-word; 
+    word-break: break-all;
+}
+
+code {
+    color: #444;
+    background: #efefef;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 1.4rem;
+    word-wrap: break-word; 
+    word-break: break-all;
+}
+
+a {
+    color: #1271db;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+dl {
+    margin-bottom: 24px;
+}
+
+dd {
+    margin-left: 48px;
+}
+
+ul,
+ol {
+    margin-bottom: 0.8rem;
+    padding-left: 2rem;
+}
+
+blockquote {
+    margin: 24px 0;
+    padding-left: 24px; 
+    border-left: 0.2rem solid #1271db;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-style: italic;
+}
+
+figcaption {
+    font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+main,
+header,
+footer,
+article,
+section,
+aside,
+details,
+summary {
+    display: block;
+    width: 100%; 
+    height: auto;
+    margin: 0 auto;
+}
+
+main {
+    display: block;
+    max-width: 76.8rem;
+    margin: 0 auto;
+    padding: 0 1.6rem 1.6rem;
+}
+
+article {
+    display: inline-block;
+    float: left;
+    clear: left;
+    max-width: -webkit-calc(60% - 1rem);
+    max-width: calc(60% - 1rem); 
+    margin-bottom: 1.6rem;
+}
+
+aside {
+    display: inline-block;
+    float: right;
+    clear: right;
+    max-width: -webkit-calc(40% - 1rem);
+    max-width: calc(40% - 1rem); 
+    margin-bottom: 1.6rem;
+}
+
+section {
+    display: inline-block;
+    float: left;
+    clear: both;
+    max-width: 100%; 
+    margin-bottom: 1.6rem;
+}
+
+footer {
+    display: inline-block;
+    float: left;
+    clear: both;
+    max-width: 100%;
+    padding: 1rem 0;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
     text-align: center;
 }
-.browserupgrade a {
-    color: blue;
-    text-decoration: underline;
+
+hr {
+    display: block;
+    height: 1px;
+    margin: 24px 0; 
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: baseline;
+}
+
+@media screen and (max-width: 40rem) {
+    article,
+    section,
+    aside {
+        display: block;
+        clear: both;
+        max-width: 100%;
+    }
+    img {
+        margin-right: 1.6rem;
+    }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+select {
+    display: inline-block;
+    padding: 0.8rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0;
+    vertical-align: middle;
+}
+
+input:not([type]) {
+    display: inline-block;
+    padding: 0.8rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0;
+    color: #444;
+    background-color: #fff;
+    background-clip: padding-box;
+    text-align: left; 
+
+    -webkit-appearance: none;
+}
+
+input[type="color"] {
+    padding: 0.8rem 1.6rem;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #b3d4fc;
+}
+
+input:not([type]):focus {
+    border-color: #b3d4fc;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    vertical-align: middle;
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+    outline: 0.1rem solid thin #444;
+}
+
+input[type="text"][disabled],
+input[type="password"][disabled],
+input[type="email"][disabled],
+input[type="url"][disabled],
+input[type="date"][disabled],
+input[type="month"][disabled],
+input[type="time"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="week"][disabled],
+input[type="number"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="color"][disabled],
+select[disabled],
+textarea[disabled] {
+    color: #777;
+    background-color: #efefef;
+    cursor: not-allowed;
+}
+
+input:not([type])[disabled] {
+    color: #777;
+    background-color: #efefef;
+    cursor: not-allowed;
+}
+
+input[readonly],
+select[readonly],
+textarea[readonly] {
+    border-color: #ccc;
+    color: #777; 
+    background-color: #efefef;
+}
+
+input:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid {
+    border-color: #e9322d;
+    color: #b94a48;
+}
+
+input[type="file"]:focus:invalid:focus,
+input[type="radio"]:focus:invalid:focus,
+input[type="checkbox"]:focus:invalid:focus {
+    outline-color: #ff4136;
+}
+
+select {
+    border: 0.1rem solid #ccc; 
+    background-color: #fff;
+}
+
+select[multiple] {
+    height: auto;
+}
+
+label {
+    line-height: 2;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0.8rem 0; 
+    border: 0;
+}
+
+legend {
+    display: block;
+    width: 100%; 
+    margin-bottom: 0.8rem;
+    padding: 0.8rem 0;
+    border-bottom: 0.1rem solid #ccc;
+    color: #444;
+}
+
+textarea {
+    display: block;
+    margin-bottom: 0.8rem;
+    padding: 0.8rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0;
+    vertical-align: middle;
+}
+
+input[type=submit],
+button {
+    display: inline-block;
+    margin-right: 0.4rem;
+    margin-bottom: 0.8rem;
+    padding: 0.8rem 1.6rem;
+    border: 0.2rem solid #444;
+    border-radius: 0;
+    color: #444;
+    background-color: transparent;
+    text-align: center;
+    vertical-align: baseline; 
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: 0.25s ease;
+    transition: 0.25s ease;
+
+    -webkit-user-drag: none;
+}
+
+input[type=submit] a,
+button a {
+    color: #444;
+}
+
+input[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+    padding: 0;
+}
+
+input[type=submit]:hover,
+button:hover {
+    border-color: #444;
+    color: #fff; 
+    background: #444;
+}
+
+input[type=submit]:hover a,
+button:hover a {
+    color: #fff;
+}
+
+input[type=submit]:active,
+button:active {
+    border-color: #6a6a6a;
+    color: #fff; 
+    background: #6a6a6a;
+}
+
+input[type=submit]:active a,
+button:active a {
+    color: #fff;
+}
+
+input[type=submit]:disabled,
+button:disabled {
+    opacity: 0.40; 
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    padding-top: 1.6rem;
+    text-align: center; 
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav a {
+    padding: 0.8rem 1.6rem;
+    border-bottom: 0.2rem solid transparent;
+    color: #444;
+    text-decoration: none;
+}
+
+nav a:hover {
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+nav a:active {
+    border-color: rgba(0, 0, 0, 0.56);
+}
+
+table {
+    margin-bottom: 1.6rem;
+}
+
+caption {
+    padding: 0.8rem 0;
+}
+
+thead th {
+    color: #444; 
+    background: #efefef;
+}
+
+tr {
+    margin-bottom: 0.8rem; 
+    background: #fff;
+}
+
+th,
+td {
+    padding: 0.8rem 1.6rem;
+    border: 0.1rem solid #ccc;
+    text-align: center;
+    vertical-align: inherit;
+}
+
+tfoot tr {
+    background: none;
+}
+
+tfoot td {
+    padding: 1.6rem 0.4rem; 
+    color: #efefef;
+    font-size: 0.8rem;
+    font-style: italic;
 }
 
 /*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
@@ -2114,6 +2775,7 @@ details {
 input[type="number"] {
     width: auto;
 }
+
 input[type="search"] {
     -webkit-appearance: textfield;
 }
@@ -2299,23 +2961,12 @@ textarea {
 /**
  * #ELEMENTS
  */
-/*------------------------------------*\
-    #PAGE
+/*------------------------------------*    #PAGE
 \*------------------------------------*/
 html {
     min-height: 100%;
     color: #333;
-    background-color: #fff; 
-    font-size: 15px;
-    font-size: 0.9375rem;
-    line-height: 1.6;
-}
-@media screen and (min-width: 48em) {
-    html {
-        font-size: 16px;
-        font-size: 1rem;
-        line-height: 1.5;
-    }
+    background-color: #fff;
 }
 
 h1,
@@ -2335,25 +2986,7 @@ pre {
     margin-bottom: 24px;
 }
 
-dd {
-    margin-left: 24px;
-}
-
-hr {
-    display: block;
-    height: 1px;
-    margin: 24px 0;
-    padding: 0; 
-    border: 0;
-    border-top: 1px solid #ccc;
-}
-
-.site-container {
-    background-color: #fffaf5;
-}
-
-/*------------------------------------*\
-    #HEADINGS
+/*------------------------------------*    #HEADINGS
 \*------------------------------------*/
 /**
  * Headings 1–6.
@@ -2452,8 +3085,7 @@ li > ol {
     margin-bottom: 12px;
 }
 
-/*------------------------------------*\
-    #IMAGES
+/*------------------------------------*    #IMAGES
 \*------------------------------------*/
 /**
  * 1. Fluid images for responsive purposes.
@@ -2475,8 +3107,7 @@ img {
     max-width: none;
 }
 
-/*------------------------------------*\
-    #BLOCKQUOTES
+/*------------------------------------*    #BLOCKQUOTES
 \*------------------------------------*/
 blockquote {
     margin-bottom: 24px;
@@ -2525,8 +3156,7 @@ blockquote cite::before {
 /**
  * #OBJECTS
  */
-/*------------------------------------*\
-    $CSSWIZARDRY-GRIDS
+/*------------------------------------*    $CSSWIZARDRY-GRIDS
 \*------------------------------------*/
 /**
  * CONTENTS
@@ -2538,8 +3168,7 @@ blockquote cite::before {
  * PUSH.................Push classes.
  * PULL.................Pull classes.
  */
-/*------------------------------------*\
-    $INTRODUCTION
+/*------------------------------------*    $INTRODUCTION
 \*------------------------------------*/
 /**
  * grids caters to the following types of device:
@@ -2573,8 +3202,7 @@ blockquote cite::before {
  *
    `class="grid__item  sm--one-third  xl--five-twelfths"`
  */
-/*------------------------------------*\
-    $VARIABLES
+/*------------------------------------*    $VARIABLES
 \*------------------------------------*/
 /**
  * If you are building a non-responsive site but would still like to use
@@ -2624,8 +3252,7 @@ blockquote cite::before {
  * You do not need to edit anything from this line onward; csswizardry-grids is
  * good to go. Happy griddin’!
  */
-/*------------------------------------*\
-    $MIXINS
+/*------------------------------------*    $MIXINS
 \*------------------------------------*/
 /**
  * These mixins are for the library to use only, you should not need to modify
@@ -2633,8 +3260,7 @@ blockquote cite::before {
  *
  * Enclose a block of code with a media query as named in `$breakpoints`.
  */
-/*------------------------------------*\
-    $GRID SETUP
+/*------------------------------------*    $GRID SETUP
 \*------------------------------------*/
 /**
  * 1. Allow the grid system to be used on lists.
@@ -2979,8 +3605,7 @@ blockquote cite::before {
     }
 }
 
-/*------------------------------------*\
-    $MEDIA EMBEDS
+/*------------------------------------*    $MEDIA EMBEDS
 \*------------------------------------*/
 /**
  * Flexible media embeds
@@ -3288,7 +3913,7 @@ fieldset {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; 
     text-decoration: none;
-    content: "\f002";
+    content: "";
     text-rendering: auto;
 
     speak: none;
@@ -3299,8 +3924,7 @@ fieldset {
     line-height: 1.625;
 }
 
-/*------------------------------------*\
-    #Layout Wrappers
+/*------------------------------------*    #Layout Wrappers
 \*------------------------------------*/
 .wrapper,
 .wrap {
@@ -3318,8 +3942,7 @@ fieldset {
     overflow: hidden;
 }
 
-/*------------------------------------*\
-    #BLOCK
+/*------------------------------------*    #BLOCK
 \*------------------------------------*/
 /**
  * The card object simply stacks an image on top of some text-like content.
@@ -3480,8 +4103,7 @@ fieldset {
     text-align: center;
 }
 
-/*------------------------------------*\
-    $ARTICLES
+/*------------------------------------*    $ARTICLES
 \*------------------------------------*/
 .entry-format {
     position: absolute;
@@ -3504,8 +4126,7 @@ fieldset {
 /**
  * #COMPONENTS
  */
-/*------------------------------------*\
-    #SITE-TITLE
+/*------------------------------------*    #SITE-TITLE
 \*------------------------------------*/
 .page-title__main,
 .page-title__sub {
@@ -3528,8 +4149,7 @@ fieldset {
     display: inline-block;
 }
 
-/*------------------------------------*\
-    #BOX SHADOWS
+/*------------------------------------*    #BOX SHADOWS
 \*------------------------------------*/
 .shadow--z1 {
     box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
@@ -3812,8 +4432,7 @@ input.is-active[type="submit"],
     height: 128px;
 }
 
-/*------------------------------------*\
-    #SITE NAVIGATION
+/*------------------------------------*    #SITE NAVIGATION
 \*------------------------------------*/
 .menu__list {
     margin: 0;
@@ -4047,8 +4666,7 @@ input.is-active[type="submit"],
     content: "\25BE";
 }
 
-/*------------------------------------*\
-    #POST NAVIGATION
+/*------------------------------------*    #POST NAVIGATION
 \*------------------------------------*/
 .nav-links {
     display: -webkit-box;
@@ -4100,11 +4718,12 @@ input.is-active[type="submit"],
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; 
     text-decoration: none;
-    content: "\f054";
+    content: "";
     text-rendering: auto;
 
     speak: none;
 }
+
 .next::after {
     padding-left: 5px;
     vertical-align: bottom;
@@ -4118,18 +4737,18 @@ input.is-active[type="submit"],
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; 
     text-decoration: none;
-    content: "\f053";
+    content: "";
     text-rendering: auto;
 
     speak: none;
 }
+
 .prev::before {
     padding-right: 5px;
     vertical-align: bottom;
 }
 
-/*------------------------------------*\
-    #META
+/*------------------------------------*    #META
 \*------------------------------------*/
 .entry__meta {
     margin-bottom: 0;
@@ -4146,8 +4765,7 @@ input.is-active[type="submit"],
     font-weight: inherit;
 }
 
-/*------------------------------------*\
-    #CODE
+/*------------------------------------*    #CODE
 \*------------------------------------*/
 .form-allowed-tags code,
 pre {
@@ -4190,8 +4808,7 @@ kbd {
     cursor: default;
 }
 
-/*------------------------------------*\
-    #BREADCRUMBS
+/*------------------------------------*    #BREADCRUMBS
 \*------------------------------------*/
 .breadcrumbs {
     overflow: hidden;
@@ -4238,8 +4855,7 @@ kbd {
     font-family: FontAwesome;
 }
 
-/*------------------------------------*\
-    #WIDGETS
+/*------------------------------------*    #WIDGETS
 \*------------------------------------*/
 .widget {
     display: -webkit-box;
@@ -4342,8 +4958,7 @@ a.info {
     text-overflow: ellipsis;
 }
 
-/*------------------------------------*\
-    #TOOLTIPS
+/*------------------------------------*    #TOOLTIPS
 \*------------------------------------*/
 [data-tip] {
     position: relative;
@@ -4521,8 +5136,7 @@ a.info {
     transition: 0.35s;
 }
 
-/*------------------------------------*\
-    #HELPERS
+/*------------------------------------*    #HELPERS
 \*------------------------------------*/
 .clearfix:after {
     display: table;
@@ -4762,8 +5376,7 @@ a.info {
     fill: #ffe504;
 }
 
-/*------------------------------------*\
-    #HEADINGS
+/*------------------------------------*    #HEADINGS
 \*------------------------------------*/
 /**
  * Headings 1–6’s corresponding Greek-alphabet abstract classes for double-
@@ -4838,9 +5451,20 @@ a.info {
     line-height: 1.7142857143;
 }
 
-/*----------------------------------------------------*\
-    #To be place in a more appropriate stylesheet later
+/*----------------------------------------------------*    #To be place in a more appropriate stylesheet later
 \*----------------------------------------------------*/
+.browserupgrade {
+    margin: 0.2em 0;
+    padding: 0.2em 0; 
+    color: #000;
+    background: #ccc;
+    text-align: center;
+}
+.browserupgrade a {
+    color: blue;
+    text-decoration: underline;
+}
+
 @media screen and (min-width: 48em) {
     .action-bar-wrap {
         display: block;
