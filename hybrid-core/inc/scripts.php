@@ -30,7 +30,7 @@ add_action( 'wp_enqueue_scripts', 'hybrid_enqueue_scripts', 5 );
 function hybrid_register_scripts() {
 
 	/* Register the 'mobile-toggle' script'. */
-	wp_register_script( 'hybrid-mobile-toggle', esc_url( trailingslashit( HYBRID_JS ) . 'mobile-toggle' . hybrid_get_min_suffix() . '.js' ), array( 'jquery' ), '20130528', true );
+	wp_register_script( 'hybrid-mobile-toggle', esc_url( HYBRID_JS . 'mobile-toggle' . hybrid_get_min_suffix() . '.js' ), array( 'jquery' ), '20130528', true );
 }
 
 /**
@@ -42,14 +42,7 @@ function hybrid_register_scripts() {
  */
 function hybrid_enqueue_scripts() {
 
-	/* Supported JavaScript. */
-	$supports = get_theme_support( 'hybrid-core-scripts' );
-
 	/* Load the comment reply script on singular posts with open comments if threaded comments are supported. */
 	if ( is_singular() && get_option( 'thread_comments' ) && comments_open() )
 		wp_enqueue_script( 'comment-reply' );
-
-	/* Load the 'mobile-toggle' script if the current theme supports 'mobile-toggle'. */
-	if ( isset( $supports[0] ) && in_array( 'mobile-toggle', $supports[0] ) )
-		wp_enqueue_script( 'hybrid-mobile-toggle' );
 }

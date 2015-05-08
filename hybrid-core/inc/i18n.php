@@ -66,7 +66,7 @@ function hybrid_override_load_textdomain( $override, $domain, $mofile ) {
 function hybrid_is_textdomain_loaded( $domain ) {
 	global $hybrid;
 
-	return ( isset( $hybrid->textdomain_loaded[ $domain ] ) && true === $hybrid->textdomain_loaded[ $domain ] ) ? true : false;
+	return isset( $hybrid->textdomain_loaded[ $domain ] ) && true === $hybrid->textdomain_loaded[ $domain ] ? true : false;
 }
 
 /**
@@ -80,15 +80,6 @@ function hybrid_is_textdomain_loaded( $domain ) {
  */
 function hybrid_load_framework_textdomain( $domain ) {
 	return load_textdomain( $domain, '' );
-}
-
-/**
- * @since      0.7.0
- * @deprecated 1.3.0
- */
-function hybrid_get_textdomain() {
-	_deprecated_function( __FUNCTION__, '1.3.0', 'hybrid_get_parent_textdomain' );
-	return hybrid_get_parent_textdomain();
 }
 
 /**
@@ -196,7 +187,7 @@ function hybrid_get_language( $locale = '' ) {
 	if ( empty( $locale ) )
 		$locale = get_locale();
 
-	return preg_replace( '/(.*?)_.*?$/i', '$1', $locale );
+	return sanitize_key( preg_replace( '/(.*?)_.*?$/i', '$1', $locale ) );
 }
 
 /**
@@ -213,5 +204,5 @@ function hybrid_get_region( $locale = '' ) {
 	if ( empty( $locale ) )
 		$locale = get_locale();
 
-	return preg_replace( '/.*?_(.*?)$/i', '$1', $locale );
+	return sanitize_key( preg_replace( '/.*?_(.*?)$/i', '$1', $locale ) );
 }

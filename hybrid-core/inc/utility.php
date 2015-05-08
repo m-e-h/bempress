@@ -58,11 +58,11 @@ function hybrid_has_post_template( $template = '' ) {
 		$post_template = get_post_meta( get_queried_object_id(), "_wp_{$post->post_type}_template", true );
 
 		/* If a specific template was input, check that the post template matches. */
-		if ( !empty( $template) && ( $template == $post_template ) )
+		if ( !empty( $template ) && $template == $post_template )
 			return true;
 
 		/* If no specific template was input, check if the post has a template. */
-		elseif ( empty( $template) && !empty( $post_template ) )
+		elseif ( empty( $template ) && !empty( $post_template ) )
 			return true;
 	}
 
@@ -164,6 +164,21 @@ function hybrid_get_menu_location_name( $location ) {
 	$locations = get_registered_nav_menus();
 
 	return isset( $locations[ $location ] ) ? $locations[ $location ] : '';
+}
+
+/**
+ * Function for grabbing a WP nav menu name based on theme location.
+ *
+ * @since  3.0.0
+ * @access public
+ * @param  string  $location
+ * @return string
+ */
+function hybrid_get_menu_name( $location ) {
+
+	$locations = get_nav_menu_locations();
+
+	return isset( $locations[ $location ] ) ? wp_get_nav_menu_object( $locations[ $location ] )->name : '';
 }
 
 /**

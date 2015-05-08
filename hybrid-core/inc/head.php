@@ -43,7 +43,7 @@ function hybrid_meta_template() {
  * @return void
  */
 function hybrid_meta_charset() {
-	printf( '<meta charset="%s" />' . "\n", get_bloginfo( 'charset' ) );
+	printf( '<meta charset="%s" />' . "\n", esc_attr( get_bloginfo( 'charset' ) ) );
 }
 
 /**
@@ -65,7 +65,7 @@ function hybrid_meta_viewport() {
  */
 function hybrid_link_pingback() {
 	if ( 'open' === get_option( 'default_ping_status' ) )
-		printf( '<link rel="pingback" href="%s" />' . "\n", get_bloginfo( 'pingback_url' ) );
+		printf( '<link rel="pingback" href="%s" />' . "\n", esc_attr( get_bloginfo( 'pingback_url' ) ) );
 }
 
 /**
@@ -105,37 +105,37 @@ function hybrid_wp_title( $doctitle, $separator, $seplocation ) {
 		$doctitle = post_type_archive_title( '', false );
 
 	elseif ( is_author() )
-		$doctitle = hybrid_single_author_title( '', false );
+		$doctitle = hybrid_get_single_author_title();
 
 	elseif ( get_query_var( 'minute' ) && get_query_var( 'hour' ) )
-		$doctitle = hybrid_single_minute_hour_title( '', false );
+		$doctitle = hybrid_get_single_minute_hour_title();
 
 	elseif ( get_query_var( 'minute' ) )
-		$doctitle = hybrid_single_minute_title( '', false );
+		$doctitle = hybrid_get_single_minute_title();
 
 	elseif ( get_query_var( 'hour' ) )
-		$doctitle = hybrid_single_hour_title( '', false );
+		$doctitle = hybrid_get_single_hour_title();
 
 	elseif ( is_day() )
-		$doctitle = hybrid_single_day_title( '', false );
+		$doctitle = hybrid_get_single_day_title();
 
 	elseif ( get_query_var( 'w' ) )
-		$doctitle = hybrid_single_week_title( '', false );
+		$doctitle = hybrid_get_single_week_title();
 
 	elseif ( is_month() )
 		$doctitle = single_month_title( ' ', false );
 
 	elseif ( is_year() )
-		$doctitle = hybrid_single_year_title( '', false );
+		$doctitle = hybrid_get_single_year_title();
 
 	elseif ( is_archive() )
-		$doctitle = hybrid_single_archive_title( '', false );
+		$doctitle = hybrid_get_single_archive_title();
 
 	elseif ( is_search() )
-		$doctitle = hybrid_search_title( '', false );
+		$doctitle = hybrid_get_search_title();
 
 	elseif ( is_404() )
-		$doctitle = hybrid_404_title( '', false );
+		$doctitle = hybrid_get_404_title();
 
 	/* If the current page is a paged page. */
 	if ( ( ( $page = get_query_var( 'paged' ) ) || ( $page = get_query_var( 'page' ) ) ) && $page > 1 )
@@ -145,5 +145,5 @@ function hybrid_wp_title( $doctitle, $separator, $seplocation ) {
 	/* Trim separator + space from beginning and end. */
 	$doctitle = trim( strip_tags( $doctitle ), "{$separator} " );
 
-	return $doctitle;
+	return esc_html( $doctitle );
 }

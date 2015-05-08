@@ -24,7 +24,7 @@
  * to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  *
  * @package   HybridCore
- * @version   2.1.0-dev
+ * @version   3.0.0-dev
  * @author    Justin Tadlock <justin@justintadlock.com>
  * @copyright Copyright (c) 2008 - 2015, Justin Tadlock
  * @link      http://themehybrid.com/hybrid-core
@@ -104,51 +104,33 @@ if ( !class_exists( 'Hybrid' ) ) {
 		function constants() {
 
 			/* Sets the framework version number. */
-			define( 'HYBRID_VERSION', '2.1.0' );
-
-			/* Sets the path to the parent theme directory. */
-			define( 'THEME_DIR', get_template_directory() );
-
-			/* Sets the path to the parent theme directory URI. */
-			define( 'THEME_URI', get_template_directory_uri() );
-
-			/* Sets the path to the child theme directory. */
-			define( 'CHILD_THEME_DIR', get_stylesheet_directory() );
-
-			/* Sets the path to the child theme directory URI. */
-			define( 'CHILD_THEME_URI', get_stylesheet_directory_uri() );
+			define( 'HYBRID_VERSION', '3.0.0' );
 
 			/* Sets the path to the core framework directory. */
 			if ( !defined( 'HYBRID_DIR' ) )
-				define( 'HYBRID_DIR', trailingslashit( THEME_DIR ) . basename( dirname( __FILE__ ) ) );
+				define( 'HYBRID_DIR', trailingslashit( trailingslashit( get_template_directory() ) . basename( dirname( __FILE__ ) ) ) );
 
 			/* Sets the path to the core framework directory URI. */
 			if ( !defined( 'HYBRID_URI' ) )
-				define( 'HYBRID_URI', trailingslashit( THEME_URI ) . basename( dirname( __FILE__ ) ) );
+				define( 'HYBRID_URI', trailingslashit( trailingslashit( get_template_directory_uri() ) . basename( dirname( __FILE__ ) ) ) );
 
 			/* Sets the path to the core framework admin directory. */
-			define( 'HYBRID_ADMIN', trailingslashit( HYBRID_DIR ) . 'admin' );
+			define( 'HYBRID_ADMIN', trailingslashit( HYBRID_DIR . 'admin' ) );
 
-			/* Sets the path to the core framework classes directory. */
-			define( 'HYBRID_CLASSES', trailingslashit( HYBRID_DIR ) . 'classes' );
+			/* Sets the path to the core framework includes directory. */
+			define( 'HYBRID_INC', trailingslashit( HYBRID_DIR . 'inc' ) );
 
 			/* Sets the path to the core framework extensions directory. */
-			define( 'HYBRID_EXTENSIONS', trailingslashit( HYBRID_DIR ) . 'extensions' );
+			define( 'HYBRID_EXTENSIONS', trailingslashit( HYBRID_DIR . 'extensions' ) );
 
-			/* Sets the path to the core framework functions directory. */
-			define( 'HYBRID_FUNCTIONS', trailingslashit( HYBRID_DIR ) . 'functions' );
-
-			/* Sets the path to the core framework languages directory. */
-			define( 'HYBRID_LANGUAGES', trailingslashit( HYBRID_DIR ) . 'languages' );
-
-			/* Sets the path to the core framework images directory URI. */
-			define( 'HYBRID_IMAGES', trailingslashit( HYBRID_URI ) . 'images' );
+			/* Sets the path to the core framework customize directory. */
+			define( 'HYBRID_CUSTOMIZE', trailingslashit( HYBRID_DIR . 'customize' ) );
 
 			/* Sets the path to the core framework CSS directory URI. */
-			define( 'HYBRID_CSS', trailingslashit( HYBRID_URI ) . 'css' );
+			define( 'HYBRID_CSS', trailingslashit( HYBRID_URI . 'css' ) );
 
 			/* Sets the path to the core framework JavaScript directory URI. */
-			define( 'HYBRID_JS', trailingslashit( HYBRID_URI ) . 'js' );
+			define( 'HYBRID_JS', trailingslashit( HYBRID_URI . 'js' ) );
 		}
 
 		/**
@@ -163,40 +145,40 @@ if ( !class_exists( 'Hybrid' ) ) {
 		function core() {
 
 			/* Load the core framework functions. */
-			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'core.php' );
+			require_once( HYBRID_INC . 'core.php' );
 
 			/* Load the context-based functions. */
-			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'context.php' );
+			require_once( HYBRID_INC . 'context.php' );
 
 			/* Load the core framework internationalization functions. */
-			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'i18n.php' );
+			require_once( HYBRID_INC . 'i18n.php' );
 
 			/* Load the framework customize functions. */
-			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'customize.php' );
+			require_once( HYBRID_INC . 'customize.php' );
 
 			/* Load the framework filters. */
-			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'filters.php' );
+			require_once( HYBRID_INC . 'filters.php' );
 
 			/* Load the <head> functions. */
-			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'head.php' );
+			require_once( HYBRID_INC . 'head.php' );
 
 			/* Load media-related functions. */
-			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'media.php' );
+			require_once( HYBRID_INC . 'media.php' );
 
 			/* Load the metadata functions. */
-			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'meta.php' );
+			require_once( HYBRID_INC . 'meta.php' );
 
 			/* Load the sidebar functions. */
-			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'sidebars.php' );
+			require_once( HYBRID_INC . 'sidebars.php' );
 
 			/* Load the scripts functions. */
-			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'scripts.php' );
+			require_once( HYBRID_INC . 'scripts.php' );
 
 			/* Load the styles functions. */
-			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'styles.php' );
+			require_once( HYBRID_INC . 'styles.php' );
 
 			/* Load the utility functions. */
-			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'utility.php' );
+			require_once( HYBRID_INC . 'utility.php' );
 		}
 
 		/**
@@ -227,7 +209,7 @@ if ( !class_exists( 'Hybrid' ) ) {
 			$hybrid->textdomain_loaded['hybrid-core'] = hybrid_load_framework_textdomain( 'hybrid-core' );
 
 			/* Get the user's locale. */
-			$locale = get_locale();
+			$locale = sanitize_key( get_locale() );
 
 			/* Locate a locale-specific functions file. */
 			$locale_functions = locate_template( array( "languages/{$locale}.php", "{$locale}.php" ) );
@@ -264,14 +246,6 @@ if ( !class_exists( 'Hybrid' ) ) {
 			/* Remove support for the the Get the Image extension if the plugin is installed. */
 			if ( function_exists( 'get_the_image' ) || class_exists( 'Get_The_Image' ) )
 				remove_theme_support( 'get-the-image' );
-
-			/* Remove support for the Featured Header extension if the class exists. */
-			if ( class_exists( 'Featured_Header' ) )
-				remove_theme_support( 'featured-header' );
-
-			/* Remove support for the Random Custom Background extension if the class exists. */
-			if ( class_exists( 'Random_Custom_Background' ) )
-				remove_theme_support( 'random-custom-background' );
 		}
 
 		/**
@@ -285,40 +259,37 @@ if ( !class_exists( 'Hybrid' ) ) {
 		function includes() {
 
 			/* Load the HTML attributes functions. */
-			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'attr.php' );
+			require_once( HYBRID_INC . 'attr.php' );
 
 			/* Load the template functions. */
-			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'template.php' );
+			require_once( HYBRID_INC . 'template.php' );
 
 			/* Load the comments functions. */
-			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'template-comments.php' );
+			require_once( HYBRID_INC . 'template-comments.php' );
 
 			/* Load the general template functions. */
-			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'template-general.php' );
+			require_once( HYBRID_INC . 'template-general.php' );
 
 			/* Load the media template functions. */
-			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'template-media.php' );
+			require_once( HYBRID_INC . 'template-media.php' );
 
 			/* Load the post template functions. */
-			require_once( trailingslashit( HYBRID_FUNCTIONS ) . 'template-post.php' );
+			require_once( HYBRID_INC . 'template-post.php' );
 
 			/* Load the media meta class. */
-			require_once( trailingslashit( HYBRID_CLASSES ) . 'hybrid-media-meta.php' );
+			require_once( HYBRID_INC . 'class-media-meta.php' );
 
 			/* Load the media grabber class. */
-			require_once( trailingslashit( HYBRID_CLASSES ) . 'hybrid-media-grabber.php' );
-
-			/* Load the theme settings functions if supported. */
-			require_if_theme_supports( 'hybrid-core-theme-settings', trailingslashit( HYBRID_FUNCTIONS ) . 'settings.php' );
+			require_once( HYBRID_INC . 'class-media-grabber.php' );
 
 			/* Load the template hierarchy if supported. */
-			require_if_theme_supports( 'hybrid-core-template-hierarchy', trailingslashit( HYBRID_FUNCTIONS ) . 'template-hierarchy.php' );
+			require_if_theme_supports( 'hybrid-core-template-hierarchy', HYBRID_INC . 'template-hierarchy.php' );
 
 			/* Load the post format functionality if post formats are supported. */
-			require_if_theme_supports( 'post-formats', trailingslashit( HYBRID_FUNCTIONS ) . 'post-formats.php' );
+			require_if_theme_supports( 'post-formats', HYBRID_INC . 'post-formats.php' );
 
 			/* Load the deprecated functions if supported. */
-			require_if_theme_supports( 'hybrid-core-deprecated', trailingslashit( HYBRID_FUNCTIONS ) . 'deprecated.php' );
+			require_if_theme_supports( 'hybrid-core-deprecated', HYBRID_INC . 'deprecated.php' );
 		}
 
 		/**
@@ -334,31 +305,19 @@ if ( !class_exists( 'Hybrid' ) ) {
 		function extensions() {
 
 			/* Load the Breadcrumb Trail extension if supported. */
-			require_if_theme_supports( 'breadcrumb-trail', trailingslashit( HYBRID_EXTENSIONS ) . 'breadcrumb-trail.php' );
+			require_if_theme_supports( 'breadcrumb-trail', HYBRID_EXTENSIONS . 'breadcrumb-trail.php' );
 
 			/* Load the Cleaner Gallery extension if supported. */
-			require_if_theme_supports( 'cleaner-gallery', trailingslashit( HYBRID_EXTENSIONS ) . 'cleaner-gallery.php' );
+			require_if_theme_supports( 'cleaner-gallery', HYBRID_EXTENSIONS . 'cleaner-gallery.php' );
 
 			/* Load the Get the Image extension if supported. */
-			require_if_theme_supports( 'get-the-image', trailingslashit( HYBRID_EXTENSIONS ) . 'get-the-image.php' );
-
-			/* Load the Cleaner Caption extension if supported. */
-			require_if_theme_supports( 'cleaner-caption', trailingslashit( HYBRID_EXTENSIONS ) . 'cleaner-caption.php' );
-
-			/* Load the Loop Pagination extension if supported. */
-			require_if_theme_supports( 'loop-pagination', trailingslashit( HYBRID_EXTENSIONS ) . 'loop-pagination.php' );
+			require_if_theme_supports( 'get-the-image', HYBRID_EXTENSIONS . 'get-the-image.php' );
 
 			/* Load the Theme Layouts extension if supported. */
-			require_if_theme_supports( 'theme-layouts', trailingslashit( HYBRID_EXTENSIONS ) . 'theme-layouts.php' );
+			require_if_theme_supports( 'theme-layouts', HYBRID_EXTENSIONS . 'theme-layouts.php' );
 
 			/* Load the Post Stylesheets extension if supported. */
-			require_if_theme_supports( 'post-stylesheets', trailingslashit( HYBRID_EXTENSIONS ) . 'post-stylesheets.php' );
-
-			/* Load the Featured Header extension if supported. */
-			require_if_theme_supports( 'featured-header', trailingslashit( HYBRID_EXTENSIONS ) . 'featured-header.php' );
-
-			/* Load the Random Custom Background extension if supported. */
-			require_if_theme_supports( 'random-custom-background', trailingslashit( HYBRID_EXTENSIONS ) . 'random-custom-background.php' );
+			require_if_theme_supports( 'post-stylesheets', HYBRID_EXTENSIONS . 'post-stylesheets.php' );
 		}
 
 		/**
@@ -370,15 +329,9 @@ if ( !class_exists( 'Hybrid' ) ) {
 		 */
 		function admin() {
 
-			/* Check if in the WordPress admin. */
-			if ( is_admin() ) {
-
-				/* Load the main admin file. */
-				require_once( trailingslashit( HYBRID_ADMIN ) . 'admin.php' );
-
-				/* Load the theme settings feature if supported. */
-				require_if_theme_supports( 'hybrid-core-theme-settings', trailingslashit( HYBRID_ADMIN ) . 'theme-settings.php' );
-			}
+			/* Load the main admin file if in admin. */
+			if ( is_admin() )
+				require_once( HYBRID_ADMIN . 'admin.php' );
 		}
 
 		/**
@@ -394,13 +347,6 @@ if ( !class_exists( 'Hybrid' ) ) {
 			/* Remove bbPress theme compatibility if current theme supports bbPress. */
 			if ( current_theme_supports( 'bbpress' ) )
 				remove_action( 'bbp_init', 'bbp_setup_theme_compat', 8 );
-
-			/* Move the WordPress generator to a better priority. */
-			remove_action( 'wp_head', 'wp_generator' );
-			add_action( 'wp_head', 'wp_generator', 1 );
-
-			/* Make text widgets shortcode aware. */
-			add_filter( 'widget_text', 'do_shortcode' );
 
 			/* Don't strip tags on single post titles. */
 			remove_filter( 'single_post_title', 'strip_tags' );
