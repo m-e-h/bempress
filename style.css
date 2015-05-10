@@ -1547,6 +1547,8 @@ big {
     line-height: inherit;
     vertical-align: middle; 
     word-wrap: break-word;
+    -webkit-transition: 0.35s;
+    transition: 0.35s;
 
     -webkit-box-direction: normal;
     -webkit-box-orient: vertical;
@@ -4193,6 +4195,24 @@ p:last-of-type {
     color: #476fba;
     -webkit-transition: 0.35s;
     transition: 0.35s;
+}
+
+.panel {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    left: 0;
+    width: 100%;
+    -webkit-transform: translate(0, -110%);
+    -ms-transform: translate(0, -110%);
+    transform: translate(0, -110%);
+}
+
+.panel.panel-open {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
 }
 
 .u-m {

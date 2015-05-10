@@ -195,11 +195,20 @@ p:last-of-type {
 
 
 
+.panel {
+  display: block;
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  transform: translate(0, -110%);
+}
 
 
-
-
-
+.panel.panel-open {
+  transform: translate(0, 0);
+}
 
 
 
