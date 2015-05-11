@@ -4,7 +4,7 @@
  * for media and attachments.
  *
  * @package    HybridCore
- * @subpackage Functions
+ * @subpackage Includes
  * @author     Justin Tadlock <justin@justintadlock.com>
  * @copyright  Copyright (c) 2008 - 2015, Justin Tadlock
  * @link       http://themehybrid.com/hybrid-core
@@ -45,28 +45,6 @@ function hybrid_attachment_is_video( $post_id = 0 ) {
 	list( $type, $subtype ) = false !== strpos( $mime_type, '/' ) ? explode( '/', $mime_type ) : array( $mime_type, '' );
 
 	return 'video' === $type ? true : false;
-}
-
-/**
- * Retrieves an attachment ID based on an attachment file URL.
- *
- * @copyright Pippin Williamson
- * @license   http://www.gnu.org/licenses/gpl-2.0.html
- * @link      http://pippinsplugins.com/retrieve-attachment-id-from-image-url/
- *
- * @since  2.0.0
- * @access public
- * @param  string  $url
- * @return int
- */
-function hybrid_get_attachment_id_from_url( $url ) {
-	global $wpdb;
-
-	$prefix = $wpdb->prefix;
-
-	$posts = $wpdb->get_col( $wpdb->prepare( "SELECT ID FROM " . $prefix . "posts" . " WHERE guid='%s';", $url ) ); 
- 
-	return array_shift( $posts );
 }
 
 /**

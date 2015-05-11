@@ -6,7 +6,7 @@
  * comment_class, so your theme won't have any trouble with plugin integration.
  *
  * @package    HybridCore
- * @subpackage Functions
+ * @subpackage Includes
  * @author     Justin Tadlock <justin@justintadlock.com>
  * @copyright  Copyright (c) 2008 - 2015, Justin Tadlock
  * @link       http://themehybrid.com/hybrid-core
@@ -239,6 +239,10 @@ function hybrid_body_class_filter( $classes, $class ) {
 		$classes[] = 'paged';
 		$classes[] = 'paged-' . intval( get_query_var( 'page' ) );
 	}
+
+	/* Theme layouts. */
+	if ( current_theme_supports( 'theme-layouts' ) )
+		$classes[] = sanitize_html_class( 'layout-' . hybrid_get_layout() );
 
 	/* Input class. */
 	if ( !empty( $class ) ) {

@@ -1,4 +1,14 @@
 <?php
+/**
+ * Adds the layout meta box to the post editing screen for post types that support `theme-layouts`.
+ *
+ * @package    HybridCore
+ * @subpackage Admin
+ * @author     Justin Tadlock <justin@justintadlock.com>
+ * @copyright  Copyright (c) 2008 - 2015, Justin Tadlock
+ * @link       http://themehybrid.com/hybrid-core
+ * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ */
 
 /* Add the layout meta box on the 'add_meta_boxes' hook. */
 add_action( 'add_meta_boxes', 'hybrid_add_post_layout_meta_box', 10, 2 );
@@ -8,15 +18,29 @@ add_action( 'save_post',       'hybrid_save_post_layout', 10, 2 );
 add_action( 'add_attachment',  'hybrid_save_post_layout'        );
 add_action( 'edit_attachment', 'hybrid_save_post_layout'        );
 
+/**
+ * Adds the layout meta box.
+ *
+ * @since  3.0.0
+ * @access public
+ * @param  string  $post_type
+ * @param  object  $post
+ * @return void
+ */
 function hybrid_add_post_layout_meta_box( $post_type ) {
 
-	/* Get the extension arguments. */
-	$args = hybrid_get_layouts_args();
-
-	if ( true === $args['post_meta'] && post_type_supports( $post_type, 'theme-layouts' ) && current_user_can( 'edit_theme_options' ) )
+	if ( current_theme_supports( 'theme-layouts', 'post_meta' ) && post_type_supports( $post_type, 'theme-layouts' ) && current_user_can( 'edit_theme_options' ) )
 		add_meta_box( 'hybrid-post-layout', __( 'Layout', 'hybrid-core' ), 'hybrid_post_layout_meta_box', $post_type, 'side', 'default' );
 }
-
+/**
+ * Callback function for displaying the layout meta box.
+ *
+ * @since  3.0.0
+ * @access public
+ * @param  object  $object
+ * @param  array   $box
+ * @return void
+ */
 function hybrid_post_layout_meta_box( $post, $box ) {
 
 	/* Get the current post's layout. */
@@ -24,10 +48,19 @@ function hybrid_post_layout_meta_box( $post, $box ) {
 
 	$post_layout = !empty( $post_layout ) ? $post_layout : 'default';
 
+	$choices = array();
+
+	/* Loop through each of the layouts and add it to the choices array with proper key/value pairs. */
+	foreach ( hybrid_get_layout_objects() as $layout ) {
+
+		if ( true === $layout->show_in_meta_box )
+			$choices[ $layout->name ] = $layout->label;
+	}
+
 	wp_nonce_field( basename( __FILE__ ), 'hybrid-post-layout-nonce' ); ?>
 
 	<ul>
-		<?php foreach ( hybrid_get_layout_choices() as $value => $label ) : ?>
+		<?php foreach ( $choices as $value => $label ) : ?>
 			<li>
 				<label>
 					<input type="radio" name="hybrid-post-layout" value="<?php echo esc_attr( $value ); ?>" <?php checked( $post_layout, $value ); ?> /> 
@@ -38,6 +71,15 @@ function hybrid_post_layout_meta_box( $post, $box ) {
 	</ul>
 <?php }
 
+/**
+ * Saves the post layout when submitted via the layout meta box.
+ *
+ * @since  3.0.0
+ * @access public
+ * @param  int      $post_id The ID of the current post being saved.
+ * @param  object   $post    The post object currently being saved.
+ * @return void|int
+ */
 function hybrid_save_post_layout( $post_id, $post = '' ) {
 
 	/* Fix for attachment save issue in WordPress 3.5. @link http://core.trac.wordpress.org/ticket/21963 */
