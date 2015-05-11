@@ -9,6 +9,7 @@
 }
 
 .page-title__main {
+    align-self: center;
     a {
         color: currentColor;
     }
@@ -17,9 +18,5 @@
 .page-title__sub {
     @include font-size($heading-size-4);
     opacity: .8;
-}
-
-.site-logo-link {
-    display: inline-block;
 }
 

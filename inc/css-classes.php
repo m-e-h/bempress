@@ -18,7 +18,7 @@ class AttrTrumps {
 	public $site_inner_sidebar_left 	= ' wrap grid--rev';
 	public $wrap                		= '';
     public $action_bar_wrap             = ' wrapper--wide shadow--z2 t-bg__1--glass flex';
-	public $header_wrap                	= ' wrapper--wide u-p@all t-bg__tint';
+	public $header_wrap                	= ' wrapper--wide t-bg__tint';
 	public $header                		= ' t-bg__tint'; 	// site-header
 	public $footer                		= ' t-bg__1'; 	// site-footer
 	public $content 					= ' grid__item'; 	// content
@@ -48,7 +48,7 @@ class AttrTrumps {
 	public $site_description      		= ' page-title__sub';	// site-description
 
 	/* Loop attributes. */
-	public $loop_meta             		= '';	// loop-meta
+	public $loop_meta             		= ' u-p@all';	// loop-meta
 	public $loop_title            		= ' u-m0';	// loop-title
 	public $loop_description      		= ' u-mt-';	// loop-description
 

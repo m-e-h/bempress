@@ -8,8 +8,6 @@
 
 <?php if ( !is_front_page() && !is_singular() && !is_404() ) : ?>
 
-    <div <?php hybrid_attr( 'loop-meta' ); ?>>
-
     		<h1 <?php hybrid_attr( 'loop-title' ); ?>><?php hybrid_loop_title(); ?></h1>
 
     		<?php if ( is_category() || is_tax() ) : ?>
@@ -25,8 +23,6 @@
     			</div><!-- .loop-description -->
 
     		<?php endif; ?>
-
-    </div><!-- .loop-meta -->
 
 <?php elseif ( is_singular() ) : ?>
 

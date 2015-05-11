@@ -46,9 +46,13 @@
 
             <?php tha_header_top(); ?>
 
+            <div <?php hybrid_attr( 'loop-meta' ); ?>>
+
             <?php hybrid_get_menu( 'breadcrumbs' ); ?>
 
             <?php get_template_part( 'templates/loop-meta' ); ?>
+
+            </div><!-- .loop-meta -->
 
             <?php tha_header_bottom(); ?>
 
