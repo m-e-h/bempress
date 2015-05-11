@@ -9,8 +9,7 @@
 add_action( 'tha_header_before', 'doc_toggle_panel' );
 add_action( 'tha_header_bottom', 'doc_panel_toggles_front' );
 add_action( 'action_bar_right', 'doc_panel_toggles' );
-add_action( 'tha_header_top', 'doc_logo_front' );
-add_action( 'tha_header_before', 'doc_logo' );
+add_action( 'tha_header_top', 'doc_logo' );
 
 
 
@@ -33,17 +32,7 @@ function doc_panel_toggles() {
     get_template_part( 'templates/panel-toggles' );
 }
 
-function doc_logo_front() {
-    if ( !is_front_page() ) {
-        return;
-    }
-    flagship_the_logo();
-}
-
 function doc_logo() {
-    if ( is_front_page() ) {
-        return;
-    }
     flagship_the_logo();
 }
 

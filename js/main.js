@@ -321,8 +321,6 @@ if("document" in self){if(!("classList" in document.createElement("_"))){(functi
   });
 })();
 
-
-
 (function () {
   'use strict';
 
@@ -373,4 +371,3 @@ if("document" in self){if(!("classList" in document.createElement("_"))){(functi
   parishToggle.addEventListener('click', parishTogglePanel);
   dpcToggle.addEventListener('click', dpcTogglePanel);
 })();
-
