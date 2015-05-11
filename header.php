@@ -46,13 +46,10 @@
 
             <?php tha_header_top(); ?>
 
-                <div <?php hybrid_attr( 'branding' ); ?>>
-                    <?php hybrid_site_title(); ?>
-                    <?php hybrid_site_description(); ?>
-                </div><!-- #branding -->
+            <?php hybrid_get_menu( 'breadcrumbs' ); ?>
 
+            <?php get_template_part( 'templates/loop-meta' ); ?>
 
-        <?php hybrid_get_menu( 'breadcrumbs' ); ?>
             <?php tha_header_bottom(); ?>
 
             </div><!-- .wrap -->

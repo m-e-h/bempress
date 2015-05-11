@@ -1,6 +1,401 @@
 /*------------------------------------*\
     #SPACING-RESPONSIVE
 \*------------------------------------*/
+.u-m {
+    margin: 24px;
+}
+
+.u-mt {
+    margin-top: 24px;
+}
+
+.u-mr {
+    margin-right: 24px;
+}
+
+.u-mb {
+    margin-bottom: 24px;
+}
+
+.u-ml {
+    margin-left: 24px;
+}
+
+.u-mh {
+    margin-right: 24px;
+    margin-left: 24px;
+}
+
+.u-mv {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+/**
+     * Add tiny margins.
+     */
+.u-m-- {
+    margin: 6px;
+}
+
+.u-mt-- {
+    margin-top: 6px;
+}
+
+.u-mr-- {
+    margin-right: 6px;
+}
+
+.u-mb-- {
+    margin-bottom: 6px;
+}
+
+.u-ml-- {
+    margin-left: 6px;
+}
+
+.u-mh-- {
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
+.u-mv-- {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+/**
+     * Add small margins.
+     */
+.u-m- {
+    margin: 12px;
+}
+
+.u-mt- {
+    margin-top: 12px;
+}
+
+.u-mr- {
+    margin-right: 12px;
+}
+
+.u-mb- {
+    margin-bottom: 12px;
+}
+
+.u-ml- {
+    margin-left: 12px;
+}
+
+.u-mh- {
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+.u-mv- {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+/**
+     * Add large margins.
+     */
+.u-m\+ {
+    margin: 48px;
+}
+
+.u-mt\+ {
+    margin-top: 48px;
+}
+
+.u-mr\+ {
+    margin-right: 48px;
+}
+
+.u-mb\+ {
+    margin-bottom: 48px;
+}
+
+.u-ml\+ {
+    margin-left: 48px;
+}
+
+.u-mh\+ {
+    margin-right: 48px;
+    margin-left: 48px;
+}
+
+.u-mv\+ {
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+/**
+     * Add huge margins.
+     */
+.u-m\+\+ {
+    margin: 96px;
+}
+
+.u-mt\+\+ {
+    margin-top: 96px;
+}
+
+.u-mr\+\+ {
+    margin-right: 96px;
+}
+
+.u-mb\+\+ {
+    margin-bottom: 96px;
+}
+
+.u-ml\+\+ {
+    margin-left: 96px;
+}
+
+.u-mh\+\+ {
+    margin-right: 96px;
+    margin-left: 96px;
+}
+
+.u-mv\+\+ {
+    margin-top: 96px;
+    margin-bottom: 96px;
+}
+
+/**
+     * Remove margins.
+     */
+.u-m0 {
+    margin: 0;
+}
+
+.u-mt0 {
+    margin-top: 0;
+}
+
+.u-mr0 {
+    margin-right: 0;
+}
+
+.u-mb0 {
+    margin-bottom: 0;
+}
+
+.u-ml0 {
+    margin-left: 0;
+}
+
+.u-mh0 {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.u-mv0 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/**
+     * Padding helper classes.
+     *
+     * Add paddings.
+     */
+.u-p {
+    padding: 24px;
+}
+
+.u-pt {
+    padding-top: 24px;
+}
+
+.u-pr {
+    padding-right: 24px;
+}
+
+.u-pb {
+    padding-bottom: 24px;
+}
+
+.u-pl {
+    padding-left: 24px;
+}
+
+.u-ph {
+    padding-right: 24px;
+    padding-left: 24px;
+}
+
+.u-pv {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+/**
+     * Add tiny paddings.
+     */
+.u-p-- {
+    padding: 6px;
+}
+
+.u-pt-- {
+    padding-top: 6px;
+}
+
+.u-pr-- {
+    padding-right: 6px;
+}
+
+.u-pb-- {
+    padding-bottom: 6px;
+}
+
+.u-pl-- {
+    padding-left: 6px;
+}
+
+.u-ph-- {
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+.u-pv-- {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+/**
+     * Add small paddings.
+     */
+.u-p- {
+    padding: 12px;
+}
+
+.u-pt-,
+.u-pt-wrap {
+    padding-top: 12px;
+}
+
+.u-pr- {
+    padding-right: 12px;
+}
+
+.u-pb- {
+    padding-bottom: 12px;
+}
+
+.u-pl- {
+    padding-left: 12px;
+}
+
+.u-ph- {
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+.u-pv- {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/**
+     * Add large paddings.
+     */
+.u-p\+ {
+    padding: 48px;
+}
+
+.u-pt\+ {
+    padding-top: 48px;
+}
+
+.u-pr\+ {
+    padding-right: 48px;
+}
+
+.u-pb\+ {
+    padding-bottom: 48px;
+}
+
+.u-pl\+ {
+    padding-left: 48px;
+}
+
+.u-ph\+ {
+    padding-right: 48px;
+    padding-left: 48px;
+}
+
+.u-pv\+ {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+/**
+     * Add huge paddings.
+     */
+.u-p\+\+ {
+    padding: 96px;
+}
+
+.u-pt\+\+ {
+    padding-top: 96px;
+}
+
+.u-pr\+\+ {
+    padding-right: 96px;
+}
+
+.u-pb\+\+ {
+    padding-bottom: 96px;
+}
+
+.u-pl\+\+ {
+    padding-left: 96px;
+}
+
+.u-ph\+\+ {
+    padding-right: 96px;
+    padding-left: 96px;
+}
+
+.u-pv\+\+ {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+/**
+     * Remove paddings.
+     */
+.u-p0 {
+    padding: 0;
+}
+
+.u-pt0 {
+    padding-top: 0;
+}
+
+.u-pr0 {
+    padding-right: 0;
+}
+
+.u-pb0 {
+    padding-bottom: 0;
+}
+
+.u-pl0 {
+    padding-left: 0;
+}
+
+.u-ph0 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.u-pv0 {
+    padding-top: 0;
+    padding-bottom: 0;
+}
 
 
 
@@ -107,23 +502,3 @@ $sizes: (
 
 
 @include inuit-generate-responsive-variants;
-
-
-
-.u-p#{\@}all {
-    @extend .u-p-;
-    @extend .u-p#{\@}md;
-    @extend .u-p#{\+}#{\@}lg;
-}
-
-.u-ph#{\@}all {
-    @extend .u-ph-;
-    @extend .u-ph#{\@}md;
-    @extend .u-ph#{\+}#{\@}lg;
-}
-
-.u-pv#{\@}all {
-    @extend .u-pv-;
-    @extend .u-pv#{\@}md;
-    @extend .u-pv#{\+}#{\@}lg;
-}

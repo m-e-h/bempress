@@ -224,3 +224,38 @@
 .t-fill__3--light {
     fill: $color-accent-light;
 }
+
+.u-p\@all {
+    padding: 12px;
+    @include md {
+        padding: 24px;
+    }
+    @include lg {
+        padding: 48px;
+    }
+}
+
+.u-ph\@all {
+    @extend .u-ph-;
+    @include md {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+    @include lg {
+        padding-right: 48px;
+        padding-left: 48px;
+    }
+}
+
+.u-pv\@all {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    @include md {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    }
+    @include lg {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    }
+}

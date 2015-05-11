@@ -12,7 +12,7 @@
  * Based on: http://alistapart.com/article/creating-intrinsic-ratios-for-video
  */
 
-.featured-media {
+.flex-embed {
   display: block;
   overflow: hidden;
   position: relative;
@@ -24,7 +24,7 @@
  * the component to respect `max-height`. Default aspect ratio is 1:1.
  */
 
-.featured-media__ratio {
+.flex-embed__ratio {
   display: block;
   padding-bottom: 100%;
   width: 100%;
@@ -35,7 +35,7 @@
  * Modifier: 3:1 aspect ratio
  */
 
-.featured-media__ratio--3by1 {
+.flex-embed__ratio--3by1 {
   padding-bottom: calc(100% / 3);
 }
 
@@ -44,7 +44,7 @@
  * Modifier: 2:1 aspect ratio
  */
 
-.featured-media__ratio--2by1 {
+.flex-embed__ratio--2by1 {
   padding-bottom: 50%;
 }
 
@@ -53,7 +53,7 @@
  * Modifier: 16:9 aspect ratio
  */
 
-.featured-media__ratio--16by9 {
+.flex-embed__ratio--16by9 {
   padding-bottom: 56.25%;
 }
 
@@ -62,7 +62,7 @@
  * Modifier: 4:3 aspect ratio
  */
 
-.featured-media__ratio--4by3 {
+.flex-embed__ratio--4by3 {
   padding-bottom: 75%;
 }
 
@@ -71,8 +71,8 @@
  * Fit the content to the aspect ratio
  */
 
-.featured-media-content,
-.featured-media > iframe {
+.flex-embed-content,
+.flex-embed > iframe {
   bottom: 0;
   height: 100%;
   left: 0;

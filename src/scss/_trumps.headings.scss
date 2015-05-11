@@ -17,7 +17,7 @@
     }
 }
 
-.h3, .widget-title {
+.h3, .widget-title, .action-bar-wrap .site-title {
     @include font-size($heading-size-4);
     @include md {
         @include font-size($heading-size-3);

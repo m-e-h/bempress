@@ -135,7 +135,7 @@ function bempress_responsive_videos_embed_html( $html ) {
     if ( empty( $html ) || ! is_string( $html ) ) {
         return $html;
     }
-    return '<div class="featured-media__ratio featured-media__ratio--16by9"></div>' . $html;
+    return '<div class="flex-embed"><div class="flex-embed__ratio flex-embed__ratio--16by9"></div>' . $html .'</div>';
 }
 
 

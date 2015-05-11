@@ -17,8 +17,8 @@ class AttrTrumps {
 	public $site_inner_sidebar_right 	= ' wrap';
 	public $site_inner_sidebar_left 	= ' wrap grid--rev';
 	public $wrap                		= '';
-    public $action_bar_wrap             = ' wrapper--wide shadow--z2 t-bg__1--glass flex flex--row grid--right';
-	public $header_wrap                	= ' wrapper--wide u-p0 t-bg__tint';
+    public $action_bar_wrap             = ' wrapper--wide shadow--z2 t-bg__1--glass flex';
+	public $header_wrap                	= ' wrapper--wide u-p@all t-bg__tint';
 	public $header                		= ' t-bg__tint'; 	// site-header
 	public $footer                		= ' t-bg__1'; 	// site-footer
 	public $content 					= ' grid__item'; 	// content
@@ -44,12 +44,12 @@ class AttrTrumps {
 
 	/* Header attributes. */
 	public $branding              		= ' ';	// site-branding
-	public $site_title            		= ' page-title__main';	// site-title
+	public $site_title            		= ' u-m0 page-title__main';	// site-title
 	public $site_description      		= ' page-title__sub';	// site-description
 
 	/* Loop attributes. */
-	public $loop_meta             		= ' u-p- u-p@md u-ph+@lg u-mb- u-mb@md u-mb+@lg br t-bg__2--light';	// loop-meta
-	public $loop_title            		= ' u-mb0';	// loop-title
+	public $loop_meta             		= '';	// loop-meta
+	public $loop_title            		= ' u-m0';	// loop-title
 	public $loop_description      		= ' u-mt-';	// loop-description
 
 	/* Post-specific attributes. */

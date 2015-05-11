@@ -19,8 +19,6 @@
 	echo $video = hybrid_media_grabber( [
 		'type'        => 'video',
 		'split_media' => true,
-		'before'      => '<div class="featured-media video">',
-		'after'       => '</div>',
 	] );
 	?>
 

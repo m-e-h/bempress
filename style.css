@@ -75,6 +75,404 @@ Tags:
  */
 /*------------------------------------*    #SPACING-RESPONSIVE
 \*------------------------------------*/
+.u-m {
+    margin: 24px;
+}
+
+.u-mt {
+    margin-top: 24px;
+}
+
+.u-mr {
+    margin-right: 24px;
+}
+
+.u-mb {
+    margin-bottom: 24px;
+}
+
+.u-ml {
+    margin-left: 24px;
+}
+
+.u-mh {
+    margin-right: 24px;
+    margin-left: 24px;
+}
+
+.u-mv {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+/**
+     * Add tiny margins.
+     */
+.u-m-- {
+    margin: 6px;
+}
+
+.u-mt-- {
+    margin-top: 6px;
+}
+
+.u-mr-- {
+    margin-right: 6px;
+}
+
+.u-mb-- {
+    margin-bottom: 6px;
+}
+
+.u-ml-- {
+    margin-left: 6px;
+}
+
+.u-mh-- {
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
+.u-mv-- {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+/**
+     * Add small margins.
+     */
+.u-m- {
+    margin: 12px;
+}
+
+.u-mt- {
+    margin-top: 12px;
+}
+
+.u-mr- {
+    margin-right: 12px;
+}
+
+.u-mb- {
+    margin-bottom: 12px;
+}
+
+.u-ml- {
+    margin-left: 12px;
+}
+
+.u-mh- {
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+.u-mv- {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+/**
+     * Add large margins.
+     */
+.u-m\+ {
+    margin: 48px;
+}
+
+.u-mt\+ {
+    margin-top: 48px;
+}
+
+.u-mr\+ {
+    margin-right: 48px;
+}
+
+.u-mb\+ {
+    margin-bottom: 48px;
+}
+
+.u-ml\+ {
+    margin-left: 48px;
+}
+
+.u-mh\+ {
+    margin-right: 48px;
+    margin-left: 48px;
+}
+
+.u-mv\+ {
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+/**
+     * Add huge margins.
+     */
+.u-m\+\+ {
+    margin: 96px;
+}
+
+.u-mt\+\+ {
+    margin-top: 96px;
+}
+
+.u-mr\+\+ {
+    margin-right: 96px;
+}
+
+.u-mb\+\+ {
+    margin-bottom: 96px;
+}
+
+.u-ml\+\+ {
+    margin-left: 96px;
+}
+
+.u-mh\+\+ {
+    margin-right: 96px;
+    margin-left: 96px;
+}
+
+.u-mv\+\+ {
+    margin-top: 96px;
+    margin-bottom: 96px;
+}
+
+/**
+     * Remove margins.
+     */
+.u-m0 {
+    margin: 0;
+}
+
+.u-mt0 {
+    margin-top: 0;
+}
+
+.u-mr0 {
+    margin-right: 0;
+}
+
+.u-mb0 {
+    margin-bottom: 0;
+}
+
+.u-ml0 {
+    margin-left: 0;
+}
+
+.u-mh0 {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.u-mv0 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/**
+     * Padding helper classes.
+     *
+     * Add paddings.
+     */
+.u-p {
+    padding: 24px;
+}
+
+.u-pt {
+    padding-top: 24px;
+}
+
+.u-pr {
+    padding-right: 24px;
+}
+
+.u-pb {
+    padding-bottom: 24px;
+}
+
+.u-pl {
+    padding-left: 24px;
+}
+
+.u-ph {
+    padding-right: 24px;
+    padding-left: 24px;
+}
+
+.u-pv {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+/**
+     * Add tiny paddings.
+     */
+.u-p-- {
+    padding: 6px;
+}
+
+.u-pt-- {
+    padding-top: 6px;
+}
+
+.u-pr-- {
+    padding-right: 6px;
+}
+
+.u-pb-- {
+    padding-bottom: 6px;
+}
+
+.u-pl-- {
+    padding-left: 6px;
+}
+
+.u-ph-- {
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+.u-pv-- {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+/**
+     * Add small paddings.
+     */
+.u-p- {
+    padding: 12px;
+}
+
+.u-pt-,
+.u-pt-wrap,
+.u-pt-wrap {
+    padding-top: 12px;
+}
+
+.u-pr- {
+    padding-right: 12px;
+}
+
+.u-pb- {
+    padding-bottom: 12px;
+}
+
+.u-pl- {
+    padding-left: 12px;
+}
+
+.u-ph-,
+.u-ph\@all {
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+.u-pv- {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/**
+     * Add large paddings.
+     */
+.u-p\+ {
+    padding: 48px;
+}
+
+.u-pt\+ {
+    padding-top: 48px;
+}
+
+.u-pr\+ {
+    padding-right: 48px;
+}
+
+.u-pb\+ {
+    padding-bottom: 48px;
+}
+
+.u-pl\+ {
+    padding-left: 48px;
+}
+
+.u-ph\+ {
+    padding-right: 48px;
+    padding-left: 48px;
+}
+
+.u-pv\+ {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+/**
+     * Add huge paddings.
+     */
+.u-p\+\+ {
+    padding: 96px;
+}
+
+.u-pt\+\+ {
+    padding-top: 96px;
+}
+
+.u-pr\+\+ {
+    padding-right: 96px;
+}
+
+.u-pb\+\+ {
+    padding-bottom: 96px;
+}
+
+.u-pl\+\+ {
+    padding-left: 96px;
+}
+
+.u-ph\+\+ {
+    padding-right: 96px;
+    padding-left: 96px;
+}
+
+.u-pv\+\+ {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+/**
+     * Remove paddings.
+     */
+.u-p0 {
+    padding: 0;
+}
+
+.u-pt0 {
+    padding-top: 0;
+}
+
+.u-pr0 {
+    padding-right: 0;
+}
+
+.u-pb0 {
+    padding-bottom: 0;
+}
+
+.u-pl0 {
+    padding-left: 0;
+}
+
+.u-ph0 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.u-pv0 {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 /**
  * Breakpoints map
  * @type Map
@@ -495,8 +893,7 @@ Tags:
         margin-top: 24px;
         margin-bottom: 24px;
     }
-    .u-p\@md,
-    .u-p\@all {
+    .u-p\@md {
         padding: 24px;
     }
     .u-pt\@md,
@@ -512,13 +909,11 @@ Tags:
     .u-pl\@md {
         padding-left: 24px;
     }
-    .u-ph\@md,
-    .u-ph\@all {
+    .u-ph\@md {
         padding-right: 24px;
         padding-left: 24px;
     }
-    .u-pv\@md,
-    .u-pv\@all {
+    .u-pv\@md {
         padding-top: 24px;
         padding-bottom: 24px;
     }
@@ -824,8 +1219,7 @@ Tags:
         margin-top: 48px;
         margin-bottom: 48px;
     }
-    .u-p\+\@lg,
-    .u-p\@all {
+    .u-p\+\@lg {
         padding: 48px;
     }
     .u-pt\+\@lg,
@@ -841,13 +1235,11 @@ Tags:
     .u-pl\+\@lg {
         padding-left: 48px;
     }
-    .u-ph\+\@lg,
-    .u-ph\@all {
+    .u-ph\+\@lg {
         padding-right: 48px;
         padding-left: 48px;
     }
-    .u-pv\+\@lg,
-    .u-pv\@all {
+    .u-pv\+\@lg {
         padding-top: 48px;
         padding-bottom: 48px;
     }
@@ -1515,9 +1907,7 @@ big {
     overflow-y: scroll;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
-    font-size: 15px;
-    font-size: 0.9375rem;
-    line-height: 1.6; 
+    font-size: 16px; 
     cursor: default;
     text-rendering: optimizeLegibility;
 
@@ -1525,13 +1915,6 @@ big {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
-}
-@media screen and (min-width: 48em) {
-    :root {
-        font-size: 16px;
-        font-size: 1rem;
-        line-height: 1.5;
-    }
 }
 
 /**
@@ -1575,7 +1958,7 @@ big {
 
 html {
     min-height: 100%;
-    color: #333;
+    color: #1f1f1f;
     background-color: #fff;
 
     -webkit-text-size-adjust: 100%; 
@@ -1586,9 +1969,18 @@ body {
     color: #1f1f1f;
     background-color: #fffaf5; 
     font-family: "Roboto", sans-serif;
-    font-size: 16px;
+    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: 400;
     font-style: normal;
+    line-height: 1.6;
+}
+@media screen and (min-width: 48em) {
+    body {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
 }
 
 /**
@@ -2433,7 +2825,7 @@ textarea {
  *
  * Based on: http://alistapart.com/article/creating-intrinsic-ratios-for-video
  */
-.featured-media {
+.flex-embed {
     display: block;
     overflow: hidden;
     position: relative;
@@ -2443,7 +2835,7 @@ textarea {
  * The aspect-ratio hack is applied to an empty element because it allows
  * the component to respect `max-height`. Default aspect ratio is 1:1.
  */
-.featured-media__ratio {
+.flex-embed__ratio {
     display: block;
     width: 100%; 
     padding-bottom: 100%;
@@ -2452,7 +2844,7 @@ textarea {
 /**
  * Modifier: 3:1 aspect ratio
  */
-.featured-media__ratio--3by1 {
+.flex-embed__ratio--3by1 {
     padding-bottom: -webkit-calc(100% / 3);
     padding-bottom: calc(100% / 3);
 }
@@ -2460,29 +2852,29 @@ textarea {
 /**
  * Modifier: 2:1 aspect ratio
  */
-.featured-media__ratio--2by1 {
+.flex-embed__ratio--2by1 {
     padding-bottom: 50%;
 }
 
 /**
  * Modifier: 16:9 aspect ratio
  */
-.featured-media__ratio--16by9 {
+.flex-embed__ratio--16by9 {
     padding-bottom: 56.25%;
 }
 
 /**
  * Modifier: 4:3 aspect ratio
  */
-.featured-media__ratio--4by3 {
+.flex-embed__ratio--4by3 {
     padding-bottom: 75%;
 }
 
 /**
  * Fit the content to the aspect ratio
  */
-.featured-media-content,
-.featured-media > iframe {
+.flex-embed-content,
+.flex-embed > iframe {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -3425,59 +3817,11 @@ pre {
 \*------------------------------------*/
 .breadcrumbs {
     display: inline-block;
-    margin-bottom: 1.5em;
     text-align: center;
-}
-.breadcrumbs a {
-    display: inline-block;
-    position: relative;
-    margin-right: -5px;
-    margin-bottom: 2px;
-    padding: 0 0.5625em 0 1.125em;
-    border: 1px solid gainsboro;
-    border-left: 0;
-    color: #999;
-    background-color: white;
-    font-size: 0.8em;
-    line-height: 2.25em;
-    text-decoration: none;
-}
-.breadcrumbs a:before,
-.breadcrumbs a:after {
-    display: block;
-    position: absolute;
-    z-index: 2; 
-    top: 0;
-    right: auto;
-    bottom: 0;
-    left: 100%;
-    margin: auto;
-    border-top: 1.125em solid transparent;
-    border-bottom: 1.125em solid transparent;
-    border-left: 0.5625em solid transparent;
-    content: "";
-}
-.breadcrumbs a:before {
-    z-index: 1; 
-    margin-left: 1px;
-    border-left-color: gainsboro;
-}
-.breadcrumbs a:after {
-    border-left-color: white;
-}
-.breadcrumbs a:hover {
-    opacity: 1;
-    text-decoration: underline;
-}
-
-span.sep {
-    display: none;
 }
 
 .trail-end {
-    display: block; 
-    font-size: 36px;
-    font-size: 2.25rem;
+    display: none;
 }
 
 /*------------------------------------*    #WIDGETS
@@ -3990,6 +4334,51 @@ a.info {
     fill: #ffe504;
 }
 
+.u-p\@all {
+    padding: 12px;
+}
+@media screen and (min-width: 48em) {
+    .u-p\@all {
+        padding: 24px;
+    }
+}
+@media screen and (min-width: 64em) {
+    .u-p\@all {
+        padding: 48px;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .u-ph\@all {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    .u-ph\@all {
+        padding-right: 48px;
+        padding-left: 48px;
+    }
+}
+
+.u-pv\@all {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+@media screen and (min-width: 48em) {
+    .u-pv\@all {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+}
+@media screen and (min-width: 64em) {
+    .u-pv\@all {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+}
+
 /*------------------------------------*    #HEADINGS
 \*------------------------------------*/
 .h1,
@@ -4023,14 +4412,16 @@ a.info {
 }
 
 .h3,
-.widget-title {
+.widget-title,
+.action-bar-wrap .site-title {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 1.2;
 }
 @media screen and (min-width: 48em) {
     .h3,
-    .widget-title {
+    .widget-title,
+    .action-bar-wrap .site-title {
         font-size: 24px;
         font-size: 1.5rem;
         line-height: 1;
@@ -4071,7 +4462,19 @@ a.info {
 
 @media screen and (min-width: 48em) {
     .action-bar-wrap {
-        display: block;
+        flex-direction: row;
+
+        -webkit-align-items: center;
+        align-items: center; 
+        -webkit-box-align: center;
+        -webkit-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -ms-flex-align: center;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        -ms-flex-pack: distribute;
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
     }
 }
 
@@ -4086,12 +4489,6 @@ a.info {
     -webkit-transition: 0.35s;
     transition: 0.35s;
 }
-@media screen and (min-width: 64em) {
-    .site-logo {
-        width: 120px;
-        height: 120px;
-    }
-}
 
 .header-wrap {
     text-align: center;
@@ -4101,9 +4498,6 @@ a.info {
     text-shadow: 0 2px rgba(62, 71, 76, 0.4);
 }
 
-.site-title {
-    margin: 12px 0;
-}
 .site-title a {
     font-weight: 400;
     letter-spacing: 2px;
@@ -4113,16 +4507,15 @@ a.info {
     overflow: visible !important;
     position: absolute;
     z-index: 999;
-    top: 65px;
     left: 50%;
-    margin-left: -60px;
+    margin-left: -40px;
     opacity: 0.7;
     -webkit-transition: 0.35s;
     transition: 0.35s;
 }
 @media screen and (min-width: 64em) {
     .site-logo-link {
-        margin-top: -120px;
+        margin-top: -60px;
     }
 }
 .site-logo-link:hover {
@@ -4176,8 +4569,8 @@ a.info {
 
 .toggle-img {
     display: block;
-    max-width: 48px;
-    max-height: 48px;
+    max-width: 38px;
+    max-height: 38px;
     margin: 0 auto;
 }
 
@@ -4239,412 +4632,16 @@ p:last-of-type {
 }
 
 .close-btn {
-    margin-right: -2.5em; 
-    padding: 2px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
     color: grey;
+    background-color: white;
     font-size: 23px;
+    text-align: center; 
     cursor: pointer;
-}
-
-.u-m {
-    margin: 24px;
-}
-
-.u-mt {
-    margin-top: 24px;
-}
-
-.u-mr {
-    margin-right: 24px;
-}
-
-.u-mb {
-    margin-bottom: 24px;
-}
-
-.u-ml {
-    margin-left: 24px;
-}
-
-.u-mh {
-    margin-right: 24px;
-    margin-left: 24px;
-}
-
-.u-mv {
-    margin-top: 24px;
-    margin-bottom: 24px;
-}
-
-/**
-     * Add tiny margins.
-     */
-.u-m-- {
-    margin: 6px;
-}
-
-.u-mt-- {
-    margin-top: 6px;
-}
-
-.u-mr-- {
-    margin-right: 6px;
-}
-
-.u-mb-- {
-    margin-bottom: 6px;
-}
-
-.u-ml-- {
-    margin-left: 6px;
-}
-
-.u-mh-- {
-    margin-right: 6px;
-    margin-left: 6px;
-}
-
-.u-mv-- {
-    margin-top: 6px;
-    margin-bottom: 6px;
-}
-
-/**
-     * Add small margins.
-     */
-.u-m- {
-    margin: 12px;
-}
-
-.u-mt- {
-    margin-top: 12px;
-}
-
-.u-mr- {
-    margin-right: 12px;
-}
-
-.u-mb- {
-    margin-bottom: 12px;
-}
-
-.u-ml- {
-    margin-left: 12px;
-}
-
-.u-mh- {
-    margin-right: 12px;
-    margin-left: 12px;
-}
-
-.u-mv- {
-    margin-top: 12px;
-    margin-bottom: 12px;
-}
-
-/**
-     * Add large margins.
-     */
-.u-m\+ {
-    margin: 48px;
-}
-
-.u-mt\+ {
-    margin-top: 48px;
-}
-
-.u-mr\+ {
-    margin-right: 48px;
-}
-
-.u-mb\+ {
-    margin-bottom: 48px;
-}
-
-.u-ml\+ {
-    margin-left: 48px;
-}
-
-.u-mh\+ {
-    margin-right: 48px;
-    margin-left: 48px;
-}
-
-.u-mv\+ {
-    margin-top: 48px;
-    margin-bottom: 48px;
-}
-
-/**
-     * Add huge margins.
-     */
-.u-m\+\+ {
-    margin: 96px;
-}
-
-.u-mt\+\+ {
-    margin-top: 96px;
-}
-
-.u-mr\+\+ {
-    margin-right: 96px;
-}
-
-.u-mb\+\+ {
-    margin-bottom: 96px;
-}
-
-.u-ml\+\+ {
-    margin-left: 96px;
-}
-
-.u-mh\+\+ {
-    margin-right: 96px;
-    margin-left: 96px;
-}
-
-.u-mv\+\+ {
-    margin-top: 96px;
-    margin-bottom: 96px;
-}
-
-/**
-     * Remove margins.
-     */
-.u-m0 {
-    margin: 0;
-}
-
-.u-mt0 {
-    margin-top: 0;
-}
-
-.u-mr0 {
-    margin-right: 0;
-}
-
-.u-mb0 {
-    margin-bottom: 0;
-}
-
-.u-ml0 {
-    margin-left: 0;
-}
-
-.u-mh0 {
-    margin-right: 0;
-    margin-left: 0;
-}
-
-.u-mv0 {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-/**
-     * Padding helper classes.
-     *
-     * Add paddings.
-     */
-.u-p {
-    padding: 24px;
-}
-
-.u-pt {
-    padding-top: 24px;
-}
-
-.u-pr {
-    padding-right: 24px;
-}
-
-.u-pb {
-    padding-bottom: 24px;
-}
-
-.u-pl {
-    padding-left: 24px;
-}
-
-.u-ph {
-    padding-right: 24px;
-    padding-left: 24px;
-}
-
-.u-pv {
-    padding-top: 24px;
-    padding-bottom: 24px;
-}
-
-/**
-     * Add tiny paddings.
-     */
-.u-p-- {
-    padding: 6px;
-}
-
-.u-pt-- {
-    padding-top: 6px;
-}
-
-.u-pr-- {
-    padding-right: 6px;
-}
-
-.u-pb-- {
-    padding-bottom: 6px;
-}
-
-.u-pl-- {
-    padding-left: 6px;
-}
-
-.u-ph-- {
-    padding-right: 6px;
-    padding-left: 6px;
-}
-
-.u-pv-- {
-    padding-top: 6px;
-    padding-bottom: 6px;
-}
-
-/**
-     * Add small paddings.
-     */
-.u-p-,
-.u-p\@all,
-.u-p\@all {
-    padding: 12px;
-}
-
-.u-pt-,
-.u-pt-wrap,
-.u-pt-wrap {
-    padding-top: 12px;
-}
-
-.u-pr- {
-    padding-right: 12px;
-}
-
-.u-pb- {
-    padding-bottom: 12px;
-}
-
-.u-pl- {
-    padding-left: 12px;
-}
-
-.u-ph-,
-.u-ph\@all,
-.u-ph\@all {
-    padding-right: 12px;
-    padding-left: 12px;
-}
-
-.u-pv-,
-.u-pv\@all,
-.u-pv\@all {
-    padding-top: 12px;
-    padding-bottom: 12px;
-}
-
-/**
-     * Add large paddings.
-     */
-.u-p\+ {
-    padding: 48px;
-}
-
-.u-pt\+ {
-    padding-top: 48px;
-}
-
-.u-pr\+ {
-    padding-right: 48px;
-}
-
-.u-pb\+ {
-    padding-bottom: 48px;
-}
-
-.u-pl\+ {
-    padding-left: 48px;
-}
-
-.u-ph\+ {
-    padding-right: 48px;
-    padding-left: 48px;
-}
-
-.u-pv\+ {
-    padding-top: 48px;
-    padding-bottom: 48px;
-}
-
-/**
-     * Add huge paddings.
-     */
-.u-p\+\+ {
-    padding: 96px;
-}
-
-.u-pt\+\+ {
-    padding-top: 96px;
-}
-
-.u-pr\+\+ {
-    padding-right: 96px;
-}
-
-.u-pb\+\+ {
-    padding-bottom: 96px;
-}
-
-.u-pl\+\+ {
-    padding-left: 96px;
-}
-
-.u-ph\+\+ {
-    padding-right: 96px;
-    padding-left: 96px;
-}
-
-.u-pv\+\+ {
-    padding-top: 96px;
-    padding-bottom: 96px;
-}
-
-/**
-     * Remove paddings.
-     */
-.u-p0 {
-    padding: 0;
-}
-
-.u-pt0 {
-    padding-top: 0;
-}
-
-.u-pr0 {
-    padding-right: 0;
-}
-
-.u-pb0 {
-    padding-bottom: 0;
-}
-
-.u-pl0 {
-    padding-left: 0;
-}
-
-.u-ph0 {
-    padding-right: 0;
-    padding-left: 0;
-}
-
-.u-pv0 {
-    padding-top: 0;
-    padding-bottom: 0;
 }

@@ -6,26 +6,41 @@
  */
 ?>
 
-<div <?php hybrid_attr( 'loop-meta' ); ?>>
+<?php if ( !is_front_page() && !is_singular() && !is_404() ) : ?>
 
-	<div <?php hybrid_attr( 'wrap', 'loop-meta' ); ?>>
+    <div <?php hybrid_attr( 'loop-meta' ); ?>>
 
-		<h1 <?php hybrid_attr( 'loop-title' ); ?>><?php hybrid_loop_title(); ?></h1>
+    		<h1 <?php hybrid_attr( 'loop-title' ); ?>><?php hybrid_loop_title(); ?></h1>
 
-		<?php if ( is_category() || is_tax() ) : ?>
+    		<?php if ( is_category() || is_tax() ) : ?>
 
-			<?php hybrid_get_menu( 'sub-terms' ); ?>
+    			<?php hybrid_get_menu( 'sub-terms' ); ?>
 
-		<?php endif; ?>
+    		<?php endif; ?>
 
-		<?php if ( ! is_paged() && $desc = hybrid_get_loop_description() ) : ?>
+    		<?php if ( ! is_paged() && $desc = hybrid_get_loop_description() ) : ?>
 
-			<div <?php hybrid_attr( 'loop-description' ); ?>>
-				<?= $desc; ?>
-			</div><!-- .loop-description -->
+    			<div <?php hybrid_attr( 'loop-description' ); ?>>
+    				<?= $desc; ?>
+    			</div><!-- .loop-description -->
 
-		<?php endif; ?>
+    		<?php endif; ?>
 
-	</div>
+    </div><!-- .loop-meta -->
 
-</div><!-- .loop-meta -->
+<?php elseif ( is_singular() ) : ?>
+
+    <?php $doc_post_title = get_post_field( 'post_title', get_queried_object_id() ); ?>
+
+    <header class="entry__header">
+        <h1 <?php hybrid_attr( 'entry-title' ); ?>><?php echo $doc_post_title; ?></h1>
+    </header><!-- .entry-header -->
+
+<?php else : ?>
+
+    <div <?php hybrid_attr( 'branding' ); ?>>
+        <?php hybrid_site_title(); ?>
+        <?php hybrid_site_description(); ?>
+    </div><!-- #branding -->
+
+<?php endif; ?>

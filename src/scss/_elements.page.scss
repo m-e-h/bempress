@@ -10,10 +10,7 @@
     cursor: default;
     font-family: $font-body;
     text-rendering: optimizeLegibility;
-    @include font-size($base-font-size - 1);
-    @include md {
-        @include font-size($base-font-size);
-    }
+    font-size: $base-font-size;
 }
 
 /**
@@ -49,7 +46,7 @@
 }
 
 html {
-    color: $base-text-color;
+    color: $color-text;
     min-height: 100%;
     background-color: #ffffff;
     -ms-text-size-adjust: 100%;
@@ -59,10 +56,13 @@ html {
 body {
     color: $color-text;
     font-family: $font-body;
-    font-size: $base-font-size;
+    @include font-size ($base-font-size - 1);
     font-style: normal;
     font-weight: 400;
     background-color: $color-bg;
+    @include md {
+        @include font-size ($base-font-size);
+    }
 }
 
 /**
