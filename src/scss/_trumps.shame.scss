@@ -188,6 +188,7 @@ p:last-of-type {
     max-height: 9999em;
     transition: max-height .5s cubic-bezier(0.95, 0.03, 1, 1), opacity 0.5s ease;
     opacity: 1;
+    overflow: visible;
 }
 
 .close-btn {

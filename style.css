@@ -4624,8 +4624,9 @@ p:last-of-type {
 }
 
 .panel.panel-open {
+    overflow: visible; 
     max-height: 9999em;
-    opacity: 1; 
+    opacity: 1;
     -webkit-transition: max-height 0.5s cubic-bezier(0.95, 0.03, 1, 1), opacity 0.5s ease;
     transition: max-height 0.5s cubic-bezier(0.95, 0.03, 1, 1), opacity 0.5s ease;
 }
