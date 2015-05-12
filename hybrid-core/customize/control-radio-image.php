@@ -1,9 +1,9 @@
 <?php
 /**
- * The radio image customize control extends the WP_Customize_Control class.  This class allows 
+ * The radio image customize control extends the WP_Customize_Control class.  This class allows
  * developers to create a list of image radio inputs.
  *
- * Note, the `$choices` array is slightly different than normal and should be in the form of 
+ * Note, the `$choices` array is slightly different than normal and should be in the form of
  * `array(
  *	$value => array( 'url' => $image_url, 'label' => $text_label ),
  *	$value => array( 'url' => $image_url, 'label' => $text_label ),
@@ -71,7 +71,7 @@ class Hybrid_Customize_Control_Radio_Image extends WP_Customize_Control {
 
 			<?php foreach ( $this->choices as $value => $args ) : ?>
 
-				<input type="radio" value="<?php echo esc_attr( $value ); ?>" name="<?php echo esc_attr( "_customize-radio-{$this->id}" ); ?>" id="<?php echo esc_attr( "{$this->id}-{$value}" ); ?>" <?php $this->link(); ?> <?php checked( $this->value(), $value ); ?> /> 
+				<input type="radio" value="<?php echo esc_attr( $value ); ?>" name="<?php echo esc_attr( "_customize-radio-{$this->id}" ); ?>" id="<?php echo esc_attr( "{$this->id}-{$value}" ); ?>" <?php $this->link(); ?> <?php checked( $this->value(), $value ); ?> />
 
 				<label for="<?php echo esc_attr( "{$this->id}-{$value}" ); ?>">
 					<span class="screen-reader-text"><?php echo esc_html( $args['label'] ); ?></span>
