@@ -56,12 +56,12 @@ html {
 body {
     color: $color-text;
     font-family: $font-body;
-    @include font-size ($base-font-size - 1);
+    @include font-size ($base-font-size);
     font-style: normal;
     font-weight: 400;
     background-color: $color-bg;
-    @include md {
-        @include font-size ($base-font-size);
+    @include sm {
+        @include font-size ($base-font-size - 1);
     }
 }
 
