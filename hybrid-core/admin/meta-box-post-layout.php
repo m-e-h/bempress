@@ -32,6 +32,7 @@ function hybrid_add_post_layout_meta_box( $post_type ) {
 	if ( current_theme_supports( 'theme-layouts', 'post_meta' ) && post_type_supports( $post_type, 'theme-layouts' ) && current_user_can( 'edit_theme_options' ) )
 		add_meta_box( 'hybrid-post-layout', __( 'Layout', 'hybrid-core' ), 'hybrid_post_layout_meta_box', $post_type, 'side', 'default' );
 }
+
 /**
  * Callback function for displaying the layout meta box.
  *
@@ -51,9 +52,9 @@ function hybrid_post_layout_meta_box( $post, $box ) {
 	$choices = array();
 
 	/* Loop through each of the layouts and add it to the choices array with proper key/value pairs. */
-	foreach ( hybrid_get_layout_objects() as $layout ) {
+	foreach ( hybrid_get_layouts() as $layout ) {
 
-		if ( true === $layout->show_in_meta_box )
+		if ( true === $layout->is_post_layout )
 			$choices[ $layout->name ] = $layout->label;
 	}
 

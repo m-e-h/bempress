@@ -64,12 +64,62 @@ function bempress_setup() {
     ] );
 
     // http://themehybrid.com/docs/theme-layouts
-    add_theme_support( 'theme-layouts', [
-            '1c'        => __( '1 Column Wide',                'bempress' ),
-            '1c-narrow' => __( '1 Column Narrow',              'bempress' ),
-            '2c-l'      => __( '2 Columns: Content / Sidebar', 'bempress' ),
-            '2c-r'      => __( '2 Columns: Sidebar / Content', 'bempress' )
-    ], ['default' => is_rtl() ? '2c-r' :'2c-l'] );
+    // add_theme_support( 'theme-layouts', [
+    //         '1c'        => __( '1 Column Wide',                'bempress' ),
+    //         '1c-narrow' => __( '1 Column Narrow',              'bempress' ),
+    //         '2c-l'      => __( '2 Columns: Content / Sidebar', 'bempress' ),
+    //         '2c-r'      => __( '2 Columns: Sidebar / Content', 'bempress' )
+    // ], ['default' => is_rtl() ? '2c-r' :'2c-l'] );
+    
+    
+// In theme setup
+add_theme_support( 'theme-layouts', array( 'default' => '2c-l' ) );
+
+add_action( 'hybrid_register_layouts', 'my_register_layouts' );
+
+function my_register_layouts() {
+    
+    hybrid_register_layout(
+        '1c',
+        array(
+            'label'            => _x( '1 Column Wide', 'theme layout', 'hybrid-core' ),
+            'is_global_layout' => true,
+            'is_post_layout'   => true,
+            'image'            => '', // Image URL. Doesn't do anything yet.
+        )
+    );
+
+    hybrid_register_layout(
+        '1c-narrow',
+        array(
+            'label'            => _x( '1 Column Narrow', 'theme layout', 'hybrid-core' ),
+            'is_global_layout' => true,
+            'is_post_layout'   => true,
+            'image'            => '', // Image URL. Doesn't do anything yet.
+        )
+    );
+
+    hybrid_register_layout(
+        '2c-l',
+        array(
+            'label'            => _x( '2 Columns: Content / Sidebar', 'theme layout', 'hybrid-core' ),
+            'is_global_layout' => true,
+            'is_post_layout'   => true,
+            'image'            => '', // Image URL. Doesn't do anything yet.
+        )
+    );
+
+    hybrid_register_layout(
+        '2c-r',
+        array(
+            'label'            => _x( '2 Columns: Sidebar / Content', 'theme layout', 'hybrid-core' ),
+            'is_global_layout' => true,
+            'is_post_layout'   => true,
+            'image'            => '', // Image URL. Doesn't do anything yet.
+        )
+    );
+}
+
 
     add_theme_support( 'custom-header', apply_filters( 'bempress_custom_header_args', [
         'default-image'          => '',
