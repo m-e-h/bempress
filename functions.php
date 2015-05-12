@@ -17,7 +17,6 @@ new Hybrid();
 
 add_action( 'after_setup_theme', 'bempress_setup', 10 );
 add_action( 'after_setup_theme', 'bempress_includes', 10 );
-add_filter( 'walker_nav_menu_start_el', 'bempress_nav_description', 10, 4 );
 
 
 
@@ -63,39 +62,21 @@ function bempress_setup() {
         'aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio'
     ] );
 
-    // http://themehybrid.com/docs/theme-layouts
-    // add_theme_support( 'theme-layouts', [
-    //         '1c'        => __( '1 Column Wide',                'bempress' ),
-    //         '1c-narrow' => __( '1 Column Narrow',              'bempress' ),
-    //         '2c-l'      => __( '2 Columns: Content / Sidebar', 'bempress' ),
-    //         '2c-r'      => __( '2 Columns: Sidebar / Content', 'bempress' )
-    // ], ['default' => is_rtl() ? '2c-r' :'2c-l'] );
-    
-    
+
 // In theme setup
 add_theme_support( 'theme-layouts', array( 'default' => '2c-l' ) );
 
 add_action( 'hybrid_register_layouts', 'my_register_layouts' );
 
 function my_register_layouts() {
-    
+
     hybrid_register_layout(
         '1c',
         array(
             'label'            => _x( '1 Column Wide', 'theme layout', 'hybrid-core' ),
             'is_global_layout' => true,
             'is_post_layout'   => true,
-            'image'            => '', // Image URL. Doesn't do anything yet.
-        )
-    );
-
-    hybrid_register_layout(
-        '1c-narrow',
-        array(
-            'label'            => _x( '1 Column Narrow', 'theme layout', 'hybrid-core' ),
-            'is_global_layout' => true,
-            'is_post_layout'   => true,
-            'image'            => '', // Image URL. Doesn't do anything yet.
+            'image'            => '%s/images/one-column.svg', // Image URL. Doesn't do anything yet.
         )
     );
 
@@ -105,7 +86,7 @@ function my_register_layouts() {
             'label'            => _x( '2 Columns: Content / Sidebar', 'theme layout', 'hybrid-core' ),
             'is_global_layout' => true,
             'is_post_layout'   => true,
-            'image'            => '', // Image URL. Doesn't do anything yet.
+            'image'            => '%s/images/sidebar-right.svg', // Image URL. Doesn't do anything yet.
         )
     );
 
@@ -115,7 +96,17 @@ function my_register_layouts() {
             'label'            => _x( '2 Columns: Sidebar / Content', 'theme layout', 'hybrid-core' ),
             'is_global_layout' => true,
             'is_post_layout'   => true,
-            'image'            => '', // Image URL. Doesn't do anything yet.
+            'image'            => '%s/images/sidebar-left.svg', // Image URL. Doesn't do anything yet.
+        )
+    );
+
+    hybrid_register_layout(
+        'cards',
+        array(
+            'label'            => _x( 'Card View', 'theme layout', 'hybrid-core' ),
+            'is_global_layout' => true,
+            'is_post_layout'   => true,
+            'image'            => '%s/images/cards.svg', // Image URL. Doesn't do anything yet.
         )
     );
 }
@@ -161,21 +152,3 @@ function bempress_includes() {
 
 // Add a hook for child themes to execute code.
 do_action( 'flagship_after_setup_parent' );
-
-
-
-function cc_mime_types($mimes) {
-  $mimes['svg'] = 'image/svg+xml';
-  return $mimes;
-}
-add_filter('upload_mimes', 'cc_mime_types');
-
-
-
-
-function bempress_nav_description( $item_output, $item, $depth, $args ) {
-    if ( $item->description ) {
-        $item_output = str_replace( $args->link_after . '</a>', '</a><a data-tip="true" class="tip--left tip--large tip--bottom menu-item__description info" data-tip-content="' . $item->description . '"><i class="fa fa-info-circle"></i></a>' . $args->link_after , $item_output );
-    }
-    return $item_output;
-}

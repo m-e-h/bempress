@@ -157,8 +157,56 @@ function bempress_admin_styles() {
 
 
 
-add_action( 'customize_register', 'my_customize_register', 11 );
+add_action( 'customize_register', 'bempress_customize_layout', 11 );
 
-function my_customize_register( $wp_customize ) {
+function bempress_customize_layout( $wp_customize ) {
     $wp_customize->get_setting( 'theme_layout' )->transport = 'refresh';
+}
+
+
+
+
+
+
+
+add_action( 'customize_register', 'bempress_color_palette' );
+
+function bempress_color_palette( $wp_customize ) {
+
+$wp_customize->add_setting(
+    'theme_colors',
+    array(
+        'default'           => get_theme_mod( 'theme_colors', 'cilantro' ),
+        'type'              => 'theme_mod',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'sanitize_key',
+        'transport'         => 'postMessage'
+    )
+);
+
+$wp_customize->add_control(
+    new Hybrid_Customize_Control_Palette(
+        $wp_customize,
+        'theme-colors-control',
+        array(
+            'label'    => esc_html__( 'Theme Colors', 'hybrid-core' ),
+            'section'  => 'title_tagline',
+            'settings' => 'theme_colors',
+            'choices'  => array(
+                'cilantro' => array(
+                    'label' => __( 'Cilantro', 'hybrid-core' ),
+                    'colors' => array( '99ce15', '389113', 'BDE066', 'DB412C' )
+                ),
+                'quench' => array(
+                    'label' => __( 'Quench', 'hybrid-core' ),
+                    'colors' => array( '#82D9F5', '#7cc7dc', '#60A4B9', '#a07096' )
+                ),
+                'cloudy-days' => array(
+                    'label' => __( 'Cloudy Days', 'hybrid-core' ),
+                    'colors' => array( '#E2735F', '#eaa16e', '#FBDF8B', '#ffe249' )
+                )
+            )
+        )
+    )
+);
 }

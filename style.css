@@ -1969,17 +1969,17 @@ body {
     color: #1f1f1f;
     background-color: #fffaf5; 
     font-family: "Roboto", sans-serif;
-    font-size: 15px;
-    font-size: 0.9375rem;
+    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     font-style: normal;
-    line-height: 1.6;
+    line-height: 1.5;
 }
-@media screen and (min-width: 48em) {
+@media screen and (max-width: 35.5em) {
     body {
-        font-size: 16px;
-        font-size: 1rem;
-        line-height: 1.5;
+        font-size: 15px;
+        font-size: 0.9375rem;
+        line-height: 1.6;
     }
 }
 

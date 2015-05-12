@@ -6,16 +6,13 @@
  */
 
 add_action( 'init', 'bempress_register_image_sizes', 5 );
-
 add_filter( 'excerpt_length', 'bempress_excerpt_length' );
-
 add_filter( 'excerpt_more', 'bempress_excerpt_more' );
-
 //add_action( 'tha_entry_bottom', 'abraham_do_format_icon' );
-
 add_action( 'after_setup_theme', 'bempress_responsive_videos_init', 99 );
-
 add_filter( 'hybrid_attr_comments-area', 'flagship_attr_comments_area' );
+add_filter( 'walker_nav_menu_start_el', 'bempress_nav_description', 10, 4 );
+add_filter('upload_mimes', 'bempress_mime_types');
 
 
 /**
@@ -156,4 +153,22 @@ function flagship_attr_comments_area( $attr ) {
     $attr['id']    = 'comments-area';
     $attr['class'] = 'comments-area';
     return $attr;
+}
+
+
+
+
+function bempress_nav_description( $item_output, $item, $depth, $args ) {
+    if ( $item->description ) {
+        $item_output = str_replace( $args->link_after . '</a>', '</a><a data-tip="true" class="tip--left tip--large tip--bottom menu-item__description info" data-tip-content="' . $item->description . '"><i class="fa fa-info-circle"></i></a>' . $args->link_after , $item_output );
+    }
+    return $item_output;
+}
+
+
+
+
+function bempress_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
 }
