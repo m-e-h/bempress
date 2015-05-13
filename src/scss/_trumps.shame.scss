@@ -48,9 +48,9 @@
         }
 }
 
-.home .site-logo {
-    margin-top: 10px;
-}
+// .home .site-logo {
+//     margin-top: 10px;
+// }
 
 .header-wrap {
     text-align: center;
@@ -148,18 +148,18 @@ p:last-of-type {
     z-index: 1;
     //position: fixed;
     max-height: 0;
-    //height: 100%;
+    height: 100%;
     overflow: hidden;
-    opacity: 0.5;
+    //opacity: 0.5;
     /*  Add animation when content expands and collapses */
 
     //-webkit-transition: opacity 0.35s ease;
-    transition: max-height 0.1s cubic-bezier(0, 0, 0, 1.01), opacity 0.5s ease;
+    transition: max-height 0.1s cubic-bezier(0, 0, 0, 1.01), opacity 0.0s ease;
 }
 
 .panel.panel-open {
     max-height: 9999em;
-    transition: max-height .5s cubic-bezier(0.95, 0.03, 1, 1), opacity 0.5s ease;
+    transition: max-height 2s cubic-bezier(0.95, 0.03, 1, 1), opacity 0.0s ease;
     opacity: 1;
     overflow: visible;
 }

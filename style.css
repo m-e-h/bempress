@@ -1738,8 +1738,6 @@ input.is-active[type="submit"],
     .menu-primary {
         position: relative;
         width: 100%;
-        -webkit-transition: none;
-        transition: none; 
         -webkit-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
         transform: translate(0, 0);
@@ -4342,10 +4340,6 @@ a.info {
     box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.25), 0 10px 5px 0 rgba(0, 0, 0, 0.22);
 }
 
-.home .site-logo {
-    margin-top: 10px;
-}
-
 .header-wrap {
     text-align: center;
 }
@@ -4442,19 +4436,19 @@ p:last-of-type {
     display: block;
     overflow: hidden;
     z-index: 1;
+    height: 100%;
     max-height: 0;
-    opacity: 0.5;
     /*  Add animation when content expands and collapses */
-    -webkit-transition: max-height 0.1s cubic-bezier(0, 0, 0, 1.01), opacity 0.5s ease;
-    transition: max-height 0.1s cubic-bezier(0, 0, 0, 1.01), opacity 0.5s ease;
+    -webkit-transition: max-height 0.1s cubic-bezier(0, 0, 0, 1.01), opacity 0s ease;
+    transition: max-height 0.1s cubic-bezier(0, 0, 0, 1.01), opacity 0s ease;
 }
 
 .panel.panel-open {
     overflow: visible; 
     max-height: 9999em;
     opacity: 1;
-    -webkit-transition: max-height 0.5s cubic-bezier(0.95, 0.03, 1, 1), opacity 0.5s ease;
-    transition: max-height 0.5s cubic-bezier(0.95, 0.03, 1, 1), opacity 0.5s ease;
+    -webkit-transition: max-height 2s cubic-bezier(0.95, 0.03, 1, 1), opacity 0s ease;
+    transition: max-height 2s cubic-bezier(0.95, 0.03, 1, 1), opacity 0s ease;
 }
 
 .close-btn {
