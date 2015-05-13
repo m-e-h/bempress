@@ -92,6 +92,25 @@ gulp.task('styles', function () {
     .pipe(gulp.dest('./'));
 });
 
+// Compile and Automatically Prefix Stylesheets
+gulp.task('critical', function () {
+  return gulp.src([
+    'src/scss/critical.scss'
+  ])
+    .pipe($.changed('styles', {extension: '.scss'}))
+    .pipe($.sass({
+      precision: 10
+    }))
+    .on('error', console.error.bind(console))
+    .pipe($.autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
+    .pipe(csscomb())
+    .pipe(gulp.dest('css'))
+    //Concatenate And Minify Styles
+    .pipe(rename({ extname: '.php' }))
+    .pipe(minifyCSS())
+    .pipe(gulp.dest('templates'));
+});
+
 // Concatenate And Minify JavaScript
 gulp.task('scripts', function() {
   return gulp.src([
@@ -109,10 +128,10 @@ gulp.task('scripts', function() {
 gulp.task('serve', ['styles'], function () {
   browserSync({
     //proxy: "local.wordpress.dev"
-    //proxy: "local.wordpress-trunk.dev"
+    proxy: "local.wordpress-trunk.dev"
     //proxy: "doc.dev"
     //proxy: "hvm.hgv.dev"
-    proxy: "127.0.0.1:8080/wordpress/"
+    //proxy: "127.0.0.1:8080/wordpress/"
      });
 
   gulp.watch(['**/*.php'], reload);
@@ -123,5 +142,5 @@ gulp.task('serve', ['styles'], function () {
 
 // Build Production Files, the Default Task
 gulp.task('default', function (cb) {
-  runSequence('styles', ['composer', 'scripts', 'images', 'hybrid', 'flagship', 'tha'], cb);
+  runSequence('styles', ['composer', 'scripts', 'critical', 'images', 'hybrid', 'flagship', 'tha'], cb);
 });
