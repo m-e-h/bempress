@@ -12,10 +12,10 @@ $includes_dir = trailingslashit( get_template_directory() );
 require_once( $includes_dir . 'hybrid-core/hybrid.php' );
 new Hybrid();
 
+require_once $includes_dir . 'inc/scripts.php';
 
 
-
-add_action( 'after_setup_theme', 'bempress_setup', 10 );
+add_action( 'after_setup_theme', 'bempress_setup', 5 );
 add_action( 'after_setup_theme', 'bempress_includes', 10 );
 
 
@@ -124,6 +124,9 @@ function my_register_layouts() {
         'wp-head-callback'       => 'bempress_header_style'
         ]
     ) );
+
+    /* Editor styles. */
+    add_editor_style( bempress_get_editor_styles() );
 }
 
 
@@ -138,7 +141,6 @@ function bempress_includes() {
     require_once $includes_dir . 'flagship.php';
     require_once $includes_dir . 'tha-theme-hooks.php';
     require_once $includes_dir . 'general.php';
-    require_once $includes_dir . 'scripts.php';
     require_once $includes_dir . 'widgetize.php';
     require_once $includes_dir . 'template-actions.php';
     require_once $includes_dir . 'html-min.php';

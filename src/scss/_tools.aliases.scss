@@ -36,7 +36,7 @@ $color-off-white:              #FFFAF5;
 
 // Text
 
-$color-text:                $grey-900;
+$color-text:                $base-text-color;
 $color-text-light:          lighten($color-text, 30);
 $color-text-dark:           darken($color-text, 10);
 $color-headings:            $grey-600;

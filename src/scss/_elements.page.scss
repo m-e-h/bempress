@@ -8,9 +8,13 @@
     text-size-adjust: 100%;
     box-sizing: border-box;
     cursor: default;
-    font-family: $font-body;
+    font-family: sans-serif;
+    font-weight: 400;
+    @include font-size ($base-font-size);
     text-rendering: optimizeLegibility;
-    font-size: $base-font-size;
+    min-height: 100%;
+    background-color: #ffffff;
+    color: $color-text;
 }
 
 /**
@@ -43,22 +47,10 @@
 ::before {
     text-decoration: inherit;
     vertical-align: inherit;
-}
-
-html {
-    color: $color-text;
-    min-height: 100%;
-    background-color: #ffffff;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+    transition: inherit;
 }
 
 body {
-    color: $color-text;
-    font-family: $font-body;
-    @include font-size ($base-font-size);
-    font-style: normal;
-    font-weight: 400;
     background-color: $color-bg;
     @include sm {
         @include font-size ($base-font-size - 1);

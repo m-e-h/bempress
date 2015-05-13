@@ -12,9 +12,7 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <?php wp_head(); ?>
 
-    <style type="text/css" id="critical-css">
-<?php get_template_part( 'templates/critical' ); ?>
-    </style>
+
 <?php tha_head_bottom(); ?>
 </head>
 

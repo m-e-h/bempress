@@ -57,18 +57,3 @@ $widths-columns: (
     4,
     5,
 ) !default;
-
-// Loop over our breakpoints defined in _settings.responsive.scss
-@each $breakpoint in $breakpoints {
-
-  // Get the name of the breakpoint.
-  $alias: nth($breakpoint, 1);
-
-  @include media-query($alias) {
-
-    // Loop through each of our column sizes and generate its width classes.
-    @each $widths-column in $widths-columns {
-      @include widths($widths-column, \@#{$alias});
-    }
-  }
-}

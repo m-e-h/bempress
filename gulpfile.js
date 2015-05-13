@@ -75,7 +75,6 @@ gulp.task('tha', function () {
 // Compile and Automatically Prefix Stylesheets
 gulp.task('styles', function () {
   return gulp.src([
-    'src/scss/*.scss',
     'src/scss/style.scss'
   ])
     .pipe($.changed('styles', {extension: '.scss'}))
@@ -111,6 +110,21 @@ gulp.task('critical', function () {
     .pipe(gulp.dest('templates'));
 });
 
+// Compile and Automatically Prefix Stylesheets
+gulp.task('wpeditor', function () {
+  return gulp.src([
+    'src/scss/editor-style.scss'
+  ])
+    .pipe($.changed('styles', {extension: '.scss'}))
+    .pipe($.sass({
+      precision: 10
+    }))
+    .on('error', console.error.bind(console))
+    .pipe($.autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
+    .pipe(minifyCSS())
+    .pipe(gulp.dest('css'))
+});
+
 // Concatenate And Minify JavaScript
 gulp.task('scripts', function() {
   return gulp.src([
@@ -142,5 +156,5 @@ gulp.task('serve', ['styles'], function () {
 
 // Build Production Files, the Default Task
 gulp.task('default', function (cb) {
-  runSequence('styles', ['composer', 'scripts', 'critical', 'images', 'hybrid', 'flagship', 'tha'], cb);
+  runSequence('styles', ['composer', 'scripts', 'critical', 'wpeditor', 'images', 'hybrid', 'flagship', 'tha'], cb);
 });

@@ -1,0 +1,40 @@
+
+/**
+ * #SETTINGS
+ */
+@import "settings.colors";
+@import "settings.responsive";
+@import "settings.icon-font";
+@import "settings.defaults";
+
+
+/**
+ * #TOOLS
+ */
+@import "tools.functions";
+@import "tools.mixins";
+@import "tools.aliases";
+@import "tools.spacing";
+@import "tools.widths";
+
+@import "style";
+
+/* Styles specific to the editor. */
+
+body, body#tinymce {
+    margin:    0 auto;
+    padding:   1.5rem 1.5rem 0;
+    border:    none;
+    font-family: $font-body;
+    color: $color-text;
+}
+
+@media screen and (max-width: 740px) {
+    body, img, .wp-caption {
+        max-width: 100%;
+    }
+
+    img, .wp-caption {
+        width: auto !important;
+    }
+}

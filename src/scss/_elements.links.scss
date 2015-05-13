@@ -1,14 +1,13 @@
 a {
     background-color: transparent;
     text-decoration: none;
-    transition: $base-transition;
 
     &:active,
     &:hover,
     &:focus {
         outline: 0;
         opacity: $base-opacity;
-        transition: $base-transition;
+        text-decoration: none;
     }
 }
 

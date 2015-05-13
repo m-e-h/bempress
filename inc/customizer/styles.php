@@ -327,7 +327,7 @@ function customizer_library_bempress_styles() {
 
 		Customizer_Library_Styles()->add( [
 			'selectors' => [
-				'body, .site-container'
+				'body'
 			],
 			'declarations' => [
 				'font-family' => $stack

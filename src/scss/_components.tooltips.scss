@@ -32,7 +32,6 @@ $tipMargin: 5px;
   position: relative;
   &:before,
   &:after {
-    transition: all $animDuration ease 0s;
     position: absolute;
     opacity: 0;
     visibility: hidden;

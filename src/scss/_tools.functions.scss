@@ -37,9 +37,9 @@
 //
 @function set-text-color($color) {
   @if (lightness($color) > 51) {
-    @return rgba(#000000, .9); // Lighter backgorund, return dark color
+    @return rgba($color-text, .95); // Lighter backgorund, return dark color
   } @else {
-    @return rgba(#ffffff, .9); // Darker background, return light color
+    @return rgba(#ffffff, .95); // Darker background, return light color
   }
 }
 
