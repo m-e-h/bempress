@@ -269,6 +269,7 @@ big {
 }
 
 body {
+    color: #50585d; 
     background-color: #fffaf5;
 }
 @media screen and (max-width: 35.5em) {
@@ -913,16 +914,6 @@ nav ul {
     display: -ms-flexbox;
     display: flex;
 }
-@media screen and (min-width: 48em) {
-    .flex {
-        flex-direction: row; 
-
-        -webkit-box-direction: normal;
-        -webkit-box-orient: horizontal;
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-    }
-}
 
 .flex--column {
     flex-direction: column; 
@@ -1270,146 +1261,6 @@ nav ul {
 
 /*------------------------------------*    #BLOCK
 \*------------------------------------*/
-/**
- * The card object simply stacks an image on top of some text-like content.
- */
-/**
- * Stacked image-with-text object. A simple abstraction to cover a very commonly
- * occurring design pattern.
- */
-.card {
-    display: block;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    max-width: 100%;
-    min-height: 0;
-    margin: 1em 0; 
-    padding: 0;
-    border-radius: 2px;
-    background: #fff;
-    box-shadow: 0 3px 0 0 #d4d4d5, 0 0 0 1px #d4d4d5;
-}
-
-.card__img {
-    display: block;
-    background: rgba(0, 0, 0, 0.05);
-    /**
-             * No space between the image and the text content.
-             */
-    /**
-             * Tiny space between the image and the text content.
-             */
-    /**
-             * Small space between the image and the text content.
-             */
-    /**
-             * Large space between the image and the text content.
-             */
-    /**
-             * Huge space between the image and the text content.
-             */
-}
-.card__img img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border: none; 
-    border-radius: 2px 2px 0 0;
-}
-.card--flush > .card__img {
-    margin-bottom: 0;
-}
-.card--tiny > .card__img {
-    margin-bottom: 6px;
-}
-.card--small > .card__img {
-    margin-bottom: 12px;
-}
-.card--large > .card__img {
-    margin-bottom: 48px;
-}
-.card--huge > .card__img {
-    margin-bottom: 96px;
-}
-
-/**
-     * Text-content.
-     */
-.card__content {
-    margin: 0;
-    padding: 1em;
-    border: none;
-    border-radius: 0; 
-    background: 0 0;
-    box-shadow: none;
-    font-size: 1em;
-
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    flex-grow: 1;
-    -ms-flex-positive: 1;
-}
-.card__content p {
-    margin-bottom: 0;
-}
-
-.card__heading {
-    display: block;
-    margin: 0; 
-    margin-top: -0.165em;
-    font-size: 1.2em;
-    font-weight: 700;
-    line-height: 1.33em;
-}
-
-.card__meta {
-    color: rgba(0, 0, 0, 0.4); 
-    font-size: 0.9em;
-}
-
-.card__body {
-    margin-top: 0.5em;
-}
-
-.card__footer {
-    position: static;
-    top: 0;
-    left: 0;
-    width: auto;
-    max-width: 100%;
-    min-height: 0 !important;
-    margin: 0;
-    padding: 0.75em 1em;
-    border-top: 1px solid rgba(0, 0, 0, 0.05); 
-    color: rgba(0, 0, 0, 0.4);
-    background: 0 0;
-    box-shadow: none;
-
-    -webkit-box-flex: 0;
-    -webkit-flex-grow: 0;
-    flex-grow: 0;
-    -ms-flex-positive: 0;
-}
-.card__footer p {
-    margin-bottom: 0;
-}
-
-/**
-     * Right-aligned cards.
-     */
-.card--right {
-    text-align: right;
-}
-
-/**
-     * Center-aligned cards.
-     */
-.card--center {
-    text-align: center;
-}
-
 /*------------------------------------*    $ARTICLES
 \*------------------------------------*/
 /**
@@ -2028,6 +1879,11 @@ a.menu-item__description.info {
     vertical-align: baseline;
 }
 
+.navigation,
+.nav-single {
+    width: 100%;
+}
+
 /*------------------------------------*    #META
 \*------------------------------------*/
 .entry__meta {
@@ -2397,7 +2253,6 @@ a.info {
     border: 0;
 }
 
-.visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
     overflow: visible;
     clip: auto;

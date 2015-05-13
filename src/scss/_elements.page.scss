@@ -52,6 +52,7 @@
 
 body {
     background-color: $color-bg;
+    color: $color-text;
     @include sm {
         @include font-size ($base-font-size - 1);
     }

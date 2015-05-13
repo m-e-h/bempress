@@ -106,6 +106,6 @@ function bempress_enqueue_scripts() {
 
     wp_enqueue_script(
         'bempress-main',
-        trailingslashit( get_template_directory_uri() ) . 'js/main.js{$suffix}', [], null, true
+        trailingslashit( get_template_directory_uri() ) . "js/main{$suffix}.js", [], null, true
     );
 }

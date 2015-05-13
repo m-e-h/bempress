@@ -13,23 +13,24 @@ class AttrTrumps {
 	public $site_container    			= '';	// site-container
 	public $site_inner   				= ' grid grid--flex u-mt- u-mt@md u-mt+@lg';	// site-inner
 	public $site_inner_full_width		= ' ';
-	public $site_inner_single_column 	= ' wrap';
+	public $card_layout_inner 	        = ' wrap';
 	public $site_inner_sidebar_right 	= ' wrap';
 	public $site_inner_sidebar_left 	= ' wrap grid--rev';
 	public $wrap                		= '';
     public $action_bar_wrap             = ' wrapper--wide shadow--z2 t-bg__1--glass flex flex--row flex--wrap flex--j-between';
 	public $header_wrap                	= ' wrapper--wide t-bg__tint';
+    public $card_wrap                   = ' grid__item flex u-ph@all u-1of1@sm u-1of2@md u-1of3@lg';
 	public $header                		= ' t-bg__tint'; 	// site-header
 	public $footer                		= ' t-bg__1'; 	// site-footer
 	public $content 					= ' grid__item'; 	// content
 	public $content_full_width			= ' u-1of1'; 	// content
-	public $content_single_column 		= ' u-1of1'; 	// content
+	public $content_card_layout 		= ' u-1of1 flex flex--row flex--wrap flex--j-between'; 	// content
 	public $content_sidebar_right 		= ' u-2of3@md u-pr@md u-pr+@lg'; 	// content
 	public $content_sidebar_left 		= ' u-2of3@md u-pl@md u-pl+@lg'; 	// content
 	public $main                		= ' ';
 	public $sidebar 					= ' grid__item';	// sidebar sidebar__{$context}
 	public $sidebar_full_width  		= ' u-1of1';	// sidebar sidebar__{$context}
-	public $sidebar_single_column  		= ' u-1of1';	// sidebar sidebar__{$context}
+	public $sidebar_card_layout  		= ' u-1of1';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_right 		= ' u-1of3@md';	// sidebar sidebar__{$context}
 	public $sidebar_sidebar_left		= ' u-1of3@md';	// sidebar sidebar__{$context}
 	public $sidebar_horizontal          = ' u-pl- u-pl@md u-pl+@lg grid grid--flex';	// sidebar sidebar__{$context}
@@ -54,6 +55,7 @@ class AttrTrumps {
 
 	/* Post-specific attributes. */
 	public $post                  		= ' br u-p@all u-mb- u-mb@md u-mb+@lg';	// get_post_class()
+    public $post_card_layout            = ' t-bg__white flex--grow'; // get_post_class()
 	public $entry_title           		= ' wrap entry__title';	// entry-title
 	public $entry_author          		= ' u-mr- entry__author';	// entry-author
 	public $entry_published       		= ' u-mr- entry__date';	// entry-published updated
@@ -61,7 +63,7 @@ class AttrTrumps {
 	public $entry_summary         		= ' wrap';	// entry-summary
 	public $entry_terms           		= ' badge';	// entry-terms
 
-    public $comments_area               = ' br u-p@all u-mb- u-mb@md u-mb+@lg'; // entry-terms
+    public $comments_area               = ' wrap br u-p@all u-mb- u-mb@md u-mb+@lg'; // entry-terms
 
 
 
@@ -126,8 +128,8 @@ class AttrTrumps {
 	if ( '1c' 	== get_theme_mod( 'theme_layout' ) ) :
 		$attr['class']    	.= $this->site_inner_full_width;
 
-	elseif ( '1c-narrow' 	== get_theme_mod( 'theme_layout' ) ) :
-		$attr['class']    	.= $this->site_inner_single_column;
+	elseif ( 'cards' 	== get_theme_mod( 'theme_layout' ) ) :
+		$attr['class']    	.= $this->card_layout_inner;
 
 	elseif ( '2c-l' 	== get_theme_mod( 'theme_layout' ) ) :
 		$attr['class']    	.= $this->site_inner_sidebar_right;
@@ -155,6 +157,9 @@ class AttrTrumps {
 		}
         if ( 'action-bar' === $context ) {
         $attr['class']    .= $this->action_bar_wrap;
+        }
+        if ( 'card' === $context && 'cards' == get_theme_mod( 'theme_layout' ) ) {
+        $attr['class']    .= $this->card_wrap;
         }
 		return $attr;
 	}
@@ -198,8 +203,8 @@ class AttrTrumps {
 	if ( '1c' 	== get_theme_mod( 'theme_layout' ) ) :
 		$attr['class']    	.= $this->content_full_width;
 
-	elseif ( '1c-narrow' 	== get_theme_mod( 'theme_layout' ) ) :
-		$attr['class']    	.= $this->content_single_column;
+	elseif ( 'cards' 	== get_theme_mod( 'theme_layout' ) ) :
+		$attr['class']    	.= $this->content_card_layout;
 
 	elseif ( '2c-l' 	== get_theme_mod( 'theme_layout' ) ) :
 		$attr['class']    	.= $this->content_sidebar_right;
@@ -227,8 +232,8 @@ class AttrTrumps {
 			if ( '1c'	== get_theme_mod( 'theme_layout' ) ) :
 				$attr['class']	.= $this->sidebar_full_width;
 
-			elseif ( '1c-narrow'	== get_theme_mod( 'theme_layout' ) ) :
-				$attr['class']	.= $this->sidebar_single_column;
+			elseif ( 'cards'	== get_theme_mod( 'theme_layout' ) ) :
+				$attr['class']	.= $this->sidebar_card_layout;
 
 			elseif ( '2c-l'	== get_theme_mod( 'theme_layout' ) ) :
 				$attr['class']	.= $this->sidebar_sidebar_right;
@@ -317,7 +322,11 @@ class AttrTrumps {
 
 	public function post( $attr ) {
 		$attr['class']    .= $this->post;
-		return $attr;
+    if ( 'cards'   == get_theme_mod( 'theme_layout' ) ) :
+        $attr['class']      .= $this->post_card_layout;
+    endif;
+
+        return $attr;
 	}
 
 

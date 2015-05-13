@@ -4,9 +4,6 @@
 
 .flex {
     display: flex;
-    @include md {
-        flex-direction: row;
-    }
 }
 
 .flex--column {

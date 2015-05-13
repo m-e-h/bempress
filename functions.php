@@ -76,7 +76,7 @@ function my_register_layouts() {
             'label'            => _x( '1 Column Wide', 'theme layout', 'hybrid-core' ),
             'is_global_layout' => true,
             'is_post_layout'   => true,
-            'image'            => '%s/images/one-column.svg', // Image URL. Doesn't do anything yet.
+            'image'            => '%s/images/one-column.svg',
         )
     );
 
@@ -86,7 +86,7 @@ function my_register_layouts() {
             'label'            => _x( '2 Columns: Content / Sidebar', 'theme layout', 'hybrid-core' ),
             'is_global_layout' => true,
             'is_post_layout'   => true,
-            'image'            => '%s/images/sidebar-right.svg', // Image URL. Doesn't do anything yet.
+            'image'            => '%s/images/sidebar-right.svg',
         )
     );
 
@@ -96,7 +96,7 @@ function my_register_layouts() {
             'label'            => _x( '2 Columns: Sidebar / Content', 'theme layout', 'hybrid-core' ),
             'is_global_layout' => true,
             'is_post_layout'   => true,
-            'image'            => '%s/images/sidebar-left.svg', // Image URL. Doesn't do anything yet.
+            'image'            => '%s/images/sidebar-left.svg',
         )
     );
 
@@ -106,7 +106,7 @@ function my_register_layouts() {
             'label'            => _x( 'Card View', 'theme layout', 'hybrid-core' ),
             'is_global_layout' => true,
             'is_post_layout'   => true,
-            'image'            => '%s/images/cards.svg', // Image URL. Doesn't do anything yet.
+            'image'            => '%s/images/cards.svg',
         )
     );
 }
