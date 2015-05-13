@@ -21,6 +21,5 @@
     cursor: pointer;
     &.is-active, &:hover, &:focus {
         opacity: $base-opacity;
-        transition: $base-transition;
     }
 }

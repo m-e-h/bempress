@@ -1,4 +1,4 @@
-<div class="toggles grid">
+<div class="toggles grid u-1of1@sm">
 
     <?php if ( is_active_sidebar( 'panel-parishes' ) ) : ?>
 

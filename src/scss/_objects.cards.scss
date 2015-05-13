@@ -39,7 +39,6 @@ $enable-card--right:     true !default;
     padding: 0;
     border-radius: $base-radius;
     box-shadow: 0 3px 0 0 #d4d4d5,0 0 0 1px #d4d4d5;
-    transition: $base-transition;
     margin: 1em 0;
 }
 
@@ -173,7 +172,6 @@ $enable-card--right:     true !default;
         left: 0;
         color: rgba(0,0,0,.4);
         box-shadow: none;
-        transition: color .2s ease;
         border-top: 1px solid rgba(0,0,0,.05);
 
         p {

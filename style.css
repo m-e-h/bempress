@@ -2991,8 +2991,6 @@ textarea {
     border-radius: 2px;
     background: #fff;
     box-shadow: 0 3px 0 0 #d4d4d5, 0 0 0 1px #d4d4d5;
-    -webkit-transition: 0.35s;
-    transition: 0.35s;
 }
 
 .card__img {
@@ -3089,8 +3087,6 @@ textarea {
     color: rgba(0, 0, 0, 0.4);
     background: 0 0;
     box-shadow: none;
-    -webkit-transition: color 0.2s ease;
-    transition: color 0.2s ease;
 
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
@@ -3191,8 +3187,6 @@ input[type="submit"],
     text-align: center;
     letter-spacing: 1px;
     cursor: pointer;
-    -webkit-transition: 0.35s;
-    transition: 0.35s;
 
     -webkit-box-direction: normal;
     -webkit-box-orient: horizontal;
@@ -3501,8 +3495,6 @@ input.is-active[type="submit"],
     border-radius: 0;
     background-color: transparent;
     font-size: 11px;
-    -webkit-transition: background-color 0.2s ease-out;
-    transition: background-color 0.2s ease-out;
 
     -webkit-tap-highlight-color: transparent;
 }
@@ -3515,10 +3507,8 @@ input.is-active[type="submit"],
 .menu-toggle span:before,
 .menu-toggle span:after {
     width: 100%;
-    height: 0.2em;
+    height: 0.2em; 
     background-color: #fff;
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
 }
 
 .menu-toggle span:before,
@@ -3578,14 +3568,6 @@ input.is-active[type="submit"],
     -webkit-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
-}
-
-.action-bar,
-.menu-primary.has-opened,
-.site-container,
-.site-header {
-    -webkit-transition: -webkit-transform 0.3s ease-out;
-    transition: transform 0.3s ease-out;
 }
 
 /** Larger Screens - desktops and tablets **/
@@ -4091,8 +4073,6 @@ a.info {
 .u-link--object:hover,
 .u-link--object:focus {
     opacity: 0.7;
-    -webkit-transition: 0.35s;
-    transition: 0.35s;
 }
 
 /*------------------------------------*    #HELPERS
@@ -4494,8 +4474,6 @@ a.info {
     opacity: 0.7; 
     background-color: #fff;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23);
-    -webkit-transition: 0.35s;
-    transition: 0.35s;
 }
 @media screen and (min-width: 64em) {
     .site-logo {
@@ -4593,23 +4571,17 @@ p:last-of-type {
 }
 
 .entry-content a:not(.button) {
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid transparent; 
     color: #385996;
-    -webkit-transition: 0.35s;
-    transition: 0.35s;
 }
 .entry-content a:not(.button):hover,
 .entry-content a:not(.button):focus {
-    border-bottom-color: #91a9d6;
+    border-bottom-color: #91a9d6; 
     opacity: 1;
     color: #6c8cc8;
-    -webkit-transition: 0.35s;
-    transition: 0.35s;
 }
 .entry-content a:not(.button):active {
     color: #476fba;
-    -webkit-transition: 0.35s;
-    transition: 0.35s;
 }
 
 .panel {
@@ -4644,4 +4616,8 @@ p:last-of-type {
     font-size: 23px;
     text-align: center; 
     cursor: pointer;
+}
+
+.comment-list {
+    list-style: none;
 }

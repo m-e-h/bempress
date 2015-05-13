@@ -17,7 +17,7 @@ class AttrTrumps {
 	public $site_inner_sidebar_right 	= ' wrap';
 	public $site_inner_sidebar_left 	= ' wrap grid--rev';
 	public $wrap                		= '';
-    public $action_bar_wrap             = ' wrapper--wide shadow--z2 t-bg__1--glass flex';
+    public $action_bar_wrap             = ' wrapper--wide shadow--z2 t-bg__1--glass flex flex--row flex--wrap flex--j-between';
 	public $header_wrap                	= ' wrapper--wide t-bg__tint';
 	public $header                		= ' t-bg__tint'; 	// site-header
 	public $footer                		= ' t-bg__1'; 	// site-footer
