@@ -52,7 +52,15 @@ function doc_front_page_title() {
 <?php }
 
 function doc_logo() {
-    flagship_the_logo();
+
+if( get_theme_mod( 'bempress_logo') != "" ): ?>
+
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo-link" rel="home">
+        <img id="logo" class="site-logo" src="<?php echo get_theme_mod( 'bempress_logo' ); ?>">
+    </a>
+
+<?php endif;
+
 }
 
 

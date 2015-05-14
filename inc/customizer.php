@@ -65,7 +65,7 @@ function bempress_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
       'bempress_logo',
       array(
-        'default'     => get_template_directory_uri() . '/images/logo.svg',
+        'default'     => '',
         //'transport'   => 'postMessage'
       )
     );

@@ -36,7 +36,7 @@ function bempress_setup() {
 	add_theme_support( 'hybrid-core-styles', ['style', 'google-fonts'] );
 
 	// https://github.com/FlagshipWP/flagship-library/wiki/Flagship-Site-Logo
-	add_theme_support( 'site-logo' );
+	//add_theme_support( 'site-logo' );
 
 	// https://github.com/justintadlock/breadcrumb-trail
 	add_theme_support( 'breadcrumb-trail' );
@@ -112,18 +112,7 @@ function my_register_layouts() {
 }
 
 
-    add_theme_support( 'custom-header', apply_filters( 'bempress_custom_header_args', [
-        'default-image'          => '',
-        'default-text-color'     => 'FFFFFF',
-        'width'                  => 1920,
-        'height'                 => 500,
-        'flex-width'             => true,
-        'flex-height'            => true,
-        'header-text'            => true,
-        'uploads'                => true,
-        'wp-head-callback'       => 'bempress_header_style'
-        ]
-    ) );
+
 
     /* Editor styles. */
     add_editor_style( bempress_get_editor_styles() );
@@ -144,10 +133,13 @@ function bempress_includes() {
     require_once $includes_dir . 'widgetize.php';
     require_once $includes_dir . 'template-actions.php';
     require_once $includes_dir . 'html-min.php';
-    require_once $includes_dir . 'customizer/customizer.php';
-    require_once $includes_dir . 'customizer/custom-header.php';
-    require_once $includes_dir . 'customizer/custom-background.php';
+    require_once $includes_dir . 'customizer.php';
+    require_once $includes_dir . 'custom-header.php';
+    require_once $includes_dir . 'custom-background.php';
     require_once $includes_dir . 'css-classes.php';
+    require_once $includes_dir . 'Color.php';
+    //require_once $includes_dir . 'customizer-styles.php';
+    require_once $includes_dir . 'custom-colors.php';
     new AttrTrumps();
 }
 
