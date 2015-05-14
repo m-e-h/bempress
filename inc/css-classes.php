@@ -49,9 +49,9 @@ class AttrTrumps {
 	public $site_description      		= ' page-title__sub';	// site-description
 
 	/* Loop attributes. */
-	public $loop_meta             		= ' u-p@all';	// loop-meta
-	public $loop_title            		= ' u-m0';	// loop-title
-	public $loop_description      		= ' u-mt-';	// loop-description
+	public $loop_meta             		= ' u-p@all';	// archive-header
+	public $loop_title            		= ' u-m0';	// archive-title
+	public $loop_description      		= ' u-mt-';	// archive-description
 
 	/* Post-specific attributes. */
 	public $post                  		= ' br u-p@all u-mb- u-mb@md u-mb+@lg';	// get_post_class()
@@ -81,7 +81,7 @@ class AttrTrumps {
 		add_filter( 'hybrid_attr_main',				[ $this, 'main' ] );
 		add_filter( 'hybrid_attr_sidebar',			[ $this, 'sidebar' ], 10, 2 );
 		add_filter( 'hybrid_attr_menu',				[ $this, 'menu' ], 10, 2 );
-		add_filter( 'hybrid_attr_loop-meta',		[ $this, 'loop_meta' ] );
+		add_filter( 'hybrid_attr_archive-header',		[ $this, 'loop_meta' ] );
 
         add_filter( 'hybrid_attr_author-box',       [ $this, 'author_box' ], 10, 2 );
 
@@ -90,8 +90,8 @@ class AttrTrumps {
 		add_filter( 'hybrid_attr_branding',			[ $this, 'branding' ] );
 		add_filter( 'hybrid_attr_site-title',		[ $this, 'site_title' ] );
 		add_filter( 'hybrid_attr_site-description',	[ $this, 'site_description' ] );
-		add_filter( 'hybrid_attr_loop-title',		[ $this, 'loop_title' ] );
-		add_filter( 'hybrid_attr_loop-description',	[ $this, 'loop_description' ] );
+		add_filter( 'hybrid_attr_archive-title',		[ $this, 'loop_title' ] );
+		add_filter( 'hybrid_attr_archive-description',	[ $this, 'loop_description' ] );
 
         add_filter( 'hybrid_attr_nav',              [ $this, 'nav' ], 10, 2 );
 

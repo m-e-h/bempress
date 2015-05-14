@@ -21,7 +21,7 @@ get_header(); ?>
 
                 <?php tha_entry_after(); ?>
 
-                <?php get_template_part( 'templates/loop-nav' ); ?>
+                <?php get_template_part( 'templates/post-nav' ); ?>
 
                 <?php comments_template( '', true ); ?>
 

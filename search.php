@@ -15,7 +15,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<?php get_template_part( 'templates/loop-meta' ); ?>
+			<?php get_template_part( 'templates/archive-header' ); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -27,7 +27,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php get_template_part( 'templates/loop-nav' ); ?>
+			<?php get_template_part( 'templates/post-nav' ); ?>
 
 		<?php else : ?>
 

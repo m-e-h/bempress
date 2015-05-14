@@ -53,9 +53,9 @@
 		] );
 		?>
 
-		<?php get_template_part( 'templates/archive', 'header' ); ?>
+		<?php get_template_part( 'templates/plural', 'header' ); ?>
 
-		<?php get_template_part( 'templates/archive', 'content' ); ?>
+		<?php get_template_part( 'templates/plural', 'content' ); ?>
 
 
 <?php endif; // End single post check. ?>

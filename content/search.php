@@ -12,11 +12,11 @@
 
     <?php tha_entry_top(); ?>
 
-    <?php get_template_part( 'templates/archive', 'header' ); ?>
+    <?php get_template_part( 'templates/plural', 'header' ); ?>
 
-    <?php get_template_part( 'templates/archive', 'content' ); ?>
+    <?php get_template_part( 'templates/plural', 'content' ); ?>
 
-    <?php get_template_part( 'templates/archive', 'footer' ); ?>
+    <?php get_template_part( 'templates/plural', 'footer' ); ?>
 
     <?php tha_entry_bottom(); ?>
 

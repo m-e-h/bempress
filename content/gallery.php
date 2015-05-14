@@ -37,7 +37,7 @@
 		] );
 		?>
 
-		<?php get_template_part( 'templates/archive', 'header' ); ?>
+		<?php get_template_part( 'templates/plural', 'header' ); ?>
 
 		<div <?php hybrid_attr( 'entry-summary' ); ?>>
 			<?php the_excerpt(); ?>

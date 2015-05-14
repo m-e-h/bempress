@@ -321,53 +321,90 @@ if("document" in self){if(!("classList" in document.createElement("_"))){(functi
   });
 })();
 
-(function () {
-  'use strict';
+jQuery(document).ready(function($) {
 
-  var querySelector = document.querySelector.bind(document);
+    function navMenu() {
 
-  var schoolsNav = querySelector('#schools-toggle-nav');
-  var parishNav = querySelector('#parishes-toggle-nav');
-  var dpcNav = querySelector('#dpc-toggle-nav');
-  var parishToggle = querySelector('#parish-toggle');
-  var dpcToggle = querySelector('#dpc-toggle');
-  var schoolsToggle = querySelector('#schools-toggle');
-  var menuPrimary = querySelector('.menu-primary');
-  var main = querySelector('.site-container');
-  var closeButton = querySelector('.panel-close');
-  var closeButtonTwo = querySelector('.panel-close2');
-  var closeButtonThree = querySelector('.panel-close3');
+        var parishToggle = $('#parish-toggle');
+        var dpcToggle = $('#dpc-toggle');
+        var schoolsToggle = $('#schools-toggle');
+        var searchToggle = $('#search-toggle');
 
-  function closePanel() {
-    schoolsNav.classList.remove('panel-open');
-    dpcNav.classList.remove('panel-open');
-    parishNav.classList.remove('panel-open');
-  }
+        var schoolsNav = $('#schools-toggle-nav');
+        var parishNav = $('#parishes-toggle-nav');
+        var searchNav = $('#search-toggle-nav');
+        var dpcNav = $('#dpc-toggle-nav');
 
-  function schoolsTogglePanel() {
-    dpcNav.classList.remove('panel-open');
-    parishNav.classList.remove('panel-open');
-    schoolsNav.classList.toggle('panel-open');
-  }
+        function scrollTop() {
+            $( 'body,html' ).animate( {
+                scrollTop: 0
+            }, 400 );
+        }
 
-  function dpcTogglePanel() {
-    schoolsNav.classList.remove('panel-open');
-    parishNav.classList.remove('panel-open');
-    dpcNav.classList.toggle('panel-open');
-  }
+        function myToggleClass( $myvar ) {
+            if ( $myvar.hasClass( 'is-active' ) ) {
+                $myvar.removeClass( 'is-active' );
+            } else {
+                $myvar.addClass('is-active');
+            }
+        }
 
-  function parishTogglePanel() {
-    schoolsNav.classList.remove('panel-open');
-    dpcNav.classList.remove('panel-open');
-    parishNav.classList.toggle('panel-open');
-  }
+        // Display/hide sidebar
+        parishToggle.on('click', function() {
+            parishNav.slideToggle();
+            myToggleClass($(this));
+            scrollTop();
 
-  menuPrimary.addEventListener('click', closePanel);
-  main.addEventListener('click', closePanel);
-  closeButton.addEventListener('click', closePanel);
-  closeButtonTwo.addEventListener('click', closePanel);
-  closeButtonThree.addEventListener('click', closePanel);
-  schoolsToggle.addEventListener('click', schoolsTogglePanel);
-  parishToggle.addEventListener('click', parishTogglePanel);
-  dpcToggle.addEventListener('click', dpcTogglePanel);
-})();
+            schoolsNav.hide();
+            dpcNav.hide();
+            searchNav.hide();
+
+            searchToggle.removeClass('is-active');
+            dpcToggle.removeClass('is-active');
+            schoolsToggle.removeClass('is-active');
+        });
+        // Display/hide social links
+        schoolsToggle.on('click', function() {
+            schoolsNav.slideToggle();
+            myToggleClass($(this));
+            scrollTop();
+
+            dpcNav.hide();
+            searchNav.hide();
+            parishNav.hide();
+
+            searchToggle.removeClass('is-active');
+            dpcToggle.removeClass('is-active');
+            parishToggle.removeClass('is-active');
+        });
+        // Display/hide menu
+        dpcToggle.on('click', function() {
+            dpcNav.slideToggle();
+            myToggleClass($(this));
+            scrollTop();
+
+            searchNav.hide();
+            parishNav.hide();
+            schoolsNav.hide();
+
+            searchToggle.removeClass('is-active');
+            parishToggle.removeClass('is-active');
+            schoolsToggle.removeClass('is-active');
+        });
+        // Display/hide search
+        searchToggle.on('click', function() {
+            searchNav.slideToggle();
+            myToggleClass($(this));
+            scrollTop();
+
+            parishNav.hide();
+            schoolsNav.hide();
+            dpcNav.hide();
+
+            parishToggle.removeClass('is-active');
+            dpcToggle.removeClass('is-active');
+            schoolsToggle.removeClass('is-active');
+        });
+    }
+    $(window).on('load', navMenu);
+} );

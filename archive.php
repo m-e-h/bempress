@@ -31,7 +31,7 @@ get_header(); ?>
 
             <?php endwhile; ?>
 
-            <?php get_template_part( 'templates/loop-nav' ); ?>
+            <?php get_template_part( 'templates/post-nav' ); ?>
 
         <?php else : ?>
 

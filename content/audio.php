@@ -30,11 +30,11 @@
 
     <?php else : // If not viewing a single post. ?>
 
-		<?php get_template_part( 'templates/archive', 'header' ); ?>
+		<?php get_template_part( 'templates/plural', 'header' ); ?>
 
 		<?php if ( has_excerpt() ) : // If the post has an excerpt. ?>
 
-			<?php get_template_part( 'templates/archive', 'content' ); ?>
+			<?php get_template_part( 'templates/plural', 'content' ); ?>
 
 		<?php elseif ( empty( $audio ) ) : // Else, if no audio. ?>
 

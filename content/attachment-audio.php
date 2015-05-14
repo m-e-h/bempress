@@ -48,9 +48,9 @@
 
 		<?php get_the_image( array( 'size' => 'bempress-full', 'order' => array( 'featured', 'attachment' ) ) ); ?>
 
-		<?php get_template_part( 'templates/archive', 'header' ); ?>
+		<?php get_template_part( 'templates/plural', 'header' ); ?>
 
-		<?php get_template_part( 'templates/archive', 'content' ); ?>
+		<?php get_template_part( 'templates/plural', 'content' ); ?>
 
 	</article><!-- .entry -->
 

@@ -72,6 +72,7 @@
 }
 
 body {
+    color: #50585d; 
     background-color: #fffaf5;
 }
 @media screen and (max-width: 35.5em) {

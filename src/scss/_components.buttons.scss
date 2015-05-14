@@ -7,13 +7,15 @@
     border-radius: $base-radius;
     border-width: 0;
     padding: ($base-spacing-unit / 2) $base-spacing-unit;
-    outline: 0;
     letter-spacing: 1px;
     flex-direction: row;
-    &:hover, &:active, &:focus {
+    &:hover,
+    &:active {
         opacity: 1;
         background-color: $btn-bg-hover;
+        outline: 0;
     }
+    &:focus,
     &:active,
     &.is-active {
         background-color: $btn-bg-active;

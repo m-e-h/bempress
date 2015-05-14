@@ -46,7 +46,7 @@
 		] );
 		?>
 
-		<?php get_template_part( 'templates/archive', 'header' ); ?>
+		<?php get_template_part( 'templates/plural', 'header' ); ?>
 
 		<?php if ( has_excerpt() ) : // If the post has an excerpt. ?>
 

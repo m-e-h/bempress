@@ -73,9 +73,6 @@ if ( !class_exists( 'Hybrid' ) ) {
 			/* Load the core functions/classes required by the rest of the framework. */
 			add_action( 'after_setup_theme', array( $this, 'core' ), 2 );
 
-			/* Initialize the framework's default actions and filters. */
-			add_action( 'after_setup_theme', array( $this, 'default_filters' ), 3 );
-
 			/* Handle theme supported features. */
 			add_action( 'after_setup_theme', array( $this, 'theme_support' ), 12 );
 
@@ -327,39 +324,6 @@ if ( !class_exists( 'Hybrid' ) ) {
 			/* Load the main admin file if in admin. */
 			if ( is_admin() )
 				require_once( HYBRID_ADMIN . 'admin.php' );
-		}
-
-		/**
-		 * Adds the default framework actions and filters.
-		 *
-		 * @since  1.0.0
-		 * @access public
-		 * @return void
-		 */
-		function default_filters() {
-			global $wp_embed;
-
-			/* Remove bbPress theme compatibility if current theme supports bbPress. */
-			if ( current_theme_supports( 'bbpress' ) )
-				remove_action( 'bbp_init', 'bbp_setup_theme_compat', 8 );
-
-			/* Don't strip tags on single post titles. */
-			remove_filter( 'single_post_title', 'strip_tags' );
-
-			/* Use same default filters as 'the_content' with a little more flexibility. */
-			add_filter( 'hybrid_loop_description', array( $wp_embed, 'run_shortcode' ),   5 );
-			add_filter( 'hybrid_loop_description', array( $wp_embed, 'autoembed'     ),   5 );
-			add_filter( 'hybrid_loop_description',                   'wptexturize',       10 );
-			add_filter( 'hybrid_loop_description',                   'convert_smilies',   15 );
-			add_filter( 'hybrid_loop_description',                   'convert_chars',     20 );
-			add_filter( 'hybrid_loop_description',                   'wpautop',           25 );
-			add_filter( 'hybrid_loop_description',                   'do_shortcode',      30 );
-			add_filter( 'hybrid_loop_description',                   'shortcode_unautop', 35 );
-
-			/* Filters for the audio transcript. */
-			add_filter( 'hybrid_audio_transcript', 'wptexturize',   10 );
-			add_filter( 'hybrid_audio_transcript', 'convert_chars', 20 );
-			add_filter( 'hybrid_audio_transcript', 'wpautop',       25 );
 		}
 	}
 }

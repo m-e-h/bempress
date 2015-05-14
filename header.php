@@ -48,13 +48,13 @@
 
             <?php tha_header_top(); ?>
 
-            <div <?php hybrid_attr( 'loop-meta' ); ?>>
+            <div <?php hybrid_attr( 'archive-header' ); ?>>
 
             <?php hybrid_get_menu( 'breadcrumbs' ); ?>
 
-            <?php get_template_part( 'templates/loop-meta' ); ?>
+            <?php get_template_part( 'templates/archive-header' ); ?>
 
-            </div><!-- .loop-meta -->
+            </div><!-- .archive-header -->
 
             <?php tha_header_bottom(); ?>
 

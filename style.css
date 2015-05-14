@@ -312,6 +312,7 @@ hr {
 
 span {
     display: inline-block;
+    vertical-align: baseline;
 }
 
 ::-moz-selection {
@@ -1330,7 +1331,6 @@ input[type="submit"],
     padding: 12px 24px;
     border-width: 0;
     border-radius: 2px;
-    outline: 0;
     color: rgba(255, 255, 255, 0.95);
     background-color: #476fba;
     font: inherit;
@@ -1368,7 +1368,11 @@ input[type="submit"]:active,
 .button--transparent:active,
 .menu__item > a:active,
 .button--outline:active,
-.button--tab:active,
+.button--tab:active {
+    outline: 0; 
+    opacity: 1;
+    background-color: #6c8cc8;
+}
 .btn:focus,
 button:focus,
 .button:focus,
@@ -1381,10 +1385,7 @@ input[type="submit"]:focus,
 .button--transparent:focus,
 .menu__item > a:focus,
 .button--outline:focus,
-.button--tab:focus {
-    opacity: 1;
-    background-color: #6c8cc8;
-}
+.button--tab:focus,
 .btn:active,
 button:active,
 .button:active,
@@ -4330,8 +4331,8 @@ a.info {
 @media screen and (min-width: 64em) {
     .site-logo {
         width: 100%;
-        max-width: 150px;
-        max-height: 150px;
+        max-width: 120px;
+        max-height: 120px;
         margin-top: -65px;
     }
 }

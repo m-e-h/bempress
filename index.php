@@ -15,7 +15,7 @@ get_header(); ?>
 
             <?php
                 if ( ! is_front_page() && ! is_home() ) :
-                    get_template_part( 'templates/loop-meta' );
+                    get_template_part( 'templates/archive-header' );
                 endif;
             ?>
 
@@ -31,7 +31,7 @@ get_header(); ?>
 
             <?php endwhile; ?>
 
-            <?php get_template_part( 'templates/loop-nav' ); ?>
+            <?php get_template_part( 'templates/post-nav' ); ?>
 
         <?php else : ?>
 
