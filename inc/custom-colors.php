@@ -115,20 +115,22 @@ final class Saga_Custom_Colors {
                 { color: $hex; }
             ";
         $style .= "
+            .badge a, .btn, .button, button, input[type=button], input[type=reset], input[type=submit],
                 .t-bg__1
                 { background-color: $hex; }
             ";
         $style .= "
+        .badge a:active, .badge a:hover, .btn:active, .btn:hover, button:active, button:hover, input[type=button]:active, input[type=button]:hover, input[type=reset]:active, input[type=reset]:hover, input[type=submit]:active, input[type=submit]:hover,
                 .t-bg__1--light
-                { background-color: $color400; }
+                { background-color: #{$color400}; }
             ";
         $style .= "
                 .t-bg__1--dark
-                { background-color: $color600; }
+                { background-color: #{$color600}; }
             ";
         $style .= "
                 .t-bg__1--glass
-                { background-color: $color100; }
+                { background-color: #{$color100}; }
             ";
         $style .= "
                 .t-fill__1
@@ -136,11 +138,11 @@ final class Saga_Custom_Colors {
             ";
         $style .= "
                 .t-fill__1--light
-                { fill: $color400; }
+                { fill: #{$color400}; }
             ";
         $style .= "
                 .t-fill__1--dark
-                { fill: $color600; }
+                { fill: #{$color600}; }
             ";
         /* Return the styles. */
         return str_replace( array( "\r", "\n", "\t" ), '', $style );
@@ -177,15 +179,15 @@ final class Saga_Custom_Colors {
             ";
         $style .= "
                 .t-bg__2--light
-                { background-color: $color400; }
+                { background-color: #{$color400}; }
             ";
         $style .= "
                 .t-bg__2--dark
-                { background-color: $color600; }
+                { background-color: #{$color600}; }
             ";
         $style .= "
                 .t-bg__2--glass
-                { background-color: $color100; }
+                { background-color: #{$color100}; }
             ";
         $style .= "
                 .t-fill__2
@@ -193,11 +195,11 @@ final class Saga_Custom_Colors {
             ";
         $style .= "
                 .t-fill__2--light
-                { fill: $color400; }
+                { fill: #{$color400}; }
             ";
         $style .= "
                 .t-fill__2--dark
-                { fill: $color600; }
+                { fill: #{$color600}; }
                 ";
         /* Return the styles. */
         return str_replace( array( "\r", "\n", "\t" ), '', $style );

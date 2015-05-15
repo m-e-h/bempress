@@ -127,7 +127,7 @@ function bempress_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'primary_color',
         array(
-            'default'           => '#020042',
+            'default'           => '#34495E',
             'sanitize_callback' => 'sanitize_hex_color',
             'transport' => 'postMessage',
         )

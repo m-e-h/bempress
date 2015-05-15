@@ -38,7 +38,7 @@
             <button class="menu-toggle" aria-controls="menu-primary" aria-expanded="false">
             <span></span>
             </button>
-
+                    <?php hybrid_site_title(); ?>
             <?php action_bar_left(); ?>
             <?php action_bar_right(); ?>
         </div>

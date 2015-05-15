@@ -19,7 +19,7 @@
 
 			</div><!-- .wrap -->
 
-                <p class="credit t-bg__1--dark u-p- u-mb0">
+                <p class="credit t-bg__1 u-p- u-mb0">
                     <?php
                     printf(
                         __( 'Copyright &#169; %1$s %2$s.', 'abraham' ),

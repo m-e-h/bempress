@@ -1276,8 +1276,10 @@ nav ul {
 }
 
 .page-title__main {
+    opacity: 1; 
+
     -webkit-align-self: center;
-    align-self: center; 
+    align-self: center;
     -ms-flex-item-align: center;
 }
 .page-title__main a {
