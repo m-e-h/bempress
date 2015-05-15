@@ -62,6 +62,17 @@ function bempress_setup() {
         'aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio'
     ] );
 
+    add_theme_support( 'custom-header', apply_filters( 'bempress_custom_header_args', array(
+        'default-image'          => '',
+        'default-text-color'     => 'FFFFFF',
+        'width'                  => 1920,
+        'height'                 => 500,
+        'flex-width'             => true,
+        'flex-height'            => true,
+        'header-text'            => true,
+        'uploads'                => true,
+        'wp-head-callback'       => 'bempress_header_style'
+    ) ) );
 
 // In theme setup
 add_theme_support( 'theme-layouts', array( 'default' => '2c-l' ) );
