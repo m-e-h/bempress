@@ -24,12 +24,16 @@
 
     <?php endif; ?>
 
+    <?php if ( has_nav_menu( 'panel-dpc' ) ) : ?>
+
     <div id="dpc-toggle" class="toggle grid__item button--tab" title="<?php esc_attr_e( 'Pastoral Center', 'doc' ); ?>">
 
-        <?php get_template_part( 'images/vector/svg', 'library' ); ?>
+        <?php get_template_part( 'images/vector/svg', 'sports' ); ?>
 
-        <span class="toggle__title"><?php _e( 'Pastoral Center', 'doc' ); ?></span>
+        <span class="toggle__title"><?php _e( 'Athletics', 'doc' ); ?></span>
 
     </div><!-- #dpc-toggle -->
+
+    <?php endif; ?>
 
 </div><!-- .toggles -->
