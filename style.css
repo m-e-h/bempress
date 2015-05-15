@@ -1956,6 +1956,17 @@ pre {
     text-align: center;
 }
 
+ul.trail-items {
+    margin-left: -10px; 
+    padding-left: 0;
+    text-align: center;
+}
+
+.trail-items > li:not(.trail-end) {
+    display: inline-block;
+    padding-left: 10px;
+}
+
 .trail-end {
     display: none;
 }

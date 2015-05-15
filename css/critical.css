@@ -115,6 +115,7 @@ hr {
 
 span {
     display: inline-block;
+    vertical-align: baseline;
 }
 
 ::-moz-selection {

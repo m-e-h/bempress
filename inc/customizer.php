@@ -5,6 +5,14 @@
  * @package bempress
  */
 
+// function wpt_register_theme_customizer( $wp_customize ) {
+
+//     var_dump( $wp_customize );
+
+// }
+// add_action( 'customize_register', 'wpt_register_theme_customizer' );
+
+
 add_action( 'customize_register', 'bempress_customize_register' );
 add_action( 'customize_preview_init', 'bempress_customizer_js' );
 
@@ -31,6 +39,7 @@ function bempress_customize_register( $wp_customize ) {
 
 
     // Customize Background Settings
+    $wp_customize->get_setting( 'background_color' )->transport  = 'postMessage';
     $wp_customize->get_section('background_image')->title = esc_html__('Background Styles', 'bempress');
     $wp_customize->get_control('background_color')->section = 'background_image';
 
