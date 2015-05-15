@@ -112,35 +112,35 @@ final class Saga_Custom_Colors {
 
         $style .= "
                 .entry-content a
-                { color: #{$hex}; }
+                { color: $hex; }
             ";
         $style .= "
                 .t-bg__1
-                { background-color: #{$hex}; }
+                { background-color: $hex; }
             ";
         $style .= "
                 .t-bg__1--light
-                { background-color: #{$color400}; }
+                { background-color: $color400; }
             ";
         $style .= "
                 .t-bg__1--dark
-                { background-color: #{$color600}; }
+                { background-color: $color600; }
             ";
         $style .= "
                 .t-bg__1--glass
-                { background-color: #{$color100}; }
+                { background-color: $color100; }
             ";
         $style .= "
                 .t-fill__1
-                { fill: #{$hex}; }
+                { fill: $hex; }
             ";
         $style .= "
                 .t-fill__1--light
-                { fill: #{$color400}; }
+                { fill: $color400; }
             ";
         $style .= "
                 .t-fill__1--dark
-                { fill: #{$color600}; }
+                { fill: $color600; }
             ";
         /* Return the styles. */
         return str_replace( array( "\r", "\n", "\t" ), '', $style );
@@ -173,31 +173,31 @@ final class Saga_Custom_Colors {
 
         $style .= "
                 .t-bg__2
-                { background-color: #{$hex}; }
+                { background-color: $hex; }
             ";
         $style .= "
                 .t-bg__2--light
-                { background-color: #{$color400}; }
+                { background-color: $color400; }
             ";
         $style .= "
                 .t-bg__2--dark
-                { background-color: #{$color600}; }
+                { background-color: $color600; }
             ";
         $style .= "
                 .t-bg__2--glass
-                { background-color: #{$color100}; }
+                { background-color: $color100; }
             ";
         $style .= "
                 .t-fill__2
-                { fill: #{$hex}; }
+                { fill: $hex; }
             ";
         $style .= "
                 .t-fill__2--light
-                { fill: #{$color400}; }
+                { fill: $color400; }
             ";
         $style .= "
                 .t-fill__2--dark
-                { fill: #{$color600}; }
+                { fill: $color600; }
                 ";
         /* Return the styles. */
         return str_replace( array( "\r", "\n", "\t" ), '', $style );

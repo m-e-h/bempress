@@ -177,7 +177,7 @@ function bempress_customize_register( $wp_customize ) {
 function bempress_customizer_js() {
   wp_enqueue_script(
     'bempress_theme_customizer',
-    get_template_directory_uri() . '/inc/customizer/theme-customizer.js',
+    get_template_directory_uri() . '/inc/theme-customizer.js',
     array( 'jquery', 'customize-preview' ),
     '',
     true

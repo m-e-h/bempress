@@ -11,7 +11,7 @@ class AttrTrumps {
 	/* Attributes for major structural elements. */
 	public $body                  		= '';	// get_body_class()
 	public $site_container    			= '';	// site-container
-	public $site_inner   				= ' grid grid--flex u-mt- u-mt@md u-mt+@lg';	// site-inner
+	public $site_inner   				= ' grid u-mt- u-mt@md u-mt+@lg';	// site-inner
 	public $site_inner_full_width		= ' ';
 	public $card_layout_inner 	        = ' wrap';
 	public $site_inner_sidebar_right 	= ' wrap';

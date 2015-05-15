@@ -1,17 +1,17 @@
 (function( $ ) {
 
-	wp.customize( 'blogname', function( value ) {
-		value.bind( function( to ) {
-			$( '.site-title a' ).text( to );
-		} );
-	} );
-
-	wp.customize( 'blogdescription', function( value ) {
-		value.bind( function( to ) {
-			$( '.site-description' ).text( to );
-		} );
-	} );
-
+    // Site title and description.
+    wp.customize( 'blogname', function( value ) {
+        value.bind( function( to ) {
+            $( '.site-title a' ).text( to );
+        } );
+    } );
+    wp.customize( 'blogdescription', function( value ) {
+        value.bind( function( to ) {
+            $( '.site-description' ).text( to );
+        } );
+    } );
+    // Header text color.
     wp.customize( 'header_textcolor', function( value ) {
         value.bind( function( to ) {
             if ( 'blank' === to ) {
@@ -22,17 +22,14 @@
             } else {
                 $( '.site-title, .site-description' ).css( {
                     'clip': 'auto',
-                    'position': 'static'
-                } );
-
-                $( '.site-title a' ).css( {
-                    'color': to
+                    'color': to,
+                    'position': 'relative'
                 } );
             }
         } );
-    });
+    } );
 
-    wp.customize( 'wpt_logo', function( value ) {
+    wp.customize( 'bempress_logo', function( value ) {
         value.bind( function( to ) {
             if( to == '' ) {
                 $(' #logo ').hide();
@@ -41,29 +38,41 @@
                 $(' #logo ').attr( 'src', to );
             }
         } );
-    });    
+    });
 
-    wp.customize( 'wpt_footer_text', function( value ) {
+    wp.customize( 'primary_color', function( value ) {
         value.bind( function( to ) {
-            if( to == '' ) {
-                $(' #footertext ').hide();
-            } else {
-                $(' #footertext ').show();
-                $(' #footertext ').text( to );
-            }
-        } );
-    });    
+                $( '.t-bg__1' ).css( {
+                    'background-color': to
+                } );
 
-    wp.customize( 'wpt_h1_color', function( value ) {
-        value.bind( function( to ) {
-            $( 'h1 a' ).css( 'color', to );
+                $( '.t-bg__1--light' ).css( {
+                    'background-color': to
+                } );
+
+                $( '.t-fill__1' ).css( {
+                    'fill': to
+                } );
         } );
     });
 
-    wp.customize( 'wpt_h1_font_size', function( value ) {
-        value.bind( function( to ) {            
-            $( 'h1' ).css( 'font-size', to + 'px' );            
+    wp.customize( 'secondary_color', function( value ) {
+        value.bind( function( to ) {
+                $( '.t-bg__2' ).css( {
+                    'background-color': to
+                } );
+
+                $( '.t-fill__2' ).css( {
+                    'fill': to
+                } );
+                $( '.t-bg__2--light' ).css( {
+                    'background-color': to
+                } );
+
+                $( '.t-fill__2--light' ).css( {
+                    'fill': to
+                } );
         } );
-    });     
+    });
 
 })( jQuery );
