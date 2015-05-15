@@ -11,22 +11,13 @@
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-/* Add the admin setup function to the 'admin_menu' hook. */
-add_action( 'admin_menu', 'hybrid_admin_setup' );
+/* Load the post meta boxes on the new post and edit post screens. */
+add_action( 'load-post.php',     'hybrid_admin_load_post_meta_boxes' );
+add_action( 'load-post-new.php', 'hybrid_admin_load_post_meta_boxes' );
 
-/**
- * Sets up the adminstration functionality for the framework and themes.
- *
- * @since  1.3.0
- * @access public
- * @return void
- */
-function hybrid_admin_setup() {
-
-	/* Load the post meta boxes on the new post and edit post screens. */
-	add_action( 'load-post.php',     'hybrid_admin_load_post_meta_boxes' );
-	add_action( 'load-post-new.php', 'hybrid_admin_load_post_meta_boxes' );
-}
+/* Register scripts and styles. */
+add_action( 'admin_enqueue_scripts', 'hybrid_admin_register_scripts', 0 );
+add_action( 'admin_enqueue_scripts', 'hybrid_admin_register_styles',  0 );
 
 /**
  * Loads the core post meta box files on the 'load-post.php' action hook.  Each meta box file is only loaded if 
@@ -46,6 +37,28 @@ function hybrid_admin_load_post_meta_boxes() {
 
 	/* Load the post style meta box. */
 	require_once( HYBRID_ADMIN . 'meta-box-post-style.php' );
+}
+
+/**
+ * Registers admin scripts.
+ *
+ * @since  3.0.0
+ * @access public
+ * @return void
+ */
+function hybrid_admin_register_scripts() {
+	wp_register_script( 'hybrid-admin', esc_url( HYBRID_JS . 'admin.js' ), array( 'jquery' ) );
+}
+
+/**
+ * Registers admin styles.
+ *
+ * @since  3.0.0
+ * @access public
+ * @return void
+ */
+function hybrid_admin_register_styles() {
+	wp_register_style( 'hybrid-admin', esc_url( HYBRID_CSS . 'admin.css' ) );
 }
 
 /**

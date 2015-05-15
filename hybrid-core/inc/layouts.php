@@ -46,7 +46,7 @@ function hybrid_register_layouts() {
 		'default',
 		array(
 			/* Translators: Default theme layout option. */
-			'label'            => _x( 'Default', 'theme layout', 'hybrid-core' ),
+			'label'            => esc_html_x( 'Default', 'theme layout', 'hybrid-core' ),
 			'is_global_layout' => false,
 			'_builtin'         => true,
 			'_internal'        => true,
@@ -55,13 +55,6 @@ function hybrid_register_layouts() {
 
 	/* Hook for registering theme layouts. Theme should always register on this hook. */
 	do_action( 'hybrid_register_layouts' );
-
-	/* Get the default layout. */
-	$default = hybrid_get_default_layout();
-
-	/* Assign the default layout's image to the "default" layout. */
-	if ( 'default' !== $default && hybrid_layout_exists( $default ) )
-		hybrid_get_layout( 'default' )->image = hybrid_get_layout( $default )->image;
 }
 
 /**
@@ -75,7 +68,7 @@ function hybrid_register_layouts() {
  * @return void
  */
 function hybrid_register_layout( $name, $args = array() ) {
-	hybrid_layouts()->register( $name, $args );
+	hybrid_layouts()->register_layout( $name, $args );
 }
 
 /**
@@ -88,7 +81,7 @@ function hybrid_register_layout( $name, $args = array() ) {
  * @return void
  */
 function hybrid_unregister_layout( $name ) {
-	hybrid_layouts()->unregister( $name );
+	hybrid_layouts()->unregister_layout( $name );
 }
 
 /**
@@ -101,7 +94,7 @@ function hybrid_unregister_layout( $name ) {
  * @return bool
  */
 function hybrid_layout_exists( $name ) {
-	return hybrid_layouts()->exists( $name );
+	return hybrid_layouts()->layout_exists( $name );
 }
 
 /**
@@ -125,7 +118,7 @@ function hybrid_get_layouts() {
  * @return object|bool
  */
 function hybrid_get_layout( $name ) {
-	return hybrid_layouts()->get( $name );
+	return hybrid_layouts()->get_layout( $name );
 }
 
 /**

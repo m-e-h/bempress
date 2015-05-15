@@ -107,7 +107,7 @@ function hybrid_get_loop_description() {
 class Hybrid_Theme_Settings{}
 function hybrid_get_styles() {}
 function hybrid_doctitle() {}
-function hybrid_admin_register_styles() {}
+//function hybrid_admin_register_styles() {} // Re-added in 3.0.0.
 function hybrid_admin_enqueue_styles() {}
 function hybrid_settings_field_id() {}
 function hybrid_settings_field_name() {}
@@ -163,6 +163,9 @@ function hybrid_child_link_shortcode() {}
 function hybrid_attr_loop_meta() {}
 function hybrid_attr_loop_title() {}
 function hybrid_attr_loop_description() {}
+function hybrid_admin_setup() {}
+function hybrid_attachment_id3_keys() {}
+function hybrid_image_size_names_choose() {}
 
 /* Functions removed in the 2.0 branch. */
 
