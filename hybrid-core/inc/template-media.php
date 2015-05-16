@@ -11,10 +11,64 @@
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-/* Filters for the audio transcript. */
-add_filter( 'hybrid_audio_transcript', 'wptexturize',   10 );
-add_filter( 'hybrid_audio_transcript', 'convert_chars', 20 );
-add_filter( 'hybrid_audio_transcript', 'wpautop',       25 );
+/**
+ * Prints media meta directly to the screen.  The `$property` parameter can be any of the public 
+ * properties in the `Hybrid_Media_Meta` object.
+ *
+ * @see    Hybrid_Media_Meta
+ * @since  3.0.0
+ * @access public
+ * @param  string  $property
+ * @param  array   $args
+ * @return void
+ */
+function hybrid_media_meta( $property, $args = array() ) {
+	echo hybrid_get_media_meta( $property, $args );
+}
+
+/**
+ * Returns media meta from a media meta object.  The `$property` parameter can be any of the public 
+ * properties in the `Hybrid_Media_Meta` object.
+ *
+ * @see    Hybrid_Media_Meta
+ * @since  3.0.0
+ * @access public
+ * @param  string  $property
+ * @param  array   $args
+ * @return string
+ */
+function hybrid_get_media_meta( $property, $args = array() ) {
+
+	$defaults = array(
+		'post_id' => get_the_ID(),
+		'text'    => '%s',
+		'before'  => '',
+		'after'   => '',
+		'wrap'    => '<span %s>%s</span>'
+	);
+
+	$args = wp_parse_args( $args, $defaults );
+
+	// Get the media metadata.
+	$meta = hybrid_media_meta_factory()->get( $args['post_id'] )->$property;
+
+	// Return the formatted meta or an empty string.
+	return $meta ? $args['before'] . sprintf( $args['wrap'], 'class="data"', sprintf( $args['text'], $meta ) ) . $args['after'] : '';
+}
+
+/**
+ * Returns an instance of the `Hybrid_Media_Meta_Factory` singleton.  While theme authors can access 
+ * this function directly, it's best to use the `hybrid_media_meta()` and `hybrid_get_media_meta()` 
+ * functions for printing/getting media meta object data.
+ *
+ * @see    Hybrid_Media_Meta_Factory
+ * @since  3.0.0
+ * @access public
+ * @return object
+ */
+function hybrid_media_meta_factory() {
+	return Hybrid_Media_Meta_Factory::get_instance();
+}
 
 /**
  * Checks if the current post has a mime type of 'audio'.
@@ -102,24 +156,7 @@ function hybrid_get_image_size_links() {
  * @return string
  */
 function hybrid_get_audio_transcript( $post_id = 0 ) {
-
-	if ( empty( $post_id ) )
-		$post_id = get_the_ID();
-
-	/* Set up some default variables and get the image metadata. */
-	$lyrics = '';
-	$meta   = wp_get_attachment_metadata( $post_id );
-
-	/* Look for the 'unsynchronised_lyric' tag. */
-	if ( isset( $meta['unsynchronised_lyric'] ) )
-		$lyrics = $meta['unsynchronised_lyric'];
-
-	/* Seen this misspelling of the id3 tag. */
-	elseif ( isset( $meta['unsychronised_lyric'] ) )
-		$lyrics = $meta['unsychronised_lyric'];
-
-	/* Apply filters for the transcript. */
-	return apply_filters( 'hybrid_audio_transcript', $lyrics );
+	return hybrid_get_media_meta( 'lyrics', array( 'wrap' => '', 'post_id' => $post_id ? $post_id : get_the_ID() ) );
 }
 
 /**
