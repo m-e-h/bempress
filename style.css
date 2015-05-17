@@ -1842,7 +1842,7 @@ a.menu-item__description.info {
     cursor: default;
 }
 
-.next::after {
+.nav-links .next::after {
     display: inline-block;
     font-family: FontAwesome;
     font-size: inherit;
@@ -1856,12 +1856,12 @@ a.menu-item__description.info {
     speak: none;
 }
 
-.next::after {
+.nav-links .next::after {
     padding-left: 5px;
     vertical-align: baseline;
 }
 
-.prev::before {
+.nav-links .prev::before {
     display: inline-block;
     font-family: FontAwesome;
     font-size: inherit;
@@ -1875,7 +1875,7 @@ a.menu-item__description.info {
     speak: none;
 }
 
-.prev::before {
+.nav-links .prev::before {
     padding-right: 5px;
     vertical-align: baseline;
 }
@@ -4482,4 +4482,13 @@ p:last-of-type {
 
 .comment-list {
     list-style: none;
+}
+
+.flickity-slider {
+    -webkit-transition: none;
+    transition: none;
+}
+
+button.flickity-prev-next-button {
+    padding: 0;
 }

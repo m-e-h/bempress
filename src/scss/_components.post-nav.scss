@@ -37,6 +37,7 @@
     cursor: default;
 }
 
+.nav-links {
 .next {
     @include font-icon($chevron-right, $fa, after);
     &::after {
@@ -52,7 +53,7 @@
         vertical-align: baseline;
     }
 }
-
+}
 .navigation, .nav-single {
   width: 100%;
 }
