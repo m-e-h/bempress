@@ -167,6 +167,33 @@ function bempress_customize_register( $wp_customize ) {
         )
     );
 
+
+
+//$wp_customize->get_control( 'theme_layout' )->active_callback = function () { return !is_category(); };
+
+$wp_customize->add_setting(
+    'category_layout',
+    array(
+        'default'           => get_theme_mod( 'category_layout', '' ),
+        'sanitize_callback' => 'sanitize_html_class',
+        'transport'         => 'refresh'
+    )
+);
+
+$wp_customize->add_control(
+    new Hybrid_Customize_Control_Theme_Layout(
+        $wp_customize,
+        'category_layout',
+        array(
+            'label'    => esc_html__( 'Multi-Post Layout', 'hybrid-core' ),
+            'section'  => 'layout',
+            'layouts'  => array( 'cards', 'blog' )
+            //'active_callback' => function () { return is_category(); }
+        )
+    )
+);
+
+
 }
 
 

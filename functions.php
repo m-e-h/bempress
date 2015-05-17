@@ -110,17 +110,39 @@ function my_register_layouts() {
             'image'            => '%s/images/sidebar-left.svg',
         )
     );
+}
+
+
+
+// In theme setup
+//add_theme_support( 'category-layouts', array( 'default' => 'cards' ) );
+
+add_action( 'hybrid_register_layouts', 'cat_register_layouts' );
+
+function cat_register_layouts() {
+
+    hybrid_register_layout(
+        'blog',
+        array(
+            'label'            => _x( '1 Column Wide', 'theme layout', 'hybrid-core' ),
+            'is_global_layout' => false,
+            'is_post_layout'   => false,
+            'image'            => '%s/images/blog.svg',
+        )
+    );
 
     hybrid_register_layout(
         'cards',
         array(
             'label'            => _x( 'Card View', 'theme layout', 'hybrid-core' ),
-            'is_global_layout' => true,
-            'is_post_layout'   => true,
+            'is_global_layout' => false,
+            'is_post_layout'   => false,
             'image'            => '%s/images/cards.svg',
         )
     );
 }
+
+
 
 
 
