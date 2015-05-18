@@ -14,7 +14,7 @@
     overflow-y: scroll;
     box-sizing: border-box;
     min-height: 100%;
-    color: #50585d; 
+    color: #50585d;
     background-color: #fff;
     font-family: sans-serif;
     font-size: 16px;
@@ -22,6 +22,8 @@
     font-weight: 400;
     line-height: 1.5;
     cursor: default;
+    -webkit-transition: 0.35s;
+    transition: 0.35s; 
     text-rendering: optimizeLegibility;
 
     -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -43,8 +45,6 @@
     line-height: inherit;
     vertical-align: middle; 
     word-wrap: break-word;
-    -webkit-transition: 0.35s;
-    transition: 0.35s;
 
     -webkit-box-direction: normal;
     -webkit-box-orient: vertical;
@@ -59,8 +59,10 @@
 ::after,
 ::before {
     box-sizing: inherit;
-    border-width: 0; 
+    border-width: 0;
     border-style: solid;
+    -webkit-transition: inherit;
+    transition: inherit;
 }
 
 ::after,

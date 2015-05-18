@@ -4500,3 +4500,11 @@ p:last-of-type {
 button.flickity-prev-next-button {
     padding: 0;
 }
+
+.site-inner {
+    margin-top: 0;
+}
+
+.home .entry__header {
+    display: none;
+}
