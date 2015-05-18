@@ -15,6 +15,8 @@ get_header(); ?>
 
         <?php tha_content_top(); ?>
 
+        <?php get_template_part( 'templates/archive-header' ); ?>
+
         <?php if ( have_posts() ) : ?>
 
             <?php while ( have_posts() ) : the_post(); ?>

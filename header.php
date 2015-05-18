@@ -23,49 +23,40 @@
 
 <?php tha_body_top(); ?>
 
-		<div class="skip-link">
-			<a href="#content" class="button screen-reader-text">
-				<?php esc_html_e( 'Skip to content (Press enter)', 'bempress' ); ?>
-			</a>
-		</div><!-- .skip-link -->
+	<div class="skip-link">
+		<a href="#content" class="button screen-reader-text">
+			<?php esc_html_e( 'Skip to content (Press enter)', 'bempress' ); ?>
+		</a>
+	</div><!-- .skip-link -->
 
-        <?php tha_header_before(); ?>
+    <?php tha_header_before(); ?>
 
-		<header <?php hybrid_attr( 'header' ); ?>>
+	<header <?php hybrid_attr( 'header' ); ?>>
 
-    <div class="action-bar">
-        <div <?php hybrid_attr( 'wrap', 'action-bar' ); ?>>
-            <button class="menu-toggle" aria-controls="menu-primary" aria-expanded="false">
-            <span></span>
-            </button>
-                    <?php hybrid_site_title(); ?>
-            <?php action_bar_left(); ?>
-            <?php action_bar_right(); ?>
+        <div class="action-bar">
+            <div <?php hybrid_attr( 'wrap', 'action-bar' ); ?>>
+                <button class="menu-toggle" aria-controls="menu-primary" aria-expanded="false">
+                <span></span>
+                </button>
+                <?php hybrid_site_title(); ?>
+                <?php action_bar_right(); ?>
+            </div>
         </div>
-    </div>
 
-            <div <?php hybrid_attr( 'wrap', 'header' ); ?>>
+        <div <?php hybrid_attr( 'wrap', 'header' ); ?>>
 
-            <?php tha_header_top(); ?>
+        <?php tha_header_top(); ?>
 
-            <div <?php hybrid_attr( 'archive-header' ); ?>>
+        <?php tha_header_bottom(); ?>
 
-            <?php hybrid_get_menu( 'breadcrumbs' ); ?>
+        </div><!-- .wrap -->
 
-            <?php get_template_part( 'templates/archive-header' ); ?>
+	</header><!-- #header -->
 
-            </div><!-- .archive-header -->
+    <?php tha_header_after(); ?>
 
-            <?php tha_header_bottom(); ?>
+	<?php hybrid_get_menu( 'primary' ); ?>
 
-            </div><!-- .wrap -->
+    <div <?php hybrid_attr( 'site-container' ); ?>>
 
-		</header><!-- #header -->
-
-        <?php tha_header_after(); ?>
-
-		<?php hybrid_get_menu( 'primary' ); ?>
-
-        <div <?php hybrid_attr( 'site-container' ); ?>>
-
-            <div <?php hybrid_attr( 'site-inner' ); ?>>
+        <div <?php hybrid_attr( 'site-inner' ); ?>>

@@ -4,7 +4,7 @@
  */
 ?>
 
-<header class="entry__header screen-reader-text">
+<header class="entry__header">
 
 	<div <?php hybrid_attr( 'entry-title' ); ?>><?php single_post_title(); ?></div>
 
