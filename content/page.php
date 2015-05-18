@@ -14,7 +14,9 @@
 
 	<?php tha_entry_top(); ?>
 
-	<?php get_template_part( 'templates/single', 'header' ); ?>
+
+
+
 
 	<?php get_template_part( 'templates/single', 'content' ); ?>
 

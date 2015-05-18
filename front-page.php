@@ -7,17 +7,15 @@
 
 get_header(); ?>
 
-    <?php tha_content_before(); ?>
-
-    <main <?php hybrid_attr( 'content' ); ?>>
-
     <?php
 
     echo do_shortcode( '[slider type="slider" group="front" order="DESC" orderby="name" limit="-1"]' ); ?>
 
+        <div <?php hybrid_attr( 'site-inner' ); ?>>
 
+    <?php tha_content_before(); ?>
 
-    <?php hybrid_get_menu( 'primary' ); ?>
+    <main <?php hybrid_attr( 'content' ); ?>>
 
         <?php tha_content_top(); ?>
 

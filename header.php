@@ -61,5 +61,3 @@
 	<?php hybrid_get_menu( 'primary' ); ?>
 
     <div <?php hybrid_attr( 'site-container' ); ?>>
-
-        <div <?php hybrid_attr( 'site-inner' ); ?>>

@@ -27,7 +27,7 @@ function bempress_register_image_sizes() {
 	set_post_thumbnail_size( 175, 130, true );
 
 	// Add the 'bempress-full' image size.
-	add_image_size( 'bempress-full', 1025, 500, true );
+	add_image_size( 'bempress-full', 1920, 600, true );
 }
 
 

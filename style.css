@@ -4532,6 +4532,10 @@ button.flickity-prev-next-button {
     justify-content: center;
 }
 
+.meh-slider .meh-slider__cell {
+    background: #222f3d;
+}
+
 .meh-slider .meh-slider__text {
     text-shadow: 0 2px rgba(34, 47, 61, 0.4);
 }
@@ -4552,4 +4556,28 @@ button.flickity-prev-next-button {
 }
 .meh-slider .flickity-prev-next-button:hover {
     background: #ffe192;
+}
+
+.entry__header--feature {
+    display: inline-block; 
+    width: 100%;
+    min-height: 200px;
+    background-color: #222f3d;
+    text-align: center;
+}
+.entry__header--feature img {
+    opacity: 0.5; 
+    vertical-align: middle;
+}
+.entry__header--feature .feature-text {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    text-shadow: 0 2px rgba(34, 47, 61, 0.4); 
+    font-weight: bold;
+}
+
+.feature-text .entry-title {
+    color: #fff; 
+    font-size: 60px;
 }
