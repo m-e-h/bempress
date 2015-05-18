@@ -35,10 +35,13 @@
 
         <div class="action-bar">
             <div <?php hybrid_attr( 'wrap', 'action-bar' ); ?>>
+
+                <?php hybrid_site_title(); ?>
+
                 <button class="menu-toggle" aria-controls="menu-primary" aria-expanded="false">
                 <span></span>
                 </button>
-                <?php hybrid_site_title(); ?>
+
                 <?php action_bar_right(); ?>
             </div>
         </div>

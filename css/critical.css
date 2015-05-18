@@ -14,7 +14,7 @@
     overflow-y: scroll;
     box-sizing: border-box;
     min-height: 100%;
-    color: #50585d;
+    color: #34495e;
     background-color: #fff;
     font-family: sans-serif;
     font-size: 16px;
@@ -74,7 +74,7 @@
 }
 
 body {
-    color: #50585d; 
+    color: #34495e; 
     background-color: #fffaf5;
 }
 @media screen and (max-width: 35.5em) {
@@ -322,7 +322,7 @@ blockquote {
     font-style: italic;
 }
 blockquote p {
-    color: #9ca5aa;
+    color: #7795b4;
     font-size: 17px;
     font-size: 1.0625rem;
     font-weight: 500;
@@ -422,7 +422,7 @@ input[type="color"] {
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: #6c8cc8;
+    border-color: #46627f;
     outline: 0;
     background-color: #fff;
 }
@@ -447,13 +447,13 @@ progress {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-    outline: 0.1rem solid thin #50585d;
+    outline: 0.1rem solid thin #34495e;
 }
 
 input[disabled],
 select[disabled],
 textarea[disabled] {
-    color: #9ca5aa;
+    color: #7795b4;
     background-color: #ebebeb;
     cursor: not-allowed;
 }
@@ -462,7 +462,7 @@ input[readonly],
 select[readonly],
 textarea[readonly] {
     border-color: #e4e9eb;
-    color: #9ca5aa; 
+    color: #7795b4; 
     background-color: #ebebeb;
 }
 
@@ -501,7 +501,7 @@ legend {
     margin-bottom: 12px;
     padding: 12px 0;
     border-bottom: 0.1rem solid #e4e9eb;
-    color: #50585d;
+    color: #34495e;
 }
 
 textarea {

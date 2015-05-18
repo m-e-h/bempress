@@ -17,6 +17,7 @@
 .action-bar-wrap {
         flex-direction: row;
         flex-wrap: wrap;
+          z-index: 1;
 
     @include md {
         justify-content: space-around;
@@ -194,10 +195,39 @@ button.flickity-prev-next-button {
     padding: 0;
 }
 
-.site-inner {
+.home .site-inner {
   margin-top: 0;
 }
 
 .home .entry__header {
     display: none;
+}
+
+
+.meh-slider {
+.flickity-page-dots {
+  bottom: -10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.meh-slider__text {
+  text-shadow: 0 2px rgba($color-primary-dark,0.4);
+}
+
+.flickity-page-dots .dot {
+  flex: 1;
+  border-radius: 0;
+  margin: 0;
+  background: $color-primary-light;
+}
+
+.flickity-prev-next-button {
+    background: glass($color-secondary);
+
+    &:hover {
+        background: $color-secondary;
+    }
+}
 }

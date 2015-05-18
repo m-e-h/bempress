@@ -15,6 +15,10 @@ get_header(); ?>
 
     echo do_shortcode( '[slider type="slider" group="front" order="DESC" orderby="name" limit="-1"]' ); ?>
 
+
+
+    <?php hybrid_get_menu( 'primary' ); ?>
+
         <?php tha_content_top(); ?>
 
         <?php if ( have_posts() ) : ?>
