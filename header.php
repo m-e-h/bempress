@@ -36,7 +36,10 @@
         <div class="action-bar">
             <div <?php hybrid_attr( 'wrap', 'action-bar' ); ?>>
 
+                <div <?php hybrid_attr( 'branding' ); ?>>
+                <?php doc_logo(); ?>
                 <?php hybrid_site_title(); ?>
+                </div>
 
                 <button class="menu-toggle" aria-controls="menu-primary" aria-expanded="false">
                 <span></span>

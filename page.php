@@ -17,7 +17,7 @@ get_header(); ?>
         'link_to_post' => false,
         'scan_raw'      => true,
         'scan'          => true,
-        'order'         => [ 'featured', 'scan_raw', 'scan', 'attachment', ],
+        'order'         => [ 'featured' ],
         'before'        => '<div class="featured-media image">',
         'after'         => '</div>',
     ] );
