@@ -60,9 +60,9 @@
 }
 
 .action-bar.is-open,
-.site-header.is-open ~ .site-container,
+.action-bar.is-open ~ .site-container,
 .action-bar.is-open ~ .site-header {
-    transform: translate(-250px, 0);
+    transform: translate(250px, 0);
 }
 
 .menu-toggle {
@@ -131,17 +131,11 @@
     bottom: 0;
     width: 250px;
     height: 100%;
-    transform: translate(250px, 0);
+    transform: translate(-250px, 0);
 }
 
 .menu-primary.is-open {
     transform: translate(0, 0);
-    height: 100vh;
-    background-color: $color-secondary;
-
-    a {
-        color: $color-text;
-    }
 }
 
 .action-bar,
@@ -163,7 +157,7 @@
     }
     .menu-primary {
         position: relative;
-        //width: 100%;
+        width: 100%;
         transform: translate(0, 0);
         //transition: none;
     }
@@ -221,4 +215,3 @@
 a.menu-item__description.info {
     flex-grow: 1;
 }
-

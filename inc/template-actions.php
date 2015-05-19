@@ -5,11 +5,11 @@
  * @package BEMpress
  */
 
-add_action( 'tha_content_before', 'doc_menu_secondary' );
-add_action( 'action_bar_right', 'doc_menu_primary' );
+add_action( 'tha_content_before', 'doc_menu_primary' );
+add_action( 'action_bar_right', 'doc_menu_secondary' );
 //add_action( 'action_bar_left', 'doc_action_bar_title' );
 
-add_action( 'tha_header_before', 'doc_toggle_panel' );
+//add_action( 'tha_header_before', 'doc_toggle_panel' );
 //add_action( 'action_bar_left', 'doc_action_bar_title' );
 //add_action( 'action_bar_right', 'doc_panel_toggles' );
 //add_action( 'tha_header_top', 'doc_logo', 5 );

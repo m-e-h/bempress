@@ -32,9 +32,6 @@ function bempress_setup() {
     // http://codex.wordpress.org/Automatic_Feed_Links
     add_theme_support( 'automatic-feed-links' );
 
-	// http://themehybrid.com/docs/hybrid-core-styles
-	add_theme_support( 'hybrid-core-styles', ['style', 'google-fonts'] );
-
 	// https://github.com/FlagshipWP/flagship-library/wiki/Flagship-Site-Logo
 	//add_theme_support( 'site-logo' );
 

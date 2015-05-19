@@ -11,9 +11,9 @@ get_header(); ?>
 
     echo do_shortcode( '[slider type="slider" group="front" order="DESC" orderby="name" limit="-1"]' ); ?>
 
-        <div <?php hybrid_attr( 'site-inner' ); ?>>
-
     <?php tha_content_before(); ?>
+
+        <div <?php hybrid_attr( 'site-inner' ); ?>>
 
     <main <?php hybrid_attr( 'content' ); ?>>
 

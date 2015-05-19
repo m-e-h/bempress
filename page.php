@@ -29,9 +29,9 @@ get_header(); ?>
 
 </header><!-- .entry-header -->
 
-        <div <?php hybrid_attr( 'site-inner' ); ?>>
-
     <?php tha_content_before(); ?>
+
+        <div <?php hybrid_attr( 'site-inner' ); ?>>
 
     <main <?php hybrid_attr( 'content' ); ?>>
 

@@ -70,6 +70,14 @@
     flex: none;
 }
 
+.flex--1 {
+    flex: 1;
+}
+
+.flex--2 {
+    flex: 2;
+}
+
 @include sm {
     .flex\@sm {
         display: flex;

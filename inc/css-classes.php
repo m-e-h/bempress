@@ -34,8 +34,8 @@ class AttrTrumps {
 	public $sidebar_sidebar_right 		= ' u-1of3@md';
 	public $sidebar_sidebar_left		= ' u-1of3@md';
 	public $sidebar_horizontal          = ' u-pl- u-pl@md u-pl+@lg grid grid--flex';
-	public $menu_primary 				= ' menu--horizontal u-ph@md flex flex--row flex-j--center ';
-	public $menu_secondary 				= ' menu--horizontal u-p- u-1of1@sm flex flex-j--center';
+	public $menu_primary 				= ' t-bg__white menu--horizontal u-ph@md flex flex--row flex-j--center ';
+	public $menu_secondary 				= ' menu--horizontal u-p- flex flex-j--center';
 	public $menu_li         			= 'menu__item';
 
     public $nav_single                  = '';

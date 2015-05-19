@@ -61,6 +61,4 @@
 
     <?php tha_header_after(); ?>
 
-	<?php hybrid_get_menu( 'primary' ); ?>
-
     <div <?php hybrid_attr( 'site-container' ); ?>>
