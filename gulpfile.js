@@ -130,7 +130,7 @@ gulp.task('scripts', function() {
   return gulp.src([
   	'src/js/**/*.js'
   	])
-    .pipe($.concat('main.js'))
+    //.pipe($.concat('main.js'))
     .pipe(gulp.dest('js'))
     .pipe(rename({ suffix: '.min' }))
     .pipe($.uglify({preserveComments: 'some'}))

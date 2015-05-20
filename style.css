@@ -189,11 +189,11 @@ sup {
 }
 
 sup {
-    top: -0.5em;
+    top: -0.5;
 }
 
 sub {
-    bottom: -0.25em;
+    bottom: -0.25;
 }
 
 small {
@@ -485,7 +485,7 @@ tr {
 th,
 td {
     padding: 12px 6px;
-    border: 0.1rem solid #e4e9eb;
+    border: 0.1rem solid #e3e8ec;
     text-align: center;
 }
 
@@ -506,9 +506,9 @@ textarea {
     width: 100%;
     min-height: 48px;
     padding: 0 24px; 
-    border: 1px solid #e4e9eb;
+    border: 1px solid #e3e8ec;
     border-radius: 2px;
-    background-color: #e4e9eb;
+    background-color: #e3e8ec;
     font-family: inherit;
     font-weight: inherit;
     font-style: inherit;
@@ -521,7 +521,7 @@ input[type="color"] {
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: #46627f;
+    border-color: #004088;
     outline: 0;
     background-color: #fff;
 }
@@ -560,13 +560,13 @@ textarea[disabled] {
 input[readonly],
 select[readonly],
 textarea[readonly] {
-    border-color: #e4e9eb;
+    border-color: #e3e8ec;
     color: #7795b4; 
     background-color: #ebebeb;
 }
 
 select {
-    border: 1px solid #e4e9eb;
+    border: 1px solid #e3e8ec;
     background-color: #fff;
     text-transform: none;
 
@@ -599,7 +599,7 @@ legend {
     width: 100%; 
     margin-bottom: 12px;
     padding: 12px 0;
-    border-bottom: 0.1rem solid #e4e9eb;
+    border-bottom: 0.1rem solid #e3e8ec;
     color: #34495e;
 }
 
@@ -1360,7 +1360,7 @@ input[type="submit"],
     border-width: 0;
     border-radius: 2px;
     color: rgba(255, 255, 255, 0.95);
-    background-color: #34495e;
+    background-color: #002855;
     font: inherit;
     text-align: center;
     letter-spacing: 1px;
@@ -1399,7 +1399,7 @@ input[type="submit"]:active,
 .button--tab:active {
     outline: 0; 
     opacity: 1;
-    background-color: #46627f;
+    background-color: #004088;
 }
 .btn:focus,
 button:focus,
@@ -1440,7 +1440,7 @@ input.is-active[type="submit"],
 .menu__item > a.is-active,
 .is-active.button--outline,
 .is-active.button--tab {
-    background-color: #222f3d;
+    background-color: #001022;
 }
 
 .button--transparent,
@@ -1459,7 +1459,7 @@ input.is-active[type="submit"],
 .menu__item > a:focus,
 .page-numbers:focus {
     color: inherit;
-    background-color: rgba(228, 233, 235, 0.3);
+    background-color: rgba(227, 232, 236, 0.3);
 }
 
 .button--outline,
@@ -1467,7 +1467,7 @@ input.is-active[type="submit"],
     border-width: 3px;
     border-style: solid;
     border-color: currentColor; 
-    color: #34495e;
+    color: #002855;
     background-color: transparent;
 }
 .button--outline:hover,
@@ -1476,10 +1476,10 @@ input.is-active[type="submit"],
 .badge a:active,
 .button--outline:focus,
 .badge a:focus {
-    border-color: #46627f; 
+    border-color: #004088; 
     color: rgba(255, 255, 255, 0.95);
-    background-color: #46627f;
-    background-color: #46627f;
+    background-color: #004088;
+    background-color: #004088;
 }
 
 .button--tiny,
@@ -1493,8 +1493,8 @@ input.is-active[type="submit"],
 
 .button--muted,
 .current {
-    border-color: #e4e9eb; 
-    background-color: #e4e9eb;
+    border-color: #e3e8ec; 
+    background-color: #e3e8ec;
 }
 
 /* Underline From Center */
@@ -1572,7 +1572,7 @@ input.is-active[type="submit"],
     font-weight: bold;
     font-style: normal;
     line-height: 2;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.15;
     text-transform: uppercase;
 }
 .c-testimonial__source:before {
@@ -1620,7 +1620,7 @@ input.is-active[type="submit"],
 }
 
 .sub-menu > .menu__item > a {
-    padding: 0.5em 1em;
+    padding: 0.5 1em;
 
     -webkit-box-flex: 100;
     -webkit-flex-grow: 100;
@@ -1686,20 +1686,20 @@ input.is-active[type="submit"],
 .menu-toggle span:before,
 .menu-toggle span:after {
     width: 100%;
-    height: 0.2em; 
+    height: 0.2; 
     background-color: #fff;
 }
 
 .menu-toggle span:before,
 .menu-toggle span:after {
     position: absolute;
-    top: -0.55em;
+    top: -0.55;
     left: 0;
     content: " ";
 }
 
 .menu-toggle span:after {
-    top: 0.55em;
+    top: 0.55;
 }
 
 .menu-toggle:hover {
@@ -1819,7 +1819,7 @@ input.is-active[type="submit"],
 
 /* Vertical Menus - show the dropdown arrow */
 .menu-item-has-children > a:after {
-    padding-left: 0.5em;
+    padding-left: 0.5;
     font-size: small; 
     content: "\25B8";
 }
@@ -1941,21 +1941,21 @@ code,
 pre {
     display: inline-block;
     overflow: auto; 
-    padding: 0 0.5em;
+    padding: 0 0.5;
     border-radius: 2px;
     color: rgba(52, 73, 94, 0.95);
-    background-color: #c6d1d6;
+    background-color: #c6cfd6;
     word-wrap: break-word;
     word-break: break-all;
 }
 
 kbd {
-    margin: 0 0.25em;
-    padding: 0.3334em 0.5em;
-    border: 1px solid #c6d1d6;
+    margin: 0 0.25;
+    padding: 0.3334 0.5;
+    border: 1px solid #c6cfd6;
     border-radius: 2px;
     color: rgba(52, 73, 94, 0.95);
-    background-color: #f3f5f6;
+    background-color: #f2f4f6;
     box-shadow: inset 0 1px 0 #fff;
 }
 
@@ -2079,7 +2079,7 @@ a.info {
     margin: 0;
     padding: 1em;
     border-bottom: 1px solid rgba(30, 30, 30, 0.1); 
-    font-size: 0.9em;
+    font-size: 0.9;
 }
 
 .searchwp-live-search-result:last-of-type p {
@@ -2240,17 +2240,17 @@ button.flickity-prev-next-button {
 }
 
 .meh-slider .meh-slider__cell {
-    background: #222f3d;
+    background: #001022;
 }
 
 .meh-slider .meh-slider__text {
-    text-shadow: 0 2px rgba(34, 47, 61, 0.4);
+    text-shadow: 0 2px rgba(0, 16, 34, 0.4);
 }
 
 .meh-slider .flickity-page-dots .dot {
     margin: 0;
     border-radius: 0;
-    background: #46627f; 
+    background: #004088; 
 
     -webkit-box-flex: 1;
     -webkit-flex: 1;
@@ -2271,7 +2271,7 @@ button.flickity-prev-next-button {
     display: inline-block; 
     width: 100%;
     min-height: 50px;
-    background-color: #222f3d;
+    background-color: #001022;
     text-align: center;
 }
 @media screen and (min-width: 48em) {
@@ -2287,7 +2287,7 @@ button.flickity-prev-next-button {
     position: absolute;
     top: 45%;
     width: 100%;
-    text-shadow: 0 2px rgba(34, 47, 61, 0.4); 
+    text-shadow: 0 2px rgba(0, 16, 34, 0.4); 
     font-weight: bold;
 }
 
@@ -2472,12 +2472,12 @@ button.flickity-prev-next-button {
 
 .t-bg__tint {
     color: rgba(255, 255, 255, 0.95); 
-    background-color: rgba(88, 109, 120, 0.6);
+    background-color: rgba(86, 106, 122, 0.6);
 }
 
 .t-bg__frost {
     color: rgba(52, 73, 94, 0.95); 
-    background-color: rgba(228, 233, 235, 0.6);
+    background-color: rgba(227, 232, 236, 0.6);
 }
 
 .t-bg__grey--dark {
@@ -2497,22 +2497,22 @@ button.flickity-prev-next-button {
 
 .t-bg__1 {
     color: rgba(255, 255, 255, 0.95); 
-    background-color: #34495e;
+    background-color: #002855;
 }
 
 .t-bg__1--glass {
     color: rgba(255, 255, 255, 0.95); 
-    background-color: rgba(34, 47, 61, 0.8);
+    background-color: rgba(0, 16, 34, 0.8);
 }
 
 .t-bg__1--dark {
     color: rgba(255, 255, 255, 0.95); 
-    background-color: #222f3d;
+    background-color: #001022;
 }
 
 .t-bg__1--light {
     color: rgba(255, 255, 255, 0.95); 
-    background-color: #46627f;
+    background-color: #004088;
 }
 
 .t-bg__2 {
@@ -2560,15 +2560,15 @@ button.flickity-prev-next-button {
 }
 
 .t-fill__1 {
-    fill: #34495e;
+    fill: #002855;
 }
 
 .t-fill__1--dark {
-    fill: #222f3d;
+    fill: #001022;
 }
 
 .t-fill__1--light {
-    fill: #46627f;
+    fill: #004088;
 }
 
 .t-fill__2 {
@@ -4412,8 +4412,8 @@ button.flickity-prev-next-button {
 /*----------------------------------------------------*    #To be place in a more appropriate stylesheet later
 \*----------------------------------------------------*/
 .browserupgrade {
-    margin: 0.2em 0;
-    padding: 0.2em 0; 
+    margin: 0.2 0;
+    padding: 0.2 0; 
     color: #000;
     background: #ccc;
     text-align: center;
@@ -4533,16 +4533,16 @@ p:last-of-type {
 
 .entry-content a:not(.button) {
     border-bottom: 1px solid transparent; 
-    color: #222f3d;
+    color: #001022;
 }
 .entry-content a:not(.button):hover,
 .entry-content a:not(.button):focus {
-    border-bottom-color: #587ca0; 
+    border-bottom-color: #0058bb; 
     opacity: 1;
-    color: #46627f;
+    color: #004088;
 }
 .entry-content a:not(.button):active {
-    color: #34495e;
+    color: #002855;
 }
 
 .panel {

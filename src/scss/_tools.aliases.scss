@@ -7,7 +7,7 @@
 
 // Brand
 
-$color-primary:             #34495e;
+$color-primary:             #002855;
 $color-primary-light:       lighten($color-primary, 10);
 $color-primary-dark:        darken($color-primary, 10);
 $color-secondary:           #FFE192;
@@ -27,6 +27,7 @@ $color-grey:                $grey-200;
 $color-grey-light:          $grey-100;
 $color-grey-lighter:          $grey-50;
 $color-grey-ui:             $blue-grey-100;
+$color-grey-ui-dark:        $blue-grey-700;
 $color-black:               $black;
 $color-white:               $white;
 $color-off-white:              #FFFAF5;

@@ -8,7 +8,7 @@
 //add_action( 'admin_init', 'bempress_get_editor_styles' );
 add_action( 'wp_enqueue_scripts', 'bempress_rtl_add_data' );
 add_action( 'wp_enqueue_scripts', 'bempress_enqueue_styles', 4 );
-add_action( 'wp_enqueue_scripts', 'bempress_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts', 'bempress_scripts' );
 add_filter( 'tiny_mce_before_init', 'bempress_tiny_mce_before_init' );
 
 
@@ -105,7 +105,27 @@ function bempress_enqueue_scripts() {
     $suffix = hybrid_get_min_suffix();
 
     wp_enqueue_script(
-        'bempress-main',
-        trailingslashit( get_template_directory_uri() ) . "js/main.js", ['jquery'], null, true
+        'bempress-nav',
+        trailingslashit( get_template_directory_uri() ) . "js/nav.js", [''], null, true
     );
+}
+
+
+
+
+// Register Script
+function bempress_scripts() {
+
+    wp_register_script( 'bempress-nav',
+        trailingslashit( get_template_directory_uri() ) . "js/nav.js", false, false, true );
+    wp_enqueue_script( 'bempress-nav' );
+
+    wp_register_script( 'bempress-panel',
+        trailingslashit( get_template_directory_uri() ) . "js/panel.js", false, false, true );
+
+    if ( is_active_sidebar( 'panel-one' ) || is_active_sidebar( 'panel-two' ) || is_active_sidebar( 'panel-three' ) ) :
+
+        wp_enqueue_script( 'bempress-panel' );
+
+    endif;
 }
