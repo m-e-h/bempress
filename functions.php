@@ -78,6 +78,8 @@ add_action( 'hybrid_register_layouts', 'my_register_layouts' );
 
 function my_register_layouts() {
 
+    hybrid_get_layout( 'default' )->image = '%s/images/one-column.svg';
+
     hybrid_register_layout(
         '1c',
         array(

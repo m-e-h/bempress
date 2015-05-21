@@ -10,8 +10,8 @@ class AttrTrumps {
 
 	/* Attributes for major structural elements. */
 	public $body                  		= '';
-	public $site_container    			= '';
-	public $site_inner   				= ' grid u-mt- u-mt@md u-mt+@lg';
+	public $site_container    			= ' u-mt- u-mt@md u-mt+@lg';
+	public $site_inner   				= ' grid';
 	public $site_inner_full_width		= ' ';
 	public $card_layout_inner 	        = ' wrap';
 	public $site_inner_sidebar_right 	= ' wrap';

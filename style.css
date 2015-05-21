@@ -104,42 +104,42 @@ Tags:
  * #ELEMENTS
  */
 h1 {
-    margin: 24px 0 12px; 
+    margin-bottom: 24px; 
     font-size: 36px;
     font-size: 2.25rem;
     line-height: 1.3333333333;
 }
 
 h2 {
-    margin: 24px 0 6px; 
+    margin-bottom: 24px; 
     font-size: 30px;
     font-size: 1.875rem;
     line-height: 1.6;
 }
 
 h3 {
-    margin: 24px 0 6px; 
+    margin-bottom: 24px; 
     font-size: 24px;
     font-size: 1.5rem;
     line-height: 1;
 }
 
 h4 {
-    margin: 24px 0 6px; 
+    margin-bottom: 24px; 
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 1.2;
 }
 
 h5 {
-    margin: 24px 0 6px; 
+    margin-bottom: 24px; 
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.5;
 }
 
 h6 {
-    margin: 24px 0 6px; 
+    margin-bottom: 24px; 
     font-size: 14px;
     font-size: 0.875rem;
     line-height: 1.7142857143;
@@ -245,15 +245,16 @@ big {
     color: inherit;
     font-size: inherit;
     line-height: inherit;
-    vertical-align: middle; 
+    vertical-align: middle;
 
     -webkit-box-direction: normal;
+    -webkit-box-flex: 0;
     -webkit-box-orient: vertical;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto; 
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
-    -ms-flex-negative: 0;
-    -webkit-flex-shrink: 0;
-    flex-shrink: 0;
 }
 
 *,
@@ -1266,7 +1267,7 @@ nav ul {
 \*------------------------------------*/
 .wrapper,
 .wrap {
-    max-width: 1240px;
+    max-width: 1000px;
     margin-right: auto; 
     margin-left: auto;
 }
@@ -4581,12 +4582,4 @@ p:last-of-type {
 
 .comment-list {
     list-style: none;
-}
-
-.home .site-inner {
-    margin-top: 0;
-}
-
-.home .entry__header {
-    display: none;
 }

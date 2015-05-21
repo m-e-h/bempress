@@ -23,15 +23,11 @@ get_header(); ?>
 
             <?php while ( have_posts() ) : the_post(); ?>
 
-                <div <?php hybrid_attr( 'wrap', 'card' ); ?>>
-
                 <?php tha_entry_before(); ?>
 
                 <?php hybrid_get_content_template(); ?>
 
                 <?php tha_entry_after(); ?>
-
-                </div>
 
             <?php endwhile; ?>
 

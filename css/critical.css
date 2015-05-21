@@ -390,7 +390,7 @@ tr {
 th,
 td {
     padding: 12px 6px;
-    border: 0.1rem solid #e4e9eb;
+    border: 0.1rem solid #e3e8ec;
     text-align: center;
 }
 
@@ -411,9 +411,9 @@ textarea {
     width: 100%;
     min-height: 48px;
     padding: 0 24px; 
-    border: 1px solid #e4e9eb;
+    border: 1px solid #e3e8ec;
     border-radius: 2px;
-    background-color: #e4e9eb;
+    background-color: #e3e8ec;
     font-family: inherit;
     font-weight: inherit;
     font-style: inherit;
@@ -426,7 +426,7 @@ input[type="color"] {
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: #46627f;
+    border-color: #004088;
     outline: 0;
     background-color: #fff;
 }
@@ -465,13 +465,13 @@ textarea[disabled] {
 input[readonly],
 select[readonly],
 textarea[readonly] {
-    border-color: #e4e9eb;
+    border-color: #e3e8ec;
     color: #7795b4; 
     background-color: #ebebeb;
 }
 
 select {
-    border: 1px solid #e4e9eb;
+    border: 1px solid #e3e8ec;
     background-color: #fff;
     text-transform: none;
 
@@ -504,7 +504,7 @@ legend {
     width: 100%; 
     margin-bottom: 12px;
     padding: 12px 0;
-    border-bottom: 0.1rem solid #e4e9eb;
+    border-bottom: 0.1rem solid #e3e8ec;
     color: #34495e;
 }
 

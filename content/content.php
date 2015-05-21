@@ -7,6 +7,8 @@
 ?>
 <article <?php hybrid_attr( 'post' ); ?>>
 
+    <section <?php hybrid_attr( 'wrap', 'content' ); ?>>
+
 	<?php tha_entry_top(); ?>
 
 	<?php if ( is_singular( get_post_type() ) ) : ?>
@@ -38,4 +40,7 @@
 		<?php endif; // End single post check. ?>
 
 	<?php tha_entry_bottom(); ?>
+
+    </section>
+
 </article><!-- .entry -->

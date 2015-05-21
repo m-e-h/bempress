@@ -4,15 +4,19 @@
  *
  * @package BEMpress
  */
-?>
 
-<?php if ( ! in_array( get_theme_mod( 'theme_layout' ), array( '1c', '1c-narrow' ) ) ) : // If not a one-column layout. ?>
+if ( ! is_active_sidebar( 'primary' ) ) {
+        return;
+}
+?>
 
 	<?php tha_sidebars_before(); ?>
 
 	<aside <?php hybrid_attr( 'sidebar', 'primary' ); ?>>
 
 		<?php tha_sidebar_top(); ?>
+
+        <section <?php hybrid_attr( 'wrap', 'p-side' ); ?>>
 
 		<span id="sidebar-primary-title" class="screen-reader-text"><?php
 			// Translators: %s is the sidebar name. This is the sidebar title shown to screen readers.
@@ -45,10 +49,10 @@
 
 		<?php endif; // End widgets check. ?>
 
+        </section>
+
 		<?php tha_sidebar_bottom(); ?>
 
 	</aside><!-- #sidebar-primary -->
 
 	<?php tha_sidebars_after();
-
-endif; // End layout check.
