@@ -4,32 +4,32 @@
 
 h1 {
     @include font-size($heading-size-1);
-    margin: $base-spacing-unit 0 $base-spacing-unit--small;
+    margin-bottom: $base-spacing-unit;
 }
 
 h2 {
     @include font-size($heading-size-2);
-    margin: $base-spacing-unit 0 $base-spacing-unit--tiny;
+    margin-bottom: $base-spacing-unit;
 }
 
 h3 {
     @include font-size($heading-size-3);
-    margin: $base-spacing-unit 0 $base-spacing-unit--tiny;
+    margin-bottom: $base-spacing-unit;
 }
 
 h4 {
     @include font-size($heading-size-4);
-    margin: $base-spacing-unit 0 $base-spacing-unit--tiny;
+    margin-bottom: $base-spacing-unit;
 }
 
 h5 {
     @include font-size($heading-size-5);
-    margin: $base-spacing-unit 0 $base-spacing-unit--tiny;
+    margin-bottom: $base-spacing-unit;
 }
 
 h6 {
     @include font-size($heading-size-6);
-    margin: $base-spacing-unit 0 $base-spacing-unit--tiny;
+    margin-bottom: $base-spacing-unit;
 }
 
 h1,
