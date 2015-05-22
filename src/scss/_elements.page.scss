@@ -58,6 +58,7 @@
 body {
     background-color: $color-bg;
     color: $color-text;
+      transition: opacity ease-in 0.2s;
     @include sm {
         @include font-size ($base-font-size - 1);
     }

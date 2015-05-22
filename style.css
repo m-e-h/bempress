@@ -276,8 +276,10 @@ big {
 }
 
 body {
-    color: #34495e; 
+    color: #34495e;
     background-color: #fffaf5;
+    -webkit-transition: opacity ease-in 0.2s;
+    transition: opacity ease-in 0.2s;
 }
 @media screen and (max-width: 35.5em) {
     body {
