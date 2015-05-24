@@ -61,7 +61,7 @@ if ( !class_exists( 'Hybrid' ) ) {
 		 * @access public
 		 * @return void
 		 */
-		function __construct() {
+		public function __construct() {
 			global $hybrid;
 
 			// Set up an empty class for the global $hybrid object.
@@ -98,7 +98,7 @@ if ( !class_exists( 'Hybrid' ) ) {
 		 * @access public
 		 * @return void
 		 */
-		function constants() {
+		public function constants() {
 
 			// Sets the framework version number.
 			define( 'HYBRID_VERSION', '3.0.0' );
@@ -139,7 +139,7 @@ if ( !class_exists( 'Hybrid' ) ) {
 		 * @access public
 		 * @return void
 		 */
-		function core() {
+		public function core() {
 
 			// Load the context-based functions.
 			require_once( HYBRID_INC . 'context.php' );
@@ -182,21 +182,17 @@ if ( !class_exists( 'Hybrid' ) ) {
 		 * @access public
 		 * @return void
 		 */
-		function i18n() {
-			global $hybrid;
-
-			// Get parent and child theme textdomains.
-			$parent_textdomain = hybrid_get_parent_textdomain();
-			$child_textdomain  = hybrid_get_child_textdomain();
+		public function i18n() {
 
 			// Load theme textdomain.
-			$hybrid->textdomain_loaded[ $parent_textdomain ] = load_theme_textdomain( $parent_textdomain );
+			load_theme_textdomain( hybrid_get_parent_textdomain() );
 
 			// Load child theme textdomain.
-			$hybrid->textdomain_loaded[ $child_textdomain ] = is_child_theme() ? load_child_theme_textdomain( $child_textdomain ) : false;
+			if ( is_child_theme() )
+				load_child_theme_textdomain( hybrid_get_child_textdomain() );
 
 			// Load the framework textdomain.
-			$hybrid->textdomain_loaded['hybrid-core'] = hybrid_load_framework_textdomain( 'hybrid-core' );
+			hybrid_load_framework_textdomain();
 		}
 
 		/**
@@ -207,7 +203,7 @@ if ( !class_exists( 'Hybrid' ) ) {
 		 * @access public
 		 * @return void
 		 */
-		function theme_support() {
+		public function theme_support() {
 
 			// Automatically add <title> to head.
 			add_theme_support( 'title-tag' );
@@ -236,7 +232,7 @@ if ( !class_exists( 'Hybrid' ) ) {
 		 * @access public
 		 * @return void
 		 */
-		function includes() {
+		public function includes() {
 
 			// Load the HTML attributes functions.
 			require_once( HYBRID_INC . 'attr.php' );
@@ -287,16 +283,16 @@ if ( !class_exists( 'Hybrid' ) ) {
 		 * @access public
 		 * @return void
 		 */
-		function extensions() {
+		public function extensions() {
 
 			// Load the Breadcrumb Trail extension if supported.
-			hybrid_require_if_theme_supports( 'breadcrumb-trail', HYBRID_EXT . 'breadcrumb-trail.php' );
+			require_if_theme_supports( 'breadcrumb-trail', HYBRID_EXT . 'breadcrumb-trail.php' );
 
 			// Load the Cleaner Gallery extension if supported.
-			hybrid_require_if_theme_supports( 'cleaner-gallery', HYBRID_EXT . 'cleaner-gallery.php' );
+			require_if_theme_supports( 'cleaner-gallery', HYBRID_EXT . 'cleaner-gallery.php' );
 
 			// Load the Get the Image extension if supported.
-			hybrid_require_if_theme_supports( 'get-the-image', HYBRID_EXT . 'get-the-image.php' );
+			require_if_theme_supports( 'get-the-image', HYBRID_EXT . 'get-the-image.php' );
 		}
 
 		/**
@@ -306,7 +302,7 @@ if ( !class_exists( 'Hybrid' ) ) {
 		 * @access public
 		 * @return void
 		 */
-		function admin() {
+		public function admin() {
 
 			// Load the main admin file if in admin.
 			if ( is_admin() )

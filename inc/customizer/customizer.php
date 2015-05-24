@@ -120,7 +120,7 @@ function bempress_customize_register( $wp_customize ) {
         array(
             'default'           => '#020042',
             'sanitize_callback' => 'sanitize_hex_color',
-            'transport' => 'postMessage',
+            'transport' => 'refresh',
         )
     );
     $wp_customize->add_control(
@@ -143,7 +143,7 @@ function bempress_customize_register( $wp_customize ) {
         array(
             'default'           => '#FFE192',
             'sanitize_callback' => 'sanitize_hex_color',
-            'transport' => 'postMessage',
+            'transport' => 'refresh',
         )
     );
     $wp_customize->add_control(
