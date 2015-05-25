@@ -263,6 +263,7 @@ big {
     box-sizing: inherit;
     border-width: 0;
     border-style: solid;
+    border-color: currentColor;
     -webkit-transition: inherit;
     transition: inherit;
 }
@@ -399,7 +400,6 @@ img {
     height: auto;
     border: 0;
     font-style: italic;
-    vertical-align: baseline;
 }
 
 svg:not(:root) {
