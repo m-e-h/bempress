@@ -64,16 +64,16 @@ button.flickity-prev-next-button {
         position: absolute;
         top: 45%;
         width: 100%;
-        font-weight: bold;
-        text-shadow: 0 2px rgba($color-primary-dark,0.4);
     }
 }
 
-    .feature-text .entry-title {
-        font-size: 20px;
-        color: #fff;
-
-        @include md {
-            font-size: 60px;
-        }
+.feature-text .entry-title {
+    color: #fff;
+    font-weight: bold;
+    line-height: 1;
+    text-shadow: 0 2px rgba(0, 16, 34, 0.4);
+    @include font-size($heading-size-2, false);
+    @include md {
+        @include font-size($heading-size-jumbo, false);
     }
+}

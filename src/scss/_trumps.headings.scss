@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 
-.h1, .site-title, .entry__title {
+.h1 {
     @include font-size($heading-size-2);
     @include md {
         @include font-size($heading-size-1, false);
@@ -35,4 +35,12 @@
 
 .h6 {
     @include font-size($heading-size-6);
+}
+
+.text-jumbo {
+    @include font-size($heading-size-2, false);
+    @include md {
+        @include font-size($heading-size-jumbo, false);
+    }
+    line-height: 1;
 }

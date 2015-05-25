@@ -85,8 +85,29 @@
     margin: 0 auto;
 }
 
+.u-bold    { font-weight: bold }
+.u-regular { font-weight: normal }
+.u-italic  { font-style: italic }
+.u-caps    { text-transform: uppercase; letter-spacing: .2em; }
 
-.br {
+.u-left-align   { text-align: left }
+.u-center       { text-align: center }
+.u-right-align  { text-align: right }
+.u-justify      { text-align: justify }
+
+.u-truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.u-shadow {
+text-shadow: 0 2px rgba(0, 16, 34, 0.4);
+}
+
+
+.br, .u-br {
     border-radius: $base-radius;
 }
 
@@ -224,37 +245,4 @@
     fill: $color-accent-light;
 }
 
-.u-p\@all {
-    padding: 12px;
-    @include md {
-        padding: 24px;
-    }
-    @include lg {
-        padding: 48px;
-    }
-}
 
-.u-ph\@all {
-    @extend .u-ph-;
-    @include md {
-        padding-right: 24px;
-        padding-left: 24px;
-    }
-    @include lg {
-        padding-right: 48px;
-        padding-left: 48px;
-    }
-}
-
-.u-pv\@all {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    @include md {
-    padding-top: 24px;
-    padding-bottom: 24px;
-    }
-    @include lg {
-    padding-top: 48px;
-    padding-bottom: 48px;
-    }
-}

@@ -302,13 +302,16 @@ li > ol {
 img {
     max-width: 100%;
     height: auto;
-    border: 0;
+    border: 0; 
     font-style: italic;
-    vertical-align: baseline;
 }
 
 svg:not(:root) {
     overflow: hidden;
+}
+
+svg {
+    height: 100%;
 }
 
 /**

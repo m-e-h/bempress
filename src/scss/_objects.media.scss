@@ -1,28 +1,7 @@
-.o-media {
-    display: table;
-    width: 100%;
+
+.featured-media {
+  text-align: center;
 }
-
-    .o-media__img,
-    .o-media__body {
-        display: table-cell;
-        vertical-align: top;
-    }
-
-    .o-media__img {
-        padding-right: $base-spacing-unit;
-
-        img {
-            display: block;
-            max-width: none;
-        }
-
-    }
-
-    .o-media__body {
-        width: 100%;
-    }
-
 
 .gallery {
     margin-bottom: 1.5em;

@@ -3,25 +3,63 @@
 \*------------------------------------*/
 
 .block {
-    display: inline-block;
-    padding: 24px;
+  width: 100%;
 }
-
-.block__content {
-    border: 1px solid #ccc;
-    padding: 24px;
-}
-
-.block__header {
-
-}
-
 .block__title {
+  margin: 0;
+  padding: $base-spacing-unit;
+}
+.block__img {
+  border-radius: 3px 3px 0 0;
+}
+.block__content {
+  border-radius: 3px;
+  padding: 0;
+}
+.block__img ~ .block__content {
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+}
+
+.block__body {
+  padding: $base-spacing-unit;
+}
+
+.block__title ~ .block__body {
+  padding-top: 0;
+}
+
+.block__title--color {
+  margin-bottom: $base-spacing-unit;
+}
+
+.block__action {
+  padding: $base-spacing-unit;
+  border-top-width: 1px;
+}
+
+
+.media {
+    display: table;
+    width: 100%;
+}
+
+.media__img,
+.media__body {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.media__img {
+    padding-right: $base-spacing-unit;
+
+    img {
+        display: block;
+        max-width: none;
+    }
 
 }
 
-.block__image {
-  max-width: 78px;
-    margin: 0 auto;
-    display: block;
+.media__body {
+    width: 100%;
 }

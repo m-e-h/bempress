@@ -10,7 +10,7 @@ class AttrTrumps {
 
 	/* Attributes for major structural elements. */
 	public $body                  		= '';
-	public $site_container    			= ' u-mt- u-mt@md u-mt+@lg';
+	public $site_container    			= '';
 	public $site_inner   				= ' grid';
 	public $site_inner_full_width		= ' ';
 	public $card_layout_inner 	        = ' wrap';
@@ -19,7 +19,7 @@ class AttrTrumps {
 	public $wrap                		= '';
     public $action_bar_wrap             = ' wrapper--wide shadow--z2 t-bg__1 flex flex--row flex--wrap flex--j-between';
 	public $header_wrap                	= ' wrapper--wide t-bg__tint';
-    public $card_wrap                   = ' grid__item flex u-ph@all u-1of1@sm u-1of2@md u-1of3@lg';
+    public $card_wrap                   = ' grid__item flex u-ph@respond u-1of1@sm u-1of2@md u-1of3@lg';
 	public $header                		= ' t-bg__tint';
 	public $footer                		= ' t-bg__1--light';
 	public $content 					= ' grid__item';
@@ -33,7 +33,7 @@ class AttrTrumps {
 	public $sidebar_card_layout  		= ' u-1of1';
 	public $sidebar_sidebar_right 		= ' u-1of3@md';
 	public $sidebar_sidebar_left		= ' u-1of3@md';
-	public $sidebar_horizontal          = ' u-pl- u-pl@md u-pl+@lg grid grid--flex';
+	public $sidebar_horizontal          = ' u-pl@respond grid flex';
 	public $menu_primary 				= ' t-bg__white menu--horizontal u-ph@md flex flex--row flex-j--center ';
 	public $menu_secondary 				= ' menu--horizontal u-p- flex flex-j--center';
 	public $menu_li         			= 'menu__item';
@@ -41,20 +41,20 @@ class AttrTrumps {
     public $nav_single                  = '';
     public $nav_archive                 = '';
 
-    public $author_box                  = ' br u-p@all u-mb- u-mb@md u-mb+@lg';
+    public $author_box                  = ' br u-p@respond u-mb@respond';
 
 	/* Header attributes. */
 	public $branding              		= ' ';
-	public $site_title            		= ' u-m0 page-title__main';
+	public $site_title            		= ' h1 u-m0 page-title__main';
 	public $site_description      		= ' page-title__sub';
 
 	/* Loop attributes. */
-	public $loop_meta             		= ' u-p@all';
-	public $loop_title            		= ' u-m0';
-	public $loop_description      		= ' u-mt-';
+	public $archive_header             	= ' t-bg__grey u-p@respond u-mb@respond u-center';
+	public $archive_title            	= ' text-jumbo bold u-shadow wrap u-mv0';
+	public $archive_description      	= ' wrap u-mt-';
 
 	/* Post-specific attributes. */
-	public $post                  		= ' br u-p@all u-mb- u-mb@md u-mb+@lg';
+	public $post                  		= ' br u-mb@respond';
     public $post_card_layout            = ' t-bg__white flex--grow';
 	public $entry_title           		= ' wrap entry__title';
 	public $entry_author          		= ' u-mr- entry__author';
@@ -63,7 +63,7 @@ class AttrTrumps {
 	public $entry_summary         		= ' wrap';
 	public $entry_terms           		= ' badge';
 
-    public $comments_area               = ' wrap br u-p@all u-mb- u-mb@md u-mb+@lg';
+    public $comments_area               = ' wrap br u-p@respond u-mb@respond';
 
 
 
@@ -81,7 +81,7 @@ class AttrTrumps {
 		add_filter( 'hybrid_attr_main',				[ $this, 'main' ] );
 		add_filter( 'hybrid_attr_sidebar',			[ $this, 'sidebar' ], 10, 2 );
 		add_filter( 'hybrid_attr_menu',				[ $this, 'menu' ], 10, 2 );
-		add_filter( 'hybrid_attr_archive-header',		[ $this, 'loop_meta' ] );
+		add_filter( 'hybrid_attr_archive-header',		[ $this, 'archive_header' ] );
 
         add_filter( 'hybrid_attr_author-box',       [ $this, 'author_box' ], 10, 2 );
 
@@ -90,8 +90,8 @@ class AttrTrumps {
 		add_filter( 'hybrid_attr_branding',			[ $this, 'branding' ] );
 		add_filter( 'hybrid_attr_site-title',		[ $this, 'site_title' ] );
 		add_filter( 'hybrid_attr_site-description',	[ $this, 'site_description' ] );
-		add_filter( 'hybrid_attr_archive-title',		[ $this, 'loop_title' ] );
-		add_filter( 'hybrid_attr_archive-description',	[ $this, 'loop_description' ] );
+		add_filter( 'hybrid_attr_archive-title',		[ $this, 'archive_title' ] );
+		add_filter( 'hybrid_attr_archive-description',	[ $this, 'archive_description' ] );
 
         add_filter( 'hybrid_attr_nav',              [ $this, 'nav' ], 10, 2 );
 
@@ -298,20 +298,20 @@ class AttrTrumps {
 
 	/* === LOOP === */
 
-	public function loop_meta( $attr ) {
-		$attr['class']    .= $this->loop_meta;
+	public function archive_header( $attr ) {
+		$attr['class']    .= $this->archive_header;
 		return $attr;
 	}
 
 
-	public function loop_title( $attr ) {
-		$attr['class']    .= $this->loop_title;
+	public function archive_title( $attr ) {
+		$attr['class']    .= $this->archive_title;
 		return $attr;
 	}
 
 
-	public function loop_description( $attr ) {
-		$attr['class']    .= $this->loop_description;
+	public function archive_description( $attr ) {
+		$attr['class']    .= $this->archive_description;
 		return $attr;
 	}
 
