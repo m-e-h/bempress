@@ -12,8 +12,17 @@
 
 <?php if ( is_singular( get_post_type() ) ) : //single posts. ?>
 
-
 		<?php get_template_part( 'templates/single', 'header' ); ?>
+
+        <?php
+        // Display a featured image if we can find something to display.
+        get_the_image( [
+            'size'   => 'bempress-full',
+            'order'  => [ 'featured', 'attachment' ],
+            'before' => '<div class="featured-media image">',
+            'after'  => '</div>',
+        ] );
+        ?>
 
 	<div class="entry-content">
 		<?php hybrid_attachment(); // Function for handling non-image attachments. ?>
