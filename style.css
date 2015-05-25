@@ -263,6 +263,7 @@ big {
     box-sizing: inherit;
     border-width: 0;
     border-style: solid;
+    border-color: #e3e8ec;
     -webkit-transition: inherit;
     transition: inherit;
 }
@@ -1271,6 +1272,7 @@ nav ul {
 \*------------------------------------*/
 .block {
     width: 100%;
+    margin-bottom: 24px;
 }
 
 .block__title {
@@ -1283,13 +1285,19 @@ nav ul {
 }
 
 .block__content {
-    padding: 0; 
+    padding: 0;
+    border-width: 1px; 
     border-radius: 3px;
 }
 
 .block__img ~ .block__content {
     border-top: 0; 
     border-radius: 0 0 3px 3px;
+}
+
+.block__icon {
+    max-width: 50%;
+    margin: 0 auto;
 }
 
 .block__body {
@@ -4771,13 +4779,6 @@ button.flickity-prev-next-button {
     display: none;
     width: 100%;
     margin: 0;
-}
-
-.toggle-img {
-    display: block;
-    max-width: 38px;
-    max-height: 38px;
-    margin: 0 auto;
 }
 
 .site-header {

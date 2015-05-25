@@ -4,21 +4,32 @@
 
 .block {
   width: 100%;
+  margin-bottom: $base-spacing-unit;
 }
+
 .block__title {
   margin: 0;
   padding: $base-spacing-unit;
 }
+
 .block__img {
   border-radius: 3px 3px 0 0;
 }
+
 .block__content {
   border-radius: 3px;
   padding: 0;
+  border-width: 1px;
 }
+
 .block__img ~ .block__content {
   border-radius: 0 0 3px 3px;
   border-top: 0;
+}
+
+.block__icon {
+  max-width: 50%;
+  margin: 0 auto;
 }
 
 .block__body {
