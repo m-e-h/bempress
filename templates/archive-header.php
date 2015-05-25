@@ -8,8 +8,6 @@
 
 <div <?php hybrid_attr( 'archive-header' ); ?>>
 
-    <div <?php hybrid_attr( 'wrap', 'archive-header' ); ?>>
-
         <h1 <?php hybrid_attr( 'archive-title' ); ?>><?php the_archive_title(); ?></h1>
 
         <?php if ( is_category() || is_tax() ) : ?>
@@ -25,7 +23,5 @@
             </div><!-- .archive-description -->
 
         <?php endif; ?>
-
-    </div>
 
 </div><!-- .archive-header -->

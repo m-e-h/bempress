@@ -5,7 +5,7 @@
 ?>
 
 <footer class="entry__footer">
-    <p class="entry__meta">
+    <p class="entry__meta wrap">
         <?php flagship_entry_author(); ?>
         <?php flagship_entry_published(); ?>
         <?php flagship_entry_comments_link(); ?>

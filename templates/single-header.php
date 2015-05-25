@@ -4,7 +4,7 @@
  */
 ?>
 
-<header class="entry__header entry__header--feature">
+<header class="entry__header entry__header--feature u-mb@respond">
 
     <?php
     // Display a featured image if we can find something to display.
