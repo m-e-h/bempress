@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    #BLOCK
+\*------------------------------------*/
+
+.block {
+    display: inline-block;
+    padding: 24px;
+}
+
+.block__content {
+    border: 1px solid #ccc;
+    padding: 24px;
+}
+
+.block__header {
+
+}
+
+.block__title {
+
+}
+
+.block__image {
+  max-width: 78px;
+    margin: 0 auto;
+    display: block;
+}
