@@ -37,7 +37,7 @@
 		<?php get_template_part( 'templates/single', 'content' ); ?>
 
 		<footer class="entry-footer">
-			<p class="entry-meta">
+			<p class="entry-meta wrap">
 				<?php flagship_entry_published(); ?>
 				<a class="entry-permalink" href="<?php the_permalink(); ?>" rel="bookmark" itemprop="url"><?php _e( ' # ', 'bempress' ); ?></a>
 				<?php flagship_entry_comments_link(); ?>

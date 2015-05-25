@@ -33,7 +33,7 @@
 		</header><!-- .entry-header -->
 
 		<footer class="entry-footer">
-			<p class="entry-meta">
+			<p class="entry-meta wrap">
 				<a class="entry-permalink" href="<?php the_permalink(); ?>" rel="bookmark" itemprop="url"><?php _e( 'Permalink', 'bempress' ); ?></a>
 				<?php flagship_entry_comments_link(); ?>
 				<?php edit_post_link(); ?>

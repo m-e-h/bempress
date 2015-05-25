@@ -45,7 +45,7 @@
 
 	<?php if ( get_option( 'show_avatars' ) ) : // If avatars are enabled. ?>
 
-		<header class="entry-header">
+		<header class="entry-header wrap">
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
                 <?= get_avatar( get_the_author_meta( 'email' ) ); ?>
             </a>

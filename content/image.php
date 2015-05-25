@@ -48,7 +48,7 @@
 			'scan'          => true,
 			'caption'       => false,
 			'order'         => [ 'scan_raw', 'scan', 'featured', 'attachment', ],
-			'before'        => '<div class="featured-media image">',
+			'before'        => '<div class="featured-media image wrap">',
 			'after'         => '</div>',
 		] );
 		?>

@@ -7,8 +7,6 @@
 ?>
 <article <?php hybrid_attr( 'post' ); ?>>
 
-    <section <?php hybrid_attr( 'wrap', 'content' ); ?>>
-
 	<?php tha_entry_top(); ?>
 
 	<?php if ( is_singular( get_post_type() ) ) : ?>
@@ -26,7 +24,7 @@
 		get_the_image( [
 			'size'   => 'bempress-full',
 			'order'  => [ 'featured', 'attachment' ],
-			'before' => '<div class="featured-media image">',
+			'before' => '<div class="featured-media image wrap">',
 			'after'  => '</div>',
 		] );
 		?>
@@ -40,7 +38,5 @@
 		<?php endif; // End single post check. ?>
 
 	<?php tha_entry_bottom(); ?>
-
-    </section>
 
 </article><!-- .entry -->
