@@ -44,9 +44,6 @@ function bempress_setup() {
 	// http://themehybrid.com/docs/template-hierarchy
 	add_theme_support( 'hybrid-core-template-hierarchy' );
 
-	// https://github.com/FlagshipWP/flagship-library/wiki/Flagship-Author-Box
-	add_theme_support( 'flagship-author-box' );
-
     // https://developer.wordpress.org/themes/functionality/navigation-menus/
     register_nav_menus( [
         'primary'   => _x( 'Primary', 'bempress' ),
