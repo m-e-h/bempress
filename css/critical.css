@@ -66,6 +66,7 @@
     box-sizing: inherit;
     border-width: 0;
     border-style: solid;
+    border-color: #e3e8ec;
     -webkit-transition: inherit;
     transition: inherit;
 }
