@@ -1297,10 +1297,6 @@ nav ul {
     max-width: 50%;
 }
 
-.block__title ~ .block__body {
-    padding-top: 0;
-}
-
 .block__title--color {
     margin-bottom: 24px;
 }

@@ -16,8 +16,6 @@ if ( ! is_active_sidebar( 'primary' ) ) {
 
 		<?php tha_sidebar_top(); ?>
 
-        <section <?php hybrid_attr( 'wrap', 'p-side' ); ?>>
-
 		<span id="sidebar-primary-title" class="screen-reader-text"><?php
 			// Translators: %s is the sidebar name. This is the sidebar title shown to screen readers.
 			printf( _x( '%s', 'sidebar title', 'bempress' ), hybrid_get_sidebar_name( 'primary' ) );
@@ -48,8 +46,6 @@ if ( ! is_active_sidebar( 'primary' ) ) {
 			?>
 
 		<?php endif; // End widgets check. ?>
-
-        </section>
 
 		<?php tha_sidebar_bottom(); ?>
 

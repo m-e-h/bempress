@@ -29,11 +29,11 @@ class AttrTrumps {
 	public $content_sidebar_left 		= ' u-2of3@md u-pl@md u-pl+@lg';
 	public $main                		= ' ';
 	public $sidebar 					= ' grid__item';
-	public $sidebar_full_width  		= ' u-1of1';
+	public $sidebar_full_width  		= ' grid flex flex--row flex--wrap u-1of1';
 	public $sidebar_card_layout  		= ' u-1of1';
 	public $sidebar_sidebar_right 		= ' u-1of3@md';
 	public $sidebar_sidebar_left		= ' u-1of3@md';
-	public $sidebar_horizontal          = ' u-pl@respond grid flex';
+	public $sidebar_horizontal          = ' u-pl@respond grid flex flex--row flex--wrap';
 	public $menu_primary 				= ' t-bg__white menu--horizontal u-ph@md flex flex--row flex-j--center ';
 	public $menu_secondary 				= ' menu--horizontal u-p- flex flex-j--center';
 	public $menu_li         			= 'menu__item';
