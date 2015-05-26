@@ -1272,36 +1272,29 @@ nav ul {
 \*------------------------------------*/
 .block {
     width: 100%;
-    margin-bottom: 24px;
 }
 
 .block__title {
     margin: 0;
-    padding: 24px;
+    opacity: 1;
 }
 
 .block__img {
-    border-radius: 3px 3px 0 0;
+    border-radius: 2px 2px 0 0;
 }
 
 .block__content {
-    padding: 0;
-    border-width: 1px; 
-    border-radius: 3px;
+    padding: 0; 
+    border-radius: 2px;
 }
 
 .block__img ~ .block__content {
     border-top: 0; 
-    border-radius: 0 0 3px 3px;
+    border-radius: 0 0 2px 2px;
 }
 
 .block__icon {
     max-width: 50%;
-    margin: 0 auto;
-}
-
-.block__body {
-    padding: 24px;
 }
 
 .block__title ~ .block__body {
@@ -1313,8 +1306,10 @@ nav ul {
 }
 
 .block__action {
-    padding: 24px;
-    border-top-width: 1px;
+    border-radius: 0 0 2px 2px;
+}
+.block__action > a {
+    color: #fff !important;
 }
 
 .media {
@@ -4415,6 +4410,11 @@ button.flickity-prev-next-button {
     }
 }
 
+.u-mhAuto {
+    margin-right: auto; 
+    margin-left: auto;
+}
+
 .u-mh\@respond {
     margin-right: 12px;
     margin-left: 12px;
@@ -4850,4 +4850,8 @@ p:last-of-type {
 
 .comment-list {
     list-style: none;
+}
+
+.home .entry-content {
+    max-width: 100%;
 }

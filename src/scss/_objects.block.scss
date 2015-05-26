@@ -4,36 +4,33 @@
 
 .block {
   width: 100%;
-  margin-bottom: $base-spacing-unit;
 }
 
 .block__title {
   margin: 0;
-  padding: $base-spacing-unit;
+  opacity: 1;
 }
 
 .block__img {
-  border-radius: 3px 3px 0 0;
+  border-radius: $base-radius $base-radius 0 0;
 }
 
 .block__content {
-  border-radius: 3px;
+  border-radius: $base-radius;
   padding: 0;
-  border-width: 1px;
+  //border-width: 1px;
 }
 
 .block__img ~ .block__content {
-  border-radius: 0 0 3px 3px;
+  border-radius: 0 0 $base-radius $base-radius;
   border-top: 0;
 }
 
 .block__icon {
   max-width: 50%;
-  margin: 0 auto;
 }
 
 .block__body {
-  padding: $base-spacing-unit;
 }
 
 .block__title ~ .block__body {
@@ -45,8 +42,11 @@
 }
 
 .block__action {
-  padding: $base-spacing-unit;
-  border-top-width: 1px;
+    border-radius: 0 0 $base-radius $base-radius;
+  //border-top-width: 1px;
+  > a {
+    color: $white!important;
+  }
 }
 
 

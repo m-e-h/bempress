@@ -7,9 +7,7 @@
 
 get_header(); ?>
 
-    <?php
 
-    echo do_shortcode( '[slider type="slider" group="front" order="DESC" orderby="name" limit="-1"]' ); ?>
 
     <?php tha_content_before(); ?>
 
@@ -25,7 +23,7 @@ get_header(); ?>
 
                 <?php tha_entry_before(); ?>
 
-                <?php hybrid_get_content_template(); ?>
+                <?php get_template_part( 'content/front' ); ?>
 
                 <?php tha_entry_after(); ?>
 
