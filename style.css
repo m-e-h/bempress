@@ -528,7 +528,7 @@ input[type="color"] {
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: #004088;
+    border-color: #0060cc;
     outline: 0;
     background-color: #fff;
 }
@@ -1409,7 +1409,7 @@ input[type="submit"],
     border-width: 0;
     border-radius: 2px;
     color: rgba(255, 255, 255, 0.95);
-    background-color: #002855;
+    background-color: #004899;
     font: inherit;
     text-align: center;
     letter-spacing: 1px;
@@ -1448,7 +1448,7 @@ input[type="submit"]:active,
 .button--tab:active {
     outline: 0; 
     opacity: 1;
-    background-color: #004088;
+    background-color: #0060cc;
 }
 .btn:focus,
 button:focus,
@@ -1489,7 +1489,7 @@ input.is-active[type="submit"],
 .menu__item > a.is-active,
 .is-active.button--outline,
 .is-active.button--tab {
-    background-color: #001022;
+    background-color: #003066;
 }
 
 .button--transparent,
@@ -1516,7 +1516,7 @@ input.is-active[type="submit"],
     border-width: 3px;
     border-style: solid;
     border-color: currentColor; 
-    color: #002855;
+    color: #004899;
     background-color: transparent;
 }
 .button--outline:hover,
@@ -1525,10 +1525,10 @@ input.is-active[type="submit"],
 .badge a:active,
 .button--outline:focus,
 .badge a:focus {
-    border-color: #004088; 
+    border-color: #0060cc; 
     color: rgba(255, 255, 255, 0.95);
-    background-color: #004088;
-    background-color: #004088;
+    background-color: #0060cc;
+    background-color: #0060cc;
 }
 
 .button--tiny,
@@ -2289,17 +2289,17 @@ button.flickity-prev-next-button {
 }
 
 .meh-slider .meh-slider__cell {
-    background: #001022;
+    background: #003066;
 }
 
 .meh-slider .meh-slider__text {
-    text-shadow: 0 2px rgba(0, 16, 34, 0.4);
+    text-shadow: 0 2px rgba(0, 48, 102, 0.4);
 }
 
 .meh-slider .flickity-page-dots .dot {
     margin: 0;
     border-radius: 0;
-    background: #004088; 
+    background: #0060cc; 
 
     -webkit-box-flex: 1;
     -webkit-flex: 1;
@@ -2309,18 +2309,18 @@ button.flickity-prev-next-button {
 
 .meh-slider .flickity-prev-next-button {
     opacity: 0.5; 
-    background: #ffe192;
+    background: #ffd870;
 }
 .meh-slider .flickity-prev-next-button:hover {
     opacity: 1; 
-    background: #ffe192;
+    background: #ffd870;
 }
 
 .entry__header--feature {
     display: inline-block; 
     width: 100%;
     min-height: 50px;
-    background-color: #001022;
+    background-color: #003066;
     text-align: center;
 }
 @media screen and (min-width: 48em) {
@@ -2594,42 +2594,42 @@ button.flickity-prev-next-button {
 
 .t-bg__1 {
     color: rgba(255, 255, 255, 0.95); 
-    background-color: #002855;
+    background-color: #004899;
 }
 
 .t-bg__1--glass {
     color: rgba(255, 255, 255, 0.95); 
-    background-color: rgba(0, 16, 34, 0.8);
+    background-color: rgba(0, 48, 102, 0.8);
 }
 
 .t-bg__1--dark {
     color: rgba(255, 255, 255, 0.95); 
-    background-color: #001022;
+    background-color: #003066;
 }
 
 .t-bg__1--light {
     color: rgba(255, 255, 255, 0.95); 
-    background-color: #004088;
+    background-color: #0060cc;
 }
 
 .t-bg__2 {
     color: rgba(52, 73, 94, 0.95); 
-    background-color: #ffe192;
+    background-color: #ffd870;
 }
 
 .t-bg__2--dark {
     color: rgba(52, 73, 94, 0.95); 
-    background-color: #ffd35f;
+    background-color: #ffca3d;
 }
 
 .t-bg__2--glass {
     color: rgba(52, 73, 94, 0.95); 
-    background-color: rgba(255, 211, 95, 0.8);
+    background-color: rgba(255, 202, 61, 0.8);
 }
 
 .t-bg__2--light {
     color: rgba(52, 73, 94, 0.95); 
-    background-color: #ffefc5;
+    background-color: #ffe6a3;
 }
 
 .t-bg__3 {
@@ -2657,27 +2657,27 @@ button.flickity-prev-next-button {
 }
 
 .t-fill__1 {
-    fill: #002855;
+    fill: #004899;
 }
 
 .t-fill__1--dark {
-    fill: #001022;
+    fill: #003066;
 }
 
 .t-fill__1--light {
-    fill: #004088;
+    fill: #0060cc;
 }
 
 .t-fill__2 {
-    fill: #ffe192;
+    fill: #ffd870;
 }
 
 .t-fill__2--dark {
-    fill: #ffd35f;
+    fill: #ffca3d;
 }
 
 .t-fill__2--light {
-    fill: #ffefc5;
+    fill: #ffe6a3;
 }
 
 .t-fill__3 {
@@ -4798,16 +4798,16 @@ p:last-of-type {
 
 .entry-content a:not(.button) {
     border-bottom: 1px solid transparent; 
-    color: #001022;
+    color: #003066;
 }
 .entry-content a:not(.button):hover,
 .entry-content a:not(.button):focus {
-    border-bottom-color: #0058bb; 
+    border-bottom-color: #0078ff; 
     opacity: 1;
-    color: #004088;
+    color: #0060cc;
 }
 .entry-content a:not(.button):active {
-    color: #002855;
+    color: #004899;
 }
 
 .panel {
