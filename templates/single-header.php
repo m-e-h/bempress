@@ -9,11 +9,15 @@
     <?php
     // Display a featured image if we can find something to display.
     get_the_image( [
-        'size'          => 'bempress-full',
-        'split_content' => true,
+        'size'   => 'bempress-md',
+        'srcset_sizes' => array(
+            'bempress-full' => '1920w',
+            'bempress-sm' => '640w',
+            'bempress-full-cropped' => '1280w',
+            'bempress-retina' => '2560w',
+            ),
+        'order'  => [ 'featured', 'attachment' ],
         'link_to_post' => false,
-        'scan_raw'      => true,
-        'scan'          => true,
         'order'         => [ 'featured' ],
         'before'        => '<div class="featured-media image">',
         'after'         => '</div>',

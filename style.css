@@ -2329,7 +2329,7 @@ button.flickity-prev-next-button {
     }
 }
 .entry__header--feature img {
-    opacity: 0.5; 
+    opacity: 0.7; 
     vertical-align: middle;
 }
 .entry__header--feature .feature-text {
@@ -4850,4 +4850,8 @@ p:last-of-type {
 
 .home .entry-content {
     max-width: 100%;
+}
+
+.entry__header--feature img {
+    width: 100%;
 }

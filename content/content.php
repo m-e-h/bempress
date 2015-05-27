@@ -22,7 +22,8 @@
 		<?php
 		// Display a featured image if we can find something to display.
 		get_the_image( [
-			'size'   => 'bempress-full',
+			'size'   => 'bempress-md',
+            'srcset_sizes' => array( 'bempress-sm' => '640w', 'bempress-full' => '2x' ),
 			'order'  => [ 'featured', 'attachment' ],
 			'before' => '<div class="featured-media image wrap">',
 			'after'  => '</div>',

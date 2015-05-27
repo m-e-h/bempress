@@ -433,7 +433,7 @@ input[type="color"] {
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: #004088;
+    border-color: #0060cc;
     outline: 0;
     background-color: #fff;
 }
