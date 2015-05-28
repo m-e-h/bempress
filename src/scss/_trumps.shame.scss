@@ -138,6 +138,10 @@ p:last-of-type {
     text-align: center;
 }
 
+.site-link {
+    vertical-align: baseline;
+}
+
 .entry-content a:not(.button) {
     color: $color-links;
     border-bottom: 1px solid transparent;
@@ -210,4 +214,10 @@ p:last-of-type {
 
 .entry__header--feature img {
     width: 100%;
+}
+
+
+.featured-media {
+    max-height: 500px;
+    overflow: hidden;
 }
