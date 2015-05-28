@@ -5,8 +5,17 @@
  * @package bempress
  */
 
+// function wpt_register_theme_customizer( $wp_customize ) {
+
+//     var_dump( $wp_customize );
+
+// }
+// add_action( 'customize_register', 'wpt_register_theme_customizer' );
+
+
 add_action( 'customize_register', 'bempress_customize_register' );
 add_action( 'customize_preview_init', 'bempress_customizer_js' );
+add_action( 'wp_enqueue_scripts', 'bempress_google_fonts' );
 
 
 
@@ -16,56 +25,27 @@ function bempress_customize_register( $wp_customize ) {
     // Customize title and tagline sections and labels
     $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
     $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-
-
-
-
-    // Customize the Front Page Settings
-    $wp_customize->get_section('static_front_page')->title = esc_html__('Homepage Preferences', 'bempress');
-    $wp_customize->get_section('static_front_page')->priority = 20;
-    $wp_customize->get_control('show_on_front')->label = esc_html__('Choose Homepage Preference', 'bempress');
-    $wp_customize->get_control('page_on_front')->label = esc_html__('Select Homepage', 'bempress');
-    $wp_customize->get_control('page_for_posts')->label = esc_html__('Select Blog Homepage', 'bempress');
+    $wp_customize->get_control('page_for_posts')->label = esc_html__('Blog page', 'bempress');
 
 
 
 
     // Customize Background Settings
-    $wp_customize->get_section('background_image')->title = esc_html__('Background Styles', 'bempress');
+    $wp_customize->get_setting( 'background_color' )->transport  = 'postMessage';
+    //$wp_customize->get_section('background_image')->title = esc_html__('Background Styles', 'bempress');
     $wp_customize->get_control('background_color')->section = 'background_image';
-
-
-
-
-    // Customize Header Image Settings
-    $wp_customize->add_section(
-        'header_text_styles',
-        array(
-            'title'      => esc_html__('Header Styles','bempress'),
-            'priority'   => 20
-        )
-    );
-    //$wp_customize->get_section('header_image')->panel = 'design_settings';
-    $wp_customize->get_control('display_header_text')->section = 'header_text_styles';
-    $wp_customize->get_control('header_textcolor')->section = 'header_text_styles';
-    $wp_customize->get_control('header_textcolor')->label = esc_html__('Site Title Color', 'bempress');
+    $wp_customize->get_section('background_image')->title = esc_html__('Background', 'bempress');
+    $wp_customize->get_control('header_textcolor')->section = 'title_tagline';
     $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
     // Theme layouts
     $wp_customize->get_setting( 'theme_layout' )->transport = 'refresh';
 
-    // Add Custom Logo Settings
-    $wp_customize->add_section(
-        'branding',
-        array(
-            'title'      => esc_html__('Branding','bempress'),
-            'priority'   => 20
-        )
-    );
+
     $wp_customize->add_setting(
       'bempress_logo',
       array(
-        'default'     => get_template_directory_uri() . '/images/logo.svg',
+        'default'     => '',
         //'transport'   => 'postMessage'
       )
     );
@@ -75,7 +55,7 @@ function bempress_customize_register( $wp_customize ) {
            'custom_logo',
            array(
                'label'      => esc_html__( 'Your Logo', 'bempress' ),
-               'section'    => 'branding',
+               'section'    => 'title_tagline',
                'settings'   => 'bempress_logo',
                'context'    => 'bempress-custom-logo'
            )
@@ -87,7 +67,7 @@ function bempress_customize_register( $wp_customize ) {
 
   // Add Custom Footer Text
   $wp_customize->add_section( 'custom_footer_text' , array(
-    'title'      => esc_html__('Your Footer Text','bempress'),
+    'title'      => esc_html__('Footer Text','bempress'),
     'priority'   => 1000
   ) );
   $wp_customize->add_setting(
@@ -112,51 +92,84 @@ function bempress_customize_register( $wp_customize ) {
    );
 
 
+  //Typography
 
+    $wp_customize->add_section( 'custom_typography' , array(
+        'title'      => esc_html__('Typography','bempress'),
+        'priority'   => 80
+    ) );
 
-    // Add Primary Color
+    /* Adds the heading font setting. */
     $wp_customize->add_setting(
-        'primary_color',
+        'heading_font',
         array(
-            'default'           => '#020042',
-            'sanitize_callback' => 'sanitize_hex_color',
-            'transport' => 'refresh',
+            'default'              => get_theme_mod( 'heading_font', 'default' ),
+            'type'                 => 'theme_mod',
+            'sanitize_callback'    => 'esc_attr',
+            'sanitize_js_callback' => 'esc_attr',
+            //'transport'            => 'postMessage',
         )
     );
+    /* Adds the heading font control. */
     $wp_customize->add_control(
-        new WP_Customize_Color_Control(
-            $wp_customize,
-            'primary_color',
-            array(
-                'label'       => esc_html__( 'Primary Color', 'bempress' ),
-                'section'     => 'branding',
-            )
+        'bempress-heading-font',
+        array(
+            'label'    => esc_html__( 'Heading Font', 'bempress' ),
+            'section'  => 'custom_typography',
+            'settings' => 'heading_font',
+            'type'     => 'select',
+            'choices'  => customizer_library_get_font_choices()
         )
     );
 
-
-
-
-    // Add Secondary Color
+    /* Adds the body font setting. */
     $wp_customize->add_setting(
-        'secondary_color',
+        'body_font',
         array(
-            'default'           => '#FFE192',
-            'sanitize_callback' => 'sanitize_hex_color',
-            'transport' => 'refresh',
+            'default'              => get_theme_mod( 'body_font', 'default' ),
+            'type'                 => 'theme_mod',
+            'sanitize_callback'    => 'esc_attr',
+            'sanitize_js_callback' => 'esc_attr',
+            //'transport'            => 'postMessage',
         )
     );
+    /* Adds the body font control. */
     $wp_customize->add_control(
-        new WP_Customize_Color_Control(
-            $wp_customize,
-            'secondary_color',
-            array(
-                'label'       => esc_html__( 'Secondary Color', 'bempress' ),
-                'section'     => 'branding',
-                //'priority'    => 40,
-            )
+        'bempress-body-font',
+        array(
+            'label'    => esc_html__( 'Body Font', 'bempress' ),
+            'section'  => 'custom_typography',
+            'settings' => 'body_font',
+            'type'     => 'select',
+            'choices'  => customizer_library_get_font_choices()
         )
     );
+
+
+
+
+
+$wp_customize->add_setting(
+    'category_layout',
+    array(
+        'default'           => get_theme_mod( 'category_layout', '' ),
+        'sanitize_callback' => 'sanitize_html_class',
+        'transport'         => 'refresh'
+    )
+);
+
+$wp_customize->add_control(
+    new Hybrid_Customize_Control_Theme_Layout(
+        $wp_customize,
+        'category_layout',
+        array(
+            'label'    => esc_html__( 'Multi-Post Layout', 'hybrid-core' ),
+            'section'  => 'layout',
+            'layouts'  => array( 'cards', 'blog' )
+        )
+    )
+);
+
 
 }
 
@@ -168,9 +181,32 @@ function bempress_customize_register( $wp_customize ) {
 function bempress_customizer_js() {
   wp_enqueue_script(
     'bempress_theme_customizer',
-    get_template_directory_uri() . '/inc/customizer/theme-customizer.js',
+    get_template_directory_uri() . '/inc/theme-customizer.js',
     array( 'jquery', 'customize-preview' ),
     '',
     true
 );
 }
+
+
+
+
+/**
+ * Enqueue Google Fonts
+ */
+
+// Register Style
+function bempress_google_fonts() {
+
+    $fonts = array(
+        get_theme_mod( 'heading_font', 'default' ),
+        get_theme_mod( 'body_font', 'default' )
+    );
+    $font_uri = customizer_library_get_google_font_uri( $fonts );
+
+    wp_register_style( 'google_font_headings', $font_uri, false, false );
+    wp_enqueue_style( 'google_font_headings' );
+
+}
+
+

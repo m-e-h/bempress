@@ -13,6 +13,7 @@ require_once( $includes_dir . 'hybrid-core/hybrid.php' );
 new Hybrid();
 
 require_once $includes_dir . 'inc/scripts.php';
+require_once $includes_dir . 'inc/customizer/fonts.php';
 
 
 add_action( 'after_setup_theme', 'bempress_setup', 5 );
@@ -69,7 +70,7 @@ function bempress_setup() {
     ) ) );
 
 // In theme setup
-add_theme_support( 'theme-layouts', array( 'default' => '2c-l' ) );
+add_theme_support( 'theme-layouts', array( 'default' => '1c' ) );
 
 add_action( 'hybrid_register_layouts', 'my_register_layouts' );
 
@@ -84,6 +85,16 @@ function my_register_layouts() {
             'is_global_layout' => true,
             'is_post_layout'   => true,
             'image'            => '%s/images/one-column.svg',
+        )
+    );
+
+    hybrid_register_layout(
+        '1c-narrow',
+        array(
+            'label'            => _x( '1 Column Narrow', 'theme layout', 'hybrid-core' ),
+            'is_global_layout' => true,
+            'is_post_layout'   => true,
+            'image'            => '%s/images/one-column-narrow.svg',
         )
     );
 
@@ -162,16 +173,36 @@ function bempress_includes() {
     require_once $includes_dir . 'widgetize.php';
     require_once $includes_dir . 'template-actions.php';
     require_once $includes_dir . 'html-min.php';
-    require_once $includes_dir . 'customizer.php';
-    require_once $includes_dir . 'custom-header.php';
-    require_once $includes_dir . 'custom-background.php';
+    require_once $includes_dir . 'customizer/customizer.php';
+    require_once $includes_dir . 'customizer/custom-header.php';
+    require_once $includes_dir . 'customizer/custom-background.php';
+    require_once $includes_dir . 'customizer/Color.php';
+    require_once $includes_dir . 'customizer/custom-styles.php';
     require_once $includes_dir . 'css-classes.php';
-    require_once $includes_dir . 'Color.php';
-    //require_once $includes_dir . 'customizer-styles.php';
-    require_once $includes_dir . 'custom-colors.php';
     new AttrTrumps();
 }
 
 
 // Add a hook for child themes to execute code.
 do_action( 'flagship_after_setup_parent' );
+
+
+
+/**
+ * Filters the header icon to set the default.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  string  $hfont
+ * @return string
+ */
+function bempress_theme_mod_heading_font( $hfont ) {
+    return 'default' === $hfont ? 'sans-serif' : $hfont;
+}
+
+function bempress_theme_mod_body_font( $bfont ) {
+    return 'default' === $bfont ? 'sans-serif' : $bfont;
+}
+
+add_filter( 'theme_mod_heading_font',  'bempress_theme_mod_heading_font', 95 );
+add_filter( 'theme_mod_body_font',  'bempress_theme_mod_body_font', 95 );

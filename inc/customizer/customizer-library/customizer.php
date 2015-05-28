@@ -5,14 +5,6 @@
  * @package bempress
  */
 
-// function wpt_register_theme_customizer( $wp_customize ) {
-
-//     var_dump( $wp_customize );
-
-// }
-// add_action( 'customize_register', 'wpt_register_theme_customizer' );
-
-
 add_action( 'customize_register', 'bempress_customize_register' );
 add_action( 'customize_preview_init', 'bempress_customizer_js' );
 
@@ -39,7 +31,6 @@ function bempress_customize_register( $wp_customize ) {
 
 
     // Customize Background Settings
-    $wp_customize->get_setting( 'background_color' )->transport  = 'postMessage';
     $wp_customize->get_section('background_image')->title = esc_html__('Background Styles', 'bempress');
     $wp_customize->get_control('background_color')->section = 'background_image';
 
@@ -74,7 +65,7 @@ function bempress_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
       'bempress_logo',
       array(
-        'default'     => '',
+        'default'     => get_template_directory_uri() . '/images/logo.svg',
         //'transport'   => 'postMessage'
       )
     );
@@ -127,9 +118,9 @@ function bempress_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'primary_color',
         array(
-            'default'           => '#002855',
+            'default'           => '#020042',
             'sanitize_callback' => 'sanitize_hex_color',
-            'transport' => 'postMessage',
+            'transport' => 'refresh',
         )
     );
     $wp_customize->add_control(
@@ -152,7 +143,7 @@ function bempress_customize_register( $wp_customize ) {
         array(
             'default'           => '#FFE192',
             'sanitize_callback' => 'sanitize_hex_color',
-            'transport' => 'postMessage',
+            'transport' => 'refresh',
         )
     );
     $wp_customize->add_control(
@@ -167,33 +158,6 @@ function bempress_customize_register( $wp_customize ) {
         )
     );
 
-
-
-//$wp_customize->get_control( 'theme_layout' )->active_callback = function () { return !is_category(); };
-
-$wp_customize->add_setting(
-    'category_layout',
-    array(
-        'default'           => get_theme_mod( 'category_layout', '' ),
-        'sanitize_callback' => 'sanitize_html_class',
-        'transport'         => 'refresh'
-    )
-);
-
-$wp_customize->add_control(
-    new Hybrid_Customize_Control_Theme_Layout(
-        $wp_customize,
-        'category_layout',
-        array(
-            'label'    => esc_html__( 'Multi-Post Layout', 'hybrid-core' ),
-            'section'  => 'layout',
-            'layouts'  => array( 'cards', 'blog' )
-            //'active_callback' => function () { return is_category(); }
-        )
-    )
-);
-
-
 }
 
 
@@ -204,7 +168,7 @@ $wp_customize->add_control(
 function bempress_customizer_js() {
   wp_enqueue_script(
     'bempress_theme_customizer',
-    get_template_directory_uri() . '/inc/theme-customizer.js',
+    get_template_directory_uri() . '/inc/customizer/theme-customizer.js',
     array( 'jquery', 'customize-preview' ),
     '',
     true
