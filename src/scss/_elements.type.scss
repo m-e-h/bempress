@@ -19,17 +19,17 @@ h3 {
 
 h4 {
     @include font-size($heading-size-4);
-    margin-bottom: $base-spacing-unit;
+    margin-bottom: $base-spacing-unit--tiny;
 }
 
 h5 {
     @include font-size($heading-size-5);
-    margin-bottom: $base-spacing-unit;
+    margin-bottom: $base-spacing-unit--tiny;
 }
 
 h6 {
     @include font-size($heading-size-6);
-    margin-bottom: $base-spacing-unit;
+    margin-bottom: $base-spacing-unit--tiny;
 }
 
 h1,

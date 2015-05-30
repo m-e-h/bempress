@@ -125,21 +125,21 @@ h3 {
 }
 
 h4 {
-    margin-bottom: 27px; 
+    margin-bottom: 7px; 
     font-size: 22.5px;
     font-size: 1.25rem;
     line-height: 1.2;
 }
 
 h5 {
-    margin-bottom: 27px; 
+    margin-bottom: 7px; 
     font-size: 18px;
     font-size: 1rem;
     line-height: 1.5;
 }
 
 h6 {
-    margin-bottom: 27px; 
+    margin-bottom: 7px; 
     font-size: 16px;
     font-size: 0.8888888889rem;
     line-height: 1.6875;
@@ -1311,7 +1311,9 @@ nav ul {
 
 .media {
     display: table;
+    overflow: hidden; 
     width: 100%;
+    border-radius: 2px;
 }
 
 .media__img,
@@ -1631,14 +1633,13 @@ input.is-active[type="submit"],
 
 .avatar {
     display: block;
-    width: 64px;
-    height: 64px; 
-    border-radius: 100%;
+    width: 90px;
+    height: 90px;
 }
 
 .avatar--small {
-    width: 32px;
-    height: 32px;
+    width: 64px;
+    height: 64px;
 }
 
 .avatar--large {
