@@ -71,6 +71,51 @@ function hybrid_media_meta_factory() {
 }
 
 /**
+ * Splits the attachment mime type into two distinct parts: type / subtype (e.g., image / png). 
+ * Returns an array of the parts.
+ *
+ * @since  3.0.0
+ * @access public
+ * @param  int    $post_id
+ * @return array
+ */
+function hybrid_get_attachment_types( $post_id = 0 ) {
+
+	$post_id   = empty( $post_id ) ? get_the_ID() : $post_id;
+	$mime_type = get_post_mime_type( $post_id );
+
+	list( $type, $subtype ) = false !== strpos( $mime_type, '/' ) ? explode( '/', $mime_type ) : array( $mime_type, '' );
+
+	return (object) array( 'type' => $type, 'subtype' => $subtype );
+}
+
+/**
+ * Returns the main attachment mime type.  For example, `image` when the file has an `image / jpeg` 
+ * mime type.
+ *
+ * @since  3.0.0
+ * @access public
+ * @param  int    $post_id
+ * @return string
+ */
+function hybrid_get_attachment_type( $post_id = 0 ) {
+	return hybrid_get_attachment_types( $post_id )->type;
+}
+
+/**
+ * Returns the attachment mime subtype.  For example, `jpeg` when the file has an `image / jpeg` 
+ * mime type.
+ *
+ * @since  3.0.0
+ * @access public
+ * @param  int    $post_id
+ * @return string
+ */
+function hybrid_get_attachment_subtype( $post_id = 0 ) {
+	return hybrid_get_attachment_types( $post_id )->subtype;
+}
+
+/**
  * Checks if the current post has a mime type of 'audio'.
  *
  * @since  1.6.0
@@ -79,13 +124,7 @@ function hybrid_media_meta_factory() {
  * @return bool
  */
 function hybrid_attachment_is_audio( $post_id = 0 ) {
-
-	$post_id   = empty( $post_id ) ? get_the_ID() : $post_id;
-	$mime_type = get_post_mime_type( $post_id );
-
-	list( $type, $subtype ) = false !== strpos( $mime_type, '/' ) ? explode( '/', $mime_type ) : array( $mime_type, '' );
-
-	return 'audio' === $type ? true : false;
+	return 'audio' === hybrid_get_attachment_type( $post_id ) ? true : false;
 }
 
 /**
@@ -97,13 +136,7 @@ function hybrid_attachment_is_audio( $post_id = 0 ) {
  * @return bool
  */
 function hybrid_attachment_is_video( $post_id = 0 ) {
-
-	$post_id   = empty( $post_id ) ? get_the_ID() : $post_id;
-	$mime_type = get_post_mime_type( $post_id );
-
-	list( $type, $subtype ) = false !== strpos( $mime_type, '/' ) ? explode( '/', $mime_type ) : array( $mime_type, '' );
-
-	return 'video' === $type ? true : false;
+	return 'video' === hybrid_get_attachment_type( $post_id ) ? true : false;
 }
 
 /**
@@ -173,25 +206,15 @@ function hybrid_get_audio_transcript( $post_id = 0 ) {
  */
 function hybrid_attachment() {
 
-	$file       = wp_get_attachment_url();
-	$mime       = get_post_mime_type();
-	$attachment = '';
+	$type = hybrid_get_attachment_type();
 
-	$mime_type = false !== strpos( $mime, '/' ) ? explode( '/', $mime ) : array( $mime, '' );
+	$attachment = function_exists( "hybrid_{$type}_attachment" ) ? call_user_func( "hybrid_{$type}_attachment", get_post_mime_type(), wp_get_attachment_url() ) : '';
 
-	// Loop through each mime type. If a function exists for it, call it. Allow users to filter the display.
-	foreach ( $mime_type as $type ) {
-		if ( function_exists( "hybrid_{$type}_attachment" ) )
-			$attachment = call_user_func( "hybrid_{$type}_attachment", $mime, $file );
-
-		$attachment = apply_filters( "hybrid_{$type}_attachment", $attachment );
-	}
-
-	echo apply_filters( 'hybrid_attachment', $attachment );
+	echo apply_filters( 'hybrid_attachment', apply_filters( "hybrid_{$type}_attachment", $attachment ) );
 }
 
 /**
- * Handles application attachments on their attachment pages.  Uses the <object> tag to embed media 
+ * Handles application attachments on their attachment pages.  Uses the `<object>` tag to embed media 
  * on those pages.
  *
  * @since  0.3.0
@@ -202,15 +225,18 @@ function hybrid_attachment() {
  */
 function hybrid_application_attachment( $mime = '', $file = '' ) {
 	$embed_defaults = wp_embed_defaults();
-	$application  = '<object class="text" type="' . esc_attr( $mime ) . '" data="' . esc_url( $file ) . '" width="' . esc_attr( $embed_defaults['width'] ) . '" height="' . esc_attr( $embed_defaults['height'] ) . '">';
-	$application .= '<param name="src" value="' . esc_url( $file ) . '" />';
-	$application .= '</object>';
 
-	return $application;
+	return sprintf(
+		'<object type="%1$s" data="%2$s" width="%3$s" height="%4$s"><param name="src" value="%2$s" /></object>',
+		esc_attr( $mime ),
+		esc_url( $file ),
+		absint( $embed_defaults['width'] ),
+		absint( $embed_defaults['height'] )
+	);
 }
 
 /**
- * Handles text attachments on their attachment pages.  Uses the <object> element to embed media 
+ * Handles text attachments on their attachment pages.  Uses the `<object>` element to embed media 
  * in the pages.
  *
  * @since  0.3.0
@@ -221,11 +247,14 @@ function hybrid_application_attachment( $mime = '', $file = '' ) {
  */
 function hybrid_text_attachment( $mime = '', $file = '' ) {
 	$embed_defaults = wp_embed_defaults();
-	$text  = '<object class="text" type="' . esc_attr( $mime ) . '" data="' . esc_url( $file ) . '" width="' . esc_attr( $embed_defaults['width'] ) . '" height="' . esc_attr( $embed_defaults['height'] ) . '">';
-	$text .= '<param name="src" value="' . esc_url( $file ) . '" />';
-	$text .= '</object>';
 
-	return $text;
+	return sprintf(
+		'<object type="%1$s" data="%2$s" width="%3$s" height="%4$s"><param name="src" value="%2$s" /></object>',
+		esc_attr( $mime ),
+		esc_url( $file ),
+		absint( $embed_defaults['width'] ),
+		absint( $embed_defaults['height'] )
+	);
 }
 
 /**
