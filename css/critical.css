@@ -17,20 +17,12 @@
     color: #34495e;
     background-color: #fff;
     font-family: sans-serif;
-    font-size: 16px;
-    font-size: 1rem;
     font-weight: 400;
-    line-height: 1.5;
-    word-break: break-word;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    hyphens: auto; 
     cursor: default;
     -webkit-transition-duration: 0.35s;
-    transition-duration: 0.35s;
+    transition-duration: 0.35s; 
     text-rendering: optimizeLegibility;
 
-    -ms-hyphens: auto;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -82,15 +74,11 @@
 body {
     color: #34495e;
     background-color: #fffaf5;
-    -webkit-transition: opacity ease-in 0.2s;
-    transition: opacity ease-in 0.2s;
+    font: 18px/27px sans-serif;
 }
-@media screen and (max-width: 35.5em) {
-    body {
-        font-size: 15px;
-        font-size: 0.9375rem;
-        line-height: 1.6;
-    }
+
+p {
+    letter-spacing: 0.2;
 }
 
 /**
@@ -119,7 +107,7 @@ summary {
 hr {
     display: block;
     height: 1px;
-    margin: 24px 0; 
+    margin: 27px 0; 
     border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -164,45 +152,45 @@ template {
 }
 
 h1 {
-    margin-bottom: 24px; 
-    font-size: 36px;
+    margin-bottom: 27px; 
+    font-size: 40.5px;
     font-size: 2.25rem;
     line-height: 1.3333333333;
 }
 
 h2 {
-    margin-bottom: 24px; 
-    font-size: 30px;
+    margin-bottom: 27px; 
+    font-size: 33.75px;
     font-size: 1.875rem;
     line-height: 1.6;
 }
 
 h3 {
-    margin-bottom: 24px; 
-    font-size: 24px;
+    margin-bottom: 27px; 
+    font-size: 27px;
     font-size: 1.5rem;
     line-height: 1;
 }
 
 h4 {
-    margin-bottom: 24px; 
-    font-size: 20px;
+    margin-bottom: 27px; 
+    font-size: 22.5px;
     font-size: 1.25rem;
     line-height: 1.2;
 }
 
 h5 {
-    margin-bottom: 24px; 
-    font-size: 16px;
+    margin-bottom: 27px; 
+    font-size: 18px;
     font-size: 1rem;
     line-height: 1.5;
 }
 
 h6 {
-    margin-bottom: 24px; 
-    font-size: 14px;
-    font-size: 0.875rem;
-    line-height: 1.7142857143;
+    margin-bottom: 27px; 
+    font-size: 16px;
+    font-size: 0.8888888889rem;
+    line-height: 1.6875;
 }
 
 h1,
@@ -212,7 +200,7 @@ h4,
 h5,
 h6 {
     opacity: 0.7; 
-    font-family: "Raleway", sans-serif;
+    font-family: serif;
     font-weight: 500;
     font-style: normal;
 }
@@ -225,7 +213,7 @@ table,
 fieldset,
 figure,
 pre {
-    margin-bottom: 24px;
+    margin-bottom: 27px;
 }
 
 abbr[title] {
@@ -278,17 +266,17 @@ a:focus {
 }
 
 dl {
-    margin-bottom: 24px;
+    margin-bottom: 27px;
 }
 
 dd {
-    margin-left: 48px;
+    margin-left: 54px;
 }
 
 ul,
 ol {
-    margin-bottom: 24px;
-    padding-left: 24px;
+    margin-bottom: 27px;
+    padding-left: 27px;
     text-align: left; 
     list-style-position: outside;
 }
@@ -326,18 +314,18 @@ svg {
 /*------------------------------------*    #BLOCKQUOTES
 \*------------------------------------*/
 blockquote {
-    margin-bottom: 24px;
-    padding-left: 24px; 
+    margin-bottom: 27px;
+    padding-left: 27px; 
     border-left: 0.2rem solid currentColor;
     font-family: Georgia, Times, "Times New Roman", serif;
     font-style: italic;
 }
 blockquote p {
     color: #7795b4;
-    font-size: 17px;
-    font-size: 1.0625rem;
+    font-size: 19px;
+    font-size: 1.0555555556rem;
     font-weight: 500;
-    line-height: 1.4117647059;
+    line-height: 1.4210526316;
 }
 blockquote p + p {
     margin-bottom: 0;
@@ -352,9 +340,9 @@ blockquote blockquote {
 blockquote cite {
     display: block;
     margin-top: 12px;
-    margin-top: 12px; 
+    margin-top: 14px; 
     padding-top: 13px;
-    font-family: "Lato", sans-serif;
+    font-family: sans-serif;
     font-size: 80%;
     font-weight: 500;
     font-style: normal;
@@ -376,13 +364,13 @@ blockquote cite::before {
 
 table {
     width: 100%;
-    margin-bottom: 24px;
+    margin-bottom: 27px;
     border-spacing: 0; 
     border-collapse: collapse;
 }
 
 caption {
-    padding: 12px 0;
+    padding: 14px 0;
 }
 
 thead th {
@@ -390,13 +378,13 @@ thead th {
 }
 
 tr {
-    margin-bottom: 12px; 
+    margin-bottom: 14px; 
     background-color: #fff;
 }
 
 th,
 td {
-    padding: 12px 6px;
+    padding: 14px 7px;
     border: 0.1rem solid #e3e8ec;
     text-align: center;
 }
@@ -406,8 +394,8 @@ tfoot tr {
 }
 
 tfoot td {
-    padding: 24px 6px; 
-    font-size: 14px;
+    padding: 27px 7px; 
+    font-size: 16px;
     font-style: italic;
 }
 
@@ -416,8 +404,8 @@ select,
 textarea {
     display: inline-block;
     width: 100%;
-    min-height: 48px;
-    padding: 0 24px; 
+    min-height: 54px;
+    padding: 0 27px; 
     border: 1px solid #e3e8ec;
     border-radius: 2px;
     background-color: #e3e8ec;
@@ -427,13 +415,13 @@ textarea {
 }
 
 input[type="color"] {
-    padding: 12px 24px;
+    padding: 14px 27px;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: #0060cc;
+    border-color: #0058bb;
     outline: 0;
     background-color: #fff;
 }
@@ -503,21 +491,21 @@ label {
 }
 
 fieldset {
-    padding: 12px 0;
+    padding: 14px 0;
 }
 
 legend {
     display: block;
     width: 100%; 
-    margin-bottom: 12px;
-    padding: 12px 0;
+    margin-bottom: 14px;
+    padding: 14px 0;
     border-bottom: 0.1rem solid #e3e8ec;
     color: #34495e;
 }
 
 textarea {
     overflow: auto; 
-    padding: 24px;
+    padding: 27px;
     resize: vertical;
 }
 
@@ -545,7 +533,7 @@ textarea {
     top: 0;
     right: 0;
     bottom: 0; 
-    padding: 0 24px;
+    padding: 0 27px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     outline: none;
@@ -553,7 +541,7 @@ textarea {
 
 .post-password-form input[type="submit"] {
     top: auto; 
-    height: 48px;
+    height: 54px;
 }
 
 .search-form button::before {
@@ -577,6 +565,6 @@ textarea {
 
 nav ol,
 nav ul {
-    padding-top: 24px; 
+    padding-top: 27px; 
     list-style: none;
 }

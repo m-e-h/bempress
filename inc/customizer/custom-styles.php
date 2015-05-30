@@ -37,12 +37,10 @@ final class Bempress_Custom_Styles {
         /* Add a '.custom-styles' <body> class. */
         add_filter( 'body_class', array( $this, 'body_class' ) );
 
-        /* Add options to the theme customizer. */
-        add_action( 'customize_register', array( $this, 'customize_register' ) );
-
         /* Filter the default colors late. */
-        add_filter( 'theme_mod_primary_color', array( $this, 'primary_color_default' ), 95 );
-        add_filter( 'theme_mod_secondary_color',    array( $this, 'secondary_color_default'    ), 95 );
+        add_filter( 'theme_mod_primary_color',      array( $this, 'primary_color_default'   ), 95 );
+        add_filter( 'theme_mod_secondary_color',    array( $this, 'secondary_color_default' ), 95 );
+        add_filter( 'theme_mod_accent_color',       array( $this, 'accent_color_default' ), 95 );
 
 
         /* Delete the cached data for this feature. */
@@ -50,7 +48,7 @@ final class Bempress_Custom_Styles {
     }
 
     /**
-     * Returns a default primary color if there is none set.  We use this instead of setting a default
+     * Returns a default colors if there is none set.  We use this instead of setting a default
      * so that child themes can overwrite the default early.
      *
      * @since  1.0.0
@@ -62,17 +60,12 @@ final class Bempress_Custom_Styles {
         return $hex ? $hex : '31509d';
     }
 
-    /**
-     * Returns a default secondary color if there is none set.  We use this instead of setting a default
-     * so that child themes can overwrite the default early.
-     *
-     * @since  1.0.0
-     * @access public
-     * @param  string  $hex
-     * @return string
-     */
     public function secondary_color_default( $hex ) {
         return $hex ? $hex : '8b8482';
+    }
+
+    public function accent_color_default( $hex ) {
+        return $hex ? $hex : 'eeeeee';
     }
 
     /**
@@ -100,7 +93,7 @@ final class Bempress_Custom_Styles {
     public function wp_head_callback() {
         $stylesheet = get_stylesheet();
         /* Get the cached style. */
-        $style = wp_cache_get( "{$stylesheet}_custom_styles" );
+        $style = wp_cache_get( "{$stylesheet}_custom_colors" );
         /* If the style is available, output it and return. */
         if ( !empty( $style ) ) {
             echo $style;
@@ -108,13 +101,17 @@ final class Bempress_Custom_Styles {
         }
         $style  = $this->get_primary_styles();
         $style .= $this->get_secondary_styles();
+        $style .= $this->get_accent_styles();
         /* Put the final style output together. */
-        $style = "\n" . '<style type="text/css" id="custom-styles-css">' . trim( $style ) . '</style>' . "\n";
+        $style = "\n" . '<style type="text/css" id="custom-colors-css">' . trim( $style ) . '</style>' . "\n";
         /* Cache the style, so we don't have to process this on each page load. */
-        wp_cache_set( "{$stylesheet}_custom_styles", $style );
+        wp_cache_set( "{$stylesheet}_custom_colors", $style );
         /* Output the custom style. */
         echo $style;
     }
+
+
+
 
 
     /**
@@ -147,12 +144,12 @@ final class Bempress_Custom_Styles {
 
         $style .= "
                 .entry-content a
-                { color: $hex; }
+                { color: #{$color500}; }
             ";
         $style .= "
             .badge a, .btn, .button, button, input[type=button], input[type=reset], input[type=submit],
                 .t-bg__1
-                { background-color: $hex; }
+                { background-color: #{$color500}; }
             ";
         $style .= "
         .badge a:active, .badge a:hover, .btn:active, .btn:hover, button:active, button:hover, input[type=button]:active, input[type=button]:hover, input[type=reset]:active, input[type=reset]:hover, input[type=submit]:active, input[type=submit]:hover,
@@ -169,7 +166,7 @@ final class Bempress_Custom_Styles {
             ";
         $style .= "
                 .t-fill__1
-                { fill: $hex; }
+                { fill: #{$color500}; }
             ";
         $style .= "
                 .t-fill__1--light
@@ -190,8 +187,9 @@ final class Bempress_Custom_Styles {
         /* Return the styles. */
         return str_replace( array( "\r", "\n", "\t" ), '', $style );
     }
+
     /**
-     * Formats the primary styles for output.
+     * Formats the secondary styles for output.
      *
      * @since  1.0.0
      * @access public
@@ -218,7 +216,7 @@ final class Bempress_Custom_Styles {
 
         $style .= "
                 .t-bg__2
-                { background-color: $hex; }
+                { background-color: #{$color500}; }
             ";
         $style .= "
                 .t-bg__2--light
@@ -234,7 +232,7 @@ final class Bempress_Custom_Styles {
             ";
         $style .= "
                 .t-fill__2
-                { fill: $hex; }
+                { fill: #{$color500}; }
             ";
         $style .= "
                 .t-fill__2--light
@@ -248,60 +246,64 @@ final class Bempress_Custom_Styles {
         return str_replace( array( "\r", "\n", "\t" ), '', $style );
     }
 
-    public function customize_register( $wp_customize ) {
+    /**
+     * Formats the accent styles for output.
+     *
+     * @since  1.0.0
+     * @access public
+     * @return string
+     */
+    public function get_accent_styles() {
+        $style = '';
+        $hex = get_theme_mod( 'accent_color', '' );
+        $rgb = join( ', ', hybrid_hex_to_rgb( $hex ) );
 
-        /* Add the primary color setting. */
-        $wp_customize->add_setting(
-            'primary_color',
-            array(
-                'default'              => get_theme_mod( 'primary_color', '' ),
-                'type'                 => 'theme_mod',
-                'sanitize_callback'    => 'sanitize_hex_color_no_hash',
-                'sanitize_js_callback' => 'maybe_hash_hex_color',
-                'transport'            => 'postMessage',
-            )
-        );
+        $accentColor = new Color( $hex );
+        $color50    = $accentColor->lighten(45);
+        $color100   = $accentColor->lighten(40);
+        $color200   = $accentColor->lighten(30);
+        $color300   = $accentColor->lighten(20);
+        $color400   = $accentColor->lighten(10);
+        $color500   = $hex;
+        $color600   = $accentColor->darken(10);
+        $color700   = $accentColor->darken(20);
+        $color800   = $accentColor->darken(30);
+        $color900   = $accentColor->darken(40);
 
-        /* Add the secondary color setting. */
-        $wp_customize->add_setting(
-            'secondary_color',
-            array(
-                'default'              => get_theme_mod( 'secondary_color', '' ),
-                'type'                 => 'theme_mod',
-                'sanitize_callback'    => 'sanitize_hex_color_no_hash',
-                'sanitize_js_callback' => 'maybe_hash_hex_color',
-                'transport'            => 'postMessage',
-            )
-        );
+        /* === Color === */
 
-        /* Add secondary color control. */
-        $wp_customize->add_control(
-            new WP_Customize_Color_Control(
-                $wp_customize,
-                'custom-primary-color',
-                array(
-                    'label'    => esc_html__( 'Primary Color', 'bempress' ),
-                    'section'  => 'colors',
-                    'settings' => 'primary_color',
-                    'priority' => 10,
-                )
-            )
-        );
-
-        /* Add the primary color control. */
-        $wp_customize->add_control(
-            new WP_Customize_Color_Control(
-                $wp_customize,
-                'custom-secondary-color',
-                array(
-                    'label'    => esc_html__( 'Secondary Color', 'bempress' ),
-                    'section'  => 'colors',
-                    'settings' => 'secondary_color',
-                    'priority' => 15,
-                )
-            )
-        );
+        $style .= "
+                .t-bg__3
+                { background-color: #{$color500}; }
+            ";
+        $style .= "
+                .t-bg__3--light
+                { background-color: #{$color400}; }
+            ";
+        $style .= "
+                .t-bg__3--dark
+                { background-color: #{$color600}; }
+            ";
+        $style .= "
+                .t-bg__3--glass
+                { background-color: #{$color100}; }
+            ";
+        $style .= "
+                .t-fill__3
+                { fill: #{$color500}; }
+            ";
+        $style .= "
+                .t-fill__3--light
+                { fill: #{$color400}; }
+            ";
+        $style .= "
+                .t-fill__3--dark
+                { fill: #{$color600}; }
+                ";
+        /* Return the styles. */
+        return str_replace( array( "\r", "\n", "\t" ), '', $style );
     }
+
 
     /**
      * Deletes the cached style CSS that's output into the header.
@@ -311,7 +313,7 @@ final class Bempress_Custom_Styles {
      * @return void
      */
     public function cache_delete() {
-        wp_cache_delete( get_stylesheet() . '_custom_styles' );
+        wp_cache_delete( get_stylesheet() . '_custom_colors' );
     }
     /**
      * Returns the instance.

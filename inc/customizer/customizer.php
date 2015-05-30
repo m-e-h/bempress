@@ -65,6 +65,86 @@ function bempress_customize_register( $wp_customize ) {
 
 
 
+        /* Add the primary color setting. */
+        $wp_customize->add_setting(
+            'primary_color',
+            array(
+                'default'              => apply_filters( 'theme_mod_primary_color', '' ),
+                'type'                 => 'theme_mod',
+                'sanitize_callback'    => 'sanitize_hex_color_no_hash',
+                'sanitize_js_callback' => 'maybe_hash_hex_color',
+                //'transport'            => 'postMessage',
+            )
+        );
+
+        /* Add secondary color control. */
+        $wp_customize->add_control(
+            new WP_Customize_Color_Control(
+                $wp_customize,
+                'custom-primary-color',
+                array(
+                    'label'    => esc_html__( 'Primary Color', 'bempress' ),
+                    'section'  => 'colors',
+                    'settings' => 'primary_color',
+                    'priority' => 10,
+                )
+            )
+        );
+
+        /* Add the secondary color setting. */
+        $wp_customize->add_setting(
+            'secondary_color',
+            array(
+                'default'              => apply_filters( 'theme_mod_secondary_color', '' ),
+                'type'                 => 'theme_mod',
+                'sanitize_callback'    => 'sanitize_hex_color_no_hash',
+                'sanitize_js_callback' => 'maybe_hash_hex_color',
+                //'transport'            => 'postMessage',
+            )
+        );
+
+        /* Add the primary color control. */
+        $wp_customize->add_control(
+            new WP_Customize_Color_Control(
+                $wp_customize,
+                'custom-secondary-color',
+                array(
+                    'label'    => esc_html__( 'Secondary Color', 'bempress' ),
+                    'section'  => 'colors',
+                    'settings' => 'secondary_color',
+                    'priority' => 15,
+                )
+            )
+        );
+
+        /* Add the accent color setting. */
+        $wp_customize->add_setting(
+            'accent_color',
+            array(
+                'default'              => apply_filters( 'theme_mod_accent_color', '' ),
+                'type'                 => 'theme_mod',
+                'sanitize_callback'    => 'sanitize_hex_color_no_hash',
+                'sanitize_js_callback' => 'maybe_hash_hex_color',
+                //'transport'            => 'postMessage',
+            )
+        );
+
+        /* Add the primary color control. */
+        $wp_customize->add_control(
+            new WP_Customize_Color_Control(
+                $wp_customize,
+                'custom-accent-color',
+                array(
+                    'label'    => esc_html__( 'accent Color', 'bempress' ),
+                    'section'  => 'colors',
+                    'settings' => 'accent_color',
+                    'priority' => 15,
+                )
+            )
+        );
+
+
+
   // Add Custom Footer Text
   $wp_customize->add_section( 'custom_footer_text' , array(
     'title'      => esc_html__('Footer Text','bempress'),
@@ -159,7 +239,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-    new Hybrid_Customize_Control_Theme_Layout(
+    new Hybrid_Customize_Control_Layout(
         $wp_customize,
         'category_layout',
         array(

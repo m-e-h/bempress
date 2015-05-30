@@ -494,11 +494,10 @@ tfoot td {
     font-style: italic;
 }
 
-input:not([type="submit"]),
+input:not([type="submit"]):not([type="button"]),
 select,
 textarea {
     display: inline-block;
-    width: 100%;
     min-height: 54px;
     padding: 0 27px; 
     border: 1px solid #e3e8ec;
@@ -507,6 +506,20 @@ textarea {
     font-family: inherit;
     font-weight: inherit;
     font-style: inherit;
+}
+
+select {
+    min-height: 27px;
+    padding: 7px 27px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+    width: 100%;
 }
 
 input[type="color"] {
@@ -4851,4 +4864,8 @@ p:last-of-type {
 .featured-media {
     overflow: hidden; 
     max-height: 500px;
+}
+
+#mb-reply-form {
+    display: inline-block;
 }
