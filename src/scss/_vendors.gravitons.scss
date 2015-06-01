@@ -11,131 +11,13 @@
  Properties: 18
  Average Specificity: 10.032967032967033
 */
-.u-h1 { @include typo-heading-1(); }
-.u-h2 { @include typo-heading-2(); }
-.u-h3 { @include typo-heading-3(); }
-.u-h4 { @include typo-heading-4(); }
-.u-h5 { @include typo-heading-5(); }
-
-.u-m0  { margin: 0 }
-.u-mt0 { margin-top: 0 }
-.u-mr0 { margin-right: 0 }
-.u-mb0 { margin-bottom: 0 }
-.u-ml0 { margin-left: 0 }
-
-.u-m { margin: 27px; }
-.u-mt { margin-top: 27px; }
-.u-mr { margin-right: 27px; }
-.u-mb { margin-bottom: 27px; }
-.u-ml { margin-left: 27px; }
-.u-mh { margin-right: 27px; margin-left: 27px; }
-.u-mv { margin-top: 27px; margin-bottom: 27px; }
-
-.u-m--  { margin: .5rem }
-.u-mt-- { margin-top: .5rem }
-.u-mr-- { margin-right: .5rem }
-.u-mb-- { margin-bottom: .5rem }
-.u-ml-- { margin-left: .5rem }
-.u-mh-- { margin-right: 27px; margin-left: 27px; }
-.u-mv-- { margin-top: 27px; margin-bottom: 27px; }
-
-.u-m-  { margin: 1rem }
-.u-mt- { margin-top: 1rem }
-.u-mr- { margin-right: 1rem }
-.u-mb- { margin-bottom: 1rem }
-.u-ml- { margin-left: 1rem }
-.u-mh- { margin-right: 27px; margin-left: 27px; }
-.u-mv- { margin-top: 27px; margin-bottom: 27px; }
 
 
-.u-m\+  { margin: 2rem }
-.u-mt\+ { margin-top: 2rem }
-.u-mr\+ { margin-right: 2rem }
-.u-mb\+ { margin-bottom: 2rem }
-.u-ml\+ { margin-left: 2rem }
-.u-mh\+ { margin-right: 27px; margin-left: 27px; }
-.u-mv\+ { margin-top: 27px; margin-bottom: 27px; }
 
 
-.u-m\+\+  { margin: 4rem }
-.u-mt\+\+ { margin-top: 4rem }
-.u-mr\+\+ { margin-right: 4rem }
-.u-mb\+\+ { margin-bottom: 4rem }
-.u-ml\+\+ { margin-left: 4rem }
-.u-mh\+\+ { margin-right: 27px; margin-left: 27px; }
-.u-mv\+\+ { margin-top: 27px; margin-bottom: 27px; }
 
 
-.u-mhn { margin-left: -$base-spacing-unit; margin-right: -$base-spacing-unit }
-.u-mhn-- { margin-left: -.5rem; margin-right: -.5rem }
-.u-mhn- { margin-left: -1rem; margin-right: -1rem }
-.u-mhn\+ { margin-left: -2rem; margin-right: -2rem }
-.u-mhn\+\+ { margin-left: -4rem; margin-right: -4rem }
 
-.u-p0  { padding: 0 }
-.u-pt0 { padding-top: 0 }
-.u-pr0 { padding-right: 0 }
-.u-pb0 { padding-bottom: 0 }
-.u-pl0 { padding-left: 0 }
-
-.u-p  { padding: 1rem }
-.u-pt { padding-top: 1rem }
-.u-pr { padding-right: 1rem }
-.u-pb { padding-bottom: 1rem }
-.u-pl { padding-left: 1rem }
-.u-ph { padding-left: 1rem; padding-right: 1rem }
-.u-pv { padding-top: 1rem; padding-bottom: 1rem }
-
-.u-p--  { padding: .5rem }
-.u-pt-- { padding-top: .5rem }
-.u-pr-- { padding-right: .5rem }
-.u-pb-- { padding-bottom: .5rem }
-.u-pl-- { padding-left: .5rem }
-.u-ph-- { padding-left: .5rem; padding-right: .5rem }
-.u-pv-- { padding-top: .5rem; padding-bottom: .5rem }
-
-.u-p-  { padding: 1rem }
-.u-pt- { padding-top: 1rem }
-.u-pr- { padding-right: 1rem }
-.u-pb- { padding-bottom: 1rem }
-.u-pl- { padding-left: 1rem }
-.u-ph- { padding-left: 1rem; padding-right: 1rem }
-.u-pv- { padding-top: 1rem; padding-bottom: 1rem }
-
-.u-p\+  { padding: 2rem }
-.u-pt\+ { padding-top: 2rem }
-.u-pr\+ { padding-right: 2rem }
-.u-pb\+ { padding-bottom: 2rem }
-.u-pl\+ { padding-left: 2rem }
-.u-ph\+ { padding-left: 2rem; padding-right: 2rem }
-.u-pv\+ { padding-top: 2rem; padding-bottom: 2rem }
-
-.u-p\+\+  { padding: 4rem }
-.u-pt\+\+ { padding-top: 4rem }
-.u-pr\+\+ { padding-right: 4rem }
-.u-pb\+\+ { padding-bottom: 4rem }
-.u-pl\+\+ { padding-left: 4rem }
-.u-ph\+\+ { padding-left: 4rem; padding-right: 4rem }
-.u-pv\+\+ { padding-top: 4rem; padding-bottom: 4rem }
-
-.u-bl  { display: block }
-.u-ibl { display: inline-block }
-.u-inl  { display: inline }
-.u-table  { display: table }
-.u-table__cell { display: table-cell }
-.u-left { float: left }
-.u-right { float: right }
-.u-oh { overflow: hidden }
-
-.u-cf::before,
-.u-cf::after {
-  content: ' ';
-  display: table;
-}
-
-.u-cf::after {
-  clear: both;
-}
 .c1  { width: 8.33333% }
 .c2  { width: 16.66667% }
 .c3  { width: 25% }
@@ -149,10 +31,5 @@
 .c11 { width: 91.66667% }
 .c12 { width: 100% }
 
-.u-x { display: flex }
-.u-xw { flex-wrap: wrap }
-.u-xc { align-items: center }
-.u-xb { align-items: baseline }
 
-.u-xa { flex: 1 1 auto }
-.u-xn { flex: none }
+

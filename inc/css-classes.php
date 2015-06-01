@@ -19,23 +19,23 @@ class AttrTrumps {
 	public $wrap                		= '';
     public $action_bar_wrap             = '';
 	public $header_wrap                	= '';
-    public $card_wrap                   = ' grid__item flex u-ph@respond u-1of1@sm u-1of2@md u-1of3@lg';
-	public $header                		= ' t-bg__1 flex flex--row@md flex--wrap flex--j-between shadow--z2';
+    public $card_wrap                   = ' grid__item u-flex u-ph@respond u-1of1@sm u-1of2@md u-1of3@lg';
+	public $header                		= ' u-fixed u-1of1 u-flex u-flex--row@md u-flex--w u-flex--j-sb';
 	public $footer                		= ' t-bg__1--light';
 	public $content 					= ' grid__item';
 	public $content_full_width			= ' u-1of1';
-	public $content_card_layout 		= ' u-1of1 flex flex--row flex--wrap flex--j-between';
+	public $content_card_layout 		= ' u-1of1 u-flex u-flex--row u-flex--w u-flex--j-sb';
 	public $content_sidebar_right 		= ' u-2of3@md u-pr@md u-pr+@lg';
 	public $content_sidebar_left 		= ' u-2of3@md u-pl@md u-pl+@lg';
 	public $main                		= ' ';
 	public $sidebar 					= ' grid__item';
-	public $sidebar_full_width  		= ' grid flex flex--row flex--wrap u-1of1';
+	public $sidebar_full_width  		= ' grid u-flex u-flex--row u-flex--w u-1of1';
 	public $sidebar_card_layout  		= ' u-1of1';
 	public $sidebar_sidebar_right 		= ' u-1of3@md';
 	public $sidebar_sidebar_left		= ' u-1of3@md';
-	public $sidebar_horizontal          = ' u-pl@respond grid flex flex--row flex--wrap';
-	public $menu_primary 				= ' menu--horizontal t-bg__1';
-	public $menu_secondary 				= ' menu--horizontal u-p- flex flex-j--center';
+	public $sidebar_horizontal          = ' wrap grid u-flex u-flex--row u-flex--w';
+	public $menu_primary 				= ' menu--horizontal';
+	public $menu_secondary 				= ' menu--horizontal u-p- u-flex u-flex--j-c';
 	public $menu_li         			= 'menu__item';
 
     public $nav_single                  = '';
@@ -55,7 +55,7 @@ class AttrTrumps {
 
 	/* Post-specific attributes. */
 	public $post                  		= ' br u-mb@respond';
-    public $post_card_layout            = ' t-bg__white flex--grow';
+    public $post_card_layout            = ' t-bg__white u-flexed--grow';
 	public $entry_title           		= ' wrap entry__title';
 	public $entry_author          		= ' u-mr- entry__author';
 	public $entry_published       		= ' u-mr- entry__date';

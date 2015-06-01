@@ -45,7 +45,8 @@ function bempress_header_style() {
         else :
     ?>
         .site-title,
-        .site-description {
+        .site-description,
+        .menu-primary {
             color: #<?= esc_attr( $header_text_color ); ?>;
         }
     <?php endif; ?>

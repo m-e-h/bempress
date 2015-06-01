@@ -1,20 +1,6 @@
 /*------------------------------------*\
-    $CSSWIZARDRY-GRIDS
+    $GRIDS
 \*------------------------------------*/
-/**
- * CONTENTS
- * INTRODUCTION.........How the grid system works.
- * VARIABLES............Your settings.
- * MIXINS...............Library mixins.
- * GRID SETUP...........Build the grid structure.
- * WIDTHS...............Build our responsive widths around our breakpoints.
- * PUSH.................Push classes.
- * PULL.................Pull classes.
- */
-
-
-
-
 
 /*------------------------------------*\
     $INTRODUCTION
@@ -143,17 +129,6 @@ $class-type: if($use-silent-classes, unquote("%"), unquote("."));
 
 
 
-
-
-/*------------------------------------*\
-    $MIXINS
-\*------------------------------------*/
-/**
- * These mixins are for the library to use only, you should not need to modify
- * them at all.
- *
- * Enclose a block of code with a media query as named in `$breakpoints`.
- */
 @mixin grid-media-query($media-query) {
     $breakpoint-found: false;
 
@@ -178,14 +153,6 @@ $class-type: if($use-silent-classes, unquote("%"), unquote("."));
 
 
 
-
-/*------------------------------------*\
-    $GRID SETUP
-\*------------------------------------*/
-/**
- * 1. Allow the grid system to be used on lists.
- * 3. Apply a negative `margin-left` to negate the columns’ gutters.
- */
 .grid {
     list-style:none;                /* [1] */
     //margin-left:-$gutter;           /* [3] */
@@ -223,35 +190,10 @@ $class-type: if($use-silent-classes, unquote("%"), unquote("."));
             letter-spacing:normal;
             word-spacing:normal;
         }
-
-        &--flexed {
-            flex: 1;
-        }
-    }
-
-/**
- * Reversed grids allow you to structure your source in the opposite order to
- * how your rendered layout will appear. Extends `.grid`.
- */
-.grid--flex {
-    display: flex;
-    flex-wrap: wrap;
-    //justify-content: space-around;
-        @include md {
-        flex-direction: row;
     }
 
 
-    > .grid__item {
-        //width: auto;
-          //flex: 0 0 auto;
-    }
-}
 
-/**
- * Reversed grids allow you to structure your source in the opposite order to
- * how your rendered layout will appear. Extends `.grid`.
- */
 .grid--rev {
     direction:rtl;
     text-align:left;

@@ -295,26 +295,27 @@ if("document" in self){if(!("classList" in document.createElement("_"))){(functi
 
   var navdrawerContainer = querySelector('.menu-primary');
   var body = document.body;
-  var overLay = querySelector('.layout__obfuscator');
-  // var header = querySelector('#header');
+  var appbarElement = querySelector('.action-bar');
+  var header = querySelector('#header');
   var menuBtn = querySelector('.menu-toggle');
-  // var main = querySelector('#site-container');
+  var main = querySelector('#site-container');
 
   function closeMenu() {
-    // body.classList.remove('is-open');
-    // appbarElement.classList.remove('is-open');
-    overLay.classList.remove('is-open');
+    body.classList.remove('is-open');
+    appbarElement.classList.remove('is-open');
+    header.classList.remove('is-open');
     navdrawerContainer.classList.remove('is-open');
   }
 
   function toggleMenu() {
-    // body.classList.toggle('is-open');
-    // appbarElement.classList.toggle('is-open');
-    overLay.classList.toggle('is-open');
+    body.classList.toggle('is-open');
+    appbarElement.classList.toggle('is-open');
+    header.classList.toggle('is-open');
     navdrawerContainer.classList.toggle('is-open');
+    navdrawerContainer.classList.add('has-opened');
   }
 
-  overLay.addEventListener('click', closeMenu);
+  main.addEventListener('click', closeMenu);
   menuBtn.addEventListener('click', toggleMenu);
   navdrawerContainer.addEventListener('click', function (event) {
     if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {

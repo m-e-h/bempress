@@ -2,6 +2,11 @@
     #HEADINGS
 \*------------------------------------*/
 
+.u-h1 { @include typo-heading-1(); }
+.u-h2 { @include typo-heading-2(); }
+.u-h3 { @include typo-heading-3(); }
+.u-h4 { @include typo-heading-4(); }
+.u-h5 { @include typo-heading-5(); }
 
 .h1 {
     @include font-size($heading-size-2);
