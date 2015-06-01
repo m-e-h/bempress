@@ -20,7 +20,7 @@ class AttrTrumps {
     public $action_bar_wrap             = '';
 	public $header_wrap                	= '';
     public $card_wrap                   = ' grid__item flex u-ph@respond u-1of1@sm u-1of2@md u-1of3@lg';
-	public $header                		= ' t-bg__1 flex flex--row@md flex--wrap flex--j-between';
+	public $header                		= ' t-bg__1 flex flex--row@md flex--wrap flex--j-between shadow--z2';
 	public $footer                		= ' t-bg__1--light';
 	public $content 					= ' grid__item';
 	public $content_full_width			= ' u-1of1';

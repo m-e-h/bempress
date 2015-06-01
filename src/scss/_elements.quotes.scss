@@ -7,17 +7,14 @@ blockquote {
     font-family: Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
     margin-bottom: $base-spacing-unit;
-    border-left: .2rem solid currentColor;
-    padding-left: $base-spacing-unit;
+    border-left: 8px solid currentColor;
+    padding: $base-spacing-unit--small $base-spacing-unit;
+    font-weight: 500;
+    @include font-size($base-font-size + 2);
 
     p {
+        margin-bottom: 0;
         color: $color-text-light;
-        font-weight: 500;
-        @include font-size($base-font-size + 1);
-
-        + p {
-            margin-bottom: 0;
-        }
     }
 }
 
@@ -30,6 +27,7 @@ blockquote blockquote {
 blockquote cite {
     display: block;
     font-family: $font-body;
+    color: $color-text;
     font-style: normal;
     font-size: 80%;
     font-weight: 500;

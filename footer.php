@@ -36,6 +36,9 @@
 
 	</div><!-- .site-container -->
 
+    <div class="layout__obfuscator">
+    <i class="fa fa-times-circle"></i>
+    </div>
     <?php tha_body_bottom(); ?>
 
 	<?php wp_footer(); ?>

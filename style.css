@@ -121,42 +121,42 @@ Tags:
 h1 {
     margin-bottom: 27px; 
     font-size: 40.5px;
-    font-size: 2.25rem;
+    font-size: 2.25em;
     line-height: 1.3333333333;
 }
 
 h2 {
     margin-bottom: 27px; 
     font-size: 33.75px;
-    font-size: 1.875rem;
+    font-size: 1.875em;
     line-height: 1.6;
 }
 
 h3 {
     margin-bottom: 27px; 
     font-size: 27px;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     line-height: 1;
 }
 
 h4 {
     margin-bottom: 7px; 
     font-size: 22.5px;
-    font-size: 1.25rem;
+    font-size: 1.25em;
     line-height: 1.2;
 }
 
 h5 {
     margin-bottom: 7px; 
     font-size: 18px;
-    font-size: 1rem;
+    font-size: 1em;
     line-height: 1.5;
 }
 
 h6 {
     margin-bottom: 7px; 
     font-size: 16px;
-    font-size: 0.8888888889rem;
+    font-size: 0.8888888889;
     line-height: 1.6875;
 }
 
@@ -425,20 +425,18 @@ svg {
 \*------------------------------------*/
 blockquote {
     margin-bottom: 27px;
-    padding-left: 27px; 
-    border-left: 0.2rem solid currentColor;
+    padding: 14px 27px;
+    border-left: 8px solid currentColor;
     font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 20px;
+    font-size: 1.1111111111em;
+    font-weight: 500;
     font-style: italic;
+    line-height: 1.35;
 }
 blockquote p {
-    color: #7795b4;
-    font-size: 19px;
-    font-size: 1.0555555556rem;
-    font-weight: 500;
-    line-height: 1.4210526316;
-}
-blockquote p + p {
     margin-bottom: 0;
+    color: #46627f;
 }
 
 blockquote blockquote {
@@ -452,6 +450,7 @@ blockquote cite {
     margin-top: 12px;
     margin-top: 14px; 
     padding-top: 13px;
+    color: #34495e;
     font-family: sans-serif;
     font-size: 80%;
     font-weight: 500;
@@ -575,7 +574,7 @@ input[type="checkbox"]:focus {
 input[disabled],
 select[disabled],
 textarea[disabled] {
-    color: #7795b4;
+    color: #46627f;
     background-color: #ebebeb;
     cursor: not-allowed;
 }
@@ -584,7 +583,7 @@ input[readonly],
 select[readonly],
 textarea[readonly] {
     border-color: #e3e8ec;
-    color: #7795b4; 
+    color: #46627f; 
     background-color: #ebebeb;
 }
 
@@ -1376,13 +1375,14 @@ nav ul {
 .page-title__sub {
     opacity: 0.8; 
     font-size: 22.5px;
-    font-size: 1.25rem;
+    font-size: 1.25em;
     line-height: 1.2;
 }
 
 /*------------------------------------*    #SITE-HEADER
 \*------------------------------------*/
-.action-bar-wrap {
+.site-header {
+    z-index: 1; 
     min-height: 60px;
 }
 
@@ -1553,7 +1553,7 @@ input.is-active[type="submit"],
 .badge a {
     padding: 7px 14px;
     font-size: 13px;
-    font-size: 0.7222222222rem;
+    font-size: 0.7222222222;
     line-height: 1;
     text-transform: uppercase;
 }
@@ -1626,7 +1626,7 @@ input.is-active[type="submit"],
 
 .c-testimonial__text {
     font-size: 24px;
-    font-size: 1.3333333333rem;
+    font-size: 1.3333333333em;
     font-style: italic;
     line-height: 1.125;
 }
@@ -1635,7 +1635,7 @@ input.is-active[type="submit"],
     display: block;
     color: #858585; 
     font-size: 12px;
-    font-size: 0.6666666667rem;
+    font-size: 0.6666666667;
     font-weight: bold;
     font-style: normal;
     line-height: 2.25;
@@ -2011,9 +2011,9 @@ a.menu-item__description.info {
 \*------------------------------------*/
 .entry__meta {
     margin-bottom: 0;
-    color: #7795b4;
+    color: #46627f;
     font-size: 17px;
-    font-size: 0.9444444444rem;
+    font-size: 0.9444444444;
     font-weight: normal;
     font-style: italic; 
     line-height: 1.5882352941;
@@ -2063,14 +2063,14 @@ pre {
     padding: 5px 14px;
     border-radius: 2px;
     font-size: 17px;
-    font-size: 0.9444444444rem;
+    font-size: 0.9444444444;
     line-height: 1.5882352941;
     -moz-tab-size: 4;
     tab-size: 4;
 }
 
 .form-allowed-button {
-    color: #7795b4;
+    color: #46627f;
     cursor: default;
 }
 
@@ -2389,14 +2389,14 @@ button.flickity-prev-next-button {
     color: #fff;
     text-shadow: 0 2px rgba(0, 16, 34, 0.4);
     font-size: 33.75px;
-    font-size: 1.875rem; 
+    font-size: 1.875em; 
     font-weight: bold;
     line-height: 1;
 }
 @media screen and (min-width: 48em) {
     .feature-text .entry-title {
         font-size: 60.75px;
-        font-size: 3.375rem;
+        font-size: 3.375em;
     }
 }
 
@@ -2424,7 +2424,7 @@ button.flickity-prev-next-button {
 
 .gform_wrapper li.gfield .gfield_description {
     padding: 0; 
-    color: #7795b4;
+    color: #46627f;
 }
 
 /**
@@ -2621,7 +2621,7 @@ button.flickity-prev-next-button {
 
 .t-bg__frost {
     color: rgba(52, 73, 94, 0.95); 
-    background-color: rgba(227, 232, 236, 0.6);
+    background-color: rgba(248, 248, 248, 0.6);
 }
 
 .t-bg__grey--dark {
@@ -2739,30 +2739,50 @@ button.flickity-prev-next-button {
     fill: #ffe504;
 }
 
+.t-fg__1 {
+    color: #004088;
+}
+
+.t-fg__2 {
+    color: #ffe192;
+}
+
+.t-fg__3 {
+    color: #d0ba00;
+}
+
+.t-fg__dark {
+    color: #34495e;
+}
+
+.t-fg__light {
+    color: #fff;
+}
+
 /*------------------------------------*    #HEADINGS
 \*------------------------------------*/
 .h1 {
     font-size: 33.75px;
-    font-size: 1.875rem;
+    font-size: 1.875em;
     line-height: 1.6;
     line-height: 1;
 }
 @media screen and (min-width: 48em) {
     .h1 {
         font-size: 40.5px;
-        font-size: 2.25rem;
+        font-size: 2.25em;
     }
 }
 
 .h2 {
     font-size: 27px;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     line-height: 1;
 }
 @media screen and (min-width: 48em) {
     .h2 {
         font-size: 33.75px;
-        font-size: 1.875rem;
+        font-size: 1.875em;
         line-height: 1.6;
     }
 }
@@ -2771,7 +2791,7 @@ button.flickity-prev-next-button {
 .widget-title,
 .action-bar-wrap .site-title {
     font-size: 22.5px;
-    font-size: 1.25rem;
+    font-size: 1.25em;
     line-height: 1.2;
 }
 @media screen and (min-width: 48em) {
@@ -2779,38 +2799,38 @@ button.flickity-prev-next-button {
     .widget-title,
     .action-bar-wrap .site-title {
         font-size: 27px;
-        font-size: 1.5rem;
+        font-size: 1.5em;
         line-height: 1;
     }
 }
 
 .h4 {
     font-size: 22.5px;
-    font-size: 1.25rem;
+    font-size: 1.25em;
     line-height: 1.2;
 }
 
 .h5 {
     font-size: 18px;
-    font-size: 1rem;
+    font-size: 1em;
     line-height: 1.5;
 }
 
 .h6 {
     font-size: 16px;
-    font-size: 0.8888888889rem;
+    font-size: 0.8888888889;
     line-height: 1.6875;
 }
 
 .text-jumbo {
     font-size: 33.75px;
-    font-size: 1.875rem;
+    font-size: 1.875em;
     line-height: 1;
 }
 @media screen and (min-width: 48em) {
     .text-jumbo {
         font-size: 60.75px;
-        font-size: 3.375rem;
+        font-size: 3.375em;
     }
 }
 
@@ -5337,7 +5357,7 @@ button.flickity-prev-next-button {
 
 .toggle__title {
     font-size: 15px;
-    font-size: 0.8333333333rem;
+    font-size: 0.8333333333;
     line-height: 1.8;
 }
 

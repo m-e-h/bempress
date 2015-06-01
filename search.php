@@ -9,8 +9,6 @@ get_header(); ?>
 
     <?php tha_content_before(); ?>
 
-        <div <?php hybrid_attr( 'site-inner' ); ?>>
-
     <main <?php hybrid_attr( 'content' ); ?>>
 
         <?php tha_content_top(); ?>

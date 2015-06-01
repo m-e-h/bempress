@@ -33,32 +33,27 @@
 
 	<header <?php hybrid_attr( 'header' ); ?>>
 
-        <div class="action-bar">
-            <div <?php hybrid_attr( 'wrap', 'action-bar' ); ?>>
+        <?php tha_header_top(); ?>
 
                 <div <?php hybrid_attr( 'branding' ); ?>>
-                <?php doc_logo(); ?>
-                <?php hybrid_site_title(); ?>
-                </div>
 
                 <button class="menu-toggle" aria-controls="menu-primary" aria-expanded="false">
                 <span></span>
                 </button>
 
-                <?php action_bar_right(); ?>
-            </div>
-        </div>
+                <?php doc_logo(); ?>
+                <?php hybrid_site_title(); ?>
 
-        <div <?php hybrid_attr( 'wrap', 'header' ); ?>>
+                </div>
 
-        <?php tha_header_top(); ?>
+    <?php hybrid_get_menu( 'primary' ); ?>
 
         <?php tha_header_bottom(); ?>
-
-        </div><!-- .wrap -->
 
 	</header><!-- #header -->
 
     <?php tha_header_after(); ?>
 
     <div <?php hybrid_attr( 'site-container' ); ?>>
+
+        <div <?php hybrid_attr( 'site-inner' ); ?>>
