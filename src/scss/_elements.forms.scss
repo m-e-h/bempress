@@ -1,7 +1,7 @@
 // /*------------------------------------*\
 //  #FORMS
 // \*------------------------------------*/
-input:not([type="submit"]):not([type="button"]),
+input,
 select,
 textarea {
     border: 1px solid $color-grey-ui;

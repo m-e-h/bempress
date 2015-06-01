@@ -17,10 +17,10 @@ class AttrTrumps {
 	public $site_inner_sidebar_right 	= ' wrap';
 	public $site_inner_sidebar_left 	= ' wrap grid--rev';
 	public $wrap                		= '';
-    public $action_bar_wrap             = ' wrapper--wide shadow--z2 t-bg__1 flex flex--row flex--wrap flex--j-between';
-	public $header_wrap                	= ' wrapper--wide t-bg__tint';
+    public $action_bar_wrap             = '';
+	public $header_wrap                	= '';
     public $card_wrap                   = ' grid__item flex u-ph@respond u-1of1@sm u-1of2@md u-1of3@lg';
-	public $header                		= ' t-bg__tint';
+	public $header                		= ' t-bg__1 flex flex--row@md flex--wrap flex--j-between';
 	public $footer                		= ' t-bg__1--light';
 	public $content 					= ' grid__item';
 	public $content_full_width			= ' u-1of1';
@@ -34,7 +34,7 @@ class AttrTrumps {
 	public $sidebar_sidebar_right 		= ' u-1of3@md';
 	public $sidebar_sidebar_left		= ' u-1of3@md';
 	public $sidebar_horizontal          = ' u-pl@respond grid flex flex--row flex--wrap';
-	public $menu_primary 				= ' t-bg__white menu--horizontal u-ph@md flex flex--row flex-j--center ';
+	public $menu_primary 				= ' menu--horizontal t-bg__1';
 	public $menu_secondary 				= ' menu--horizontal u-p- flex flex-j--center';
 	public $menu_li         			= 'menu__item';
 
@@ -44,7 +44,7 @@ class AttrTrumps {
     public $author_box                  = ' br u-p@respond u-mb@respond';
 
 	/* Header attributes. */
-	public $branding              		= ' ';
+	public $branding              		= ' u-ibl';
 	public $site_title            		= ' h1 u-m0 page-title__main';
 	public $site_description      		= ' page-title__sub';
 
