@@ -237,15 +237,16 @@ if ( !class_exists( 'Hybrid' ) ) {
 			require_if_theme_supports( 'hybrid-core-template-hierarchy', HYBRID_INC . 'template-hierarchy.php' );
 
 			// Load the post format functionality if post formats are supported.
-			require_if_theme_supports( 'post-formats', HYBRID_INC . 'post-formats.php' );
-			require_if_theme_supports( 'post-formats', HYBRID_INC . 'class-chat.php'   );
+			require_if_theme_supports( 'post-formats', HYBRID_INC . 'formats.php'    );
+			require_if_theme_supports( 'post-formats', HYBRID_INC . 'class-chat.php' );
 
 			// Load the deprecated functions if supported.
 			require_if_theme_supports( 'hybrid-core-deprecated', HYBRID_INC . 'deprecated.php' );
 
 			// Load the Theme Layouts extension if supported.
-			require_if_theme_supports( 'theme-layouts', HYBRID_INC . 'class-layouts.php' );
-			require_if_theme_supports( 'theme-layouts', HYBRID_INC . 'layouts.php'       );
+			require_if_theme_supports( 'theme-layouts', HYBRID_INC . 'class-layout.php'         );
+			require_if_theme_supports( 'theme-layouts', HYBRID_INC . 'class-layout-factory.php' );
+			require_if_theme_supports( 'theme-layouts', HYBRID_INC . 'layouts.php'              );
 		}
 
 		/**
