@@ -25,6 +25,11 @@ $query = new WP_Query( $args );
 
 if ( $query->have_posts() ) :
     $count = 1;
+    ?>
+
+<section class="row pages-highlight t-bg__3">
+
+<?php
     while ( $query->have_posts() ) : $query->the_post();
     ?>
 
@@ -43,7 +48,9 @@ if ( $query->have_posts() ) :
 </div>
     <?php
     $count++;
-    endwhile;
+    endwhile; ?>
+    </section>
+<?php
 else :
     if ( current_user_can( 'customize' ) ) { ?>
         <div class="message">
