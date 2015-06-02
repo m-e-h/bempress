@@ -31,6 +31,7 @@ function bempress_register_image_sizes() {
     add_image_size( 'bempress-md', 1024, 288, true );
 	add_image_size( 'bempress-full-cropped', 1280, 720, true );
     add_image_size( 'bempress-full', 1920, 540, true );
+    add_image_size( 'bempress-hd', 1920, 1080, true );
     add_image_size( 'bempress-sm', 640, 360, true );
 }
 

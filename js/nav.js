@@ -295,27 +295,22 @@ if("document" in self){if(!("classList" in document.createElement("_"))){(functi
 
   var navdrawerContainer = querySelector('.menu-primary');
   var body = document.body;
-  var appbarElement = querySelector('.action-bar');
-  var header = querySelector('#header');
   var menuBtn = querySelector('.menu-toggle');
-  var main = querySelector('#site-container');
+  var navdrawerOverlay = querySelector('.layout__obfuscator');
 
   function closeMenu() {
-    body.classList.remove('is-open');
-    appbarElement.classList.remove('is-open');
-    header.classList.remove('is-open');
-    navdrawerContainer.classList.remove('is-open');
+    body.classList.remove('is-visible');
+    navdrawerOverlay.classList.remove('is-visible');
+    navdrawerContainer.classList.remove('is-visible');
   }
 
   function toggleMenu() {
-    body.classList.toggle('is-open');
-    appbarElement.classList.toggle('is-open');
-    header.classList.toggle('is-open');
-    navdrawerContainer.classList.toggle('is-open');
-    navdrawerContainer.classList.add('has-opened');
+    body.classList.toggle('is-visible');
+    navdrawerOverlay.classList.toggle('is-visible');
+    navdrawerContainer.classList.toggle('is-visible');
   }
 
-  main.addEventListener('click', closeMenu);
+  navdrawerOverlay.addEventListener('click', closeMenu);
   menuBtn.addEventListener('click', toggleMenu);
   navdrawerContainer.addEventListener('click', function (event) {
     if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {

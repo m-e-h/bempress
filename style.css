@@ -766,11 +766,9 @@ nav ul {
      */
 .grid__item {
     display: inline-block;
-    /* [3] */
-    width: 100%;
     /* [1] */
     vertical-align: top;
-    /* [4] */
+    /* [3] */
 }
 
 .grid--rev {
@@ -1231,28 +1229,9 @@ nav ul {
 }
 
 .media {
-    display: table;
     overflow: hidden; 
     width: 100%;
     border-radius: 2px;
-}
-
-.media__img,
-.media__body {
-    display: table-cell;
-    vertical-align: top;
-}
-
-.media__img {
-    padding-right: 27px;
-}
-.media__img img {
-    display: block;
-    max-width: none;
-}
-
-.media__body {
-    width: 100%;
 }
 
 /*------------------------------------*    $ARTICLES
@@ -1632,9 +1611,9 @@ input.is-active[type="submit"],
     }
 }
 
-.action-bar.is-open,
-.action-bar.is-open ~ .site-container,
-.action-bar.is-open ~ .site-header {
+.action-bar.is-visible,
+.action-bar.is-visible ~ .site-container,
+.action-bar.is-visible ~ .site-header {
     -webkit-transform: translate(250px, 0);
     -ms-transform: translate(250px, 0);
     transform: translate(250px, 0);
@@ -1688,17 +1667,17 @@ input.is-active[type="submit"],
     background-color: rgba(255, 255, 255, 0.4);
 }
 
-.is-open .menu-toggle span {
+.is-visible .menu-toggle span {
     background: transparent;
 }
 
-.is-open .menu-toggle span:before {
+.is-visible .menu-toggle span:before {
     -webkit-transform: rotate(45deg) translate(0.5em, 0.4em);
     -ms-transform: rotate(45deg) translate(0.5em, 0.4em);
     transform: rotate(45deg) translate(0.5em, 0.4em);
 }
 
-.is-open .menu-toggle span:after {
+.is-visible .menu-toggle span:after {
     -webkit-transform: rotate(-45deg) translate(0.4em, -0.3em);
     -ms-transform: rotate(-45deg) translate(0.4em, -0.3em);
     transform: rotate(-45deg) translate(0.4em, -0.3em);
@@ -1706,7 +1685,6 @@ input.is-active[type="submit"],
 
 .menu-primary {
     position: fixed;
-    z-index: 5;
     top: 0;
     bottom: 0;
     width: 250px;
@@ -1716,7 +1694,9 @@ input.is-active[type="submit"],
     transform: translate(-250px, 0);
 }
 
-.menu-primary.is-open {
+.menu-primary.is-visible {
+    color: #34495e; 
+    background-color: white;
     -webkit-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
@@ -1724,9 +1704,9 @@ input.is-active[type="submit"],
 
 /** Larger Screens - desktops and tablets **/
 @media screen and (min-width: 48em) {
-    .action-bar.is-open,
-    .action-bar.is-open ~ .site-container,
-    .action-bar.is-open ~ .site-header {
+    .action-bar.is-visible,
+    .action-bar.is-visible ~ .site-container,
+    .action-bar.is-visible ~ .site-header {
         -webkit-transform: translate(0px, 0);
         -ms-transform: translate(0px, 0);
         transform: translate(0px, 0);
@@ -1813,7 +1793,6 @@ a.menu-item__description.info {
 .layout__obfuscator {
     visibility: hidden;
     position: absolute;
-    z-index: 4;
     top: 0;
     left: 0;
     width: 100%;
@@ -1827,11 +1806,11 @@ a.menu-item__description.info {
     transition-property: background-color;
 }
 
-.layout__obfuscator.is-open {
+.layout__obfuscator.is-visible {
     visibility: visible; 
     background-color: rgba(44, 54, 62, 0.8);
 }
-.layout__obfuscator.is-open .fa {
+.layout__obfuscator.is-visible .fa {
     top: 0;
     left: 85%;
     color: rgba(255, 255, 255, 0.9);
@@ -2623,23 +2602,23 @@ button.flickity-prev-next-button {
 }
 
 .t-bg__3 {
-    color: rgba(255, 255, 255, 0.95); 
-    background-color: #d0ba00;
+    color: rgba(52, 73, 94, 0.95); 
+    background-color: #ebebeb;
 }
 
 .t-bg__3--dark {
-    color: rgba(255, 255, 255, 0.95); 
-    background-color: #9d8d00;
+    color: rgba(52, 73, 94, 0.95); 
+    background-color: #d2d2d2;
 }
 
 .t-bg__3--light {
-    color: rgba(255, 255, 255, 0.95); 
-    background-color: #ffe504;
+    color: rgba(52, 73, 94, 0.95); 
+    background-color: white;
 }
 
 .t-bg__3--glass {
-    color: rgba(255, 255, 255, 0.95); 
-    background-color: rgba(157, 141, 0, 0.8);
+    color: rgba(52, 73, 94, 0.95); 
+    background-color: rgba(210, 210, 210, 0.8);
 }
 
 .t-fill__white {
@@ -2671,15 +2650,15 @@ button.flickity-prev-next-button {
 }
 
 .t-fill__3 {
-    fill: #d0ba00;
+    fill: #ebebeb;
 }
 
 .t-fill__3--dark {
-    fill: #9d8d00;
+    fill: #d2d2d2;
 }
 
 .t-fill__3--light {
-    fill: #ffe504;
+    fill: white;
 }
 
 .t-fg__1 {
@@ -2691,7 +2670,7 @@ button.flickity-prev-next-button {
 }
 
 .t-fg__3 {
-    color: #d0ba00;
+    color: #ebebeb;
 }
 
 .t-fg__dark {

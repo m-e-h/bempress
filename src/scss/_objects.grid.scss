@@ -183,7 +183,7 @@ $class-type: if($use-silent-classes, unquote("%"), unquote("."));
         vertical-align:top;             /* [3] */
 
         @if $mobile-first {
-            width:100%;                 /* [4] */
+            //width:100%;                 /* [4] */
         }
 
         @if not $use-markup-fix {

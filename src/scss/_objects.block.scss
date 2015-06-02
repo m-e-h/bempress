@@ -51,7 +51,7 @@
 
 
 .media {
-    display: table;
+    //display: table;
     width: 100%;
     border-radius: $base-radius;
     overflow: hidden;
@@ -59,20 +59,19 @@
 
 .media__img,
 .media__body {
-    display: table-cell;
-    vertical-align: top;
+    //display: table-cell;
+    //vertical-align: top;
 }
 
-.media__img {
-    padding-right: $base-spacing-unit;
+// .media__img {
 
-    img {
-        display: block;
-        max-width: none;
-    }
+//     img {
+//         display: block;
+//         max-width: none;
+//     }
 
-}
+// }
 
 .media__body {
-    width: 100%;
+    //width: 100%;
 }

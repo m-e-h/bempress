@@ -174,10 +174,13 @@ function bempress_customize_register( $wp_customize ) {
 
   //Typography
 
-    $wp_customize->add_section( 'custom_typography' , array(
+    $wp_customize->add_section(
+        'custom_typography',
+        array(
         'title'      => esc_html__('Typography','bempress'),
         'priority'   => 80
-    ) );
+        )
+    );
 
     /* Adds the heading font setting. */
     $wp_customize->add_setting(
@@ -249,6 +252,81 @@ $wp_customize->add_control(
         )
     )
 );
+
+
+    $wp_customize->add_panel(
+        'front_highlights',
+        array(
+        'title'      => esc_html__('Front Page','bempress'),
+        'priority'   => 20
+        )
+    );
+
+    $wp_customize->add_section(
+        'showcase' ,
+        array(
+            'title'      => __( 'Showcase', 'textdomain' ),
+            'priority'   => 40,
+            'panel' => 'front_highlights',
+        )
+    );
+
+    for ( $count = 1; $count <= 4; $count++ ) {
+
+        // Add color scheme setting and control.
+        $wp_customize->add_setting(
+            'showcase-page-' . $count,
+            array(
+            'default'           => '',
+            'sanitize_callback' => 'absint'
+            )
+        );
+
+        $wp_customize->add_control(
+            'showcase-page-' . $count,
+            array(
+            'label'    => __( 'Select Page', 'textdomain' ),
+            'section'  => 'showcase',
+            'type'     => 'dropdown-pages'
+            )
+        );
+
+    }
+
+
+
+
+
+    $wp_customize->add_section(
+        'page_highlight' ,
+        array(
+            'title'      => __( 'Single Page Highlight', 'bempress' ),
+            'priority'   => 30,
+            'panel' => 'front_highlights',
+        )
+    );
+
+        // Add color scheme setting and control.
+        $wp_customize->add_setting(
+            'page-highlight',
+            array(
+            'default'           => '',
+            'sanitize_callback' => 'absint'
+            )
+        );
+
+        $wp_customize->add_control(
+            'bempress-page-highlight',
+            array(
+            'label'    => __( 'Select Page', 'bempress' ),
+            'section'  => 'page_highlight',
+            'settings' => 'page-highlight',
+            'type'     => 'dropdown-pages'
+            )
+        );
+
+
+
 
 
 }
