@@ -3800,3 +3800,9 @@ p:last-of-type {
 #mb-reply-form {
     display: inline-block;
 }
+
+.whistles-toggle,
+.whistles-accordion {
+    -webkit-transition: none;
+    transition: none;
+}
