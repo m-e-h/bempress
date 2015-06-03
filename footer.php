@@ -13,8 +13,6 @@
 
             <?php tha_footer_top(); ?>
 
-			<div <?php hybrid_attr( 'wrap', 'u-pt' ); ?>>
-
 			<?php hybrid_get_sidebar( 'footer' ); ?>
 
 			</div><!-- .wrap -->

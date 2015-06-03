@@ -3806,3 +3806,18 @@ p:last-of-type {
     -webkit-transition: none;
     transition: none;
 }
+
+.letter-icon {
+    position: absolute;
+    bottom: 0; 
+    left: 48%;
+    opacity: 0.1;
+}
+
+.intro-text p {
+    font-size: 22px;
+    font-size: 1.2222222222em;
+    font-style: italic; 
+    line-height: 1.2272727273;
+    letter-spacing: 1px;
+}

@@ -200,3 +200,19 @@ p:last-of-type {
 .whistles-toggle, .whistles-accordion {
     transition: none;
 }
+
+
+
+
+.letter-icon {
+    position: absolute;
+    opacity: .1;
+    left: 48%;
+    bottom: 0;
+}
+
+.intro-text p{
+    @include font-size($base-font-size + 4);
+    letter-spacing: 1px;
+    font-style: italic;
+}

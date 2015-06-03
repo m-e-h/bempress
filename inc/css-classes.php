@@ -33,7 +33,7 @@ class AttrTrumps {
 	public $sidebar_card_layout  		= ' u-1of1';
 	public $sidebar_sidebar_right 		= ' u-1of3@md';
 	public $sidebar_sidebar_left		= ' u-1of3@md';
-	public $sidebar_horizontal          = ' wrap grid u-flex u-flex--row u-flex--w';
+	public $sidebar_horizontal          = ' wrap grid u-flex u-flex--row@md u-flex--w u-pv@respond';
 	public $menu_primary 				= ' menu--horizontal';
 	public $menu_secondary 				= ' menu--horizontal u-p- u-flex u-flex--j-c';
 	public $menu_li         			= 'menu__item';
@@ -54,7 +54,7 @@ class AttrTrumps {
 	public $archive_description      	= ' wrap u-mt-';
 
 	/* Post-specific attributes. */
-	public $post                  		= ' br u-p@respond u-mb@respond';
+	public $post                  		= ' br u-mv-- u-p@respond';
     public $post_card_layout            = ' t-bg__white u-flexed--grow';
 	public $entry_title           		= ' wrap entry__title';
 	public $entry_author          		= ' u-mr- entry__author';

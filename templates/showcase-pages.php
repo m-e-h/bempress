@@ -21,34 +21,35 @@ $args = array(
     'orderby' => 'post__in'
 );
 
-$query = new WP_Query( $args );
+$query2 = new WP_Query( $args );
 
-if ( $query->have_posts() ) :
+if ( $query2->have_posts() ) :
     $count = 1;
     ?>
 
-<section class="row pages-highlight t-bg__3">
+<section class="row pages-highlight u-pv@respond t-bg__2--light">
+
+<div class="block-row grid u-flex u-flex--row@md u-flex--w wrap">
 
 <?php
-    while ( $query->have_posts() ) : $query->the_post();
+    while ( $query2->have_posts() ) : $query2->the_post();
     ?>
 
-        <article id="post-<?php the_ID(); ?>" <?php post_class( 't-bg__3 u-pv@respond featured-' . $count ); ?>>
+<div class="block grid__item u-flexed--1 u-p--">
+        <div id="post-<?php the_ID(); ?>" <?php post_class( 'block__content shadow--z1 t-bg__white block-' . $count ); ?>>
 
-<div class="wrap">
-            <header class="entry-header">
-                <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-            </header><!-- .entry-header -->
+            <?php the_title( sprintf( '<h1 class="block__title u-center u-ph"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
-            <div class="entry-summary clearfix">
-                <?php the_content(); ?>
+            <div class="block__body u-p">
+                <?php the_excerpt(); ?>
             </div><!-- .entry-content -->
 
-        </article><!-- #post-## -->
+        </div><!-- #post-## -->
 </div>
     <?php
     $count++;
     endwhile; ?>
+</div>
     </section>
 <?php
 else :

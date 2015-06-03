@@ -10,10 +10,12 @@
  * @since       1.0.0
  */
 ?>
+
+<div class="wrap intro-text">
 <article <?php hybrid_attr( 'post' ); ?>>
 
 	<?php tha_entry_top(); ?>
-
+<?php get_template_part( 'images/vector/svg', 'letter' ); ?>
 	<?php get_template_part( 'templates/single', 'content' ); ?>
 
 	<?php if ( current_user_can( 'edit_pages' ) ) : ?>
@@ -25,3 +27,4 @@
 	<?php tha_entry_bottom(); ?>
 
 </article><!-- .entry -->
+</div>

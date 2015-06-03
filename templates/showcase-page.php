@@ -21,18 +21,22 @@ $args = array(
     'orderby' => 'post__in'
 );
 
-$query = new WP_Query( $args );
+$query1 = new WP_Query( $args );
 
-if ( $query->have_posts() ) :
+if ( $query1->have_posts() ) :
     $count = 1;
     ?>
 
-<section class="row pages-highlight t-bg__3">
+<section class="row page-highlight u-pv@respond t-bg__1--light">
+
+<div class="block-row grid u-flex u-flex--row@md u-flex--w wrap">
+
 <?php
-    while ( $query->have_posts() ) : $query->the_post();
+    while ( $query1->have_posts() ) : $query1->the_post();
     ?>
 
-        <article id="post-<?php the_ID(); ?>" <?php post_class( 't-bg__tint u-pv@respond featured-' . $count ); ?>>
+<div class="block grid__item u-flexed--1 u-ph--">
+        <div id="post-<?php the_ID(); ?>" <?php post_class( 'block__content t-bg__frost shadow--z1 single-block-' . $count ); ?>>
 
         <?php
             $image = get_the_image( array( 'size'   => 'bempress-hd', 'format' => 'array' ) );
@@ -41,7 +45,7 @@ if ( $query->have_posts() ) :
 if ( !empty( $url )  ) : ?>
             <style type="text/css">
         .page-highlight {
-            background: url(<?php echo $url ?>) no-repeat 0 0;
+            background-image: url(<?php echo $url ?>);
              background-attachment: fixed;
             -webkit-background-size: cover;
             -moz-background-size:    cover;
@@ -50,16 +54,13 @@ if ( !empty( $url )  ) : ?>
         }
             </style>
             <?php endif; // End header image check. ?>
-<div class="wrap">
-            <header class="entry-header">
-                <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-            </header><!-- .entry-header -->
+            <?php the_title( sprintf( '<h1 class="block__title u-center u-ph"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
-            <div class="entry-summary clearfix">
+            <div class="block__body u-p">
                 <?php the_content(); ?>
             </div><!-- .entry-content -->
 
-        </article><!-- #post-## -->
+        </div><!-- #post-## -->
 </div>
     <?php
     $count++;
