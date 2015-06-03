@@ -16,9 +16,9 @@
    width="48"
    height="48">
   <sodipodi:namedview
-     inkscape:zoom="13.906433"
-     inkscape:cx="0.31173514"
-     inkscape:cy="23.854729"
+     inkscape:zoom="9.8333331"
+     inkscape:cx="0.53021732"
+     inkscape:cy="27.110393"
      inkscape:window-width="1920"
      inkscape:window-height="1023"
      inkscape:window-x="0"
@@ -40,18 +40,9 @@
   <defs
      id="defs4" />
   <g
-     id="g29"
-     style="fill:#eeeeee;fill-opacity:1;stroke:none">
-    <path
-       style="fill:#eeeeee;fill-opacity:1;stroke:none"
-       id="path31"
-       d="M 24,1 C 36.703,1 47,11.297 47,24 47,36.703 36.703,47 24,47 11.297,47 1,36.703 1,24 1,11.297 11.297,1 24,1 Z"
-       inkscape:connector-curvature="0" />
-  </g>
-  <g
      id="g33" />
   <g
-     transform="matrix(1.1313955,0,0,1.1313955,-3.4479139,-1.8692504)"
+     transform="matrix(1.7323496,0,0,1.7323496,-18.027198,-15.610009)"
      id="g9967">
     <g
        id="g53"
@@ -59,22 +50,22 @@
       <path
          d="m 13.777,34 20.445,0 c 1.777,0 1.777,0 1.777,-1.715 l 0,-14.57 -12,-7.711 -12,7.711 0,14.57 c 0,1.715 0,1.715 1.781,1.715 m 0,0"
          id="path59"
-         style="fill:#004088;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         style="fill:#bbdaff;fill-opacity:1;fill-rule:nonzero;stroke:none"
          inkscape:connector-curvature="0" />
       <path
          d="m 14,12 0,20 19.996,0 0,-20 M 14,12"
          id="path61"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:1"
+         style="fill:#f9f9f9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:1"
          inkscape:connector-curvature="0" />
       <path
          d="m 13.777,34 20.445,0 c 1.777,0 1.777,0 1.777,-1.68 l 0,-14.316 -24,14.316 c 0,1.68 0,1.68 1.781,1.68 m -0.004,0"
          id="path63"
-         style="fill:#0058bb;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         style="fill:#cbe3ff;fill-opacity:1;fill-rule:nonzero;stroke:none"
          inkscape:connector-curvature="0" />
       <path
          d="m 34.22,34 -20.445,0 c -1.781,0 -1.781,0 -1.781,-1.68 l 0,-14.316 24,14.316 c 0,1.68 0,1.68 -1.77,1.68 m 0.004,0"
          id="path65"
-         style="fill:#0070ee;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         style="fill:#e5f2ff;fill-opacity:1;fill-rule:nonzero;stroke:none"
          inkscape:connector-curvature="0" />
     </g>
   </g>

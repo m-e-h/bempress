@@ -242,7 +242,7 @@ p:last-of-type {
 
 .letter-icon {
     position: absolute;
-    opacity: .1;
+    opacity: .4;
     left: 48%;
     bottom: 0;
     width: auto;
@@ -251,7 +251,7 @@ p:last-of-type {
 .intro-text p{
     @include font-size($base-font-size + 4);
     letter-spacing: 1px;
-    font-style: italic;
+    //font-style: italic;
 }
 
 
