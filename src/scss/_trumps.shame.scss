@@ -257,7 +257,7 @@ p:last-of-type {
     color: $white;
     border: 0;
         padding-bottom: 1.5rem;
-    border-radius: 3px;
+    border-radius: 0 0 $base-radius $base-radius;
     box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24);
 }
 
@@ -269,9 +269,16 @@ p:last-of-type {
 
 .whistles-tabs .whistles-tabs-nav li {
     flex: 1;
+
+    &:last-of-type a {
+        border-right: 0;
+    }
 }
 
 .whistles-tabs .whistles-tabs-nav li a {
+    border-color: $white;
+    border-left: 0;
+    border-top: 0;
     border-bottom: 0;
     border-radius: $base-radius $base-radius 0 0;
     color: $color-grey-light;
