@@ -3776,10 +3776,73 @@ p:last-of-type {
     display: inline-block;
 }
 
+.whistles {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-size: 0.8888888889;
+    line-height: 1.6875;
+}
+
 .whistles-toggle,
 .whistles-accordion {
     -webkit-transition: none;
     transition: none;
+}
+
+.widget-primary.whistles {
+    padding: 0;
+    background: none; 
+    box-shadow: none;
+}
+
+.whistles-tabs .whistles-tabs-wrap {
+    margin: -1px 0 0;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    padding-bottom: 1.5rem;
+    border: 0;
+    border: 0;
+    border-radius: 2px;
+    border-radius: 3px;
+    color: #fff;
+    background: #0058bb;
+    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+}
+
+.whistles-tabs .whistles-tabs-nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row; 
+    padding: 0;
+
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+}
+
+.whistles-tabs .whistles-tabs-nav li {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.whistles-tabs .whistles-tabs-nav li a {
+    width: 100%; 
+    border-bottom: 0;
+    border-radius: 2px 2px 0 0;
+    color: #ebebeb;
+    background: #004088;
+}
+.whistles-tabs .whistles-tabs-nav li a:hover {
+    background: #002855;
+}
+
+.whistles-tabs .whistles-tabs-nav li[aria-selected="true"] a {
+    color: #fff;
+    background: #0058bb;
 }
 
 .letter-icon {

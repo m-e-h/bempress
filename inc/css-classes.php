@@ -32,8 +32,8 @@ class AttrTrumps {
 	public $sidebar 					= ' grid__item';
 	public $sidebar_full_width  		= ' grid u-flex u-flex--row u-flex--w u-1of1';
 	public $sidebar_card_layout  		= ' u-1of1';
-	public $sidebar_sidebar_right 		= ' u-1of3@md';
-	public $sidebar_sidebar_left		= ' u-1of3@md';
+	public $sidebar_sidebar_right 		= ' u-1of1 u-1of3@md';
+	public $sidebar_sidebar_left		= ' u-1of1 u-1of3@md';
 	public $sidebar_horizontal          = ' wrap grid u-flex u-flex--row@md u-flex--w u-pv@respond';
 	public $menu_primary 				= ' menu--horizontal';
 	public $menu_secondary 				= ' menu--horizontal u-p- u-flex u-flex--j-c';
