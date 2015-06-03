@@ -27,7 +27,7 @@ if ( $query2->have_posts() ) :
     $count = 1;
     ?>
 
-<section class="row pages-highlight u-pv@respond t-bg__2">
+<section class="row pages-highlight u-pv@respond t-bg__2 shadow--z1">
 
 <div class="block-row grid u-flex u-flex--row@md u-flex--w wrap">
 
@@ -39,7 +39,6 @@ if ( $query2->have_posts() ) :
         <div id="post-<?php the_ID(); ?>" <?php post_class( 'block__content shadow--z1 u-p- t-bg__white block__' . $count ); ?>>
 <?php get_the_image( array(
         'size'   => 'bempress-sm',
-
         'before'        => '<div class="featured-media u-mb- u-mtn- u-mhn- block__image">',
         'after'         => '</div>',
         ) ); ?>
