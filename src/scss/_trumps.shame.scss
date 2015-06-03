@@ -167,9 +167,45 @@ p:last-of-type {
 }
 
 
+.entry__header--feature {
+    width: 100%;
+    min-height: 50px;
+    text-align: center;
+    display: inline-block;
+    margin-top: -$base-spacing-unit--small;
+
+    @include md {
+        min-height: 200px;
+    }
+
+    img {
+        vertical-align: middle;
+        opacity: .7;
+    }
+
+    .feature-text {
+        position: absolute;
+        top: 45%;
+        width: 100%;
+    }
+}
+
+.feature-text .entry-title {
+    color: #fff;
+    font-weight: bold;
+    line-height: 1;
+    text-shadow: 0 2px rgba(0, 16, 34, 0.4);
+    @include font-size($heading-size-2, false);
+    @include md {
+        @include font-size($heading-size-jumbo, false);
+    }
+}
+
+
 .featured-media {
     max-height: 500px;
     overflow: hidden;
+    background-color: $color-primary-dark;
 }
 
 
@@ -209,6 +245,7 @@ p:last-of-type {
     opacity: .1;
     left: 48%;
     bottom: 0;
+    width: auto;
 }
 
 .intro-text p{

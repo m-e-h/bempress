@@ -206,7 +206,6 @@ big {
     cursor: default;
     -webkit-transition-duration: 0.35s;
     transition-duration: 0.35s; 
-    text-rendering: optimizeLegibility;
 
     -ms-overflow-style: -ms-autohiding-scrollbar;
     -webkit-text-size-adjust: 100%;
@@ -1195,8 +1194,8 @@ nav ul {
 }
 
 .block__title {
-    margin: 0;
     opacity: 1;
+    line-height: 1;
 }
 
 .block__img {
@@ -2249,43 +2248,6 @@ button.flickity-prev-next-button {
     background: #ffe192;
 }
 
-.entry__header--feature {
-    display: inline-block; 
-    width: 100%;
-    min-height: 50px;
-    background-color: #002855;
-    text-align: center;
-}
-@media screen and (min-width: 48em) {
-    .entry__header--feature {
-        min-height: 200px;
-    }
-}
-.entry__header--feature img {
-    opacity: 0.7; 
-    vertical-align: middle;
-}
-.entry__header--feature .feature-text {
-    position: absolute;
-    top: 45%;
-    width: 100%;
-}
-
-.feature-text .entry-title {
-    color: #fff;
-    text-shadow: 0 2px rgba(0, 16, 34, 0.4);
-    font-size: 33.75px;
-    font-size: 1.875em; 
-    font-weight: bold;
-    line-height: 1;
-}
-@media screen and (min-width: 48em) {
-    .feature-text .entry-title {
-        font-size: 60.75px;
-        font-size: 3.375em;
-    }
-}
-
 .gfield.field_sublabel_below .ginput_container label {
     font-weight: normal;
     text-align: center;
@@ -2543,7 +2505,7 @@ button.flickity-prev-next-button {
 
 .t-bg__frost {
     color: rgba(52, 73, 94, 0.95); 
-    background-color: rgba(248, 248, 248, 0.6);
+    background-color: rgba(248, 248, 248, 0.7);
 }
 
 .t-bg__grey--dark {
@@ -3613,6 +3575,54 @@ button.flickity-prev-next-button {
     }
 }
 
+.u-1of1- {
+    min-width: 100%;
+}
+
+.u-1of2- {
+    min-width: 50%;
+}
+
+.u-1of3- {
+    min-width: 33.3333333333%;
+}
+
+.u-2of3- {
+    min-width: 66.6666666667%;
+}
+
+.u-1of4- {
+    min-width: 25%;
+}
+
+.u-2of4- {
+    min-width: 50%;
+}
+
+.u-3of4- {
+    min-width: 75%;
+}
+
+.u-1of5- {
+    min-width: 20%;
+}
+
+.u-2of5- {
+    min-width: 40%;
+}
+
+.u-3of5- {
+    min-width: 60%;
+}
+
+.u-4of5- {
+    min-width: 80%;
+}
+
+.u-min--300 {
+    min-width: 300px;
+}
+
 /*----------------------------------------------------*    #To be place in a more appropriate stylesheet later
 \*----------------------------------------------------*/
 .browserupgrade {
@@ -3792,9 +3802,47 @@ p:last-of-type {
     width: 100%;
 }
 
+.entry__header--feature {
+    display: inline-block;
+    width: 100%;
+    min-height: 50px;
+    margin-top: -14px; 
+    text-align: center;
+}
+@media screen and (min-width: 48em) {
+    .entry__header--feature {
+        min-height: 200px;
+    }
+}
+.entry__header--feature img {
+    opacity: 0.7; 
+    vertical-align: middle;
+}
+.entry__header--feature .feature-text {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+}
+
+.feature-text .entry-title {
+    color: #fff;
+    text-shadow: 0 2px rgba(0, 16, 34, 0.4);
+    font-size: 33.75px;
+    font-size: 1.875em; 
+    font-weight: bold;
+    line-height: 1;
+}
+@media screen and (min-width: 48em) {
+    .feature-text .entry-title {
+        font-size: 60.75px;
+        font-size: 3.375em;
+    }
+}
+
 .featured-media {
-    overflow: hidden; 
+    overflow: hidden;
     max-height: 500px;
+    background-color: #002855;
 }
 
 #mb-reply-form {
@@ -3809,8 +3857,9 @@ p:last-of-type {
 
 .letter-icon {
     position: absolute;
-    bottom: 0; 
+    bottom: 0;
     left: 48%;
+    width: auto; 
     opacity: 0.1;
 }
 

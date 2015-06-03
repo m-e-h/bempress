@@ -216,3 +216,43 @@
         width: 80%;
     }
 }
+
+
+//min-widths
+.u-1of1- {
+    min-width: 100%;
+}
+.u-1of2- {
+    min-width: 50%;
+}
+.u-1of3- {
+    min-width: 33.3333333333%;
+}
+.u-2of3- {
+    min-width: 66.6666666667%;
+}
+.u-1of4- {
+    min-width: 25%;
+}
+.u-2of4- {
+    min-width: 50%;
+}
+.u-3of4- {
+    min-width: 75%;
+}
+.u-1of5- {
+    min-width: 20%;
+}
+.u-2of5- {
+    min-width: 40%;
+}
+.u-3of5- {
+    min-width: 60%;
+}
+.u-4of5- {
+    min-width: 80%;
+}
+
+.u-min--300 {
+    min-width: 300px;
+}

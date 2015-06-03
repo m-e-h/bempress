@@ -36,7 +36,7 @@ if ( $query1->have_posts() ) :
     ?>
 
 <div class="block grid__item u-flexed--1 u-ph--">
-        <div id="post-<?php the_ID(); ?>" <?php post_class( 'block__content t-bg__frost shadow--z1 single-block-' . $count ); ?>>
+        <div id="post-<?php the_ID(); ?>" <?php post_class( 'block__content u-p t-bg__frost shadow--z2 single-block-' . $count ); ?>>
 
         <?php
             $image = get_the_image( array( 'size'   => 'bempress-hd', 'format' => 'array' ) );
@@ -54,9 +54,9 @@ if ( !empty( $url )  ) : ?>
         }
             </style>
             <?php endif; // End header image check. ?>
-            <?php the_title( sprintf( '<h1 class="block__title u-center u-ph"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+            <?php the_title( sprintf( '<h2 class="block__title u-text--c"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-            <div class="block__body u-p">
+            <div class="block__body">
                 <?php the_content(); ?>
             </div><!-- .entry-content -->
 

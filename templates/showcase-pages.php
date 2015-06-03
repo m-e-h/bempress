@@ -27,7 +27,7 @@ if ( $query2->have_posts() ) :
     $count = 1;
     ?>
 
-<section class="row pages-highlight u-pv@respond t-bg__2--light">
+<section class="row pages-highlight u-pv@respond t-bg__2">
 
 <div class="block-row grid u-flex u-flex--row@md u-flex--w wrap">
 
@@ -35,12 +35,17 @@ if ( $query2->have_posts() ) :
     while ( $query2->have_posts() ) : $query2->the_post();
     ?>
 
-<div class="block grid__item u-flexed--1 u-p--">
-        <div id="post-<?php the_ID(); ?>" <?php post_class( 'block__content shadow--z1 t-bg__white block-' . $count ); ?>>
+<div class="block u-min--300 grid__item u-flexed--1 u-p--">
+        <div id="post-<?php the_ID(); ?>" <?php post_class( 'block__content shadow--z1 u-p- t-bg__white block__' . $count ); ?>>
+<?php get_the_image( array(
+        'size'   => 'bempress-sm',
 
-            <?php the_title( sprintf( '<h1 class="block__title u-center u-ph"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+        'before'        => '<div class="featured-media u-mb- u-mtn- u-mhn- block__image">',
+        'after'         => '</div>',
+        ) ); ?>
+            <?php the_title( sprintf( '<h2 class="block__title u-mb-"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-            <div class="block__body u-p">
+            <div class="block__body">
                 <?php the_excerpt(); ?>
             </div><!-- .entry-content -->
 

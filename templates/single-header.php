@@ -16,10 +16,9 @@
             'bempress-full-cropped' => '1280w',
             'bempress-retina' => '2560w',
             ),
-        'order'  => [ 'featured', 'attachment' ],
         'link_to_post' => false,
         'order'         => [ 'featured' ],
-        'before'        => '<div class="featured-media image">',
+        'before'        => '<div class="featured-media image u-mtn+ u-mhn+">',
         'after'         => '</div>',
     ] );
     ?>

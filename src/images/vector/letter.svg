@@ -8,31 +8,23 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
-   class="letter-icon"
    id="svg2"
    viewBox="0 0 48 48"
    inkscape:version="0.91 r"
-   sodipodi:docname="letter.svg">
+   sodipodi:docname="letter.svg"
+   class="letter-icon"
+   width="48"
+   height="48">
   <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
+     inkscape:zoom="13.906433"
+     inkscape:cx="0.31173514"
+     inkscape:cy="23.854729"
      inkscape:window-width="1920"
      inkscape:window-height="1023"
-     id="namedview37"
-     showgrid="false"
-     inkscape:zoom="13.906433"
-     inkscape:cx="17.569935"
-     inkscape:cy="23.854729"
      inkscape:window-x="0"
      inkscape:window-y="30"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g53" />
+     inkscape:current-layer="svg2" />
   <metadata
      id="metadata73">
     <rdf:RDF>
@@ -46,37 +38,12 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs4">
-    <clipPath
-       id="clipPath-041403289">
-      <g
-         id="g12"
-         transform="translate(0,-1004.3622)">
-        <path
-           id="path14"
-           fill="#1890d0"
-           transform="matrix(15.333333,0,0,11.5,414.99999,878.8622)"
-           d="m -24 13 c 0 1.105 -0.672 2 -1.5 2 -0.828 0 -1.5 -0.895 -1.5 -2 0 -1.105 0.672 -2 1.5 -2 0.828 0 1.5 0.895 1.5 2 z" />
-      </g>
-    </clipPath>
-    <clipPath
-       id="clipPath-046736721">
-      <g
-         id="g17"
-         transform="translate(0,-1004.3622)">
-        <path
-           id="path19"
-           fill="#1890d0"
-           transform="matrix(15.333333,0,0,11.5,414.99999,878.8622)"
-           d="m -24 13 c 0 1.105 -0.672 2 -1.5 2 -0.828 0 -1.5 -0.895 -1.5 -2 0 -1.105 0.672 -2 1.5 -2 0.828 0 1.5 0.895 1.5 2 z" />
-      </g>
-    </clipPath>
-  </defs>
+     id="defs4" />
   <g
      id="g29"
-     style="stroke:none;fill:#f5f5f5;fill-opacity:1">
+     style="fill:#eeeeee;fill-opacity:1;stroke:none">
     <path
-       style="fill:#f5f5f5;fill-opacity:1;stroke:none"
+       style="fill:#eeeeee;fill-opacity:1;stroke:none"
        id="path31"
        d="M 24,1 C 36.703,1 47,11.297 47,24 47,36.703 36.703,47 24,47 11.297,47 1,36.703 1,24 1,11.297 11.297,1 24,1 Z"
        inkscape:connector-curvature="0" />
