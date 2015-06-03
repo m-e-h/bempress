@@ -235,7 +235,7 @@ p:last-of-type {
 .sidebar-primary {
 .whistles {
     font-family: sans-serif;
-    @include font-size($base-font-size - 2);
+    @include font-size($base-font-size - 1);
 }
 
 .whistles-toggle, .whistles-accordion {

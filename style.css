@@ -3778,9 +3778,9 @@ p:last-of-type {
 
 .sidebar-primary .whistles {
     font-family: sans-serif;
-    font-size: 16px;
-    font-size: 0.8888888889rem;
-    line-height: 1.6875;
+    font-size: 17px;
+    font-size: 0.9444444444rem;
+    line-height: 1.5882352941;
 }
 
 .sidebar-primary .whistles-toggle,
