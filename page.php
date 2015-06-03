@@ -31,7 +31,5 @@ get_header(); ?>
 
     <?php tha_content_after(); ?>
 
-<?php hybrid_get_sidebar( 'primary' ); ?>
-
 <?php
 get_footer();

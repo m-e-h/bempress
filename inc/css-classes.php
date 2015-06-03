@@ -14,10 +14,11 @@ class AttrTrumps {
 	public $site_inner   				= ' grid';
 	public $site_inner_full_width		= ' ';
 	public $card_layout_inner 	        = ' wrap';
-	public $site_inner_sidebar_right 	= ' wrap';
-	public $site_inner_sidebar_left 	= ' wrap grid--rev';
+	public $site_inner_sidebar_right 	= ' ';
+	public $site_inner_sidebar_left 	= ' grid--rev';
 	public $wrap                		= '';
-    public $action_bar_wrap             = '';
+    public $two_col_wrap                = '';
+    public $two_col_wrap_rev            = ' grid grid--rev';
 	public $header_wrap                	= '';
     public $card_wrap                   = ' grid__item u-flex u-ph@respond u-1of1@sm u-1of2@md u-1of3@lg';
 	public $header                		= ' t-bg__1 u-1of1 u-flex u-flex--row@md u-flex--w u-flex--j-sb shadow--z1';
@@ -25,8 +26,8 @@ class AttrTrumps {
 	public $content 					= ' grid__item';
 	public $content_full_width			= ' u-1of1';
 	public $content_card_layout 		= ' u-1of1 u-flex u-flex--row u-flex--w u-flex--j-sb';
-	public $content_sidebar_right 		= ' u-2of3@md u-pr@md u-pr+@lg';
-	public $content_sidebar_left 		= ' u-2of3@md u-pl@md u-pl+@lg';
+	public $content_sidebar_right 		= ' u-1of1';
+	public $content_sidebar_left 		= ' u-1of1';
 	public $main                		= ' ';
 	public $sidebar 					= ' grid__item';
 	public $sidebar_full_width  		= ' grid u-flex u-flex--row u-flex--w u-1of1';
@@ -60,6 +61,8 @@ class AttrTrumps {
 	public $entry_author          		= ' u-mr- entry__author';
 	public $entry_published       		= ' u-mr- entry__date';
 	public $entry_content         		= ' wrap';
+    public $entry_content_sidebar       = ' u-2of3@md u-pr@respond grid__item';
+    public $entry_content_sidebar_rev   = ' u-2of3@md u-pl@respond grid__item';
 	public $entry_summary         		= ' wrap';
 	public $entry_terms           		= ' badge';
 
@@ -155,8 +158,11 @@ class AttrTrumps {
 		if ( 'header' === $context ) {
 		$attr['class']    .= $this->header_wrap;
 		}
-        if ( 'action-bar' === $context ) {
-        $attr['class']    .= $this->action_bar_wrap;
+        if ( 'two-col' === $context ) {
+        $attr['class']    .= $this->two_col_wrap;
+        }
+        if ( 'two-col' === $context && '2c-r' == get_theme_mod( 'theme_layout' ) ) {
+        $attr['class']    .= $this->two_col_wrap_rev;
         }
         if ( 'card' === $context && 'cards' == get_theme_mod( 'theme_layout' ) ) {
         $attr['class']    .= $this->card_wrap;
@@ -349,7 +355,16 @@ class AttrTrumps {
 
 
 	public function entry_content( $attr ) {
+        if ( '2c-l'   == get_theme_mod( 'theme_layout' ) ) :
+        $attr['class']      .= $this->entry_content_sidebar;
+
+        elseif ( '2c-r'   == get_theme_mod( 'theme_layout' ) ) :
+        $attr['class']      .= $this->entry_content_sidebar_rev;
+
+        else :
 		$attr['class']    .= $this->entry_content;
+
+        endif;
 		return $attr;
 	}
 

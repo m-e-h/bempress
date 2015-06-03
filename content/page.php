@@ -18,7 +18,13 @@
     <?php get_template_part( 'templates/single', 'header' ); ?>
 
 
+<div <?php hybrid_attr( 'wrap', 'two-col' ); ?>>
+
 	<?php get_template_part( 'templates/single', 'content' ); ?>
+
+
+<?php hybrid_get_sidebar( 'primary' ); ?>
+</div>
 
 	<?php if ( current_user_can( 'edit_pages' ) ) : ?>
 		<footer class="entry-footer">

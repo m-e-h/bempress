@@ -3502,6 +3502,50 @@ button.flickity-prev-next-button {
     min-width: 80%;
 }
 
+.u-1of1\+ {
+    max-width: 100%;
+}
+
+.u-1of2\+ {
+    max-width: 50%;
+}
+
+.u-1of3\+ {
+    max-width: 33.3333333333%;
+}
+
+.u-2of3\+ {
+    max-width: 66.6666666667%;
+}
+
+.u-1of4\+ {
+    max-width: 25%;
+}
+
+.u-2of4\+ {
+    max-width: 50%;
+}
+
+.u-3of4\+ {
+    max-width: 75%;
+}
+
+.u-1of5\+ {
+    max-width: 20%;
+}
+
+.u-2of5\+ {
+    max-width: 40%;
+}
+
+.u-3of5\+ {
+    max-width: 60%;
+}
+
+.u-4of5\+ {
+    max-width: 80%;
+}
+
 .u-min--300 {
     min-width: 300px;
 }
