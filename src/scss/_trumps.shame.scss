@@ -319,3 +319,9 @@ p:last-of-type {
 section.row.shadow--z1 {
     z-index: 1;
 }
+
+
+.feature-box {
+    display: inline-block;
+    padding-right: $base-spacing-unit;
+}
