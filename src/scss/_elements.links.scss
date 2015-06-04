@@ -1,14 +1,15 @@
 a {
     background-color: transparent;
     text-decoration: none;
+    opacity: $base-opacity;
+    //color: $color-links;
+    font-weight: 700;
 
     &:active,
     &:hover,
     &:focus {
+        opacity: 1;
         outline: 0;
-        opacity: $base-opacity;
         text-decoration: none;
     }
 }
-
-

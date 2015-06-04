@@ -102,18 +102,6 @@ p:last-of-type {
     vertical-align: baseline;
 }
 
-.entry-content a:not(.button) {
-    color: $color-links;
-    border-bottom: 1px solid transparent;
-    &:hover, &:focus {
-        color: $color-links-hover;
-        opacity: 1;
-        border-bottom-color: lighten($color-links-hover, 10);
-    }
-    &:active {
-        color: $color-primary;
-    }
-}
 
 .panel {
     display: block;
@@ -325,3 +313,100 @@ section.row.shadow--z1 {
     display: inline-block;
     padding-right: $base-spacing-unit;
 }
+
+
+@include md {
+.site-header {
+    position: fixed;
+    z-index: 2;
+}
+
+.headroom--not-top {
+    opacity: .95;
+.site-branding {
+    padding: $base-spacing-unit--tiny 0;
+    //transform: translateX(0%);
+    transition: 0.5s linear;
+}
+
+.site-title {
+    @include font-size($heading-size-3, false);
+    transition: 0.15s ease;
+    }
+
+.menu-primary {
+    align-self: center;
+}
+
+.site-description {
+    text-align: center;
+    opacity: 0;
+    font-size: 0;
+    background-color: transparent;
+    letter-spacing: 2px;
+}
+
+    .site-logo {
+    max-height: 45px;
+}
+}
+
+.headroom--top {
+    opacity: .95;
+    @include shadow-z2();
+
+    a {
+        opacity: .9;
+    }
+
+    .menu-primary {
+        align-self: flex-end;
+    }
+
+    .site-title {
+    @include font-size($heading-size-1, false);
+    transition: 0.15s ease;
+    }
+
+.site-description {
+    text-align: center;
+    @include font-size($heading-size-2, false);
+    font-weight: 700;
+    background-color: #0058BB;
+    border-radius: 30px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+    .site-branding {
+    padding: $base-spacing-unit 0;
+    //transform: translateX(5%);
+    transition: 0.5s linear;
+}
+
+.site-logo {
+    max-height: 150px;
+}
+
+}
+
+
+.headroom {
+    transition: transform 0.4s linear;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+}
+
+.site-title a {
+    line-height: 0;
+}
+
+.menu-primary ul {
+        transition: none;
+    }

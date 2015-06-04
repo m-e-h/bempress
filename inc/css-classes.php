@@ -21,7 +21,7 @@ class AttrTrumps {
     public $two_col_wrap_rev            = ' grid grid--rev';
 	public $header_wrap                	= '';
     public $card_wrap                   = ' grid__item u-flex u-ph@respond u-1of1@sm u-1of2@md u-1of3@lg';
-	public $header                		= ' t-bg__1 u-1of1 u-flex u-flex--row@md u-flex--w u-flex--j-sb shadow--z1';
+	public $header                		= ' t-bg__1 u-1of1 u-flex u-flex--row@md u-flex--w u-flex--j-sb shadow--z2';
 	public $footer                		= ' t-bg__1--light';
 	public $content 					= ' grid__item';
 	public $content_full_width			= ' u-1of1';

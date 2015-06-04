@@ -98,17 +98,6 @@ if ( is_child_theme() )
 }
 
 
-/**
- * Enqueue theme scripts.
- */
-function bempress_enqueue_scripts() {
-    $suffix = hybrid_get_min_suffix();
-
-    wp_enqueue_script(
-        'bempress-nav',
-        trailingslashit( get_template_directory_uri() ) . "js/nav.js", [''], null, true
-    );
-}
 
 
 
@@ -116,9 +105,16 @@ function bempress_enqueue_scripts() {
 // Register Script
 function bempress_scripts() {
 
+        wp_register_script(
+        'bempress-headroom',
+        "//cdn.jsdelivr.net/headroomjs/0.7.0/headroom.min.js", false, false, true );
+        wp_enqueue_script( 'bempress-headroom' );
+
     wp_register_script( 'bempress-nav',
         trailingslashit( get_template_directory_uri() ) . "js/nav.js", false, false, true );
     wp_enqueue_script( 'bempress-nav' );
+
+
 
     wp_register_script( 'bempress-panel',
         trailingslashit( get_template_directory_uri() ) . "js/panel.js", false, false, true );

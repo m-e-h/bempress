@@ -42,8 +42,10 @@
                 </button>
 
                 <?php doc_logo(); ?>
+                <div class="u-ibl">
                 <?php hybrid_site_title(); ?>
-
+                <?php hybrid_site_description(); ?>
+                </div>
                 </div>
 
     <?php hybrid_get_menu( 'primary' ); ?>
