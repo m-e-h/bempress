@@ -144,8 +144,8 @@ gulp.task('serve', ['styles'], function () {
     //proxy: "local.wordpress.dev"
     //proxy: "local.wordpress-trunk.dev"
     //proxy: "doc.dev"
-    proxy: "stmark.dev"
-    //proxy: "127.0.0.1:8080/wordpress/"
+    //proxy: "stmark.dev"
+    proxy: "127.0.0.1:8080/wordpress/"
      });
 
   gulp.watch(['**/*.php'], reload);

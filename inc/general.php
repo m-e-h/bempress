@@ -177,3 +177,56 @@ function bempress_mime_types($mimes) {
   $mimes['svg'] = 'image/svg+xml';
   return $mimes;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+register_taxonomy('staff_type', 'user', array(
+    'public'      =>true,
+    'single_value' => false,
+    'show_admin_column' => true,
+    'labels'      =>array(
+        'name'                        =>'Staff Types',
+        'singular_name'               =>'Staff Type',
+        'menu_name'                   =>'Staff Types',
+        'search_items'                =>'Search Staff Types',
+        'popular_items'               =>'Popular Staff Types',
+        'all_items'                   =>'All Staff Types',
+        'edit_item'                   =>'Edit Staff Type',
+        'update_item'             =>'Update Staff Type',
+        'add_new_item'                =>'Add New Staff Type',
+        'new_item_name'               =>'New Staff Type Name',
+        'separate_items_with_commas'  =>'Separate staff types with commas',
+        'add_or_remove_items'         =>'Add or remove staff types',
+        'choose_from_most_used'       =>'Choose from the most popular staff types',
+    ),
+        'rewrite'     =>array(
+        'with_front'                  =>true,
+        'slug'                        =>'author/profession',
+    ),
+    'capabilities'    => array(
+        'manage_terms'                =>'edit_users',
+        'edit_terms'                  =>'edit_users',
+        'delete_terms'                =>'edit_users',
+        'assign_terms'                =>'read',
+    ),
+));
