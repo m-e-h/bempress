@@ -320,11 +320,24 @@ if("document" in self){if(!("classList" in document.createElement("_"))){(functi
 })();
 
 
+
+
+
+
+
+
 // grab an element
 var headerBar = document.querySelector(".site-header");
+var svgLogo = document.querySelector(".svg-logo");
 // construct an instance of Headroom, passing the element
 var headroom  = new Headroom(headerBar, {
-  "offset": 205,
+  "offset": 30,
   "tolerance": 5
 });
 headroom.init();
+
+
+
+
+
+

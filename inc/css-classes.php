@@ -21,7 +21,7 @@ class AttrTrumps {
     public $two_col_wrap_rev            = ' grid grid--rev';
 	public $header_wrap                	= '';
     public $card_wrap                   = ' grid__item u-flex u-ph@respond u-1of1@sm u-1of2@md u-1of3@lg';
-	public $header                		= ' t-bg__1 u-1of1 u-flex u-flex--row@md u-flex--w u-flex--j-sb shadow--z2';
+	public $header                		= ' t-bg__1 u-1of1  u-flex--row@md u-flex--w u-flex--j-sb shadow--z2';
 	public $footer                		= ' t-bg__1--light';
 	public $content 					= ' grid__item';
 	public $content_full_width			= ' u-1of1';
@@ -45,7 +45,7 @@ class AttrTrumps {
     public $author_box                  = ' br u-p@respond u-mb@respond';
 
 	/* Header attributes. */
-	public $branding              		= ' u-ibl';
+	public $branding              		= ' t-bg__1 u-ibl';
 	public $site_title            		= ' h1 u-m0 page-title__main';
 	public $site_description      		= ' page-title__sub';
 

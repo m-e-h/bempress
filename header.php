@@ -40,9 +40,10 @@
                 <button class="menu-toggle" aria-controls="menu-primary" aria-expanded="false">
                 <span></span>
                 </button>
-
-                <?php doc_logo(); ?>
-                <div class="u-ibl">
+<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                <?php get_template_part( 'images/vector/svg', 'smcs-logo' ); ?>
+</a>
+                <div class="logo-text">
                 <?php hybrid_site_title(); ?>
                 <?php hybrid_site_description(); ?>
                 </div>

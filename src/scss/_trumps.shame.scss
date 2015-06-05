@@ -82,10 +82,7 @@
 }
 
 .site-header {
-    background-attachment: scroll;
-    @include md {
-        background-attachment: fixed;
-    }
+    width: 100%;
 }
 
 .widget li:last-of-type,
@@ -315,98 +312,172 @@ section.row.shadow--z1 {
 }
 
 
-@include md {
-.site-header {
-    position: fixed;
-    z-index: 2;
+
+
+
+
+
+
+
+
+.headroom--top {
+
+    .site-branding {
+        position: relative;
+    }
 }
 
 .headroom--not-top {
-    opacity: .95;
-.site-branding {
-    padding: $base-spacing-unit--tiny 0;
-    //transform: translateX(0%);
-    transition: 0.5s linear;
-}
-
-.site-title {
-    @include font-size($heading-size-3, false);
-    transition: 0.15s ease;
-    }
-
-.menu-primary {
-    align-self: center;
-}
-
-.site-description {
-    text-align: center;
-    opacity: 0;
-    font-size: 0;
-    background-color: transparent;
-    letter-spacing: 2px;
-}
-
-    .site-logo {
-    max-height: 45px;
-}
-}
-
-.headroom--top {
-    opacity: .95;
-    @include shadow-z2();
-
-    a {
-        opacity: .9;
-    }
-
-    .menu-primary {
-        align-self: flex-end;
-    }
-
-    .site-title {
-    @include font-size($heading-size-1, false);
-    transition: 0.15s ease;
-    }
-
-.site-description {
-    text-align: center;
-    @include font-size($heading-size-2, false);
-    font-weight: 700;
-    background-color: #0058BB;
-    border-radius: 30px;
-    letter-spacing: 2px;
-    line-height: 1.5;
-    margin-top: 10px;
-}
 
     .site-branding {
-    padding: $base-spacing-unit 0;
-    //transform: translateX(5%);
-    transition: 0.5s linear;
+        position: fixed;
+        top: 0;
+    }
 }
-
-.site-logo {
-    max-height: 150px;
-}
-
-}
-
 
 .headroom {
-    transition: transform 0.4s linear;
+    .site-branding {
+        height: 60px;
+        width: 100%;
+        @include shadow-z1();
+        transition: transform 0.3s linear;
+}
 }
 .headroom--pinned {
+    .site-branding {
     transform: translateY(0%);
 }
+}
 .headroom--unpinned {
+    .site-branding {
     transform: translateY(-100%);
 }
 }
 
-.site-title a {
-    line-height: 0;
+.svg-logo {
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+@include md {
+
+
+    .headroom--not-top {
+        opacity: .95;
+        position: fixed;
+        //z-index: 2;
+
+        .site-branding {
+            height: 50px;
+        }
+
+        .menu-primary {
+            //align-self: center;
+        }
+
+    }
+
+
+
+
+
+
+    .headroom--top {
+        opacity: .95;
+        @include shadow-z2();
+
+        .site-branding {
+            height: 200px;
+            padding: $base-spacing-unit 0;
+        }
+
+        a {
+            opacity: .9;
+        }
+
+        .menu-primary {
+            align-self: flex-end;
+        }
+
+        .site-title {
+            @include font-size($heading-size-1, false);
+            transition: 0.15s ease;
+        }
+
+        .site-description {
+            text-align: center;
+            @include font-size($heading-size-2, false);
+            font-weight: 700;
+            background-color: #0058BB;
+            border-radius: 30px;
+            letter-spacing: 2px;
+            line-height: 1.5;
+            margin-top: 10px;
+        }
+    }
+
+
+    .headroom {
+        transition: transform 0.3s linear;
+
+        .site-branding {
+            width: 600px;
+            box-shadow: none;
+            position: relative;
+            text-align: center;
+        }
+    }
+
+    .headroom--pinned {
+        transform: translateY(0%);
+    }
+
+    .headroom--unpinned {
+        transform: translateY(-100%);
+    }
 }
 
 .menu-primary ul {
         transition: none;
     }
+
+.menu-primary {
+    //display:block;
+}
+
+.site-header a {
+    opacity: .9;
+}
+
+
+.site-branding {
+    transition: 0.3s linear;
+    //max-width:300px;
+    width: auto;
+    //max-height: 55px;
+}
+
+.logo__stmark {
+    fill: #fff;
+}
+
+.logo__catholic-school {
+    fill: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+

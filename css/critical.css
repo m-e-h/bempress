@@ -268,14 +268,16 @@ big {
 }
 
 a {
+    opacity: 0.7;
     background-color: transparent;
+    font-weight: 700; 
     text-decoration: none;
 }
 a:active,
 a:hover,
 a:focus {
     outline: 0;
-    opacity: 0.7;
+    opacity: 1;
     text-decoration: none;
 }
 

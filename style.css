@@ -3659,12 +3659,7 @@ button.flickity-prev-next-button {
 }
 
 .site-header {
-    background-attachment: scroll;
-}
-@media screen and (min-width: 48em) {
-    .site-header {
-        background-attachment: fixed;
-    }
+    width: 100%;
 }
 
 .widget li:last-of-type,
@@ -3878,43 +3873,54 @@ section.row.shadow--z1 {
     padding-right: 27px;
 }
 
+.headroom--top .site-branding {
+    position: relative;
+}
+
+.headroom--not-top .site-branding {
+    position: fixed;
+    top: 0;
+}
+
+.headroom .site-branding {
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+    -webkit-transition: -webkit-transform 0.3s linear;
+    transition: transform 0.3s linear;
+}
+
+.headroom--pinned .site-branding {
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+}
+
+.headroom--unpinned .site-branding {
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+.svg-logo {
+    padding: 5px;
+}
+
 @media screen and (min-width: 48em) {
-    .site-header {
-        position: fixed;
-        z-index: 2;
-    }
     .headroom--not-top {
+        position: fixed; 
         opacity: 0.95;
     }
     .headroom--not-top .site-branding {
-        padding: 7px 0;
-        -webkit-transition: 0.5s linear;
-        transition: 0.5s linear;
-    }
-    .headroom--not-top .site-title {
-        font-size: 27px;
-        font-size: 1.5rem;
-        -webkit-transition: 0.15s ease;
-        transition: 0.15s ease;
-    }
-    .headroom--not-top .menu-primary {
-        -webkit-align-self: center;
-        align-self: center; 
-        -ms-flex-item-align: center;
-    }
-    .headroom--not-top .site-description {
-        opacity: 0;
-        background-color: transparent;
-        font-size: 0;
-        text-align: center;
-        letter-spacing: 2px;
-    }
-    .headroom--not-top .site-logo {
-        max-height: 45px;
+        height: 50px;
     }
     .headroom--top {
         opacity: 0.95;
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23);
+    }
+    .headroom--top .site-branding {
+        height: 200px;
+        padding: 27px 0;
     }
     .headroom--top a {
         opacity: 0.9;
@@ -3941,17 +3947,15 @@ section.row.shadow--z1 {
         text-align: center;
         letter-spacing: 2px;
     }
-    .headroom--top .site-branding {
-        padding: 27px 0;
-        -webkit-transition: 0.5s linear;
-        transition: 0.5s linear;
-    }
-    .headroom--top .site-logo {
-        max-height: 150px;
-    }
     .headroom {
-        -webkit-transition: -webkit-transform 0.4s linear;
-        transition: transform 0.4s linear;
+        -webkit-transition: -webkit-transform 0.3s linear;
+        transition: transform 0.3s linear;
+    }
+    .headroom .site-branding {
+        position: relative;
+        width: 600px;
+        box-shadow: none;
+        text-align: center;
     }
     .headroom--pinned {
         -webkit-transform: translateY(0%);
@@ -3965,11 +3969,25 @@ section.row.shadow--z1 {
     }
 }
 
-.site-title a {
-    line-height: 0;
-}
-
 .menu-primary ul {
     -webkit-transition: none;
     transition: none;
+}
+
+.site-header a {
+    opacity: 0.9;
+}
+
+.site-branding {
+    width: auto; 
+    -webkit-transition: 0.3s linear;
+    transition: 0.3s linear;
+}
+
+.logo__stmark {
+    fill: #fff;
+}
+
+.logo__catholic-school {
+    fill: #fff;
 }

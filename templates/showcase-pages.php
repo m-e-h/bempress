@@ -27,7 +27,7 @@ if ( $query2->have_posts() ) :
     $count = 1;
     ?>
 
-<section class="row pages-highlight u-pv@respond t-bg__2 shadow--z1">
+<section class="row pages-highlight u-pv@respond t-bg__2">
 
 <div class="block-row grid u-flex u-flex--row@md u-flex--w wrap">
 

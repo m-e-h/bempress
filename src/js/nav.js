@@ -318,3 +318,27 @@ if("document" in self){if(!("classList" in document.createElement("_"))){(functi
     }
   });
 })();
+
+
+
+
+
+
+
+// grab an element
+var headerBar = document.querySelector(".site-header");
+// construct an instance of Headroom, passing the element
+var headroom  = new Headroom(headerBar, {
+  "offset": 205,
+  "tolerance": 5
+});
+headroom.init();
+
+
+
+
+
+
+
+
+
