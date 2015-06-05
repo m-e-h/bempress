@@ -194,7 +194,7 @@ register_taxonomy('staff_type', 'user', array(
         'popular_items'               =>'Popular Staff Types',
         'all_items'                   =>'All Staff Types',
         'edit_item'                   =>'Edit Staff Type',
-        'update_item'             =>'Update Staff Type',
+        'update_item'                 =>'Update Staff Type',
         'add_new_item'                =>'Add New Staff Type',
         'new_item_name'               =>'New Staff Type Name',
         'separate_items_with_commas'  =>'Separate staff types with commas',

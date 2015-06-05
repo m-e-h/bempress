@@ -204,7 +204,7 @@ if (!$taxonomy->single_value){
 
 			<table class="form-table">
 				<tr>
-					<th><label for=""><?php _e("Select {$taxonomy->labels->singular_name}")?></label></th>
+					<th><label for=""><?php _e("{$taxonomy->labels->singular_name}")?></label></th>
 					<td>
 						<?php if(!empty($terms)):?>
 							<?php foreach($terms as $term):?>
@@ -241,7 +241,7 @@ echo "checked=\"checked\"";
 			?>
 			<table class="form-table">
 				<tr>
-					<th><label for=""><?php _e("Select {$taxonomy->labels->singular_name}")?></label></th>
+					<th><label for=""><?php _e("{$taxonomy->labels->singular_name}")?></label></th>
 					<td>
 						<?php if(!empty($terms)):?>
 							<?php foreach($terms as $term):?>
@@ -272,7 +272,7 @@ echo "checked=\"checked\"";
 		// Output the above if we have anything, with a heading
 		$output	= ob_get_clean();
 		if(!empty($output)) {
-			echo '<h3>', __('Taxonomies'), '</h3>';
+			echo '<h3>', __('Category'), '</h3>';
 			echo $output;
 		}
 
