@@ -397,17 +397,8 @@ section.row.shadow--z1 {
             padding: $base-spacing-unit 0;
         }
 
-        a {
-            opacity: .9;
-        }
-
         .menu-primary {
             align-self: flex-end;
-        }
-
-        .site-title {
-            @include font-size($heading-size-1, false);
-            transition: 0.15s ease;
         }
 
         .site-description {
@@ -424,9 +415,10 @@ section.row.shadow--z1 {
 
 
     .headroom {
-        transition: transform 0.3s linear;
+        transition: transform 0.4s linear;
 
         .site-branding {
+            transition: 0.35s linear;
             width: 600px;
             box-shadow: none;
             position: relative;
@@ -457,7 +449,7 @@ section.row.shadow--z1 {
 
 
 .site-branding {
-    transition: 0.3s linear;
+    //transition: 0.3s linear;
     //max-width:300px;
     width: auto;
     //max-height: 55px;

@@ -3922,19 +3922,10 @@ section.row.shadow--z1 {
         height: 200px;
         padding: 27px 0;
     }
-    .headroom--top a {
-        opacity: 0.9;
-    }
     .headroom--top .menu-primary {
         -webkit-align-self: flex-end;
         align-self: flex-end; 
         -ms-flex-item-align: end;
-    }
-    .headroom--top .site-title {
-        font-size: 40.5px;
-        font-size: 2.25rem;
-        -webkit-transition: 0.15s ease;
-        transition: 0.15s ease;
     }
     .headroom--top .site-description {
         margin-top: 10px; 
@@ -3948,14 +3939,16 @@ section.row.shadow--z1 {
         letter-spacing: 2px;
     }
     .headroom {
-        -webkit-transition: -webkit-transform 0.3s linear;
-        transition: transform 0.3s linear;
+        -webkit-transition: -webkit-transform 0.4s linear;
+        transition: transform 0.4s linear;
     }
     .headroom .site-branding {
         position: relative;
         width: 600px;
         box-shadow: none;
-        text-align: center;
+        text-align: center; 
+        -webkit-transition: 0.35s linear;
+        transition: 0.35s linear;
     }
     .headroom--pinned {
         -webkit-transform: translateY(0%);
@@ -3979,9 +3972,7 @@ section.row.shadow--z1 {
 }
 
 .site-branding {
-    width: auto; 
-    -webkit-transition: 0.3s linear;
-    transition: 0.3s linear;
+    width: auto;
 }
 
 .logo__stmark {
