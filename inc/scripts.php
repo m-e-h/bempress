@@ -108,7 +108,7 @@ function bempress_scripts() {
         wp_register_script(
         'bempress-gs',
         "//cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js", false, false, true );
-        wp_enqueue_script( 'bempress-gs' );
+        //wp_enqueue_script( 'bempress-gs' );
 
         wp_register_script(
         'bempress-headroom',

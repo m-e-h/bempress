@@ -14,16 +14,6 @@
     }
 }
 
-.action-bar-wrap {
-        flex-direction: row;
-        flex-wrap: wrap;
-          z-index: 1;
-
-    @include md {
-        justify-content: space-around;
-        align-items: center;
-    }
-}
 
 .site-logo {
     max-height: 50px;
@@ -52,15 +42,6 @@
     @include font-size($base-font-size - 3);
 }
 
-.header-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: auto;
-    z-index: -1;
-}
 
 .toggles.grid {
   max-width: 100%;
@@ -301,9 +282,6 @@ p:last-of-type {
     padding-bottom: 20px;
 }
 
-section.row.shadow--z1 {
-    z-index: 1;
-}
 
 
 .feature-box {
@@ -320,14 +298,14 @@ section.row.shadow--z1 {
 
 
 
-.headroom--top {
+.header--top {
 
     .site-branding {
         position: relative;
     }
 }
 
-.headroom--not-top {
+.header--not-top {
 
     .site-branding {
         position: fixed;
@@ -335,7 +313,7 @@ section.row.shadow--z1 {
     }
 }
 
-.headroom {
+.header {
     .site-branding {
         height: 60px;
         width: 100%;
@@ -343,12 +321,12 @@ section.row.shadow--z1 {
         transition: transform 0.3s linear;
 }
 }
-.headroom--pinned {
+.header--pinned {
     .site-branding {
     transform: translateY(0%);
 }
 }
-.headroom--unpinned {
+.header--unpinned {
     .site-branding {
     transform: translateY(-100%);
 }
@@ -368,17 +346,11 @@ section.row.shadow--z1 {
 @include md {
 
 
-    .headroom--not-top {
-        opacity: .95;
+    .header--not-top {
         position: fixed;
-        //z-index: 2;
 
         .site-branding {
             height: 50px;
-        }
-
-        .menu-primary {
-            //align-self: center;
         }
 
     }
@@ -388,8 +360,7 @@ section.row.shadow--z1 {
 
 
 
-    .headroom--top {
-        opacity: .95;
+    .header--top {
         @include shadow-z2();
 
         .site-branding {
@@ -397,9 +368,6 @@ section.row.shadow--z1 {
             padding: $base-spacing-unit 0;
         }
 
-        .menu-primary {
-            align-self: flex-end;
-        }
 
         .site-description {
             text-align: center;
@@ -414,8 +382,9 @@ section.row.shadow--z1 {
     }
 
 
-    .headroom {
+    .header {
         transition: transform 0.4s linear;
+        align-items: flex-end;
 
         .site-branding {
             transition: 0.35s linear;
@@ -426,11 +395,11 @@ section.row.shadow--z1 {
         }
     }
 
-    .headroom--pinned {
+    .header--pinned {
         transform: translateY(0%);
     }
 
-    .headroom--unpinned {
+    .header--unpinned {
         transform: translateY(-100%);
     }
 }
@@ -473,3 +442,10 @@ section.row.shadow--z1 {
 
 
 
+.title--color {
+    fill: #FFE192;
+}
+
+.title--color2 {
+    fill: #eee;
+}

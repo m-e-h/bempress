@@ -83,28 +83,28 @@ class Hybrid_Customize_Control_Select_Group extends WP_Customize_Control {
 		<label>
 
 			<# if ( data.label ) { #>
-				<span class="customize-control-title">{{{ data.label }}}</span>
+				<span class="customize-control-title">{{ data.label }}</span>
 			<# } #>
 
 			<# if ( data.description ) { #>
 				<span class="description customize-control-description">{{{ data.description }}}</span>
 			<# } #>
 
-			<select {{{ data.link }}} >
+			<select {{{ data.link }}}>
 
 				<# for ( value in data.choices ) { #>
 
-					<option value="{{{ value }}}" <# if ( value === data.value ) { #> selected="selected" <# } #>>{{{ data.choices[ value ] }}}</option>
+					<option value="{{ value }}" <# if ( value === data.value ) { #> selected="selected" <# } #>>{{ data.choices[ value ] }}</option>
 
 				<# } #>
 
 				<# for ( key in data.group ) { #>
 
-					<optgroup label="{{{ data.group[ key ]['label'] }}}">
+					<optgroup label="{{ data.group[ key ]['label'] }}">
 
 						<# for ( optgroup_value in data.group[ key ]['choices'] ) { #>
 
-							<option value="{{{ optgroup_value }}}" <# if ( optgroup_value === data.value ) { #> selected="selected" <# } #>>{{{ data.group[ key ]['choices'][ optgroup_value ] }}}</option>
+							<option value="{{ optgroup_value }}" <# if ( optgroup_value === data.value ) { #> selected="selected" <# } #>>{{ data.group[ key ]['choices'][ optgroup_value ] }}</option>
 
 						<# } #>
 

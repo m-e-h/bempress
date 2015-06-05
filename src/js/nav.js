@@ -329,8 +329,28 @@ if("document" in self){if(!("classList" in document.createElement("_"))){(functi
 var headerBar = document.querySelector(".site-header");
 // construct an instance of Headroom, passing the element
 var headroom  = new Headroom(headerBar, {
-  "offset": 205,
-  "tolerance": 5
+    // vertical offset in px before element is first unpinned
+    offset : 30,
+    // scroll tolerance in px before state changes
+    tolerance : 0,
+    // or you can specify tolerance individually for up/down scroll
+    tolerance : {
+        up : 5,
+        down : 25
+    },
+    // css classes to apply
+    classes : {
+        // when element is initialised
+        initial : "header",
+        // when scrolling up
+        pinned : "header--pinned",
+        // when scrolling down
+        unpinned : "header--unpinned",
+        // when above offset
+        top : "header--top",
+        // when below offset
+        notTop : "header--not-top"
+    },
 });
 headroom.init();
 
