@@ -456,3 +456,10 @@ p.intro-pagragraph {
 .title--color2 {
     fill: #eee;
 }
+
+
+@include md {
+    .site-header {
+        min-height: 200px;
+    }
+}

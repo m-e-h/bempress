@@ -3959,3 +3959,9 @@ p.intro-pagragraph {
 .title--color2 {
     fill: #eee;
 }
+
+@media screen and (min-width: 48em) {
+    .site-header {
+        min-height: 200px;
+    }
+}
