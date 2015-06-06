@@ -273,7 +273,6 @@ p:last-of-type {
 .intro-text p{
     @include font-size($base-font-size + 4);
     letter-spacing: 1px;
-    //font-style: italic;
 }
 
 
@@ -364,6 +363,7 @@ p:last-of-type {
         @include shadow-z2();
 
         .site-branding {
+            transition: none;
             height: 200px;
             padding: $base-spacing-unit 0;
         }
@@ -387,7 +387,6 @@ p:last-of-type {
         align-items: flex-end;
 
         .site-branding {
-            transition: 0.35s linear;
             width: 600px;
             box-shadow: none;
             position: relative;

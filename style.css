@@ -3879,7 +3879,9 @@ p:last-of-type {
     }
     .header--top .site-branding {
         height: 200px;
-        padding: 27px 0;
+        padding: 27px 0; 
+        -webkit-transition: none;
+        transition: none;
     }
     .header--top .site-description {
         margin-top: 10px; 
@@ -3905,9 +3907,7 @@ p:last-of-type {
         position: relative;
         width: 600px;
         box-shadow: none;
-        text-align: center; 
-        -webkit-transition: 0.35s linear;
-        transition: 0.35s linear;
+        text-align: center;
     }
     .header--pinned {
         -webkit-transform: translateY(0%);
