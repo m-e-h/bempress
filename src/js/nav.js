@@ -330,13 +330,13 @@ var headerBar = document.querySelector(".site-header");
 // construct an instance of Headroom, passing the element
 var headroom  = new Headroom(headerBar, {
     // vertical offset in px before element is first unpinned
-    offset : 200,
+    offset : 120,
     // scroll tolerance in px before state changes
     tolerance : 0,
     // or you can specify tolerance individually for up/down scroll
     tolerance : {
         up : 5,
-        down : 5
+        down : 55
     },
     // css classes to apply
     classes : {

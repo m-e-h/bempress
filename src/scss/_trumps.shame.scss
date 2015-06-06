@@ -296,7 +296,6 @@ p:last-of-type {
 
 
 
-
 .header--top {
 
     .site-branding {
@@ -313,11 +312,12 @@ p:last-of-type {
 }
 
 .header {
+        position: fixed;
     .site-branding {
         height: 60px;
         width: 100%;
+        transition: transform $base-transition linear;
         @include shadow-z1();
-        transition: transform 0.3s linear;
 }
 }
 .header--pinned {
@@ -346,7 +346,6 @@ p:last-of-type {
 
 
     .header--not-top {
-        position: fixed;
 
         .site-branding {
             height: 50px;
@@ -363,15 +362,15 @@ p:last-of-type {
         @include shadow-z2();
 
         .site-branding {
-            transition: none;
-            height: 200px;
-            padding: $base-spacing-unit 0;
+            height: 120px;
+            padding: $base-spacing-unit--small 0;
         }
 
 
         .site-description {
             text-align: center;
-            @include font-size($heading-size-2, false);
+
+        transition: $base-transition linear;
             font-weight: 700;
             background-color: #0058BB;
             border-radius: 30px;
@@ -383,7 +382,7 @@ p:last-of-type {
 
 
     .header {
-        transition: transform 0.4s linear;
+        transition: transform $base-transition linear;
         align-items: flex-end;
 
         .site-branding {
@@ -391,6 +390,7 @@ p:last-of-type {
             box-shadow: none;
             position: relative;
             text-align: center;
+            transition: all $base-transition linear;
         }
     }
 
@@ -442,8 +442,7 @@ p:last-of-type {
 }
 
 p.intro-pagragraph {
-    font-size: 22px;
-    line-height: 1.2272727273;
+    @include font-size($base-font-size + 4);
     letter-spacing: 1px;
 }
 
@@ -458,8 +457,32 @@ p.intro-pagragraph {
 }
 
 
+
+.site-container {
+    padding-top: 60px;
+}
+
 @include md {
-    .site-header {
-        min-height: 200px;
-    }
+.site-container {
+    padding-top: 120px;
+}
+}
+
+
+
+
+
+
+.entry-content p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2.slide-title {
+    display: none;
+}
+
+.meh-slider__image {
+    opacity: 1;
 }

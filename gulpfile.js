@@ -142,9 +142,9 @@ gulp.task('scripts', function() {
 gulp.task('serve', ['styles'], function () {
   browserSync({
     //proxy: "local.wordpress.dev"
-    //proxy: "local.wordpress-trunk.dev"
+    proxy: "local.wordpress-trunk.dev"
     //proxy: "doc.dev"
-    proxy: "stmark.dev"
+    //proxy: "stmark.dev"
     //proxy: "127.0.0.1:8080/wordpress/"
      });
 

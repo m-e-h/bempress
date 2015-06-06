@@ -199,13 +199,11 @@ big {
     overflow-y: scroll;
     box-sizing: border-box;
     min-height: 100%;
-    color: #34495e;
+    color: #34495e; 
     background-color: #fff;
-    font-family: sans-serif;
+    font: 18px/27px sans-serif;
     font-weight: 400;
     cursor: default;
-    -webkit-transition-duration: 0.35s;
-    transition-duration: 0.35s; 
 
     -ms-overflow-style: -ms-autohiding-scrollbar;
     -webkit-text-size-adjust: 100%;
@@ -243,22 +241,18 @@ big {
     border-width: 0;
     border-style: solid;
     border-color: #e3e8ec;
-    -webkit-transition: inherit;
-    transition: inherit;
+    -webkit-transition-duration: inherit;
+    transition-duration: inherit;
 }
 
 ::after,
 ::before {
     vertical-align: inherit;
-    text-decoration: inherit;
-    -webkit-transition: inherit;
-    transition: inherit;
 }
 
 body {
-    color: #34495e;
+    color: #34495e; 
     background-color: #fffaf5;
-    font: 18px/27px sans-serif;
 }
 
 p {
@@ -3843,12 +3837,15 @@ p:last-of-type {
     top: 0;
 }
 
+.header {
+    position: fixed;
+}
 .header .site-branding {
     width: 100%;
     height: 60px;
-    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
-    -webkit-transition: -webkit-transform 0.3s linear;
-    transition: transform 0.3s linear;
+    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24); 
+    -webkit-transition: -webkit-transform 0.35s linear;
+    transition: transform 0.35s linear;
 }
 
 .header--pinned .site-branding {
@@ -3868,9 +3865,6 @@ p:last-of-type {
 }
 
 @media screen and (min-width: 48em) {
-    .header--not-top {
-        position: fixed;
-    }
     .header--not-top .site-branding {
         height: 50px;
     }
@@ -3878,25 +3872,23 @@ p:last-of-type {
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23);
     }
     .header--top .site-branding {
-        height: 200px;
-        padding: 27px 0; 
-        -webkit-transition: none;
-        transition: none;
+        height: 120px;
+        padding: 14px 0;
     }
     .header--top .site-description {
         margin-top: 10px; 
         border-radius: 30px;
         background-color: #0058bb;
-        font-size: 33.75px;
-        font-size: 1.875rem;
         font-weight: 700;
         line-height: 1.5;
         text-align: center;
         letter-spacing: 2px;
+        -webkit-transition: 0.35s linear;
+        transition: 0.35s linear;
     }
     .header {
-        -webkit-transition: -webkit-transform 0.4s linear;
-        transition: transform 0.4s linear;
+        -webkit-transition: -webkit-transform 0.35s linear;
+        transition: transform 0.35s linear;
 
         -webkit-align-items: flex-end;
         align-items: flex-end; 
@@ -3908,6 +3900,8 @@ p:last-of-type {
         width: 600px;
         box-shadow: none;
         text-align: center;
+        -webkit-transition: all 0.35s linear;
+        transition: all 0.35s linear;
     }
     .header--pinned {
         -webkit-transform: translateY(0%);
@@ -3948,6 +3942,7 @@ p:last-of-type {
 
 p.intro-pagragraph {
     font-size: 22px;
+    font-size: 1.2222222222rem;
     line-height: 1.2272727273;
     letter-spacing: 1px;
 }
@@ -3960,8 +3955,26 @@ p.intro-pagragraph {
     fill: #eee;
 }
 
+.site-container {
+    padding-top: 60px;
+}
+
 @media screen and (min-width: 48em) {
-    .site-header {
-        min-height: 200px;
+    .site-container {
+        padding-top: 120px;
     }
+}
+
+.entry-content p {
+    max-width: 800px;
+    margin-right: auto; 
+    margin-left: auto;
+}
+
+h2.slide-title {
+    display: none;
+}
+
+.meh-slider__image {
+    opacity: 1;
 }
