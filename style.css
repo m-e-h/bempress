@@ -3942,6 +3942,16 @@ p:last-of-type {
     fill: #fff;
 }
 
+.block__image a {
+    opacity: 1;
+}
+
+p.intro-pagragraph {
+    font-size: 22px;
+    line-height: 1.2272727273;
+    letter-spacing: 1px;
+}
+
 .title--color {
     fill: #ffe192;
 }
