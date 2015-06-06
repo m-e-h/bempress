@@ -23,6 +23,9 @@
 
 .whistle-content {
     overflow: hidden;
+    @include md {
+    padding: $base-spacing-unit $base-spacing-unit 0 $base-spacing-unit;
+}
 }
 
 /**
@@ -108,7 +111,19 @@
         background-color:       #f5f5f5;
         border:           1px solid #ececec;
         border-top-width: 0;
+        @include font-size($base-font-size + 2);
+
+        @include font-icon($chevron-down, $fa, after);
+        &:after {
+            float: right;
+            transition: transform .1s linear;
+        }
     }
+
+.whistles-toggle .whistle-title[aria-selected="true"]:after {
+    transform: rotate(180deg);
+    transition: transform $base-transition linear;
+}
 
         .whistles-toggle .whistle-title:first-child,
         .whistles-accordion .whistle-title:first-child {
@@ -127,7 +142,6 @@
     .whistles-toggle .whistle-content,
     .whistles-accordion .whistle-content {
         margin:     -1px 0 0;
-        padding:    $base-spacing-unit $base-spacing-unit 0 $base-spacing-unit;
         color:      #666;
         background-color: #fff;
         border:     1px solid #ececec;

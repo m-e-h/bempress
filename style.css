@@ -2073,6 +2073,11 @@ a.info {
 .whistle-content {
     overflow: hidden;
 }
+@media screen and (min-width: 48em) {
+    .whistle-content {
+        padding: 27px 27px 0 27px;
+    }
+}
 
 /**
  * Tabs
@@ -2157,9 +2162,40 @@ a.info {
     margin: 0;
     padding: 14px 27px;
     border: 1px solid #ececec;
-    border-top-width: 0; 
+    border-top-width: 0;
     color: #777;
     background-color: #f5f5f5;
+    font-size: 20px;
+    font-size: 1.1111111111rem;
+    line-height: 1.35;
+}
+.whistles-toggle .whistle-title::after,
+.whistles-accordion .whistle-title::after {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: inherit;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+    text-decoration: none;
+    content: "";
+    text-rendering: auto;
+
+    speak: none;
+}
+.whistles-toggle .whistle-title:after,
+.whistles-accordion .whistle-title:after {
+    float: right;
+    -webkit-transition: -webkit-transform 0.1s linear;
+    transition: transform 0.1s linear;
+}
+
+.whistles-toggle .whistle-title[aria-selected="true"]:after {
+    -webkit-transition: -webkit-transform 0.35s linear;
+    transition: transform 0.35s linear; 
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 .whistles-toggle .whistle-title:first-child,
@@ -2179,7 +2215,6 @@ a.info {
 .whistles-toggle .whistle-content,
 .whistles-accordion .whistle-content {
     margin: -1px 0 0;
-    padding: 27px 27px 0 27px;
     border: 1px solid #ececec; 
     color: #666;
     background-color: #fff;
