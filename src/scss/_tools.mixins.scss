@@ -2,6 +2,29 @@
 //     #MIXINS
 // \*------------------------------------*/
 
+
+
+
+// Mixin to create a declaration whose value is a rem unit. Also provide pixel fallback.
+//
+// .simple-usage {
+//   @include rem(padding, 10px);
+// }
+
+@mixin rem($property, $value) {
+    #{$property}: $value;
+    #{$property}: rem($value);
+}
+
+
+// Generate `:hover` and `:focus` styles in one go.
+@mixin hocus() {
+    &:hover,
+    &:focus {
+        @content;
+    }
+}
+
 // Create a fully formed type style (sizing and vertical rhythm) by passing in a
 // single value, e.g.:
 //

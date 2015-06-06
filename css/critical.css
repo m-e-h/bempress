@@ -29,13 +29,11 @@
     overflow-y: scroll;
     box-sizing: border-box;
     min-height: 100%;
-    color: #34495e;
+    color: #34495e; 
     background-color: #fff;
-    font-family: sans-serif;
+    font: 18px/27px sans-serif;
     font-weight: 400;
     cursor: default;
-    -webkit-transition-duration: 0.35s;
-    transition-duration: 0.35s; 
 
     -ms-overflow-style: -ms-autohiding-scrollbar;
     -webkit-text-size-adjust: 100%;
@@ -70,25 +68,19 @@
 ::after,
 ::before {
     box-sizing: inherit;
-    border-width: 0;
+    border-width: 0; 
     border-style: solid;
     border-color: #e3e8ec;
-    -webkit-transition: inherit;
-    transition: inherit;
 }
 
 ::after,
 ::before {
     vertical-align: inherit;
-    text-decoration: inherit;
-    -webkit-transition: inherit;
-    transition: inherit;
 }
 
 body {
-    color: #34495e;
+    color: #34495e; 
     background-color: #fffaf5;
-    font: 18px/27px sans-serif;
 }
 
 p {

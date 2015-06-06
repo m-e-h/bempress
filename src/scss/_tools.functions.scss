@@ -2,6 +2,12 @@
 //    #FUNCTIONS
 //\*------------------------------------*/
 
+// Convert any px value into its rem equivalent.
+@function rem($number) {
+    @return $number / $base-font-size * 1rem;
+}
+
+
 // Maths helpers.
 //
 // Halve and double numbers, returning rounded integers. E.g.:

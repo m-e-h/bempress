@@ -66,11 +66,11 @@
     width: 100%;
 }
 
-.widget li:last-of-type,
-.widget ul:last-of-type,
-p:last-of-type {
-    margin-bottom: 0;
-}
+// .widget li:last-of-type,
+// .widget ul:last-of-type,
+// p:last-of-type {
+//     margin-bottom: 0;
+// }
 
 .credit {
     text-align: center;
@@ -198,69 +198,8 @@ p:last-of-type {
     display: inline-block;
 }
 
-.sidebar-primary {
-.whistles {
-    font-family: sans-serif;
-    @include font-size($base-font-size - 1);
-}
 
-.whistles-toggle, .whistles-accordion {
-    transition: none;
-}
 
-.widget-primary.whistles {
-    padding: 0;
-    box-shadow: none;
-    background: none;
-}
-
-.whistles-tabs .whistles-tabs-wrap {
-    margin: -1px 0 0;
-    padding: 1.5rem 1.5rem 0 1.5rem;
-    border: 0;
-    border-radius: $base-radius;
-    background: $color-primary-light;
-    color: $white;
-    border: 0;
-        padding-bottom: 1.5rem;
-    border-radius: 0 0 $base-radius $base-radius;
-    box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24);
-}
-
-.whistles-tabs .whistles-tabs-nav {
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-}
-
-.whistles-tabs .whistles-tabs-nav li {
-    flex: 1;
-
-    &:last-of-type a {
-        border-right: 0;
-    }
-}
-
-.whistles-tabs .whistles-tabs-nav li a {
-    border-color: $white;
-    border-left: 0;
-    border-top: 0;
-    border-bottom: 0;
-    border-radius: $base-radius $base-radius 0 0;
-    color: $color-grey-light;
-    background: $color-primary;
-    width: 100%;
-
-    &:hover {
-    background: $color-primary-dark;
-}
-}
-
-.whistles-tabs .whistles-tabs-nav li[aria-selected="true"] a {
-    color: $white;
-    background: $color-primary-light;
-}
-}
 
 .letter-icon {
     position: absolute;
@@ -346,9 +285,11 @@ p:last-of-type {
 
 
     .header--not-top {
+        @include shadow-z2();
 
         .site-branding {
             height: 50px;
+            transition: all .1s linear;
         }
 
     }
@@ -359,38 +300,25 @@ p:last-of-type {
 
 
     .header--top {
-        @include shadow-z2();
 
         .site-branding {
             height: 120px;
             padding: $base-spacing-unit--small 0;
+            transition: all .1s linear;
         }
 
-
-        .site-description {
-            text-align: center;
-
-        transition: $base-transition linear;
-            font-weight: 700;
-            background-color: #0058BB;
-            border-radius: 30px;
-            letter-spacing: 2px;
-            line-height: 1.5;
-            margin-top: 10px;
-        }
     }
 
 
     .header {
         transition: transform $base-transition linear;
-        align-items: flex-end;
+        align-items: center;
 
         .site-branding {
             width: 600px;
             box-shadow: none;
             position: relative;
             text-align: center;
-            transition: all $base-transition linear;
         }
     }
 
@@ -459,12 +387,12 @@ p.intro-pagragraph {
 
 
 .site-container {
-    padding-top: 60px;
+    border-top: 60px solid $color-primary;
 }
 
 @include md {
 .site-container {
-    padding-top: 120px;
+    border-top-width: 120px;
 }
 }
 
@@ -486,3 +414,13 @@ h2.slide-title {
 .meh-slider__image {
     opacity: 1;
 }
+
+
+.is-visible .menu-item {
+    border-top: 1px solid $color-grey-ui;
+}
+
+
+// p:last-of-type ~ div {
+//     margin-top: $base-spacing-unit;
+// }

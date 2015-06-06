@@ -17,11 +17,12 @@ class AttrTrumps {
 	public $site_inner_sidebar_right 	= ' ';
 	public $site_inner_sidebar_left 	= ' grid--rev';
 	public $wrap                		= '';
-    public $two_col_wrap                = '';
+    public $one_col_wrap                = ' wrapper--wide';
+    public $two_col_wrap                = ' ';
     public $two_col_wrap_rev            = ' grid grid--rev';
 	public $header_wrap                	= '';
     public $card_wrap                   = ' grid__item u-flex u-ph@respond u-1of1@sm u-1of2@md u-1of3@lg';
-	public $header                		= ' t-bg__1 u-1of1 u-flex u-flex--row@md u-flex--w u-flex--j-sb shadow--z2';
+	public $header                		= ' t-bg__1 u-1of1 u-flex u-flex--row@md u-flex--w u-flex--j-sb';
 	public $footer                		= ' t-bg__1--light';
 	public $content 					= ' grid__item';
 	public $content_full_width			= ' u-1of1';
@@ -160,6 +161,9 @@ class AttrTrumps {
 		}
         if ( 'two-col' === $context ) {
         $attr['class']    .= $this->two_col_wrap;
+        }
+        if ( 'two-col' === $context && '1c' == get_theme_mod( 'theme_layout' ) ) {
+        $attr['class']    .= $this->one_col_wrap;
         }
         if ( 'two-col' === $context && '2c-r' == get_theme_mod( 'theme_layout' ) ) {
         $attr['class']    .= $this->two_col_wrap_rev;

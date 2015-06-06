@@ -152,7 +152,7 @@ function cat_register_layouts() {
 
 
 
-
+    add_theme_support( 'whistles', array( 'styles' => true ) );
 
 
     /* Editor styles. */
