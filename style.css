@@ -2200,12 +2200,10 @@ a.info {
     cursor: default;
 }
 
-.post-12 .whistles-tabs-nav li:first-of-type,
-.post-17 .whistles-tabs-nav li:first-of-type {
+.post-12 .whistles-tabs-nav li:first-of-type {
     width: 100%;
 }
-.post-12 .whistles-tabs-nav li:first-of-type a,
-.post-17 .whistles-tabs-nav li:first-of-type a {
+.post-12 .whistles-tabs-nav li:first-of-type a {
     padding: 2px; 
     color: transparent !important;
     background-color: transparent;
@@ -2213,8 +2211,7 @@ a.info {
     line-height: 1;
     text-align: right;
 }
-.post-12 .whistles-tabs-nav li:first-of-type a::after,
-.post-17 .whistles-tabs-nav li:first-of-type a::after {
+.post-12 .whistles-tabs-nav li:first-of-type a::after {
     display: inline-block;
     font-family: "Material Icons";
     font-size: inherit;
@@ -2229,14 +2226,12 @@ a.info {
     -webkit-font-feature-settings: "liga";
     speak: none;
 }
-.post-12 .whistles-tabs-nav li:first-of-type a:after,
-.post-17 .whistles-tabs-nav li:first-of-type a:after {
+.post-12 .whistles-tabs-nav li:first-of-type a:after {
     color: #34495e;
     font-size: 27px;
     cursor: pointer;
 }
-.post-12 .whistles-tabs-nav li:first-of-type a:before,
-.post-17 .whistles-tabs-nav li:first-of-type a:before {
+.post-12 .whistles-tabs-nav li:first-of-type a:before {
     background: transparent !important;
 }
 
