@@ -2165,7 +2165,7 @@ a.info {
 /* Individual list item. */
 .whistles-tabs-nav li {
     display: inline-block;
-    padding: 0; 
+    padding: 1px; 
     text-align: center;
 
     -webkit-box-flex: 1;
