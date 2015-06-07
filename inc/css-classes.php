@@ -36,7 +36,7 @@ class AttrTrumps {
 	public $sidebar_sidebar_right 		= ' u-1of1 u-1of3@md';
 	public $sidebar_sidebar_left		= ' u-1of1 u-1of3@md';
 	public $sidebar_horizontal          = ' wrap grid u-flex u-flex--row@md u-flex--w u-pv@respond';
-	public $menu_primary 				= ' menu--horizontal';
+	public $menu_primary 				= ' u-flexed--auto menu--horizontal';
 	public $menu_secondary 				= ' menu--horizontal u-p- u-flex u-flex--j-c';
 	public $menu_li         			= 'menu__item';
 
@@ -46,7 +46,7 @@ class AttrTrumps {
     public $author_box                  = ' br u-p@respond u-mb@respond';
 
 	/* Header attributes. */
-	public $branding              		= ' t-bg__1 u-ibl';
+	public $branding              		= ' u-flexed--auto t-bg__1 u-ibl';
 	public $site_title            		= ' h1 u-m0 page-title__main';
 	public $site_description      		= ' page-title__sub';
 

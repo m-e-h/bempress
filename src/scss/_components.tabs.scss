@@ -56,43 +56,49 @@
 
             /* Link within list item. */
             .whistles-tabs .whistles-tabs-nav li a {
+
+                @extend .button--tab;
+
+                border-radius: 0;
                 display:            inline-block;
-                padding:            $base-spacing-unit--small $base-spacing-unit--tiny;
-                color:              $color-grey-light;
+                // padding:            $base-spacing-unit--small $base-spacing-unit--tiny;
+                // color:              $color-grey-light;
                 background-color:   $color-primary;
                 opacity: 1;
-                transition: $base-transition;
-                border: 0;
+                // transition: $base-transition;
+                // border: 0;
                 width: 100%;
 
                 @include hocus() {
-                background-color: $color-primary-dark;
+                background-color: $color-primary;
                 }
 
             }
 
             .whistles-tabs-nav li[aria-selected="true"] a {
                 color:               $white;
-                background-color:    $color-primary-light;
+                background-color:    $color-primary;
                 //border-bottom-color: #fff;
 
                 @include hocus() {
                     cursor: default;
-                    background-color: $color-primary-light;
+                    background-color: $color-primary;
                 }
             }
 
                 .post-12 .whistles-tabs-nav li:first-of-type {
-                    flex: 0 60px;
+                    flex: 0 77px;
 
                     a {
                         color: transparent!important;
                         font-size: 0;
+                        background-color: transparent;
+                        line-height: 1;
 
 
-                    @include font-icon($graduation-cap);
-                    &:before {
-                        color: $white;
+                    @include font-icon($graduation-cap, $fa, after);
+                    &:after {
+                        color: $color-text;
                         font-size: 30px;
                     }
                 }

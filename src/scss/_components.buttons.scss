@@ -74,13 +74,13 @@ input[type="submit"] {
     -moz-osx-font-smoothing: grayscale;
     position: relative;
     overflow: hidden;
-    background-color: transparent;
+    //background-color: transparent;
 
         &:hover,
         &:active,
         &.is-active,
         &:focus {
-            background-color: transparent;
+            //background-color: transparent;
         }
 }
 .button--tab:before {
@@ -90,7 +90,7 @@ input[type="submit"] {
   left: 50%;
   right: 50%;
   bottom: 0;
-  background: #ffffff;
+  background: $color-secondary;
   height: 4px;
   transition-property: left, right;
   transition-duration: 0.3s;
@@ -105,11 +105,11 @@ input[type="submit"] {
 }
 
 .button--tab:hover:before {
-    background: rgba(#ffffff, $base-opacity);
+    background: rgba($color-secondary, $base-opacity);
 }
 
 .button--tab:focus:before,
 .button--tab.is-active:before,
 .button--tab:active:before {
-    background: #ffffff;
+    background: $color-secondary;
 }
