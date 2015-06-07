@@ -39,7 +39,7 @@
 
 .nav-links {
 .next {
-    @include font-icon($chevron-right, $fa, after);
+    @include font-icon($chevron_right, $mi, after);
     &::after {
         padding-left: 5px;
         vertical-align: baseline;
@@ -47,7 +47,7 @@
 }
 
 .prev {
-    @include font-icon($chevron-left);
+    @include font-icon($chevron_left);
     &::before {
         padding-right: 5px;
         vertical-align: baseline;

@@ -271,7 +271,7 @@
 }
 
 .svg-logo {
-    padding: 5px;
+    max-height: 90px;
 }
 
 
@@ -424,3 +424,11 @@ h2.slide-title {
 // p:last-of-type ~ div {
 //     margin-top: $base-spacing-unit;
 // }
+
+
+
+
+.meh-slider__image {
+    opacity: 1 !important;
+}
+

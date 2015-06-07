@@ -5,12 +5,18 @@
 nav ol,
 nav ul {
     list-style: none;
-    padding-top: $base-spacing-unit;
+    padding: 0;
+    margin: 0;
 }
 
-// nav ul li {
-//     display: inline;
-// }
+nav ul li {
+    display: inline;
+    padding: 0;
+
+    &::before {
+        content: "";
+    }
+}
 
 // nav a {
 //     padding: $base-spacing-unit--small $base-spacing-unit;

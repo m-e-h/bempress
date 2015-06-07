@@ -4,6 +4,7 @@ a {
     opacity: $base-opacity;
     //color: $color-links;
     font-weight: 700;
+    transition: opacity $base-transition ease;
 
     &:active,
     &:hover,

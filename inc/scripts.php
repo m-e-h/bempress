@@ -82,8 +82,8 @@ function bempress_enqueue_styles() {
     $suffix = hybrid_get_min_suffix();
 
     wp_enqueue_style(
-        'bem-font-awesome',
-        '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'
+        'bem-material-icons',
+        '//fonts.googleapis.com/icon?family=Material+Icons'
     );
 
 if ( is_child_theme() )

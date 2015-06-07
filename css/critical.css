@@ -262,8 +262,10 @@ big {
 a {
     opacity: 0.7;
     background-color: transparent;
-    font-weight: 700; 
+    font-weight: 700;
     text-decoration: none;
+    -webkit-transition: opacity 0.35s ease;
+    transition: opacity 0.35s ease;
 }
 a:active,
 a:hover,
@@ -284,9 +286,36 @@ dd {
 ul,
 ol {
     margin-bottom: 27px;
+    list-style: none;
+}
+
+ul li {
     padding-left: 27px;
-    text-align: left; 
-    list-style-position: outside;
+}
+ul li::before {
+    display: inline-block;
+    font-family: "Material Icons";
+    font-size: inherit;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+    text-decoration: none;
+    letter-spacing: normal;
+    content: "";
+    text-rendering: auto;
+
+    -webkit-font-feature-settings: "liga";
+    speak: none;
+}
+ul li::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.7; 
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 26px;
 }
 
 li > ul,
@@ -566,15 +595,17 @@ textarea {
 
 .search-form button::before {
     display: inline-block;
-    font-family: FontAwesome;
+    font-family: "Material Icons";
     font-size: inherit;
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; 
     text-decoration: none;
-    content: "";
+    letter-spacing: normal;
+    content: "";
     text-rendering: auto;
 
+    -webkit-font-feature-settings: "liga";
     speak: none;
 }
 
@@ -585,6 +616,15 @@ textarea {
 
 nav ol,
 nav ul {
-    padding-top: 27px; 
+    margin: 0; 
+    padding: 0;
     list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    padding: 0;
+}
+nav ul li::before {
+    content: "";
 }

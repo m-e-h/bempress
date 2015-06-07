@@ -52,6 +52,11 @@
             display: inline-block;
             flex: 1 auto;
             text-align: center;
+            padding: 0;
+
+                &::before {
+                    content: "";
+                }
         }
 
             /* Link within list item. */
@@ -86,28 +91,37 @@
                 }
             }
 
-                .post-12 .whistles-tabs-nav li:first-of-type {
-                    flex: 0 77px;
+.post-12, .post-17 {
 
-                    a {
-                        color: transparent!important;
-                        font-size: 0;
-                        background-color: transparent;
-                        line-height: 1;
+    .whistles-tabs-nav li:first-of-type {
+        width: 100%;
 
+        a {
+            color: transparent!important;
+            font-size: 0;
+            background-color: transparent;
+            line-height: 1;
+            text-align: right;
+            padding: 2px;
+            @include font-icon($info, $mi, after);
 
-                    @include font-icon($graduation-cap, $fa, after);
-                    &:after {
-                        color: $color-text;
-                        font-size: 30px;
-                    }
-                }
-                }
+            &:after {
+                color: $color-text;
+                font-size: $base-spacing-unit;
+                cursor: pointer;
+            }
+
+            &:before {
+                background: transparent!important;
+            }
+        }
+    }
+}
 
     /* Wraps all of the tab content panels. */
     .whistles-tabs-wrap {
         //margin:     -1px 0 0;
-        padding:    $base-spacing-unit $base-spacing-unit 0 $base-spacing-unit;
+        //padding:    $base-spacing-unit $base-spacing-unit 0 $base-spacing-unit;
         //border: 2px solid $color-primary-dark;
         border-top: 0;
         border-radius: 0 0 $base-radius $base-radius;
@@ -135,7 +149,7 @@
         border-top-width: 0;
         @include font-size($base-font-size + 2);
 
-        @include font-icon($chevron-down, $fa, after);
+        @include font-icon($keyboard_arrow_down, $mi, after);
         &:after {
             float: right;
             transition: transform .1s linear;
@@ -175,4 +189,32 @@
     padding: 0;
     box-shadow: none;
     background-color: none;
+}
+
+.whistles-tabs .whistles-tabs-nav li[aria-selected=true] a:before {
+    background: $color-secondary;
+    right: 0;
+    left: 0;
+}
+
+.post-12 {
+
+    .whistle-content li {
+        &::before {
+    content: $check_box;
+    font-size: $base-font-size - 4;
+}
+    }
+
+.whistles-tabs-nav li {
+
+    &:first-of-type {
+        min-width: 100%;
+    }
+}
+}
+
+.post-17 .widget .whistles-tabs-wrap li::before {
+    content: $timer;
+    font-size: $base-font-size - 4;
 }

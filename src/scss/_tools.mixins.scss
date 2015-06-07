@@ -73,12 +73,11 @@
 }
 
 
-// Icon Fonts
-$fa: FontAwesome !default;
+
 //$before: true !default;
 
 
-@mixin font-icon($icon: $circle, $font-family: $fa, $placement: before) {
+@mixin font-icon($icon: $stop, $font-family: $mi, $placement: before) {
 
     &::#{$placement} {
         content: $icon;
@@ -89,6 +88,8 @@ $fa: FontAwesome !default;
         speak: none;
         text-decoration: none;
         text-rendering: auto;
+        letter-spacing: normal;
+        -webkit-font-feature-settings: 'liga';
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }

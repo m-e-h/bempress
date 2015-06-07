@@ -330,8 +330,10 @@ template {
 a {
     opacity: 0.7;
     background-color: transparent;
-    font-weight: 700; 
+    font-weight: 700;
     text-decoration: none;
+    -webkit-transition: opacity 0.35s ease;
+    transition: opacity 0.35s ease;
 }
 a:active,
 a:hover,
@@ -352,9 +354,36 @@ dd {
 ul,
 ol {
     margin-bottom: 27px;
+    list-style: none;
+}
+
+ul li {
     padding-left: 27px;
-    text-align: left; 
-    list-style-position: outside;
+}
+ul li::before {
+    display: inline-block;
+    font-family: "Material Icons";
+    font-size: inherit;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+    text-decoration: none;
+    letter-spacing: normal;
+    content: "";
+    text-rendering: auto;
+
+    -webkit-font-feature-settings: "liga";
+    speak: none;
+}
+ul li::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.7; 
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 26px;
 }
 
 li > ul,
@@ -634,15 +663,17 @@ textarea {
 
 .search-form button::before {
     display: inline-block;
-    font-family: FontAwesome;
+    font-family: "Material Icons";
     font-size: inherit;
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; 
     text-decoration: none;
-    content: "";
+    letter-spacing: normal;
+    content: "";
     text-rendering: auto;
 
+    -webkit-font-feature-settings: "liga";
     speak: none;
 }
 
@@ -653,8 +684,17 @@ textarea {
 
 nav ol,
 nav ul {
-    padding-top: 27px; 
+    margin: 0; 
+    padding: 0;
     list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    padding: 0;
+}
+nav ul li::before {
+    content: "";
 }
 
 /**
@@ -1194,6 +1234,10 @@ nav ul {
 
 .block__img {
     border-radius: 2px 2px 0 0;
+    background-color: #fff;
+}
+.block__img a:hover {
+    opacity: 0.7;
 }
 
 .block__content {
@@ -1865,15 +1909,17 @@ a.menu-item__description.info {
 
 .nav-links .next::after {
     display: inline-block;
-    font-family: FontAwesome;
+    font-family: "Material Icons";
     font-size: inherit;
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; 
     text-decoration: none;
-    content: "";
+    letter-spacing: normal;
+    content: "";
     text-rendering: auto;
 
+    -webkit-font-feature-settings: "liga";
     speak: none;
 }
 
@@ -1884,15 +1930,17 @@ a.menu-item__description.info {
 
 .nav-links .prev::before {
     display: inline-block;
-    font-family: FontAwesome;
+    font-family: "Material Icons";
     font-size: inherit;
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; 
     text-decoration: none;
-    content: "";
+    letter-spacing: normal;
+    content: "";
     text-rendering: auto;
 
+    -webkit-font-feature-settings: "liga";
     speak: none;
 }
 
@@ -2117,12 +2165,16 @@ a.info {
 /* Individual list item. */
 .whistles-tabs-nav li {
     display: inline-block;
-    text-align: center; 
+    padding: 0; 
+    text-align: center;
 
     -webkit-box-flex: 1;
     -webkit-flex: 1 auto;
     -ms-flex: 1 auto;
     flex: 1 auto;
+}
+.whistles-tabs-nav li::before {
+    content: "";
 }
 
 /* Link within list item. */
@@ -2148,39 +2200,48 @@ a.info {
     cursor: default;
 }
 
-.post-12 .whistles-tabs-nav li:first-of-type {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 77px;
-    -ms-flex: 0 77px;
-    flex: 0 77px;
+.post-12 .whistles-tabs-nav li:first-of-type,
+.post-17 .whistles-tabs-nav li:first-of-type {
+    width: 100%;
 }
-.post-12 .whistles-tabs-nav li:first-of-type a {
+.post-12 .whistles-tabs-nav li:first-of-type a,
+.post-17 .whistles-tabs-nav li:first-of-type a {
+    padding: 2px; 
     color: transparent !important;
     background-color: transparent;
     font-size: 0;
     line-height: 1;
+    text-align: right;
 }
-.post-12 .whistles-tabs-nav li:first-of-type a::after {
+.post-12 .whistles-tabs-nav li:first-of-type a::after,
+.post-17 .whistles-tabs-nav li:first-of-type a::after {
     display: inline-block;
-    font-family: FontAwesome;
+    font-family: "Material Icons";
     font-size: inherit;
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; 
     text-decoration: none;
-    content: "";
+    letter-spacing: normal;
+    content: "";
     text-rendering: auto;
 
+    -webkit-font-feature-settings: "liga";
     speak: none;
 }
-.post-12 .whistles-tabs-nav li:first-of-type a:after {
+.post-12 .whistles-tabs-nav li:first-of-type a:after,
+.post-17 .whistles-tabs-nav li:first-of-type a:after {
     color: #34495e;
-    font-size: 30px;
+    font-size: 27px;
+    cursor: pointer;
+}
+.post-12 .whistles-tabs-nav li:first-of-type a:before,
+.post-17 .whistles-tabs-nav li:first-of-type a:before {
+    background: transparent !important;
 }
 
 /* Wraps all of the tab content panels. */
 .whistles-tabs-wrap {
-    padding: 27px 27px 0 27px;
     border-top: 0;
     border-radius: 0 0 2px 2px;
 }
@@ -2204,15 +2265,17 @@ a.info {
 .whistles-toggle .whistle-title::after,
 .whistles-accordion .whistle-title::after {
     display: inline-block;
-    font-family: FontAwesome;
+    font-family: "Material Icons";
     font-size: inherit;
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; 
     text-decoration: none;
-    content: "";
+    letter-spacing: normal;
+    content: "";
     text-rendering: auto;
 
+    -webkit-font-feature-settings: "liga";
     speak: none;
 }
 .whistles-toggle .whistle-title:after,
@@ -2240,6 +2303,26 @@ a.info {
     padding: 0;
     background-color: none; 
     box-shadow: none;
+}
+
+.whistles-tabs .whistles-tabs-nav li[aria-selected=true] a:before {
+    right: 0;
+    left: 0; 
+    background: #ffe192;
+}
+
+.post-12 .whistle-content li::before {
+    font-size: 14px; 
+    content: "";
+}
+
+.post-12 .whistles-tabs-nav li:first-of-type {
+    min-width: 100%;
+}
+
+.post-17 .widget .whistles-tabs-wrap li::before {
+    font-size: 14px; 
+    content: "";
 }
 
 /* at the very least you must set these two display properties */
@@ -3983,7 +4066,7 @@ button.flickity-prev-next-button {
 }
 
 .svg-logo {
-    padding: 5px;
+    max-height: 90px;
 }
 
 @media screen and (min-width: 48em) {
@@ -4094,4 +4177,8 @@ h2.slide-title {
 
 .is-visible .menu-item {
     border-top: 1px solid #e3e8ec;
+}
+
+.meh-slider__image {
+    opacity: 1 !important;
 }
