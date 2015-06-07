@@ -82,11 +82,27 @@
                 }
             }
 
+                .post-12 .whistles-tabs-nav li:first-of-type {
+                    flex: 0 60px;
+
+                    a {
+                        color: transparent!important;
+                        font-size: 0;
+
+
+                    @include font-icon($graduation-cap);
+                    &:before {
+                        color: $white;
+                        font-size: 30px;
+                    }
+                }
+                }
+
     /* Wraps all of the tab content panels. */
     .whistles-tabs-wrap {
         //margin:     -1px 0 0;
         padding:    $base-spacing-unit $base-spacing-unit 0 $base-spacing-unit;
-        border: 2px solid $color-primary-dark;
+        //border: 2px solid $color-primary-dark;
         border-top: 0;
         border-radius: 0 0 $base-radius $base-radius;
     }
@@ -107,9 +123,9 @@
     .whistles-accordion .whistle-title {
         margin:           0;
         padding:          $base-spacing-unit--small $base-spacing-unit;
-        color:            #777;
+        //color:            #777;
         background-color:       #f5f5f5;
-        border:           1px solid #ececec;
+        //border:           1px solid #ececec;
         border-top-width: 0;
         @include font-size($base-font-size + 2);
 
@@ -127,24 +143,24 @@
 
         .whistles-toggle .whistle-title:first-child,
         .whistles-accordion .whistle-title:first-child {
-            border-top-width: 1px;
+            //border-top-width: 1px;
         }
 
         .whistles-toggle .whistle-title:hover,
         .whistles-toggle .whistle-title[aria-selected="true"],
         .whistles-accordion .whistle-title:hover,
         .whistles-accordion .whistle-title[aria-selected="true"] {
-            color:      #555;
-            background-color: #ededed;
+            //color:      #555;
+            //background-color: #ededed;
         }
 
     /* Individual toggle section content. */
     .whistles-toggle .whistle-content,
     .whistles-accordion .whistle-content {
         margin:     -1px 0 0;
-        color:      #666;
-        background-color: #fff;
-        border:     1px solid #ececec;
+        //color:      #666;
+        //background-color: #fff;
+        //border:     1px solid #ececec;
     }
 
 
