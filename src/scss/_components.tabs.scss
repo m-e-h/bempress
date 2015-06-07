@@ -50,14 +50,14 @@
         /* Individual list item. */
         .whistles-tabs-nav li {
             display: inline-block;
-            flex: 1;
+            flex: 1 auto;
             text-align: center;
         }
 
             /* Link within list item. */
             .whistles-tabs .whistles-tabs-nav li a {
                 display:            inline-block;
-                padding:            $base-spacing-unit--small $base-spacing-unit;
+                padding:            $base-spacing-unit--small $base-spacing-unit--tiny;
                 color:              $color-grey-light;
                 background-color:   $color-primary;
                 opacity: 1;
