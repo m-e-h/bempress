@@ -18,8 +18,6 @@
   },
   "require": {
     "justintadlock/hybrid-core": "dev-dev",
-    "flagshipwp/flagship-library": "~1.4",
-    "zamoose/themehookalliance": "dev-master",
     "composer/installers": "~1.0"
   }
 }

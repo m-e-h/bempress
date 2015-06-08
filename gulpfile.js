@@ -56,22 +56,6 @@ gulp.task('hybrid', function () {
     .pipe(gulp.dest('hybrid-core'));
 });
 
-// Copy Flagship-Library to /inc/
-gulp.task('flagship', function () {
-  return gulp.src([
-    'src/composer/flagshipwp/flagship-library/**/*'
-    ])
-    .pipe(gulp.dest('inc/flagship-library'));
-});
-
-// Copy tha to /inc/
-gulp.task('tha', function () {
-  return gulp.src([
-  	'src/composer/zamoose/themehookalliance/tha-theme-hooks.php'
-  	])
-    .pipe(gulp.dest('inc'));
-});
-
 // Compile and Automatically Prefix Stylesheets
 gulp.task('styles', function () {
   return gulp.src([
@@ -156,5 +140,5 @@ gulp.task('serve', ['styles'], function () {
 
 // Build Production Files, the Default Task
 gulp.task('default', function (cb) {
-  runSequence('styles', ['composer', 'scripts', 'critical', 'wpeditor', 'images', 'hybrid', 'flagship', 'tha'], cb);
+  runSequence('styles', ['composer', 'scripts', 'critical', 'wpeditor', 'images', 'hybrid'], cb);
 });

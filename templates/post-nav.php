@@ -7,15 +7,21 @@
 
 if ( is_singular( 'post' ) ) : // If viewing a single post page.
 
-    flagship_post_navigation( [
-        'next_text' => '<span class="meta-nav button button--transparent next" aria-hidden="true">' . __( 'Next', 'bempress' ) .
-            '</span>',
-        'prev_text' => '<span class="meta-nav button button--transparent prev" aria-hidden="true">' . __( 'Previous', 'bempress' ) .
-            '</span>',
-    ] );
+    the_post_navigation( array(
+        'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'bempress' ) . '</span> ' .
+            '<span class="screen-reader-text">' . __( 'Next post:', 'bempress' ) . '</span> ' .
+            '<span class="post-title">%title</span>',
+        'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'bempress' ) . '</span> ' .
+            '<span class="screen-reader-text">' . __( 'Previous post:', 'bempress' ) . '</span> ' .
+            '<span class="post-title">%title</span>',
+    ) );
 
 elseif ( is_home() || is_archive() || is_search() ) :
 
-    flagship_posts_navigation();
+    the_posts_pagination( array(
+        'prev_text'          => __( 'Previous page', 'bempress' ),
+        'next_text'          => __( 'Next page', 'bempress' ),
+        'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'bempress' ) . ' </span>',
+    ) );
 
 endif; // End check for type of page being viewed.

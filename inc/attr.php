@@ -19,8 +19,6 @@
 add_filter( 'hybrid_attr_site-container',   'flagship_attr_site_container' );
 add_filter( 'hybrid_attr_site-inner',       'flagship_attr_site_inner' );
 add_filter( 'hybrid_attr_wrap',             'flagship_attr_wrap', 10, 2 );
-add_filter( 'hybrid_attr_sidebar',          'flagship_attr_sidebar_class', 10, 2 );
-add_filter( 'hybrid_attr_menu',             'flagship_attr_menu_class', 10, 2 );
 // Post-specific attributes.
 add_filter( 'hybrid_attr_entry-summary',    'flagship_attr_entry_summary_class' );
 // Other attributes.
@@ -70,39 +68,7 @@ function flagship_attr_wrap( $attr, $context ) {
 	return $attr;
 }
 
-/**
- * Sidebar attributes.
- *
- * @since  1.0.0
- * @access public
- * @param  array $attr
- * @param  string $context
- * @return array
- */
-function flagship_attr_sidebar_class( $attr, $context ) {
-	if ( empty( $context ) ) {
-		return $attr;
-	}
-	$attr['class'] .= " sidebar-{$context}";
-	return $attr;
-}
 
-/**
- * Add a menu context element to the class attribute to make styling easier.
- *
- * @since  1.0.0
- * @access public
- * @param  array $attr
- * @param  string $context
- * @return array
- */
-function flagship_attr_menu_class( $attr, $context ) {
-	if ( empty( $context ) ) {
-		return $attr;
-	}
-	$attr['class'] .= " menu-{$context}";
-	return $attr;
-}
 
 /**
  * Post summary/excerpt attributes.
