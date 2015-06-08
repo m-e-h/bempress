@@ -1272,16 +1272,32 @@ nav ul li::before {
 }
 
 .media__body {
-    font-size: 14px;
-    font-size: 0.7777777778rem;
-    line-height: 1.6;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 16px;
+    font-size: 0.8888888889rem;
+    text-align: center;
 }
 
 .media__title {
     font-size: 18px;
     font-size: 1rem;
+    line-height: 1.6;
+}
+
+.user__title {
+    opacity: 0.6;
     font-weight: bold;
-    text-align: center;
+    line-height: 1;
+}
+
+.user__email {
+    margin-top: auto;
+    font-size: 14px;
+    font-size: 0.7777777778rem;
+    line-height: 1;
 }
 
 /*------------------------------------*    $ARTICLES

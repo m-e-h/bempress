@@ -79,15 +79,26 @@
 // }
 
 .media__body {
-    @include font-size(14px, false);
-        line-height: 1.6;
+    @include font-size($base-font-size - 2, false);
+    display: flex;
+    text-align: center;
 }
 
 .media__title {
     @include font-size($base-font-size, false);
+    line-height: 1.6;
+}
+
+.user__title {
     font-weight: bold;
-    text-align: center;
+    opacity: .6;
+    line-height: 1;
 }
-.media__text {
-    //width: 100%;
+
+.user__email {
+    @include font-size(14px, false);
+    margin-top: auto;
+    line-height: 1;
 }
+
+
