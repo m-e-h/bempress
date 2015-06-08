@@ -1229,7 +1229,8 @@ nav ul li::before {
 
 .block__title {
     margin: 0;
-    line-height: 1.6;
+    margin-bottom: 18px; 
+    font-size: 22px;
 }
 
 .block__img {
