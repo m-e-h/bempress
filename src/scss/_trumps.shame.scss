@@ -436,4 +436,12 @@ h2.slide-title {
 
 .widget.highlighted-content {
     padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.widget.highlighted-content .entry {
+    background-color: white;
+    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+    margin: 16px;
 }
