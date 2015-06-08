@@ -1228,8 +1228,8 @@ nav ul li::before {
 }
 
 .block__title {
-    opacity: 1;
-    line-height: 1;
+    margin: 0;
+    line-height: 1.6;
 }
 
 .block__img {
@@ -4205,4 +4205,8 @@ h2.slide-title {
 
 .meh-slider__image {
     opacity: 1 !important;
+}
+
+.widget.highlighted-content {
+    padding: 0;
 }
