@@ -79,5 +79,15 @@
 // }
 
 .media__body {
+    @include font-size(14px, false);
+        line-height: 1.6;
+}
+
+.media__title {
+    @include font-size($base-font-size, false);
+    font-weight: bold;
+    text-align: center;
+}
+.media__text {
     //width: 100%;
 }

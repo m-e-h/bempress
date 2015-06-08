@@ -1271,6 +1271,19 @@ nav ul li::before {
     border-radius: 2px;
 }
 
+.media__body {
+    font-size: 14px;
+    font-size: 0.7777777778rem;
+    line-height: 1.6;
+}
+
+.media__title {
+    font-size: 18px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
 /*------------------------------------*    $ARTICLES
 \*------------------------------------*/
 /**
