@@ -53,12 +53,32 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
 
                 array(
                     'label' => 'Content to Show',
-                    'attr'  => 'show',
+                    'attr'  => 'show_content',
                     'type' => 'select',
                     'options' => array(
                         'excerpt' => 'Excerpt',
                         'content' => 'Content',
                         'none' => 'None',
+                    ),
+                ),
+
+                array(
+                    'label' => 'Show Featured Image',
+                    'attr'  => 'show_image',
+                    'type' => 'select',
+                    'options' => array(
+                        'show_img' => 'Show Image',
+                        'hide_img' => 'Hide Image',
+                    ),
+                ),
+
+                array(
+                    'label' => 'Block Type',
+                    'attr'  => 'block_type',
+                    'type' => 'select',
+                    'options' => array(
+                        'block__med' => 'Medium Vertical',
+                        'block__mini' => 'Mini Horizontal',
                     ),
                 ),
 

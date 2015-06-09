@@ -9,20 +9,22 @@ global $mehsc_atts;
 
     ?>
 
-<div class="block u-flex u-min--300 grid__item u-flexed--1 u-p-- <?php echo esc_attr( $mehsc_atts['width'] ); ?>">
+<div class="block u-flex u-min--300 grid__item <?php echo esc_attr( $mehsc_atts['block_type'] ); ?> u-flexed--1 u-p-- <?php echo esc_attr( $mehsc_atts['width'] ); ?>">
         <div id="post-<?php the_ID(); ?>" class="block__content u-flexed--1 shadow--z1 u-p- t-bg__white">
+<?php if ( 'show_img' === $mehsc_atts['show_image'] ) : ?>
 <?php get_the_image( array(
         'size'   => 'bempress-sm',
         'before'        => '<div class="featured-media u-mb- u-mtn- u-mhn- block__image">',
         'after'         => '</div>',
         ) ); ?>
+<?php endif; ?>
             <?php the_title( sprintf( '<h2 class="block__title u-mb-"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-<?php if ( 'excerpt' === $mehsc_atts['show'] ) : ?>
+<?php if ( 'excerpt' === $mehsc_atts['show_content'] ) : ?>
             <div class="block__body">
                 <?php the_excerpt(); ?>
             </div><!-- .entry-content -->
 
-<?php elseif ( 'content' === $mehsc_atts['show'] ) : ?>
+<?php elseif ( 'content' === $mehsc_atts['show_content'] ) : ?>
             <div class="block__body">
                 <?php the_content(); ?>
             </div><!-- .entry-content -->
