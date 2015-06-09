@@ -9,8 +9,8 @@ global $mehsc_atts;
 
     ?>
 
-<div class="block u-flex u-min--300 grid__item <?php echo esc_attr( $mehsc_atts['block_type'] ); ?> u-flexed--1 u-p-- <?php echo esc_attr( $mehsc_atts['width'] ); ?>">
-        <div id="post-<?php the_ID(); ?>" class="block__content u-flexed--1 shadow--z1 u-p- t-bg__white">
+<div class="block u-flex u-min--300 grid__item <?php echo esc_attr( $mehsc_atts['block_type'] ); ?> u-flexed--1 u-p- <?php echo esc_attr( $mehsc_atts['width'] ); ?>">
+        <div id="post-<?php the_ID(); ?>" class="block__content u-flexed--1">
 <?php if ( 'show_img' === $mehsc_atts['show_image'] ) : ?>
 <?php get_the_image( array(
         'size'   => 'bempress-sm',
