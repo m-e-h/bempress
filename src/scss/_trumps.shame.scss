@@ -445,3 +445,54 @@ h2.slide-title {
     box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
     margin: 16px;
 }
+
+
+
+
+
+
+
+
+
+
+
+.widget .entry {
+    padding: 0;
+    margin: 0;
+}
+
+.media__body p {
+    margin: 0;
+}
+
+.widget-nav-menu > .widget__wrap {
+    padding: 0 0 27px;
+}
+
+.widget-nav-menu .widget-title {
+    padding: 27px 27px 0;
+}
+
+h3.widget-title {
+    font-size: 22px;
+}
+
+@media screen and (max-width: 35.5em) {
+    .svg-logo {
+        position: absolute;
+        height: 50px;
+        left: 5px;
+    }
+}
+
+.entry-content {
+    max-width: 100%;
+}
+
+.entry__header--feature {
+    margin-top: 0;
+}
+
+.entry {
+    margin-top: 0;
+}

@@ -4,6 +4,11 @@
 
 .block {
   width: 100%;
+  display: flex;
+
+  .entry {
+    flex: 1;
+  }
 }
 
 .block__title {

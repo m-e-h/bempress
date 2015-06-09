@@ -23,6 +23,9 @@
 
 .whistle-content {
     overflow: hidden;
+    background-color: $white;
+    border-radius: $base-radius;
+    padding: $base-spacing-unit--tiny $base-spacing-unit--tiny 0 $base-spacing-unit--tiny;
     @include md {
     padding: $base-spacing-unit $base-spacing-unit 0 $base-spacing-unit;
 }
@@ -130,31 +133,42 @@
         /* Individual tab content. */
         .whistles-tabs-wrap .whistle-content {}
 
+
+
+
 /**
  * Toggle/Accordion
  */
 
-/* Wraps the entire toggle/accordion section. */
 .whistles-toggle,
-.whistles-accordion {}
+.whistles-accordion {
 
-    /* Title for individual section. */
-    .whistles-toggle .whistle-title,
-    .whistles-accordion .whistle-title {
-        margin:           0;
+    .whistle-title {
+        @include shadow-z1();
+        background-color: $color-secondary-light;
+        opacity: 1;
+        margin: 5px 0;
         padding:          $base-spacing-unit--small $base-spacing-unit;
-        //color:            #777;
-        background-color:       #f5f5f5;
-        //border:           1px solid #ececec;
         border-top-width: 0;
         @include font-size($base-font-size + 2);
 
         @include font-icon($keyboard_arrow_down, $mi, after);
         &:after {
             float: right;
+            font-size: 28px;
             transition: transform .1s linear;
         }
+
+        &[aria-selected="true"] {
+            box-shadow: none;
+        }
+
     }
+
+    .whistle-content {
+        margin:     -1px 0 0;
+    }
+}
 
 .whistles-toggle .whistle-title[aria-selected="true"]:after {
     transform: rotate(180deg);
@@ -173,15 +187,6 @@
             //color:      #555;
             //background-color: #ededed;
         }
-
-    /* Individual toggle section content. */
-    .whistles-toggle .whistle-content,
-    .whistles-accordion .whistle-content {
-        margin:     -1px 0 0;
-        //color:      #666;
-        //background-color: #fff;
-        //border:     1px solid #ececec;
-    }
 
 
 

@@ -10,7 +10,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inherit;
     padding: 0;
 
     &::before {
