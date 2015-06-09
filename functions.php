@@ -9,7 +9,6 @@ $includes_dir = trailingslashit( get_template_directory() );
 // Include Hybrid Core.
 require_once( $includes_dir . 'hybrid-core/hybrid.php' );
 new Hybrid();
-require_once $includes_dir . 'inc/user-tax.php';
 require_once $includes_dir . 'inc/scripts.php';
 require_once $includes_dir . 'inc/customizer/fonts.php';
 require_once $includes_dir . 'inc/attr.php';
@@ -17,6 +16,8 @@ require_once $includes_dir . 'inc/tha-theme-hooks.php';
 require_once $includes_dir . 'inc/general.php';
 require_once $includes_dir . 'inc/widgetize.php';
 require_once $includes_dir . 'inc/template-actions.php';
+require_once $includes_dir . 'inc/shortcodes.php';
+require_once $includes_dir . 'inc/shortcodes-ui.php';
 require_once $includes_dir . 'inc/html-min.php';
 require_once $includes_dir . 'inc/customizer/custom-header.php';
 require_once $includes_dir . 'inc/customizer/Color.php';
@@ -52,17 +53,7 @@ function bempress_setup() {
     add_theme_support( 'post-formats', [
         'aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio'
     ] );
-    add_theme_support( 'custom-header', apply_filters( 'bempress_custom_header_args', array(
-        'default-image'          => '',
-        'default-text-color'     => 'FFFFFF',
-        'width'                  => 1920,
-        'height'                 => 500,
-        'flex-width'             => true,
-        'flex-height'            => true,
-        'header-text'            => true,
-        'uploads'                => true,
-        'wp-head-callback'       => 'bempress_header_style'
-    ) ) );
+
 // In theme setup
 add_theme_support( 'theme-layouts', array( 'default' => '1c' ) );
 add_action( 'hybrid_register_layouts', 'my_register_layouts' );
