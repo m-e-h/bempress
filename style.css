@@ -4203,12 +4203,6 @@ p.intro-pagragraph {
     }
 }
 
-.entry-content p {
-    max-width: 800px;
-    margin-right: auto; 
-    margin-left: auto;
-}
-
 h2.slide-title {
     display: none;
 }
@@ -4233,8 +4227,13 @@ h2.slide-title {
 
 .widget.highlighted-content .entry {
     margin: 16px; 
+    color: #34495e;
     background-color: white;
     box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+}
+
+.widget.highlighted-content .widget__wrap {
+    background: none;
 }
 
 .widget .entry {
