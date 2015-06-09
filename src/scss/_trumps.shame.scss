@@ -490,6 +490,8 @@ h3.widget-title {
 
 .entry-content {
     max-width: 100%;
+    // background-color: $white;
+    // padding: 27px;
 }
 
 .entry__header--feature {
@@ -498,4 +500,9 @@ h3.widget-title {
 
 .entry {
     margin-top: 0;
+}
+
+
+.entry__header--feature {
+    background-color: $color-primary-dark;
 }

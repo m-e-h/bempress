@@ -4276,3 +4276,7 @@ h3.widget-title {
 .entry {
     margin-top: 0;
 }
+
+.entry__header--feature {
+    background-color: #002855;
+}
