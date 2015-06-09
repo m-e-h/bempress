@@ -22,7 +22,7 @@ function meh_block_shortcode( $atts, $content = null ) {
         'show_content'      => '',
     ), $atts, 'meh_block' );
 
-$output = '<section class="row pages-highlight u-pv@respond t-bg__2"><div class="block-row grid u-flex u-flex--row@md u-flex--w wrap">';
+$output = '<section class="row pages-highlight"><div class="block-row grid u-flex u-flex--row@md u-flex--w wrap">';
 
 // Get pages set in the customizer (if any)
 $pages = $mehsc_atts['page'];
