@@ -114,9 +114,18 @@
 //     margin-bottom: 1em;
 // }
 
-// .flag__figure {
-//         margin-right: 1em;
-// }
+.flag__figure {
+        background-color: $color-grey-ui;
+        width: 90px;
+        height: 90px;
+        padding: 15px;
+        border-radius: 50%;
+        > svg {
+            width: 100%;
+            max-width: 90px;
+            fill: $white;
+        }
+}
 
 // .flag__body {
 

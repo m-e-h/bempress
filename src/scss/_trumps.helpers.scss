@@ -117,14 +117,14 @@ text-shadow: 0 2px rgba(0, 16, 34, 0.4);
 
 
 
-.u-block  { display: block }
-.u-inline-block { display: inline-block }
-.u-inline  { display: inline }
-.u-table  { display: table }
-.u-table__cell { display: table-cell }
-.u-left { float: left }
-.u-right { float: right }
-.u-oh { overflow: hidden }
+.u-block  { display: block; }
+.u-inline-block { display: inline-block; }
+.u-inline  { display: inline; }
+.u-table  { display: table; }
+.u-table__cell { display: table-cell; }
+.u-left { float: left; }
+.u-right { float: right; }
+.u-oh { overflow: hidden; }
 
 .u-fixed { position: fixed; }
 

@@ -489,8 +489,6 @@ tr {
 th,
 td {
     padding: 14px 7px;
-    border: 0.1rem solid #e3e8ec;
-    text-align: center;
 }
 
 tfoot tr {
@@ -1217,6 +1215,20 @@ nav ul li::before {
     font-size: 14px;
     font-size: 0.7777777778rem;
     line-height: 1;
+}
+
+.flag__figure {
+    width: 90px;
+    height: 90px;
+    padding: 15px;
+    border-radius: 50%; 
+    background-color: #e3e8ec;
+}
+.flag__figure > svg {
+    width: 100%;
+    max-width: 90px;
+
+    fill: #fff;
 }
 
 /*------------------------------------*    $ARTICLES

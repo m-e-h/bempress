@@ -421,8 +421,6 @@ tr {
 th,
 td {
     padding: 14px 7px;
-    border: 0.1rem solid #e3e8ec;
-    text-align: center;
 }
 
 tfoot tr {

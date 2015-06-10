@@ -30,6 +30,7 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
                     'options' => array(
                         '' => 'None',
                         'quote' => 'Quote',
+                        'book' => 'Book',
                         'calendar' => 'Calendar',
                         'church' => 'Church',
                         'sports' => 'Sports',
