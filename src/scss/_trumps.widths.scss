@@ -4,7 +4,7 @@
 
 
 .u-1of1 {
-    min-width: 100%;
+    width: 100%;
 }
 .u-1of2 {
     width: 50%;
@@ -39,7 +39,7 @@
 
 @include sm {
     .u-1of1\@sm {
-        min-width: 100%;
+        width: 100%;
     }
     .u-1of2\@sm {
         width: 50%;
@@ -75,7 +75,7 @@
 
 @include md {
     .u-1of1\@md {
-        min-width: 100%;
+        width: 100%;
     }
     .u-1of2\@md {
         width: 50%;
@@ -111,7 +111,7 @@
 
 @include lg {
     .u-1of1\@lg {
-        min-width: 100%;
+        width: 100%;
     }
     .u-1of2\@lg {
         width: 50%;
@@ -147,7 +147,7 @@
 
 @include xl {
     .u-1of1\@xl {
-        min-width: 100%;
+        width: 100%;
     }
     .u-1of2\@xl {
         width: 50%;
@@ -183,7 +183,7 @@
 
 @include retina {
     .u-1of1\@retina {
-        min-width: 100%;
+        width: 100%;
     }
     .u-1of2\@retina {
         width: 50%;
