@@ -41,7 +41,7 @@
                 <span></span>
                 </button>
 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <?php get_template_part( 'images/vector/svg', 'smcs-logo2' ); ?>
+                <?php get_template_part( 'images/vector/svg', 'smcs-logo' ); ?>
 </a>
                 <div class="logo-text">
                 <?php hybrid_site_title(); ?>
