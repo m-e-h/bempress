@@ -77,8 +77,8 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
                     'attr'  => 'block_type',
                     'type' => 'select',
                     'options' => array(
-                        'block__med' => 'Medium Vertical',
-                        'block__mini' => 'Mini Horizontal',
+                        'block' => 'Block',
+                        'flag' => 'Panel',
                     ),
                 ),
 

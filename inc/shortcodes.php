@@ -14,10 +14,10 @@ add_shortcode( 'meh_block', 'meh_block_shortcode' );
 function meh_block_shortcode( $atts, $content = null ) {
     global $mehsc_atts;
     $mehsc_atts   = shortcode_atts( array(
+        'block_type' => '',
         'icon'      => '',
         'width'     => '',
         'page'      => '',
-        'block_type' => '',
         'show_image'      => '',
         'show_content'      => '',
     ), $atts, 'meh_block' );
@@ -34,11 +34,23 @@ $args = array(
     'orderby' => 'post__in'
 );
 
+
 $query2 = new WP_Query( $args );
 while ( $query2->have_posts() ) : $query2->the_post();
+
+if ( 'block' === $mehsc_atts['block_type'] ) :
+
 ob_start();
 get_template_part( 'templates/section', 'block' );
 $output .= ob_get_clean();
+
+elseif ( 'flag' === $mehsc_atts['block_type'] ) :
+
+ob_start();
+get_template_part( 'templates/section', 'flag' );
+$output .= ob_get_clean();
+
+endif;
 
     endwhile;
 

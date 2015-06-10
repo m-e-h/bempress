@@ -4,9 +4,6 @@
 
 .block {
   width: 100%;
-
-  .entry {
-  }
 }
 
 .block__title {
@@ -105,3 +102,29 @@
 }
 
 
+
+
+
+
+// .flag {
+//     display: flex;
+//     min-width: 100%;
+//     flex-direction: row;
+//     align-items: flex-start;
+//     margin-bottom: 1em;
+// }
+
+// .flag__figure {
+//         margin-right: 1em;
+// }
+
+// .flag__body {
+
+//     &:last-child {
+//     margin-bottom: 0;
+// }
+// }
+
+// .flag__title {
+//     margin: 0 0 .5em;
+// }
