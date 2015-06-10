@@ -35,7 +35,7 @@ if ( $query1->have_posts() ) :
     while ( $query1->have_posts() ) : $query1->the_post();
     ?>
 
-<div class="block grid__item u-flexed--1 u-ph--">
+<div class="block grid__item u-bl u-flexed--1 u-ph--">
         <div id="post-<?php the_ID(); ?>" <?php post_class( 'block__content u-p t-bg__frost shadow--z2 single-block-' . $count ); ?>>
 
         <?php

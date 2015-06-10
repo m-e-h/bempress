@@ -29,13 +29,13 @@ if ( $query2->have_posts() ) :
 
 <section class="row pages-highlight u-pv@respond t-bg__2">
 
-<div class="block-row grid u-flex u-flex--row@md u-flex--w wrap">
+<div class="block-row u-flex u-flex--row@md u-flex--w wrap">
 
 <?php
     while ( $query2->have_posts() ) : $query2->the_post();
     ?>
 
-<div class="block u-min--300 grid__item u-flexed--1 u-p--">
+<div class="block u-min--300 u-bl u-flexed--1 u-p--">
         <div id="post-<?php the_ID(); ?>" <?php post_class( 'block__content shadow--z1 u-p- t-bg__white block__' . $count ); ?>>
 <?php get_the_image( array(
         'size'   => 'bempress-sm',
