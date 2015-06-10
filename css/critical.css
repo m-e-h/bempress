@@ -207,7 +207,7 @@ h5,
 h6 {
     opacity: 0.7; 
     font-family: serif;
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -622,7 +622,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inherit;
     padding: 0;
 }
 nav ul li::before {

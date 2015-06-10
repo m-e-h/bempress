@@ -3883,6 +3883,10 @@ button.flickity-prev-next-button {
     min-width: 300px;
 }
 
+.u-max--150 {
+    max-width: 150px;
+}
+
 /*----------------------------------------------------*    #To be place in a more appropriate stylesheet later
 \*----------------------------------------------------*/
 .browserupgrade {
@@ -4178,7 +4182,7 @@ button.flickity-prev-next-button {
     opacity: 1;
 }
 
-p.intro-pagragraph {
+p.intro-paragraph {
     font-size: 22px;
     font-size: 1.2222222222rem;
     line-height: 1.2272727273;

@@ -11,9 +11,9 @@
 
 		<footer <?php hybrid_attr( 'footer' ); ?>>
 
-            <?php tha_footer_top(); ?>
+            <?php hybrid_get_sidebar( 'footer' ); ?>
 
-			<?php hybrid_get_sidebar( 'footer' ); ?>
+            <?php tha_footer_top(); ?>
 
 			</div><!-- .wrap -->
 
