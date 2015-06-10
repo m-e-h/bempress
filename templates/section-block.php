@@ -4,13 +4,10 @@
  */
 
 global $mehsc_atts;
+?>
 
-
-
-    ?>
-
-<div class="block u-flex u-min--300 grid__item <?php echo esc_attr( $mehsc_atts['block_type'] ); ?> u-flexed--1 u-p- <?php echo esc_attr( $mehsc_atts['width'] ); ?>">
-        <div id="post-<?php the_ID(); ?>" class="block__content u-flexed--1">
+<div class="<?php echo esc_attr( $mehsc_atts['width'] ); ?> block grid__item u-flex u-flexed--1 u-p-- <?php echo esc_attr( $mehsc_atts['block_type'] ); ?>">
+        <div id="post-<?php the_ID(); ?>" class="block__content shadow--z1 u-p- u-flexed--auto t-bg__white">
 <?php if ( 'show_img' === $mehsc_atts['show_image'] ) : ?>
 <?php get_the_image( array(
         'size'   => 'bempress-sm',
@@ -31,6 +28,6 @@ global $mehsc_atts;
 <?php endif; ?>
 
         </div><!-- #post-## -->
-</div>
+</div><!-- block-## -->
 <?php
 wp_reset_postdata();

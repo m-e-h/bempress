@@ -538,7 +538,7 @@ input[type="color"] {
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: #0058bb;
+    border-color: #0060cc;
     outline: 0;
     background-color: #fff;
 }
@@ -1005,9 +1005,9 @@ nav ul li::before {
 
 .u-flexed--no {
     -webkit-box-flex: 0;
-    -webkit-flex: none;
-    -ms-flex: none;
-    flex: none;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
 }
 
 @media screen and (max-width: 35.5em) {
@@ -1224,17 +1224,7 @@ nav ul li::before {
 /*------------------------------------*    #BLOCK
 \*------------------------------------*/
 .block {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex; 
     width: 100%;
-}
-.block .entry {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
 }
 
 .block__title {
@@ -1390,7 +1380,7 @@ input[type="submit"],
     border-width: 0;
     border-radius: 2px;
     color: rgba(255, 255, 255, 0.95);
-    background-color: #004088;
+    background-color: #004899;
     font: inherit;
     text-align: center;
     letter-spacing: 1px;
@@ -1431,7 +1421,7 @@ input[type="submit"]:active,
 .whistles-tabs .whistles-tabs-nav li a:active {
     outline: 0; 
     opacity: 1;
-    background-color: #0058bb;
+    background-color: #0060cc;
 }
 .btn:focus,
 button:focus,
@@ -1475,7 +1465,7 @@ input.is-active[type="submit"],
 .is-active.button--outline,
 .is-active.button--tab,
 .whistles-tabs .whistles-tabs-nav li a.is-active {
-    background-color: #002855;
+    background-color: #003066;
 }
 
 .button--transparent,
@@ -1502,7 +1492,7 @@ input.is-active[type="submit"],
     border-width: 3px;
     border-style: solid;
     border-color: currentColor; 
-    color: #004088;
+    color: #004899;
     background-color: transparent;
 }
 .button--outline:hover,
@@ -1511,10 +1501,10 @@ input.is-active[type="submit"],
 .badge a:active,
 .button--outline:focus,
 .badge a:focus {
-    border-color: #0058bb; 
+    border-color: #0060cc; 
     color: rgba(255, 255, 255, 0.95);
-    background-color: #0058bb;
-    background-color: #0058bb;
+    background-color: #0060cc;
+    background-color: #0060cc;
 }
 
 .button--tiny,
@@ -2226,20 +2216,20 @@ a.info {
     width: 100%; 
     border-radius: 0;
     opacity: 1;
-    background-color: #004088;
+    background-color: #004899;
 }
 .whistles-tabs .whistles-tabs-nav li a:hover,
 .whistles-tabs .whistles-tabs-nav li a:focus {
-    background-color: #004088;
+    background-color: #004899;
 }
 
 .whistles-tabs-nav li[aria-selected="true"] a {
     color: #fff;
-    background-color: #004088;
+    background-color: #004899;
 }
 .whistles-tabs-nav li[aria-selected="true"] a:hover,
 .whistles-tabs-nav li[aria-selected="true"] a:focus {
-    background-color: #004088; 
+    background-color: #004899; 
     cursor: default;
 }
 
@@ -2427,17 +2417,17 @@ button.flickity-prev-next-button {
 }
 
 .meh-slider .meh-slider__cell {
-    background: #002855;
+    background: #003066;
 }
 
 .meh-slider .meh-slider__text {
-    text-shadow: 0 2px rgba(0, 40, 85, 0.4);
+    text-shadow: 0 2px rgba(0, 48, 102, 0.4);
 }
 
 .meh-slider .flickity-page-dots .dot {
     margin: 0;
     border-radius: 0;
-    background: #0058bb; 
+    background: #0060cc; 
 
     -webkit-box-flex: 1;
     -webkit-flex: 1;
@@ -2741,22 +2731,22 @@ button.flickity-prev-next-button {
 
 .t-bg__1 {
     color: rgba(255, 255, 255, 0.95); 
-    background-color: #004088;
+    background-color: #004899;
 }
 
 .t-bg__1--glass {
     color: rgba(255, 255, 255, 0.95); 
-    background-color: rgba(0, 40, 85, 0.8);
+    background-color: rgba(0, 48, 102, 0.8);
 }
 
 .t-bg__1--dark {
     color: rgba(255, 255, 255, 0.95); 
-    background-color: #002855;
+    background-color: #003066;
 }
 
 .t-bg__1--light {
     color: rgba(255, 255, 255, 0.95); 
-    background-color: #0058bb;
+    background-color: #0060cc;
 }
 
 .t-bg__2 {
@@ -2804,15 +2794,15 @@ button.flickity-prev-next-button {
 }
 
 .t-fill__1 {
-    fill: #004088;
+    fill: #004899;
 }
 
 .t-fill__1--dark {
-    fill: #002855;
+    fill: #003066;
 }
 
 .t-fill__1--light {
-    fill: #0058bb;
+    fill: #0060cc;
 }
 
 .t-fill__2 {
@@ -2840,7 +2830,7 @@ button.flickity-prev-next-button {
 }
 
 .t-fg__1 {
-    color: #004088;
+    color: #004899;
 }
 
 .t-fg__2 {
@@ -4020,7 +4010,7 @@ button.flickity-prev-next-button {
     }
 }
 .entry__header--feature img {
-    opacity: 0.6; 
+    opacity: 0.5; 
     vertical-align: middle;
 }
 .entry__header--feature .feature-text {
@@ -4198,7 +4188,7 @@ p.intro-paragraph {
 }
 
 .site-container {
-    border-top: 60px solid #004088;
+    border-top: 60px solid #004899;
 }
 
 @media screen and (min-width: 48em) {
@@ -4282,5 +4272,5 @@ h3.widget-title {
 }
 
 .entry__header--feature {
-    background-color: #002855;
+    background-color: #003066;
 }
