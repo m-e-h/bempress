@@ -42,11 +42,9 @@
 	            </button>
 
 				<?php if( '1' == get_theme_mod( 'svg_logo' ) ) { ?>
-	            <div class="logo-image">
-	                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+	                <a class="logo-image" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 	                    <?php get_template_part( 'images/svg', 'logo' ); ?>
 	                </a>
-	            </div>
 	            <?php } ?>
 
 	            <div class="logo-text">
