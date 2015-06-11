@@ -1,8 +1,6 @@
 <?php
 /**
- * Functions for handling stylesheets in the framework.  Themes can add support for the
- * 'hybrid-core-styles' feature to allow the framework to handle loading the stylesheets into the
- * theme header at an appropriate point.
+ * Functions for handling styles in the framework.
  *
  * @package    HybridCore
  * @subpackage Includes
@@ -39,10 +37,10 @@ function hybrid_register_styles() {
 	$suffix = hybrid_get_min_suffix();
 
 	// Register styles for use by themes.
-	wp_register_style( 'hybrid-one-five', esc_url( HYBRID_CSS . "one-five{$suffix}.css" ), null, '20150516'                                       );
-	wp_register_style( 'hybrid-gallery',  esc_url( HYBRID_CSS . "gallery{$suffix}.css"  ), null, '20130526'                                       );
-	wp_register_style( 'hybrid-parent',   esc_url( hybrid_get_parent_stylesheet_uri()   ), null, wp_get_theme( get_template() )->get( 'Version' ) );
-	wp_register_style( 'hybrid-style',    esc_url( get_stylesheet_uri()                 ), null, wp_get_theme()->get( 'Version' )                 );
+	wp_register_style( 'hybrid-one-five', HYBRID_CSS . "one-five{$suffix}.css" );
+	wp_register_style( 'hybrid-gallery',  HYBRID_CSS . "gallery{$suffix}.css"  );
+	wp_register_style( 'hybrid-parent',   hybrid_get_parent_stylesheet_uri()   );
+	wp_register_style( 'hybrid-style',    get_stylesheet_uri()                 );
 }
 
 /**
@@ -59,11 +57,11 @@ function hybrid_get_parent_stylesheet_uri() {
 	$suffix = hybrid_get_min_suffix();
 
 	// Get the parent theme stylesheet.
-	$stylesheet_uri = trailingslashit( get_template_directory_uri() ) . 'style.css';
+	$stylesheet_uri = HYBRID_PARENT_URI . 'style.css';
 
 	// If a '.min' version of the parent theme stylesheet exists, use it.
-	if ( !empty( $suffix ) && file_exists( trailingslashit( get_template_directory() ) . "style{$suffix}.css" ) )
-		$stylesheet_uri = trailingslashit( get_template_directory_uri() ) . "style{$suffix}.css";
+	if ( $suffix && file_exists( HYBRID_PARENT . "style{$suffix}.css" ) )
+		$stylesheet_uri = HYBRID_PARENT_URI . "style{$suffix}.css";
 
 	return apply_filters( 'hybrid_get_parent_stylesheet_uri', $stylesheet_uri );
 }
@@ -94,7 +92,7 @@ function hybrid_min_stylesheet_uri( $stylesheet_uri, $stylesheet_dir_uri ) {
 		$stylesheet = str_replace( '.css', "{$suffix}.css", $stylesheet );
 
 		// If the stylesheet exists in the stylesheet directory, set the stylesheet URI to the dev stylesheet.
-		if ( file_exists( trailingslashit( get_stylesheet_directory() ) . $stylesheet ) )
+		if ( file_exists( HYBRID_CHILD . $stylesheet ) )
 			$stylesheet_uri = esc_url( trailingslashit( $stylesheet_dir_uri ) . $stylesheet );
 	}
 
@@ -115,7 +113,7 @@ function hybrid_locale_stylesheet_uri( $stylesheet_uri ) {
 
 	$locale_style = hybrid_get_locale_style();
 
-	return !empty( $locale_style ) ? esc_url( $locale_style ) : $stylesheet_uri;
+	return $locale_style ? esc_url( $locale_style ) : $stylesheet_uri;
 }
 
 /**

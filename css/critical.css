@@ -84,7 +84,7 @@ body {
 }
 
 p {
-    letter-spacing: 0.2;
+    letter-spacing: 0.2px;
 }
 
 /**
@@ -243,11 +243,11 @@ sup {
 }
 
 sup {
-    top: -0.5;
+    top: -0.5em;
 }
 
 sub {
-    bottom: -0.25;
+    bottom: -0.25em;
 }
 
 small {

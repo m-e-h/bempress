@@ -57,11 +57,11 @@ final class Bempress_Custom_Styles {
      * @return string
      */
     public function primary_color_default( $hex ) {
-        return $hex ? $hex : '31509d';
+        return $hex ? $hex : '004899';
     }
 
     public function secondary_color_default( $hex ) {
-        return $hex ? $hex : '8b8482';
+        return $hex ? $hex : 'ffe192';
     }
 
     public function accent_color_default( $hex ) {

@@ -27,10 +27,6 @@ get_header(); ?>
 
             <?php endwhile; ?>
 
-        <?php get_template_part( 'templates/showcase', 'pages' ); ?>
-
-        <?php get_template_part( 'templates/showcase', 'page' ); ?>
-
         <?php else : ?>
 
             <?php get_template_part( 'content/none' ); ?>

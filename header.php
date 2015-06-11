@@ -35,19 +35,25 @@
 
         <?php tha_header_top(); ?>
 
-                <div <?php hybrid_attr( 'branding' ); ?>>
+            <div <?php hybrid_attr( 'branding' ); ?>>
 
-                <button class="menu-toggle" aria-controls="menu-primary" aria-expanded="false">
-                <span></span>
-                </button>
-<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <?php get_template_part( 'images/vector/svg', 'smcs-logo' ); ?>
-</a>
-                <div class="logo-text">
-                <?php hybrid_site_title(); ?>
-                <?php hybrid_site_description(); ?>
-                </div>
-                </div>
+	            <button class="menu-toggle" aria-controls="menu-primary" aria-expanded="false">
+	            <span></span>
+	            </button>
+
+				<?php if( '1' == get_theme_mod( 'svg_logo' ) ) { ?>
+	            <div class="logo-image">
+	                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+	                    <?php get_template_part( 'images/svg', 'logo' ); ?>
+	                </a>
+	            </div>
+	            <?php } ?>
+
+	            <div class="logo-text">
+		            <?php hybrid_site_title(); ?>
+		            <?php hybrid_site_description(); ?>
+            	</div>
+            </div>
 
     <?php hybrid_get_menu( 'primary' ); ?>
 

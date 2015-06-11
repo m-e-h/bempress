@@ -25,7 +25,9 @@ function bempress_customize_register( $wp_customize ) {
     // Customize title and tagline sections and labels
     $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
     $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-    $wp_customize->get_control('page_for_posts')->label = esc_html__('Blog page', 'bempress');
+    $wp_customize->get_control( 'header_textcolor' )->section = 'title_tagline';
+    $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+    $wp_customize->get_control( 'page_for_posts' )->label = esc_html__('Blog page', 'bempress');
 
 
 
@@ -34,8 +36,6 @@ function bempress_customize_register( $wp_customize ) {
     $wp_customize->get_setting( 'background_color' )->transport  = 'postMessage';
     $wp_customize->get_control('background_color')->section = 'background_image';
     $wp_customize->get_section('background_image')->title = esc_html__('Background', 'bempress');
-    $wp_customize->get_control('header_textcolor')->section = 'title_tagline';
-    $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
     // Theme layouts
     $wp_customize->get_setting( 'theme_layout' )->transport = 'refresh';
@@ -59,6 +59,26 @@ function bempress_customize_register( $wp_customize ) {
                'context'    => 'bempress-custom-logo'
            )
        )
+    );
+
+    $wp_customize->add_setting(
+        'svg_logo',
+        array(
+            'default'           => 1,
+            'capability'        => 'edit_theme_options',
+        )
+    );
+
+    $wp_customize->add_control(
+        'svg_logo',
+        array(
+            'label'         => __( 'SVG Logo', 'bempress' ),
+            'section'       => 'title_tagline',
+            'settings'      => 'svg_logo',
+            'type'          => 'checkbox',
+            'priority' => 20,
+            'description'   => __( 'Add an svg file to your "image" folder and rename it "svg-logo.php".', 'bempress' ),
+        )
     );
 
 
@@ -338,7 +358,7 @@ $wp_customize->add_control(
 function bempress_customizer_js() {
   wp_enqueue_script(
     'bempress_theme_customizer',
-    get_template_directory_uri() . '/inc/theme-customizer.js',
+    get_template_directory_uri() . '/js/theme-customizer.js',
     array( 'jquery', 'customize-preview' ),
     '',
     true
@@ -365,5 +385,3 @@ function bempress_google_fonts() {
     wp_enqueue_style( 'google_font_headings' );
 
 }
-
-

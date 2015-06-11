@@ -5,7 +5,7 @@
  * @package BEMpress
  */
 
-//add_action( 'tha_content_before', 'doc_menu_primary' );
+//add_action( 'tha_content_bottom', 'meh_showcase_content_bottom' );
 //add_action( 'action_bar_right', 'doc_menu_secondary' );
 //add_action( 'action_bar_left', 'doc_action_bar_title' );
 
@@ -80,5 +80,3 @@ function action_bar_right() {
 function action_bar_left() {
     do_action( 'action_bar_left' );
 }
-
-

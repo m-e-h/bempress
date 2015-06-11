@@ -177,11 +177,11 @@ sup {
 }
 
 sup {
-    top: -0.5;
+    top: -0.5em;
 }
 
 sub {
-    bottom: -0.25;
+    bottom: -0.25em;
 }
 
 small {
@@ -254,7 +254,7 @@ body {
 }
 
 p {
-    letter-spacing: 0.2;
+    letter-spacing: 0.2px;
 }
 
 /**
@@ -1530,7 +1530,7 @@ input.is-active[type="submit"],
     font-weight: bold;
     font-style: normal;
     line-height: 2.25;
-    letter-spacing: 0.15;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
 }
 .c-testimonial__source:before {
@@ -1577,7 +1577,7 @@ input.is-active[type="submit"],
 }
 
 .sub-menu > .menu__item > a {
-    padding: 0.5 1em;
+    padding: 0.5em 1em;
 
     -webkit-box-flex: 100;
     -webkit-flex-grow: 100;
@@ -1790,7 +1790,7 @@ input.is-active[type="submit"],
 
 /* Vertical Menus - show the dropdown arrow */
 .menu-item-has-children > a:after {
-    padding-left: 0.5;
+    padding-left: 0.5em;
     font-size: small; 
     content: "\25B8";
 }
@@ -1944,7 +1944,7 @@ code,
 pre {
     display: inline-block;
     overflow: auto; 
-    padding: 0 0.5;
+    padding: 0 0.5em;
     border-radius: 2px;
     color: rgba(52, 73, 94, 0.95);
     background-color: #c6cfd6;
@@ -1953,8 +1953,8 @@ pre {
 }
 
 kbd {
-    margin: 0 0.25;
-    padding: 0.3334 0.5;
+    margin: 0 0.25em;
+    padding: 0.3334em 0.5em;
     border: 1px solid #c6cfd6;
     border-radius: 2px;
     color: rgba(52, 73, 94, 0.95);
@@ -2303,7 +2303,7 @@ a.info {
     margin: 0;
     padding: 1em;
     border-bottom: 1px solid rgba(30, 30, 30, 0.1); 
-    font-size: 0.9;
+    font-size: 0.9em;
 }
 
 .searchwp-live-search-result:last-of-type p {
@@ -2537,7 +2537,7 @@ button.flickity-prev-next-button {
 }
 
 .u-text--caps {
-    letter-spacing: 0.2; 
+    letter-spacing: 0.2em; 
     text-transform: uppercase;
 }
 
@@ -2785,14 +2785,14 @@ button.flickity-prev-next-button {
     font-size: 34px;
     font-weight: 300;
     line-height: 48px;
-    letter-spacing: -0.04;
+    letter-spacing: -0.04em;
 }
 
 .u-h2 {
     font-size: 24px;
     font-weight: 400;
     line-height: 36px;
-    letter-spacing: -0.02;
+    letter-spacing: -0.02em;
 }
 
 .u-h3 {
@@ -3810,8 +3810,8 @@ button.flickity-prev-next-button {
 /*----------------------------------------------------*    #To be place in a more appropriate stylesheet later
 \*----------------------------------------------------*/
 .browserupgrade {
-    margin: 0.2 0;
-    padding: 0.2 0; 
+    margin: 0.2em 0;
+    padding: 0.2em 0; 
     color: #000;
     background: #ccc;
     text-align: center;

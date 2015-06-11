@@ -59,13 +59,10 @@ function hybrid_add_post_type_support() {
  *
  * @since  1.2.0
  * @access public
- * @global int    $content_width The width for the theme's content area.
- * @param  int    $width         Numeric value of the width to set.
+ * @param  int    $width
  */
 function hybrid_set_content_width( $width = '' ) {
-	global $content_width;
-
-	$content_width = absint( $width );
+	$GLOBALS['content_width'] = absint( $width );
 }
 
 /**
@@ -73,13 +70,10 @@ function hybrid_set_content_width( $width = '' ) {
  *
  * @since  1.2.0
  * @access public
- * @global int    $content_width The width for the theme's content area.
- * @return int    $content_width
+ * @return int
  */
 function hybrid_get_content_width() {
-	global $content_width;
-
-	return $content_width;
+	return $GLOBALS['content_width'];
 }
 
 /**
@@ -122,14 +116,14 @@ function hybrid_locate_theme_file( $file_names ) {
 	foreach ( (array) $file_names as $file ) {
 
 		// If the file exists in the stylesheet (child theme) directory.
-		if ( is_child_theme() && file_exists( trailingslashit( get_stylesheet_directory() ) . $file ) ) {
-			$located = trailingslashit( get_stylesheet_directory_uri() ) . $file;
+		if ( is_child_theme() && file_exists( HYBRID_CHILD . $file ) ) {
+			$located = HYBRID_CHILD_URI . $file;
 			break;
 		}
 
 		// If the file exists in the template (parent theme) directory.
-		elseif ( file_exists( trailingslashit( get_template_directory() ) . $file ) ) {
-			$located = trailingslashit( get_template_directory_uri() ) . $file;
+		elseif ( file_exists( HYBRID_PARENT . $file ) ) {
+			$located = HYBRID_PARENT_URI . $file;
 			break;
 		}
 	}
