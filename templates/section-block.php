@@ -36,7 +36,7 @@ global $mehsc_atts;
 
         <div class="block__wrap u-flexed--1">
 
-            <div class="block__title u-h2 u-p- t-bg__2">
+            <div class="block__title u-p- t-bg__2">
             <?php the_title( sprintf( '<a class="u-h2 block__title--link" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a>' ); ?>
             </div>
             <?php if ( 'excerpt' === $mehsc_atts['show_content'] ) : ?>
