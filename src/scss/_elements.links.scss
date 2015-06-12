@@ -3,8 +3,7 @@ a {
     text-decoration: none;
     opacity: $base-opacity;
     //color: $color-links;
-    font-weight: 700;
-    transition: opacity $base-transition ease;
+    transition: $base-transition ease;
 
     &:active,
     &:hover,

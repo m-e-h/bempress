@@ -330,10 +330,9 @@ template {
 a {
     opacity: 0.8;
     background-color: transparent;
-    font-weight: 700;
     text-decoration: none;
-    -webkit-transition: opacity 0.35s ease;
-    transition: opacity 0.35s ease;
+    -webkit-transition: 0.35s ease;
+    transition: 0.35s ease;
 }
 a:active,
 a:hover,
@@ -1119,6 +1118,18 @@ nav ul li::before {
     max-width: 100%;
 }
 
+/*------------------------------------*    $ARTICLES
+\*------------------------------------*/
+.entry-content a {
+    font-weight: 700;
+}
+.entry-content a:hover,
+.entry-content a:focus,
+.entry-content a:active {
+    border-color: rgba(52, 73, 94, 0);
+    background-color: rgba(52, 73, 94, 0.1);
+}
+
 /*------------------------------------*    #Layout Wrappers
 \*------------------------------------*/
 .wrapper,
@@ -1139,47 +1150,35 @@ nav ul li::before {
 
 /*------------------------------------*    #BLOCK
 \*------------------------------------*/
-.block {
+.flag {
+    -webkit-align-items: flex-start;
+    align-items: flex-start; 
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+}
+@media screen and (min-width: 48em) {
+    .flag {
+        flex-direction: row; 
+
+        -webkit-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+    }
+}
+
+.block__figure {
+    background-color: #e3e8ec;
+    text-align: center;
+}
+.block__figure > svg {
     width: 100%;
+    max-width: 90px;
 }
-
-.block__title {
-    margin: 0;
-    margin-bottom: 18px; 
-    font-size: 22px;
-}
-
-.block__img {
-    border-radius: 2px 2px 0 0;
-    background-color: #fff;
-}
-.block__img a:hover {
-    opacity: 0.8;
-}
-
-.block__content {
-    padding: 0; 
-    border-radius: 2px;
-}
-
-.block__img ~ .block__content {
-    border-top: 0; 
-    border-radius: 0 0 2px 2px;
-}
-
-.block__icon {
-    max-width: 50%;
-}
-
-.block__title--color {
-    margin-bottom: 27px;
-}
-
-.block__action {
-    border-radius: 0 0 2px 2px;
-}
-.block__action > a {
-    color: #fff !important;
+.block__figure a {
+    display: block;
+    border-bottom: 0 !important;
+    font-weight: normal;
 }
 
 .media {
@@ -1217,22 +1216,6 @@ nav ul li::before {
     line-height: 1;
 }
 
-.flag__figure {
-    width: 90px;
-    height: 90px;
-    padding: 15px;
-    border-radius: 50%; 
-    background-color: #e3e8ec;
-}
-.flag__figure > svg {
-    width: 100%;
-    max-width: 90px;
-
-    fill: #fff;
-}
-
-/*------------------------------------*    $ARTICLES
-\*------------------------------------*/
 /**
  * #COMPONENTS
  */
@@ -2430,16 +2413,6 @@ button.flickity-prev-next-button {
     opacity: 0.8;
 }
 
-.entry-content a:not(.button) {
-    border-bottom: 1px solid rgba(52, 73, 94, 0.4);
-}
-.entry-content a:not(.button):hover,
-.entry-content a:not(.button):focus,
-.entry-content a:not(.button):active {
-    border-color: rgba(52, 73, 94, 0);
-    background-color: rgba(52, 73, 94, 0.1);
-}
-
 /*------------------------------------*    #HELPERS
 \*------------------------------------*/
 .clearfix:after {
@@ -3282,11 +3255,6 @@ button.flickity-prev-next-button {
         padding: 27px;
     }
 }
-@media screen and (min-width: 64em) {
-    .u-p\@respond {
-        padding: 54px;
-    }
-}
 
 .u-ph\@respond {
     padding-right: 14px;
@@ -3296,12 +3264,6 @@ button.flickity-prev-next-button {
     .u-ph\@respond {
         padding-right: 27px;
         padding-left: 27px;
-    }
-}
-@media screen and (min-width: 64em) {
-    .u-ph\@respond {
-        padding-right: 54px;
-        padding-left: 54px;
     }
 }
 
@@ -3315,12 +3277,6 @@ button.flickity-prev-next-button {
         padding-bottom: 27px;
     }
 }
-@media screen and (min-width: 64em) {
-    .u-pv\@respond {
-        padding-top: 54px;
-        padding-bottom: 54px;
-    }
-}
 
 .u-pt\@respond {
     padding-top: 14px;
@@ -3328,11 +3284,6 @@ button.flickity-prev-next-button {
 @media screen and (min-width: 48em) {
     .u-pt\@respond {
         padding-top: 27px;
-    }
-}
-@media screen and (min-width: 64em) {
-    .u-pt\@respond {
-        padding-top: 54px;
     }
 }
 
@@ -3344,11 +3295,6 @@ button.flickity-prev-next-button {
         padding-bottom: 27px;
     }
 }
-@media screen and (min-width: 64em) {
-    .u-pb\@respond {
-        padding-bottom: 54px;
-    }
-}
 
 .u-pl\@respond {
     padding-left: 14px;
@@ -3356,11 +3302,6 @@ button.flickity-prev-next-button {
 @media screen and (min-width: 48em) {
     .u-pl\@respond {
         padding-left: 27px;
-    }
-}
-@media screen and (min-width: 64em) {
-    .u-pl\@respond {
-        padding-left: 54px;
     }
 }
 
@@ -3372,11 +3313,6 @@ button.flickity-prev-next-button {
         padding-right: 27px;
     }
 }
-@media screen and (min-width: 64em) {
-    .u-pr\@respond {
-        padding-right: 54px;
-    }
-}
 
 .u-m\@respond {
     margin: 14px;
@@ -3384,11 +3320,6 @@ button.flickity-prev-next-button {
 @media screen and (min-width: 48em) {
     .u-m\@respond {
         margin: 27px;
-    }
-}
-@media screen and (min-width: 64em) {
-    .u-m\@respond {
-        margin: 54px;
     }
 }
 
@@ -3407,12 +3338,6 @@ button.flickity-prev-next-button {
         margin-left: 27px;
     }
 }
-@media screen and (min-width: 64em) {
-    .u-mh\@respond {
-        margin-right: 54px;
-        margin-left: 54px;
-    }
-}
 
 .u-mv\@respond {
     margin-top: 14px;
@@ -3424,12 +3349,6 @@ button.flickity-prev-next-button {
         margin-bottom: 27px;
     }
 }
-@media screen and (min-width: 64em) {
-    .u-mv\@respond {
-        margin-top: 54px;
-        margin-bottom: 54px;
-    }
-}
 
 .u-mt\@respond {
     margin-top: 14px;
@@ -3437,11 +3356,6 @@ button.flickity-prev-next-button {
 @media screen and (min-width: 48em) {
     .u-mt\@respond {
         margin-top: 27px;
-    }
-}
-@media screen and (min-width: 64em) {
-    .u-mt\@respond {
-        margin-top: 54px;
     }
 }
 
@@ -3453,11 +3367,6 @@ button.flickity-prev-next-button {
         margin-bottom: 27px;
     }
 }
-@media screen and (min-width: 64em) {
-    .u-mb\@respond {
-        margin-bottom: 54px;
-    }
-}
 
 .u-ml\@respond {
     margin-left: 14px;
@@ -3465,11 +3374,6 @@ button.flickity-prev-next-button {
 @media screen and (min-width: 48em) {
     .u-ml\@respond {
         margin-left: 27px;
-    }
-}
-@media screen and (min-width: 64em) {
-    .u-ml\@respond {
-        margin-left: 54px;
     }
 }
 
@@ -3481,10 +3385,11 @@ button.flickity-prev-next-button {
         margin-right: 27px;
     }
 }
-@media screen and (min-width: 64em) {
-    .u-mr\@respond {
-        margin-right: 54px;
-    }
+
+.u-p-cradle {
+    padding-right: 14px;
+    padding-bottom: 14px; 
+    padding-left: 14px;
 }
 
 .u-1of1 {
@@ -3989,11 +3894,6 @@ button.flickity-prev-next-button {
     letter-spacing: 1px;
 }
 
-.block-row {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
 .feature-box {
     display: inline-block;
     padding-right: 27px;
@@ -4220,4 +4120,35 @@ input.search-submit {
     width: 30%;
     padding: 0;
     border-radius: 0 2px 2px 0;
+}
+
+.block ul {
+    text-align: left;
+}
+
+.whistles-tabs-wrap > .whistle-content {
+    background: none;
+}
+
+td {
+    vertical-align: top;
+}
+
+.home .pages-highlight .block__body {
+    display: none;
+}
+
+p.intro-paragraph {
+    font-size: 22px;
+    font-style: italic; 
+    letter-spacing: 1px;
+}
+
+.menu-primary {
+    text-align: center;
+}
+
+.menu__item > a {
+    padding-right: 14px; 
+    padding-left: 14px;
 }

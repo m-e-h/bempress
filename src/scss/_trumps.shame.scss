@@ -215,10 +215,7 @@
 }
 
 
-.block-row {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
+
 
 
 
@@ -527,4 +524,38 @@ input.search-submit {
     width: 30%;
     padding: 0;
     border-radius: 0 $base-radius $base-radius 0;
+}
+
+
+
+
+.block ul {
+    text-align: left;
+}
+
+.whistles-tabs-wrap > .whistle-content {
+    background: none;
+}
+
+td {
+    vertical-align: top;
+}
+
+.home .pages-highlight .block__body {
+    display: none;
+}
+
+p.intro-paragraph {
+    font-size: 22px;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+.menu-primary {
+    text-align: center;
+}
+
+.menu__item>a {
+    padding-left: 14px;
+    padding-right: 14px;
 }

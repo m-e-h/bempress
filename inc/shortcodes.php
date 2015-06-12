@@ -38,21 +38,11 @@ $args = array(
 $query2 = new WP_Query( $args );
 while ( $query2->have_posts() ) : $query2->the_post();
 
-if ( 'block' === $mehsc_atts['block_type'] ) :
-
 ob_start();
 get_template_part( 'templates/section', 'block' );
 $output .= ob_get_clean();
 
-elseif ( 'flag' === $mehsc_atts['block_type'] ) :
-
-ob_start();
-get_template_part( 'templates/section', 'flag' );
-$output .= ob_get_clean();
-
-endif;
-
-    endwhile;
+endwhile;
 
 $output .= '</div></section>';
     return $output;

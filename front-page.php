@@ -7,8 +7,6 @@
 
 get_header(); ?>
 
-
-
     <?php tha_content_before(); ?>
 
     <main <?php hybrid_attr( 'content' ); ?>>
@@ -16,6 +14,8 @@ get_header(); ?>
         <?php tha_content_top(); ?>
 
         <?php if ( have_posts() ) : ?>
+
+        <?php echo do_shortcode( '[slider type="slider" group="front" order="DESC" orderby="rand" limit="-1"]' ); ?>
 
             <?php while ( have_posts() ) : the_post(); ?>
 
@@ -26,6 +26,12 @@ get_header(); ?>
                 <?php tha_entry_after(); ?>
 
             <?php endwhile; ?>
+
+        <?php get_template_part( 'templates/showcase', 'pages' ); ?>
+
+            <?php hybrid_get_sidebar( 'front' ); ?>
+
+        <?php get_template_part( 'templates/showcase', 'page' ); ?>
 
         <?php else : ?>
 

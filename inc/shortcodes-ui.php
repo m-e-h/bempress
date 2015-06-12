@@ -42,20 +42,24 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
                 ),
 
                 array(
-                    'label' => 'Width',
+                    'label' => 'Blocks Per Row',
                     'attr'  => 'width',
                     'type' => 'select',
+                    'value' => 'u-1of1@md',
                     'options' => array(
-                        'u-1of1@md' => 'Full Width',
-                        'u-1of2@md' => 'One Half',
-                        'u-1of3@md' => 'One Third',
+                        'u-1of1@md' => 'One',
+                        'u-1of2@md' => 'Two',
+                        'u-1of3@md' => 'Three',
+                        'u-1of4@md' => 'Four',
                     ),
+                    'description' => 'ex. For 2 blocks, side by side you would choose "Two"',
                 ),
 
                 array(
                     'label' => 'Content to Show',
                     'attr'  => 'show_content',
                     'type' => 'select',
+                    'value' => 'excerpt',
                     'options' => array(
                         'excerpt' => 'Excerpt',
                         'content' => 'Content',
@@ -67,6 +71,7 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
                     'label' => 'Show Featured Image',
                     'attr'  => 'show_image',
                     'type' => 'select',
+                    'value' => 'show_img',
                     'options' => array(
                         'show_img' => 'Show Image',
                         'hide_img' => 'Hide Image',
@@ -77,10 +82,13 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
                     'label' => 'Block Type',
                     'attr'  => 'block_type',
                     'type' => 'select',
+                    'value' => 'block',
                     'options' => array(
                         'block' => 'Block',
                         'flag' => 'Panel',
                     ),
+                    'multiple' => false,
+                    'description' => '*Block = Large image on top. *Panel = Small image to the left.',
                 ),
 
                 array(
