@@ -13,6 +13,7 @@ add_action( 'after_setup_theme', 'bempress_responsive_videos_init', 99 );
 add_filter( 'hybrid_attr_comments-area', 'flagship_attr_comments_area' );
 add_filter( 'walker_nav_menu_start_el', 'bempress_nav_description', 10, 4 );
 add_filter('upload_mimes', 'bempress_mime_types');
+add_filter('the_content', 'bempress_remove_empty_p', 20, 1);
 
 
 /**
@@ -176,4 +177,19 @@ function bempress_nav_description( $item_output, $item, $depth, $args ) {
 function bempress_mime_types($mimes) {
   $mimes['svg'] = 'image/svg+xml';
   return $mimes;
+}
+
+
+
+
+/**
+ * Remove empty paragraphs created by wpautop()
+ * @author Ryan Hamilton
+ * @link https://gist.github.com/Fantikerz/5557617
+ */
+function bempress_remove_empty_p( $content ) {
+    $content = force_balance_tags( $content );
+    $content = preg_replace( '#<p>\s*+(<br\s*/*>)?\s*</p>#i', '', $content );
+    $content = preg_replace( '~\s?<p>(\s|&nbsp;)+</p>\s?~', '', $content );
+    return $content;
 }
