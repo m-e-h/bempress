@@ -17,8 +17,14 @@
     @include md {
     flex-direction: row;
 }
+    .block__title {
+        padding-top: 0;
+    }
 }
 
+.block__title a {
+    color: inherit;
+}
 .block__figure {
     background-color: $color-grey-ui;
     text-align: center;
@@ -64,3 +70,8 @@
     line-height: 1;
 }
 
+
+
+.block__figure ~ .block__wrap > .block__title {
+    background-color: transparent;
+}

@@ -74,21 +74,6 @@ Tags:
  * #TOOLS
  */
 /**
- * Copyright 2015 Google Inc. All rights reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-/**
  * #ELEMENTS
  */
 h1 {
@@ -1166,6 +1151,13 @@ nav ul li::before {
         -ms-flex-direction: row;
     }
 }
+.flag .block__title {
+    padding-top: 0;
+}
+
+.block__title a {
+    color: inherit;
+}
 
 .block__figure {
     background-color: #e3e8ec;
@@ -1214,6 +1206,10 @@ nav ul li::before {
     font-size: 14px;
     font-size: 0.7777777778rem;
     line-height: 1;
+}
+
+.block__figure ~ .block__wrap > .block__title {
+    background-color: transparent;
 }
 
 /**
@@ -1292,7 +1288,7 @@ input[type="submit"],
     padding: 13.5px 27px;
     border-width: 0;
     border-radius: 2px;
-    color: rgba(255, 255, 255, 0.95);
+    color: #fff;
     background-color: #004899;
     font: inherit;
     text-align: center;
@@ -1415,7 +1411,7 @@ input.is-active[type="submit"],
 .button--outline:focus,
 .badge a:focus {
     border-color: #0060cc; 
-    color: rgba(255, 255, 255, 0.95);
+    color: #fff;
     background-color: #0060cc;
     background-color: #0060cc;
 }
@@ -1929,7 +1925,7 @@ pre {
     overflow: auto; 
     padding: 0 0.5em;
     border-radius: 2px;
-    color: rgba(52, 73, 94, 0.95);
+    color: #34495e;
     background-color: #c6cfd6;
     word-wrap: break-word;
     word-break: break-all;
@@ -1940,7 +1936,7 @@ kbd {
     padding: 0.3334em 0.5em;
     border: 1px solid #c6cfd6;
     border-radius: 2px;
-    color: rgba(52, 73, 94, 0.95);
+    color: #34495e;
     background-color: #f2f4f6;
     box-shadow: inset 0 1px 0 #fff;
 }
@@ -2588,107 +2584,107 @@ button.flickity-prev-next-button {
 
 .t-bg__white,
 .sub-menu {
-    color: rgba(52, 73, 94, 0.95); 
+    color: #34495e; 
     background-color: #fff;
 }
 
 .t-bg__off-white {
-    color: rgba(52, 73, 94, 0.95); 
+    color: #34495e; 
     background-color: #fffaf5;
 }
 
 .t-bg__grey {
-    color: rgba(52, 73, 94, 0.95); 
+    color: #34495e; 
     background-color: #d2d2d2;
 }
 
 .t-bg__shade {
-    color: rgba(255, 255, 255, 0.95); 
+    color: #fff; 
     background-color: rgba(0, 0, 0, 0.2);
 }
 
 .t-bg__tint {
-    color: rgba(255, 255, 255, 0.95); 
+    color: #fff; 
     background-color: rgba(86, 106, 122, 0.6);
 }
 
 .t-bg__frost {
-    color: rgba(52, 73, 94, 0.95); 
+    color: #34495e; 
     background-color: rgba(248, 248, 248, 0.85);
 }
 
 .t-bg__grey--dark {
-    color: rgba(255, 255, 255, 0.95); 
+    color: #fff; 
     background-color: #525252;
 }
 
 .t-bg__grey--light {
-    color: rgba(52, 73, 94, 0.95); 
+    color: #34495e; 
     background-color: #ebebeb;
 }
 
 .t-bg__grey--lighter {
-    color: rgba(52, 73, 94, 0.95); 
+    color: #34495e; 
     background-color: #f8f8f8;
 }
 
 .t-bg__1 {
-    color: rgba(255, 255, 255, 0.95); 
+    color: #fff; 
     background-color: #004899;
 }
 
 .t-bg__1--glass {
-    color: rgba(255, 255, 255, 0.95); 
+    color: #fff; 
     background-color: rgba(0, 48, 102, 0.8);
 }
 
 .t-bg__1--dark {
-    color: rgba(255, 255, 255, 0.95); 
+    color: #fff; 
     background-color: #003066;
 }
 
 .t-bg__1--light {
-    color: rgba(255, 255, 255, 0.95); 
+    color: #fff; 
     background-color: #0060cc;
 }
 
 .t-bg__2 {
-    color: rgba(52, 73, 94, 0.95); 
+    color: #34495e; 
     background-color: #ffe192;
 }
 
 .t-bg__2--dark {
-    color: rgba(52, 73, 94, 0.95); 
+    color: #34495e; 
     background-color: #ffd35f;
 }
 
 .t-bg__2--glass {
-    color: rgba(52, 73, 94, 0.95); 
+    color: #34495e; 
     background-color: rgba(255, 211, 95, 0.8);
 }
 
 .t-bg__2--light {
-    color: rgba(52, 73, 94, 0.95); 
+    color: #34495e; 
     background-color: #ffefc5;
 }
 
 .t-bg__3 {
-    color: rgba(52, 73, 94, 0.95); 
+    color: #34495e; 
     background-color: #ebebeb;
 }
 
 .t-bg__3--dark {
-    color: rgba(52, 73, 94, 0.95); 
+    color: #34495e; 
     background-color: #d2d2d2;
 }
 
 .t-bg__3--light {
-    color: rgba(52, 73, 94, 0.95); 
+    color: #34495e; 
     background-color: white;
 }
 
 .t-bg__3--glass {
-    color: rgba(52, 73, 94, 0.95); 
+    color: #34495e; 
     background-color: rgba(210, 210, 210, 0.8);
 }
 
@@ -2754,106 +2750,94 @@ button.flickity-prev-next-button {
 
 /*------------------------------------*    #HEADINGS
 \*------------------------------------*/
+.u-h1,
+.u-h2,
+.u-h3,
+.u-h4,
+u-h5,
+a.u-h1,
+a.u-h2,
+a.u-h3,
+a.u-h4,
+a.u-h5 {
+    display: block; 
+    color: #34495e !important;
+    font-weight: normal;
+    line-height: 1;
+}
+.u-h1:hover,
+.u-h2:hover,
+.u-h3:hover,
+.u-h4:hover,
+u-h5:hover,
+a.u-h1:hover,
+a.u-h2:hover,
+a.u-h3:hover,
+a.u-h4:hover,
+a.u-h5:hover {
+    background-color: transparent;
+}
+
 .u-h1 {
-    font-size: 34px;
-    font-weight: 300;
-    line-height: 48px;
-    letter-spacing: -0.04em;
-}
-
-.u-h2 {
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 36px;
-    letter-spacing: -0.02em;
-}
-
-.u-h3 {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 32px;
-}
-
-.u-h4 {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-}
-
-.u-h5 {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 24px;
-}
-
-.h1 {
     font-size: 33.75px;
     font-size: 1.875rem;
-    line-height: 1.6;
     line-height: 1;
 }
 @media screen and (min-width: 48em) {
-    .h1 {
+    .u-h1 {
         font-size: 40.5px;
         font-size: 2.25rem;
     }
 }
 
-.h2 {
+.u-h2 {
     font-size: 27px;
     font-size: 1.5rem;
-    line-height: 1;
 }
 @media screen and (min-width: 48em) {
-    .h2 {
+    .u-h2 {
         font-size: 33.75px;
         font-size: 1.875rem;
-        line-height: 1.6;
     }
 }
 
-.h3,
+.u-h3,
 .widget-title,
 .action-bar-wrap .site-title {
     font-size: 22.5px;
     font-size: 1.25rem;
-    line-height: 1.2;
 }
 @media screen and (min-width: 48em) {
-    .h3,
+    .u-h3,
     .widget-title,
     .action-bar-wrap .site-title {
         font-size: 27px;
         font-size: 1.5rem;
-        line-height: 1;
     }
 }
 
-.h4 {
+.u-h4 {
     font-size: 22.5px;
     font-size: 1.25rem;
-    line-height: 1.2;
 }
 
-.h5 {
+.u-h5 {
     font-size: 18px;
     font-size: 1rem;
-    line-height: 1.5;
 }
 
-.h6 {
+.u-h6 {
     font-size: 16px;
     font-size: 0.8888888889rem;
-    line-height: 1.6875;
 }
 
-.text-jumbo {
+.u-text-jumbo {
     font-size: 33.75px;
     font-size: 1.875rem;
     line-height: 1;
 }
 @media screen and (min-width: 48em) {
-    .text-jumbo {
+    .u-text-jumbo {
         font-size: 60.75px;
         font-size: 3.375rem;
     }
@@ -3386,7 +3370,7 @@ button.flickity-prev-next-button {
     }
 }
 
-.u-p-cradle {
+.u-p-cradle- {
     padding-right: 14px;
     padding-bottom: 14px; 
     padding-left: 14px;
@@ -4136,12 +4120,6 @@ td {
 
 .home .pages-highlight .block__body {
     display: none;
-}
-
-p.intro-paragraph {
-    font-size: 22px;
-    font-style: italic; 
-    letter-spacing: 1px;
 }
 
 .menu-primary {

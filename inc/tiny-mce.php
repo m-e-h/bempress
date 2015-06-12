@@ -78,7 +78,7 @@ function flagship_tiny_mce_formats( $args ) {
 			array(
 				'title'    => __( 'Intro Paragraph', 'flagship-library' ),
 				'selector' => 'p',
-				'classes'  => 'intro-pagragraph',
+				'classes'  => 'intro-paragraph',
 				'wrapper'  => true,
 			),
 			array(

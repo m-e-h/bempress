@@ -79,7 +79,7 @@ gulp.task('styles', function () {
     .pipe(gulp.dest('./'))
     //Concatenate And Minify Styles
     .pipe(rename({ suffix: '.min' }))
-    .pipe(minifyCSS())
+    .pipe(minifyCSS({compatibility: '+properties.zeroUnits'}))
     .pipe(gulp.dest('./'));
 });
 

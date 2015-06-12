@@ -56,7 +56,7 @@ class AttrTrumps {
 	public $archive_description      	= ' wrap u-mt-';
 
 	/* Post-specific attributes. */
-	public $post                  		= ' br u-mv-- u-p@respond';
+	public $post                  		= ' br';
     public $post_card_layout            = ' t-bg__white u-flexed--grow';
 	public $entry_title           		= ' wrap entry__title';
 	public $entry_author          		= ' u-mr- entry__author';

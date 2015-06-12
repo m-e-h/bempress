@@ -22,6 +22,7 @@ require_once $includes_dir . 'inc/template-actions.php';
 require_once $includes_dir . 'inc/shortcodes.php';
 require_once $includes_dir . 'inc/shortcodes-ui.php';
 require_once $includes_dir . 'inc/html-min.php';
+require_once $includes_dir . 'inc/tiny-mce.php';
 require_once $includes_dir . 'inc/customizer/custom-header.php';
 require_once $includes_dir . 'inc/customizer/Color.php';
 require_once $includes_dir . 'inc/customizer/custom-styles.php';
