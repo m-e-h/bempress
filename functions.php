@@ -11,6 +11,7 @@ $includes_dir = trailingslashit( get_template_directory() );
 require_once( $includes_dir . 'hybrid-core/hybrid.php' );
 new Hybrid();
 
+require_once $includes_dir . 'inc/require-plugins.php';
 require_once $includes_dir . 'inc/scripts.php';
 require_once $includes_dir . 'inc/customizer/fonts.php';
 require_once $includes_dir . 'inc/attr.php';

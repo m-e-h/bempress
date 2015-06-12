@@ -48,12 +48,20 @@ gulp.task('images', function () {
     .pipe(gulp.dest('images'));
 });
 
-// Copy hybrid-core to extras
+// Copy hybrid-core to root/
 gulp.task('hybrid', function () {
   return gulp.src([
   	'src/composer/justintadlock/hybrid-core/**/*'
   	])
     .pipe(gulp.dest('hybrid-core'));
+});
+
+// Copy tgmpa to inc/
+gulp.task('tgmpa', function () {
+  return gulp.src([
+    'src/composer/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php'
+    ])
+    .pipe(gulp.dest('inc'));
 });
 
 // Compile and Automatically Prefix Stylesheets
@@ -141,5 +149,5 @@ gulp.task('serve', ['styles'], function () {
 
 // Build Production Files, the Default Task
 gulp.task('default', function (cb) {
-  runSequence('styles', ['composer', 'scripts', 'critical', 'wpeditor', 'images', 'hybrid'], cb);
+  runSequence('styles', ['composer', 'scripts', 'critical', 'wpeditor', 'images', 'tgmpa', 'hybrid'], cb);
 });

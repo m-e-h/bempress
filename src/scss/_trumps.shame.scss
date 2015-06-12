@@ -506,3 +506,25 @@ h3.widget-title {
 .entry__header--feature {
     background-color: $color-primary-dark;
 }
+
+
+
+
+.search-form label {
+    display: inline-block;
+    width: 70%;
+
+}
+
+input.search-field {
+    border-radius: $base-radius 0 0 $base-radius;
+    border-right: 0;
+}
+
+
+input.search-submit {
+    display: inline-block;
+    width: 30%;
+    padding: 0;
+    border-radius: 0 $base-radius $base-radius 0;
+}
