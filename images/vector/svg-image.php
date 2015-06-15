@@ -1,1 +1,0 @@
-<svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path class="t-fill__1--light" d="M40 41H8c-2.2 0-4-1.8-4-4V11c0-2.2 1.8-4 4-4h32c2.2 0 4 1.8 4 4v26c0 2.2-1.8 4-4 4z"/><circle fill="#FFF" cx="35" cy="16" r="3"/><path class="t-fill__1--dark" d="M20 16L9 32h22"/><path class="t-fill__1" d="M31 22l-8 10h16"/></svg>

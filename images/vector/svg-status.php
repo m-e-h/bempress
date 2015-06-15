@@ -1,1 +1,0 @@
-<svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path class="t-fill__2--dark" d="M42 37H6V25l10-15 14 7L42 6"/><path class="t-fill__2--light" d="M42 42H6V32l10-8 14 2 12-9"/></svg>
