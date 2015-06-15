@@ -1,0 +1,16 @@
+a {
+    background-color: transparent;
+    text-decoration: none;
+    opacity: $base-opacity;
+    //color: $color-links;
+    font-weight: 700;
+    transition: opacity $base-transition ease;
+
+    &:active,
+    &:hover,
+    &:focus {
+        opacity: 1;
+        outline: 0;
+        text-decoration: none;
+    }
+}

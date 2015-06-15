@@ -1,0 +1,52 @@
+/*
+ * Flex Object
+ */
+
+.u-flex { display: flex; }
+.u-flex--w { flex-wrap: wrap; }
+.u-flex--col { flex-direction: column; }
+.u-flex--row { flex-direction: row; }
+
+.u-flex--ai-c { align-items: center; }
+.u-flex--ai-b { align-items: baseline; }
+.u-flex--ai-s { align-items: stretch; }
+.u-flex--ai-fs { align-items: flex-start; }
+.u-flex--ai-fe { align-items: flex-end; }
+
+.u-flex--j-c { justify-content: center; }
+.u-flex--j-sa { justify-content: space-around; }
+.u-flex--j-sb { justify-content: space-between; }
+
+
+.u-flexed--first { order: -1; }
+.u-flexed--last { order: 1024; }
+
+
+.u-flexed--1 { flex: 1; }
+.u-flexed--auto { flex: 1 1 auto; }
+.u-flexed--grow { flex: 1 0 auto; }
+.u-flexed--no { flex: 0 0 auto; }
+
+@include sm {
+
+    .u-flex\@sm { display: flex; }
+    .u-flex--col\@sm { flex-direction: column; }
+    .u-flex--row\@sm { flex-direction: row; }
+
+}
+
+@include md {
+
+    .u-flex\@md { display: flex; }
+    .u-flex--col\@md { flex-direction: column; }
+    .u-flex--row\@md { flex-direction: row; }
+}
+
+@include lg {
+
+    .u-flex\@lg { display: flex; }
+    .u-flex--col\@lg { flex-direction: column; }
+    .u-flex--row\@lg { flex-direction: row; }
+
+}
+

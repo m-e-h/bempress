@@ -1,0 +1,508 @@
+/*----------------------------------------------------*\
+    #To be place in a more appropriate stylesheet later
+\*----------------------------------------------------*/
+
+.browserupgrade {
+    margin: 0.2em 0;
+    text-align: center;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+    a {
+        color: blue;
+        text-decoration: underline;
+    }
+}
+
+
+.site-logo {
+    max-height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+.header-wrap {
+    text-align: center;
+}
+
+.site-branding {
+    text-shadow: 0 2px rgba(62, 71, 76, 0.4);
+    //overflow: hidden;
+}
+
+.site-title {
+    display: inline-block;
+    a {
+        font-weight: 400;
+        letter-spacing: 2px;
+    }
+}
+
+.toggle__title {
+    @include font-size($base-font-size - 3);
+}
+
+
+.toggles.grid {
+  max-width: 100%;
+}
+
+.toggle {
+    width: auto;
+    margin: auto;
+    border-radius: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.panel {
+    display: none;
+    width: 100%;
+    margin: 0;
+}
+
+.site-header {
+    width: 100%;
+}
+
+// .widget li:last-of-type,
+// .widget ul:last-of-type,
+// p:last-of-type {
+//     margin-bottom: 0;
+// }
+
+.credit {
+    text-align: center;
+}
+
+.site-link {
+    vertical-align: baseline;
+}
+
+
+.panel {
+    display: block;
+    z-index: 1;
+    //position: fixed;
+    max-height: 0;
+    height: 100%;
+    overflow: hidden;
+    //opacity: 0.5;
+    /*  Add animation when content expands and collapses */
+
+    //-webkit-transition: opacity 0.35s ease;
+    transition: max-height 0.1s cubic-bezier(0, 0, 0, 1.01), opacity 0.0s ease;
+}
+
+.panel.panel-open {
+    max-height: 9999em;
+    transition: max-height 2s cubic-bezier(0.95, 0.03, 1, 1), opacity 0.0s ease;
+    opacity: 1;
+    overflow: visible;
+}
+
+.close-btn {
+    color: grey;
+    font-size: 23px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-color: white;
+    border-radius: 50%;
+    height: 38px;
+    width: 38px;
+    text-align: center;
+}
+
+
+
+.comment-list {
+  list-style: none;
+}
+
+
+.home .entry-content {
+    max-width: 100%;
+}
+
+.entry__header--feature img {
+    width: 100%;
+}
+
+
+.entry__header--feature {
+    width: 100%;
+    min-height: 50px;
+    text-align: center;
+    display: inline-block;
+    margin-top: -$base-spacing-unit--small;
+
+    @include md {
+        min-height: 200px;
+    }
+
+    img {
+        vertical-align: middle;
+        opacity: .5;
+    }
+
+    .feature-text {
+        position: absolute;
+        top: 45%;
+        width: 100%;
+    }
+}
+
+.feature-text .entry-title {
+    color: #fff;
+    font-weight: bold;
+    line-height: 1;
+    text-shadow: 0 2px rgba(0, 16, 34, 0.4);
+    @include font-size($heading-size-2, false);
+    @include md {
+        @include font-size($heading-size-jumbo, false);
+    }
+}
+
+
+.featured-media {
+    max-height: 600px;
+    overflow: hidden;
+    background-color: #788991;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//MESSAGE BOARD
+
+#mb-reply-form {
+    display: inline-block;
+}
+
+
+
+
+.letter-icon {
+    position: absolute;
+    opacity: .4;
+    left: 48%;
+    bottom: 0;
+    width: auto;
+}
+
+.intro-text p{
+    @include font-size($base-font-size + 4);
+    letter-spacing: 1px;
+}
+
+
+.block-row {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+
+.feature-box {
+    display: inline-block;
+    padding-right: $base-spacing-unit;
+}
+
+
+
+
+
+
+
+
+
+.header--top {
+
+    .site-branding {
+        position: relative;
+    }
+}
+
+.header--not-top {
+
+    .site-branding {
+        position: fixed;
+        top: 0;
+    }
+}
+
+.header {
+        position: fixed;
+    .site-branding {
+        height: 60px;
+        width: 100%;
+        transition: transform $base-transition linear;
+        @include shadow-z1();
+}
+}
+.header--pinned {
+    .site-branding {
+    transform: translateY(0%);
+}
+}
+.header--unpinned {
+    .site-branding {
+    transform: translateY(-100%);
+}
+}
+
+.svg-logo {
+    max-height: 90px;
+}
+
+
+
+
+
+
+
+
+@include md {
+
+
+    .header--not-top {
+        @include shadow-z2();
+
+        .site-branding {
+            height: 50px;
+            transition: all .1s linear;
+        }
+
+    }
+
+
+
+
+
+
+    .header--top {
+
+        .site-branding {
+            height: 120px;
+            padding: $base-spacing-unit--small 0;
+            transition: all .1s linear;
+        }
+
+    }
+
+
+    .header {
+        transition: transform $base-transition linear;
+        align-items: center;
+
+        .site-branding {
+            width: 600px;
+            box-shadow: none;
+            position: relative;
+            text-align: center;
+        }
+    }
+
+    .header--pinned {
+        transform: translateY(0%);
+    }
+
+    .header--unpinned {
+        transform: translateY(-100%);
+    }
+}
+
+.menu-primary ul {
+        transition: none;
+    }
+
+.menu-primary {
+    //display:block;
+}
+
+.site-header a {
+    opacity: .9;
+}
+
+
+.site-branding {
+    //transition: 0.3s linear;
+    //max-width:300px;
+    width: auto;
+    //max-height: 55px;
+}
+
+.logo__stmark {
+    fill: #fff;
+}
+
+.logo__catholic-school {
+    fill: #fff;
+}
+
+
+
+
+
+
+
+.block__image a {
+    opacity: 1;
+}
+
+p.intro-paragraph {
+    @include font-size($base-font-size + 4);
+    letter-spacing: 1px;
+}
+
+
+
+.title--color {
+    fill: #FFE192;
+}
+
+.title--color2 {
+    fill: #eee;
+}
+
+
+
+.site-container {
+    border-top: 60px solid $color-primary;
+}
+
+@include md {
+.site-container {
+    border-top-width: 120px;
+}
+}
+
+
+
+
+
+
+// .entry-content p {
+//     max-width: 800px;
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+
+h2.slide-title {
+    display: none;
+}
+
+.meh-slider__image {
+    opacity: 1;
+}
+
+
+.is-visible .menu-item {
+    border-top: 1px solid $color-grey-ui;
+}
+
+
+// p:last-of-type ~ div {
+//     margin-top: $base-spacing-unit;
+// }
+
+
+
+
+.meh-slider__image {
+    opacity: 1 !important;
+}
+
+
+
+.widget.highlighted-content {
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.widget.highlighted-content .entry {
+    background-color: white;
+        color: $color-text;
+    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+    margin: 16px;
+}
+
+
+
+.widget.highlighted-content .widget__wrap {
+    background: none;
+}
+
+
+
+
+
+
+
+.widget .entry {
+    padding: 0;
+    margin: 0;
+}
+
+.media__body p {
+    margin: 0;
+}
+
+.widget-nav-menu > .widget__wrap {
+    padding: 0 0 27px;
+}
+
+.widget-nav-menu .widget-title {
+    padding: 27px 27px 0;
+}
+
+h3.widget-title {
+    font-size: 22px;
+}
+
+@media screen and (max-width: 35.5em) {
+    .svg-logo {
+        position: absolute;
+        height: 50px;
+        left: 5px;
+    }
+}
+
+.entry-content {
+    max-width: 100%;
+    // background-color: $white;
+    // padding: 27px;
+}
+
+.entry__header--feature {
+    margin-top: 0;
+}
+
+.entry {
+    margin-top: 0;
+}
+
+
+.entry__header--feature {
+    background-color: $color-primary-dark;
+}

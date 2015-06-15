@@ -30,18 +30,18 @@ function setup() {
     // Layouts
     add_theme_support( 'theme-layouts', [ 'default' => 'single-column' ] );
 
-    // Register wp_nav_menu() menus
     // http://codex.wordpress.org/Function_Reference/register_nav_menus
     register_nav_menus([
       'primary' => __('Primary', 'sage')
     ]);
 
-  // Add post formats
   // http://codex.wordpress.org/Post_Formats
-    add_theme_support('post-formats', ['aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio']);
+    add_theme_support('post-formats', [
+        'aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio'
+    ]);
 
   // Tell the TinyMCE editor to use a custom stylesheet
-    add_editor_style(Assets\asset_path('styles/editor-style.css'));
+    add_editor_style(trailingslashit( get_template_directory_uri() ) . 'css/editor-style.css');
 }
 
 
@@ -51,7 +51,7 @@ function setup() {
 function widgets_init() {
   hybrid_register_sidebar([
     'name'          => __('Primary', 'sage'),
-    'id'            => 'sidebar-primary',
+    'id'            => 'primary',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',
@@ -60,7 +60,7 @@ function widgets_init() {
 
   hybrid_register_sidebar([
     'name'          => __('Footer', 'sage'),
-    'id'            => 'sidebar-footer',
+    'id'            => 'footer',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',

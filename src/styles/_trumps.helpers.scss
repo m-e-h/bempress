@@ -1,0 +1,282 @@
+/*------------------------------------*\
+    #HELPERS
+\*------------------------------------*/
+
+.clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.screen-reader-text, .visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after,
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after,
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+    clear: both;
+}
+
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+}
+
+.u-text--b   { font-weight: bold }
+.u-text--n { font-weight: normal }
+.u-text--i  { font-style: italic }
+.u-text--caps    { text-transform: uppercase; letter-spacing: .2em; }
+
+.u-text--l   { text-align: left }
+.u-text--c       { text-align: center }
+.u-text--r  { text-align: right }
+.u-text--j      { text-align: justify }
+
+.u-truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.u-shadow {
+text-shadow: 0 2px rgba(0, 16, 34, 0.4);
+}
+
+
+.br, .u-br {
+    border-radius: $base-radius;
+}
+
+.u-round {
+    border-radius: 50%;
+}
+
+
+
+.u-block  { display: block; }
+.u-inline-block { display: inline-block; }
+.u-inline  { display: inline; }
+.u-table  { display: table; }
+.u-table__cell { display: table-cell; }
+.u-left { float: left; }
+.u-right { float: right; }
+.u-oh { overflow: hidden; }
+
+.u-fixed { position: fixed; }
+
+
+// Colors
+
+.t-bg__white {
+    @include bg-text($white);
+}
+
+.t-bg__off-white {
+    @include bg-text($color-off-white);
+}
+
+.t-bg__grey {
+    @include bg-text($color-grey);
+}
+
+.t-bg__shade {
+    @include bg-text($color-shade);
+}
+
+.t-bg__tint {
+    @include bg-text($color-tint);
+}
+
+.t-bg__frost {
+    @include bg-text($color-frost);
+}
+
+.t-bg__grey--dark {
+    @include bg-text($color-grey-dark);
+}
+
+.t-bg__grey--light {
+    @include bg-text($color-grey-light);
+}
+
+.t-bg__grey--lighter {
+    @include bg-text($color-grey-lighter);
+}
+
+.t-bg__1 {
+    @include bg-text($color-primary);
+}
+
+.t-bg__1--glass {
+    @include bg-text(glass($color-primary-dark));
+}
+
+.t-bg__1--dark {
+    @include bg-text($color-primary-dark);
+}
+
+.t-bg__1--light {
+    @include bg-text($color-primary-light);
+}
+
+.t-bg__2 {
+    @include bg-text($color-secondary);
+}
+
+.t-bg__2--dark {
+    @include bg-text($color-secondary-dark);
+}
+
+.t-bg__2--glass {
+    @include bg-text(glass($color-secondary-dark));
+}
+
+.t-bg__2--light {
+    @include bg-text($color-secondary-light);
+}
+
+.t-bg__3 {
+    @include bg-text($color-accent);
+}
+
+.t-bg__3--dark {
+    @include bg-text($color-accent-dark);
+}
+
+.t-bg__3--light {
+    @include bg-text($color-accent-light);
+}
+
+.t-bg__3--glass {
+    @include bg-text(glass($color-accent-dark));
+}
+
+
+
+
+.t-fill__white {
+    fill: $white;
+}
+
+.t-fill__1 {
+    fill: $color-primary;
+}
+
+.t-fill__1--dark {
+    fill: $color-primary-dark;
+}
+
+.t-fill__1--light {
+    fill: $color-primary-light;
+}
+
+.t-fill__2 {
+    fill: $color-secondary;
+}
+
+.t-fill__2--dark {
+    fill: $color-secondary-dark;
+}
+
+.t-fill__2--light {
+    fill: $color-secondary-light;
+}
+
+.t-fill__3 {
+    fill: $color-accent;
+}
+
+.t-fill__3--dark {
+    fill: $color-accent-dark;
+}
+
+.t-fill__3--light {
+    fill: $color-accent-light;
+}
+
+
+
+
+.t-fg__1 {
+    color: $color-primary;
+}
+
+.t-fg__2 {
+    color: $color-secondary;
+}
+
+.t-fg__3 {
+    color: $color-accent;
+}
+
+.t-fg__dark {
+    color: $color-text;
+}
+
+.t-fg__light {
+    color: $color-white;
+}

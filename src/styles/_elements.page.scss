@@ -1,0 +1,131 @@
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+
+:root {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-y: scroll;
+    text-size-adjust: 100%;
+    box-sizing: border-box;
+    cursor: default;
+    font: #{$base-font-size}/#{$base-line-height} $font-body;
+    font-weight: 400;
+    //text-rendering: optimizeLegibility;
+    min-height: 100%;
+    background-color: #ffffff;
+    color: $color-text;
+    //word-break:     break-word;
+    // -webkit-hyphens: auto;
+    // -moz-hyphens:    auto;
+    // hyphens:         auto;
+}
+
+/**
+ * Universal selector. This is applied to all elements.
+ */
+
+* {
+    position: relative;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    vertical-align: middle;
+    flex: 0 1 auto;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+    border-style: solid;
+    border-color: $color-grey-ui;
+    border-width: 0;
+
+}
+
+::after,
+::before {
+    vertical-align: inherit;
+}
+
+body {
+    background-color: $color-bg;
+    color: $color-text;
+}
+
+p {
+    letter-spacing: .2px;
+}
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+cite,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    margin: $base-spacing-unit 0;
+}
+
+span {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+::-moz-selection {
+    background-color: #B3D4FC;
+    text-shadow: none;
+}
+
+::selection {
+    background-color: #B3D4FC;
+    text-shadow: none;
+}
+
+canvas {
+    -ms-touch-action: double-tap-zoom;
+}
+
+iframe[src*="google.com/maps"] {
+    max-width: 100%;
+    width: 100%;
+}
+
+[hidden],
+audio:not([controls]),
+template {
+    display: none;
+}
+
+@media screen {
+    [hidden~=screen] {
+        display: inherit;
+    }
+    [hidden~=screen]:not(:active):not(:focus):not(:target) {
+        clip: rect(0 0 0 0)!important;
+        position: absolute!important;
+    }
+}

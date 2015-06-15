@@ -1,0 +1,40 @@
+///*------------------------------------*\
+//    #TABLES
+//\*------------------------------------*/
+
+table {
+    margin-bottom: $base-spacing-unit;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption {
+    padding: $base-spacing-unit--small 0;
+}
+
+thead th {
+    background-color: #efefef;
+}
+
+tr {
+    background-color: #fff;
+    margin-bottom: $base-spacing-unit--small;
+}
+
+th,
+td {
+    //border: .1rem solid $color-grey-ui;
+    padding: $base-spacing-unit--small $base-spacing-unit--tiny;
+    //text-align: center;
+}
+
+tfoot tr {
+    background: none;
+}
+
+tfoot td {
+    font-size: $base-font-size - 2;
+    font-style: italic;
+    padding: $base-spacing-unit $base-spacing-unit--tiny;
+}

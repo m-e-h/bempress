@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    #BREADCRUMBS
+\*------------------------------------*/
+
+
+
+.breadcrumbs {
+  text-align: center;
+}
+
+ul.trail-items {
+    text-align: center;
+    padding-left: 0;
+    margin-left: -10px;
+}
+
+.trail-items > li:not(.trail-end){
+    display: inline-block;
+    padding-left: 10px;
+}
+.trail-end {
+    display: none;
+}

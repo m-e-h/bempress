@@ -1,0 +1,139 @@
+/*------------------------------------*\
+    #BLOCK
+\*------------------------------------*/
+
+.block {
+  width: 100%;
+}
+
+.block__title {
+    margin: 0;
+    font-size: 22px;
+    margin-bottom: $base-font-size;
+}
+
+.block__img {
+  border-radius: $base-radius $base-radius 0 0;
+  background-color: $white;
+
+  a:hover {
+    opacity: $base-opacity;
+}
+}
+
+.block__content {
+  border-radius: $base-radius;
+  padding: 0;
+  //border-width: 1px;
+}
+
+.block__img ~ .block__content {
+  border-radius: 0 0 $base-radius $base-radius;
+  border-top: 0;
+}
+
+.block__icon {
+  max-width: 50%;
+}
+
+.block__body {
+}
+
+.block__title ~ .block__body {
+  //padding-top: 0;
+}
+
+.block__title--color {
+  margin-bottom: $base-spacing-unit;
+}
+
+.block__action {
+    border-radius: 0 0 $base-radius $base-radius;
+  //border-top-width: 1px;
+  > a {
+    color: $white!important;
+  }
+}
+
+
+.media {
+    //display: table;
+    width: 100%;
+    border-radius: $base-radius;
+    overflow: hidden;
+}
+
+.media__img,
+.media__body {
+    //display: table-cell;
+    //vertical-align: top;
+}
+
+// .media__img {
+
+//     img {
+//         display: block;
+//         max-width: none;
+//     }
+
+// }
+
+.media__body {
+    @include font-size($base-font-size - 2, false);
+    display: flex;
+    text-align: center;
+}
+
+.media__title {
+    @include font-size($base-font-size, false);
+    line-height: 1.6;
+}
+
+.user__title {
+    font-weight: bold;
+    opacity: .6;
+    line-height: 1;
+}
+
+.user__email {
+    @include font-size(14px, false);
+    margin-top: auto;
+    line-height: 1;
+}
+
+
+
+
+
+
+// .flag {
+//     display: flex;
+//     min-width: 100%;
+//     flex-direction: row;
+//     align-items: flex-start;
+//     margin-bottom: 1em;
+// }
+
+.flag__figure {
+        background-color: $color-grey-ui;
+        width: 90px;
+        height: 90px;
+        padding: 15px;
+        border-radius: 50%;
+        > svg {
+            width: 100%;
+            max-width: 90px;
+            fill: $white;
+        }
+}
+
+// .flag__body {
+
+//     &:last-child {
+//     margin-bottom: 0;
+// }
+// }
+
+// .flag__title {
+//     margin: 0 0 .5em;
+// }

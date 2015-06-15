@@ -12,9 +12,7 @@
 $sage_includes = [
   'hybrid-core/hybrid.php',        // Hybrid Core
   'lib/utils.php',                 // Utility functions
-  'lib/init.php',                  // Initial theme setup and constants
-  'lib/wrapper.php',               // Theme wrapper class
-  'lib/conditional-tag-check.php', // ConditionalTagCheck class
+  'lib/init.php',                  // Initial theme setup
   'lib/config.php',                // Configuration
   'lib/assets.php',                // Scripts and stylesheets
   'lib/titles.php',                // Page titles

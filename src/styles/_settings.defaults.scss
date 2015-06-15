@@ -1,0 +1,64 @@
+///*------------------------------------*\
+//    #DEFAULTS
+//\*------------------------------------*/
+
+// Namespace.
+$namespace:               null !default;
+
+
+
+// High-level base settings.
+$base-font-size:          18px !default;
+$base-line-height:        $base-font-size * 1.5 !default;
+
+$sans-serif:             sans-serif;
+$serif:          serif;
+
+$heading-size-6:        $base-font-size - 2 !default;
+$heading-size-5:        $base-font-size !default;
+$heading-size-4:        $base-font-size * 1.25 !default;
+$heading-size-3:        $base-font-size * 1.5 !default;
+$heading-size-2:        $heading-size-3 * 1.25 !default;
+$heading-size-1:        $heading-size-3 * 1.5 !default;
+$heading-size-jumbo:    $heading-size-1 * 1.5 !default;
+
+$base-text-color:         #34495e !default;
+$base-background-color:   #fff !default;
+
+$base-radius:           2px;
+
+$base-opacity:          0.8;
+
+$base-transition:       0.35s;
+
+$font-body:             $sans-serif;
+$font-heading:          $serif;
+$font-code:             "Courier 10 Pitch", Courier, monospace;
+
+$max-width: 1024px;
+
+
+
+
+// modify or reassign them.
+$base-spacing-unit:           $base-line-height;
+$base-spacing-unit--tiny:     round($base-spacing-unit / 4);
+$base-spacing-unit--small:    round($base-spacing-unit / 2);
+$base-spacing-unit--large:    round($base-spacing-unit * 2);
+$base-spacing-unit--larger:   round($base-spacing-unit * 3);
+$base-spacing-unit--huge:     round($base-spacing-unit * 4);
+
+
+
+
+// All z-index values should be set here
+
+$z-layers: (
+    'modal'         : 9000,
+    'overlay'       : 8000,
+    'dropdown'      : 7000,
+    'header'        : 6000,
+    'footer'        : 5000,
+    'default'       : 1,
+    'bottomless-pit': -10000
+);

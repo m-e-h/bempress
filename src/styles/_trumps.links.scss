@@ -1,0 +1,36 @@
+.u-link--bare {
+    text-decoration: none !important;
+}
+
+.u-link--natural {
+    text-decoration: underline !important;
+    color: inherit !important;
+}
+
+.u-link--obvious {
+    text-decoration: underline !important;
+}
+
+.navigation a {
+    &:hover{
+    opacity: 1;
+}
+}
+
+.u-link--object {
+    cursor: pointer;
+    &.is-active, &:hover, &:focus {
+        opacity: $base-opacity;
+    }
+}
+
+.entry-content a:not(.button) {
+    border-bottom: 1px solid rgba(52,73,94,0.4);
+    //transition: background-color 0.3s, border-color 0.3s;
+    &:hover,
+    &:focus,
+    &:active {
+            border-color: rgba(52,73,94,0);
+            background-color: rgba(52,73,94,0.1);
+    }
+}

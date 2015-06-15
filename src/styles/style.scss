@@ -1,0 +1,166 @@
+/*
+Theme Name: BEMpress
+Theme URI: https://github.com/m-e-h/bempress
+Author: Marty Helmick
+Author URI: https://github.com/m-e-h
+Description: Starter Theme focused on OOCSS and such.
+Version: 0.1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: bempress
+GitHub Theme URI: https://github.com/m-e-h/bempress
+Tags:
+*/
+
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Default..............Globally-available variables and settings/config.
+ * Colors...............Manage our color palette in isolation.
+ * Responsive...........Setup some breakpoints.
+ *
+ * TOOLS
+ * Functions.............
+ * Mixins...............inuitcss’ default mixins.
+ * Responsive............
+ * Aliases..............Aliases onto longer inuitcss variables and mixins.
+ * Widths...............inuitcss images
+ *
+ * GENERIC
+ * Reset................A level playing field.
+ * Sanitize.............Render elements consistently and with best practices.
+ *
+ * ELEMENTS
+ * Page.................Page-level styles (HTML element).
+ * Headings.............Heading styles
+ * Links................Hyperlink styles
+ * Lists................inuitcss list styles
+ * Images...............inuitcss images
+ * Quotes...............Styling for blockquotes, etc.
+ *
+ * OBJECTS
+ * Grid...............inuitcss’ layout tool.
+ * Shadows..............
+ * Buttons..............
+ * Layout...............Site layouts.
+ * Tables...............
+ * Media................The media object.
+ * Forms................
+ * Wrappers.............Wrappers and page constraints.
+ * Cards................
+ *
+ * COMPONENTS
+ * Page-title...........Page header styles.
+ * Buttons..............Extension of inuitcss’ buttons.
+ * Testimonials.........
+ * Avatars..............User profile pics.
+ * Site-nav.............
+ * Meta.................
+ * Code.................
+ * Breadcrumbs..........
+ *
+ * TRUMPS
+ * Links................Links, you know.
+ * Widths...............Simple width helper classes.
+ * Helpers...............
+ * Headings..............
+ * Spacing...............
+ */
+
+
+
+
+
+/**
+ * #SETTINGS
+ */
+@import "settings.colors";
+@import "settings.responsive";
+@import "settings.icon-font";
+@import "settings.defaults";
+
+
+
+
+
+/**
+ * #TOOLS
+ */
+@import "tools.functions";
+@import "tools.mixins";
+@import "tools.aliases";
+
+
+
+
+/**
+ * #ELEMENTS
+ */
+@import "elements.type";
+@import "elements.page";
+@import "elements.links";
+@import "elements.lists";
+@import "elements.images";
+@import "elements.quotes";
+@import "elements.tables";
+@import "elements.forms";
+@import "elements.nav";
+
+
+
+
+
+/**
+ * #OBJECTS
+ */
+@import "objects.grid";
+@import "objects.flex";
+@import "objects.embed";
+@import "objects.media";
+@import "objects.wrappers";
+@import "objects.block";
+@import "objects.articles";
+
+
+
+
+
+/**
+ * #COMPONENTS
+ */
+@import "components.page-title";
+@import "components.site-header";
+@import "components.shadows";
+@import "components.buttons";
+@import "components.testimonials";
+@import "components.avatars";
+@import "components.site-nav";
+@import "components.post-nav";
+@import "components.meta";
+@import "components.code";
+@import "components.breadcrumbs";
+@import "components.widgets";
+@import "components.tabs";
+@import "components.search";
+//@import "components.tooltips";
+@import "components.slider";
+
+@import "components.gravity-forms";
+
+
+
+
+
+/**
+ * #TRUMPS
+ */
+
+@import "trumps.links";
+@import "trumps.helpers";
+@import "trumps.headings";
+@import "trumps.spacing";
+@import "trumps.widths";
+
+
+@import "trumps.shame";

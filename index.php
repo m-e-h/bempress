@@ -1,14 +1,22 @@
-<?php get_template_part('templates/page', 'header'); ?>
+<?php
 
-<?php if (!have_posts()) : ?>
-  <div class="alert alert-warning">
-    <?php _e('Sorry, no results were found.', 'sage'); ?>
-  </div>
-  <?php get_search_form(); ?>
-<?php endif; ?>
+use Roots\Sage\Config;
 
-<?php while (have_posts()) : the_post(); ?>
-  <?php hybrid_get_content_template(); ?>
-<?php endwhile; ?>
+?>
 
-<?php the_posts_navigation(); ?>
+<!doctype html>
+<html class="no-js" <?php language_attributes(); ?>>
+    <?php get_template_part('templates/head'); ?>
+    <body <?php hybrid_attr( 'body' ); ?>>
+        <?php get_header(); ?>
+        <div class="wrap container" role="document">
+            <div class="content row">
+                <main <?php hybrid_attr( 'content' ); ?>>
+                  <?php hybrid_get_content_template(); ?>
+                </main><!-- /.main -->
+                <?php hybrid_get_sidebar( 'primary' ); ?>
+            </div><!-- /.content -->
+        </div><!-- /.wrap -->
+        <?php get_footer(); ?>
+    </body>
+</html>

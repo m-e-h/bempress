@@ -1,0 +1,50 @@
+// /*------------------------------------*\
+//  #LISTS
+// \*------------------------------------*/
+
+dl {
+    margin-bottom: $base-spacing-unit;
+}
+
+dd {
+    margin-left: $base-spacing-unit--large;
+}
+
+ul,
+ol {
+    margin-bottom: $base-spacing-unit;
+    list-style: none;
+    //padding-left: $base-spacing-unit;
+    //list-style-position: outside;
+    //text-align: left;
+}
+
+ul li {
+    padding-left: $base-spacing-unit;
+
+    @include font-icon($stop);
+
+    &::before {
+    display: block;
+    font-weight: 400;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 26px;
+    font-size: 10px;
+    opacity: $base-opacity;
+}
+}
+
+
+
+
+li {
+
+
+    > ul,
+    > ol {
+        margin-bottom: 0;
+    }
+
+}
