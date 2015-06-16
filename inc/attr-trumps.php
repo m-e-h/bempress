@@ -10,60 +10,60 @@ namespace Roots\Bempress\AttrTrumps;
 class AttrTrumps {
 
     // CONTAINERS
-    public $body                        = '';
-    public $site_container              = '';
-    public $container                   = '';
-    public $row                         = '';
+    public $body                    = '';
+    public $site_container          = '';
+    public $container               = '';
+    public $row                     = '';
 
     // SITE HEADER
-    public $header                      = '';
-    public $branding                    = '';
-    public $site_title                  = '';
-    public $site_description            = '';
+    public $header                  = '';
+    public $branding                = '';
+    public $site_title              = '';
+    public $site_description        = '';
 
     // CONTENT
-    public $content                     = '';
-    public $content_with_sidebar        = '';
-    public $main                        = '';
+    public $content                 = '';
+    public $content_with_sidebar    = '';
+    public $main                    = '';
 
     // ENTRY
-    public $post                        = '';
+    public $post                    = '';
 
-    public $page_header                 = '';
+    public $page_header             = '';
 
-    public $entry_title                 = '';
-    public $archive_title               = '';
-    public $archive_description         = '';
+    public $entry_title             = '';
+    public $archive_title           = '';
+    public $archive_description     = '';
 
-    public $entry_content               = '';
-    public $entry_content_sidebar       = '';
-    public $entry_content_sidebar_rev   = '';
-    public $entry_summary               = '';
+    public $entry_content           = '';
+    public $entry_sidebar           = '';
+    public $entry_sidebar_rev       = '';
+    public $entry_summary           = '';
 
-    public $nav_single                  = '';
-    public $nav_archive                 = '';
+    public $nav_single              = '';
+    public $nav_archive             = '';
 
     // ENTRY META
-    public $entry_author                = '';
-    public $entry_published             = '';
-    public $entry_terms                 = '';
+    public $entry_author            = '';
+    public $entry_published         = '';
+    public $entry_terms             = '';
 
     // NAVIGATION
-    public $menu_primary                = ' t-bg__grey';
-    public $menu_li                     = 'menu__item';
+    public $menu_primary            = ' t-bg__grey';
+    public $menu_li                 = 'menu__item';
 
     // SIDEBAR
-    public $sidebar                     = '';
-    public $sidebar_vertical            = '';
-    public $sidebar_horizontal          = '';
-    public $sidebar_right               = '';
-    public $sidebar_left                = '';
+    public $sidebar                 = '';
+    public $sidebar_vertical        = '';
+    public $sidebar_horizontal      = '';
+    public $sidebar_right           = '';
+    public $sidebar_left            = '';
 
     // COMMENTS
-    public $comments_area               = '';
+    public $comments_area           = '';
 
     // FOOTER
-    public $footer                      = '';
+    public $footer                  = '';
 
 
 
@@ -330,10 +330,10 @@ class AttrTrumps {
 
     public function entry_content( $attr ) {
         if ( '2c-l'         == get_theme_mod( 'theme_layout' ) ) :
-        $attr['class']      .= $this->entry_content_sidebar;
+        $attr['class']      .= $this->entry_sidebar;
 
         elseif ( '2c-r'     == get_theme_mod( 'theme_layout' ) ) :
-        $attr['class']      .= $this->entry_content_sidebar_rev;
+        $attr['class']      .= $this->entry_sidebar_rev;
 
         else :
         $attr['class']      .= $this->entry_content;
