@@ -1,6 +1,6 @@
 <?php
 
-namespace Roots\Sage\Assets;
+namespace Roots\Bempress\Assets;
 
 /**
  * Scripts and stylesheets
@@ -28,8 +28,12 @@ if ( is_child_theme() )
     );
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
-    wp_enqueue_script('comment-reply');
+        wp_enqueue_script(
+            'comment-reply'
+        );
     }
 
-    wp_enqueue_script('sage_js', trailingslashit( get_template_directory_uri() ) . 'main.js', false, false, true );
+    wp_enqueue_script(
+        'bempress_js',
+        trailingslashit( get_template_directory_uri() ) . 'main.js', false, false, true );
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace Roots\Sage\Init;
+namespace Roots\Bempress\Init;
 
-use Roots\Sage\Assets;
+use Roots\Bempress\Assets;
 
 /**
  * Theme setup
@@ -32,7 +32,7 @@ function setup() {
 
     // http://codex.wordpress.org/Function_Reference/register_nav_menus
     register_nav_menus([
-      'primary' => __('Primary', 'sage')
+      'primary' => __('Primary', 'bempress')
     ]);
 
   // http://codex.wordpress.org/Post_Formats
@@ -50,7 +50,7 @@ function setup() {
  */
 function widgets_init() {
   hybrid_register_sidebar([
-    'name'          => __('Primary', 'sage'),
+    'name'          => __('Primary', 'bempress'),
     'id'            => 'primary',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
@@ -59,7 +59,7 @@ function widgets_init() {
   ]);
 
   hybrid_register_sidebar([
-    'name'          => __('Footer', 'sage'),
+    'name'          => __('Footer', 'bempress'),
     'id'            => 'footer',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',

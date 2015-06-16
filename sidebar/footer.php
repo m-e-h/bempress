@@ -1,5 +1,6 @@
-<?php if ( ! is_active_sidebar( 'footer' ) ) { return; } ?>
+<?php
+if ( ! is_active_sidebar( 'footer' ) ) { return; } ?>
 
-	<aside <?php hybrid_attr( 'sidebar', 'footer' ); ?>>
-		<?php dynamic_sidebar( 'footer' ); ?>
-	</aside>
+    <aside <?php hybrid_attr( 'sidebar', 'footer' ); ?>>
+    	<?php dynamic_sidebar( 'footer' ); ?>
+    </aside>
