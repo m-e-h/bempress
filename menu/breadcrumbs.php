@@ -2,10 +2,10 @@
 if ( function_exists( 'breadcrumb_trail' ) ) :
 
     breadcrumb_trail([
-        'container'     => 'nav',
-        'separator'     => '/',
-        'show_browse'   => false,
-        'show_on_front' => false,
+        'container'       => 'nav',
+        'show_on_front'   => false,
+        //'network'         => true,
+        'show_browse'     => false,
     ]);
 
 endif;

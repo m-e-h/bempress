@@ -9,8 +9,9 @@ use Roots\Bempress\Assets;
  */
 
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup', 5 );
-add_action('widgets_init', __NAMESPACE__ . '\\widgets_init', 5 );
-add_action( 'hybrid_register_layouts', __NAMESPACE__ . '\\register_layouts' );
+add_action('widgets_init', __NAMESPACE__ . '\\widgets', 5 );
+add_action( 'init', __NAMESPACE__ . '\\image_sizes', 5 );
+add_action( 'hybrid_register_layouts', __NAMESPACE__ . '\\layouts' );
 
 
 function setup() {
@@ -48,7 +49,7 @@ function setup() {
 /**
  * Register sidebars
  */
-function widgets_init() {
+function widgets() {
   hybrid_register_sidebar([
     'name'          => __('Primary', 'bempress'),
     'id'            => 'primary',
@@ -69,7 +70,24 @@ function widgets_init() {
 }
 
 
-function register_layouts() {
+
+
+function image_sizes() {
+    // Set the 'post-thumbnail' size.
+    set_post_thumbnail_size( 150, 150, true );
+    // Add the 'bempress-full' image size.
+    add_image_size( 'bempress-retina', 2560, 720, true );
+    add_image_size( 'bempress-md', 1024, 288, true );
+    add_image_size( 'bempress-full-cropped', 1280, 720, true );
+    add_image_size( 'bempress-full', 1920, 740, true );
+    add_image_size( 'bempress-hd', 1920, 1080, true );
+    add_image_size( 'bempress-sm', 640, 360, true );
+}
+
+
+
+
+function layouts() {
 
     hybrid_get_layout( 'default' )->image = '%s/images/default.svg';
 

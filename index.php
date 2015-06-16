@@ -1,14 +1,16 @@
 <?php
 get_header(); ?>
 
-<?php get_template_part('templates/page', 'header'); ?>
+<?php get_template_part('components/page', 'header'); ?>
 
-<div class="wrap container" role="document">
+<div <?php hybrid_attr( 'container', 'content' ); ?>>
 
-    <div class="content row">
+    <?php hybrid_get_menu( 'breadcrumbs' ); ?>
+
+    <div <?php hybrid_attr( 'row', 'layout' ); ?>>
 
         <main <?php hybrid_attr( 'content' ); ?>>
-          <?php hybrid_get_content_template(); ?>
+            <?php hybrid_get_content_template(); ?>
         </main><!-- /.main -->
 
         <?php hybrid_get_sidebar( 'primary' ); ?>

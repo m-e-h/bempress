@@ -12,7 +12,7 @@
 
     <header <?php hybrid_attr( 'header' ); ?>>
 
-        <div class="container">
+        <div <?php hybrid_attr( 'container', 'header' ); ?>>
 
             <div <?php hybrid_attr( 'branding' ); ?>>
                 <?php hybrid_site_title(); ?>

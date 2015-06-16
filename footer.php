@@ -1,6 +1,6 @@
 <footer <?php hybrid_attr( 'footer' ); ?>>
 
-    <div class="container">
+    <div <?php hybrid_attr( 'container', 'footer' ); ?>>
         <?php hybrid_get_sidebar( 'footer' ); ?>
     </div>
 
