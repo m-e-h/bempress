@@ -11,63 +11,46 @@ class AttrTrumps {
 	/* Attributes for major structural elements. */
 	public $body                  		= '';
 	public $site_container    			= '';
-	public $site_inner   				= ' grid';
-	public $site_inner_full_width		= ' ';
-	public $card_layout_inner 	        = ' wrap';
-	public $site_inner_sidebar_right 	= ' ';
-	public $site_inner_sidebar_left 	= ' grid--rev';
 	public $wrap                		= '';
-    public $one_col_wrap                = ' wrapper--wide';
-    public $two_col_wrap                = ' ';
-    public $two_col_wrap_rev            = ' grid grid--rev';
 	public $header_wrap                	= '';
-    public $card_wrap                   = ' grid__item u-flex u-ph@respond u-1of1@sm u-1of2@md u-1of3@lg';
-	public $header                		= ' t-bg__1 u-1of1 u-flex u-flex--row@md u-flex--w u-flex--j-sb';
-	public $footer                		= ' t-bg__1--light';
-	public $content 					= ' grid__item';
-	public $content_full_width			= ' u-1of1';
-	public $content_card_layout 		= ' u-1of1 u-flex u-flex--row u-flex--w u-flex--j-sb';
-	public $content_sidebar_right 		= ' u-1of1';
-	public $content_sidebar_left 		= ' u-1of1';
-	public $main                		= ' ';
-	public $sidebar 					= ' grid__item';
-	public $sidebar_full_width  		= ' grid u-flex u-flex--row u-flex--w u-1of1';
-	public $sidebar_card_layout  		= ' u-1of1';
-	public $sidebar_sidebar_right 		= ' u-1of1 u-1of3@md';
-	public $sidebar_sidebar_left		= ' u-1of1 u-1of3@md';
-	public $sidebar_horizontal          = ' wrap grid u-flex u-flex--row@md u-flex--w u-pv@respond';
-	public $menu_primary 				= ' u-flexed--auto menu--horizontal';
-	public $menu_secondary 				= ' menu--horizontal u-p- u-flex u-flex--j-c';
+	public $header                		= '';
+	public $footer                		= '';
+	public $content 					= '';
+	public $content_sidebar_right 		= '';
+	public $content_sidebar_left 		= '';
+	public $main                		= '';
+	public $sidebar 					= '';
+	public $sidebar_sidebar_right 		= '';
+	public $sidebar_sidebar_left		= '';
+	public $sidebar_horizontal          = '';
+	public $menu_primary 				= '';
 	public $menu_li         			= 'menu__item';
 
     public $nav_single                  = '';
     public $nav_archive                 = '';
 
-    public $author_box                  = ' br u-p@respond u-mb@respond';
-
 	/* Header attributes. */
-	public $branding              		= ' u-flexed--auto t-bg__1 u-ibl';
-	public $site_title            		= ' h1 u-m0 page-title__main';
-	public $site_description      		= ' page-title__sub';
+	public $branding              		= '';
+	public $site_title            		= '';
+	public $site_description      		= '';
 
 	/* Loop attributes. */
-	public $archive_header             	= ' t-bg__grey u-p@respond u-mb@respond u-center';
-	public $archive_title            	= ' text-jumbo bold u-shadow wrap u-mv0';
-	public $archive_description      	= ' wrap u-mt-';
+	public $archive_header             	= '';
+	public $archive_title            	= '';
+	public $archive_description      	= '';
 
 	/* Post-specific attributes. */
-	public $post                  		= ' br';
-    public $post_card_layout            = ' t-bg__white u-flexed--grow';
-	public $entry_title           		= ' wrap entry__title';
-	public $entry_author          		= ' u-mr- entry__author';
-	public $entry_published       		= ' u-mr- entry__date';
-	public $entry_content         		= ' wrap';
-    public $entry_content_sidebar       = ' u-2of3@md u-pr@respond grid__item';
-    public $entry_content_sidebar_rev   = ' u-2of3@md u-pl@respond grid__item';
-	public $entry_summary         		= ' wrap';
-	public $entry_terms           		= ' badge';
+	public $post                  		= '';
+	public $entry_title           		= '';
+	public $entry_author          		= '';
+	public $entry_published       		= '';
+	public $entry_content         		= '';
+    public $entry_content_sidebar       = '';
+    public $entry_content_sidebar_rev   = '';
+	public $entry_summary         		= '';
+	public $entry_terms           		= '';
 
-    public $comments_area               = ' wrap br u-p@respond u-mb@respond';
+    public $comments_area               = '';
 
 
 
