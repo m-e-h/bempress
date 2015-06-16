@@ -91,7 +91,7 @@ gulp.task('critical', function () {
     //Concatenate And Minify Styles
     .pipe(rename({ extname: '.php' }))
     .pipe(minifyCSS())
-    .pipe(gulp.dest('templates'));
+    .pipe(gulp.dest('css'));
 });
 
 // Compile and Automatically Prefix Stylesheets
