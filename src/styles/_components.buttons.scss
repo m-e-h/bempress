@@ -1,30 +1,24 @@
 .btn {
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
     display: inline-block;
-    line-height: 1.125rem;
-    padding: .5rem 1rem;
-    margin: 0;
-    height: auto;
-    border: 1px solid transparent;
-    vertical-align: middle;
-    -webkit-appearance: none;
-    color: inherit;
-    background-color: transparent;
+    font: inherit;
+    text-align: center;
+    cursor: pointer;
+    @include bg-text($btn-bg);
+    border-radius: $base-radius;
+    border-width: 0;
+    padding: ($base-spacing-unit / 2) $base-spacing-unit;
+    letter-spacing: 1px;
+    flex-direction: row;
     &:hover,
     &:active {
-        text-decoration: none;
-        border: 1px solid rgba(0,0,0,.0625);
-        box-shadow: inset 0 0 0 20rem rgba(0,0,0,.0625);
+        opacity: 1;
+        background-color: $btn-bg-hover;
+        outline: 0;
     }
     &:focus,
     &:active,
     &.is-active {
-        outline: none;
-        border-color: rgba(0,0,0,.125);
+        background-color: $btn-bg-active;
     }
 }
 
@@ -34,10 +28,6 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
     @extend .btn;
-
-    color: #fff;
-    background-color: #0074d9;
-    border-radius: 3px;
 }
 
 .button--transparent {
@@ -51,10 +41,12 @@ input[type="submit"] {
 }
 
 .button--outline {
-    color: inherit;
+    @extend .btn;
+    color: $btn-bg;
     background-color: transparent;
-    border-radius: 3px;
-    border: 1px solid currentcolor;
+    border-width: 3px;
+    border-style: solid;
+    border-color: currentColor;
     &:hover, &:active, &:focus {
         @include bg-text($btn-bg-hover);
         background-color: $btn-bg-hover;
@@ -62,24 +54,11 @@ input[type="submit"] {
     }
 }
 
-.button--transparent {
-    color: inherit;
-    background-color: transparent;
-    border-radius: 0;
-    border: 1px solid transparent;
-    &:hover {
-    box-shadow: none;
-    }
-}
-
 .button--tiny {
-    padding: .25rem .5rem;
+    padding: $base-spacing-unit--tiny $base-spacing-unit--small;
+    @include font-size($base-font-size - 5, 1);
+    text-transform: uppercase;
 }
-
-.button--big {
-    padding: 1rem 1.25rem;
-}
-
 
 .button--muted {
     background-color: $color-grey-ui;

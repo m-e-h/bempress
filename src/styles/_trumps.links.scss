@@ -24,13 +24,4 @@
     }
 }
 
-.entry-content a:not(.button) {
-    border-bottom: 1px solid rgba(52,73,94,0.4);
-    //transition: background-color 0.3s, border-color 0.3s;
-    &:hover,
-    &:focus,
-    &:active {
-            border-color: rgba(52,73,94,0);
-            background-color: rgba(52,73,94,0.1);
-    }
-}
+

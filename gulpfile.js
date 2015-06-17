@@ -9,14 +9,24 @@ var gulp = require('gulp'),
     minifyCSS = require('gulp-minify-css'),
     rename = require('gulp-rename'),
     changed = require('gulp-changed'),
-    sass = require('gulp-sass'),
     uglify = require('gulp-uglify'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
     csscomb = require('gulp-csscomb'),
     runSequence = require('run-sequence'),
     browserSync = require('browser-sync').create('meh'),
     reload = browserSync.reload,
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
+    browsers = [
+      'ie >= 8',
+      'ie_mob >= 10',
+      'ff >= 30',
+      'chrome >= 34',
+      'safari >= 7',
+      'opera >= 23',
+      'ios >= 6',
+      'android >= 4.3',
+      'bb >= 10'
+    ];
 
 // Optimize Images
 gulp.task('images', function () {
@@ -51,7 +61,7 @@ gulp.task('styles', function () {
     .pipe(changed('styles', {extension: '.scss'}))
     .pipe(sass())
     .on('error', swallowError)
-    .pipe(autoprefixer({browsers: ['> 1%', 'last 2 versions']}))
+    .pipe(autoprefixer(browsers))
     .pipe(csscomb())
     .pipe(gulp.dest('./'))
     .pipe(rename({ suffix: '.min' }))
@@ -68,7 +78,7 @@ gulp.task('critical', function () {
     .pipe(changed('styles', {extension: '.scss'}))
     .pipe(sass())
     .on('error', swallowError)
-    .pipe(autoprefixer({browsers: ['> 1%', 'last 2 versions']}))
+    .pipe(autoprefixer(browsers))
     .pipe(csscomb())
     .pipe(rename({ suffix: '-css', extname: '.php' }))
     .pipe(minifyCSS())
@@ -83,7 +93,7 @@ gulp.task('wpeditor', function () {
     .pipe(changed('styles', {extension: '.scss'}))
     .pipe(sass())
     .on('error', swallowError)
-    .pipe(autoprefixer({browsers: ['> 1%', 'last 2 versions']}))
+    .pipe(autoprefixer(browsers))
     .pipe(minifyCSS())
     .pipe(gulp.dest('css'))
 });
@@ -125,5 +135,5 @@ gulp.task('serve', ['styles'], function () {
 
 // Build Production Files, the Default Task
 gulp.task('default', function (cb) {
-  runSequence('styles', ['hybrid', 'scripts', 'critical', 'wpeditor', 'images'], cb);
+  runSequence('styles', ['hybrid', 'critical', 'wpeditor', 'scripts', 'images'], cb);
 });

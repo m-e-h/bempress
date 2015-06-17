@@ -2,47 +2,57 @@
     #HEADINGS
 \*------------------------------------*/
 
-.u-h1 { @include typo-heading-1(); }
-.u-h2 { @include typo-heading-2(); }
-.u-h3 { @include typo-heading-3(); }
-.u-h4 { @include typo-heading-4(); }
-.u-h5 { @include typo-heading-5(); }
+.u-h1, .u-h2, .u-h3, .u-h4, u-h5,
+a.u-h1, a.u-h2, a.u-h3, a.u-h4, a.u-h5
+ {
+    color: $color-text!important;
+    font-weight: normal;
+    line-height: 1;
+    display: block;
 
-.h1 {
-    @include font-size($heading-size-2);
+    &:hover {
+    background-color: transparent;
+
+    }
+}
+
+
+
+.u-h1 {
+    @include font-size($heading-size-2, false);
     @include md {
         @include font-size($heading-size-1, false);
     }
     line-height: 1;
 }
 
-.h2 {
-    @include font-size($heading-size-3);
+.u-h2 {
+    @include font-size($heading-size-3, false);
     @include md {
-        @include font-size($heading-size-2);
+        @include font-size($heading-size-2, false);
     }
 }
 
-.h3, .widget-title, .action-bar-wrap .site-title {
-    @include font-size($heading-size-4);
+.u-h3, .widget-title, .action-bar-wrap .site-title {
+    @include font-size($heading-size-4, false);
     @include md {
-        @include font-size($heading-size-3);
+        @include font-size($heading-size-3, false);
     }
 }
 
-.h4 {
-    @include font-size($heading-size-4);
+.u-h4 {
+    @include font-size($heading-size-4, false);
 }
 
-.h5 {
-    @include font-size($heading-size-5);
+.u-h5 {
+    @include font-size($heading-size-5, false);
 }
 
-.h6 {
-    @include font-size($heading-size-6);
+.u-h6 {
+    @include font-size($heading-size-6, false);
 }
 
-.text-jumbo {
+.u-text-jumbo {
     @include font-size($heading-size-2, false);
     @include md {
         @include font-size($heading-size-jumbo, false);

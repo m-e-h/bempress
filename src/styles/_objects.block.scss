@@ -2,59 +2,43 @@
     #BLOCK
 \*------------------------------------*/
 
-.block {
-  width: 100%;
+// .block__img {
+//   border-radius: $base-radius $base-radius 0 0;
+//   background-color: $white;
+
+//   a:hover {
+//     opacity: $base-opacity;
+// }
+// }
+
+
+.flag {
+    align-items: flex-start;
+    @include md {
+    flex-direction: row;
+}
+    .block__title {
+        padding-top: 0;
+    }
 }
 
-.block__title {
-    margin: 0;
-    font-size: 22px;
-    margin-bottom: $base-font-size;
+.block__title a {
+    color: inherit;
 }
-
-.block__img {
-  border-radius: $base-radius $base-radius 0 0;
-  background-color: $white;
-
-  a:hover {
-    opacity: $base-opacity;
+.block__figure {
+    background-color: $color-grey-ui;
+    text-align: center;
+    > svg {
+        width: 100%;
+        max-width: 90px;
+        //fill: $white;
+    }
+    a {
+        border-bottom: 0!important;
+        display: block;
+        font-weight: normal;
+    }
 }
-}
-
-.block__content {
-  border-radius: $base-radius;
-  padding: 0;
-  //border-width: 1px;
-}
-
-.block__img ~ .block__content {
-  border-radius: 0 0 $base-radius $base-radius;
-  border-top: 0;
-}
-
-.block__icon {
-  max-width: 50%;
-}
-
-.block__body {
-}
-
-.block__title ~ .block__body {
-  //padding-top: 0;
-}
-
-.block__title--color {
-  margin-bottom: $base-spacing-unit;
-}
-
-.block__action {
-    border-radius: 0 0 $base-radius $base-radius;
-  //border-top-width: 1px;
-  > a {
-    color: $white!important;
-  }
-}
-
 
 .media {
     //display: table;
@@ -62,21 +46,6 @@
     border-radius: $base-radius;
     overflow: hidden;
 }
-
-.media__img,
-.media__body {
-    //display: table-cell;
-    //vertical-align: top;
-}
-
-// .media__img {
-
-//     img {
-//         display: block;
-//         max-width: none;
-//     }
-
-// }
 
 .media__body {
     @include font-size($base-font-size - 2, false);
@@ -103,37 +72,6 @@
 
 
 
-
-
-
-// .flag {
-//     display: flex;
-//     min-width: 100%;
-//     flex-direction: row;
-//     align-items: flex-start;
-//     margin-bottom: 1em;
-// }
-
-.flag__figure {
-        background-color: $color-grey-ui;
-        width: 90px;
-        height: 90px;
-        padding: 15px;
-        border-radius: 50%;
-        > svg {
-            width: 100%;
-            max-width: 90px;
-            fill: $white;
-        }
+.block__figure ~ .block__wrap > .block__title {
+    background-color: transparent;
 }
-
-// .flag__body {
-
-//     &:last-child {
-//     margin-bottom: 0;
-// }
-// }
-
-// .flag__title {
-//     margin: 0 0 .5em;
-// }
