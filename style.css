@@ -95,7 +95,7 @@ h1
 {
     font-size: 40.5px;
     font-size: 2.25rem;
-    line-height: 1.3333333333;
+    line-height: 1.33333;
 
     margin-bottom: 27px;
 }
@@ -139,7 +139,7 @@ h5
 h6
 {
     font-size: 16px;
-    font-size: .8888888889rem;
+    font-size: .88889rem;
     line-height: 1.6875;
 
     margin-bottom: 7px;
@@ -510,7 +510,7 @@ blockquote
 {
     font-family: Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
-    font-size: 1.1111111111rem;
+    font-size: 1.11111rem;
     font-weight: 500;
     font-style: italic;
     line-height: 1.35; 
@@ -1245,8 +1245,7 @@ nav ul li::before
  */
 .flex-embed__ratio--3by1
 {
-    padding-bottom: -webkit-calc(100% / 3);
-    padding-bottom:         calc(100% / 3);
+    padding-bottom: calc(100% / 3);
 }
 
 /**
@@ -1443,7 +1442,7 @@ nav ul li::before
 .media__body
 {
     font-size: 16px;
-    font-size: .8888888889rem;
+    font-size: .88889rem;
 
     display: -webkit-box;
     display: -webkit-flex;
@@ -1471,7 +1470,7 @@ nav ul li::before
 .user__email
 {
     font-size: 14px;
-    font-size: .7777777778rem;
+    font-size: .77778rem;
     line-height: 1; 
 
     margin-top: auto;
@@ -1846,7 +1845,7 @@ input[type='submit']
 .c-testimonial__text
 {
     font-size: 24px;
-    font-size: 1.3333333333rem;
+    font-size: 1.33333rem;
     font-style: italic;
     line-height: 1.125;
 }
@@ -1854,7 +1853,7 @@ input[type='submit']
 .c-testimonial__source
 {
     font-size: 12px;
-    font-size: .6666666667rem;
+    font-size: .66667rem;
     font-weight: bold;
     font-style: normal;
     line-height: 2.25;
@@ -2351,10 +2350,10 @@ a.menu-item__description.info
 .entry__meta
 {
     font-size: 17px;
-    font-size: .9444444444rem;
+    font-size: .94444rem;
     font-weight: normal;
     font-style: italic; 
-    line-height: 1.5882352941;
+    line-height: 1.58824;
 
     margin-bottom: 0;
 
@@ -2411,8 +2410,8 @@ kbd
 pre
 {
     font-size: 17px;
-    font-size: .9444444444rem;
-    line-height: 1.5882352941;
+    font-size: .94444rem;
+    line-height: 1.58824;
 
     overflow: auto;
 
@@ -2421,6 +2420,7 @@ pre
     padding: 5px 14px;
 
     -moz-tab-size: 4;
+      -o-tab-size: 4;
          tab-size: 4; 
 
     border-radius: 2px;
@@ -2728,7 +2728,7 @@ a.info
 .whistles-accordion .whistle-title
 {
     font-size: 20px;
-    font-size: 1.1111111111rem;
+    font-size: 1.11111rem;
     line-height: 1.35; 
 
     margin: 5px 0;
@@ -3540,7 +3540,7 @@ button.flickity-prev-next-button
 .h6
 {
     font-size: 16px;
-    font-size: .8888888889rem;
+    font-size: .88889rem;
     line-height: 1.6875;
 }
 
@@ -4770,11 +4770,6 @@ button.flickity-prev-next-button
     text-align: center;
 }
 
-.site-branding
-{
-    text-shadow: 0 2px rgba(62, 71, 76, .4);
-}
-
 .site-title
 {
     display: inline-block;
@@ -4789,7 +4784,7 @@ button.flickity-prev-next-button
 .toggle__title
 {
     font-size: 15px;
-    font-size: .8333333333rem;
+    font-size: .83333rem;
     line-height: 1.8;
 }
 
@@ -4973,8 +4968,8 @@ button.flickity-prev-next-button
 .intro-text p
 {
     font-size: 22px;
-    font-size: 1.2222222222rem;
-    line-height: 1.2272727273;
+    font-size: 1.22222rem;
+    line-height: 1.22727;
 
     letter-spacing: 1px;
 }
@@ -5126,8 +5121,8 @@ button.flickity-prev-next-button
 p.intro-paragraph
 {
     font-size: 22px;
-    font-size: 1.2222222222rem;
-    line-height: 1.2272727273;
+    font-size: 1.22222rem;
+    line-height: 1.22727;
 
     letter-spacing: 1px;
 }
