@@ -70,7 +70,7 @@ gulp.task('critical', function () {
     .on('error', swallowError)
     .pipe(autoprefixer({browsers: ['> 1%', 'last 2 versions']}))
     .pipe(csscomb())
-    .pipe(rename({ extname: '.php' }))
+    .pipe(rename({ suffix: '-css', extname: '.php' }))
     .pipe(minifyCSS())
     .pipe(gulp.dest('css'));
 });
