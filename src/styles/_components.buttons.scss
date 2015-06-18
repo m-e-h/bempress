@@ -1,115 +1,78 @@
-.btn {
-    display: inline-block;
-    font: inherit;
-    text-align: center;
-    cursor: pointer;
-    @include bg-text($btn-bg);
-    border-radius: $base-radius;
-    border-width: 0;
-    padding: ($base-spacing-unit / 2) $base-spacing-unit;
-    letter-spacing: 1px;
-    flex-direction: row;
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+
+// Preconfigure these settings before the @import of this file.
+$btn-color:             #fff !default;
+$btn-color-bg:          #005639 !default;
+$btn-color-bg-hover:    lighten($btn-color-bg, 10%) !default;
+$btn-padding:           10px !default;
+$btn-font-size:         12px !default;
+$btn-font-family:       $sans-serif !default;
+
+
+/**
+ * Configurable button component. Can be applied to any HTML element necessary.
+ *
+ * 1. Reset all properties to browser default.
+ * 2. Allow us to style box model properties.
+ * 3. Line different sized buttons up a little nicer.
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ */
+.c-btn {
+    all: initial; /* [1] */
+    display: inline-block; /* [2] */
+    vertical-align: middle; /* [3] */
+    text-align: center; /* [4] */
+    text-decoration: none; /* [4] */
+    cursor: pointer; /* [5] */
+    padding: $btn-padding;
+    color: $btn-color;
+    background-color: $btn-color-bg;
+    font-family: $btn-font-family;
+    font-size: $btn-font-size;
+
     &:hover,
-    &:active {
-        opacity: 1;
-        background-color: $btn-bg-hover;
-        outline: 0;
-    }
-    &:focus,
     &:active,
-    &.is-active {
-        background-color: $btn-bg-active;
+    &:focus {
+        text-decoration: none; /* [4] */
+        background-color: $btn-color-bg-hover;
     }
-}
 
-button,
-.button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-    @extend .btn;
-}
-
-.button--transparent {
-    @extend .btn;
-    color: inherit;
-    background-color: transparent;
-    &:hover, &:active, &:focus {
-        color: inherit;
-        background-color: rgba($color-grey-ui, 0.3);
+    /**
+     * 1. Forbid interaction with buttons that are disabled.
+     */
+    &[disabled],
+    &.is-disabled {
+        opacity: 0.5;
+        pointer-events: none; /* [1] */
     }
+
 }
 
-.button--outline {
-    @extend .btn;
-    color: $btn-bg;
-    background-color: transparent;
-    border-width: 3px;
-    border-style: solid;
-    border-color: currentColor;
-    &:hover, &:active, &:focus {
-        @include bg-text($btn-bg-hover);
-        background-color: $btn-bg-hover;
-        border-color: $btn-bg-hover;
-    }
+
+/**
+ * Provide size variants by halving or doubling the padding of the standard
+ * button.
+ */
+.c-btn--small {
+    padding: round(0.5 * $btn-padding);
 }
 
-.button--tiny {
-    padding: $base-spacing-unit--tiny $base-spacing-unit--small;
-    @include font-size($base-font-size - 5, 1);
-    text-transform: uppercase;
+.c-btn--large {
+    padding: round(2.0 * $btn-padding);
 }
 
-.button--muted {
-    background-color: $color-grey-ui;
-    border-color: $color-grey-ui;
-}
 
-/* Underline From Center */
-.button--tab {
-    @extend .btn;
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    position: relative;
-    overflow: hidden;
-    //background-color: transparent;
-
-        &:hover,
-        &:active,
-        &.is-active,
-        &:focus {
-            //background-color: transparent;
-        }
-}
-.button--tab:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  background: $color-secondary;
-  height: 4px;
-  transition-property: left, right;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
-}
-.button--tab:hover:before,
-.button--tab:focus:before,
-.button--tab.is-active:before,
-.button--tab:active:before {
-  left: 0;
-  right: 0;
-}
-
-.button--tab:hover:before {
-    background: rgba($color-secondary, $base-opacity);
-}
-
-.button--tab:focus:before,
-.button--tab.is-active:before,
-.button--tab:active:before {
-    background: $color-secondary;
+/**
+ * Create buttons that will fill the entire width of the container they’re
+ * placed inside.
+ *
+ * 1. Remove horizontal paddings so widths and paddings do not compound.
+ */
+.c-btn--full {
+    padding-right: 0; /* [1] */
+    padding-left:  0; /* [1] */
+    width: 100%;
 }

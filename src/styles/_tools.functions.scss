@@ -4,34 +4,8 @@
 
 // Convert any px value into its rem equivalent.
 @function rem($number) {
-    @return $number / $base-font-size * 1rem;
+    @return $number / $font-size * 1rem;
 }
-
-
-// Maths helpers.
-//
-// Halve and double numbers, returning rounded integers. E.g.:
-//
-// .foo {
-//     padding: halve(3.2px);
-// }
-//
-@function quarter($number) {
-    @return round($number / 4);
-}
-
-@function halve($number) {
-    @return round($number / 2);
-}
-
-@function double($number) {
-    @return round($number * 2);
-}
-
-@function quadruple($number) {
-    @return round($number * 4);
-}
-
 
 
 // Determines text color based on bg color
@@ -49,28 +23,13 @@
   }
 }
 
-// Determines text color based on bg color
+// Make the color transparentish
 //
 // .button {
-//   background: $sample-color;
-//   color: set-text-color($sample-color);
+//   background: glass($sample-color);
 // }
 //
 @function glass($color) {
     @return rgba($color, .8);
 }
 
-
-// A function helper to avoid having to type `map-get($z-layers, ...)`
-// ---
-// @param [string] $component: the layer to use
-// ---
-// @return [number] | [null]
-
-@function z($layer) {
-  @if not map-has-key($z-layers, $layer) {
-    @warn "No z-index found in $z-layers map for `#{$layer}`. Property omitted.";
-  }
-
-  @return map-get($z-layers, $layer);
-}

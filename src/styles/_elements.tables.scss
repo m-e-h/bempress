@@ -3,14 +3,14 @@
 //\*------------------------------------*/
 
 table {
-    margin-bottom: $base-spacing-unit;
+    margin-bottom: $spacing;
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
 }
 
 caption {
-    padding: $base-spacing-unit--small 0;
+    padding: $spacing-small 0;
 }
 
 thead th {
@@ -19,13 +19,13 @@ thead th {
 
 tr {
     background-color: #fff;
-    margin-bottom: $base-spacing-unit--small;
+    margin-bottom: $spacing-small;
 }
 
 th,
 td {
     //border: .1rem solid $color-grey-ui;
-    padding: $base-spacing-unit--small $base-spacing-unit--tiny;
+    padding: $spacing-small $spacing-tiny;
     //text-align: center;
 }
 
@@ -34,7 +34,7 @@ tfoot tr {
 }
 
 tfoot td {
-    font-size: $base-font-size - 2;
+    font-size: $font-size - 2;
     font-style: italic;
-    padding: $base-spacing-unit $base-spacing-unit--tiny;
+    padding: $spacing $spacing-tiny;
 }

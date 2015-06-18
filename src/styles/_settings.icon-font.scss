@@ -823,3 +823,24 @@ $dio-church:       "\e006";
 $dio-church-2:       "\e007";
 $dio-quote:       "\e008";
 $dio-thebook:       "\e000";
+
+
+
+
+@mixin font-icon($icon: $stop, $font-family: $mi, $placement: before) {
+
+    &::#{$placement} {
+        content: $icon;
+        display: inline-block;
+        font-family: $font-family;
+        font-size: inherit;
+        font-weight: normal;
+        speak: none;
+        text-decoration: none;
+        text-rendering: auto;
+        letter-spacing: normal;
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}

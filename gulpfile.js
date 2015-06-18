@@ -5,6 +5,7 @@
 var gulp = require('gulp'),
     del = require('del'),
     imagemin = require('gulp-imagemin'),
+    sass = require('gulp-sass'),
     gulpif = require('gulp-if'),
     minifyCSS = require('gulp-minify-css'),
     rename = require('gulp-rename'),
@@ -70,7 +71,7 @@ gulp.task('styles', function () {
     .pipe(reload({stream: true}));
 });
 
-// Compile and Automatically Prefix Stylesheets
+// Compile critical.css https://goo.gl/SoxZIL
 gulp.task('critical', function () {
   return gulp.src([
     'src/styles/critical.scss'
@@ -85,7 +86,7 @@ gulp.task('critical', function () {
     .pipe(gulp.dest('css'));
 });
 
-// Compile and Automatically Prefix Stylesheets
+// Compile Editor Stylesheets
 gulp.task('wpeditor', function () {
   return gulp.src([
     'src/styles/editor-style.scss'

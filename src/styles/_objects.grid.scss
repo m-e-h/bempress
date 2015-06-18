@@ -2,150 +2,65 @@
     $GRIDS
 \*------------------------------------*/
 
+// Preconfigure these settings before the @import of this file.
+$grid-gutter: 10px !default;
 
+/**
+ * A simple grid object to be used in conjunction with our width utility
+ * classes in order to rapidly construct grids in the view.
+ */
 
-$breakpoint-has-widths: ('sm', 'md', 'lg', 'xl') !default;
-$breakpoint-has-push:   ('sm', 'md', 'lg', 'xl') !default;
-$breakpoint-has-pull:   ('sm', 'md', 'lg', 'xl') !default;
-
-
-
-@mixin grid-media-query($media-query) {
-    $breakpoint-found: false;
-
-    @each $breakpoint in $breakpoints {
-        $name: nth($breakpoint, 1);
-        $declaration: nth($breakpoint, 2);
-
-        @if $media-query == $name and $declaration {
-            $breakpoint-found: true;
-
-            @media only #{$declaration} {
-                @content;
-            }
-        }
-    }
-
-    @if not $breakpoint-found {
-        @warn "Breakpoint ‘#{$media-query}’ does not exist";
-    }
+.o-grid {
+    margin:  0;
+    padding: 0;
+    list-style: none;
+    margin-left: -$grid-gutter;
 }
 
-
-
-
-.grid {
-    list-style:none;                /* [1] */
-    //margin-left:-$gutter;           /* [3] */
-    text-align: center;
-}
-
-
-
-    /**
-     * 1. Cause columns to stack side-by-side.
-     * 2. Space columns apart.
-     * 3. Align columns to the tops of each other.
-     * 4. Full-width unless told to behave otherwise.
-     */
-    .grid__item {
-        display:inline-block;           /* [1] */
-        //padding-left:$gutter;           /* [2] */
-        vertical-align:top;             /* [3] */
-        //width:100%;                 /* [4] */
-        text-align: left;
+    .o-grid__item {
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        padding-left: $grid-gutter;
     }
 
 
 
-.grid--rev {
-    direction:rtl;
-    text-align:left;
-
-    > .grid__item {
-        direction:ltr;
-        text-align:left;
-    }
-}
 
 
 /**
- * Gutterless grids have all the properties of regular grids, minus any spacing.
- * Extends `.grid`.
+ * Reverse grid items’ direction.
  */
-.grid--full {
-    margin-left:0;
+.o-grid--rev {
+  direction: rtl;
 
-    > .grid__item {
-        padding-left:0;
-    }
+  > .o-grid__item {
+    direction: ltr;
+  }
+
 }
+
+
+
 
 
 /**
- * Align the entire grid to the right. Extends `.grid`.
+ * Different sizes of grid item (gutters).
  */
-.grid--right {
-    text-align:right;
+.o-grid--small {
+    margin-left: round(0.5 * -$grid-gutter);
 
-    > .grid__item {
-        text-align:left;
+    > .o-grid__item {
+        padding-left: round(0.5 * $grid-gutter);
     }
+
 }
 
+.o-grid--large {
+    margin-left: round(2 * -$grid-gutter);
 
-/**
- * Centered grids align grid items centrally without needing to use push or pull
- * classes. Extends `.grid`.
- */
-.grid--center {
-    text-align:center;
-
-    > .grid__item {
-        text-align:left;
+    > .o-grid__item {
+        padding-left: round(2 * $grid-gutter);
     }
+
 }
-
-
-/**
- * Align grid cells vertically (`.grid--middle` or `.grid--bottom`). Extends
- * `.grid`.
- */
-.grid--middle {
-
-    > .grid__item {
-        vertical-align:middle;
-    }
-}
-
-.grid--bottom {
-
-    > .grid__item {
-        vertical-align:bottom;
-    }
-}
-
-
-/**
- * Create grids with narrower gutters. Extends `.grid`.
- */
-.grid--narrow {
-    margin-left:-($base-spacing-unit--small);
-
-    > .grid__item {
-        padding-left:$base-spacing-unit--small;
-    }
-}
-
-
-/**
- * Create grids with wider gutters. Extends `.grid`.
- */
-.grid--wide {
-    margin-left:-($base-spacing-unit);
-
-    > .grid__item {
-        padding-left:$base-spacing-unit;
-    }
-}
-

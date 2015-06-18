@@ -12,21 +12,4 @@ nav ul {
 nav ul li {
     display: inherit;
     padding: 0;
-
-    &::before {
-        content: "";
-    }
 }
-
-// nav a {
-//     padding: $base-spacing-unit--small $base-spacing-unit;
-//     text-decoration: none;
-// }
-
-// nav a:hover {
-
-// }
-
-// nav a:active {
-
-// }

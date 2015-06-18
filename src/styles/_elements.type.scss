@@ -4,32 +4,32 @@
 
 h1 {
     @include font-size($heading-size-1);
-    margin-bottom: $base-spacing-unit;
+    margin-bottom: $spacing;
 }
 
 h2 {
     @include font-size($heading-size-2);
-    margin-bottom: $base-spacing-unit;
+    margin-bottom: $spacing;
 }
 
 h3 {
     @include font-size($heading-size-3);
-    margin-bottom: $base-spacing-unit;
+    margin-bottom: $spacing;
 }
 
 h4 {
     @include font-size($heading-size-4);
-    margin-bottom: $base-spacing-unit--tiny;
+    margin-bottom: $spacing-tiny;
 }
 
 h5 {
     @include font-size($heading-size-5);
-    margin-bottom: $base-spacing-unit--tiny;
+    margin-bottom: $spacing-tiny;
 }
 
 h6 {
     @include font-size($heading-size-6);
-    margin-bottom: $base-spacing-unit--tiny;
+    margin-bottom: $spacing-tiny;
 }
 
 h1,
@@ -41,14 +41,14 @@ h6 {
     font-family: $font-heading;
     font-style: normal;
     font-weight: 400;
-    opacity: $base-opacity;
+    opacity: $opacity;
 }
 
 
 dl, blockquote, p, address,
 table, fieldset, figure,
 pre {
-    margin-bottom: $base-spacing-unit;
+    margin-bottom: $spacing;
 }
 
 

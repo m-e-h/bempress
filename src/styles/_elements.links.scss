@@ -1,9 +1,9 @@
 a {
     background-color: transparent;
     text-decoration: none;
-    opacity: $base-opacity;
+    opacity: $opacity;
     //color: $color-links;
-    transition: $base-transition ease;
+    transition: $transition ease;
 
     &:active,
     &:hover,

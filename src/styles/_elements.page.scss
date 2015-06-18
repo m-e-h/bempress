@@ -8,7 +8,7 @@
     text-size-adjust: 100%;
     box-sizing: border-box;
     cursor: default;
-    font: #{$base-font-size}/#{$base-line-height} $font-body;
+    font: #{$font-size}/#{$line-height} $font-body;
     font-weight: 400;
     //text-rendering: optimizeLegibility;
     min-height: 100%;
@@ -52,7 +52,7 @@
 }
 
 body {
-    background-color: $color-bg;
+    background-color: #fff;
     color: $color-text;
 }
 
@@ -87,7 +87,7 @@ hr {
     display: block;
     height: 1px;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
-    margin: $base-spacing-unit 0;
+    margin: $spacing 0;
 }
 
 span {

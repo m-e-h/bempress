@@ -3,48 +3,27 @@
 // \*------------------------------------*/
 
 dl {
-    margin-bottom: $base-spacing-unit;
+    margin-bottom: $spacing;
 }
 
 dd {
-    margin-left: $base-spacing-unit--large;
+    margin-left: $spacing-large;
 }
 
 ul,
 ol {
-    margin-bottom: $base-spacing-unit;
-    list-style: none;
-    //padding-left: $base-spacing-unit;
-    //list-style-position: outside;
-    //text-align: left;
+    margin-bottom: $spacing;
+    //list-style: none;
 }
 
-ul li {
-    padding-left: $base-spacing-unit;
-
-    @include font-icon($stop);
-
-    &::before {
-    display: block;
-    font-weight: 400;
-    position: absolute;
-    top: 0;
-    left: 0;
-    line-height: 26px;
-    font-size: 10px;
-    opacity: $base-opacity;
-}
-}
-
-
+// ul:last-child {
+//     margin-bottom: 0;
+// }
 
 
 li {
-
-
     > ul,
     > ol {
         margin-bottom: 0;
     }
-
 }
