@@ -1,11 +1,12 @@
 <?php
 
-namespace Roots\Bempress\Utils;
+namespace Bempress\Utils;
 
 
 add_filter('get_search_form', __NAMESPACE__ . '\\get_search_form');
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 add_filter('excerpt_length', __NAMESPACE__ . '\\excerpt_length');
+add_filter('the_content', __NAMESPACE__ . '\\remove_empty_p', 20, 1);
 add_action('after_setup_theme', __NAMESPACE__ . '\\responsive_videos', 99);
 
 
@@ -33,14 +34,24 @@ function excerpt_length( $length ) {
 
 
 
+function remove_empty_p( $content ) {
+    $content = force_balance_tags($content);
+    $return = preg_replace('#<p>\s*+(<br\s*/*>)?\s*</p>#i', '', $content);
+    $return = preg_replace('~\s?<p>(\s|&nbsp;)+</p>\s?~', '', $return);
+    return $return;
+}
+
+
+
+
 function responsive_videos() {
 
-    add_filter( 'wp_video_shortcode', 'bempress_responsive_videos_embed_html' );
-    add_filter( 'embed_oembed_html',  'bempress_responsive_videos_embed_html' );
-    add_filter( 'video_embed_html',   'bempress_responsive_videos_embed_html' );
+    add_filter( 'wp_video_shortcode', __NAMESPACE__ . '\\responsive_videos_embed_html' );
+    add_filter( 'embed_oembed_html', __NAMESPACE__ . '\\responsive_videos_embed_html' );
+    add_filter( 'video_embed_html', __NAMESPACE__ . '\\responsive_videos_embed_html' );
 
     /* Wrap videos in Buddypress */
-    add_filter( 'bp_embed_oembed_html', 'bempress_responsive_videos_embed_html' );
+    add_filter( 'bp_embed_oembed_html', __NAMESPACE__ . '\\responsive_videos_embed_html' );
 }
 
 /**
@@ -48,9 +59,9 @@ function responsive_videos() {
  *
  * @return string
  */
-function bempress_responsive_videos_embed_html( $html ) {
+function responsive_videos_embed_html( $html ) {
     if ( empty( $html ) || ! is_string( $html ) ) {
         return $html;
     }
-    return '<div class="flex-embed"><div class="flex-embed__ratio flex-embed__ratio--16by9"></div>' . $html .'</div>';
+    return '<div class="flex-embed"><div class="flex-embed__ratio flex-embed__ratio--16by9"></div>'.$html.'</div>';
 }

@@ -128,155 +128,167 @@ text-shadow: 0 2px rgba(0, 16, 34, 0.4);
 
 .u-fixed { position: fixed; }
 
+.z1 { z-index: 1 }
+.z2 { z-index: 2 }
+.z3 { z-index: 3 }
+.z4 { z-index: 4 }
+
+
+
 
 // Colors
 
-.t-bg__white {
+.t-bg--darken-1 { background-color: rgba(#000,.0625) }
+.t-bg--darken-2 { background-color: rgba(#000,.125) }
+.t-bg--darken-3 { background-color: rgba(#000,.25) }
+.t-bg--darken-4 { background-color: rgba(#000,.5) }
+
+.t-bg--white {
     @include bg-text($white);
 }
 
-.t-bg__off-white {
+.t-bg--off-white {
     @include bg-text($color-off-white);
 }
 
-.t-bg__grey {
+.t-bg--grey {
     @include bg-text($color-grey);
 }
 
-.t-bg__shade {
+.t-bg--shade {
     @include bg-text($color-shade);
 }
 
-.t-bg__tint {
+.t-bg--tint {
     @include bg-text($color-tint);
 }
 
-.t-bg__frost {
+.t-bg--frost {
     @include bg-text($color-frost);
 }
 
-.t-bg__grey--dark {
+.t-bg--grey-dark {
     @include bg-text($color-grey-dark);
 }
 
-.t-bg__grey--light {
+.t-bg--grey-light {
     @include bg-text($color-grey-light);
 }
 
-.t-bg__grey--lighter {
+.t-bg--grey-lighter {
     @include bg-text($color-grey-lighter);
 }
 
-.t-bg__1 {
+.t-bg--1 {
     @include bg-text($color-primary);
 }
 
-.t-bg__1--glass {
+.t-bg--1-glass {
     @include bg-text(glass($color-primary-dark));
 }
 
-.t-bg__1--dark {
+.t-bg--1-dark {
     @include bg-text($color-primary-dark);
 }
 
-.t-bg__1--light {
+.t-bg--1-light {
     @include bg-text($color-primary-light);
 }
 
-.t-bg__2 {
+.t-bg--2 {
     @include bg-text($color-secondary);
 }
 
-.t-bg__2--dark {
+.t-bg--2-dark {
     @include bg-text($color-secondary-dark);
 }
 
-.t-bg__2--glass {
+.t-bg--2-glass {
     @include bg-text(glass($color-secondary-dark));
 }
 
-.t-bg__2--light {
+.t-bg--2-light {
     @include bg-text($color-secondary-light);
 }
 
-.t-bg__3 {
+.t-bg--3 {
     @include bg-text($color-accent);
 }
 
-.t-bg__3--dark {
+.t-bg--3-dark {
     @include bg-text($color-accent-dark);
 }
 
-.t-bg__3--light {
+.t-bg--3-light {
     @include bg-text($color-accent-light);
 }
 
-.t-bg__3--glass {
+.t-bg--3-glass {
     @include bg-text(glass($color-accent-dark));
 }
 
 
 
 
-.t-fill__white {
+.t-fill--white {
     fill: $white;
 }
 
-.t-fill__1 {
+.t-fill--1 {
     fill: $color-primary;
 }
 
-.t-fill__1--dark {
+.t-fill--1-dark {
     fill: $color-primary-dark;
 }
 
-.t-fill__1--light {
+.t-fill--1-light {
     fill: $color-primary-light;
 }
 
-.t-fill__2 {
+.t-fill--2 {
     fill: $color-secondary;
 }
 
-.t-fill__2--dark {
+.t-fill--2-dark {
     fill: $color-secondary-dark;
 }
 
-.t-fill__2--light {
+.t-fill--2-light {
     fill: $color-secondary-light;
 }
 
-.t-fill__3 {
+.t-fill--3 {
     fill: $color-accent;
 }
 
-.t-fill__3--dark {
+.t-fill--3-dark {
     fill: $color-accent-dark;
 }
 
-.t-fill__3--light {
+.t-fill--3-light {
     fill: $color-accent-light;
 }
 
 
 
 
-.t-fg__1 {
+.t-fg--1 {
     color: $color-primary;
 }
 
-.t-fg__2 {
+.t-fg--2 {
     color: $color-secondary;
 }
 
-.t-fg__3 {
+.t-fg--3 {
     color: $color-accent;
 }
 
-.t-fg__dark {
+.t-fg--dark {
     color: $color-text;
 }
 
-.t-fg__light {
+.t-fg--light {
     color: $color-white;
 }

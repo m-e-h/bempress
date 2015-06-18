@@ -1,6 +1,6 @@
 <?php
 
-namespace Roots\Bempress\AttrTrumps;
+namespace Bempress\AttrTrumps;
 
 
 /**
@@ -136,6 +136,7 @@ class AttrTrumps {
 
     public function site_inner( $attr ) {
         $attr['class']      .= $this->site_inner;
+
         if ( '1c'   == get_theme_mod( 'theme_layout' ) ) :
         $attr['class']      .= $this->site_inner_full_width;
 

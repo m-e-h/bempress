@@ -1,6 +1,6 @@
 <?php
 
-namespace Roots\Sage\Titles;
+namespace Bempress\Titles;
 
 /**
  * Page titles

@@ -4,6 +4,10 @@ a {
     opacity: $opacity;
     //color: $color-links;
     transition: $transition ease;
+    word-break:     break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens:    auto;
+    hyphens:         auto;
 
     &:active,
     &:hover,

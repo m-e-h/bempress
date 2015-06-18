@@ -10,16 +10,18 @@ dd {
     margin-left: $spacing-large;
 }
 
-ul,
-ol {
-    margin-bottom: $spacing;
-    //list-style: none;
+ul, ol {
+  list-style-position: outside;
+  margin: 0 0 $font-size $spacing;
 }
 
-// ul:last-child {
-//     margin-bottom: 0;
-// }
+ul {
+  list-style: disc;
+}
 
+ol {
+  list-style: decimal;
+}
 
 li {
     > ul,
@@ -27,3 +29,4 @@ li {
         margin-bottom: 0;
     }
 }
+

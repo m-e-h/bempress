@@ -2,15 +2,6 @@
     #BLOCK
 \*------------------------------------*/
 
-// .block__img {
-//   border-radius: $base-radius $base-radius 0 0;
-//   background-color: $white;
-
-//   a:hover {
-//     opacity: $base-opacity;
-// }
-// }
-
 
 .flag {
     align-items: flex-start;
@@ -43,18 +34,18 @@
 .media {
     //display: table;
     width: 100%;
-    border-radius: $base-radius;
+    border-radius: $radius;
     overflow: hidden;
 }
 
 .media__body {
-    @include font-size($base-font-size - 2, false);
+    @include font-size($font-size - 2, false);
     display: flex;
     text-align: center;
 }
 
 .media__title {
-    @include font-size($base-font-size, false);
+    @include font-size($font-size, false);
     line-height: 1.6;
 }
 

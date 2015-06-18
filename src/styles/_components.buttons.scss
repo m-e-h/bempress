@@ -3,65 +3,85 @@
 \*------------------------------------*/
 
 // Preconfigure these settings before the @import of this file.
-$btn-color:             #fff !default;
-$btn-color-bg:          #005639 !default;
-$btn-color-bg-hover:    lighten($btn-color-bg, 10%) !default;
-$btn-padding:           10px !default;
-$btn-font-size:         12px !default;
-$btn-font-family:       $sans-serif !default;
+$btn-color:             inherit !default;
+$btn-color-bg:          transparent !default;
+$btn-color-bg-hover:    rgba($color-grey-ui-dark,.0625) !default;
+$btn-padding-x:         $font-size !default;
+$btn-padding-y:         $spacing-small !default;
+$btn-font-size:         inherit !default;
+$btn-font-family:       inherit !default;
 
 
-/**
- * Configurable button component. Can be applied to any HTML element necessary.
- *
- * 1. Reset all properties to browser default.
- * 2. Allow us to style box model properties.
- * 3. Line different sized buttons up a little nicer.
- * 4. Reset/normalize some styles.
- * 5. Force all button-styled elements to appear clickable.
- */
-.c-btn {
-    all: initial; /* [1] */
-    display: inline-block; /* [2] */
-    vertical-align: middle; /* [3] */
-    text-align: center; /* [4] */
-    text-decoration: none; /* [4] */
-    cursor: pointer; /* [5] */
-    padding: $btn-padding;
-    color: $btn-color;
+.btn,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    display: inline-block;
+    font: inherit;
+    text-align: center;
+    cursor: pointer;
     background-color: $btn-color-bg;
-    font-family: $btn-font-family;
-    font-size: $btn-font-size;
+    border-radius: $radius;
+    border: 1px solid transparent;
+    padding: $btn-padding-y $btn-padding-x;
 
     &:hover,
-    &:active,
     &:focus {
-        text-decoration: none; /* [4] */
-        background-color: $btn-color-bg-hover;
+      outline: 0;
+      text-decoration: none;
+      background-color: $btn-color-bg-hover;
     }
 
-    /**
-     * 1. Forbid interaction with buttons that are disabled.
-     */
-    &[disabled],
+    &:disabled,
     &.is-disabled {
-        opacity: 0.5;
-        pointer-events: none; /* [1] */
+      opacity: .5;
     }
-
 }
 
+.btn--primary {
+  color: white;
+  background-color: #0076df;
+  border-radius: 3px;
+}
+
+.btn--outline,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    color: $color-text;
+    border-color: currentcolor;
+
+    &:hover,
+    &:focus {
+    border-color: $btn-color-bg-hover;
+  }
+}
+
+.btn--transparent {
+    background-color: transparent;
+    color: currentColor;
+
+    &:hover,
+    &:focus {
+        background-color: $color-shade;
+    }
+}
 
 /**
  * Provide size variants by halving or doubling the padding of the standard
  * button.
  */
-.c-btn--small {
-    padding: round(0.5 * $btn-padding);
+.btn--small {
+    padding: round(0.5 * $btn-padding-y) round(0.5 * $btn-padding-x);
+    font-size: $font-size - 2;
+    letter-spacing: .02em;
 }
 
-.c-btn--large {
-    padding: round(2.0 * $btn-padding);
+.btn--large {
+    padding: round(1.5 * $btn-padding-y) round(1.5 * $btn-padding-x);
 }
 
 
@@ -71,7 +91,7 @@ $btn-font-family:       $sans-serif !default;
  *
  * 1. Remove horizontal paddings so widths and paddings do not compound.
  */
-.c-btn--full {
+.btn--full {
     padding-right: 0; /* [1] */
     padding-left:  0; /* [1] */
     width: 100%;

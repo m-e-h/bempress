@@ -1,6 +1,6 @@
 <?php
 
-namespace Roots\Bempress\Assets;
+namespace Bempress\Assets;
 
 /**
  * Scripts and stylesheets

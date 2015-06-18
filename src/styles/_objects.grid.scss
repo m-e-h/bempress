@@ -2,65 +2,54 @@
     $GRIDS
 \*------------------------------------*/
 
-// Preconfigure these settings before the @import of this file.
-$grid-gutter: 10px !default;
+$grid-gutter: $spacing-small !default;
 
-/**
- * A simple grid object to be used in conjunction with our width utility
- * classes in order to rapidly construct grids in the view.
- */
 
-.o-grid {
+
+
+
+.grid {
     margin:  0;
     padding: 0;
     list-style: none;
     margin-left: -$grid-gutter;
 }
 
-    .o-grid__item {
-        display: inline-block;
-        vertical-align: top;
-        width: 100%;
-        padding-left: $grid-gutter;
-    }
-
-
-
+.grid__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    padding-left: $grid-gutter;
+}
 
 
 /**
  * Reverse grid items’ direction.
  */
-.o-grid--rev {
+.grid--rev {
   direction: rtl;
 
-  > .o-grid__item {
+  > .grid__item {
     direction: ltr;
   }
-
 }
-
-
-
 
 
 /**
  * Different sizes of grid item (gutters).
  */
-.o-grid--small {
+.grid--small {
     margin-left: round(0.5 * -$grid-gutter);
 
-    > .o-grid__item {
+    > .grid__item {
         padding-left: round(0.5 * $grid-gutter);
     }
-
 }
 
-.o-grid--large {
+.grid--large {
     margin-left: round(2 * -$grid-gutter);
 
-    > .o-grid__item {
+    > .grid__item {
         padding-left: round(2 * $grid-gutter);
     }
-
 }

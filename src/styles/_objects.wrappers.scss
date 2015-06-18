@@ -2,28 +2,15 @@
     #Layout Wrappers
 \*------------------------------------*/
 
-.wrapper, .wrap {
-    max-width: $max-width;
-    margin-left: auto;
-    margin-right: auto;
+.container {
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.wrapper--wide {
+
+.container--wide {
     max-width: 100%;
     width: 100%;
 }
 
-// .header-wrap {
-// 	display: block;
-//     margin: 0;
-// }
-
-.u-pt-wrap {
-    @extend .u-pt-;
-    @extend .u-pt\@md;
-    @extend .u-pt\+\@lg;
-}
-
-.site-container {
-    overflow: hidden;
-}

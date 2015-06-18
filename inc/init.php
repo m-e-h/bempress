@@ -1,8 +1,8 @@
 <?php
 
-namespace Roots\Bempress\Init;
+namespace Bempress\Init;
 
-use Roots\Bempress\Assets;
+use Bempress\Assets;
 
 /**
  * Theme setup

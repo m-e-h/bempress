@@ -4,9 +4,10 @@
 
 table {
     margin-bottom: $spacing;
-    width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
     border-spacing: 0;
+    max-width: 100%;
+    width: 100%;
 }
 
 caption {
@@ -14,7 +15,8 @@ caption {
 }
 
 thead th {
-    background-color: #efefef;
+    text-align: left;
+    font-weight: bold;
 }
 
 tr {
@@ -25,9 +27,12 @@ tr {
 th,
 td {
     //border: .1rem solid $color-grey-ui;
-    padding: $spacing-small $spacing-tiny;
+    padding: $spacing-tiny;
     //text-align: center;
 }
+
+th { vertical-align: bottom }
+td { vertical-align: top }
 
 tfoot tr {
     background: none;
