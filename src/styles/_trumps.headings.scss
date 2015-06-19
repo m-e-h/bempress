@@ -16,8 +16,6 @@ a.u-h1, a.u-h2, a.u-h3, a.u-h4, a.u-h5
     }
 }
 
-
-
 .u-h1 {
     @include font-size($heading-size-2, false);
     @include md {
@@ -52,10 +50,10 @@ a.u-h1, a.u-h2, a.u-h3, a.u-h4, a.u-h5
     @include font-size($heading-size-6, false);
 }
 
-.u-text-jumbo {
+.u-h--large {
     @include font-size($heading-size-2, false);
     @include md {
-        @include font-size($heading-size-jumbo, false);
+        @include font-size($heading-size-large, false);
     }
     line-height: 1;
 }

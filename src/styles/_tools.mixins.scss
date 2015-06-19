@@ -2,9 +2,6 @@
 //     #MIXINS
 // \*------------------------------------*/
 
-
-
-
 // Mixin to create a declaration whose value is a rem unit. Also provide pixel fallback.
 //
 // .simple-ubempress {
@@ -74,6 +71,27 @@
 
 @mixin font-size-xl {
     @include font-size($heading-size-1);
+}
+
+
+
+
+// Simple truncation mixin to cut off text using an ellipsis after a certain
+// width.
+//
+// .simple-usage {
+//   @include truncate();
+// }
+//
+// .detailed-usage {
+//   @include truncate(<value>);
+// }
+
+@mixin truncate($limit: 100%) {
+    max-width: $limit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 

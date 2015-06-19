@@ -2,59 +2,8 @@
     #WIDGETS
 \*------------------------------------*/
 
-.widget {
+
+.sidebar-horizontal > .widget {
+    flex: 1 1;
     min-width: 300px;
-    width: 100%;
-    display: flex;
-    @include md {
-        min-width: 33%;
-    }
-    &__wrap {
-        //display: block;
-        flex: 1 auto;
-    }
-    &-footer:nth-child(3n) {
-        padding-right: 0;
-    }
 }
-
-.widget_search {
-    display: inline-block;
-    > .widget__wrap {
-        padding: 0;
-        background: none;
-    }
-}
-
-.widget.widget_search {
-    padding: 0;
-    background: none;
-}
-
-// Menus in widgets
-li.menu-item--has-description {
-    border-top: 1px solid #eaeaea;
-    border-top: 1px solid rgba($white, 0.1);
-    margin-bottom: 0;
-}
-
-.menu-item--has-description:first-of-type {
-    border-top: 0;
-}
-
-.menu-item--has-description a {
-    display: block;
-    text-decoration: none;
-    letter-spacing: 1.5px;
-    display: inline-block;
-    width: 90%;
-    text-align: left;
-}
-
-a.info {
-    padding: 0;
-    margin: 0;
-    width: 20px;
-    text-align: center;
-}
-

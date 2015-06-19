@@ -1,9 +1,9 @@
 /*------------------------------------*\
-    $GRIDS
+    #GRID
 \*------------------------------------*/
 
-$grid-gutter: $spacing-small !default;
-
+// Preconfigure these settings before the @import of this file.
+$grid-gutter: $spacing !default;
 
 
 
@@ -12,38 +12,60 @@ $grid-gutter: $spacing-small !default;
     margin:  0;
     padding: 0;
     list-style: none;
-    margin-left: -$grid-gutter;
+    //margin-left: -$grid-gutter;
 }
 
-.grid__item {
-    display: inline-block;
-    vertical-align: top;
-    width: 100%;
-    padding-left: $grid-gutter;
-}
+    .grid__item {
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        //padding-left: $grid-gutter;
+    }
 
 
-/**
- * Reverse grid items’ direction.
- */
+//
+// Reverse grid items’ direction.
+//
 .grid--rev {
-  direction: rtl;
+    direction: rtl;
 
-  > .grid__item {
-    direction: ltr;
-  }
+    > .grid__item {
+        direction: ltr;
+    }
+
 }
 
 
-/**
- * Different sizes of grid item (gutters).
- */
+//
+// Vertically align items to middles/bottoms of each other (top is the default).
+//
+.grid--middle {
+
+    > .grid__item {
+        vertical-align: middle;
+    }
+
+}
+
+.grid--bottom {
+
+    > .grid__item {
+        vertical-align: bottom;
+    }
+
+}
+
+
+//
+// Different sizes of grid item (gutters).
+//
 .grid--small {
     margin-left: round(0.5 * -$grid-gutter);
 
     > .grid__item {
         padding-left: round(0.5 * $grid-gutter);
     }
+
 }
 
 .grid--large {
@@ -52,4 +74,5 @@ $grid-gutter: $spacing-small !default;
     > .grid__item {
         padding-left: round(2 * $grid-gutter);
     }
+
 }

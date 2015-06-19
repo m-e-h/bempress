@@ -117,6 +117,7 @@ Tags:
 @import "objects.grid";
 @import "objects.flex";
 @import "objects.embed";
+@import "objects.shadows";
 @import "objects.media";
 @import "objects.articles";
 @import "objects.wrappers";
@@ -129,9 +130,8 @@ Tags:
 /**
  * #COMPONENTS
  */
-// @import "components.page-title";
+@import "components.titles";
 // @import "components.site-header";
-@import "components.shadows";
 @import "components.buttons";
 // @import "components.testimonials";
 // @import "components.avatars";
@@ -140,7 +140,7 @@ Tags:
 // @import "components.meta";
 @import "components.code";
 @import "components.breadcrumbs";
-// @import "components.widgets";
+@import "components.widgets";
 // @import "components.tabs";
 // @import "components.search";
 // @import "components.tooltips";
@@ -155,11 +155,11 @@ Tags:
 /**
  * #TRUMPS
  */
-// @import "trumps.links";
-// @import "trumps.helpers";
-// @import "trumps.headings";
-// @import "trumps.spacing";
-// @import "trumps.widths";
+@import "trumps.links";
+@import "trumps.helpers";
+@import "trumps.headings";
+@import "trumps.spacing";
+@import "trumps.widths";
 
 
 // @import "trumps.shame";

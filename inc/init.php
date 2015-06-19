@@ -41,6 +41,13 @@ function setup() {
         'aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio'
     ]);
 
+    add_theme_support('custom-background',
+        apply_filters('bempress_background_args', [
+        'default-color' => 'ffffff',
+        'default-image' => '',
+        ])
+    );
+
   // Tell the TinyMCE editor to use a custom stylesheet
     add_editor_style(trailingslashit( get_template_directory_uri() ) . 'css/editor-style.css');
 }
@@ -55,7 +62,7 @@ function widgets() {
     'id'            => 'primary',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
-    'before_title'  => '<h3>',
+    'before_title'  => '<h3 class="widget-title">',
     'after_title'   => '</h3>'
   ]);
 
@@ -64,7 +71,7 @@ function widgets() {
     'id'            => 'footer',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
-    'before_title'  => '<h3>',
+    'before_title'  => '<h3 class="widget-title">',
     'after_title'   => '</h3>'
   ]);
 }

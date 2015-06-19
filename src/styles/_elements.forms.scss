@@ -1,6 +1,7 @@
-// /*------------------------------------*\
-//  #FORMS
-// \*------------------------------------*/
+/*------------------------------------*\
+ #FORMS
+\*------------------------------------*/
+
 input,
 select,
 textarea {
@@ -137,12 +138,12 @@ textarea {
 .post-password-form input[type="submit"] {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
-    outline: none;
-    padding: 0 $spacing;
+    //padding: 0 $spacing;
     position: absolute;
-    top: 0;
+    //top: 0;
     right: 0;
-    bottom: 0;
+    //bottom: 0;
+    height: $spacing-large;
 }
 
 .post-password-form input[type="submit"] {
@@ -150,9 +151,9 @@ textarea {
     top: auto;
 }
 
-.search-form button {
-    @include font-icon($search);
-}
+// .search-form button {
+//     @include font-icon($search);
+// }
 
 .search-form button[type=submit]::before {
     font-size: 18px;

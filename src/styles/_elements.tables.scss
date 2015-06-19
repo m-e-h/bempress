@@ -1,6 +1,6 @@
-///*------------------------------------*\
-//    #TABLES
-//\*------------------------------------*/
+/*------------------------------------*\
+   #TABLES
+\*------------------------------------*/
 
 table {
     margin-bottom: $spacing;
@@ -28,11 +28,13 @@ th,
 td {
     //border: .1rem solid $color-grey-ui;
     padding: $spacing-tiny;
-    //text-align: center;
 }
 
-th { vertical-align: bottom }
-td { vertical-align: top }
+th { vertical-align: bottom; }
+td {
+    vertical-align: top;
+    text-align: center;
+}
 
 tfoot tr {
     background: none;

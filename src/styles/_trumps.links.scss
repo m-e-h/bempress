@@ -1,3 +1,7 @@
+/*------------------------------------*\
+    #LINKS
+\*------------------------------------*/
+
 .u-link--bare {
     text-decoration: none !important;
 }
@@ -12,15 +16,15 @@
 }
 
 .navigation a {
-    &:hover{
-    opacity: 1;
-}
+        &:hover{
+        opacity: 1;
+    }
 }
 
 .u-link--object {
     cursor: pointer;
     &.is-active, &:hover, &:focus {
-        opacity: $base-opacity;
+        opacity: $opacity;
     }
 }
 

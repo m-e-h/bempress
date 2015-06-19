@@ -1,15 +1,19 @@
-.c-testimonial {
+/*------------------------------------*\
+    #TESTIMONIALS
+\*------------------------------------*/
+
+.testimonial {
     padding: $base-spacing-unit;
     border-radius: $base-radius;
     background-color: $color-shadow;
 }
 
-    .c-testimonial__text {
+    .testimonial__text {
         font-style: italic;
         @include font-size(24px);
     }
 
-    .c-testimonial__source {
+    .testimonial__source {
         display: block;
         font-style: normal;
         font-weight: bold;

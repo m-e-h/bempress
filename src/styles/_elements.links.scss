@@ -1,8 +1,12 @@
+/*------------------------------------*\
+    #LINKS
+\*------------------------------------*/
+
 a {
     background-color: transparent;
     text-decoration: none;
     opacity: $opacity;
-    //color: $color-links;
+    color: $color-links;
     transition: $transition ease;
     word-break:     break-word;
     -webkit-hyphens: auto;

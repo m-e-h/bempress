@@ -7,7 +7,7 @@
     padding: 0;
 }
 
-.menu__item {
+.menu-item {
     display: inline-block;
     > a {
         width: 100%;
@@ -29,7 +29,7 @@
     }
 }
 
-.sub-menu > .menu__item > a {
+.sub-menu > .menu-item > a {
     padding: .5em 1em;
     flex-grow: 100;
 }
@@ -48,7 +48,7 @@
 }
 /* Initial menus should be inline-block so that they are horizontal */
 
-.menu--horizontal .menu__item,
+.menu--horizontal .menu-item,
 .menu--horizontal .menu__heading,
 .menu--horizontal .menu-separator {
     zoom: 1;
@@ -179,7 +179,7 @@
  * Dropdowns
  */
 
-.menu__item .menu__item {
+.menu-item .menu-item {
     display: flex;
     flex-direction: row;
     > a {
@@ -199,6 +199,7 @@
         left: -5px;
         text-align: left;
         overflow: hidden;
+        z-index: 1;
         //border: 0.0725em solid $color-grey-light;
         border-radius: $radius;
         background-color: $white;

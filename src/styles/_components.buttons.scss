@@ -3,9 +3,14 @@
 \*------------------------------------*/
 
 // Preconfigure these settings before the @import of this file.
+$btn-bg:                    transparent;
+$btn-primary-bg:            $color-primary;
+$btn-bg-hover:              $color-primary-light;
+$btn-bg-active:             $color-primary-dark;
+
 $btn-color:             inherit !default;
-$btn-color-bg:          transparent !default;
-$btn-color-bg-hover:    rgba($color-grey-ui-dark,.0625) !default;
+$btn-color-bg:          $color-primary !default;
+$btn-color-bg-hover:    $color-primary-light!default;
 $btn-padding-x:         $font-size !default;
 $btn-padding-y:         $spacing-small !default;
 $btn-font-size:         inherit !default;
@@ -23,16 +28,17 @@ input[type="submit"] {
     font: inherit;
     text-align: center;
     cursor: pointer;
-    background-color: $btn-color-bg;
+    background-color: $btn-bg;
     border-radius: $radius;
     border: 1px solid transparent;
     padding: $btn-padding-y $btn-padding-x;
+    transition: $transition;
 
     &:hover,
     &:focus {
       outline: 0;
       text-decoration: none;
-      background-color: $btn-color-bg-hover;
+      background-color: rgba($color-grey-ui-dark,.0625);
     }
 
     &:disabled,
@@ -41,10 +47,14 @@ input[type="submit"] {
     }
 }
 
+.btn-default,
 .btn--primary {
-  color: white;
-  background-color: #0076df;
-  border-radius: 3px;
+    color: white;
+    background-color: $btn-primary-bg;
+    &:hover,
+    &:focus {
+        background-color: $btn-bg-hover;
+    }
 }
 
 .btn--outline,

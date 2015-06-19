@@ -10,12 +10,13 @@
     }
 }
 
-.hidden {
+.u-hide {
     display: none !important;
     visibility: hidden;
 }
 
-.screen-reader-text, .visuallyhidden {
+.u-hide-visually,
+.screen-reader-text {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -26,19 +27,64 @@
     width: 1px;
 }
 
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
 
-.invisible {
-    visibility: hidden;
-}
 
+
+/**
+ * Text.
+ */
+
+ // style
+.u-text-bold   { font-weight: bold }
+.u-text-normal { font-weight: normal }
+.u-text-italic  { font-style: italic }
+.u-text-caps    { text-transform: uppercase; letter-spacing: .2em; }
+.u-text-shadow { text-shadow: 0 2px rgba(0, 16, 34, 0.4); }
+
+// alignment
+.u-text-right   { text-align:    right !important; }
+.u-text-left    { text-align: left     !important; }
+.u-text-center  { text-align:  center  !important; }
+.u-text-justify { text-align: justify  !important; }
+
+// size
+.u-text\+\+ { font-size: larger  !important; }
+.u-text--   { font-size: smaller !important; }
+.u-text-truncate { @include truncate(100%); }
+
+
+
+/**
+ * Display.
+ */
+.u-radius { border-radius: $radius; }
+.u-round { border-radius: 50%; }
+
+.u-block  { display: block; }
+.u-inline-block { display: inline-block; }
+.u-inline  { display: inline; }
+.u-table  { display: table; }
+.u-table__cell { display: table-cell; }
+
+.u-left { float: left; }
+.u-right { float: right; }
+.u-overflow--h { overflow: hidden; }
+
+.u-fixed { position: fixed; }
+.u-absolute { position: absolute; }
+.u-static { position: static; }
+
+.u-z1 { z-index: 1 }
+.u-z2 { z-index: 2 }
+.u-z3 { z-index: 3 }
+.u-z4 { z-index: 4 }
+
+
+
+
+/**
+ * WP specific.
+ */
 .clearfix:before,
 .clearfix:after,
 .clear:before,
@@ -85,210 +131,67 @@
     margin: 0 auto;
 }
 
-.u-text--b   { font-weight: bold }
-.u-text--n { font-weight: normal }
-.u-text--i  { font-style: italic }
-.u-text--caps    { text-transform: uppercase; letter-spacing: .2em; }
-
-.u-text--l   { text-align: left }
-.u-text--c       { text-align: center }
-.u-text--r  { text-align: right }
-.u-text--j      { text-align: justify }
-
-.u-truncate {
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.u-shadow {
-text-shadow: 0 2px rgba(0, 16, 34, 0.4);
-}
-
-
-.br, .u-br {
-    border-radius: $base-radius;
-}
-
-.u-round {
-    border-radius: 50%;
-}
 
 
 
-.u-block  { display: block; }
-.u-inline-block { display: inline-block; }
-.u-inline  { display: inline; }
-.u-table  { display: table; }
-.u-table__cell { display: table-cell; }
-.u-left { float: left; }
-.u-right { float: right; }
-.u-oh { overflow: hidden; }
-
-.u-fixed { position: fixed; }
-
-.z1 { z-index: 1 }
-.z2 { z-index: 2 }
-.z3 { z-index: 3 }
-.z4 { z-index: 4 }
-
-
-
-
-// Colors
-
+/**
+ * Colors.
+ */
 .t-bg--darken-1 { background-color: rgba(#000,.0625) }
 .t-bg--darken-2 { background-color: rgba(#000,.125) }
 .t-bg--darken-3 { background-color: rgba(#000,.25) }
 .t-bg--darken-4 { background-color: rgba(#000,.5) }
 
-.t-bg--white {
-    @include bg-text($white);
-}
 
-.t-bg--off-white {
-    @include bg-text($color-off-white);
-}
-
-.t-bg--grey {
-    @include bg-text($color-grey);
-}
-
-.t-bg--shade {
-    @include bg-text($color-shade);
-}
-
-.t-bg--tint {
-    @include bg-text($color-tint);
-}
-
-.t-bg--frost {
-    @include bg-text($color-frost);
-}
-
-.t-bg--grey-dark {
-    @include bg-text($color-grey-dark);
-}
-
-.t-bg--grey-light {
-    @include bg-text($color-grey-light);
-}
-
-.t-bg--grey-lighter {
-    @include bg-text($color-grey-lighter);
-}
-
-.t-bg--1 {
-    @include bg-text($color-primary);
-}
-
-.t-bg--1-glass {
-    @include bg-text(glass($color-primary-dark));
-}
-
-.t-bg--1-dark {
-    @include bg-text($color-primary-dark);
-}
-
-.t-bg--1-light {
-    @include bg-text($color-primary-light);
-}
-
-.t-bg--2 {
-    @include bg-text($color-secondary);
-}
-
-.t-bg--2-dark {
-    @include bg-text($color-secondary-dark);
-}
-
-.t-bg--2-glass {
-    @include bg-text(glass($color-secondary-dark));
-}
-
-.t-bg--2-light {
-    @include bg-text($color-secondary-light);
-}
-
-.t-bg--3 {
-    @include bg-text($color-accent);
-}
-
-.t-bg--3-dark {
-    @include bg-text($color-accent-dark);
-}
-
-.t-bg--3-light {
-    @include bg-text($color-accent-light);
-}
-
-.t-bg--3-glass {
-    @include bg-text(glass($color-accent-dark));
-}
+.t-bg--white { @include bg-text($white); }
+.t-bg--off-white { @include bg-text($color-off-white); }
+.t-bg--grey { @include bg-text($color-grey); }
+.t-bg--grey-dark { @include bg-text($color-grey-dark); }
+.t-bg--grey-light { @include bg-text($color-grey-light); }
+.t-bg--grey-lighter { @include bg-text($color-grey-lighter); }
+.t-fill--white { fill: $white; }
 
 
+.t-bg--shade { @include bg-text($color-shade); }
+.t-bg--tint { @include bg-text($color-tint); }
+.t-bg--frost { @include bg-text($color-frost); }
 
 
-.t-fill--white {
-    fill: $white;
-}
-
-.t-fill--1 {
-    fill: $color-primary;
-}
-
-.t-fill--1-dark {
-    fill: $color-primary-dark;
-}
-
-.t-fill--1-light {
-    fill: $color-primary-light;
-}
-
-.t-fill--2 {
-    fill: $color-secondary;
-}
-
-.t-fill--2-dark {
-    fill: $color-secondary-dark;
-}
-
-.t-fill--2-light {
-    fill: $color-secondary-light;
-}
-
-.t-fill--3 {
-    fill: $color-accent;
-}
-
-.t-fill--3-dark {
-    fill: $color-accent-dark;
-}
-
-.t-fill--3-light {
-    fill: $color-accent-light;
-}
+.t-bg--1 { @include bg-text($color-primary); }
+.t-bg--1-glass { @include bg-text(glass($color-primary-dark)); }
+.t-bg--1-dark { @include bg-text($color-primary-dark); }
+.t-bg--1-light { @include bg-text($color-primary-light); }
 
 
+.t-bg--2 { @include bg-text($color-secondary); }
+.t-bg--2-dark { @include bg-text($color-secondary-dark); }
+.t-bg--2-glass { @include bg-text(glass($color-secondary-dark)); }
+.t-bg--2-light { @include bg-text($color-secondary-light); }
 
 
-.t-fg--1 {
-    color: $color-primary;
-}
+.t-bg--3 { @include bg-text($color-accent); }
+.t-bg--3-dark { @include bg-text($color-accent-dark); }
+.t-bg--3-light { @include bg-text($color-accent-light); }
+.t-bg--3-glass { @include bg-text(glass($color-accent-dark)); }
 
-.t-fg--2 {
-    color: $color-secondary;
-}
 
-.t-fg--3 {
-    color: $color-accent;
-}
+.t-fill--1 { fill: $color-primary; }
+.t-fill--1-dark { fill: $color-primary-dark; }
+.t-fill--1-light { fill: $color-primary-light; }
 
-.t-fg--dark {
-    color: $color-text;
-}
 
-.t-fg--light {
-    color: $color-white;
-}
+.t-fill--2 { fill: $color-secondary; }
+.t-fill--2-dark { fill: $color-secondary-dark; }
+.t-fill--2-light { fill: $color-secondary-light; }
+
+
+.t-fill--3 { fill: $color-accent; }
+.t-fill--3-dark { fill: $color-accent-dark; }
+.t-fill--3-light { fill: $color-accent-light; }
+
+
+.t-fg--1 { color: $color-primary; }
+.t-fg--2 { color: $color-secondary; }
+.t-fg--3 { color: $color-accent; }
+.t-fg--dark { color: $color-text; }
+.t-fg--light { color: $color-white; }
