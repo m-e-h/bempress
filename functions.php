@@ -6,13 +6,17 @@
  */
 
 $bempress_includes = [
-    'hybrid-core/hybrid.php',   // Hybrid Core library
-    'inc/attr-trumps.php',      // Css class selectors
-    'inc/utils.php',            // Utility functions
-    'inc/init.php',             // Initial theme setup
-    'inc/assets.php',           // Scripts and styles
-    'inc/titles.php',           // Page titles
-    'inc/html-min.php',         // Minify html output
+    'hybrid-core/hybrid.php',           // Hybrid Core library
+    'inc/attr-trumps.php',              // Css class selectors
+    'inc/utils.php',                    // Utility functions
+    'inc/init.php',                     // Initial theme setup
+    'inc/assets.php',                   // Scripts and styles
+    'inc/titles.php',                   // Page titles
+    'inc/html-min.php',                 // Minify html output
+    'inc/tiny-mce.php',                 // Initial theme setup
+    'inc/shortcodes.php',               // Scripts and styles
+    'inc/shortcodes-ui.php',            // Page titles
+    'inc/customizer/customizer.php',    // Minify html output
 ];
 
 foreach ($bempress_includes as $file) {
