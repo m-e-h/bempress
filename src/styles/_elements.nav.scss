@@ -13,3 +13,9 @@ nav ul li {
     display: inherit;
     padding: 0;
 }
+
+nav li > a {
+    @extend .btn;
+    @extend .btn--small;
+    @extend .btn--transparent;
+}

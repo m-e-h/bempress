@@ -1155,7 +1155,7 @@ nav ul li {
 /*------------------------------------*    #BUTTONS
 \*------------------------------------*/
 .btn,
-.menu-item > a,
+nav li > a,
 button,
 input[type="button"],
 input[type="reset"],
@@ -1174,9 +1174,9 @@ input[type="submit"] {
     transition: 0.25s;
 }
 .btn:hover,
-.menu-item > a:hover,
+nav li > a:hover,
 .btn:focus,
-.menu-item > a:focus,
+nav li > a:focus,
 button:hover,
 button:focus,
 input[type="button"]:hover,
@@ -1190,9 +1190,9 @@ input[type="submit"]:focus {
     text-decoration: none;
 }
 .btn:disabled,
-.menu-item > a:disabled,
+nav li > a:disabled,
 .btn.is-disabled,
-.menu-item > a.is-disabled,
+nav li > a.is-disabled,
 button:disabled,
 button.is-disabled,
 input[type="button"]:disabled,
@@ -1235,15 +1235,15 @@ input[type="submit"]:focus {
 }
 
 .btn--transparent,
-.menu-item > a {
+nav li > a {
     color: currentColor; 
     background-color: transparent;
 }
 .btn--transparent:hover,
-.menu-item > a:hover,
+nav li > a:hover,
 .btn--transparent:focus,
-.menu-item > a:focus {
-    background-color: rgba(0, 0, 0, 0.2);
+nav li > a:focus {
+    background-color: rgba(57, 57, 57, 0.1);
 }
 
 /**
@@ -1251,7 +1251,7 @@ input[type="submit"]:focus {
  * button.
  */
 .btn--small,
-.menu-item > a {
+nav li > a {
     padding: 6px 8px;
     font-size: 14px;
     letter-spacing: 0.02em;
@@ -1283,18 +1283,6 @@ input[type="submit"]:focus {
 }
 
 .menu-item {
-    display: inline-block;
-}
-.menu-item > a {
-    width: 100%;
-}
-
-.menu-secondary__list {
-    -webkit-align-self: center;
-    align-self: center; 
-    -ms-flex-item-align: center;
-}
-.menu-secondary__list > li {
     display: inline-block;
 }
 
@@ -1532,13 +1520,6 @@ input[type="submit"]:focus {
 /* Horizontal Menus - show the dropdown arrow */
 .menu--horizontal .menu-item-has-children > a:after {
     content: "\25BE";
-}
-
-a.menu-item__description.info {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    flex-grow: 1; 
-    -ms-flex-positive: 1;
 }
 
 .layout__obfuscator {
@@ -2040,38 +2021,9 @@ pre {
 
 /*------------------------------------*    #HEADINGS
 \*------------------------------------*/
-.u-h1,
-.u-h2,
-.u-h3,
-.u-h4,
-u-h5,
-a.u-h1,
-a.u-h2,
-a.u-h3,
-a.u-h4,
-a.u-h5 {
-    display: block; 
-    color: #34495e !important;
-    font-weight: normal;
-    line-height: 1;
-}
-.u-h1:hover,
-.u-h2:hover,
-.u-h3:hover,
-.u-h4:hover,
-u-h5:hover,
-a.u-h1:hover,
-a.u-h2:hover,
-a.u-h3:hover,
-a.u-h4:hover,
-a.u-h5:hover {
-    background-color: transparent;
-}
-
 .u-h1 {
     font-size: 30px;
     font-size: 1.875rem;
-    line-height: 1;
 }
 @media screen and (min-width: 48em) {
     .u-h1 {
@@ -2124,7 +2076,6 @@ a.u-h5:hover {
 .u-h--large {
     font-size: 30px;
     font-size: 1.875rem;
-    line-height: 1;
 }
 @media screen and (min-width: 48em) {
     .u-h--large {

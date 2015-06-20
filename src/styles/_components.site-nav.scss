@@ -9,24 +9,6 @@
 
 .menu-item {
     display: inline-block;
-    > a {
-        width: 100%;
-        @extend .btn;
-        @extend .btn--small;
-        @extend .btn--transparent;
-    }
-}
-
-.menu-secondary {
-    &__list {
-        align-self: center;
-        > li {
-            display: inline-block;
-            > a {
-                @extend .button;
-            }
-        }
-    }
 }
 
 .sub-menu > .menu-item > a {
@@ -218,7 +200,6 @@
 .sub-menu:hover {
     display: block;
     visibility: visible;
-    //padding: 0.5em;
 }
 
 .menu-item-has-children:last-of-type > .sub-menu {
@@ -240,12 +221,6 @@
 .menu--horizontal .menu-item-has-children > a:after {
     content: "\25BE";
 }
-
-a.menu-item__description.info {
-    flex-grow: 1;
-}
-
-
 
 .layout__obfuscator {
     background-color: transparent;

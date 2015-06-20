@@ -2,26 +2,11 @@
     #HEADINGS
 \*------------------------------------*/
 
-.u-h1, .u-h2, .u-h3, .u-h4, u-h5,
-a.u-h1, a.u-h2, a.u-h3, a.u-h4, a.u-h5
- {
-    color: $color-text!important;
-    font-weight: normal;
-    line-height: 1;
-    display: block;
-
-    &:hover {
-    background-color: transparent;
-
-    }
-}
-
 .u-h1 {
     @include font-size($heading-size-2, false);
     @include md {
         @include font-size($heading-size-1, false);
     }
-    line-height: 1;
 }
 
 .u-h2 {
@@ -55,5 +40,4 @@ a.u-h1, a.u-h2, a.u-h3, a.u-h4, a.u-h5
     @include md {
         @include font-size($heading-size-large, false);
     }
-    line-height: 1;
 }

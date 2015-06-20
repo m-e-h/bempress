@@ -76,7 +76,7 @@ input[type="submit"] {
 
     &:hover,
     &:focus {
-        background-color: $color-shade;
+        background-color: rgba($grey-800, 0.1);;
     }
 }
 
