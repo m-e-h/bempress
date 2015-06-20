@@ -7,11 +7,11 @@
 .breadcrumbs {
   //text-align: center;
 
-    padding: 8px 15px;
-    margin-bottom: 20px;
+    //padding: 8px 15px;
+    margin-bottom: $spacing;
     list-style: none;
-    background-color: $color-frost;
-    border-radius: $radius;
+    //background-color: $color-frost;
+    //border-radius: $radius;
 
   li {
     display: inline-block;
@@ -20,10 +20,12 @@
     padding: 0 5px;
     color: #ccc;
     content: "/\00a0";
-}
+    }
   }
 }
 
 
-
+.trail-end span {
+    display: none;
+}
 

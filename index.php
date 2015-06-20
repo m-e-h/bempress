@@ -5,8 +5,6 @@ get_header(); ?>
 
 <div <?php hybrid_attr( 'container', 'content' ); ?>>
 
-    <?php hybrid_get_menu( 'breadcrumbs' ); ?>
-
     <div <?php hybrid_attr( 'row', 'layout' ); ?>>
 
         <main <?php hybrid_attr( 'content' ); ?>>

@@ -42,14 +42,10 @@
 .u-text-shadow { text-shadow: 0 2px rgba(0, 16, 34, 0.4); }
 
 // alignment
-.u-text-right   { text-align:    right !important; }
-.u-text-left    { text-align: left     !important; }
-.u-text-center  { text-align:  center  !important; }
-.u-text-justify { text-align: justify  !important; }
-
-// size
-.u-text\+\+ { font-size: larger  !important; }
-.u-text--   { font-size: smaller !important; }
+.u-text-right   { text-align:   right; }
+.u-text-left    { text-align:    left; }
+.u-text-center  { text-align:  center; }
+.u-text-justify { text-align: justify; }
 .u-text-truncate { @include truncate(100%); }
 
 

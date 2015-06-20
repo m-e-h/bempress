@@ -21,8 +21,8 @@ class AttrTrumps {
     // SITE HEADER
     public $header                  = '';
     public $branding                = '';
-    public $site_title              = '';
-    public $site_description        = '';
+    public $site_title              = 'u-h2';
+    public $site_description        = 'u-h4';
 
     // CONTENT
     public $content                 = 'grid__item u-mb';
@@ -31,10 +31,10 @@ class AttrTrumps {
     // ENTRY
     public $post                    = 't-bg--white';
 
-    public $page_header             = '';
+    public $page_header             = 'u-1/1 u-text-center';
 
-    public $entry_title             = '';
-    public $archive_title           = '';
+    public $entry_title             = 'u-h2';
+    public $archive_title           = 'u-h2';
     public $archive_description     = '';
 
     public $entry_content           = 'u-p';
@@ -53,7 +53,7 @@ class AttrTrumps {
 
     // SIDEBAR
     public $sidebar_primary        = 'grid__item t-bg--white u-p u-mb';
-    public $sidebar_horizontal      = 'u-flex u-flex--w u-flex--j-sb u-flex--row@md';
+    public $sidebar_horizontal      = 'flex flex--w flex--j-sb flex--row@md';
     public $sidebar_right           = 'u-1/3@md';
     public $sidebar_left            = 'u-1/3@md';
 

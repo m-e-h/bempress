@@ -16,7 +16,7 @@
     }
 }
 
-.u-h3, .widget-title, .action-bar-wrap .site-title {
+.u-h3 {
     @include font-size($heading-size-4, false);
     @include md {
         @include font-size($heading-size-3, false);

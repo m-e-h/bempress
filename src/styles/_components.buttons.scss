@@ -1,8 +1,6 @@
-/*------------------------------------*\
-    #BUTTONS
+/*    #BUTTONS
 \*------------------------------------*/
 
-// Preconfigure these settings before the @import of this file.
 $btn-bg:                    transparent;
 $btn-primary-bg:            $color-primary;
 $btn-bg-hover:              $color-primary-light;
@@ -23,7 +21,6 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
     letter-spacing: 0.04em;
-    text-transform: uppercase;
     display: inline-block;
     font: inherit;
     text-align: center;
@@ -47,8 +44,7 @@ input[type="submit"] {
     }
 }
 
-.btn-default,
-.btn--primary {
+.btn-default {
     color: white;
     background-color: $btn-primary-bg;
     &:hover,
@@ -80,10 +76,6 @@ input[type="submit"] {
     }
 }
 
-/**
- * Provide size variants by halving or doubling the padding of the standard
- * button.
- */
 .btn--small {
     padding: round(0.5 * $btn-padding-y) round(0.5 * $btn-padding-x);
     font-size: $font-size - 2;
@@ -94,15 +86,7 @@ input[type="submit"] {
     padding: round(1.5 * $btn-padding-y) round(1.5 * $btn-padding-x);
 }
 
-
-/**
- * Create buttons that will fill the entire width of the container they’re
- * placed inside.
- *
- * 1. Remove horizontal paddings so widths and paddings do not compound.
- */
 .btn--full {
-    padding-right: 0; /* [1] */
-    padding-left:  0; /* [1] */
-    width: 100%;
+    padding-right: 0;
+    padding-left:  0;
 }

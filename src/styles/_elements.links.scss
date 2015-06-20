@@ -9,6 +9,7 @@ a {
     color: $color-links;
     transition: $transition ease;
     word-break:     break-word;
+    vertical-align: initial;
     -webkit-hyphens: auto;
     -moz-hyphens:    auto;
     hyphens:         auto;

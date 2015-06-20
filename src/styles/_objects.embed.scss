@@ -5,10 +5,6 @@
 /**
  * Flexible media embeds
  *
- * For use with media embeds – such as videos, slideshows, or even images –
- * that need to retain a specific aspect ratio but adapt to the width of their
- * containing element.
- *
  * Based on: http://alistapart.com/article/creating-intrinsic-ratios-for-video
  */
 
@@ -19,10 +15,9 @@
 }
 
 
-/**
- * The aspect-ratio hack is applied to an empty element because it allows
- * the component to respect `max-height`. Default aspect ratio is 1:1.
- */
+//The aspect-ratio hack is applied to an empty element because it allows the
+//component to respect `max-height`. Default aspect ratio is 1:1.
+
 
 .flex-embed__ratio {
   display: block;
