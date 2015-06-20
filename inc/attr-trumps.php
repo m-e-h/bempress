@@ -25,7 +25,7 @@ class AttrTrumps {
     public $site_description        = '';
 
     // CONTENT
-    public $content                 = 'grid__item u-mb@respond';
+    public $content                 = 'grid__item u-mb';
     public $content_with_sidebar    = 'u-2/3@md u-pr@md';
 
     // ENTRY
@@ -37,7 +37,7 @@ class AttrTrumps {
     public $archive_title           = '';
     public $archive_description     = '';
 
-    public $entry_content           = 'u-p- u-p@md';
+    public $entry_content           = 'u-p';
     public $entry_summary           = '';
 
     public $nav_single              = '';
@@ -52,7 +52,7 @@ class AttrTrumps {
     public $menu_primary            = 't-bg__grey';
 
     // SIDEBAR
-    public $sidebar_primary        = 'grid__item t-bg--white u-p- u-p@md u-mb@respond';
+    public $sidebar_primary        = 'grid__item t-bg--white u-p u-mb';
     public $sidebar_horizontal      = 'u-flex u-flex--w u-flex--j-sb u-flex--row@md';
     public $sidebar_right           = 'u-1/3@md';
     public $sidebar_left            = 'u-1/3@md';

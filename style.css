@@ -648,16 +648,6 @@ textarea {
     border-bottom-left-radius: 0;
 }
 
-.post-password-form input[type="submit"] {
-    top: auto; 
-    height: 48px;
-}
-
-.search-form button[type=submit]::before {
-    font-size: 18px;
-    line-height: 1.625;
-}
-
 /*------------------------------------* #NAV
 \*------------------------------------*/
 nav ol,
@@ -702,20 +692,6 @@ nav ul li {
 
 .grid--bottom > .grid__item {
     vertical-align: bottom;
-}
-
-.grid--small {
-    margin-left: -12px;
-}
-.grid--small > .grid__item {
-    padding-left: 12px;
-}
-
-.grid--large {
-    margin-left: -48px;
-}
-.grid--large > .grid__item {
-    padding-left: 48px;
 }
 
 /*------------------------------------*    #FLEXBOX
@@ -848,31 +824,6 @@ nav ul li {
     flex: 0 0 auto;
 }
 
-@media screen and (max-width: 35.5em) {
-    .u-flex\@sm {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-    }
-    .u-flex--col\@sm {
-        flex-direction: column; 
-
-        -webkit-box-direction: normal;
-        -webkit-box-orient: vertical;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-    }
-    .u-flex--row\@sm {
-        flex-direction: row; 
-
-        -webkit-box-direction: normal;
-        -webkit-box-orient: horizontal;
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-    }
-}
-
 @media screen and (min-width: 48em) {
     .u-flex\@md {
         display: -webkit-box;
@@ -889,31 +840,6 @@ nav ul li {
         -ms-flex-direction: column;
     }
     .u-flex--row\@md {
-        flex-direction: row; 
-
-        -webkit-box-direction: normal;
-        -webkit-box-orient: horizontal;
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-    }
-}
-
-@media screen and (min-width: 64em) {
-    .u-flex\@lg {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-    }
-    .u-flex--col\@lg {
-        flex-direction: column; 
-
-        -webkit-box-direction: normal;
-        -webkit-box-orient: vertical;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-    }
-    .u-flex--row\@lg {
         flex-direction: row; 
 
         -webkit-box-direction: normal;
@@ -1012,10 +938,6 @@ nav ul li {
 
 .shadow--z4 {
     box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.25), 0 10px 5px 0 rgba(0, 0, 0, 0.22);
-}
-
-.shadow--z5 {
-    box-shadow: 0 19px 19px 0 rgba(0, 0, 0, 0.3), 0 15px 6px 0 rgba(0, 0, 0, 0.22);
 }
 
 /*------------------------------------*    #MEDIA
@@ -1732,32 +1654,6 @@ pre {
  */
 /*------------------------------------*    #LINKS
 \*------------------------------------*/
-.u-link--bare {
-    text-decoration: none !important;
-}
-
-.u-link--natural {
-    color: inherit !important; 
-    text-decoration: underline !important;
-}
-
-.u-link--obvious {
-    text-decoration: underline !important;
-}
-
-.navigation a:hover {
-    opacity: 1;
-}
-
-.u-link--object {
-    cursor: pointer;
-}
-.u-link--object.is-active,
-.u-link--object:hover,
-.u-link--object:focus {
-    opacity: 0.8;
-}
-
 /*------------------------------------*    #HELPERS
 \*------------------------------------*/
 .clearfix:after {
@@ -2289,36 +2185,6 @@ a.u-h5:hover {
     margin-bottom: 24px;
 }
 
-.u-m-- {
-    margin: 6px;
-}
-
-.u-mt-- {
-    margin-top: 6px;
-}
-
-.u-mr-- {
-    margin-right: 6px;
-}
-
-.u-mb-- {
-    margin-bottom: 6px;
-}
-
-.u-ml-- {
-    margin-left: 6px;
-}
-
-.u-mh-- {
-    margin-right: 6px;
-    margin-left: 6px;
-}
-
-.u-mv-- {
-    margin-top: 6px;
-    margin-bottom: 6px;
-}
-
 .u-m- {
     margin: 12px;
 }
@@ -2379,44 +2245,9 @@ a.u-h5:hover {
     margin-bottom: 48px;
 }
 
-.u-m\+\+ {
-    margin: 96px;
-}
-
-.u-mt\+\+ {
-    margin-top: 96px;
-}
-
-.u-mr\+\+ {
-    margin-right: 96px;
-}
-
-.u-mb\+\+ {
-    margin-bottom: 96px;
-}
-
-.u-ml\+\+ {
-    margin-left: 96px;
-}
-
-.u-mh\+\+ {
-    margin-right: 96px;
-    margin-left: 96px;
-}
-
-.u-mv\+\+ {
-    margin-top: 96px;
-    margin-bottom: 96px;
-}
-
 .u-mhn {
     margin-right: -24px; 
     margin-left: -24px;
-}
-
-.u-mhn-- {
-    margin-right: -6px; 
-    margin-left: -6px;
 }
 
 .u-mhn- {
@@ -2429,17 +2260,8 @@ a.u-h5:hover {
     margin-left: -48px;
 }
 
-.u-mhn\+\+ {
-    margin-right: -96px; 
-    margin-left: -96px;
-}
-
 .u-mtn {
     margin-top: -24px;
-}
-
-.u-mtn-- {
-    margin-top: -6px;
 }
 
 .u-mtn- {
@@ -2448,10 +2270,6 @@ a.u-h5:hover {
 
 .u-mtn\+ {
     margin-top: -48px;
-}
-
-.u-mtn\+\+ {
-    margin-top: -96px;
 }
 
 .u-p0 {
@@ -2502,36 +2320,6 @@ a.u-h5:hover {
 .u-pv {
     padding-top: 24px;
     padding-bottom: 24px;
-}
-
-.u-p-- {
-    padding: 6px;
-}
-
-.u-pt-- {
-    padding-top: 6px;
-}
-
-.u-pr-- {
-    padding-right: 6px;
-}
-
-.u-pb-- {
-    padding-bottom: 6px;
-}
-
-.u-pl-- {
-    padding-left: 6px;
-}
-
-.u-ph-- {
-    padding-right: 6px; 
-    padding-left: 6px;
-}
-
-.u-pv-- {
-    padding-top: 6px;
-    padding-bottom: 6px;
 }
 
 .u-p- {
@@ -2594,188 +2382,6 @@ a.u-h5:hover {
     padding-bottom: 48px;
 }
 
-.u-p\+\+ {
-    padding: 96px;
-}
-
-.u-pt\+\+ {
-    padding-top: 96px;
-}
-
-.u-pr\+\+ {
-    padding-right: 96px;
-}
-
-.u-pb\+\+ {
-    padding-bottom: 96px;
-}
-
-.u-pl\+\+ {
-    padding-left: 96px;
-}
-
-.u-ph\+\+ {
-    padding-right: 96px; 
-    padding-left: 96px;
-}
-
-.u-pv\+\+ {
-    padding-top: 96px;
-    padding-bottom: 96px;
-}
-
-.u-p\@respond {
-    padding: 12px;
-}
-@media screen and (min-width: 48em) {
-    .u-p\@respond {
-        padding: 24px;
-    }
-}
-
-.u-ph\@respond {
-    padding-right: 12px;
-    padding-left: 12px;
-}
-@media screen and (min-width: 48em) {
-    .u-ph\@respond {
-        padding-right: 24px;
-        padding-left: 24px;
-    }
-}
-
-.u-pv\@respond {
-    padding-top: 12px;
-    padding-bottom: 12px;
-}
-@media screen and (min-width: 48em) {
-    .u-pv\@respond {
-        padding-top: 24px;
-        padding-bottom: 24px;
-    }
-}
-
-.u-pt\@respond {
-    padding-top: 12px;
-}
-@media screen and (min-width: 48em) {
-    .u-pt\@respond {
-        padding-top: 24px;
-    }
-}
-
-.u-pb\@respond {
-    padding-bottom: 12px;
-}
-@media screen and (min-width: 48em) {
-    .u-pb\@respond {
-        padding-bottom: 24px;
-    }
-}
-
-.u-pl\@respond {
-    padding-left: 12px;
-}
-@media screen and (min-width: 48em) {
-    .u-pl\@respond {
-        padding-left: 24px;
-    }
-}
-
-.u-pr\@respond {
-    padding-right: 12px;
-}
-@media screen and (min-width: 48em) {
-    .u-pr\@respond {
-        padding-right: 24px;
-    }
-}
-
-.u-m\@respond {
-    margin: 12px;
-}
-@media screen and (min-width: 48em) {
-    .u-m\@respond {
-        margin: 24px;
-    }
-}
-
-.u-mhAuto {
-    margin-right: auto; 
-    margin-left: auto;
-}
-
-.u-mh\@respond {
-    margin-right: 12px;
-    margin-left: 12px;
-}
-@media screen and (min-width: 48em) {
-    .u-mh\@respond {
-        margin-right: 24px;
-        margin-left: 24px;
-    }
-}
-
-.u-mv\@respond {
-    margin-top: 12px;
-    margin-bottom: 12px;
-}
-@media screen and (min-width: 48em) {
-    .u-mv\@respond {
-        margin-top: 24px;
-        margin-bottom: 24px;
-    }
-}
-
-.u-mt\@respond {
-    margin-top: 12px;
-}
-@media screen and (min-width: 48em) {
-    .u-mt\@respond {
-        margin-top: 24px;
-    }
-}
-
-.u-mb\@respond {
-    margin-bottom: 12px;
-}
-@media screen and (min-width: 48em) {
-    .u-mb\@respond {
-        margin-bottom: 24px;
-    }
-}
-
-.u-ml\@respond {
-    margin-left: 12px;
-}
-@media screen and (min-width: 48em) {
-    .u-ml\@respond {
-        margin-left: 24px;
-    }
-}
-
-.u-mr\@respond {
-    margin-right: 12px;
-}
-@media screen and (min-width: 48em) {
-    .u-mr\@respond {
-        margin-right: 24px;
-    }
-}
-
-.u-p-cup\@respond {
-    padding-right: 12px;
-    padding-bottom: 12px; 
-    padding-left: 12px;
-}
-@media screen and (min-width: 48em) {
-    .u-p-cup\@respond {
-        padding-right: 24px;
-        padding-bottom: 24px; 
-        padding-left: 24px;
-    }
-}
-
 @media screen and (min-width: 48em) {
     .u-m\@md {
         margin: 24px;
@@ -2823,29 +2429,6 @@ a.u-h5:hover {
         padding-top: 24px;
         padding-bottom: 24px;
     }
-    .u-p--\@md {
-        padding: 6px;
-    }
-    .u-pt--\@md {
-        padding-top: 6px;
-    }
-    .u-pr--\@md {
-        padding-right: 6px;
-    }
-    .u-pb--\@md {
-        padding-bottom: 6px;
-    }
-    .u-pl--\@md {
-        padding-left: 6px;
-    }
-    .u-ph--\@md {
-        padding-right: 6px; 
-        padding-left: 6px;
-    }
-    .u-pv--\@md {
-        padding-top: 6px;
-        padding-bottom: 6px;
-    }
     .u-p-\@md {
         padding: 12px;
     }
@@ -2891,52 +2474,6 @@ a.u-h5:hover {
     .u-pv\+\@md {
         padding-top: 48px;
         padding-bottom: 48px;
-    }
-    .u-p\+\+\@md {
-        padding: 96px;
-    }
-    .u-pt\+\+\@md {
-        padding-top: 96px;
-    }
-    .u-pr\+\+\@md {
-        padding-right: 96px;
-    }
-    .u-pb\+\+\@md {
-        padding-bottom: 96px;
-    }
-    .u-pl\+\+\@md {
-        padding-left: 96px;
-    }
-    .u-ph\+\+\@md {
-        padding-right: 96px; 
-        padding-left: 96px;
-    }
-    .u-pv\+\+\@md {
-        padding-top: 96px;
-        padding-bottom: 96px;
-    }
-    .u-m--\@md {
-        margin: 6px;
-    }
-    .u-mt--\@md {
-        margin-top: 6px;
-    }
-    .u-mr--\@md {
-        margin-right: 6px;
-    }
-    .u-mb--\@md {
-        margin-bottom: 6px;
-    }
-    .u-ml--\@md {
-        margin-left: 6px;
-    }
-    .u-mh--\@md {
-        margin-right: 6px;
-        margin-left: 6px;
-    }
-    .u-mv--\@md {
-        margin-top: 6px;
-        margin-bottom: 6px;
     }
     .u-m-\@md {
         margin: 12px;
@@ -2984,29 +2521,6 @@ a.u-h5:hover {
         margin-top: 48px;
         margin-bottom: 48px;
     }
-    .u-m\+\+\@md {
-        margin: 96px;
-    }
-    .u-mt\+\+\@md {
-        margin-top: 96px;
-    }
-    .u-mr\+\+\@md {
-        margin-right: 96px;
-    }
-    .u-mb\+\+\@md {
-        margin-bottom: 96px;
-    }
-    .u-ml\+\+\@md {
-        margin-left: 96px;
-    }
-    .u-mh\+\+\@md {
-        margin-right: 96px;
-        margin-left: 96px;
-    }
-    .u-mv\+\+\@md {
-        margin-top: 96px;
-        margin-bottom: 96px;
-    }
 }
 
 /*------------------------------------*    #WIDTHS
@@ -3029,10 +2543,6 @@ a.u-h5:hover {
 
 .u-1\/4 {
     width: 25%;
-}
-
-.u-2\/4 {
-    width: 50%;
 }
 
 .u-3\/4 {
@@ -3071,9 +2581,6 @@ a.u-h5:hover {
     .u-1\/4\@sm {
         width: 25%;
     }
-    .u-2\/4\@sm {
-        width: 50%;
-    }
     .u-3\/4\@sm {
         width: 75%;
     }
@@ -3106,9 +2613,6 @@ a.u-h5:hover {
     }
     .u-1\/4\@md {
         width: 25%;
-    }
-    .u-2\/4\@md {
-        width: 50%;
     }
     .u-3\/4\@md {
         width: 75%;
@@ -3143,9 +2647,6 @@ a.u-h5:hover {
     .u-1\/4\@lg {
         width: 25%;
     }
-    .u-2\/4\@lg {
-        width: 50%;
-    }
     .u-3\/4\@lg {
         width: 75%;
     }
@@ -3178,9 +2679,6 @@ a.u-h5:hover {
     }
     .u-1\/4\@xl {
         width: 25%;
-    }
-    .u-2\/4\@xl {
-        width: 50%;
     }
     .u-3\/4\@xl {
         width: 75%;

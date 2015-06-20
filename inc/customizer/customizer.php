@@ -20,7 +20,7 @@ require_once $includes_dir . 'inc/customizer/fonts.php';
 require_once $includes_dir . 'inc/customizer/custom-styles.php';
 
 
-add_action( 'customize_register', 'bempress_customize_register', 20 );
+add_action( 'customize_register', 'bempress_customize_register', 11 );
 add_action( 'customize_preview_init', 'bempress_customizer_js' );
 add_action( 'wp_enqueue_scripts', 'bempress_google_fonts' );
 

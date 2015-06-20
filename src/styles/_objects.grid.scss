@@ -2,24 +2,16 @@
     #GRID
 \*------------------------------------*/
 
-// Preconfigure these settings before the @import of this file.
-$grid-gutter: $spacing !default;
-
-
-
-
 .grid {
     margin:  0;
     padding: 0;
     list-style: none;
-    //margin-left: -$grid-gutter;
 }
 
     .grid__item {
         display: inline-block;
         vertical-align: top;
         width: 100%;
-        //padding-left: $grid-gutter;
     }
 
 
@@ -51,28 +43,6 @@ $grid-gutter: $spacing !default;
 
     > .grid__item {
         vertical-align: bottom;
-    }
-
-}
-
-
-//
-// Different sizes of grid item (gutters).
-//
-.grid--small {
-    margin-left: round(0.5 * -$grid-gutter);
-
-    > .grid__item {
-        padding-left: round(0.5 * $grid-gutter);
-    }
-
-}
-
-.grid--large {
-    margin-left: round(2 * -$grid-gutter);
-
-    > .grid__item {
-        padding-left: round(2 * $grid-gutter);
     }
 
 }

@@ -17,14 +17,6 @@
 .u-mh { margin-right: $spacing; margin-left: $spacing; }
 .u-mv { margin-top: $spacing; margin-bottom: $spacing; }
 
-.u-m--  { margin: $spacing-tiny }
-.u-mt-- { margin-top: $spacing-tiny }
-.u-mr-- { margin-right: $spacing-tiny }
-.u-mb-- { margin-bottom: $spacing-tiny }
-.u-ml-- { margin-left: $spacing-tiny }
-.u-mh-- { margin-right: $spacing-tiny; margin-left: $spacing-tiny; }
-.u-mv-- { margin-top: $spacing-tiny; margin-bottom: $spacing-tiny; }
-
 .u-m-  { margin: $spacing-small }
 .u-mt- { margin-top: $spacing-small }
 .u-mr- { margin-right: $spacing-small }
@@ -43,26 +35,13 @@
 .u-mv\+ { margin-top: $spacing-large; margin-bottom: $spacing-large; }
 
 
-.u-m\+\+  { margin: $spacing-huge }
-.u-mt\+\+ { margin-top: $spacing-huge }
-.u-mr\+\+ { margin-right: $spacing-huge }
-.u-mb\+\+ { margin-bottom: $spacing-huge }
-.u-ml\+\+ { margin-left: $spacing-huge }
-.u-mh\+\+ { margin-right: $spacing-huge; margin-left: $spacing-huge; }
-.u-mv\+\+ { margin-top: $spacing-huge; margin-bottom: $spacing-huge; }
-
-
 .u-mhn { margin-left: -$spacing; margin-right: -$spacing }
-.u-mhn-- { margin-left: -$spacing-tiny; margin-right: -$spacing-tiny }
 .u-mhn- { margin-left: -$spacing-small; margin-right: -$spacing-small }
 .u-mhn\+ { margin-left: -$spacing-large; margin-right: -$spacing-large }
-.u-mhn\+\+ { margin-left: -$spacing-huge; margin-right: -$spacing-huge }
 
 .u-mtn { margin-top: -$spacing; }
-.u-mtn-- { margin-top: -$spacing-tiny; }
 .u-mtn- { margin-top: -$spacing-small; }
 .u-mtn\+ { margin-top: -$spacing-large; }
-.u-mtn\+\+ { margin-top: -$spacing-huge; }
 
 .u-p0  { padding: 0 }
 .u-pt0 { padding-top: 0 }
@@ -77,14 +56,6 @@
 .u-pl { padding-left: $spacing }
 .u-ph { padding-left: $spacing; padding-right: $spacing }
 .u-pv { padding-top: $spacing; padding-bottom: $spacing }
-
-.u-p--  { padding: $spacing-tiny }
-.u-pt-- { padding-top: $spacing-tiny }
-.u-pr-- { padding-right: $spacing-tiny }
-.u-pb-- { padding-bottom: $spacing-tiny }
-.u-pl-- { padding-left: $spacing-tiny }
-.u-ph-- { padding-left: $spacing-tiny; padding-right: $spacing-tiny }
-.u-pv-- { padding-top: $spacing-tiny; padding-bottom: $spacing-tiny }
 
 .u-p-  { padding: $spacing-small }
 .u-pt- { padding-top: $spacing-small }
@@ -102,184 +73,7 @@
 .u-ph\+ { padding-left: $spacing-large; padding-right: $spacing-large }
 .u-pv\+ { padding-top: $spacing-large; padding-bottom: $spacing-large }
 
-.u-p\+\+  { padding: $spacing-huge }
-.u-pt\+\+ { padding-top: $spacing-huge }
-.u-pr\+\+ { padding-right: $spacing-huge }
-.u-pb\+\+ { padding-bottom: $spacing-huge }
-.u-pl\+\+ { padding-left: $spacing-huge }
-.u-ph\+\+ { padding-left: $spacing-huge; padding-right: $spacing-huge }
-.u-pv\+\+ { padding-top: $spacing-huge; padding-bottom: $spacing-huge }
 
-
-
-.u-p\@respond {
-    padding: $spacing-small;
-    @include md {
-        padding: $spacing;
-    }
-    // @include lg {
-    //     padding: $spacing-large;
-    // }
-}
-
-.u-ph\@respond {
-    padding-right: $spacing-small;
-    padding-left: $spacing-small;
-    @include md {
-        padding-right: $spacing;
-        padding-left: $spacing;
-    }
-    // @include lg {
-    //     padding-right: $spacing-large;
-    //     padding-left: $spacing-large;
-    // }
-}
-
-.u-pv\@respond {
-    padding-top: $spacing-small;
-    padding-bottom: $spacing-small;
-    @include md {
-        padding-top: $spacing;
-        padding-bottom: $spacing;
-    }
-    // @include lg {
-    //     padding-top: $spacing-large;
-    //     padding-bottom: $spacing-large;
-    // }
-}
-
-.u-pt\@respond {
-    padding-top: $spacing-small;
-    @include md {
-        padding-top: $spacing;
-    }
-    // @include lg {
-    //     padding-top: $spacing-large;
-    // }
-}
-
-.u-pb\@respond {
-    padding-bottom: $spacing-small;
-    @include md {
-        padding-bottom: $spacing;
-    }
-    // @include lg {
-    //     padding-bottom: $spacing-large;
-    // }
-}
-
-.u-pl\@respond {
-    padding-left: $spacing-small;
-    @include md {
-        padding-left: $spacing;
-    }
-    // @include lg {
-    //     padding-left: $spacing-large;
-    // }
-}
-
-.u-pr\@respond {
-    padding-right: $spacing-small;
-    @include md {
-        padding-right: $spacing;
-    }
-    // @include lg {
-    //     padding-right: $spacing-large;
-    // }
-}
-
-// Margins
-.u-m\@respond {
-    margin: $spacing-small;
-    @include md {
-        margin: $spacing;
-    }
-    // @include lg {
-    //     margin: $spacing-large;
-    // }
-}
-
-.u-mhAuto {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.u-mh\@respond {
-    margin-right: $spacing-small;
-    margin-left: $spacing-small;
-    @include md {
-        margin-right: $spacing;
-        margin-left: $spacing;
-    }
-    // @include lg {
-    //     margin-right: $spacing-large;
-    //     margin-left: $spacing-large;
-    // }
-}
-
-.u-mv\@respond {
-    margin-top: $spacing-small;
-    margin-bottom: $spacing-small;
-    @include md {
-        margin-top: $spacing;
-        margin-bottom: $spacing;
-    }
-    // @include lg {
-    //     margin-top: $spacing-large;
-    //     margin-bottom: $spacing-large;
-    // }
-}
-
-.u-mt\@respond {
-    margin-top: $spacing-small;
-    @include md {
-        margin-top: $spacing;
-    }
-    // @include lg {
-    //     margin-top: $spacing-large;
-    // }
-}
-
-.u-mb\@respond {
-    margin-bottom: $spacing-small;
-    @include md {
-        margin-bottom: $spacing;
-    }
-    // @include lg {
-    //     margin-bottom: $spacing-large;
-    // }
-}
-
-.u-ml\@respond {
-    margin-left: $spacing-small;
-    @include md {
-        margin-left: $spacing;
-    }
-    // @include lg {
-    //     margin-left: $spacing-large;
-    // }
-}
-
-.u-mr\@respond {
-    margin-right: $spacing-small;
-    @include md {
-        margin-right: $spacing;
-    }
-    // @include lg {
-    //     margin-right: $spacing-large;
-    // }
-}
-
-.u-p-cup\@respond {
-    padding-left: $spacing-small;
-    padding-right: $spacing-small;
-    padding-bottom: $spacing-small;
-    @include md {
-        padding-left: $spacing;
-        padding-right: $spacing;
-        padding-bottom: $spacing;
-    }
-}
 
 
 @include md {
@@ -299,14 +93,6 @@
 .u-ph\@md { padding-left: $spacing; padding-right: $spacing }
 .u-pv\@md { padding-top: $spacing; padding-bottom: $spacing }
 
-.u-p--\@md { padding: $spacing-tiny }
-.u-pt--\@md { padding-top: $spacing-tiny }
-.u-pr--\@md { padding-right: $spacing-tiny }
-.u-pb--\@md { padding-bottom: $spacing-tiny }
-.u-pl--\@md { padding-left: $spacing-tiny }
-.u-ph--\@md { padding-left: $spacing-tiny; padding-right: $spacing-tiny }
-.u-pv--\@md { padding-top: $spacing-tiny; padding-bottom: $spacing-tiny }
-
 .u-p-\@md { padding: $spacing-small }
 .u-pt-\@md { padding-top: $spacing-small }
 .u-pr-\@md { padding-right: $spacing-small }
@@ -322,22 +108,6 @@
 .u-pl\+\@md { padding-left: $spacing-large }
 .u-ph\+\@md { padding-left: $spacing-large; padding-right: $spacing-large }
 .u-pv\+\@md { padding-top: $spacing-large; padding-bottom: $spacing-large }
-
-.u-p\+\+\@md { padding: $spacing-huge }
-.u-pt\+\+\@md { padding-top: $spacing-huge }
-.u-pr\+\+\@md { padding-right: $spacing-huge }
-.u-pb\+\+\@md { padding-bottom: $spacing-huge }
-.u-pl\+\+\@md { padding-left: $spacing-huge }
-.u-ph\+\+\@md { padding-left: $spacing-huge; padding-right: $spacing-huge }
-.u-pv\+\+\@md { padding-top: $spacing-huge; padding-bottom: $spacing-huge }
-
-.u-m--\@md { margin: $spacing-tiny }
-.u-mt--\@md { margin-top: $spacing-tiny }
-.u-mr--\@md { margin-right: $spacing-tiny }
-.u-mb--\@md { margin-bottom: $spacing-tiny }
-.u-ml--\@md { margin-left: $spacing-tiny }
-.u-mh--\@md { margin-right: $spacing-tiny; margin-left: $spacing-tiny; }
-.u-mv--\@md { margin-top: $spacing-tiny; margin-bottom: $spacing-tiny; }
 
 .u-m-\@md { margin: $spacing-small }
 .u-mt-\@md { margin-top: $spacing-small }
@@ -355,13 +125,4 @@
 .u-ml\+\@md { margin-left: $spacing-large }
 .u-mh\+\@md { margin-right: $spacing-large; margin-left: $spacing-large; }
 .u-mv\+\@md { margin-top: $spacing-large; margin-bottom: $spacing-large; }
-
-
-.u-m\+\+\@md { margin: $spacing-huge }
-.u-mt\+\+\@md { margin-top: $spacing-huge }
-.u-mr\+\+\@md { margin-right: $spacing-huge }
-.u-mb\+\+\@md { margin-bottom: $spacing-huge }
-.u-ml\+\+\@md { margin-left: $spacing-huge }
-.u-mh\+\+\@md { margin-right: $spacing-huge; margin-left: $spacing-huge; }
-.u-mv\+\+\@md { margin-top: $spacing-huge; margin-bottom: $spacing-huge; }
 }
