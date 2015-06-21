@@ -3,11 +3,26 @@
 namespace Bempress\Utils;
 
 
+add_filter( 'hybrid_content_template_hierarchy', __NAMESPACE__ . '\\template_hierarchy' );
 add_filter('get_search_form', __NAMESPACE__ . '\\get_search_form');
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 add_filter('excerpt_length', __NAMESPACE__ . '\\excerpt_length');
 add_filter('the_content', __NAMESPACE__ . '\\remove_empty_p', 20, 1);
 add_action('after_setup_theme', __NAMESPACE__ . '\\responsive_videos', 99);
+
+
+
+
+function template_hierarchy( $templates ) {
+
+    if (is_search())
+        $templates = array_merge(['content/search.php'], $templates );
+
+    elseif (is_404())
+        $templates = array_merge(['content/404.php'], $templates );
+
+    return $templates;
+}
 
 
 
@@ -25,11 +40,11 @@ function get_search_form() {
  * Clean up the_excerpt()
  */
 function excerpt_more() {
-  return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'bempress') . '</a>';
+  return ' &hellip; <a class="" href="' . get_permalink() . '">' . __('Continued', 'bempress') . '</a>';
 }
 
 function excerpt_length( $length ) {
-    return 60;
+    return 40;
 }
 
 

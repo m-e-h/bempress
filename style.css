@@ -606,7 +606,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inherit;
+    display: inline-block;
     padding: 0;
 }
 
@@ -977,7 +977,6 @@ nav ul li {
 }
 
 .block__figure {
-    background-color: #e3e8ec;
     text-align: center;
 }
 .block__figure > svg {
@@ -1029,6 +1028,14 @@ nav ul li {
     background-color: transparent;
 }
 
+.block .block__figure ~ .block__wrap .block__body {
+    display: none;
+}
+
+.flag-image {
+    max-width: 90px;
+}
+
 /**
  * #COMPONENTS
  */
@@ -1046,6 +1053,7 @@ input[type="submit"] {
     padding: 12px 16px;
     border: 1px solid transparent;
     border-radius: 2px;
+    opacity: 1; 
     background-color: transparent;
     font: inherit;
     text-align: center;
@@ -1085,12 +1093,12 @@ input[type="submit"].is-disabled {
     opacity: 0.5;
 }
 
-.btn-default {
+.btn--primary {
     color: white;
     background-color: #004899;
 }
-.btn-default:hover,
-.btn-default:focus {
+.btn--primary:hover,
+.btn--primary:focus {
     background-color: #0060cc;
 }
 
@@ -1099,7 +1107,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
     border-color: currentcolor; 
-    color: #34495e;
+    color: currentcolor;
 }
 .btn--outline:hover,
 .btn--outline:focus,
@@ -1109,7 +1117,9 @@ input[type="reset"]:hover,
 input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-    border-color: #0060cc;
+    border-color: #004899;
+    color: white; 
+    background-color: #004899;
 }
 
 .btn--transparent,
@@ -1136,6 +1146,7 @@ nav li > a {
 }
 
 .btn--full {
+    width: 100%; 
     padding-right: 0;
     padding-left: 0;
 }
@@ -1228,15 +1239,11 @@ pre {
 /*------------------------------------*    #BREADCRUMBS
 \*------------------------------------*/
 .breadcrumbs {
-    margin-bottom: 24px;
-    list-style: none;
-}
-.breadcrumbs li {
-    display: inline-block;
+    letter-spacing: 0.2em; 
+    text-transform: uppercase;
 }
 .breadcrumbs li + li:before {
-    padding: 0 5px;
-    color: #ccc;
+    opacity: 0.8; 
     content: "/\00a0";
 }
 
@@ -1288,19 +1295,19 @@ pre {
 /**
  * Text.
  */
-.u-text-bold {
+.u-bold {
     font-weight: bold;
 }
 
-.u-text-normal {
+.u-normal {
     font-weight: normal;
 }
 
-.u-text-italic {
+.u-italic {
     font-style: italic;
 }
 
-.u-text-caps {
+.u-caps {
     letter-spacing: 0.2em; 
     text-transform: uppercase;
 }
@@ -1339,7 +1346,9 @@ pre {
     border-radius: 2px;
 }
 
-.u-round {
+.u-round,
+.u-round > img,
+.u-round > a > img {
     border-radius: 50%;
 }
 
@@ -1505,16 +1514,6 @@ pre {
     fill: #fff;
 }
 
-.t-bg--shade {
-    color: #fff; 
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-.t-bg--tint {
-    color: #fff; 
-    background-color: rgba(86, 106, 122, 0.6);
-}
-
 .t-bg--frost {
     color: #34495e; 
     background-color: rgba(248, 248, 248, 0.85);
@@ -1616,23 +1615,23 @@ pre {
     fill: white;
 }
 
-.t-fg--1 {
+.t-color--1 {
     color: #004899;
 }
 
-.t-fg--2 {
+.t-color--2 {
     color: #ffe192;
 }
 
-.t-fg--3 {
+.t-color--3 {
     color: #ebebeb;
 }
 
-.t-fg--dark {
+.t-color--dark {
     color: #34495e;
 }
 
-.t-fg--light {
+.t-color--light {
     color: #fff;
 }
 

@@ -30,6 +30,7 @@ input[type="submit"] {
     border: 1px solid transparent;
     padding: $btn-padding-y $btn-padding-x;
     transition: $transition;
+    opacity: 1;
 
     &:hover,
     &:focus {
@@ -44,7 +45,7 @@ input[type="submit"] {
     }
 }
 
-.btn-default {
+.btn--primary {
     color: white;
     background-color: $btn-primary-bg;
     &:hover,
@@ -57,12 +58,14 @@ input[type="submit"] {
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    color: $color-text;
+    color: currentcolor;
     border-color: currentcolor;
 
     &:hover,
     &:focus {
-    border-color: $btn-color-bg-hover;
+    border-color: $color-primary;
+    background-color: $color-primary;
+    color: white;
   }
 }
 
@@ -89,4 +92,5 @@ input[type="submit"] {
 .btn--full {
     padding-right: 0;
     padding-left:  0;
+    width: 100%;
 }

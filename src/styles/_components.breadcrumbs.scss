@@ -5,21 +5,14 @@
 
 
 .breadcrumbs {
-  //text-align: center;
-
-    //padding: 8px 15px;
-    margin-bottom: $spacing;
-    list-style: none;
-    //background-color: $color-frost;
-    //border-radius: $radius;
+    text-transform: uppercase;
+    letter-spacing: .2em;
 
   li {
-    display: inline-block;
 
   + li:before {
-    padding: 0 5px;
-    color: #ccc;
     content: "/\00a0";
+    opacity: $opacity;
     }
   }
 }

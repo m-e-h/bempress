@@ -22,7 +22,7 @@ function meh_block_shortcode( $atts, $content = null ) {
         'show_content'      => '',
     ), $atts, 'meh_block' );
 
-$output = '<section class="row pages-highlight"><div class="block-row grid u-flex u-flex--row@md u-flex--w wrap">';
+$output = '<section class="row pages-highlight"><div class="block-row grid flex flex--row@md flex--w">';
 
 // Get pages set in the customizer (if any)
 $pages = $mehsc_atts['page'];
@@ -39,7 +39,7 @@ $query2 = new WP_Query( $args );
 while ( $query2->have_posts() ) : $query2->the_post();
 
 ob_start();
-get_template_part( 'templates/section', 'block' );
+get_template_part( 'components/section', 'block' );
 $output .= ob_get_clean();
 
 endwhile;

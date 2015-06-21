@@ -17,7 +17,6 @@
     color: inherit;
 }
 .block__figure {
-    background-color: $color-grey-ui;
     text-align: center;
     > svg {
         width: 100%;
@@ -65,4 +64,15 @@
 
 .block__figure ~ .block__wrap > .block__title {
     background-color: transparent;
+}
+
+
+
+
+.block .block__figure ~ .block__wrap .block__body {
+    display: none;
+}
+
+.flag-image {
+    max-width: 90px;
 }

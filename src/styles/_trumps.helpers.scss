@@ -35,10 +35,10 @@
  */
 
  // style
-.u-text-bold   { font-weight: bold }
-.u-text-normal { font-weight: normal }
-.u-text-italic  { font-style: italic }
-.u-text-caps    { text-transform: uppercase; letter-spacing: .2em; }
+.u-bold   { font-weight: bold }
+.u-normal { font-weight: normal }
+.u-italic  { font-style: italic }
+.u-caps    { text-transform: uppercase; letter-spacing: .2em; }
 .u-text-shadow { text-shadow: 0 2px rgba(0, 16, 34, 0.4); }
 
 // alignment
@@ -54,7 +54,7 @@
  * Display.
  */
 .u-radius { border-radius: $radius; }
-.u-round { border-radius: 50%; }
+.u-round, .u-round > img, .u-round > a > img { border-radius: 50%; }
 
 .u-block  { display: block; }
 .u-inline-block { display: inline-block; }
@@ -147,9 +147,6 @@
 .t-bg--grey-lighter { @include bg-text($color-grey-lighter); }
 .t-fill--white { fill: $white; }
 
-
-.t-bg--shade { @include bg-text($color-shade); }
-.t-bg--tint { @include bg-text($color-tint); }
 .t-bg--frost { @include bg-text($color-frost); }
 
 
@@ -186,8 +183,8 @@
 .t-fill--3-light { fill: $color-accent-light; }
 
 
-.t-fg--1 { color: $color-primary; }
-.t-fg--2 { color: $color-secondary; }
-.t-fg--3 { color: $color-accent; }
-.t-fg--dark { color: $color-text; }
-.t-fg--light { color: $color-white; }
+.t-color--1 { color: $color-primary; }
+.t-color--2 { color: $color-secondary; }
+.t-color--3 { color: $color-accent; }
+.t-color--dark { color: $color-text; }
+.t-color--light { color: $color-white; }

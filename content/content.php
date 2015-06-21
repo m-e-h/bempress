@@ -1,26 +1,44 @@
-<?php
-if ( is_singular( get_post_type() ) ) : ?>
+<?php if ( have_posts() ) : ?>
 
-    <?php get_template_part('components/content-single', get_post_type()); ?>
+    <?php while ( have_posts() ) : the_post(); ?>
 
-<?php
-else : // If not viewing a single post. ?>
+    <article <?php hybrid_attr( 'post' ); ?>>
 
-	<?php if ( have_posts() ) : ?>
+        <?php if ( is_singular( get_post_type() ) ) : ?>
 
-		<?php while ( have_posts() ) : the_post(); ?>
+            <div <?php hybrid_attr( 'entry-content' ); ?>>
+              <?php the_content(); ?>
+            </div>
 
-            <?php get_template_part('components/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
+            <footer class="entry-footer">
+                <?php wp_link_pages([
+                    'before' => '<nav class="page-nav"><p>' . __('Pages:', 'bempress'),
+                    'after' => '</p></nav>'
+                ]); ?>
+            </footer>
 
-        <?php endwhile; ?>
+            <?php comments_template( '', true ); ?>
 
-        <?php the_posts_navigation(); ?>
+        <?php else : // If not viewing a single post. ?>
 
-	<?php else : ?>
+            <header class="entry-header">
+                <h2 <?php hybrid_attr( 'entry-title' ); ?>>
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                </h2>
+                <?php get_template_part('components/entry-meta'); ?>
+            </header>
 
-		<?php get_template_part( 'components/content', 'none' ); ?>
+            <div <?php hybrid_attr( 'entry-summary' ); ?>>
+                <?php the_excerpt(); ?>
+            </div>
 
-	<?php endif; // End check for posts. ?>
+            <?php the_posts_navigation(); ?>
+
+    	<?php endif; // End check for posts. ?>
+
+    </article>
+
+    <?php endwhile; ?>
 
 <?php
 endif;
