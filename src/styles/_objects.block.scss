@@ -4,12 +4,11 @@
 
 
 .flag {
-    align-items: flex-start;
+    display: block;
     @include md {
-    flex-direction: row;
 }
     .block__title {
-        padding-top: 0;
+        background-color: transparent;
     }
 }
 
@@ -62,17 +61,26 @@
 
 
 
-.block__figure ~ .block__wrap > .block__title {
+.block__figure ~  .block__title {
     background-color: transparent;
 }
 
 
 
 
-.block .block__figure ~ .block__wrap .block__body {
+.block .block__figure ~ .block__body {
     display: none;
 }
 
 .flag-image {
     max-width: 90px;
+}
+
+.block__footer {
+    margin-top: auto;
+    border-top: 1px solid $color-grey;
+
+    a {
+        padding: 5px 0;
+    }
 }

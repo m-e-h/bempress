@@ -16,9 +16,9 @@
     <article <?php hybrid_attr( 'post' ); ?>>
 
         <header class="entry-header">
-            <h2 <?php hybrid_attr( 'entry-title' ); ?>>
+            <h4 <?php hybrid_attr( 'entry-title' ); ?>>
                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            </h2>
+            </h4>
 
             <?php if (get_post_type() === 'post') {
             get_template_part('components/entry-meta'); } ?>

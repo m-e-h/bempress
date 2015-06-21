@@ -953,23 +953,10 @@ nav ul li {
 /*------------------------------------*    #BLOCK
 \*------------------------------------*/
 .flag {
-    -webkit-align-items: flex-start;
-    align-items: flex-start; 
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-}
-@media screen and (min-width: 48em) {
-    .flag {
-        flex-direction: row; 
-
-        -webkit-box-direction: normal;
-        -webkit-box-orient: horizontal;
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-    }
+    display: block;
 }
 .flag .block__title {
-    padding-top: 0;
+    background-color: transparent;
 }
 
 .block__title a {
@@ -1024,16 +1011,24 @@ nav ul li {
     line-height: 1;
 }
 
-.block__figure ~ .block__wrap > .block__title {
+.block__figure ~ .block__title {
     background-color: transparent;
 }
 
-.block .block__figure ~ .block__wrap .block__body {
+.block .block__figure ~ .block__body {
     display: none;
 }
 
 .flag-image {
     max-width: 90px;
+}
+
+.block__footer {
+    margin-top: auto;
+    border-top: 1px solid #d2d2d2;
+}
+.block__footer a {
+    padding: 5px 0;
 }
 
 /**
@@ -1633,6 +1628,10 @@ pre {
 
 .t-color--light {
     color: #fff;
+}
+
+.t-color--grey {
+    color: #d2d2d2;
 }
 
 /*------------------------------------*    #HEADINGS

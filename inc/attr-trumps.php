@@ -29,7 +29,7 @@ class AttrTrumps {
     public $content_with_sidebar    = 'u-2/3@md u-pr@md';
 
     // ENTRY
-    public $post                    = 't-bg--white';
+    public $post                    = '';
 
     public $page_header             = 'u-1/1 u-text-center';
 

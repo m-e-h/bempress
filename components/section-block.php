@@ -10,7 +10,7 @@ global $mehsc_atts;
 
 <div class="<?php echo esc_attr( $mehsc_atts['width'] ); ?> grid__item flex flexed--auto u-ph- u-pb">
 
-    <div id="post-<?php the_ID(); ?>" class="<?php echo esc_attr( $mehsc_atts['block_type'] ); ?> block__content shadow--z1 flexed--auto t-bg__white u-radius flex">
+    <div id="post-<?php the_ID(); ?>" class="<?php echo esc_attr( $mehsc_atts['block_type'] ); ?> block__content shadow--z1 flexed--auto t-bg--white u-radius flex">
 
     <?php if( ! empty( $mehsc_atts['icon'] ) ) : ?>
 
@@ -32,7 +32,7 @@ global $mehsc_atts;
     } elseif ( 'flag' === $mehsc_atts['block_type'] ) {
         get_the_image([
             'size' => 'thumbnail',
-            'before' => '<div class="block__figure flag-image u-round u-mh">',
+            'before' => '<div class="block__figure u-left flag-image u-round u-p-">',
             'after' => '</div>',
         ]);
     }
@@ -40,9 +40,8 @@ global $mehsc_atts;
 
     <?php endif; ?>
 
-        <div class="block__wrap flexed--1">
 
-            <div class="block__title u-p- t-bg__2">
+            <div class="block__title u-p- t-bg--2">
             <?php the_title( sprintf( '<a class="u-h3 block__title--link" href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a>' ); ?>
             </div>
             <?php if ( 'excerpt' === $mehsc_atts['show_content'] ) : ?>
@@ -59,7 +58,10 @@ global $mehsc_atts;
 
             <?php endif; ?>
 
-        </div><!-- .block__body -->
+                <div class="block__footer">
+                <a class="btn btn--full t-color--grey" href="<?php echo get_permalink(); ?>"><i class="material-icons">&#xE5C8;</i></a>
+                </div>
+
 
     </div><!-- .block__content -->
 

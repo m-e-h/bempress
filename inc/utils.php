@@ -5,7 +5,7 @@ namespace Bempress\Utils;
 
 add_filter( 'hybrid_content_template_hierarchy', __NAMESPACE__ . '\\template_hierarchy' );
 add_filter('get_search_form', __NAMESPACE__ . '\\get_search_form');
-add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+//add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 add_filter('excerpt_length', __NAMESPACE__ . '\\excerpt_length');
 add_filter('the_content', __NAMESPACE__ . '\\remove_empty_p', 20, 1);
 add_action('after_setup_theme', __NAMESPACE__ . '\\responsive_videos', 99);
