@@ -13,6 +13,7 @@ class AttrTrumps {
     public $body                    = '';
     public $site_container          = '';
     public $container               = '';
+    public $container_wide          = 'container--wide';
     public $row                     = '';
     public $row_layout              = 'grid';
     public $row_layout_sidebar_l    = 'grid grid--rev';
@@ -37,7 +38,7 @@ class AttrTrumps {
     public $archive_title           = 'u-h2';
     public $archive_description     = '';
 
-    public $entry_content           = 'u-p';
+    public $entry_content           = 'u-p container';
     public $entry_summary           = '';
 
     public $nav_single              = '';
@@ -139,6 +140,9 @@ class AttrTrumps {
         $attr['class']      = "container container--{$context}";
         $attr['class']      .= ' ';
         $attr['class']      .= $this->container;
+        if ('single-column--wide' == get_theme_mod('theme_layout') && 'content' === $context) :
+        $attr['class']      .= $this->container_wide;
+        endif;
         return $attr;
     }
 
@@ -150,7 +154,6 @@ class AttrTrumps {
         $attr['class']      .= $this->row;
         if ( 'layout' === $context ) {
         $attr['class']      .= ' ';
-
 
         if ( 'sidebar-right'     == get_theme_mod( 'theme_layout' ) ) :
         $attr['class']      .= $this->row_layout_sidebar_r;
