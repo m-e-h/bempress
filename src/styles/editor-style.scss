@@ -26,6 +26,7 @@ body, body#tinymce {
     font-family: $font-body;
     color: $color-text;
     background: white;
+    cursor: auto;
 }
 
 @media screen and (max-width: 740px) {

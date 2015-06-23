@@ -18,7 +18,6 @@
   },
   "require": {
     "justintadlock/hybrid-core": "dev-dev",
-    "webdevstudios/cmb2": "~2.0",
     "composer/installers": "~1.0"
   }
 }
