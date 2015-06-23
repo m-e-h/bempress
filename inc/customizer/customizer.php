@@ -170,34 +170,6 @@ function bempress_customize_register( $wp_customize ) {
         );
 
 
-
-  // Add Custom Footer Text
-  $wp_customize->add_section( 'custom_footer_text' , array(
-    'title'      => esc_html__('Footer Text','bempress'),
-    'priority'   => 1000
-  ) );
-  $wp_customize->add_setting(
-      'bempress_footer_text',
-      array(
-          'default'           => esc_html__( 'Custom footer text', 'bempress' ),
-          'transport'         => 'postMessage',
-          'sanitize_callback' => 'sanitize_text'
-      )
-  );
-  $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-            'custom_footer_text',
-            array(
-                'label'          => esc_html__( 'Footer Text', 'bempress' ),
-                'section'        => 'custom_footer_text',
-                'settings'       => 'bempress_footer_text',
-                'type'           => 'text'
-            )
-        )
-   );
-
-
   //Typography
 
     $wp_customize->add_section(
@@ -212,7 +184,7 @@ function bempress_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'heading_font',
         array(
-            'default'              => get_theme_mod( 'heading_font', 'default' ),
+            'default' => 'Arial',
             'type'                 => 'theme_mod',
             'sanitize_callback'    => 'esc_attr',
             'sanitize_js_callback' => 'esc_attr',
@@ -235,7 +207,7 @@ function bempress_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'body_font',
         array(
-            'default'              => get_theme_mod( 'body_font', 'default' ),
+            'default' => 'Arial',
             'type'                 => 'theme_mod',
             'sanitize_callback'    => 'esc_attr',
             'sanitize_js_callback' => 'esc_attr',
@@ -253,107 +225,6 @@ function bempress_customize_register( $wp_customize ) {
             'choices'  => customizer_library_get_font_choices()
         )
     );
-
-
-
-
-
-$wp_customize->add_setting(
-    'category_layout',
-    array(
-        'default'           => get_theme_mod( 'category_layout', '' ),
-        'sanitize_callback' => 'sanitize_html_class',
-        'transport'         => 'refresh'
-    )
-);
-
-$wp_customize->add_control(
-    new Hybrid_Customize_Control_Layout(
-        $wp_customize,
-        'category_layout',
-        array(
-            'label'    => esc_html__( 'Multi-Post Layout', 'hybrid-core' ),
-            'section'  => 'layout',
-            'layouts'  => array( 'cards', 'blog' )
-        )
-    )
-);
-
-
-    $wp_customize->add_panel(
-        'front_highlights',
-        array(
-        'title'      => esc_html__('Front Page','bempress'),
-        'priority'   => 20
-        )
-    );
-
-    $wp_customize->add_section(
-        'showcase' ,
-        array(
-            'title'      => __( 'Showcase', 'textdomain' ),
-            'priority'   => 40,
-            'panel' => 'front_highlights',
-        )
-    );
-
-    for ( $count = 1; $count <= 4; $count++ ) {
-
-        // Add color scheme setting and control.
-        $wp_customize->add_setting(
-            'showcase-page-' . $count,
-            array(
-            'default'           => '',
-            'sanitize_callback' => 'absint'
-            )
-        );
-
-        $wp_customize->add_control(
-            'showcase-page-' . $count,
-            array(
-            'label'    => __( 'Select Page', 'textdomain' ),
-            'section'  => 'showcase',
-            'type'     => 'dropdown-pages'
-            )
-        );
-
-    }
-
-
-
-
-
-    $wp_customize->add_section(
-        'page_highlight' ,
-        array(
-            'title'      => __( 'Single Page Highlight', 'bempress' ),
-            'priority'   => 30,
-            'panel' => 'front_highlights',
-        )
-    );
-
-        // Add color scheme setting and control.
-        $wp_customize->add_setting(
-            'page-highlight',
-            array(
-            'default'           => '',
-            'sanitize_callback' => 'absint'
-            )
-        );
-
-        $wp_customize->add_control(
-            'bempress-page-highlight',
-            array(
-            'label'    => __( 'Select Page', 'bempress' ),
-            'section'  => 'page_highlight',
-            'settings' => 'page-highlight',
-            'type'     => 'dropdown-pages'
-            )
-        );
-
-
-
-
 
 }
 
@@ -392,3 +263,7 @@ function bempress_google_fonts() {
     wp_enqueue_style( 'google_font_headings' );
 
 }
+
+
+
+
