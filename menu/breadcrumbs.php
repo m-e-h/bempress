@@ -1,5 +1,5 @@
 <?php
-if ( function_exists( 'breadcrumb_trail' ) ) :
+if (function_exists('breadcrumb_trail')) :
 
     breadcrumb_trail([
         'container'       => 'nav',

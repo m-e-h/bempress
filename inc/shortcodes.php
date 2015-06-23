@@ -1,8 +1,8 @@
 <?php
-add_action( 'init', 'meh_add_shortcodes' );
+add_action('init', 'meh_add_shortcodes');
 
 function meh_add_shortcodes() {
-add_shortcode( 'meh_block', 'meh_block_shortcode' );
+add_shortcode('meh_block', 'meh_block_shortcode');
 }
 
 
@@ -11,16 +11,16 @@ add_shortcode( 'meh_block', 'meh_block_shortcode' );
 /**
  * BLOCK
  */
-function meh_block_shortcode( $atts, $content = null ) {
+function meh_block_shortcode($atts, $content = null) {
     global $mehsc_atts;
-    $mehsc_atts   = shortcode_atts( array(
+    $mehsc_atts   = shortcode_atts(array(
         'block_type' => '',
         'icon'      => '',
         'width'     => '',
         'page'      => '',
         'show_image'      => '',
         'show_content'      => '',
-    ), $atts, 'meh_block' );
+    ), $atts, 'meh_block');
 
 $output = '<section class="row pages-highlight"><div class="block-row grid flex flex--row@md flex--w">';
 
@@ -35,11 +35,11 @@ $args = array(
 );
 
 
-$query2 = new WP_Query( $args );
-while ( $query2->have_posts() ) : $query2->the_post();
+$query2 = new WP_Query($args);
+while ($query2->have_posts()) : $query2->the_post();
 
 ob_start();
-get_template_part( 'components/section', 'block' );
+get_template_part('components/section', 'block');
 $output .= ob_get_clean();
 
 endwhile;

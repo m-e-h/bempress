@@ -121,20 +121,20 @@ class AttrTrumps {
 
     /* === OBJECTS === */
 
-    public function body( $attr ) {
+    public function body($attr) {
         $attr['class']      .= ' ';
         $attr['class']      .= $this->body;
         return $attr;
     }
 
-    public function site_container( $attr ) {
+    public function site_container($attr) {
         $attr['class']      .= ' ';
         $attr['class']      .= $this->site_container;
         return $attr;
     }
 
-    public function container( $attr, $context ) {
-        if ( empty( $context ) ) {
+    public function container($attr, $context) {
+        if (empty($context)) {
             return $attr;
         }
         $attr['class']      = "container container--{$context}";
@@ -146,19 +146,19 @@ class AttrTrumps {
         return $attr;
     }
 
-    public function row( $attr, $context ) {
-        if ( empty( $context ) ) {
+    public function row($attr, $context) {
+        if (empty($context)) {
             return $attr;
         }
         $attr['class']      = "row row--{$context}";
         $attr['class']      .= $this->row;
-        if ( 'layout' === $context ) {
+        if ('layout' === $context) {
         $attr['class']      .= ' ';
 
-        if ( 'sidebar-right'     == get_theme_mod( 'theme_layout' ) ) :
+        if ('sidebar-right'     == get_theme_mod('theme_layout')) :
         $attr['class']      .= $this->row_layout_sidebar_r;
 
-        elseif ( 'sidebar-left'     == get_theme_mod( 'theme_layout' ) ) :
+        elseif ('sidebar-left'     == get_theme_mod('theme_layout')) :
         $attr['class']      .= $this->row_layout_sidebar_l;
 
         else : $attr['class']      .= $this->row_layout;
@@ -168,47 +168,47 @@ class AttrTrumps {
         return $attr;
     }
 
-    public function nav( $attr, $context ) {
+    public function nav($attr, $context) {
         $attr['class']      .= ' ';
-        if ( 'single' === $context ) {
+        if ('single' === $context) {
         $attr['class']      .= $this->nav_single;
         }
-        if ( 'archive' === $context ) {
+        if ('archive' === $context) {
         $attr['class']      .= $this->nav_archive;
         }
         return $attr;
     }
 
-    public function comments_area( $attr ) {
+    public function comments_area($attr) {
         $attr['class']      .= ' ';
         $attr['class']      .= $this->comments_area;
         return $attr;
     }
 
-    public function header( $attr ) {
+    public function header($attr) {
         $attr['class']      .= ' ';
         $attr['class']      .= $this->header;
         return $attr;
     }
 
-    public function footer( $attr ) {
+    public function footer($attr) {
         $attr['class']      .= ' ';
         $attr['class']      .= $this->footer;
         return $attr;
     }
 
-    public function content( $attr ) {
+    public function content($attr) {
         $attr['class']      .= ' ';
-        if ( 'single-column--wide'   == get_theme_mod( 'theme_layout' ) ) :
+        if ('single-column--wide'   == get_theme_mod('theme_layout')) :
         $attr['class']      .= $this->content;
 
-        elseif ( 'single-column'    == get_theme_mod( 'theme_layout' ) ) :
+        elseif ('single-column'    == get_theme_mod('theme_layout')) :
         $attr['class']      .= $this->content;
 
-        elseif ( 'sidebar-right'     == get_theme_mod( 'theme_layout' ) ) :
+        elseif ('sidebar-right'     == get_theme_mod('theme_layout')) :
         $attr['class']      .= $this->content_with_sidebar;
 
-        elseif ( 'sidebar-left'     == get_theme_mod( 'theme_layout' ) ) :
+        elseif ('sidebar-left'     == get_theme_mod('theme_layout')) :
         $attr['class']      .= $this->content_with_sidebar;
         endif;
 
@@ -217,22 +217,22 @@ class AttrTrumps {
         return $attr;
     }
 
-    public function sidebar( $attr, $context ) {
-        if ( empty( $context ) ) {
+    public function sidebar($attr, $context) {
+        if (empty($context)) {
             return $attr;
         }
-        if ( 'primary' === $context ) {
+        if ('primary' === $context) {
         $attr['class']      .= ' ';
-        if ( 'single-column--wide'   == get_theme_mod( 'theme_layout' ) ) :
+        if ('single-column--wide'   == get_theme_mod('theme_layout')) :
         $attr['class']      .= $this->sidebar_horizontal;
         $attr['class']      .= ' sidebar-horizontal';
-        elseif ( 'single-column'    == get_theme_mod( 'theme_layout' ) ) :
+        elseif ('single-column'    == get_theme_mod('theme_layout')) :
         $attr['class']      .= $this->sidebar_horizontal;
         $attr['class']      .= ' sidebar-horizontal';
 
-        elseif ( 'sidebar-right' == get_theme_mod( 'theme_layout' ) ) :
+        elseif ('sidebar-right' == get_theme_mod('theme_layout')) :
         $attr['class']      .= $this->sidebar_right;
-        elseif ( 'sidebar-left' == get_theme_mod( 'theme_layout' ) ) :
+        elseif ('sidebar-left' == get_theme_mod('theme_layout')) :
         $attr['class']      .= $this->sidebar_left;
         endif;
 
@@ -240,7 +240,7 @@ class AttrTrumps {
         $attr['class']      .= $this->sidebar_primary;
         }
 
-        if ( 'primary' !== $context ) {
+        if ('primary' !== $context) {
         $attr['class']      .= ' sidebar-horizontal';
         $attr['class']      .= ' ';
         $attr['class']      .= $this->sidebar_horizontal;
@@ -248,15 +248,15 @@ class AttrTrumps {
         return $attr;
     }
 
-    public function menu( $attr, $context ) {
-        if ( empty( $context ) ) {
+    public function menu($attr, $context) {
+        if (empty($context)) {
         return $attr;
         }
         $attr['class']      .= ' ';
-        if ( 'primary' === $context ) {
+        if ('primary' === $context) {
         $attr['class']      .= $this->menu_primary;
         }
-        if ( 'secondary' === $context ) {
+        if ('secondary' === $context) {
         $attr['class']      .= $this->menu_secondary;
         }
         return $attr;
@@ -264,20 +264,20 @@ class AttrTrumps {
 
     /* === COMPONENTS === */
 
-    public function branding( $attr ) {
+    public function branding($attr) {
         $attr['class']      .= ' ';
         $attr['class']      .= $this->branding;
         return $attr;
     }
 
 
-    public function site_title( $attr ) {
+    public function site_title($attr) {
         $attr['class']      .= ' ';
         $attr['class']      .= $this->site_title;
         return $attr;
     }
 
-    public function site_description( $attr ) {
+    public function site_description($attr) {
         $attr['class']      .= ' ';
         $attr['class']      .= $this->site_description;
         return $attr;
@@ -285,20 +285,20 @@ class AttrTrumps {
 
     /* === LOOP === */
 
-    public function page_header( $attr ) {
+    public function page_header($attr) {
         $attr['class']      = 'page-header';
         $attr['class']      .= ' ';
         $attr['class']      .= $this->page_header;
         return $attr;
     }
 
-    public function archive_title( $attr ) {
+    public function archive_title($attr) {
         $attr['class']      .= ' ';
         $attr['class']      .= $this->archive_title;
         return $attr;
     }
 
-    public function archive_description( $attr ) {
+    public function archive_description($attr) {
         $attr['class']      .= ' ';
         $attr['class']      .= $this->archive_description;
         return $attr;
@@ -306,44 +306,44 @@ class AttrTrumps {
 
     /* === POSTS === */
 
-    public function post( $attr ) {
+    public function post($attr) {
         $attr['class']      .= ' ';
         $attr['class']      .= $this->post;
         return $attr;
     }
 
-    public function entry_title( $attr ) {
+    public function entry_title($attr) {
         $attr['class']      .= ' ';
         $attr['class']      .= $this->entry_title;
         return $attr;
     }
 
-    public function entry_author( $attr ) {
+    public function entry_author($attr) {
         $attr['class']      .= ' ';
         $attr['class']      .= $this->entry_author;
         return $attr;
     }
 
 
-    public function entry_published( $attr ) {
+    public function entry_published($attr) {
         $attr['class']      .= ' ';
         $attr['class']      .= $this->entry_published;
         return $attr;
     }
 
-    public function entry_content( $attr ) {
+    public function entry_content($attr) {
         $attr['class']      .= ' ';
         $attr['class']      .= $this->entry_content;
         return $attr;
     }
 
-    public function entry_summary( $attr ) {
+    public function entry_summary($attr) {
         $attr['class']      .= ' ';
         $attr['class']      .= $this->entry_summary;
         return $attr;
     }
 
-    public function entry_terms( $attr ) {
+    public function entry_terms($attr) {
         $attr['class']      .= ' ';
         $attr['class']      .= $this->entry_terms;
         return $attr;

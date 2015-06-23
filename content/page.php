@@ -1,12 +1,12 @@
 <?php while (have_posts()) : the_post(); ?>
 
-    <article <?php hybrid_attr( 'post' ); ?>>
+    <article <?php hybrid_attr('post'); ?>>
 
-        <div <?php hybrid_attr( 'entry-content' ); ?>>
+        <div <?php hybrid_attr('entry-content'); ?>>
           <?php the_content(); ?>
         </div>
 
-<?php echo bempress_wysiwyg_output( '_bempress_wysiwyg', get_the_ID() ); ?>
+        <?php echo bempress_wysiwyg_output('bempress_extra_wysiwyg', get_the_ID()); ?>
 
         <footer class="entry-footer">
             <?php wp_link_pages([

@@ -1,12 +1,12 @@
-<?php if ( have_posts() ) : ?>
+<?php if (have_posts()) : ?>
 
-    <?php while ( have_posts() ) : the_post(); ?>
+    <?php while (have_posts()) : the_post(); ?>
 
-    <article <?php hybrid_attr( 'post' ); ?>>
+    <article <?php hybrid_attr('post'); ?>>
 
-        <?php if ( is_singular( get_post_type() ) ) : ?>
+        <?php if (is_singular(get_post_type())) : ?>
 
-            <div <?php hybrid_attr( 'entry-content' ); ?>>
+            <div <?php hybrid_attr('entry-content'); ?>>
               <?php the_content(); ?>
             </div>
 
@@ -17,18 +17,18 @@
                 ]); ?>
             </footer>
 
-            <?php comments_template( '', true ); ?>
+            <?php comments_template('', true); ?>
 
         <?php else : // If not viewing a single post. ?>
 
             <header class="entry-header">
-                <h2 <?php hybrid_attr( 'entry-title' ); ?>>
+                <h2 <?php hybrid_attr('entry-title'); ?>>
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h2>
                 <?php get_template_part('components/entry-meta'); ?>
             </header>
 
-            <div <?php hybrid_attr( 'entry-summary' ); ?>>
+            <div <?php hybrid_attr('entry-summary'); ?>>
                 <?php the_excerpt(); ?>
             </div>
 

@@ -11,7 +11,7 @@ function title() {
     }
 
     elseif (is_search()) {
-        return sprintf( esc_html__('Search Results for %s', 'bempress'), get_search_query());
+        return sprintf(esc_html__('Search Results for %s', 'bempress'), get_search_query());
     }
 
     elseif (is_404()) {

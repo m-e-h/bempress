@@ -16,10 +16,10 @@ function assets() {
         '//fonts.googleapis.com/icon?family=Material+Icons'
     );
 
-if ( is_child_theme() )
+if (is_child_theme())
     wp_enqueue_style(
         'parent',
-        trailingslashit( get_template_directory_uri() ) . "style{$suffix}.css"
+        trailingslashit(get_template_directory_uri()) . "style{$suffix}.css"
     );
     wp_enqueue_style(
         'style',
@@ -34,5 +34,5 @@ if ( is_child_theme() )
 
     wp_enqueue_script(
         'bempress_js',
-        trailingslashit( get_template_directory_uri() ) . 'js/main.js', false, false, true );
+        trailingslashit(get_template_directory_uri()) . 'js/main.js', false, false, true);
 }
