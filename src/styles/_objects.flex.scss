@@ -17,15 +17,12 @@
 .flex--j-sa { justify-content: space-around; }
 .flex--j-sb { justify-content: space-between; }
 
-
 .flexed--first { order: -1; }
 .flexed--last { order: 1024; }
-
 
 .flexed--1 { flex: 1; }
 .flexed--auto { flex: 1 1 auto; }
 .flexed--grow { flex: 1 0 auto; }
-.flexed--no { flex: 0 0 auto; }
 
 @include md {
 

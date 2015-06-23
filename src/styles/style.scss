@@ -15,9 +15,9 @@ GitHub Theme URI: https://github.com/m-e-h/bempress
 
 
 
-/**
- * #SETTINGS
- */
+// /**
+//  * #SETTINGS
+//  */
 @import "settings.colors";
 @import "settings.responsive";
 @import "settings.icon-font";
@@ -27,9 +27,9 @@ GitHub Theme URI: https://github.com/m-e-h/bempress
 
 
 
-/**
- * #TOOLS
- */
+// /**
+//  * #TOOLS
+//  */
 @import "tools.functions";
 @import "tools.mixins";
 @import "tools.aliases";
@@ -37,9 +37,9 @@ GitHub Theme URI: https://github.com/m-e-h/bempress
 
 
 
-/**
- * #ELEMENTS
- */
+// /**
+//  * #ELEMENTS
+//  */
 @import "elements.type";
 @import "elements.page";
 @import "elements.links";
@@ -54,9 +54,9 @@ GitHub Theme URI: https://github.com/m-e-h/bempress
 
 
 
-/**
- * #OBJECTS
- */
+// /**
+//  * #OBJECTS
+//  */
 @import "objects.grid";
 @import "objects.flex";
 @import "objects.embed";
@@ -70,23 +70,19 @@ GitHub Theme URI: https://github.com/m-e-h/bempress
 
 
 
-/**
- * #COMPONENTS
- */
-@import "components.titles";
+// /**
+//  * #COMPONENTS
+//  */
 // @import "components.site-header";
 @import "components.buttons";
-// @import "components.testimonials";
-// @import "components.avatars";
 @import "components.site-nav";
 // @import "components.post-nav";
 // @import "components.meta";
 @import "components.code";
 @import "components.breadcrumbs";
 @import "components.widgets";
-// @import "components.tabs";
+@import "components.tabs";
 // @import "components.search";
-// @import "components.tooltips";
 // @import "components.slider";
 
 // @import "components.gravity-forms";
@@ -98,7 +94,6 @@ GitHub Theme URI: https://github.com/m-e-h/bempress
 /**
  * #TRUMPS
  */
-@import "trumps.links";
 @import "trumps.helpers";
 @import "trumps.headings";
 @import "trumps.spacing";

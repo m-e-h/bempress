@@ -16,10 +16,6 @@ textarea {
     padding: 0 $spacing;
 }
 
-select {
-    min-height: $spacing;
-    padding: $spacing-tiny $spacing;
-}
 input[type="text"], input[type="email"], input[type="url"],
 input[type="password"], input[type="search"], textarea {
     width: 100%;
@@ -77,6 +73,7 @@ textarea[readonly] {
 }
 
 select {
+    padding: $spacing-tiny $spacing;
     background-color: #fff;
     border: 1px solid $color-grey-ui;
     text-transform: none;

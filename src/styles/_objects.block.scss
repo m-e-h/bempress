@@ -47,26 +47,9 @@
     line-height: 1.6;
 }
 
-.user__title {
-    font-weight: bold;
-    opacity: .6;
-    line-height: 1;
-}
-
-.user__email {
-    @include font-size(14px, false);
-    margin-top: auto;
-    line-height: 1;
-}
-
-
-
 .block__figure ~  .block__title {
     background-color: transparent;
 }
-
-
-
 
 .block .block__figure ~ .block__body {
     display: none;

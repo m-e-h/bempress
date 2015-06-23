@@ -102,4 +102,70 @@ if (! function_exists('shortcode_ui_register_for_shortcode'))
        )
    );
 
+
+
+    /**
+     * Tabs
+     */
+    shortcode_ui_register_for_shortcode(
+        'meh_tabs',
+        array(
+            'label' => 'Tabs',
+            'listItemImage' => 'dashicons-images-alt2',
+            'attrs' => array(
+
+                array(
+                    'label' => 'Content to Show',
+                    'attr'  => 'show_content',
+                    'type' => 'select',
+                    'value' => 'excerpt',
+                    'options' => array(
+                        'excerpt' => 'Excerpt',
+                        'content' => 'Content',
+                   ),
+               ),
+
+                array(
+                    'label'    => 'Select Page',
+                    'attr'     => 'page',
+                    'type'     => 'post_select',
+                    'query'    => array('post_type' => 'page'),
+                    'multiple' => true,
+               ),
+           ),
+       )
+   );
+
+    /**
+     * Toggles
+     */
+    shortcode_ui_register_for_shortcode(
+        'meh_toggles',
+        array(
+            'label' => 'Toggles',
+            'listItemImage' => 'dashicons-menu',
+            'attrs' => array(
+
+                array(
+                    'label' => 'Content to Show',
+                    'attr'  => 'show_content',
+                    'type' => 'select',
+                    'value' => 'excerpt',
+                    'options' => array(
+                        'excerpt' => 'Excerpt',
+                        'content' => 'Content',
+                   ),
+               ),
+
+                array(
+                    'label'    => 'Select Page',
+                    'attr'     => 'page',
+                    'type'     => 'post_select',
+                    'query'    => array('post_type' => 'page'),
+                    'multiple' => true,
+               ),
+           ),
+       )
+   );
+
 }

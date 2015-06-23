@@ -131,7 +131,7 @@ gulp.task('serve', ['styles'], function () {
   gulp.watch(['src/styles/**/*.{scss,css}'], ['styles', reload]);
   gulp.watch(['src/scripts/**/*.js'], reload);
   gulp.watch(['src/images/**/*'], reload);
-  gulp.watch(['*.php'], reload);
+  gulp.watch(['*/**/*.php'], reload);
 });
 
 // Build Production Files, the Default Task

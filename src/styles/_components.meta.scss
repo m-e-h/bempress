@@ -15,11 +15,3 @@
     }
 }
 
-.badge {
-    a {
-        @extend .button;
-        @extend .button--outline;
-        @extend .button--tiny;
-    }
-}
-

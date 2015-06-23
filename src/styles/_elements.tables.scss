@@ -30,7 +30,10 @@ td {
     padding: $spacing-tiny;
 }
 
-th { vertical-align: bottom; }
+th {
+    vertical-align: bottom;
+}
+
 td {
     vertical-align: top;
     text-align: center;

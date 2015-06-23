@@ -10,15 +10,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: bempress-rooted
 GitHub Theme URI: https://github.com/m-e-h/bempress
 */
-/**
- * #SETTINGS
- */
-/**
- * #TOOLS
- */
-/**
- * #ELEMENTS
- */
 /*------------------------------------* #TYPOGRAPHY
 \*------------------------------------*/
 h1 {
@@ -139,10 +130,8 @@ p:last-child {
     overflow-y: scroll;
     box-sizing: border-box;
     min-height: 100%;
-    color: #34495e; 
-    background-color: #fff;
-    font: 16px/24px Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-weight: 400;
+    background-color: #fff; 
+    font: 16px/1.5 sans-serif;
     cursor: default;
 
     -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -151,9 +140,12 @@ p:last-child {
     text-size-adjust: 100%;
 }
 
-/**
- * Universal selector. This is applied to all elements.
- */
+body {
+    color: #34495e;
+    background-color: #fff;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
 * {
     flex-direction: column;
     position: relative;
@@ -180,18 +172,11 @@ p:last-child {
     box-sizing: inherit;
     border-width: 0; 
     border-style: solid;
-    border-color: #e3e8ec;
 }
 
 ::after,
 ::before {
     vertical-align: inherit;
-}
-
-body {
-    color: #34495e;
-    background-color: #fff;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 p {
@@ -270,7 +255,7 @@ template {
 /*------------------------------------*    #LINKS
 \*------------------------------------*/
 a {
-    opacity: 0.8;
+    opacity: 1;
     color: #004899;
     background-color: transparent;
     vertical-align: initial;
@@ -288,7 +273,7 @@ a:active,
 a:hover,
 a:focus {
     outline: 0;
-    opacity: 1;
+    opacity: 0.8;
     text-decoration: none;
 }
 
@@ -340,8 +325,7 @@ svg {
 }
 
 /**
- * Google Maps breaks if `max-width: 100%` acts upon it; use their selector
- *    to remove the effects.
+ * Google Maps breaks if `max-width: 100%` acts upon it.
  */
 .gm-style img {
     max-width: none;
@@ -461,11 +445,6 @@ textarea {
     font-style: inherit;
 }
 
-select {
-    min-height: 24px;
-    padding: 6px 24px;
-}
-
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -527,6 +506,7 @@ textarea[readonly] {
 }
 
 select {
+    padding: 6px 24px;
     border: 1px solid #e3e8ec;
     background-color: #fff;
     text-transform: none;
@@ -611,9 +591,6 @@ nav ul li {
     padding: 0;
 }
 
-/**
- * #OBJECTS
- */
 /*------------------------------------*    #GRID
 \*------------------------------------*/
 .grid {
@@ -766,13 +743,6 @@ nav ul li {
     flex: 1 0 auto;
 }
 
-.flexed--no {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-}
-
 @media screen and (min-width: 48em) {
     .flex\@md {
         display: -webkit-box;
@@ -815,20 +785,6 @@ nav ul li {
     display: block;
     width: 100%; 
     padding-bottom: 100%;
-}
-
-/**
- * Modifier: 3:1 aspect ratio
- */
-.flex-embed__ratio--3by1 {
-    padding-bottom: calc(100% / 3);
-}
-
-/**
- * Modifier: 2:1 aspect ratio
- */
-.flex-embed__ratio--2by1 {
-    padding-bottom: 50%;
 }
 
 /**
@@ -877,16 +833,8 @@ nav ul li {
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 0 6px 3px 0 rgba(0, 0, 0, 0.23);
 }
 
-.shadow--z4 {
-    box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.25), 0 10px 5px 0 rgba(0, 0, 0, 0.22);
-}
-
 /*------------------------------------*    #MEDIA
 \*------------------------------------*/
-.featured-media {
-    text-align: center;
-}
-
 .gallery {
     margin-bottom: 1.5em;
 }
@@ -999,19 +947,6 @@ nav ul li {
     line-height: 1.6;
 }
 
-.user__title {
-    opacity: 0.6;
-    font-weight: bold;
-    line-height: 1;
-}
-
-.user__email {
-    margin-top: auto;
-    font-size: 14px;
-    font-size: 0.875rem;
-    line-height: 1;
-}
-
 .block__figure ~ .block__title {
     background-color: transparent;
 }
@@ -1032,11 +967,6 @@ nav ul li {
     padding: 5px 0;
 }
 
-/**
- * #COMPONENTS
- */
-/*------------------------------------*    #TITLES
-\*------------------------------------*/
 /*    #BUTTONS
 \*------------------------------------*/
 .btn,
@@ -1071,7 +1001,8 @@ input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
     outline: 0;
-    background-color: rgba(65, 80, 92, 0.0625); 
+    opacity: 1; 
+    background-color: rgba(65, 80, 92, 0.0625);
     text-decoration: none;
 }
 .btn:disabled,
@@ -1258,11 +1189,81 @@ pre {
     flex: 1 1;
 }
 
+/*------------------------------------*    #TABS
+\*------------------------------------*/
+.tabs {
+    display: none;
+    visibility: hidden;
+}
+
+/*  Display tab navigation if javascript enabled.
+ *  This requires on the included js-accessibility.js-tabby script. */
+.js-tabby .tabs {
+    display: block;
+    visibility: visible;
+}
+
+/*  Hide tab content if javascript is enabled. */
+.js-tabby .tabs-pane {
+    display: none;
+    visibility: hidden;
+}
+
+/*  Show tab content when active class is added.
+ *  This class is added via javascript. */
+.tabs-pane.active {
+    display: block;
+    visibility: visible;
+}
+
+/*  Hide the collapse and expand link or button by default */
+.collapse-toggle {
+    display: none;
+    visibility: hidden;
+}
+
+/*  If JavaScript is enabled, show the collapse and expand link or button */
+.js-houdini .collapse-toggle {
+    display: block;
+    visibility: visible;
+    cursor: pointer;
+}
+
+/*  When expanded, hide "show" text.
+ *  When collapsed, hide "hide" text. */
+.active .collapse-text-show,
+.collapse-text-hide {
+    display: none;
+    visibility: hidden;
+}
+
+/*  When expanded, show "hide" text. */
+.active .collapse-text-hide {
+    display: inline;
+    visibility: visible;
+}
+
+/* If JavaScript is enabled, hide the collapsed element */
+.js-houdini .collapse {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    /*  Add animation when content expands and collapses */
+    -webkit-transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease;
+}
+
+/*  When collapsed element has the .active class, show it
+ *  Uses max-height instead of display: none to allow for
+ *  CSS3 animations, which don't work on display values. */
+.js-houdini .collapse.active {
+    max-height: 9999em;
+    opacity: 1;
+}
+
 /**
  * #TRUMPS
  */
-/*------------------------------------*    #LINKS
-\*------------------------------------*/
 /*------------------------------------*    #HELPERS
 \*------------------------------------*/
 .clearfix:after {
@@ -1392,20 +1393,8 @@ pre {
     position: static;
 }
 
-.u-z1 {
-    z-index: 1;
-}
-
-.u-z2 {
-    z-index: 2;
-}
-
-.u-z3 {
-    z-index: 3;
-}
-
-.u-z4 {
-    z-index: 4;
+.u-right0 {
+    right: 0;
 }
 
 /**
@@ -1499,11 +1488,6 @@ pre {
 .t-bg--grey-light {
     color: #34495e; 
     background-color: #ebebeb;
-}
-
-.t-bg--grey-lighter {
-    color: #34495e; 
-    background-color: #f8f8f8;
 }
 
 .t-fill--white {
@@ -1623,16 +1607,16 @@ pre {
     color: #ebebeb;
 }
 
-.t-color--dark {
+.t-color--black {
     color: #34495e;
 }
 
-.t-color--light {
+.t-color--white {
     color: #fff;
 }
 
 .t-color--grey {
-    color: #d2d2d2;
+    color: #46627f;
 }
 
 /*------------------------------------*    #HEADINGS
@@ -1673,27 +1657,6 @@ pre {
 .u-h4 {
     font-size: 20px;
     font-size: 1.25rem;
-}
-
-.u-h5 {
-    font-size: 16px;
-    font-size: 1rem;
-}
-
-.u-h6 {
-    font-size: 14px;
-    font-size: 0.875rem;
-}
-
-.u-h--large {
-    font-size: 30px;
-    font-size: 1.875rem;
-}
-@media screen and (min-width: 48em) {
-    .u-h--large {
-        font-size: 54px;
-        font-size: 3.375rem;
-    }
 }
 
 /*------------------------------------*    #SPACING-RESPONSIVE
@@ -2128,39 +2091,6 @@ pre {
     width: 80%;
 }
 
-@media screen and (max-width: 35.5em) {
-    .u-1\/1\@sm {
-        width: 100%;
-    }
-    .u-1\/2\@sm {
-        width: 50%;
-    }
-    .u-1\/3\@sm {
-        width: 33.33333%;
-    }
-    .u-2\/3\@sm {
-        width: 66.66667%;
-    }
-    .u-1\/4\@sm {
-        width: 25%;
-    }
-    .u-3\/4\@sm {
-        width: 75%;
-    }
-    .u-1\/5\@sm {
-        width: 20%;
-    }
-    .u-2\/5\@sm {
-        width: 40%;
-    }
-    .u-3\/5\@sm {
-        width: 60%;
-    }
-    .u-4\/5\@sm {
-        width: 80%;
-    }
-}
-
 @media screen and (min-width: 48em) {
     .u-1\/1\@md {
         width: 100%;
@@ -2223,39 +2153,6 @@ pre {
         width: 60%;
     }
     .u-4\/5\@lg {
-        width: 80%;
-    }
-}
-
-@media screen and (min-width: 80em) {
-    .u-1\/1\@xl {
-        width: 100%;
-    }
-    .u-1\/2\@xl {
-        width: 50%;
-    }
-    .u-1\/3\@xl {
-        width: 33.33333%;
-    }
-    .u-2\/3\@xl {
-        width: 66.66667%;
-    }
-    .u-1\/4\@xl {
-        width: 25%;
-    }
-    .u-3\/4\@xl {
-        width: 75%;
-    }
-    .u-1\/5\@xl {
-        width: 20%;
-    }
-    .u-2\/5\@xl {
-        width: 40%;
-    }
-    .u-3\/5\@xl {
-        width: 60%;
-    }
-    .u-4\/5\@xl {
         width: 80%;
     }
 }

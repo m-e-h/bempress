@@ -34,9 +34,10 @@ input[type="submit"] {
 
     &:hover,
     &:focus {
-      outline: 0;
-      text-decoration: none;
-      background-color: rgba($color-grey-ui-dark,.0625);
+        outline: 0;
+        text-decoration: none;
+        background-color: rgba($color-grey-ui-dark,.0625);
+        opacity: 1;
     }
 
     &:disabled,

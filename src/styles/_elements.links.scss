@@ -5,7 +5,7 @@
 a {
     background-color: transparent;
     text-decoration: none;
-    opacity: $opacity;
+    opacity: 1;
     color: $color-links;
     transition: $transition ease;
     word-break:     break-word;
@@ -17,7 +17,7 @@ a {
     &:active,
     &:hover,
     &:focus {
-        opacity: 1;
+        opacity: $opacity;
         outline: 0;
         text-decoration: none;
     }

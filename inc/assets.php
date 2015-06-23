@@ -34,5 +34,19 @@ if (is_child_theme())
 
     wp_enqueue_script(
         'bempress_js',
-        trailingslashit(get_template_directory_uri()) . 'js/main.js', false, false, true);
+        trailingslashit(get_template_directory_uri()) . "js/main{$suffix}.js",
+        false, false, true
+    );
+
+    wp_register_script(
+        'meh_tabs',
+        trailingslashit(get_template_directory_uri()) . "js/tabby{$suffix}.js",
+        false, false, true
+    );
+
+    wp_register_script(
+        'meh_toggles',
+        trailingslashit(get_template_directory_uri()) . "js/houdini{$suffix}.js",
+        false, false, true
+    );
 }

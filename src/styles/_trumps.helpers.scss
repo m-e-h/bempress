@@ -70,11 +70,7 @@
 .u-absolute { position: absolute; }
 .u-static { position: static; }
 
-.u-z1 { z-index: 1 }
-.u-z2 { z-index: 2 }
-.u-z3 { z-index: 3 }
-.u-z4 { z-index: 4 }
-
+.u-right0 { right: 0; }
 
 
 
@@ -144,7 +140,6 @@
 .t-bg--grey { @include bg-text($color-grey); }
 .t-bg--grey-dark { @include bg-text($color-grey-dark); }
 .t-bg--grey-light { @include bg-text($color-grey-light); }
-.t-bg--grey-lighter { @include bg-text($color-grey-lighter); }
 .t-fill--white { fill: $white; }
 
 .t-bg--frost { @include bg-text($color-frost); }
@@ -186,6 +181,6 @@
 .t-color--1 { color: $color-primary; }
 .t-color--2 { color: $color-secondary; }
 .t-color--3 { color: $color-accent; }
-.t-color--dark { color: $color-text; }
-.t-color--light { color: $color-white; }
-.t-color--grey { color: $color-grey; }
+.t-color--black { color: $color-text; }
+.t-color--white { color: $color-white; }
+.t-color--grey { color: $color-text-light; }

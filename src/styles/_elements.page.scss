@@ -8,17 +8,18 @@
     text-size-adjust: 100%;
     box-sizing: border-box;
     cursor: default;
-    font: #{$font-size}/#{$line-height} $font-body;
-    font-weight: 400;
-    //text-rendering: optimizeLegibility;
+    font: 16px/1.5 sans-serif;
     min-height: 100%;
     background-color: #ffffff;
-    color: $color-text;
 }
 
-/**
- * Universal selector. This is applied to all elements.
- */
+
+
+body {
+    background-color: #fff;
+    color: $color-text;
+    font-family: $font-body;
+}
 
 * {
     position: relative;
@@ -37,20 +38,12 @@
 ::before {
     box-sizing: inherit;
     border-style: solid;
-    border-color: $color-grey-ui;
     border-width: 0;
-
 }
 
 ::after,
 ::before {
     vertical-align: inherit;
-}
-
-body {
-    background-color: #fff;
-    color: $color-text;
-    font-family: $font-body;
 }
 
 p {

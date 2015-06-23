@@ -2,224 +2,71 @@
     #TABS
 \*------------------------------------*/
 
-.whistles {
-    clear:       both;
-    width:       100%;
-    margin:      0 0 $base-spacing-unit;
+.tabs {
+  display: none;
+  visibility: hidden;
 }
 
-.whistles::after,
-.whistle-content::after {
-    content:    ".";
-    display:    block;
-    height:     0;
-    clear:      both;
-    visibility: hidden;
+/*  Display tab navigation if javascript enabled.
+ *  This requires on the included js-accessibility.js-tabby script. */
+.js-tabby .tabs {
+  display: block;
+  visibility: visible;
 }
 
-.whistle-title:hover {
-    cursor: pointer;
+/*  Hide tab content if javascript is enabled. */
+.js-tabby .tabs-pane {
+  display: none;
+  visibility: hidden;
 }
 
-.whistle-content {
-    overflow: hidden;
-    background-color: $white;
-    border-radius: $base-radius;
-    padding: $base-spacing-unit--tiny $base-spacing-unit--tiny 0 $base-spacing-unit--tiny;
-    @include md {
-    padding: $base-spacing-unit $base-spacing-unit 0 $base-spacing-unit;
-}
+/*  Show tab content when active class is added.
+ *  This class is added via javascript. */
+.tabs-pane.active {
+  display: block;
+  visibility: visible;
 }
 
-/**
- * Tabs
- */
-
-/* Wraps the entire tabbed section. */
-.whistles-tabs {}
-
-    /* Unordered list. */
-    .whistles-tabs-nav {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        border-radius: $base-radius $base-radius 0 0;
-        overflow: hidden;
-    }
-
-        /* Individual list item. */
-        .whistles-tabs-nav li {
-            display: inline-block;
-            flex: 1 auto;
-            text-align: center;
-            padding: 1px;
-
-                &::before {
-                    content: "";
-                }
-        }
-
-            /* Link within list item. */
-            .whistles-tabs .whistles-tabs-nav li a {
-
-                @extend .button--tab;
-
-                border-radius: 0;
-                display:            inline-block;
-                // padding:            $base-spacing-unit--small $base-spacing-unit--tiny;
-                // color:              $color-grey-light;
-                background-color:   $color-primary;
-                opacity: 1;
-                // transition: $base-transition;
-                // border: 0;
-                width: 100%;
-
-                @include hocus() {
-                background-color: $color-primary;
-                }
-
-            }
-
-            .whistles-tabs-nav li[aria-selected="true"] a {
-                color:               $white;
-                background-color:    $color-primary;
-                //border-bottom-color: #fff;
-
-                @include hocus() {
-                    cursor: default;
-                    background-color: $color-primary;
-                }
-            }
-
-.post-12 {
-
-    .whistles-tabs-nav li:first-of-type {
-        width: 100%;
-
-        a {
-            color: transparent!important;
-            font-size: 0;
-            background-color: transparent;
-            line-height: 1;
-            text-align: right;
-            padding: 2px;
-            @include font-icon($info, $mi, after);
-
-            &:after {
-                color: $color-text;
-                font-size: $base-spacing-unit;
-                cursor: pointer;
-            }
-
-            &:before {
-                background: transparent!important;
-            }
-        }
-    }
+/*  Hide the collapse and expand link or button by default */
+.collapse-toggle {
+  display: none;
+  visibility: hidden;
 }
 
-    /* Wraps all of the tab content panels. */
-    .whistles-tabs-wrap {
-        //margin:     -1px 0 0;
-        //padding:    $base-spacing-unit $base-spacing-unit 0 $base-spacing-unit;
-        //border: 2px solid $color-primary-dark;
-        border-top: 0;
-        border-radius: 0 0 $base-radius $base-radius;
-    }
-
-        /* Individual tab content. */
-        .whistles-tabs-wrap .whistle-content {}
-
-
-
-
-/**
- * Toggle/Accordion
- */
-
-.whistles-toggle,
-.whistles-accordion {
-
-    .whistle-title {
-        @include shadow-z1();
-        background-color: $color-secondary-light;
-        opacity: 1;
-        margin: 5px 0;
-        padding:          $base-spacing-unit--small $base-spacing-unit;
-        border-top-width: 0;
-        @include font-size($base-font-size + 2);
-
-        @include font-icon($keyboard_arrow_down, $mi, after);
-        &:after {
-            float: right;
-            font-size: 28px;
-            transition: transform .1s linear;
-        }
-
-        &[aria-selected="true"] {
-            box-shadow: none;
-        }
-
-    }
-
-    .whistle-content {
-        margin:     -1px 0 0;
-    }
+/*  If JavaScript is enabled, show the collapse and expand link or button */
+.js-houdini .collapse-toggle {
+  display: block;
+  visibility: visible;
+  cursor: pointer;
 }
 
-.whistles-toggle .whistle-title[aria-selected="true"]:after {
-    transform: rotate(180deg);
-    transition: transform $base-transition linear;
+/*  When expanded, hide "show" text.
+ *  When collapsed, hide "hide" text. */
+.active .collapse-text-show,
+.collapse-text-hide {
+  display: none;
+  visibility: hidden;
 }
 
-        .whistles-toggle .whistle-title:first-child,
-        .whistles-accordion .whistle-title:first-child {
-            //border-top-width: 1px;
-        }
-
-        .whistles-toggle .whistle-title:hover,
-        .whistles-toggle .whistle-title[aria-selected="true"],
-        .whistles-accordion .whistle-title:hover,
-        .whistles-accordion .whistle-title[aria-selected="true"] {
-            //color:      #555;
-            //background-color: #ededed;
-        }
-
-
-
-.widget-primary.whistles {
-    padding: 0;
-    box-shadow: none;
-    background-color: none;
+/*  When expanded, show "hide" text. */
+.active .collapse-text-hide {
+  display: inline;
+  visibility: visible;
 }
 
-.whistles-tabs .whistles-tabs-nav li[aria-selected=true] a:before {
-    background: $color-secondary;
-    right: 0;
-    left: 0;
+/* If JavaScript is enabled, hide the collapsed element */
+.js-houdini .collapse {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  /*  Add animation when content expands and collapses */
+  transition: opacity $transition ease;
 }
 
-.post-12 {
-
-    .whistle-content li {
-        &::before {
-    content: $check_box;
-    font-size: $base-font-size - 4;
-}
-    }
-
-.whistles-tabs-nav li {
-
-    &:first-of-type {
-        min-width: 100%;
-    }
-}
-}
-
-.post-17 .widget .whistles-tabs-wrap li::before {
-    content: $timer;
-    font-size: $base-font-size - 4;
+/*  When collapsed element has the .active class, show it
+ *  Uses max-height instead of display: none to allow for
+ *  CSS3 animations, which don't work on display values. */
+.js-houdini .collapse.active {
+  max-height: 9999em;
+  opacity: 1;
 }

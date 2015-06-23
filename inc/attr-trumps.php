@@ -13,6 +13,7 @@ class AttrTrumps {
     public $body                    = '';
     public $site_container          = '';
     public $container               = '';
+    public $container_header        = 'flex flex--row@md flex--w flex--j-sb flex--ai-c';
     public $container_wide          = 'container--wide';
     public $row                     = '';
     public $row_layout              = 'grid';
@@ -22,8 +23,8 @@ class AttrTrumps {
     // SITE HEADER
     public $header                  = '';
     public $branding                = '';
-    public $site_title              = 'u-h2';
-    public $site_description        = 'u-h4';
+    public $site_title              = 'u-h2 u-m0';
+    public $site_description        = 'u-h4 u-m0';
 
     // CONTENT
     public $content                 = 'grid__item u-mb';
@@ -34,8 +35,8 @@ class AttrTrumps {
 
     public $page_header             = 'u-1/1 u-text-center';
 
-    public $entry_title             = 'u-h2';
-    public $archive_title           = 'u-h2';
+    public $entry_title             = 'u-h1';
+    public $archive_title           = 'u-h1';
     public $archive_description     = '';
 
     public $entry_content           = 'u-p container';
@@ -142,6 +143,9 @@ class AttrTrumps {
         $attr['class']      .= $this->container;
         if ('single-column--wide' == get_theme_mod('theme_layout') && 'content' === $context) :
         $attr['class']      .= $this->container_wide;
+        endif;
+        if ('header' === $context) :
+        $attr['class']      .= $this->container_header;
         endif;
         return $attr;
     }
