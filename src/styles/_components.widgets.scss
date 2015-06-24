@@ -1,9 +1,8 @@
-/*------------------------------------*\
-    #WIDGETS
+/* #WIDGETS
 \*------------------------------------*/
 
 
 .sidebar-horizontal > .widget {
     flex: 1 1;
-    min-width: 300px;
+    @include rem(min-width, 300px);
 }

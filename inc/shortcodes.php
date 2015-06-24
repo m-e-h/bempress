@@ -2,11 +2,51 @@
 add_action('init', 'meh_add_shortcodes');
 
 function meh_add_shortcodes() {
-add_shortcode('meh_block', 'meh_block_shortcode');
-add_shortcode('meh_tabs', 'meh_tabs_shortcode');
-add_shortcode('meh_toggles', 'meh_toggles_shortcode');
+    add_shortcode('meh_cards', 'meh_cards_shortcode');
+    add_shortcode('meh_block', 'meh_block_shortcode');
+    add_shortcode('meh_tabs', 'meh_tabs_shortcode');
+    add_shortcode('meh_toggles', 'meh_toggles_shortcode');
 }
 
+
+
+
+/**
+ * CARDS
+ */
+function meh_cards_shortcode($atts, $content = null) {
+    global $mehsc_atts;
+    $mehsc_atts   = shortcode_atts(array(
+        'width'         => '',
+        'card_color'    => '',
+        'page'          => '',
+        'show_content'  => '',
+   ), $atts, 'meh_cards');
+
+$output = '<section class="row pages-highlight"><div class="card-row grid container">';
+
+// Get pages set (if any)
+$pages = $mehsc_atts['page'];
+
+$args = array(
+    'post_type' => 'page',
+    'post__in' => explode(",", $pages),
+    'orderby' => 'post__in'
+);
+
+
+$query1 = new WP_Query($args);
+while ($query1->have_posts()) : $query1->the_post();
+
+ob_start();
+get_template_part('components/section', 'cards');
+$output .= ob_get_clean();
+
+endwhile;
+
+$output .= '</div></section>';
+    return $output;
+}
 
 
 
@@ -79,13 +119,13 @@ $args = array(
 
 $query3 = new WP_Query($args);
 
-$output = '<section class="row pages-highlight"><div class="container tabs">';
+$output = '<section class="row pages-highlight u-pt+ u-pb+ t-bg--1"><div class="container tabs">';
 ob_start();
 while ($query3->have_posts()) { $query3->the_post(); ?>
     <button data-tab="#tab<?php the_ID(); ?>"><?php the_title(); ?></button>
 <?php } ?>
 
-<div class="tabs-content">
+<div class="tabs-content t-bg--frost u-radius u-p">
 
 <?php while ($query3->have_posts()) { $query3->the_post(); ?>
     <div class="tabs-pane" id="tab<?php the_ID(); ?>"><?php the_content(); ?></div>
@@ -130,16 +170,16 @@ $args = array(
 
 $query4 = new WP_Query($args);
 
-$output = '<section class="row pages-highlight t-bg--2-light"><div class="container toggles">';
+$output = '<section class="row pages-highlight t-bg--2-light u-pt+ u-pb+"><div class="container toggles">';
 ob_start();
 while ($query4->have_posts()) { $query4->the_post(); ?>
-<li class="u-p-">
-<a class="collapse-toggle u-h4 t-color--black u-pv- u-pr" data-collapse="#section<?php the_ID(); ?>" data-group="accordion" href="#">
+<li class="toggle__item">
+<a class="collapse-toggle u-h4 t-color--black u-p-" data-collapse="#section<?php the_ID(); ?>" data-group="accordion" href="#">
     <?php the_title(); ?>
     <i class="material-icons u-h2 u-absolute u-right0 collapse-text-show">&#xE313;</i>
     <i class="material-icons u-h2 u-absolute u-right0 collapse-text-hide">&#xE316;</i>
 </a>
-<div class="collapse t-color--grey" id="section<?php the_ID(); ?>">
+<div class="collapse t-bg--frost u-radius" id="section<?php the_ID(); ?>">
     <?php the_content(); ?>
 </div>
 </li>

@@ -14,7 +14,6 @@ GitHub Theme URI: https://github.com/m-e-h/bempress
 
 
 
-
 // /**
 //  * #SETTINGS
 //  */
@@ -22,7 +21,6 @@ GitHub Theme URI: https://github.com/m-e-h/bempress
 @import "settings.responsive";
 @import "settings.icon-font";
 @import "settings.defaults";
-
 
 
 
@@ -53,7 +51,6 @@ GitHub Theme URI: https://github.com/m-e-h/bempress
 
 
 
-
 // /**
 //  * #OBJECTS
 //  */
@@ -69,35 +66,26 @@ GitHub Theme URI: https://github.com/m-e-h/bempress
 
 
 
-
 // /**
 //  * #COMPONENTS
 //  */
-// @import "components.site-header";
 @import "components.buttons";
 @import "components.site-nav";
-// @import "components.post-nav";
-// @import "components.meta";
 @import "components.code";
 @import "components.breadcrumbs";
 @import "components.widgets";
 @import "components.tabs";
-// @import "components.search";
-// @import "components.slider";
-
-// @import "components.gravity-forms";
 
 
 
 
-
-/**
- * #TRUMPS
- */
+// /**
+//  * #TRUMPS
+//  */
 @import "trumps.helpers";
 @import "trumps.headings";
 @import "trumps.spacing";
 @import "trumps.widths";
 
 
-// @import "trumps.shame";
+@import "trumps.shame";

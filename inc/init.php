@@ -2,7 +2,7 @@
 
 namespace Bempress\Init;
 
-use Bempress\Assets;
+//use Bempress\Assets;
 
 /**
  * Theme setup

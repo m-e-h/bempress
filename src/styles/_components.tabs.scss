@@ -1,10 +1,19 @@
-/*------------------------------------*\
-    #TABS
+/* #TABS
 \*------------------------------------*/
 
 .tabs {
-  display: none;
-  visibility: hidden;
+    display: none;
+    visibility: hidden;
+}
+
+.js-tabby .tabs-pane:first-child {
+    display: block;
+    visibility: visible;
+}
+
+button.active:not(:first-child) ~ .tabs-content .tabs-pane:first-child {
+    display: none;
+    visibility: hidden;
 }
 
 /*  Display tab navigation if javascript enabled.
@@ -69,4 +78,5 @@
 .js-houdini .collapse.active {
   max-height: 9999em;
   opacity: 1;
+  padding: $spacing;
 }

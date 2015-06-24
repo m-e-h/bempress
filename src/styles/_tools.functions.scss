@@ -1,11 +1,7 @@
-///*------------------------------------*\
-//    #FUNCTIONS
+///* #FUNCTIONS
 //\*------------------------------------*/
 
-// Convert any px value into its rem equivalent.
-@function rem($number) {
-    @return $number / $font-size * 1rem;
-}
+
 
 
 // Determines text color based on bg color

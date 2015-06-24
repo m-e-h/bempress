@@ -1,4 +1,4 @@
-/*    #BUTTONS
+/* #BUTTONS
 \*------------------------------------*/
 
 $btn-bg:                    transparent;
@@ -82,7 +82,7 @@ input[type="submit"] {
 
 .btn--small {
     padding: round(0.5 * $btn-padding-y) round(0.5 * $btn-padding-x);
-    font-size: $font-size - 2;
+    @include font-size($font-size - 2);
     letter-spacing: .02em;
 }
 
@@ -94,4 +94,13 @@ input[type="submit"] {
     padding-right: 0;
     padding-left:  0;
     width: 100%;
+}
+
+.search-form button[type=submit],
+.post-password-form input[type="submit"] {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    position: absolute;
+    right: 0;
+    height: $spacing-large;
 }

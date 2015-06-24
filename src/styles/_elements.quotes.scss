@@ -1,5 +1,4 @@
-/*------------------------------------*\
-    #BLOCKQUOTES
+/* #BLOCKQUOTES
 \*------------------------------------*/
 
 
@@ -7,7 +6,8 @@ blockquote {
     font-family: Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
     margin-bottom: $spacing;
-    border-left: 8px solid currentColor;
+    @include rem(border-left-width, $spacing-tiny);
+    border-left-color: currentColor;
     padding: $spacing-small $spacing;
     font-weight: 500;
     @include font-size($font-size + 2);
@@ -31,14 +31,13 @@ blockquote cite {
     font-style: normal;
     font-size: 80%;
     font-weight: 500;
-    margin-top: 12px;
-    padding-top: 13px;
-    margin-top: $spacing-small;
+    @include rem(padding-top, $spacing-small);
+    @include rem(margin-top, $spacing-small);
 }
 
 blockquote cite::before {
     content: "\2014";
-    padding-right: 10px;
+    @include rem(padding-right, $spacing-small);
 }
 
 @include md {

@@ -1,5 +1,4 @@
-/*------------------------------------*\
-   #TABLES
+/* #TABLES
 \*------------------------------------*/
 
 table {
@@ -44,7 +43,7 @@ tfoot tr {
 }
 
 tfoot td {
-    font-size: $font-size - 2;
+    @include font-size($font-size - 2);
     font-style: italic;
     padding: $spacing $spacing-tiny;
 }

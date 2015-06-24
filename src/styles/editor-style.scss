@@ -1,16 +1,16 @@
 
-/**
- * #SETTINGS
- */
+// /**
+//  * #SETTINGS
+//  */
 @import "settings.colors";
 @import "settings.responsive";
 @import "settings.icon-font";
 @import "settings.defaults";
 
 
-/**
- * #TOOLS
- */
+// /**
+//  * #TOOLS
+//  */
 @import "tools.functions";
 @import "tools.mixins";
 @import "tools.aliases";
@@ -18,6 +18,11 @@
 @import "style";
 
 /* Styles specific to the editor. */
+
+#bempress_add_extra_wysiwyg_field .mce-toolbar-grp {
+    display: none;
+}
+
 :root {
     cursor: auto!important;
 }

@@ -24,16 +24,15 @@ function bempress_add_extra_wysiwyg_field() {
     $extra_wysiwyg = stripslashes(get_post_meta($post->ID, 'bempress_extra_wysiwyg', true));
     $settings = array(
         'textarea_name' => 'bempress_extra_wysiwyg',
-        'textarea_rows' => 8,
         'media_buttons' => true,
-        'wpautop' => false,
-        'teeny' => true,
-        'quicktags' => false,
+        //'wpautop' => false,
+        //'teeny' => true,
+        //'quicktags' => false,
     );
     // Insert editor
     wp_editor($extra_wysiwyg, 'bempress_extra_wysiwyg', $settings);
     ?>
-    <label class="description" for="landing_cta"><?php _e('Content Blocks can be added by selecting <kbd>Add Media</kbd> > <kbd>Insert Post Element</kbd>', 'bempress'); ?></label>
+    <label class="description" for="extra_wysiwyg"><?php _e('Content Blocks may be added by selecting <kbd>Add Media</kbd> then <kbd>Insert Post Element</kbd>', 'bempress'); ?></label>
     <?php
     // Security field
     wp_nonce_field('bempress-add-page-wysiwyg-nonce', 'bempress-add-page-wysiwyg-process');

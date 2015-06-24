@@ -1,5 +1,4 @@
-/*------------------------------------*\
- #TYPOGRAPHY
+/* #TYPOGRAPHY
 \*------------------------------------*/
 
 $heading-size-6:        $font-size - 2 !default;
@@ -11,33 +10,23 @@ $heading-size-1:        $heading-size-3 * 1.5 !default;
 $heading-size-large:    $heading-size-1 * 1.5 !default;
 
 h1 {
-    @include font-size($heading-size-1);
-    margin-bottom: $spacing;
+    @include font-size($heading-size-1, false);
 }
 
 h2 {
-    @include font-size($heading-size-2);
-    margin-bottom: $spacing;
+    @include font-size($heading-size-2, false);
 }
 
 h3 {
-    @include font-size($heading-size-3);
-    margin-bottom: $spacing;
+    @include font-size($heading-size-3, false);
 }
 
 h4 {
-    @include font-size($heading-size-4);
-    margin-bottom: $spacing-tiny;
+    @include font-size($heading-size-4, false);
 }
 
 h5 {
-    @include font-size($heading-size-5);
-    margin-bottom: $spacing-tiny;
-}
-
-h6 {
-    @include font-size($heading-size-6);
-    margin-bottom: $spacing-tiny;
+    @include font-size($heading-size-5, false);
 }
 
 h1,
@@ -50,10 +39,16 @@ h6 {
     font-style: normal;
     font-weight: 400;
     opacity: $opacity;
+    line-height: 1.25;
+    margin-top: .75em;
+    margin-bottom: .5em;
 }
 
+p {
+    @include rem(margin-bottom, $font-size);
+}
 
-dl, blockquote, p, address,
+dl, blockquote, address,
 table, fieldset, figure,
 pre {
     margin-bottom: $spacing;

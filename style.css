@@ -10,48 +10,31 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: bempress-rooted
 GitHub Theme URI: https://github.com/m-e-h/bempress
 */
-/*------------------------------------* #TYPOGRAPHY
+/* #TYPOGRAPHY
 \*------------------------------------*/
 h1 {
-    margin-bottom: 24px; 
     font-size: 36px;
     font-size: 2.25rem;
-    line-height: 1.33333;
 }
 
 h2 {
-    margin-bottom: 24px; 
     font-size: 30px;
     font-size: 1.875rem;
-    line-height: 1.6;
 }
 
 h3 {
-    margin-bottom: 24px; 
     font-size: 24px;
     font-size: 1.5rem;
-    line-height: 1;
 }
 
 h4 {
-    margin-bottom: 6px; 
     font-size: 20px;
     font-size: 1.25rem;
-    line-height: 1.2;
 }
 
 h5 {
-    margin-bottom: 6px; 
     font-size: 16px;
     font-size: 1rem;
-    line-height: 1.5;
-}
-
-h6 {
-    margin-bottom: 6px; 
-    font-size: 14px;
-    font-size: 0.875rem;
-    line-height: 1.71429;
 }
 
 h1,
@@ -60,15 +43,22 @@ h3,
 h4,
 h5,
 h6 {
-    opacity: 0.8; 
+    margin-top: 0.75em;
+    margin-bottom: 0.5em; 
+    opacity: 0.8;
     font-family: Georgia, Times, "Times New Roman", serif;
     font-weight: 400;
     font-style: normal;
+    line-height: 1.25;
+}
+
+p {
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
 }
 
 dl,
 blockquote,
-p,
 address,
 table,
 fieldset,
@@ -124,7 +114,7 @@ p:last-child {
     margin-bottom: 0;
 }
 
-/*------------------------------------*    #PAGE
+/* #PAGE
 \*------------------------------------*/
 :root {
     overflow-y: scroll;
@@ -138,6 +128,11 @@ p:last-child {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
+}
+@media screen and (max-width: 35.5em) {
+    :root {
+        font: 14px/1.7 sans-serif;
+    }
 }
 
 body {
@@ -179,19 +174,12 @@ body {
     vertical-align: inherit;
 }
 
-p {
-    letter-spacing: 0.2px;
-}
-
 span {
     vertical-align: bottom;
 }
 
 /**
- * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11
- * and Firefox.
- * Correct `block` display not defined for `main` in IE 11.
+ * Correct `block` display not defined for any HTML5 element in IE.
  */
 article,
 aside,
@@ -252,7 +240,7 @@ template {
     }
 }
 
-/*------------------------------------*    #LINKS
+/* #LINKS
 \*------------------------------------*/
 a {
     opacity: 1;
@@ -277,7 +265,7 @@ a:focus {
     text-decoration: none;
 }
 
-/*------------------------------------* #LISTS
+/* #LISTS
 \*------------------------------------*/
 dl {
     margin-bottom: 24px;
@@ -306,7 +294,7 @@ li > ol {
     margin-bottom: 0;
 }
 
-/*------------------------------------*    #IMAGES
+/* #IMAGES
 \*------------------------------------*/
 img {
     max-width: 100%;
@@ -331,12 +319,14 @@ svg {
     max-width: none;
 }
 
-/*------------------------------------*    #BLOCKQUOTES
+/* #BLOCKQUOTES
 \*------------------------------------*/
 blockquote {
     margin-bottom: 24px;
     padding: 12px 24px;
-    border-left: 8px solid currentColor;
+    border-left-width: 6px;
+    border-left-width: 0.375rem;
+    border-left-color: currentColor;
     font-family: Georgia, Times, "Times New Roman", serif;
     font-size: 18px;
     font-size: 1.125rem;
@@ -358,8 +348,9 @@ blockquote blockquote {
 blockquote cite {
     display: block;
     margin-top: 12px;
-    margin-top: 12px; 
-    padding-top: 13px;
+    margin-top: 0.75rem; 
+    padding-top: 12px;
+    padding-top: 0.75rem;
     color: #34495e;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 80%;
@@ -368,7 +359,8 @@ blockquote cite {
 }
 
 blockquote cite::before {
-    padding-right: 10px; 
+    padding-right: 12px;
+    padding-right: 0.75rem; 
     content: "\2014";
 }
 
@@ -381,7 +373,7 @@ blockquote cite::before {
     }
 }
 
-/*------------------------------------*   #TABLES
+/* #TABLES
 \*------------------------------------*/
 table {
     width: 100%; 
@@ -426,23 +418,36 @@ tfoot tr {
 tfoot td {
     padding: 24px 6px; 
     font-size: 14px;
+    font-size: 0.875rem;
     font-style: italic;
+    line-height: 1.71429;
 }
 
-/*------------------------------------* #FORMS
+/* #FORMS
 \*------------------------------------*/
 input,
 select,
 textarea {
     display: inline-block;
     min-height: 48px;
-    padding: 0 24px; 
+    min-height: 3rem;
+    padding-right: 24px;
+    padding-right: 1.5rem; 
+    padding-left: 24px;
+    padding-left: 1.5rem;
     border: 1px solid #e3e8ec;
     border-radius: 2px;
     background-color: #e3e8ec;
     font-family: inherit;
     font-weight: inherit;
     font-style: inherit;
+}
+
+textarea {
+    overflow: auto; 
+    padding: 24px;
+    padding: 1.5rem;
+    resize: vertical;
 }
 
 input[type="text"],
@@ -479,35 +484,14 @@ input[type=search]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
-progress {
-    display: inline-block;
-}
-
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
     outline: 0.1rem solid thin #34495e;
 }
 
-input[disabled],
-select[disabled],
-textarea[disabled] {
-    color: #46627f;
-    background-color: #ebebeb;
-    cursor: not-allowed;
-}
-
-input[readonly],
-select[readonly],
-textarea[readonly] {
-    border-color: #e3e8ec;
-    color: #46627f; 
-    background-color: #ebebeb;
-}
-
 select {
     padding: 6px 24px;
-    border: 1px solid #e3e8ec;
     background-color: #fff;
     text-transform: none;
 
@@ -531,25 +515,6 @@ label {
     line-height: 2;
 }
 
-fieldset {
-    padding: 12px 0;
-}
-
-legend {
-    display: block;
-    width: 100%; 
-    margin-bottom: 12px;
-    padding: 12px 0;
-    border-bottom: 0.1rem solid #e3e8ec;
-    color: #34495e;
-}
-
-textarea {
-    overflow: auto; 
-    padding: 24px;
-    resize: vertical;
-}
-
 [unselectable] {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -557,27 +522,7 @@ textarea {
     user-select: none;
 }
 
-.search-form,
-.post-password-form {
-    display: block;
-}
-
-.search-form input[type=search],
-.post-password-form input[type="password"] {
-    width: 100%; 
-    margin: 0;
-}
-
-.search-form button[type=submit],
-.post-password-form input[type="submit"] {
-    position: absolute;
-    right: 0;
-    height: 48px; 
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-/*------------------------------------* #NAV
+/* #NAV
 \*------------------------------------*/
 nav ol,
 nav ul {
@@ -591,7 +536,7 @@ nav ul li {
     padding: 0;
 }
 
-/*------------------------------------*    #GRID
+/* #GRID
 \*------------------------------------*/
 .grid {
     margin: 0;
@@ -620,7 +565,7 @@ nav ul li {
     vertical-align: bottom;
 }
 
-/*------------------------------------*    #FLEXBOX
+/* #FLEXBOX
 \*------------------------------------*/
 .flex {
     display: -webkit-box;
@@ -768,7 +713,7 @@ nav ul li {
     }
 }
 
-/*------------------------------------*    $MEDIA EMBEDS
+/* #MEDIA EMBEDS
 \*------------------------------------*/
 /**
  * Flexible media embeds
@@ -819,7 +764,7 @@ nav ul li {
     height: 100%;
 }
 
-/*------------------------------------*    #BOX SHADOWS
+/* #BOX SHADOWS
 \*------------------------------------*/
 .shadow--z1 {
     box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
@@ -833,7 +778,7 @@ nav ul li {
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 0 6px 3px 0 rgba(0, 0, 0, 0.23);
 }
 
-/*------------------------------------*    #MEDIA
+/* #MEDIA
 \*------------------------------------*/
 .gallery {
     margin-bottom: 1.5em;
@@ -880,13 +825,13 @@ nav ul li {
     max-width: 100%;
 }
 
-/*------------------------------------*    $ARTICLES
+/* #ARTICLES
 \*------------------------------------*/
 .comment-list {
     list-style: none;
 }
 
-/*------------------------------------*    #Layout Wrappers
+/* #Layout Wrappers
 \*------------------------------------*/
 .container {
     max-width: 1024px;
@@ -899,7 +844,7 @@ nav ul li {
     max-width: 100%;
 }
 
-/*------------------------------------*    #BLOCK
+/* #BLOCK
 \*------------------------------------*/
 .flag {
     display: block;
@@ -967,7 +912,7 @@ nav ul li {
     padding: 5px 0;
 }
 
-/*    #BUTTONS
+/* #BUTTONS
 \*------------------------------------*/
 .btn,
 nav li > a,
@@ -1065,6 +1010,8 @@ nav li > a:focus {
 nav li > a {
     padding: 6px 8px;
     font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.71429;
     letter-spacing: 0.02em;
 }
 
@@ -1078,95 +1025,58 @@ nav li > a {
     padding-left: 0;
 }
 
-/*------------------------------------*    #SITE NAVIGATION
-\*------------------------------------*/
-.menu-item {
-    display: inline-block;
-}
-
-.layout__obfuscator {
-    visibility: hidden;
+.search-form button[type=submit],
+.post-password-form input[type="submit"] {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
-    -webkit-transition-property: background-color;
-    transition-property: background-color;
+    right: 0;
+    height: 48px; 
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
-.layout__obfuscator.is-visible {
-    visibility: visible; 
-    background-color: rgba(44, 54, 62, 0.8);
-}
-.layout__obfuscator.is-visible .fa {
-    top: 0;
-    left: 85%;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 30px;
-    cursor: pointer;
-}
-
-/*------------------------------------*    #CODE
+/* #SITE NAVIGATION
+\*------------------------------------*/
+/* #CODE
 \*------------------------------------*/
 code,
 kbd,
-pre,
-samp {
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
-code,
+tt,
+var,
+samp,
 pre {
-    display: inline-block;
-    overflow: auto; 
-    padding: 0 0.5em;
-    border-radius: 2px;
-    color: #34495e;
-    background-color: #c6cfd6;
-    word-wrap: break-word;
-    word-break: break-all;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none; 
+
+    -ms-hyphens: none;
 }
 
-kbd {
-    margin: 0 0.25em;
-    padding: 0.3334em 0.5em;
-    border: 1px solid #c6cfd6;
-    border-radius: 2px;
-    color: #34495e;
-    background-color: #f2f4f6;
-    box-shadow: inset 0 1px 0 #fff;
-}
-
-.form-allowed-tags code,
 pre {
     overflow: auto;
     max-width: 100%;
-    margin-bottom: 24px;
-    padding: 5px 12px;
+    padding: 12px;
     border-radius: 2px;
+    color: #34495e;
+    background-color: #c6cfd6;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.comment-notes,
+.comment-awaiting-moderation,
+.logged-in-as,
+.form-allowed-tags {
+    margin-bottom: 24px; 
     font-size: 15px;
     font-size: 0.9375rem;
     line-height: 1.6;
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
 }
 
-.form-allowed-button {
-    color: #46627f;
-    cursor: default;
-}
-
-/*------------------------------------*    #BREADCRUMBS
+/* #BREADCRUMBS
 \*------------------------------------*/
 .breadcrumbs {
-    letter-spacing: 0.2em; 
     text-transform: uppercase;
 }
 .breadcrumbs li + li:before {
@@ -1178,10 +1088,11 @@ pre {
     display: none;
 }
 
-/*------------------------------------*    #WIDGETS
+/* #WIDGETS
 \*------------------------------------*/
 .sidebar-horizontal > .widget {
-    min-width: 300px; 
+    min-width: 300px;
+    min-width: 18.75rem; 
 
     -webkit-box-flex: 1;
     -webkit-flex: 1 1;
@@ -1189,9 +1100,19 @@ pre {
     flex: 1 1;
 }
 
-/*------------------------------------*    #TABS
+/* #TABS
 \*------------------------------------*/
 .tabs {
+    display: none;
+    visibility: hidden;
+}
+
+.js-tabby .tabs-pane:first-child {
+    display: block;
+    visibility: visible;
+}
+
+button.active:not(:first-child) ~ .tabs-content .tabs-pane:first-child {
     display: none;
     visibility: hidden;
 }
@@ -1258,20 +1179,12 @@ pre {
  *  CSS3 animations, which don't work on display values. */
 .js-houdini .collapse.active {
     max-height: 9999em;
+    padding: 24px; 
     opacity: 1;
 }
 
-/**
- * #TRUMPS
- */
-/*------------------------------------*    #HELPERS
+/* #HELPERS
 \*------------------------------------*/
-.clearfix:after {
-    display: table;
-    clear: both; 
-    content: "";
-}
-
 .u-hide {
     display: none !important;
     visibility: hidden;
@@ -1287,6 +1200,13 @@ pre {
     margin: -1px;
     padding: 0;
     border: 0;
+}
+
+.dropcap {
+    float: left;
+    opacity: 0.6; 
+    font-size: 300%;
+    line-height: 1;
 }
 
 /**
@@ -1357,18 +1277,6 @@ pre {
     display: inline-block;
 }
 
-.u-inline {
-    display: inline;
-}
-
-.u-table {
-    display: table;
-}
-
-.u-table__cell {
-    display: table-cell;
-}
-
 .u-left {
     float: left;
 }
@@ -1400,8 +1308,6 @@ pre {
 /**
  * WP specific.
  */
-.clearfix:before,
-.clearfix:after,
 .clear:before,
 .clear:after,
 .entry-content:before,
@@ -1418,7 +1324,6 @@ pre {
     content: "";
 }
 
-.clearfix:after,
 .clear:after,
 .entry-content:after,
 .comment-content:after,
@@ -1431,19 +1336,22 @@ pre {
 .alignleft {
     display: inline;
     float: left;
-    margin-right: 1.5em;
+    margin-right: 24px;
+    margin-right: 1.5rem;
 }
 
 .alignright {
     display: inline;
     float: right;
-    margin-left: 1.5em;
+    margin-left: 24px;
+    margin-left: 1.5rem;
 }
 
 .aligncenter {
     display: block;
     clear: both;
-    margin: 0 auto;
+    margin-right: auto; 
+    margin-left: auto;
 }
 
 /**
@@ -1619,39 +1527,21 @@ pre {
     color: #46627f;
 }
 
-/*------------------------------------*    #HEADINGS
+/* #HEADINGS
 \*------------------------------------*/
 .u-h1 {
-    font-size: 30px;
-    font-size: 1.875rem;
-}
-@media screen and (min-width: 48em) {
-    .u-h1 {
-        font-size: 36px;
-        font-size: 2.25rem;
-    }
+    font-size: 36px;
+    font-size: 2.25rem;
 }
 
 .u-h2 {
-    font-size: 24px;
-    font-size: 1.5rem;
-}
-@media screen and (min-width: 48em) {
-    .u-h2 {
-        font-size: 30px;
-        font-size: 1.875rem;
-    }
+    font-size: 30px;
+    font-size: 1.875rem;
 }
 
 .u-h3 {
-    font-size: 20px;
-    font-size: 1.25rem;
-}
-@media screen and (min-width: 48em) {
-    .u-h3 {
-        font-size: 24px;
-        font-size: 1.5rem;
-    }
+    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .u-h4 {
@@ -1659,8 +1549,6 @@ pre {
     font-size: 1.25rem;
 }
 
-/*------------------------------------*    #SPACING-RESPONSIVE
-\*------------------------------------*/
 .u-m0 {
     margin: 0;
 }
@@ -1683,119 +1571,113 @@ pre {
 
 .u-m {
     margin: 24px;
+    margin: 1.5rem;
 }
 
 .u-mt {
     margin-top: 24px;
+    margin-top: 1.5rem;
 }
 
 .u-mr {
     margin-right: 24px;
+    margin-right: 1.5rem;
 }
 
 .u-mb {
     margin-bottom: 24px;
+    margin-bottom: 1.5rem;
 }
 
 .u-ml {
     margin-left: 24px;
-}
-
-.u-mh {
-    margin-right: 24px;
-    margin-left: 24px;
-}
-
-.u-mv {
-    margin-top: 24px;
-    margin-bottom: 24px;
+    margin-left: 1.5rem;
 }
 
 .u-m- {
     margin: 12px;
+    margin: 0.75rem;
 }
 
 .u-mt- {
     margin-top: 12px;
+    margin-top: 0.75rem;
 }
 
 .u-mr- {
     margin-right: 12px;
+    margin-right: 0.75rem;
 }
 
 .u-mb- {
     margin-bottom: 12px;
+    margin-bottom: 0.75rem;
 }
 
 .u-ml- {
     margin-left: 12px;
-}
-
-.u-mh- {
-    margin-right: 12px;
-    margin-left: 12px;
-}
-
-.u-mv- {
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin-left: 0.75rem;
 }
 
 .u-m\+ {
     margin: 48px;
+    margin: 3rem;
 }
 
 .u-mt\+ {
     margin-top: 48px;
+    margin-top: 3rem;
 }
 
 .u-mr\+ {
     margin-right: 48px;
+    margin-right: 3rem;
 }
 
 .u-mb\+ {
     margin-bottom: 48px;
+    margin-bottom: 3rem;
 }
 
 .u-ml\+ {
     margin-left: 48px;
-}
-
-.u-mh\+ {
-    margin-right: 48px;
-    margin-left: 48px;
-}
-
-.u-mv\+ {
-    margin-top: 48px;
-    margin-bottom: 48px;
+    margin-left: 3rem;
 }
 
 .u-mhn {
-    margin-right: -24px; 
+    margin-right: -24px;
+    margin-right: -1.5rem; 
     margin-left: -24px;
+    margin-left: -1.5rem;
 }
 
 .u-mhn- {
-    margin-right: -12px; 
+    margin-right: -12px;
+    margin-right: -0.75rem; 
     margin-left: -12px;
+    margin-left: -0.75rem;
 }
 
 .u-mhn\+ {
-    margin-right: -48px; 
+    margin-right: -48px;
+    margin-right: -3rem; 
     margin-left: -48px;
+    margin-left: -3rem;
 }
 
 .u-mtn {
     margin-top: -24px;
+    margin-top: -1.5rem;
 }
 
 .u-mtn- {
     margin-top: -12px;
+    margin-top: -0.75rem;
 }
 
 .u-mtn\+ {
     margin-top: -48px;
+    margin-top: -3rem;
 }
 
 .u-p0 {
@@ -1820,339 +1702,416 @@ pre {
 
 .u-p {
     padding: 24px;
+    padding: 1.5rem;
 }
 
 .u-pt {
     padding-top: 24px;
+    padding-top: 1.5rem;
 }
 
 .u-pr {
     padding-right: 24px;
+    padding-right: 1.5rem;
 }
 
 .u-pb {
     padding-bottom: 24px;
+    padding-bottom: 1.5rem;
 }
 
 .u-pl {
     padding-left: 24px;
-}
-
-.u-ph {
-    padding-right: 24px; 
-    padding-left: 24px;
-}
-
-.u-pv {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-left: 1.5rem;
 }
 
 .u-p- {
     padding: 12px;
+    padding: 0.75rem;
 }
 
 .u-pt- {
     padding-top: 12px;
+    padding-top: 0.75rem;
 }
 
 .u-pr- {
     padding-right: 12px;
+    padding-right: 0.75rem;
 }
 
 .u-pb- {
     padding-bottom: 12px;
+    padding-bottom: 0.75rem;
 }
 
 .u-pl- {
     padding-left: 12px;
-}
-
-.u-ph- {
-    padding-right: 12px; 
-    padding-left: 12px;
-}
-
-.u-pv- {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-left: 0.75rem;
 }
 
 .u-p\+ {
     padding: 48px;
+    padding: 3rem;
 }
 
 .u-pt\+ {
     padding-top: 48px;
+    padding-top: 3rem;
 }
 
 .u-pr\+ {
     padding-right: 48px;
+    padding-right: 3rem;
 }
 
 .u-pb\+ {
     padding-bottom: 48px;
+    padding-bottom: 3rem;
 }
 
 .u-pl\+ {
     padding-left: 48px;
-}
-
-.u-ph\+ {
-    padding-right: 48px; 
-    padding-left: 48px;
-}
-
-.u-pv\+ {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-left: 3rem;
 }
 
 @media screen and (min-width: 48em) {
     .u-m\@md {
         margin: 24px;
+        margin: 1.5rem;
     }
     .u-mt\@md {
         margin-top: 24px;
+        margin-top: 1.5rem;
     }
     .u-mr\@md {
         margin-right: 24px;
+        margin-right: 1.5rem;
     }
     .u-mb\@md {
         margin-bottom: 24px;
+        margin-bottom: 1.5rem;
     }
     .u-ml\@md {
         margin-left: 24px;
-    }
-    .u-mh\@md {
-        margin-right: 24px;
-        margin-left: 24px;
-    }
-    .u-mv\@md {
-        margin-top: 24px;
-        margin-bottom: 24px;
+        margin-left: 1.5rem;
     }
     .u-p\@md {
         padding: 24px;
+        padding: 1.5rem;
     }
     .u-pt\@md {
         padding-top: 24px;
+        padding-top: 1.5rem;
     }
     .u-pr\@md {
         padding-right: 24px;
+        padding-right: 1.5rem;
     }
     .u-pb\@md {
         padding-bottom: 24px;
+        padding-bottom: 1.5rem;
     }
     .u-pl\@md {
         padding-left: 24px;
-    }
-    .u-ph\@md {
-        padding-right: 24px; 
-        padding-left: 24px;
-    }
-    .u-pv\@md {
-        padding-top: 24px;
-        padding-bottom: 24px;
-    }
-    .u-p-\@md {
-        padding: 12px;
-    }
-    .u-pt-\@md {
-        padding-top: 12px;
-    }
-    .u-pr-\@md {
-        padding-right: 12px;
-    }
-    .u-pb-\@md {
-        padding-bottom: 12px;
-    }
-    .u-pl-\@md {
-        padding-left: 12px;
-    }
-    .u-ph-\@md {
-        padding-right: 12px; 
-        padding-left: 12px;
-    }
-    .u-pv-\@md {
-        padding-top: 12px;
-        padding-bottom: 12px;
+        padding-left: 1.5rem;
     }
     .u-p\+\@md {
         padding: 48px;
+        padding: 3rem;
     }
     .u-pt\+\@md {
         padding-top: 48px;
+        padding-top: 3rem;
     }
     .u-pr\+\@md {
         padding-right: 48px;
+        padding-right: 3rem;
     }
     .u-pb\+\@md {
         padding-bottom: 48px;
+        padding-bottom: 3rem;
     }
     .u-pl\+\@md {
         padding-left: 48px;
-    }
-    .u-ph\+\@md {
-        padding-right: 48px; 
-        padding-left: 48px;
-    }
-    .u-pv\+\@md {
-        padding-top: 48px;
-        padding-bottom: 48px;
-    }
-    .u-m-\@md {
-        margin: 12px;
-    }
-    .u-mt-\@md {
-        margin-top: 12px;
-    }
-    .u-mr-\@md {
-        margin-right: 12px;
-    }
-    .u-mb-\@md {
-        margin-bottom: 12px;
-    }
-    .u-ml-\@md {
-        margin-left: 12px;
-    }
-    .u-mh-\@md {
-        margin-right: 12px;
-        margin-left: 12px;
-    }
-    .u-mv-\@md {
-        margin-top: 12px;
-        margin-bottom: 12px;
+        padding-left: 3rem;
     }
     .u-m\+\@md {
         margin: 48px;
+        margin: 3rem;
     }
     .u-mt\+\@md {
         margin-top: 48px;
+        margin-top: 3rem;
     }
     .u-mr\+\@md {
         margin-right: 48px;
+        margin-right: 3rem;
     }
     .u-mb\+\@md {
         margin-bottom: 48px;
+        margin-bottom: 3rem;
     }
     .u-ml\+\@md {
         margin-left: 48px;
-    }
-    .u-mh\+\@md {
-        margin-right: 48px;
-        margin-left: 48px;
-    }
-    .u-mv\+\@md {
-        margin-top: 48px;
-        margin-bottom: 48px;
+        margin-left: 3rem;
     }
 }
 
-/*------------------------------------*    #WIDTHS
+/* #WIDTHS
 \*------------------------------------*/
 .u-1\/1 {
     width: 100%;
+
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
 }
 
 .u-1\/2 {
     width: 50%;
+
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
 }
 
 .u-1\/3 {
     width: 33.33333%;
+
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 33.33333%;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%;
 }
 
 .u-2\/3 {
     width: 66.66667%;
+
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 66.66667%;
+    -ms-flex: 0 0 66.66667%;
+    flex: 0 0 66.66667%;
 }
 
 .u-1\/4 {
     width: 25%;
+
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 25%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
 }
 
 .u-3\/4 {
     width: 75%;
+
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 75%;
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
 }
 
 .u-1\/5 {
     width: 20%;
+
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 20%;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
 }
 
 .u-2\/5 {
     width: 40%;
+
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 40%;
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
 }
 
 .u-3\/5 {
     width: 60%;
+
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 60%;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
 }
 
 .u-4\/5 {
     width: 80%;
+
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 80%;
+    -ms-flex: 0 0 80%;
+    flex: 0 0 80%;
 }
 
 @media screen and (min-width: 48em) {
     .u-1\/1\@md {
         width: 100%;
+
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
     }
     .u-1\/2\@md {
         width: 50%;
+
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
     }
     .u-1\/3\@md {
         width: 33.33333%;
+
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 33.33333%;
+        -ms-flex: 0 0 33.33333%;
+        flex: 0 0 33.33333%;
     }
     .u-2\/3\@md {
         width: 66.66667%;
+
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 66.66667%;
+        -ms-flex: 0 0 66.66667%;
+        flex: 0 0 66.66667%;
     }
     .u-1\/4\@md {
         width: 25%;
+
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 25%;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
     }
     .u-3\/4\@md {
         width: 75%;
+
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 75%;
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
     }
     .u-1\/5\@md {
         width: 20%;
+
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 20%;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
     }
     .u-2\/5\@md {
         width: 40%;
+
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 40%;
+        -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
     }
     .u-3\/5\@md {
         width: 60%;
+
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 60%;
+        -ms-flex: 0 0 60%;
+        flex: 0 0 60%;
     }
     .u-4\/5\@md {
         width: 80%;
+
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 80%;
+        -ms-flex: 0 0 80%;
+        flex: 0 0 80%;
     }
 }
 
 @media screen and (min-width: 64em) {
     .u-1\/1\@lg {
         width: 100%;
+
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
     }
     .u-1\/2\@lg {
         width: 50%;
+
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
     }
     .u-1\/3\@lg {
         width: 33.33333%;
+
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 33.33333%;
+        -ms-flex: 0 0 33.33333%;
+        flex: 0 0 33.33333%;
     }
     .u-2\/3\@lg {
         width: 66.66667%;
+
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 66.66667%;
+        -ms-flex: 0 0 66.66667%;
+        flex: 0 0 66.66667%;
     }
     .u-1\/4\@lg {
         width: 25%;
+
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 25%;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
     }
     .u-3\/4\@lg {
         width: 75%;
+
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 75%;
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
     }
     .u-1\/5\@lg {
         width: 20%;
+
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 20%;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
     }
     .u-2\/5\@lg {
         width: 40%;
+
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 40%;
+        -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
     }
     .u-3\/5\@lg {
         width: 60%;
+
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 60%;
+        -ms-flex: 0 0 60%;
+        flex: 0 0 60%;
     }
     .u-4\/5\@lg {
         width: 80%;
+
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 80%;
+        -ms-flex: 0 0 80%;
+        flex: 0 0 80%;
     }
 }

@@ -1,12 +1,10 @@
-/*------------------------------------*\
-    #BREADCRUMBS
+/* #BREADCRUMBS
 \*------------------------------------*/
 
 
 
 .breadcrumbs {
     text-transform: uppercase;
-    letter-spacing: .2em;
 
   li {
 
@@ -16,7 +14,6 @@
     }
   }
 }
-
 
 .trail-end span {
     display: none;

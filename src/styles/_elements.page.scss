@@ -1,5 +1,4 @@
-/*------------------------------------*\
-    #PAGE
+/* #PAGE
 \*------------------------------------*/
 
 :root {
@@ -11,9 +10,11 @@
     font: 16px/1.5 sans-serif;
     min-height: 100%;
     background-color: #ffffff;
+
+    @include sm {
+        font: 14px/1.7 sans-serif;
+    }
 }
-
-
 
 body {
     background-color: #fff;
@@ -46,19 +47,12 @@ body {
     vertical-align: inherit;
 }
 
-p {
-    letter-spacing: .2px;
-}
-
 span {
     vertical-align: bottom;
 }
 
 /**
- * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11
- * and Firefox.
- * Correct `block` display not defined for `main` in IE 11.
+ * Correct `block` display not defined for any HTML5 element in IE.
  */
 article,
 aside,

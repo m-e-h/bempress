@@ -1,5 +1,4 @@
-// /*------------------------------------*\
-//     #MIXINS
+// /* #MIXINS
 // \*------------------------------------*/
 
 // Mixin to create a declaration whose value is a rem unit. Also provide pixel fallback.
@@ -7,9 +6,10 @@
 // .simple-ubempress {
 //   @include rem(padding, 10px);
 // }
+
 @mixin rem($property, $value) {
     #{$property}: $value;
-    #{$property}: rem($value);
+    #{$property}: $value / $font-size * 1rem;
 }
 
 

@@ -1,26 +1,16 @@
-/*------------------------------------*\
-    #HEADINGS
+/* #HEADINGS
 \*------------------------------------*/
 
 .u-h1 {
-    @include font-size($heading-size-2, false);
-    @include md {
-        @include font-size($heading-size-1, false);
-    }
+    @include font-size($heading-size-1, false);
 }
 
 .u-h2 {
-    @include font-size($heading-size-3, false);
-    @include md {
-        @include font-size($heading-size-2, false);
-    }
+    @include font-size($heading-size-2, false);
 }
 
 .u-h3 {
-    @include font-size($heading-size-4, false);
-    @include md {
-        @include font-size($heading-size-3, false);
-    }
+    @include font-size($heading-size-3, false);
 }
 
 .u-h4 {

@@ -1,5 +1,4 @@
-/*------------------------------------*\
- #FORMS
+/* #FORMS
 \*------------------------------------*/
 
 input,
@@ -12,8 +11,15 @@ textarea {
     font-weight: inherit;
     display: inline-block;
     background-color: $color-grey-ui;
-    min-height: $spacing-large;
-    padding: 0 $spacing;
+    @include rem(min-height, $spacing-large);
+    @include rem(padding-left, $spacing);
+    @include rem(padding-right, $spacing);
+}
+
+textarea {
+    resize: vertical;
+    @include rem(padding, $spacing);
+    overflow: auto;
 }
 
 input[type="text"], input[type="email"], input[type="url"],
@@ -46,36 +52,15 @@ input[type=search]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
-progress {
-    display: inline-block;
-}
-
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
     outline: .1rem solid thin $color-text;
 }
 
-input[disabled],
-select[disabled],
-textarea[disabled] {
-    background-color: $color-grey-light;
-    color: $color-text-light;
-    cursor: not-allowed;
-}
-
-input[readonly],
-select[readonly],
-textarea[readonly] {
-    background-color: $color-grey-light;
-    border-color: $color-grey-ui;
-    color: $color-text-light;
-}
-
 select {
     padding: $spacing-tiny $spacing;
     background-color: #fff;
-    border: 1px solid $color-grey-ui;
     text-transform: none;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -97,45 +82,6 @@ label {
     line-height: 2;
 }
 
-fieldset {
-    padding: $spacing-small 0;
-}
-
-legend {
-    border-bottom: .1rem solid $color-grey-ui;
-    color: $color-text;
-    display: block;
-    margin-bottom: $spacing-small;
-    padding: $spacing-small 0;
-    width: 100%;
-}
-
-textarea {
-    resize: vertical;
-    padding: $spacing;
-    overflow: auto;
-}
-
 [unselectable] {
     user-select: none;
-}
-
-.search-form,
-.post-password-form {
-    display: block;
-}
-
-.search-form input[type=search],
-.post-password-form input[type="password"] {
-    margin: 0;
-    width: 100%;
-}
-
-.search-form button[type=submit],
-.post-password-form input[type="submit"] {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-    position: absolute;
-    right: 0;
-    height: $spacing-large;
 }
