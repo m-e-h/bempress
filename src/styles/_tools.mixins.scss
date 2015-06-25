@@ -1,6 +1,9 @@
 // /* #MIXINS
 // \*------------------------------------*/
 
+$supports-rem:        false !default;
+
+
 // Mixin to create a declaration whose value is a rem unit. Also provide pixel fallback.
 //
 // .simple-ubempress {
@@ -8,7 +11,9 @@
 // }
 
 @mixin rem($property, $value) {
-    #{$property}: $value;
+    @if not $supports-rem {
+        #{$property}: $value;
+    }
     #{$property}: $value / $font-size * 1rem;
 }
 
@@ -33,7 +38,9 @@
 //     @include font-size(10px);
 // }
 @mixin font-size($x-font-size, $x-line-height: auto) {
-    font-size: $x-font-size;
+    @if not $supports-rem {
+        font-size: $x-font-size;
+    }
     font-size: ($x-font-size / $font-size) * 1rem;
 
     @if $x-line-height == auto {

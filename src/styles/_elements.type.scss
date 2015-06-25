@@ -51,7 +51,7 @@ p {
 dl, blockquote, address,
 table, fieldset, figure,
 pre {
-    margin-bottom: $spacing;
+    @include rem(margin-bottom, $spacing);
 }
 
 

@@ -10,110 +10,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: bempress-rooted
 GitHub Theme URI: https://github.com/m-e-h/bempress
 */
-/* #TYPOGRAPHY
-\*------------------------------------*/
-h1 {
-    font-size: 36px;
-    font-size: 2.25rem;
-}
-
-h2 {
-    font-size: 30px;
-    font-size: 1.875rem;
-}
-
-h3 {
-    font-size: 24px;
-    font-size: 1.5rem;
-}
-
-h4 {
-    font-size: 20px;
-    font-size: 1.25rem;
-}
-
-h5 {
-    font-size: 16px;
-    font-size: 1rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-top: 0.75em;
-    margin-bottom: 0.5em; 
-    opacity: 0.8;
-    font-family: Georgia, Times, "Times New Roman", serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1.25;
-}
-
-p {
-    margin-bottom: 16px;
-    margin-bottom: 1rem;
-}
-
-dl,
-blockquote,
-address,
-table,
-fieldset,
-figure,
-pre {
-    margin-bottom: 24px;
-}
-
-abbr[title] {
-    border-bottom: 1px dotted;
-}
-
-b,
-strong {
-    font-weight: bold;
-}
-
-dfn {
-    font-style: italic;
-}
-
-sub,
-sup {
-    font-size: 75%;
-    line-height: 0;
-    vertical-align: baseline;
-}
-
-sup {
-    top: -0.5em;
-}
-
-sub {
-    bottom: -0.25em;
-}
-
-small {
-    color: #777; 
-    font-size: 75%;
-}
-
-big {
-    font-size: 125%;
-}
-
-p:empty {
-    margin: 0;
-    padding: 0;
-    line-height: 0;
-}
-
-p:last-child {
-    margin-bottom: 0;
-}
-
 /* #PAGE
 \*------------------------------------*/
 :root {
@@ -238,6 +134,111 @@ template {
         clip: rect(0 0 0 0) !important;
         position: absolute !important;
     }
+}
+
+/* #TYPOGRAPHY
+\*------------------------------------*/
+h1 {
+    font-size: 36px;
+    font-size: 2.25rem;
+}
+
+h2 {
+    font-size: 30px;
+    font-size: 1.875rem;
+}
+
+h3 {
+    font-size: 24px;
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 20px;
+    font-size: 1.25rem;
+}
+
+h5 {
+    font-size: 16px;
+    font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0.75em;
+    margin-bottom: 0.5em; 
+    opacity: 0.8;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.25;
+}
+
+p {
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+}
+
+dl,
+blockquote,
+address,
+table,
+fieldset,
+figure,
+pre {
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+dfn {
+    font-style: italic;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+small {
+    color: #777; 
+    font-size: 75%;
+}
+
+big {
+    font-size: 125%;
+}
+
+p:empty {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+p:last-child {
+    margin-bottom: 0;
 }
 
 /* #LINKS
