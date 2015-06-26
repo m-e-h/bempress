@@ -1,35 +1,4 @@
-// /**
-//  * #SETTINGS
-//  */
-@import "settings.colors";
-@import "settings.responsive";
-@import "settings.icon-font";
-@import "settings.defaults";
+$supports-rem: true;
 
 
-
-
-
-// /**
-//  * #TOOLS
-//  */
-@import "tools.functions";
-@import "tools.mixins";
-@import "tools.aliases";
-
-
-
-
-// /**
-//  * #ELEMENTS
-//  */
-@import "elements.page";
-@import "elements.type";
-@import "elements.links";
-@import "elements.lists";
-@import "elements.images";
-@import "elements.quotes";
-@import "elements.tables";
-@import "elements.forms";
-@import "elements.nav";
-
+@import "style";
