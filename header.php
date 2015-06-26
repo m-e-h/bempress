@@ -2,6 +2,7 @@
 <html class="no-js" <?php language_attributes(); ?>>
 <head <?php hybrid_attr('head'); ?>>
 <meta http-equiv="x-ua-compatible" content="ie=edge">
+<style><?php get_template_part('assets/css/critical-css'); ?></style>
 <?php wp_head(); ?>
 </head>
 <body <?php hybrid_attr('body'); ?>>
