@@ -49,7 +49,7 @@ function setup() {
    );
 
   // Tell the TinyMCE editor to use a custom stylesheet
-    add_editor_style(trailingslashit(get_template_directory_uri()) . 'css/editor-style.css');
+    add_editor_style(trailingslashit(get_template_directory_uri()) . 'assets/css/editor-style.css');
 }
 
 
@@ -102,27 +102,27 @@ function layouts() {
         'label'            => _x('Single Column', 'theme layout', 'bempress'),
         'is_global_layout' => true,
         'is_post_layout'   => true,
-        'image'            => '%s/images/single-column.svg',
+        'image'            => '%s/assets/images/single-column.svg',
     ]);
 
     hybrid_register_layout('single-column--wide', [
         'label'            => _x('Single Column Wide', 'theme layout', 'bempress'),
         'is_global_layout' => true,
         'is_post_layout'   => true,
-        'image'            => '%s/images/single-column-wide.svg',
+        'image'            => '%s/assets/images/single-column-wide.svg',
     ]);
 
     hybrid_register_layout('sidebar-right', [
         'label'            => _x('Sidebar Right', 'theme layout', 'bempress'),
         'is_global_layout' => true,
         'is_post_layout'   => true,
-        'image'            => '%s/images/sidebar-right.svg',
+        'image'            => '%s/assets/images/sidebar-right.svg',
     ]);
 
     hybrid_register_layout('sidebar-left', [
         'label'            => _x('Sidebar Left', 'theme layout', 'bempress'),
         'is_global_layout' => true,
         'is_post_layout'   => true,
-        'image'            => '%s/images/sidebar-left.svg',
+        'image'            => '%s/assets/images/sidebar-left.svg',
     ]);
 }
