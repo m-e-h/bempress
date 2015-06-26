@@ -79,8 +79,9 @@ gulp.task('critical', function () {
     .pipe(changed('styles', {extension: '.scss'}))
     .pipe(sass())
     .on('error', swallowError)
-    .pipe(autoprefixer({ browsers: ['last 2 version'] }))
+    .pipe(autoprefixer({ browsers: ['last 1 version'] }))
     .pipe(csscomb())
+    .pipe(gulp.dest('assets/css'))
     .pipe(rename({ suffix: '-css', extname: '.php' }))
     .pipe(minifyCSS())
     .pipe(gulp.dest('assets/css'));

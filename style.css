@@ -139,27 +139,22 @@ template {
 /* #TYPOGRAPHY
 \*------------------------------------*/
 h1 {
-    font-size: 36px;
     font-size: 2.25rem;
 }
 
 h2 {
-    font-size: 30px;
     font-size: 1.875rem;
 }
 
 h3 {
-    font-size: 24px;
     font-size: 1.5rem;
 }
 
 h4 {
-    font-size: 20px;
     font-size: 1.25rem;
 }
 
 h5 {
-    font-size: 16px;
     font-size: 1rem;
 }
 
@@ -172,14 +167,12 @@ h6 {
     margin-top: 0.75em;
     margin-bottom: 0.5em; 
     opacity: 0.8;
-    font-family: Georgia, Times, "Times New Roman", serif;
     font-weight: 400;
     font-style: normal;
     line-height: 1.25;
 }
 
 p {
-    margin-bottom: 16px;
     margin-bottom: 1rem;
 }
 
@@ -190,7 +183,6 @@ table,
 fieldset,
 figure,
 pre {
-    margin-bottom: 24px;
     margin-bottom: 1.5rem;
 }
 
@@ -325,11 +317,9 @@ svg {
 blockquote {
     margin-bottom: 24px;
     padding: 12px 24px;
-    border-left-width: 6px;
     border-left-width: 0.375rem;
     border-left-color: currentColor;
     font-family: Georgia, Times, "Times New Roman", serif;
-    font-size: 18px;
     font-size: 1.125rem;
     font-weight: 500;
     font-style: italic;
@@ -348,9 +338,7 @@ blockquote blockquote {
 
 blockquote cite {
     display: block;
-    margin-top: 12px;
     margin-top: 0.75rem; 
-    padding-top: 12px;
     padding-top: 0.75rem;
     color: #34495e;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -360,7 +348,6 @@ blockquote cite {
 }
 
 blockquote cite::before {
-    padding-right: 12px;
     padding-right: 0.75rem; 
     content: "\2014";
 }
@@ -418,7 +405,6 @@ tfoot tr {
 
 tfoot td {
     padding: 24px 6px; 
-    font-size: 14px;
     font-size: 0.875rem;
     font-style: italic;
     line-height: 1.71429;
@@ -430,11 +416,8 @@ input,
 select,
 textarea {
     display: inline-block;
-    min-height: 48px;
     min-height: 3rem;
-    padding-right: 24px;
     padding-right: 1.5rem; 
-    padding-left: 24px;
     padding-left: 1.5rem;
     border: 1px solid #e3e8ec;
     border-radius: 2px;
@@ -446,7 +429,6 @@ textarea {
 
 textarea {
     overflow: auto; 
-    padding: 24px;
     padding: 1.5rem;
     resize: vertical;
 }
@@ -882,13 +864,11 @@ nav ul li {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    font-size: 14px;
     font-size: 0.875rem;
     text-align: center;
 }
 
 .media__title {
-    font-size: 16px;
     font-size: 1rem;
     line-height: 1.6;
 }
@@ -1010,7 +990,6 @@ nav li > a:focus {
 .btn--small,
 nav li > a {
     padding: 6px 8px;
-    font-size: 14px;
     font-size: 0.875rem;
     line-height: 1.71429;
     letter-spacing: 0.02em;
@@ -1070,7 +1049,6 @@ pre {
 .logged-in-as,
 .form-allowed-tags {
     margin-bottom: 24px; 
-    font-size: 15px;
     font-size: 0.9375rem;
     line-height: 1.6;
 }
@@ -1092,7 +1070,6 @@ pre {
 /* #WIDGETS
 \*------------------------------------*/
 .sidebar-horizontal > .widget {
-    min-width: 300px;
     min-width: 18.75rem; 
 
     -webkit-box-flex: 1;
@@ -1337,14 +1314,12 @@ button.active:not(:first-child) ~ .tabs-content .tabs-pane:first-child {
 .alignleft {
     display: inline;
     float: left;
-    margin-right: 24px;
     margin-right: 1.5rem;
 }
 
 .alignright {
     display: inline;
     float: right;
-    margin-left: 24px;
     margin-left: 1.5rem;
 }
 
@@ -1531,22 +1506,18 @@ button.active:not(:first-child) ~ .tabs-content .tabs-pane:first-child {
 /* #HEADINGS
 \*------------------------------------*/
 .u-h1 {
-    font-size: 36px;
     font-size: 2.25rem;
 }
 
 .u-h2 {
-    font-size: 30px;
     font-size: 1.875rem;
 }
 
 .u-h3 {
-    font-size: 24px;
     font-size: 1.5rem;
 }
 
 .u-h4 {
-    font-size: 20px;
     font-size: 1.25rem;
 }
 
@@ -1571,113 +1542,89 @@ button.active:not(:first-child) ~ .tabs-content .tabs-pane:first-child {
 }
 
 .u-m {
-    margin: 24px;
     margin: 1.5rem;
 }
 
 .u-mt {
-    margin-top: 24px;
     margin-top: 1.5rem;
 }
 
 .u-mr {
-    margin-right: 24px;
     margin-right: 1.5rem;
 }
 
 .u-mb {
-    margin-bottom: 24px;
     margin-bottom: 1.5rem;
 }
 
 .u-ml {
-    margin-left: 24px;
     margin-left: 1.5rem;
 }
 
 .u-m- {
-    margin: 12px;
     margin: 0.75rem;
 }
 
 .u-mt- {
-    margin-top: 12px;
     margin-top: 0.75rem;
 }
 
 .u-mr- {
-    margin-right: 12px;
     margin-right: 0.75rem;
 }
 
 .u-mb- {
-    margin-bottom: 12px;
     margin-bottom: 0.75rem;
 }
 
 .u-ml- {
-    margin-left: 12px;
     margin-left: 0.75rem;
 }
 
 .u-m\+ {
-    margin: 48px;
     margin: 3rem;
 }
 
 .u-mt\+ {
-    margin-top: 48px;
     margin-top: 3rem;
 }
 
 .u-mr\+ {
-    margin-right: 48px;
     margin-right: 3rem;
 }
 
 .u-mb\+ {
-    margin-bottom: 48px;
     margin-bottom: 3rem;
 }
 
 .u-ml\+ {
-    margin-left: 48px;
     margin-left: 3rem;
 }
 
 .u-mhn {
-    margin-right: -24px;
     margin-right: -1.5rem; 
-    margin-left: -24px;
     margin-left: -1.5rem;
 }
 
 .u-mhn- {
-    margin-right: -12px;
     margin-right: -0.75rem; 
-    margin-left: -12px;
     margin-left: -0.75rem;
 }
 
 .u-mhn\+ {
-    margin-right: -48px;
     margin-right: -3rem; 
-    margin-left: -48px;
     margin-left: -3rem;
 }
 
 .u-mtn {
-    margin-top: -24px;
     margin-top: -1.5rem;
 }
 
 .u-mtn- {
-    margin-top: -12px;
     margin-top: -0.75rem;
 }
 
 .u-mtn\+ {
-    margin-top: -48px;
     margin-top: -3rem;
 }
 
@@ -1702,159 +1649,124 @@ button.active:not(:first-child) ~ .tabs-content .tabs-pane:first-child {
 }
 
 .u-p {
-    padding: 24px;
     padding: 1.5rem;
 }
 
 .u-pt {
-    padding-top: 24px;
     padding-top: 1.5rem;
 }
 
 .u-pr {
-    padding-right: 24px;
     padding-right: 1.5rem;
 }
 
 .u-pb {
-    padding-bottom: 24px;
     padding-bottom: 1.5rem;
 }
 
 .u-pl {
-    padding-left: 24px;
     padding-left: 1.5rem;
 }
 
 .u-p- {
-    padding: 12px;
     padding: 0.75rem;
 }
 
 .u-pt- {
-    padding-top: 12px;
     padding-top: 0.75rem;
 }
 
 .u-pr- {
-    padding-right: 12px;
     padding-right: 0.75rem;
 }
 
 .u-pb- {
-    padding-bottom: 12px;
     padding-bottom: 0.75rem;
 }
 
 .u-pl- {
-    padding-left: 12px;
     padding-left: 0.75rem;
 }
 
 .u-p\+ {
-    padding: 48px;
     padding: 3rem;
 }
 
 .u-pt\+ {
-    padding-top: 48px;
     padding-top: 3rem;
 }
 
 .u-pr\+ {
-    padding-right: 48px;
     padding-right: 3rem;
 }
 
 .u-pb\+ {
-    padding-bottom: 48px;
     padding-bottom: 3rem;
 }
 
 .u-pl\+ {
-    padding-left: 48px;
     padding-left: 3rem;
 }
 
 @media screen and (min-width: 48em) {
     .u-m\@md {
-        margin: 24px;
         margin: 1.5rem;
     }
     .u-mt\@md {
-        margin-top: 24px;
         margin-top: 1.5rem;
     }
     .u-mr\@md {
-        margin-right: 24px;
         margin-right: 1.5rem;
     }
     .u-mb\@md {
-        margin-bottom: 24px;
         margin-bottom: 1.5rem;
     }
     .u-ml\@md {
-        margin-left: 24px;
         margin-left: 1.5rem;
     }
     .u-p\@md {
-        padding: 24px;
         padding: 1.5rem;
     }
     .u-pt\@md {
-        padding-top: 24px;
         padding-top: 1.5rem;
     }
     .u-pr\@md {
-        padding-right: 24px;
         padding-right: 1.5rem;
     }
     .u-pb\@md {
-        padding-bottom: 24px;
         padding-bottom: 1.5rem;
     }
     .u-pl\@md {
-        padding-left: 24px;
         padding-left: 1.5rem;
     }
     .u-p\+\@md {
-        padding: 48px;
         padding: 3rem;
     }
     .u-pt\+\@md {
-        padding-top: 48px;
         padding-top: 3rem;
     }
     .u-pr\+\@md {
-        padding-right: 48px;
         padding-right: 3rem;
     }
     .u-pb\+\@md {
-        padding-bottom: 48px;
         padding-bottom: 3rem;
     }
     .u-pl\+\@md {
-        padding-left: 48px;
         padding-left: 3rem;
     }
     .u-m\+\@md {
-        margin: 48px;
         margin: 3rem;
     }
     .u-mt\+\@md {
-        margin-top: 48px;
         margin-top: 3rem;
     }
     .u-mr\+\@md {
-        margin-right: 48px;
         margin-right: 3rem;
     }
     .u-mb\+\@md {
-        margin-bottom: 48px;
         margin-bottom: 3rem;
     }
     .u-ml\+\@md {
-        margin-left: 48px;
         margin-left: 3rem;
     }
 }
