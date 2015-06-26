@@ -31,7 +31,7 @@ var gulp = require('gulp'),
 
 // Optimize Images
 gulp.task('images', function () {
-  return gulp.src('src/images/**/*')
+  return gulp.src('assets/src/images/**/*')
     .pipe(imagemin({
       progressive: true,
       interlaced: true,
@@ -43,7 +43,7 @@ gulp.task('images', function () {
       prefix: 'svg-',
       extname: '.php'
     })))
-    .pipe(gulp.dest('images'));
+    .pipe(gulp.dest('assets/images'));
 });
 
 // Copy hybrid-core to extras
@@ -57,7 +57,7 @@ gulp.task('hybrid', function () {
 // Compile and Automatically Prefix Stylesheets
 gulp.task('styles', function () {
   return gulp.src([
-    'src/styles/style.scss'
+    'assets/src/styles/style.scss'
   ])
     .pipe(changed('styles', {extension: '.scss'}))
     .pipe(sass())
@@ -74,29 +74,29 @@ gulp.task('styles', function () {
 // Compile critical.css https://goo.gl/SoxZIL
 gulp.task('critical', function () {
   return gulp.src([
-    'src/styles/critical.scss'
+    'assets/src/styles/critical.scss'
   ])
     .pipe(changed('styles', {extension: '.scss'}))
     .pipe(sass())
     .on('error', swallowError)
-    .pipe(autoprefixer(browsers))
+    .pipe(autoprefixer({ browsers: ['last 2 version'] }))
     .pipe(csscomb())
     .pipe(rename({ suffix: '-css', extname: '.php' }))
     .pipe(minifyCSS())
-    .pipe(gulp.dest('css'));
+    .pipe(gulp.dest('assets/css'));
 });
 
 // Compile Editor Stylesheets
 gulp.task('wpeditor', function () {
   return gulp.src([
-    'src/styles/editor-style.scss'
+    'assets/src/styles/editor-style.scss'
   ])
     .pipe(changed('styles', {extension: '.scss'}))
     .pipe(sass())
     .on('error', swallowError)
     .pipe(autoprefixer(browsers))
     .pipe(minifyCSS())
-    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('assets/css'))
 });
 
 // Allows gulp to not break after a sass error.
@@ -128,9 +128,9 @@ gulp.task('serve', ['styles'], function () {
     //proxy: "127.0.0.1:8080/wordpress/"
   });
 
-  gulp.watch(['src/styles/**/*.{scss,css}'], ['styles', reload]);
-  gulp.watch(['src/scripts/**/*.js'], reload);
-  gulp.watch(['src/images/**/*'], reload);
+  gulp.watch(['assets/src/styles/**/*.{scss,css}'], ['styles', reload]);
+  gulp.watch(['assets/src/scripts/**/*.js'], reload);
+  gulp.watch(['assets/src/images/**/*'], reload);
   gulp.watch(['*/**/*.php'], reload);
 });
 
