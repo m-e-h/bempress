@@ -5,7 +5,6 @@
 var gulp = require('gulp'),
     del = require('del'),
     imagemin = require('gulp-imagemin'),
-    sass = require('gulp-sass'),
     gulpif = require('gulp-if'),
     minifyCSS = require('gulp-minify-css'),
     rename = require('gulp-rename'),
@@ -14,6 +13,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     csscomb = require('gulp-csscomb'),
     runSequence = require('run-sequence'),
+    cssnext = require("gulp-cssnext"),
     browserSync = require('browser-sync').create('meh'),
     reload = browserSync.reload,
     autoprefixer = require('gulp-autoprefixer'),
@@ -57,10 +57,10 @@ gulp.task('hybrid', function () {
 // Compile and Automatically Prefix Stylesheets
 gulp.task('styles', function () {
   return gulp.src([
-    'assets/src/styles/style.scss'
+    'assets/src/styles/style.css'
   ])
-    .pipe(changed('styles', {extension: '.scss'}))
-    .pipe(sass())
+    .pipe(changed('styles', {extension: '.css'}))
+    .pipe(cssnext())
     .on('error', swallowError)
     .pipe(autoprefixer(browsers))
     .pipe(csscomb())
@@ -74,10 +74,10 @@ gulp.task('styles', function () {
 // Compile critical.css https://goo.gl/SoxZIL
 gulp.task('critical', function () {
   return gulp.src([
-    'assets/src/styles/critical.scss'
+    'assets/src/styles/critical.css'
   ])
-    .pipe(changed('styles', {extension: '.scss'}))
-    .pipe(sass())
+    .pipe(changed('styles', {extension: '.css'}))
+    .pipe(cssnext())
     .on('error', swallowError)
     .pipe(autoprefixer({ browsers: ['last 1 version'] }))
     .pipe(csscomb())
@@ -90,17 +90,17 @@ gulp.task('critical', function () {
 // Compile Editor Stylesheets
 gulp.task('wpeditor', function () {
   return gulp.src([
-    'assets/src/styles/editor-style.scss'
+    'assets/src/styles/editor-style.css'
   ])
-    .pipe(changed('styles', {extension: '.scss'}))
-    .pipe(sass())
+    .pipe(changed('styles', {extension: '.css'}))
+    .pipe(cssnext())
     .on('error', swallowError)
     .pipe(autoprefixer(browsers))
     .pipe(minifyCSS())
     .pipe(gulp.dest('assets/css'))
 });
 
-// Allows gulp to not break after a sass error.
+// Allows gulp to not break after a cssnext error.
 // Spits error out to console
 function swallowError(error) {
   console.log(error.toString());
@@ -122,14 +122,14 @@ gulp.task('scripts', function() {
 // Build and serve the output
 gulp.task('serve', ['styles'], function () {
   browserSync.init({
-    proxy: "local.wordpress.dev"
+    //proxy: "local.wordpress.dev"
     //proxy: "local.wordpress-trunk.dev"
-    //proxy: "june.dev"
+    proxy: "june.dev"
     //proxy: "stmark.dev"
     //proxy: "127.0.0.1:8080/wordpress/"
   });
 
-  gulp.watch(['assets/src/styles/**/*.{scss,css}'], ['styles', reload]);
+  gulp.watch(['assets/src/styles/**/*.{css}'], ['styles', reload]);
   gulp.watch(['assets/src/scripts/**/*.js'], reload);
   gulp.watch(['assets/src/images/**/*'], reload);
   gulp.watch(['*/**/*.php'], reload);

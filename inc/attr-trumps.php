@@ -13,7 +13,7 @@ class AttrTrumps {
     public $body                    = '';
     public $site_container          = '';
     public $container               = '';
-    public $container_header        = 'flex flex--row@md flex--w flex--j-sb flex--ai-c';
+    public $container_header        = 'py3 sm-flex flex-wrap flex-center';
     public $container_wide          = 'container--wide';
     public $row                     = '';
     public $row_layout              = 'grid';
@@ -22,9 +22,9 @@ class AttrTrumps {
 
     // SITE HEADER
     public $header                  = '';
-    public $branding                = '';
-    public $site_title              = 'u-h2 u-m0';
-    public $site_description        = 'u-h4 u-m0';
+    public $branding                = 'flex-auto mxn1';
+    public $site_title              = 'u-h2 m0';
+    public $site_description        = 'u-h4 m0';
 
     // CONTENT
     public $content                 = 'grid__item u-mb';
@@ -51,7 +51,7 @@ class AttrTrumps {
     public $entry_terms             = '';
 
     // NAVIGATION
-    public $menu_primary            = 't-bg__grey';
+    public $menu_primary            = 'mxn1';
 
     // SIDEBAR
     public $sidebar_primary        = 'grid__item t-bg--white u-p u-mb';
