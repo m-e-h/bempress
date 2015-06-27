@@ -15,7 +15,7 @@
 
     <article <?php hybrid_attr('post'); ?>>
 
-        <header class="entry-header">
+        <header <?php hybrid_attr('entry-header'); ?>>
             <h4 <?php hybrid_attr('entry-title'); ?>>
                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h4>

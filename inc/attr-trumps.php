@@ -28,7 +28,7 @@ class AttrTrumps {
 
     // CONTENT
     public $content                 = 'grid__item u-mb';
-    public $content_with_sidebar    = 'u-2/3@md u-pr@md';
+    public $content_with_sidebar    = 'grid__item u-mb u-2/3@md u-pr@md';
 
     // ENTRY
     public $post                    = '';
@@ -39,8 +39,10 @@ class AttrTrumps {
     public $archive_title           = 'u-h1';
     public $archive_description     = '';
 
+    public $entry_header            = 'container';
     public $entry_content           = 'u-p container';
-    public $entry_summary           = '';
+    public $entry_summary           = 'u-p container';
+    public $entry_footer            = 'container';
 
     public $nav_single              = '';
     public $nav_archive             = '';
@@ -92,11 +94,13 @@ class AttrTrumps {
         // ENTRY
         add_filter('hybrid_attr_post',                  [$this,'post']);
         add_filter('hybrid_attr_archive-header',        [$this,'page_header']);
-        add_filter('hybrid_attr_entry-title',           [$this,'entry_title']);
         add_filter('hybrid_attr_archive-title',         [$this,'archive_title']);
         add_filter('hybrid_attr_archive-description',   [$this,'archive_description']);
+        add_filter('hybrid_attr_entry-header',          [$this,'entry_header']);
+        add_filter('hybrid_attr_entry-title',           [$this,'entry_title']);
         add_filter('hybrid_attr_entry-content',         [$this,'entry_content']);
         add_filter('hybrid_attr_entry-summary',         [$this,'entry_summary']);
+        add_filter('hybrid_attr_entry-footer',          [$this,'entry_footer']);
 
         // ENTRY META
         add_filter('hybrid_attr_entry-author',          [$this,'entry_author']);
@@ -216,8 +220,6 @@ class AttrTrumps {
         $attr['class']      .= $this->content_with_sidebar;
         endif;
 
-        $attr['class']      .= ' ';
-        $attr['class']      .= $this->content;
         return $attr;
     }
 
@@ -335,6 +337,13 @@ class AttrTrumps {
         return $attr;
     }
 
+    public function entry_header($attr) {
+        $attr['class']      = "entry-header";
+        $attr['class']      .= ' ';
+        $attr['class']      .= $this->entry_header;
+        return $attr;
+    }
+
     public function entry_content($attr) {
         $attr['class']      .= ' ';
         $attr['class']      .= $this->entry_content;
@@ -344,6 +353,13 @@ class AttrTrumps {
     public function entry_summary($attr) {
         $attr['class']      .= ' ';
         $attr['class']      .= $this->entry_summary;
+        return $attr;
+    }
+
+    public function entry_footer($attr) {
+        $attr['class']      = "entry-footer";
+        $attr['class']      .= ' ';
+        $attr['class']      .= $this->entry_footer;
         return $attr;
     }
 
