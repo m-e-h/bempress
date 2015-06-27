@@ -1,0 +1,31 @@
+///* #FUNCTIONS
+//\*------------------------------------*/
+
+
+
+
+// Determines text color based on bg color
+//
+// .button {
+//   background: $sample-color;
+//   color: set-text-color($sample-color);
+// }
+//
+@function set-text-color($color) {
+  @if (lightness($color) > 51) {
+    @return $color-text; // Lighter backgorund, return dark color
+  } @else {
+    @return $white; // Darker background, return light color
+  }
+}
+
+// Make the color transparentish
+//
+// .button {
+//   background: glass($sample-color);
+// }
+//
+@function glass($color) {
+    @return rgba($color, .8);
+}
+

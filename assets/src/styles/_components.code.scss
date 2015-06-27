@@ -1,0 +1,31 @@
+/* #CODE
+\*------------------------------------*/
+
+code,
+kbd,
+tt,
+var,
+samp,
+pre {
+    font-family: $mono;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre {
+    @include bg-text($color-code-bg);
+    padding: $spacing-small;
+    max-width: 100%;
+    border-radius: $radius;
+    overflow: auto;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.comment-notes, .comment-awaiting-moderation, .logged-in-as, .form-allowed-tags {
+    @include font-size($font-size - 1);
+    margin-bottom: $spacing;
+}

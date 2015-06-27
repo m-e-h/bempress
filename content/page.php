@@ -1,37 +1,20 @@
-<?php
-/**
- * A template part for displaying single pages.
- *
- * @package     BEMpress
- * @subpackage  HybridCore
- * @copyright   Copyright (c) 2015, Flagship Software, LLC
- * @license     GPL-2.0+
- * @link        https://flagshipwp.com/
- * @since       1.0.0
- */
-?>
-<article <?php hybrid_attr( 'post' ); ?>>
+<?php while (have_posts()) : the_post(); ?>
 
-	<?php tha_entry_top(); ?>
+    <article <?php hybrid_attr('post'); ?>>
 
+        <div <?php hybrid_attr('entry-content'); ?>>
+          <?php the_content(); ?>
+        </div>
 
-    <?php get_template_part( 'templates/single', 'header' ); ?>
+        <?php echo bempress_wysiwyg_output('bempress_extra_wysiwyg', get_the_ID()); ?>
 
+        <footer class="entry-footer">
+            <?php wp_link_pages([
+                'before' => '<nav class="page-nav"><p>' . __('Pages:', 'bempress'),
+                'after' => '</p></nav>'
+            ]); ?>
+        </footer>
 
-<div <?php hybrid_attr( 'wrap', 'two-col' ); ?>>
+    </article>
 
-	<?php get_template_part( 'templates/single', 'content' ); ?>
-
-
-<?php hybrid_get_sidebar( 'primary' ); ?>
-</div>
-
-	<?php if ( current_user_can( 'edit_pages' ) ) : ?>
-		<footer class="entry-footer">
-			<?php edit_post_link(); ?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
-
-	<?php tha_entry_bottom(); ?>
-
-</article><!-- .entry -->
+<?php endwhile; ?>

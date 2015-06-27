@@ -1,66 +1,27 @@
-<?php
-/**
- * The Header for our theme.
- *
- * @package BEMpress
- */
-?><!doctype html>
-<?php tha_html_before(); ?>
-<html <?php language_attributes(); ?>>
-<head <?php hybrid_attr( 'head' ); ?>>
-<?php tha_head_top(); ?>
+<!doctype html>
+<html class="no-js" <?php language_attributes(); ?>>
+<head <?php hybrid_attr('head'); ?>>
 <meta http-equiv="x-ua-compatible" content="ie=edge">
+<style><?php get_template_part('assets/css/critical-css'); ?></style>
 <?php wp_head(); ?>
-
-
-<?php tha_head_bottom(); ?>
 </head>
+<body <?php hybrid_attr('body'); ?>>
 
-<body <?php hybrid_attr( 'body' ); ?>>
     <!--[if lt IE 10]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://whatbrowser.org">Upgrade your browser</a> for a faster, safer, and better web experience.</p>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://whatbrowser.org">Upgrade your browser</a> for a safer and more enjoyable web experience.</p>
     <![endif]-->
 
-<?php tha_body_top(); ?>
+    <header <?php hybrid_attr('header'); ?>>
 
-	<div class="skip-link">
-		<a href="#content" class="button screen-reader-text">
-			<?php esc_html_e( 'Skip to content (Press enter)', 'bempress' ); ?>
-		</a>
-	</div><!-- .skip-link -->
+        <div <?php hybrid_attr('container', 'header'); ?>>
 
-    <?php tha_header_before(); ?>
-
-	<header <?php hybrid_attr( 'header' ); ?>>
-
-        <?php tha_header_top(); ?>
-
-            <div <?php hybrid_attr( 'branding' ); ?>>
-
-	            <button class="menu-toggle" aria-controls="menu-primary" aria-expanded="false">
-	            <span></span>
-	            </button>
-
-				<?php if( '1' == get_theme_mod( 'svg_logo' ) ) { ?>
-	                <a class="logo-image" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-	                    <?php get_template_part( 'images/svg', 'logo' ); ?>
-	                </a>
-	            <?php } ?>
-
-	            <div class="logo-text">
-		            <?php hybrid_site_title(); ?>
-		            <?php hybrid_site_description(); ?>
-            	</div>
+            <div <?php hybrid_attr('branding'); ?>>
+                <?php hybrid_site_title(); ?>
+                <?php hybrid_site_description(); ?>
             </div>
 
-    <?php hybrid_get_menu( 'primary' ); ?>
+            <?php hybrid_get_menu('primary'); ?>
 
-        <?php tha_header_bottom(); ?>
+        </div>
 
-	</header><!-- #header -->
-
-    <?php tha_header_after(); ?>
-
-    <div <?php hybrid_attr( 'site-container' ); ?>>
-
-        <div <?php hybrid_attr( 'site-inner' ); ?>>
+    </header>

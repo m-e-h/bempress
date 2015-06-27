@@ -4,13 +4,77 @@
  * https://github.com/fusioneng/Shortcake
  */
 
-add_action( 'init', 'meh_add_shortcake' );
+add_action('init', 'meh_add_shortcake');
 
 function meh_add_shortcake() {
 
     /* Make sure the Shortcake plugin is active. */
-if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
+if (! function_exists('shortcode_ui_register_for_shortcode'))
     return;
+$bempress_dir = trailingslashit( get_template_directory_uri() );
+
+
+
+    shortcode_ui_register_for_shortcode(
+        'meh_cards',
+        array(
+            'label' => 'Cards',
+            'listItemImage' => '<img width="60px" height="60px" src="' . esc_url( $bempress_dir . 'images/sidebar-left.svg' ) . '" />',
+            // Attribute model expects 'attr', 'type' and 'label'
+            // Supported field types: text, checkbox, textarea, radio, select, email, url, number, and date.
+            'attrs' => array(
+                array(
+                    'label' => 'Cards Per Row',
+                    'attr'  => 'width',
+                    'type' => 'select',
+                    'value' => 'u-1of1@md',
+                    'options' => array(
+                        'u-1/1@md' => 'One',
+                        'u-1/2@md' => 'Two',
+                        'u-1/3@md' => 'Three',
+                        'u-1/4@md' => 'Four',
+                   ),
+                    'description' => 'ex. For 2 blocks, side by side you would choose "Two"',
+               ),
+
+                array(
+                    'label' => 'Card Color',
+                    'attr'  => 'card_color',
+                    'type' => 'select',
+                    'value' => 't-bg--white',
+                    'options' => array(
+                        't-bg--white' => 'White',
+                        't-bg--1' => 'Primary Color',
+                        't-bg--2' => 'Secondary Color',
+                        't-bg--grey-light' => 'Neutral',
+                   ),
+                    'description' => 'Background color of your content card',
+               ),
+
+                array(
+                    'label' => 'Content to Show',
+                    'attr'  => 'show_content',
+                    'type' => 'select',
+                    'value' => 'excerpt',
+                    'options' => array(
+                        'excerpt' => 'Excerpt',
+                        'content' => 'Content',
+                        'none' => 'None',
+                   ),
+               ),
+
+                array(
+                    'label'    => 'Select Page',
+                    'attr'     => 'page',
+                    'type'     => 'post_select',
+                    'query'    => array('post_type' => 'page'),
+                    'multiple' => true,
+               ),
+           ),
+       )
+   );
+
+
 
     /**
      * PANEL
@@ -19,7 +83,7 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
         'meh_block',
         array(
             'label' => 'Block',
-            'listItemImage' => 'dashicons-slides',
+            'listItemImage' => '<img width="60px" height="60px" src="' . esc_url( $bempress_dir . 'images/sidebar-left.svg' ) . '" />',
             // Attribute model expects 'attr', 'type' and 'label'
             // Supported field types: text, checkbox, textarea, radio, select, email, url, number, and date.
             'attrs' => array(
@@ -37,9 +101,9 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
                         'image' => 'Image',
                         'chat' => 'Chat',
                         'pencils' => 'Pencils',
-                    ),
+                   ),
                         'description' => 'Don\'t use this if you are using an image.',
-                ),
+               ),
 
                 array(
                     'label' => 'Blocks Per Row',
@@ -47,13 +111,13 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
                     'type' => 'select',
                     'value' => 'u-1of1@md',
                     'options' => array(
-                        'u-1of1@md' => 'One',
-                        'u-1of2@md' => 'Two',
-                        'u-1of3@md' => 'Three',
-                        'u-1of4@md' => 'Four',
-                    ),
+                        'u-1/1@md' => 'One',
+                        'u-1/2@md' => 'Two',
+                        'u-1/3@md' => 'Three',
+                        'u-1/4@md' => 'Four',
+                   ),
                     'description' => 'ex. For 2 blocks, side by side you would choose "Two"',
-                ),
+               ),
 
                 array(
                     'label' => 'Content to Show',
@@ -64,8 +128,8 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
                         'excerpt' => 'Excerpt',
                         'content' => 'Content',
                         'none' => 'None',
-                    ),
-                ),
+                   ),
+               ),
 
                 array(
                     'label' => 'Show Featured Image',
@@ -75,8 +139,8 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
                     'options' => array(
                         'show_img' => 'Show Image',
                         'hide_img' => 'Hide Image',
-                    ),
-                ),
+                   ),
+               ),
 
                 array(
                     'label' => 'Block Type',
@@ -86,20 +150,86 @@ if ( ! function_exists( 'shortcode_ui_register_for_shortcode' ) )
                     'options' => array(
                         'block' => 'Block',
                         'flag' => 'Panel',
-                    ),
+                   ),
                     'multiple' => false,
                     'description' => '*Block = Large image on top. *Panel = Small image to the left.',
-                ),
+               ),
 
                 array(
                     'label'    => 'Select Page',
                     'attr'     => 'page',
                     'type'     => 'post_select',
-                    'query'    => array( 'post_type' => 'page' ),
+                    'query'    => array('post_type' => 'page'),
                     'multiple' => true,
-                ),
-            ),
-        )
-    );
+               ),
+           ),
+       )
+   );
+
+
+
+    /**
+     * Tabs
+     */
+    shortcode_ui_register_for_shortcode(
+        'meh_tabs',
+        array(
+            'label' => 'Tabs',
+            'listItemImage' => 'dashicons-images-alt2',
+            'attrs' => array(
+
+                array(
+                    'label' => 'Content to Show',
+                    'attr'  => 'show_content',
+                    'type' => 'select',
+                    'value' => 'excerpt',
+                    'options' => array(
+                        'excerpt' => 'Excerpt',
+                        'content' => 'Content',
+                   ),
+               ),
+
+                array(
+                    'label'    => 'Select Page',
+                    'attr'     => 'page',
+                    'type'     => 'post_select',
+                    'query'    => array('post_type' => 'page'),
+                    'multiple' => true,
+               ),
+           ),
+       )
+   );
+
+    /**
+     * Toggles
+     */
+    shortcode_ui_register_for_shortcode(
+        'meh_toggles',
+        array(
+            'label' => 'Toggles',
+            'listItemImage' => 'dashicons-menu',
+            'attrs' => array(
+
+                array(
+                    'label' => 'Content to Show',
+                    'attr'  => 'show_content',
+                    'type' => 'select',
+                    'value' => 'excerpt',
+                    'options' => array(
+                        'excerpt' => 'Excerpt',
+                        'content' => 'Content',
+                   ),
+               ),
+
+                array(
+                    'label'    => 'Select Page',
+                    'attr'     => 'page',
+                    'type'     => 'post_select',
+                    'query'    => array('post_type' => 'page'),
+                    'multiple' => true,
+               ),
+           ),
+       )
+   );
 
 }

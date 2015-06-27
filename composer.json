@@ -18,7 +18,6 @@
   },
   "require": {
     "justintadlock/hybrid-core": "dev-dev",
-    "tgmpa/tgm-plugin-activation": "dev-master",
     "composer/installers": "~1.0"
   }
 }

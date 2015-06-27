@@ -1,45 +1,36 @@
 <?php
-/**
- * The template for displaying comments.
- *
- * @package BEMpress
- */
-
-if ( post_password_required() || ( !have_comments() && !comments_open() && !pings_open() ) ) {
-    return;
+if (post_password_required()) {
+  return;
 }
 ?>
 
-    <?php tha_comments_before(); ?>
+<section id="comments" class="comments">
+  <?php if (have_comments()) : ?>
+    <h2 class="comments-title"><?php printf(_nx('One response to &ldquo;%2$s&rdquo;', '%1$s responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'bempress'), number_format_i18n(get_comments_number()), '<span>' . get_the_title() . '</span>'); ?></h2>
 
-    <section <?php hybrid_attr( 'comments-area' ); ?>>
+    <ol class="comment-list">
+      <?php wp_list_comments(['style' => 'ol', 'short_ping' => true]); ?>
+    </ol>
 
-        <?php if ( have_comments() ) : ?>
+    <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
+      <nav>
+        <ul class="pager">
+          <?php if (get_previous_comments_link()) : ?>
+            <li class="previous"><?php previous_comments_link(__('&larr; Older comments', 'bempress')); ?></li>
+          <?php endif; ?>
+          <?php if (get_next_comments_link()) : ?>
+            <li class="next"><?php next_comments_link(__('Newer comments &rarr;', 'bempress')); ?></li>
+          <?php endif; ?>
+        </ul>
+      </nav>
+    <?php endif; ?>
+  <?php endif; // have_comments() ?>
 
-            <h3 class="comments-number" id="comments-number"><?php comments_number(); ?></h3>
+  <?php if (!comments_open() && get_comments_number() != '0' && post_type_supports(get_post_type(), 'comments')) : ?>
+    <div class="alert alert-warning">
+      <?php _e('Comments are closed.', 'bempress'); ?>
+    </div>
+  <?php endif; ?>
 
-            <ol class="comment-list">
-                <?php
-                wp_list_comments( [
-                    'style'        => 'ol',
-                    'callback'     => 'hybrid_comments_callback',
-                    'end-callback' => 'hybrid_comments_end_callback',
-                ] );
-                ?>
-            </ol><!-- .comment-list -->
-
-            <?php get_template_part( 'comment/navigation' ); ?>
-
-            <?php if ( ! comments_open() || ! pings_open() ) : ?>
-
-                <?php get_template_part( 'comment/error' ); ?>
-
-            <?php endif; ?>
-
-        <?php endif; // End check for comments. ?>
-
-        <?php comment_form(); ?>
-
-    </section><!-- #comments -->
-
-    <?php tha_comments_after(); ?>
+  <?php comment_form(); ?>
+</section>

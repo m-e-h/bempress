@@ -1,0 +1,68 @@
+/* #BLOCK
+\*------------------------------------*/
+
+
+.flag {
+    display: block;
+    @include md {
+}
+    .block__title {
+        background-color: transparent;
+    }
+}
+
+.block__title a {
+    color: inherit;
+}
+.block__figure {
+    text-align: center;
+    > svg {
+        width: 100%;
+        max-width: 90px;
+        //fill: $white;
+    }
+    a {
+        border-bottom: 0!important;
+        display: block;
+        font-weight: normal;
+    }
+}
+
+.media {
+    //display: table;
+    width: 100%;
+    border-radius: $radius;
+    overflow: hidden;
+}
+
+.media__body {
+    @include font-size($font-size - 2, false);
+    display: flex;
+    text-align: center;
+}
+
+.media__title {
+    @include font-size($font-size, false);
+    line-height: 1.6;
+}
+
+.block__figure ~  .block__title {
+    background-color: transparent;
+}
+
+.block .block__figure ~ .block__body {
+    display: none;
+}
+
+.flag-image {
+    max-width: 90px;
+}
+
+.block__footer {
+    margin-top: auto;
+    border-top: 1px solid $color-grey;
+
+    a {
+        padding: 5px 0;
+    }
+}

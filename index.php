@@ -1,51 +1,22 @@
 <?php
-/**
- * The main template file.
- *
- * @package BEMpress
- */
-
 get_header(); ?>
 
-    <?php tha_content_before(); ?>
+<?php get_template_part('components/page', 'header'); ?>
 
-    <main <?php hybrid_attr( 'content' ); ?>>
+<div <?php hybrid_attr('container', 'content'); ?>>
 
-        <?php tha_content_top(); ?>
+    <div <?php hybrid_attr('row', 'layout'); ?>>
 
-            <?php
-                if ( ! is_front_page() && ! is_home() ) :
-                    get_template_part( 'templates/archive-header' );
-                endif;
-            ?>
+        <main <?php hybrid_attr('content'); ?>>
+            <?php hybrid_get_content_template(); ?>
+        </main><!-- /.main -->
 
-        <?php if ( have_posts() ) : ?>
+        <?php hybrid_get_sidebar('primary'); ?>
 
-            <?php while ( have_posts() ) : the_post(); ?>
+    </div><!-- /.content -->
 
-                <?php tha_entry_before(); ?>
-
-                <?php hybrid_get_content_template(); ?>
-
-                <?php tha_entry_after(); ?>
-
-            <?php endwhile; ?>
-
-            <?php get_template_part( 'templates/post-nav' ); ?>
-
-        <?php else : ?>
-
-            <?php get_template_part( 'content/none' ); ?>
-
-        <?php endif; ?>
-
-        <?php tha_content_bottom(); ?>
-
-        </main><!-- #main -->
-
-    <?php tha_content_after(); ?>
-
-<?php hybrid_get_sidebar( 'primary' ); ?>
+</div><!-- /.wrap -->
 
 <?php
 get_footer();
+

@@ -1,0 +1,15 @@
+/* #Layout Wrappers
+\*------------------------------------*/
+
+.container {
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.container--wide {
+    max-width: 100%;
+    width: 100%;
+}
+

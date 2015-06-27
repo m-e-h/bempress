@@ -143,37 +143,35 @@ final class Bempress_Custom_Styles {
         /* === Color === */
 
         $style .= "
-                .entry-content a
+                a, .t-color--1
                 { color: #{$color500}; }
             ";
         $style .= "
-            .badge a, .btn, .button, button, input[type=button], input[type=reset], input[type=submit],
-                .t-bg__1
+            .t-bg--1
                 { background-color: #{$color500}; }
             ";
         $style .= "
-        .badge a:active, .badge a:hover, .btn:active, .btn:hover, button:active, button:hover, input[type=button]:active, input[type=button]:hover, input[type=reset]:active, input[type=reset]:hover, input[type=submit]:active, input[type=submit]:hover,
-                .t-bg__1--light
+            .t-bg--1--light
                 { background-color: #{$color400}; }
             ";
         $style .= "
-                .t-bg__1--dark
+                .t-bg--1--dark
                 { background-color: #{$color600}; }
             ";
         $style .= "
-                .t-bg__1--glass
+                .t-bg--1--glass
                 { background-color: #{$color100}; }
             ";
         $style .= "
-                .t-fill__1
+                .t-fill--1
                 { fill: #{$color500}; }
             ";
         $style .= "
-                .t-fill__1--light
+                .t-fill--1--light
                 { fill: #{$color400}; }
             ";
         $style .= "
-                .t-fill__1--dark
+                .t-fill--1--dark
                 { fill: #{$color600}; }
             ";
         $style .= "
@@ -215,31 +213,35 @@ final class Bempress_Custom_Styles {
         /* === Color === */
 
         $style .= "
-                .t-bg__2
+                .t-color--2
+                { color: #{$color500}; }
+            ";
+        $style .= "
+                .t-bg--2
                 { background-color: #{$color500}; }
             ";
         $style .= "
-                .t-bg__2--light
+                .t-bg--2--light
                 { background-color: #{$color400}; }
             ";
         $style .= "
-                .t-bg__2--dark
+                .t-bg--2--dark
                 { background-color: #{$color600}; }
             ";
         $style .= "
-                .t-bg__2--glass
+                .t-bg--2--glass
                 { background-color: #{$color100}; }
             ";
         $style .= "
-                .t-fill__2
+                .t-fill--2
                 { fill: #{$color500}; }
             ";
         $style .= "
-                .t-fill__2--light
+                .t-fill--2--light
                 { fill: #{$color400}; }
             ";
         $style .= "
-                .t-fill__2--dark
+                .t-fill--2--dark
                 { fill: #{$color600}; }
                 ";
         /* Return the styles. */
@@ -273,31 +275,35 @@ final class Bempress_Custom_Styles {
         /* === Color === */
 
         $style .= "
-                .t-bg__3
+                .t-color--3
+                { color: #{$color500}; }
+            ";
+        $style .= "
+                .t-bg--3
                 { background-color: #{$color500}; }
             ";
         $style .= "
-                .t-bg__3--light
+                .t-bg--3--light
                 { background-color: #{$color400}; }
             ";
         $style .= "
-                .t-bg__3--dark
+                .t-bg--3--dark
                 { background-color: #{$color600}; }
             ";
         $style .= "
-                .t-bg__3--glass
+                .t-bg--3--glass
                 { background-color: #{$color100}; }
             ";
         $style .= "
-                .t-fill__3
+                .t-fill--3
                 { fill: #{$color500}; }
             ";
         $style .= "
-                .t-fill__3--light
+                .t-fill--3--light
                 { fill: #{$color400}; }
             ";
         $style .= "
-                .t-fill__3--dark
+                .t-fill--3--dark
                 { fill: #{$color600}; }
                 ";
         /* Return the styles. */

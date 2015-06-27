@@ -1,19 +1,11 @@
 <?php
-/**
- * The breadcrumbs template.
- *
- * @package     BEMpress
- */
+if (function_exists('breadcrumb_trail')) :
 
-if ( function_exists( 'breadcrumb_trail' ) ) : ?>
+    breadcrumb_trail([
+        'container'       => 'nav',
+        'show_on_front'   => false,
+        //'network'         => true,
+        'show_browse'     => false,
+    ]);
 
-    <?php breadcrumb_trail(
-        array(
-            'container'     => 'nav',
-            'separator'     => '/',
-            'show_browse'   => false,
-            'show_on_front' => false,
-        )
-    ); ?>
-
-<?php endif; // End check for breadcrumb support. ?>
+endif;

@@ -1,34 +1,26 @@
 <?php
-/**
- * A template to display taxonomy terms.
- *
- * @package BEMpress
- */
-?>
+if (is_taxonomy_hierarchical(get_queried_object()->taxonomy)) :
 
-<?php if ( is_taxonomy_hierarchical( get_queried_object()->taxonomy ) ) : ?>
-
-	<?php
-	$terms = wp_list_categories( [
+	$terms = wp_list_categories([
 		'taxonomy'         => get_queried_object()->taxonomy,
 		'child_of'         => get_queried_object_id(),
 		'depth'            => 1,
 		'title_li'         => false,
 		'show_option_none' => false,
 		'echo'             => false,
-	] );
-	?>
+	]);
 
-	<?php if ( ! empty( $terms ) ) : // If a list of child categories/terms was found. ?>
+	if (! empty($terms)) : ?>
 
-		<nav <?php hybrid_attr( 'menu', 'sub-terms' ); ?>>
+		<nav <?php hybrid_attr('menu', 'sub-terms'); ?>>
 
 			<ul id="menu-sub-terms-items" class="menu-items">
 				<?= $terms; ?>
-			</ul><!-- .sub-terms -->
+			</ul>
 
-		</nav><!-- .menu -->
+		</nav>
 
-	<?php endif; // End check for list.
+	<?php
+    endif; // End check for list.
 
 endif; // End check for hierarchy.

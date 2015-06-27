@@ -1,0 +1,47 @@
+
+// /**
+//  * #SETTINGS
+//  */
+@import "settings.colors";
+@import "settings.responsive";
+@import "settings.icon-font";
+@import "settings.defaults";
+
+
+// /**
+//  * #TOOLS
+//  */
+@import "tools.functions";
+@import "tools.mixins";
+@import "tools.aliases";
+
+@import "style";
+
+/* Styles specific to the editor. */
+
+#bempress_add_extra_wysiwyg_field .mce-toolbar-grp {
+    display: none;
+}
+
+:root {
+    cursor: auto!important;
+}
+body, body#tinymce {
+    margin:    0 auto;
+    padding:   1.5rem 1.5rem 0;
+    border:    none;
+    font-family: $font-body;
+    color: $color-text;
+    background: white;
+    cursor: auto!important;
+}
+
+@media screen and (max-width: 740px) {
+    body, img, .wp-caption {
+        max-width: 100%;
+    }
+
+    img, .wp-caption {
+        width: auto !important;
+    }
+}

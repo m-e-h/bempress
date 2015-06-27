@@ -1,0 +1,114 @@
+/* #PAGE
+\*------------------------------------*/
+
+:root {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-y: scroll;
+    text-size-adjust: 100%;
+    box-sizing: border-box;
+    cursor: default;
+    font: 16px/1.5 sans-serif;
+    min-height: 100%;
+    background-color: #ffffff;
+
+    @include sm {
+        font: 14px/1.7 sans-serif;
+    }
+}
+
+body {
+    background-color: #fff;
+    color: $color-text;
+    font-family: $font-body;
+}
+
+* {
+    position: relative;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    vertical-align: middle;
+    flex: 0 1 auto;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+    border-style: solid;
+    border-width: 0;
+}
+
+::after,
+::before {
+    vertical-align: inherit;
+}
+
+span {
+    vertical-align: bottom;
+}
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE.
+ */
+article,
+aside,
+cite,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    margin: $spacing 0;
+}
+
+::-moz-selection {
+    background-color: #B3D4FC;
+    text-shadow: none;
+}
+
+::selection {
+    background-color: #B3D4FC;
+    text-shadow: none;
+}
+
+canvas {
+    -ms-touch-action: double-tap-zoom;
+}
+
+iframe[src*="google.com/maps"] {
+    max-width: 100%;
+    width: 100%;
+}
+
+[hidden],
+audio:not([controls]),
+template {
+    display: none;
+}
+
+@media screen {
+    [hidden~=screen] {
+        display: inherit;
+    }
+    [hidden~=screen]:not(:active):not(:focus):not(:target) {
+        clip: rect(0 0 0 0)!important;
+        position: absolute!important;
+    }
+}

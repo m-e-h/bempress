@@ -1,23 +1,35 @@
-<?php
-/**
- * The template part for displaying results in search pages.
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- * @package wpclt
- */
-?>
+<?php if (!have_posts()) : ?>
+<section <?php hybrid_attr('post'); ?>>
 
-<article <?php hybrid_attr( 'post' ); ?>>
+    <div <?php hybrid_attr('entry-content'); ?>>
 
-    <?php tha_entry_top(); ?>
+        <?php _e('Sorry, no results were found.', 'bempress'); ?>
+    </div>
 
-    <?php get_template_part( 'templates/plural', 'header' ); ?>
+    <?php get_search_form(); ?>
 
-    <?php get_template_part( 'templates/plural', 'content' ); ?>
+</section>
+<?php endif; ?>
 
-    <?php get_template_part( 'templates/plural', 'footer' ); ?>
+<?php while (have_posts()) : the_post(); ?>
 
-    <?php tha_entry_bottom(); ?>
+    <article <?php hybrid_attr('post'); ?>>
 
-</article><!-- #post-## -->
+        <header class="entry-header">
+            <h4 <?php hybrid_attr('entry-title'); ?>>
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </h4>
+
+            <?php if (get_post_type() === 'post') {
+            get_template_part('components/entry-meta'); } ?>
+        </header>
+
+        <div <?php hybrid_attr('entry-summary'); ?>>
+        <?php the_excerpt(); ?>
+        </div>
+
+    </article>
+
+<?php endwhile; ?>
+
+<?php the_posts_navigation(); ?>

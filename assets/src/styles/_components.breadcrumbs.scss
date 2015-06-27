@@ -1,0 +1,21 @@
+/* #BREADCRUMBS
+\*------------------------------------*/
+
+
+
+.breadcrumbs {
+    text-transform: uppercase;
+
+  li {
+
+  + li:before {
+    content: "/\00a0";
+    opacity: $opacity;
+    }
+  }
+}
+
+.trail-end span {
+    display: none;
+}
+

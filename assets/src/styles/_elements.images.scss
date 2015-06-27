@@ -1,0 +1,25 @@
+/* #IMAGES
+\*------------------------------------*/
+
+img {
+    max-width: 100%;
+    font-style: italic;
+    height: auto;
+    border: 0;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+svg {
+    height: 100%;
+    max-height: 100%;
+}
+/**
+ * Google Maps breaks if `max-width: 100%` acts upon it.
+ */
+.gm-style img {
+    max-width: none;
+}
+

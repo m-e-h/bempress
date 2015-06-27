@@ -1,153 +1,141 @@
 /**
- * BEMpress
+ * MEH gulp
  */
 
-'use strict';
-
-// Include Gulp & Tools We'll Use
-var gulp = require('gulp');
-var $ = require('gulp-load-plugins')();
-var del = require('del');
-var minifyCSS = require('gulp-minify-css');
-var rename = require('gulp-rename');
-var composer = require('gulp-composer');
-var csscomb = require('gulp-csscomb');
-var runSequence = require('run-sequence');
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
-
-var AUTOPREFIXER_BROWSERS = [
-  'ie >= 9',
-  'ie_mob >= 10',
-  'ff >= 30',
-  'chrome >= 34',
-  'safari >= 7',
-  'opera >= 23',
-  'ios >= 6',
-  'android >= 4.3',
-  'bb >= 10'
-];
-
-gulp.task('composer', function () {
-    composer({ cwd: './', bin: 'composer' });
-});
+var gulp = require('gulp'),
+    del = require('del'),
+    imagemin = require('gulp-imagemin'),
+    sass = require('gulp-sass'),
+    gulpif = require('gulp-if'),
+    minifyCSS = require('gulp-minify-css'),
+    rename = require('gulp-rename'),
+    changed = require('gulp-changed'),
+    uglify = require('gulp-uglify'),
+    concat = require('gulp-concat'),
+    csscomb = require('gulp-csscomb'),
+    runSequence = require('run-sequence'),
+    browserSync = require('browser-sync').create('meh'),
+    reload = browserSync.reload,
+    autoprefixer = require('gulp-autoprefixer'),
+    browsers = [
+      'ie >= 8',
+      'ie_mob >= 10',
+      'ff >= 30',
+      'chrome >= 34',
+      'safari >= 7',
+      'opera >= 23',
+      'ios >= 6',
+      'android >= 4.3',
+      'bb >= 10'
+    ];
 
 // Optimize Images
 gulp.task('images', function () {
-  return gulp.src('src/images/**/*')
-    .pipe($.imagemin({
+  return gulp.src('assets/src/images/**/*')
+    .pipe(imagemin({
       progressive: true,
       interlaced: true,
       removeUselessStrokeAndFill: true,
-      removeEmptyAttrs: true
+      removeEmptyAttrs: true,
+      svgoPlugins: [{removeViewBox: false}],
     }))
-    .pipe($.if('*.svg', $.rename({
-			prefix: 'svg-',
-			extname: '.php'
-		})))
-    .pipe(gulp.dest('images'));
+    .pipe(gulpif('*.svg', rename({
+      prefix: 'svg-',
+      extname: '.php'
+    })))
+    .pipe(gulp.dest('assets/images'));
 });
 
-// Copy hybrid-core to root/
+// Copy hybrid-core to extras
 gulp.task('hybrid', function () {
   return gulp.src([
-  	'src/composer/justintadlock/hybrid-core/**/*'
-  	])
-    .pipe(gulp.dest('hybrid-core'));
-});
-
-// Copy tgmpa to inc/
-gulp.task('tgmpa', function () {
-  return gulp.src([
-    'src/composer/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php'
+    'src/composer/justintadlock/hybrid-core/**/*'
     ])
-    .pipe(gulp.dest('inc'));
+    .pipe(gulp.dest('hybrid-core'));
 });
 
 // Compile and Automatically Prefix Stylesheets
 gulp.task('styles', function () {
   return gulp.src([
-    'src/scss/style.scss'
+    'assets/src/styles/style.scss'
   ])
-    .pipe($.changed('styles', {extension: '.scss'}))
-    .pipe($.sass({
-      precision: 10
-    }))
-    .on('error', console.error.bind(console))
-    .pipe($.autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
+    .pipe(changed('styles', {extension: '.scss'}))
+    .pipe(sass())
+    .on('error', swallowError)
+    .pipe(autoprefixer(browsers))
     .pipe(csscomb())
     .pipe(gulp.dest('./'))
-    //Concatenate And Minify Styles
     .pipe(rename({ suffix: '.min' }))
-    .pipe(minifyCSS({compatibility: '+properties.zeroUnits'}))
-    .pipe(gulp.dest('./'));
+    .pipe(minifyCSS())
+    .pipe(gulp.dest('./'))
+    .pipe(reload({stream: true}));
 });
 
-// Compile and Automatically Prefix Stylesheets
+// Compile critical.css https://goo.gl/SoxZIL
 gulp.task('critical', function () {
   return gulp.src([
-    'src/scss/critical.scss'
+    'assets/src/styles/critical.scss'
   ])
-    .pipe($.changed('styles', {extension: '.scss'}))
-    .pipe($.sass({
-      precision: 10
-    }))
-    .on('error', console.error.bind(console))
-    .pipe($.autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
+    .pipe(changed('styles', {extension: '.scss'}))
+    .pipe(sass())
+    .on('error', swallowError)
+    .pipe(autoprefixer({ browsers: ['last 1 version'] }))
     .pipe(csscomb())
-    .pipe(gulp.dest('css'))
-    //Concatenate And Minify Styles
-    .pipe(rename({ extname: '.php' }))
+    .pipe(gulp.dest('assets/css'))
+    .pipe(rename({ suffix: '-css', extname: '.php' }))
     .pipe(minifyCSS())
-    .pipe(gulp.dest('templates'));
+    .pipe(gulp.dest('assets/css'));
 });
 
-// Compile and Automatically Prefix Stylesheets
+// Compile Editor Stylesheets
 gulp.task('wpeditor', function () {
   return gulp.src([
-    'src/scss/editor-style.scss'
+    'assets/src/styles/editor-style.scss'
   ])
-    .pipe($.changed('styles', {extension: '.scss'}))
-    .pipe($.sass({
-      precision: 10
-    }))
-    .on('error', console.error.bind(console))
-    .pipe($.autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
+    .pipe(changed('styles', {extension: '.scss'}))
+    .pipe(sass())
+    .on('error', swallowError)
+    .pipe(autoprefixer(browsers))
     .pipe(minifyCSS())
-    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('assets/css'))
 });
+
+// Allows gulp to not break after a sass error.
+// Spits error out to console
+function swallowError(error) {
+  console.log(error.toString());
+  this.emit('end');
+}
 
 // Concatenate And Minify JavaScript
 gulp.task('scripts', function() {
   return gulp.src([
-  	'src/js/**/*.js'
-  	])
-    //.pipe($.concat('main.js'))
+    'src/scripts/**/*.js'
+    ])
+    //.pipe(concat('main.js'))
     .pipe(gulp.dest('js'))
     .pipe(rename({ suffix: '.min' }))
-    .pipe($.uglify({preserveComments: 'some'}))
-    // Output Files
+    .pipe(uglify({preserveComments: 'some'}))
     .pipe(gulp.dest('js'));
 });
 
 // Build and serve the output
 gulp.task('serve', ['styles'], function () {
-  browserSync({
-    //proxy: "local.wordpress.dev"
+  browserSync.init({
+    proxy: "local.wordpress.dev"
     //proxy: "local.wordpress-trunk.dev"
-    //proxy: "doc.dev"
+    //proxy: "june.dev"
     //proxy: "stmark.dev"
     //proxy: "127.0.0.1:8080/wordpress/"
-    proxy: "june.dev"
-     });
+  });
 
-  gulp.watch(['**/*.php'], reload);
-  gulp.watch(['src/scss/**/*.{scss,css}'], ['styles', reload]);
-  gulp.watch(['src/js/**/*.js'], reload);
-  gulp.watch(['src/images/**/*'], reload);
+  gulp.watch(['assets/src/styles/**/*.{scss,css}'], ['styles', reload]);
+  gulp.watch(['assets/src/scripts/**/*.js'], reload);
+  gulp.watch(['assets/src/images/**/*'], reload);
+  gulp.watch(['*/**/*.php'], reload);
 });
 
 // Build Production Files, the Default Task
 gulp.task('default', function (cb) {
-  runSequence('styles', ['composer', 'scripts', 'critical', 'wpeditor', 'images', 'tgmpa', 'hybrid'], cb);
+  runSequence('styles', ['hybrid', 'critical', 'wpeditor', 'scripts', 'images'], cb);
 });
