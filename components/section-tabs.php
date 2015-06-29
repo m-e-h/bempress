@@ -1,10 +1,7 @@
 <?php
 /**
  * This is the template for the different block-type shortcodes.
- *
- * @package Bempress
  */
-
 global $mehsc_atts;
 ?>
 
@@ -12,7 +9,7 @@ global $mehsc_atts;
 
     <div id="post-<?php the_ID(); ?>" class="<?php echo esc_attr($mehsc_atts['block_type']); ?> block__content shadow--z1 flexed--auto t-bg--white u-radius flex">
 
-    <?php if(! empty($mehsc_atts['icon'])) : ?>
+    <?php if (!empty($mehsc_atts['icon'])) : ?>
 
     <div class="block__figure">
             <?php get_template_part('images/vector/svg', esc_attr($mehsc_atts['icon'])); ?>

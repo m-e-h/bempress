@@ -21,7 +21,8 @@
             </h4>
 
             <?php if (get_post_type() === 'post') {
-            get_template_part('components/entry-meta'); } ?>
+                get_template_part('components/entry-meta');
+            } ?>
         </header>
 
         <div <?php hybrid_attr('entry-summary'); ?>>

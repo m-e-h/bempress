@@ -1,4 +1,6 @@
-<?php use Bempress\Titles; ?>
+<?php use Bempress\Titles;
+
+?>
 
 <div <?php hybrid_attr('archive-header'); ?>>
 

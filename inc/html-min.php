@@ -1,19 +1,18 @@
 <?php
+
 /**
  * Compresses the HTML output to allow the use of inline-block without the added
  * space between objects in the grid.
  *
  * http://www.intert3chmedia.net/2011/12/minify-html-javascript-css-without.html
  */
-
 class WP_HTML_Compression
 {
     // Variables
     protected $html;
     public function __construct($html)
     {
-        if (!empty($html))
-        {
+        if (!empty($html)) {
             $this->parseHTML($html);
         }
     }
@@ -29,37 +28,26 @@ class WP_HTML_Compression
         $raw_tag = false;
         // Variable reused for output
         $html = '';
-        foreach ($matches as $token)
-        {
+        foreach ($matches as $token) {
             $tag = (isset($token['tag'])) ? strtolower($token['tag']) : null;
 
             $content = $token[0];
 
-            if (is_null($tag))
-            {
-                if ($tag == 'pre' || $tag == 'textarea')
-                {
+            if (is_null($tag)) {
+                if ($tag == 'pre' || $tag == 'textarea') {
                     $raw_tag = $tag;
-                }
-                else if ($tag == '/pre' || $tag == '/textarea')
-                {
+                } elseif ($tag == '/pre' || $tag == '/textarea') {
                     $raw_tag = false;
-                }
-                else
-                {
-                    if ($raw_tag || $overriding)
-                    {
+                } else {
+                    if ($raw_tag || $overriding) {
                         $strip = false;
-                    }
-                    else
-                    {
+                    } else {
                         $strip = true;
                     }
                 }
             }
 
-            if ($strip)
-            {
+            if ($strip) {
                 $content = $this->removeWhiteSpace($content);
             }
 
@@ -80,8 +68,7 @@ class WP_HTML_Compression
         $str = str_replace("\n",  '', $str);
         $str = str_replace("\r",  '', $str);
 
-        while (stristr($str, '  '))
-        {
+        while (stristr($str, '  ')) {
             $str = str_replace('  ', '', $str);
         }
 

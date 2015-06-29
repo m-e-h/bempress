@@ -1,10 +1,7 @@
 <?php
 /**
  * This is the template for the different block-type shortcodes.
- *
- * @package Bempress
  */
-
 global $mehsc_atts;
 ?>
 

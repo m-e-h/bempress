@@ -1,31 +1,31 @@
 <?php
+
 /**
  * SHORTCAKE
- * https://github.com/fusioneng/Shortcake
+ * https://github.com/fusioneng/Shortcake.
  */
-
 add_action('init', 'meh_add_shortcake');
 
-function meh_add_shortcake() {
+function meh_add_shortcake()
+{
 
     /* Make sure the Shortcake plugin is active. */
-if (! function_exists('shortcode_ui_register_for_shortcode'))
+if (!function_exists('shortcode_ui_register_for_shortcode')) {
     return;
-$bempress_dir = trailingslashit( get_template_directory_uri() );
-
-
+}
+    $bempress_dir = trailingslashit(get_template_directory_uri());
 
     shortcode_ui_register_for_shortcode(
         'meh_cards',
         array(
             'label' => 'Cards',
-            'listItemImage' => '<img width="60px" height="60px" src="' . esc_url( $bempress_dir . 'images/sidebar-left.svg' ) . '" />',
+            'listItemImage' => '<img width="60px" height="60px" src="'.esc_url($bempress_dir.'images/sidebar-left.svg').'" />',
             // Attribute model expects 'attr', 'type' and 'label'
             // Supported field types: text, checkbox, textarea, radio, select, email, url, number, and date.
             'attrs' => array(
                 array(
                     'label' => 'Cards Per Row',
-                    'attr'  => 'width',
+                    'attr' => 'width',
                     'type' => 'select',
                     'value' => 'u-1of1@md',
                     'options' => array(
@@ -39,7 +39,7 @@ $bempress_dir = trailingslashit( get_template_directory_uri() );
 
                 array(
                     'label' => 'Card Color',
-                    'attr'  => 'card_color',
+                    'attr' => 'card_color',
                     'type' => 'select',
                     'value' => 't-bg--white',
                     'options' => array(
@@ -53,7 +53,7 @@ $bempress_dir = trailingslashit( get_template_directory_uri() );
 
                 array(
                     'label' => 'Content to Show',
-                    'attr'  => 'show_content',
+                    'attr' => 'show_content',
                     'type' => 'select',
                     'value' => 'excerpt',
                     'options' => array(
@@ -64,32 +64,30 @@ $bempress_dir = trailingslashit( get_template_directory_uri() );
                ),
 
                 array(
-                    'label'    => 'Select Page',
-                    'attr'     => 'page',
-                    'type'     => 'post_select',
-                    'query'    => array('post_type' => 'page'),
+                    'label' => 'Select Page',
+                    'attr' => 'page',
+                    'type' => 'post_select',
+                    'query' => array('post_type' => 'page'),
                     'multiple' => true,
                ),
            ),
        )
    );
 
-
-
-    /**
+    /*
      * PANEL
      */
     shortcode_ui_register_for_shortcode(
         'meh_block',
         array(
             'label' => 'Block',
-            'listItemImage' => '<img width="60px" height="60px" src="' . esc_url( $bempress_dir . 'images/sidebar-left.svg' ) . '" />',
+            'listItemImage' => '<img width="60px" height="60px" src="'.esc_url($bempress_dir.'images/sidebar-left.svg').'" />',
             // Attribute model expects 'attr', 'type' and 'label'
             // Supported field types: text, checkbox, textarea, radio, select, email, url, number, and date.
             'attrs' => array(
                 array(
                     'label' => 'Icon',
-                    'attr'  => 'icon',
+                    'attr' => 'icon',
                     'type' => 'select',
                     'options' => array(
                         '' => 'None',
@@ -107,7 +105,7 @@ $bempress_dir = trailingslashit( get_template_directory_uri() );
 
                 array(
                     'label' => 'Blocks Per Row',
-                    'attr'  => 'width',
+                    'attr' => 'width',
                     'type' => 'select',
                     'value' => 'u-1of1@md',
                     'options' => array(
@@ -121,7 +119,7 @@ $bempress_dir = trailingslashit( get_template_directory_uri() );
 
                 array(
                     'label' => 'Content to Show',
-                    'attr'  => 'show_content',
+                    'attr' => 'show_content',
                     'type' => 'select',
                     'value' => 'excerpt',
                     'options' => array(
@@ -133,7 +131,7 @@ $bempress_dir = trailingslashit( get_template_directory_uri() );
 
                 array(
                     'label' => 'Show Featured Image',
-                    'attr'  => 'show_image',
+                    'attr' => 'show_image',
                     'type' => 'select',
                     'value' => 'show_img',
                     'options' => array(
@@ -144,7 +142,7 @@ $bempress_dir = trailingslashit( get_template_directory_uri() );
 
                 array(
                     'label' => 'Block Type',
-                    'attr'  => 'block_type',
+                    'attr' => 'block_type',
                     'type' => 'select',
                     'value' => 'block',
                     'options' => array(
@@ -156,19 +154,17 @@ $bempress_dir = trailingslashit( get_template_directory_uri() );
                ),
 
                 array(
-                    'label'    => 'Select Page',
-                    'attr'     => 'page',
-                    'type'     => 'post_select',
-                    'query'    => array('post_type' => 'page'),
+                    'label' => 'Select Page',
+                    'attr' => 'page',
+                    'type' => 'post_select',
+                    'query' => array('post_type' => 'page'),
                     'multiple' => true,
                ),
            ),
        )
    );
 
-
-
-    /**
+    /*
      * Tabs
      */
     shortcode_ui_register_for_shortcode(
@@ -180,7 +176,7 @@ $bempress_dir = trailingslashit( get_template_directory_uri() );
 
                 array(
                     'label' => 'Content to Show',
-                    'attr'  => 'show_content',
+                    'attr' => 'show_content',
                     'type' => 'select',
                     'value' => 'excerpt',
                     'options' => array(
@@ -190,17 +186,17 @@ $bempress_dir = trailingslashit( get_template_directory_uri() );
                ),
 
                 array(
-                    'label'    => 'Select Page',
-                    'attr'     => 'page',
-                    'type'     => 'post_select',
-                    'query'    => array('post_type' => 'page'),
+                    'label' => 'Select Page',
+                    'attr' => 'page',
+                    'type' => 'post_select',
+                    'query' => array('post_type' => 'page'),
                     'multiple' => true,
                ),
            ),
        )
    );
 
-    /**
+    /*
      * Toggles
      */
     shortcode_ui_register_for_shortcode(
@@ -212,7 +208,7 @@ $bempress_dir = trailingslashit( get_template_directory_uri() );
 
                 array(
                     'label' => 'Content to Show',
-                    'attr'  => 'show_content',
+                    'attr' => 'show_content',
                     'type' => 'select',
                     'value' => 'excerpt',
                     'options' => array(
@@ -222,14 +218,13 @@ $bempress_dir = trailingslashit( get_template_directory_uri() );
                ),
 
                 array(
-                    'label'    => 'Select Page',
-                    'attr'     => 'page',
-                    'type'     => 'post_select',
-                    'query'    => array('post_type' => 'page'),
+                    'label' => 'Select Page',
+                    'attr' => 'page',
+                    'type' => 'post_select',
+                    'query' => array('post_type' => 'page'),
                     'multiple' => true,
                ),
            ),
        )
    );
-
 }

@@ -12,8 +12,8 @@
 
             <footer <?php hybrid_attr('entry-footer'); ?>>
                 <?php wp_link_pages([
-                    'before' => '<nav class="page-nav"><p>' . __('Pages:', 'bempress'),
-                    'after' => '</p></nav>'
+                    'before' => '<nav class="page-nav"><p>'.__('Pages:', 'bempress'),
+                    'after' => '</p></nav>',
                 ]); ?>
             </footer>
 
