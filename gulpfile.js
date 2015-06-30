@@ -51,9 +51,9 @@ gulp.task('images', function() {
 // Copy hybrid-core to extras
 gulp.task('hybrid', function() {
 	return gulp.src([
-			'src/composer/justintadlock/hybrid-core/**/*'
+			'vendor/justintadlock/hybrid-core/**/*'
 		])
-		.pipe(gulp.dest('hybrid-core'));
+		.pipe(gulp.dest('library'));
 });
 
 // Compile and Automatically Prefix Stylesheets

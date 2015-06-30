@@ -12,7 +12,7 @@
 		"issues": "https://github.com/m-e-h/bempress/issues"
 	},
 	"config": {
-		"vendor-dir": "src/composer"
+		"vendor-dir": "vendor"
 	},
 	"require": {
 		"justintadlock/hybrid-core": "dev-dev",
