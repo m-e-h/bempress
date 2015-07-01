@@ -1,13 +1,18 @@
 <?php
 
-//namespace Bempress\AttrTrumps;
+//namespace Bempress\Attr_Trumps;
 
+function attr_trumps( $args = array() ) {
+	$trump = apply_filters( 'attr_trumps_object', null, $args );
+	if ( !is_object( $trump ) )
+		$trump = new Attr_Trumps( $args );
+}
 
 /**
  * Add class selectors to hybrid attributes.
  *
  */
-class AttrTrumps {
+class Attr_Trumps {
 
     /**
      * Filter hybrid attributes.
@@ -15,8 +20,7 @@ class AttrTrumps {
      */
      public function __construct( $args = [] ) {
 
- 		$this->args = wp_parse_args(
- 			$args, [
+ 		$defaults = [
                 'body'                    => '',
                 'site_container'          => '',
                 'container'               => '',
@@ -28,10 +32,10 @@ class AttrTrumps {
                 'row_layout_sidebar_r'    => 'grid',
 
                 // SITE HEADER
-                'header'                  => '',
-                'branding'                => '',
-                'site_title'              => 'u-h2 u-m0',
-                'site_description'        => 'u-h4 u-m0',
+                'header'                  => 'bg-teal border-bottom',
+                'branding'                => 'mt3 py2 inline-block',
+                'site_title'              => 'm0',
+                'site_description'        => 'h3 bold mt0 mb2',
 
                 // CONTENT
                 'content'                 => 'grid__item u-mb',
@@ -72,8 +76,12 @@ class AttrTrumps {
                 'comments_area'           => '',
 
                 // FOOTER
-                'footer'                  => 't-bg--white'
-        ]);
+                'footer'                  => 't-bg--white',
+
+                'menu_link'                 => 'btn'
+        ];
+
+        $this->args = apply_filters( 'attr_trumps_args', wp_parse_args( $args, $defaults ) );
 
         // CONTAINERS
         add_filter('hybrid_attr_body',                  [$this,'body']);
@@ -118,6 +126,7 @@ class AttrTrumps {
         // COMMENTS
         add_filter('hybrid_attr_comments-area',         [$this,'comments_area']);
 
+        add_filter('nav_menu_link_attributes',          [$this,'menu_link'],10,3);
     }
 
 
@@ -126,6 +135,7 @@ class AttrTrumps {
     /* === OBJECTS === */
 
     public function body($attr) {
+        $something = '.=';
         $attr['class']      .= ' ';
         $attr['class']      .= $this->args['body'];
         return $attr;
@@ -143,7 +153,7 @@ class AttrTrumps {
             return $attr;
         }
         $attr['class']      = "container container--{$context}";
-        $attr['class']      .= ' ';
+
         $attr['class']      .= $this->args['container'];
         if ('single-column--wide' == get_theme_mod('theme_layout') && 'content' === $context) :
         $attr['class']      .= $this->args['container_wide'];
@@ -161,7 +171,7 @@ class AttrTrumps {
         $attr['class']      = "row row--{$context}";
         $attr['class']      .= $this->args['row'];
         if ('layout' === $context) {
-        $attr['class']      .= ' ';
+
 
         if ('sidebar-right'     == get_theme_mod('theme_layout')) :
         $attr['class']      .= $this->args['row_layout_sidebar_r'];
@@ -177,7 +187,7 @@ class AttrTrumps {
     }
 
     public function nav($attr, $context) {
-        $attr['class']      .= ' ';
+
         if ('single' === $context) {
         $attr['class']      .= $this->args['nav_single'];
         }
@@ -209,7 +219,7 @@ class AttrTrumps {
     }
 
     public function content($attr) {
-        $attr['class']      .= ' ';
+
         if ('single-column--wide'   == get_theme_mod('theme_layout')) :
         $attr['class']      .= $this->args['content'];
 
@@ -231,7 +241,7 @@ class AttrTrumps {
             return $attr;
         }
         if ('primary' === $context) {
-        $attr['class']      .= ' ';
+
         if ('single-column--wide'   == get_theme_mod('theme_layout')) :
         $attr['class']      .= $this->args['sidebar_horizontal'];
         $attr['class']      .= ' sidebar-horizontal';
@@ -245,13 +255,13 @@ class AttrTrumps {
         $attr['class']      .= $this->args['sidebar_left'];
         endif;
 
-        $attr['class']      .= ' ';
+
         $attr['class']      .= $this->args['sidebar_primary'];
         }
 
         if ('primary' !== $context) {
         $attr['class']      .= ' sidebar-horizontal';
-        $attr['class']      .= ' ';
+
         $attr['class']      .= $this->args['sidebar_horizontal'];
         }
         return $attr;
@@ -261,7 +271,7 @@ class AttrTrumps {
         if (empty($context)) {
         return $attr;
         }
-        $attr['class']      .= ' ';
+
         if ('primary' === $context) {
         $attr['class']      .= $this->args['menu_primary'];
         }
@@ -324,62 +334,69 @@ class AttrTrumps {
     /* === POSTS === */
 
     public function post($attr) {
-        $attr['class']      .= ' ';
+
         $attr['class']      .= $this->args['post'];
         return $attr;
     }
 
     public function entry_title($attr) {
-        $attr['class']      .= ' ';
+
         $attr['class']      .= $this->args['entry_title'];
         return $attr;
     }
 
     public function entry_author($attr) {
-        $attr['class']      .= ' ';
+
         $attr['class']      .= $this->args['entry_author'];
         return $attr;
     }
 
 
     public function entry_published($attr) {
-        $attr['class']      .= ' ';
+
         $attr['class']      .= $this->args['entry_published'];
         return $attr;
     }
 
     public function entry_header($attr) {
         $attr['class']      = "entry-header";
-        $attr['class']      .= ' ';
+
         $attr['class']      .= $this->args['entry_header'];
         return $attr;
     }
 
     public function entry_content($attr) {
-        $attr['class']      .= ' ';
+
         $attr['class']      .= $this->args['entry_content'];
         return $attr;
     }
 
     public function entry_summary($attr) {
-        $attr['class']      .= ' ';
+
         $attr['class']      .= $this->args['entry_summary'];
         return $attr;
     }
 
     public function entry_footer($attr) {
         $attr['class']      = "entry-footer";
-        $attr['class']      .= ' ';
+
         $attr['class']      .= $this->args['entry_footer'];
         return $attr;
     }
 
     public function entry_terms($attr) {
-        $attr['class']      .= ' ';
+
         $attr['class']      .= $this->args['entry_terms'];
+        return $attr;
+    }
+
+
+
+    public function menu_link( $attr, $item, $args ) {
+    	$attr['class'] = $this->args['menu_link'];
         return $attr;
     }
 
 }
 
-new AttrTrumps();
+new Attr_Trumps();
