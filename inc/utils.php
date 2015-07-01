@@ -9,8 +9,7 @@ add_filter('excerpt_length', __NAMESPACE__.'\\excerpt_length');
 add_filter('the_content', __NAMESPACE__.'\\remove_empty_p', 20, 1);
 add_action('after_setup_theme', __NAMESPACE__.'\\responsive_videos', 99);
 
-function template_hierarchy($templates)
-{
+function template_hierarchy($templates) {
     if (is_search()) {
         $templates = array_merge(['content/search.php'], $templates);
     } elseif (is_404()) {
@@ -23,8 +22,7 @@ function template_hierarchy($templates)
 /**
  * Tell WordPress to use searchform.php from the components/ directory.
  */
-function get_search_form()
-{
+function get_search_form() {
     $form = '';
     locate_template('/components/searchform.php', true, false);
 
@@ -34,27 +32,23 @@ function get_search_form()
 /**
  * Clean up the_excerpt().
  */
-function excerpt_more()
-{
+function excerpt_more() {
     return ' &hellip; <a class="" href="'.get_permalink().'">'.__('Continued', 'bempress').'</a>';
 }
 
-function excerpt_length($length)
-{
+function excerpt_length($length) {
     return 40;
 }
 
-function remove_empty_p($content)
-{
+function remove_empty_p($content) {
     $content = force_balance_tags($content);
-    $return = preg_replace('#<p>\s*+(<br\s*/*>)?\s*</p>#i', '', $content);
-    $return = preg_replace('~\s?<p>(\s|&nbsp;)+</p>\s?~', '', $return);
+    $return  = preg_replace('#<p>\s*+(<br\s*/*>)?\s*</p>#i', '', $content);
+    $return  = preg_replace('~\s?<p>(\s|&nbsp;)+</p>\s?~', '', $return);
 
     return $return;
 }
 
-function responsive_videos()
-{
+function responsive_videos() {
     add_filter('wp_video_shortcode', __NAMESPACE__.'\\responsive_videos_embed_html');
     add_filter('embed_oembed_html', __NAMESPACE__.'\\responsive_videos_embed_html');
     add_filter('video_embed_html', __NAMESPACE__.'\\responsive_videos_embed_html');
@@ -68,8 +62,7 @@ function responsive_videos()
  *
  * @return string
  */
-function responsive_videos_embed_html($html)
-{
+function responsive_videos_embed_html($html) {
     if (empty($html) || !is_string($html)) {
         return $html;
     }

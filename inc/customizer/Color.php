@@ -13,8 +13,7 @@ use Exception;
 /**
  * A color utility that helps manipulate HEX colors.
  */
-class Color
-{
+class Color {
     private $_hex;
     private $_hsl;
     private $_rgb;
@@ -33,8 +32,7 @@ class Color
      *
      * @throws Exception "Bad color format"
      */
-    public function __construct($hex)
-    {
+    public function __construct($hex) {
         // Strip # sign is present
         $color = str_replace('#', '', $hex);
 
@@ -62,8 +60,7 @@ class Color
      *
      * @return array HSL associative array
      */
-    public static function hexToHsl($color)
-    {
+    public static function hexToHsl($color) {
 
         // Sanity check
         $color = self::_checkHex($color);
@@ -73,7 +70,7 @@ class Color
         $G = hexdec($color[2].$color[3]);
         $B = hexdec($color[4].$color[5]);
 
-        $HSL = array();
+        $HSL = [];
 
         $var_R = ($R / 255);
         $var_G = ($G / 255);
@@ -131,14 +128,13 @@ class Color
      *
      * @throws Exception "Bad HSL Array"
      */
-    public static function hslToHex($hsl = array())
-    {
+    public static function hslToHex($hsl = []) {
         // Make sure it's HSL
         if (empty($hsl) || !isset($hsl['H']) || !isset($hsl['S']) || !isset($hsl['L'])) {
             throw new Exception('Param was not an HSL array');
         }
 
-        list($H, $S, $L) = array($hsl['H'] / 360,$hsl['S'],$hsl['L']);
+        list($H, $S, $L) = [$hsl['H'] / 360,$hsl['S'],$hsl['L']];
 
         if ($S == 0) {
             $r = $L * 255;
@@ -178,8 +174,7 @@ class Color
      *
      * @return array RGB associative array
      */
-    public static function hexToRgb($color)
-    {
+    public static function hexToRgb($color) {
 
         // Sanity check
         $color = self::_checkHex($color);
@@ -205,8 +200,7 @@ class Color
      *
      * @throws Exception "Bad RGB Array"
      */
-    public static function rgbToHex($rgb = array())
-    {
+    public static function rgbToHex($rgb = []) {
         // Make sure it's RGB
         if (empty($rgb) || !isset($rgb['R']) || !isset($rgb['G']) || !isset($rgb['B'])) {
             throw new Exception('Param was not an RGB array');
@@ -228,8 +222,7 @@ class Color
      *
      * @return string Darker HEX value
      */
-    public function darken($amount = self::DEFAULT_ADJUST)
-    {
+    public function darken($amount = self::DEFAULT_ADJUST) {
         // Darken
         $darkerHSL = $this->_darken($this->_hsl, $amount);
         // Return as HEX
@@ -244,8 +237,7 @@ class Color
      *
      * @return string Lighter HEX value
      */
-    public function lighten($amount = self::DEFAULT_ADJUST)
-    {
+    public function lighten($amount = self::DEFAULT_ADJUST) {
         // Lighten
         $lighterHSL = $this->_lighten($this->_hsl, $amount);
         // Return as HEX
@@ -260,9 +252,8 @@ class Color
      *
      * @return string mixed HEX value
      */
-    public function mix($hex2, $amount = 0)
-    {
-        $rgb2 = self::hexToRgb($hex2);
+    public function mix($hex2, $amount = 0) {
+        $rgb2  = self::hexToRgb($hex2);
         $mixed = $this->_mix($this->_rgb, $rgb2, $amount);
         // Return as HEX
         return self::rgbToHex($mixed);
@@ -275,19 +266,18 @@ class Color
      *
      * @return array An array with a 'light' and 'dark' index
      */
-    public function makeGradient($amount = self::DEFAULT_ADJUST)
-    {
+    public function makeGradient($amount = self::DEFAULT_ADJUST) {
         // Decide which color needs to be made
         if ($this->isLight()) {
             $lightColor = $this->_hex;
-            $darkColor = $this->darken($amount);
+            $darkColor  = $this->darken($amount);
         } else {
             $lightColor = $this->lighten($amount);
-            $darkColor = $this->_hex;
+            $darkColor  = $this->_hex;
         }
 
         // Return our gradient array
-        return array('light' => $lightColor, 'dark' => $darkColor);
+        return ['light' => $lightColor, 'dark' => $darkColor];
     }
 
     /**
@@ -297,8 +287,7 @@ class Color
      *
      * @return bool
      */
-    public function isLight($color = false)
-    {
+    public function isLight($color = false) {
         // Get our color
         $color = ($color) ? $color : $this->_hex;
 
@@ -317,8 +306,7 @@ class Color
      *
      * @return bool
      */
-    public function isDark($color = false)
-    {
+    public function isDark($color = false) {
         // Get our color
         $color = ($color) ? $color : $this->_hex;
 
@@ -335,8 +323,7 @@ class Color
      *
      * @return string Complementary hex color
      */
-    public function complementary()
-    {
+    public function complementary() {
         // Get our HSL
         $hsl = $this->_hsl;
 
@@ -350,22 +337,19 @@ class Color
     /**
      * Returns your color's HSL array.
      */
-    public function getHsl()
-    {
+    public function getHsl() {
         return $this->_hsl;
     }
     /**
      * Returns your original color.
      */
-    public function getHex()
-    {
+    public function getHex() {
         return $this->_hex;
     }
     /**
      * Returns your color's RGB array.
      */
-    public function getRgb()
-    {
+    public function getRgb() {
         return $this->_rgb;
     }
 
@@ -381,8 +365,7 @@ class Color
      *
      * @return string CSS3 gradient for chrome, safari, firefox, opera and IE10
      */
-    public function getCssGradient($amount = self::DEFAULT_ADJUST, $vintageBrowsers = false, $suffix = '', $prefix = '')
-    {
+    public function getCssGradient($amount = self::DEFAULT_ADJUST, $vintageBrowsers = false, $suffix = '', $prefix = '') {
 
         // Get the recommended gradient
         $g = $this->makeGradient($amount);
@@ -432,8 +415,7 @@ class Color
      *
      * @return array $hsl
      */
-    private function _darken($hsl, $amount = self::DEFAULT_ADJUST)
-    {
+    private function _darken($hsl, $amount = self::DEFAULT_ADJUST) {
         // Check if we were provided a number
         if ($amount) {
             $hsl['L'] = ($hsl['L'] * 100) - $amount;
@@ -454,8 +436,7 @@ class Color
      *
      * @return array $hsl
      */
-    private function _lighten($hsl, $amount = self::DEFAULT_ADJUST)
-    {
+    private function _lighten($hsl, $amount = self::DEFAULT_ADJUST) {
         // Check if we were provided a number
         if ($amount) {
             $hsl['L'] = ($hsl['L'] * 100) + $amount;
@@ -479,8 +460,7 @@ class Color
      *
      *  ported from http://phpxref.pagelines.com/nav.html?includes/class.colors.php.source.html
      */
-    private function _mix($rgb1, $rgb2, $amount = 0)
-    {
+    private function _mix($rgb1, $rgb2, $amount = 0) {
         $r1 = ($amount + 100) / 100;
         $r2 = 2 - $r1;
 
@@ -488,7 +468,7 @@ class Color
         $gmix = (($rgb1['G'] * $r1) + ($rgb2['G'] * $r2)) / 2;
         $bmix = (($rgb1['B'] * $r1) + ($rgb2['B'] * $r2)) / 2;
 
-        return array('R' => $rmix, 'G' => $gmix, 'B' => $bmix);
+        return ['R' => $rmix, 'G' => $gmix, 'B' => $bmix];
     }
 
     /**
@@ -500,8 +480,7 @@ class Color
      *
      * @return int
      */
-    private static function _huetorgb($v1, $v2, $vH)
-    {
+    private static function _huetorgb($v1, $v2, $vH) {
         if ($vH < 0) {
             $vH += 1;
         }
@@ -534,8 +513,7 @@ class Color
      *
      * @throws Exception "Bad color format"
      */
-    private static function _checkHex($hex)
-    {
+    private static function _checkHex($hex) {
         // Strip # sign is present
         $color = str_replace('#', '', $hex);
 

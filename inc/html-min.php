@@ -6,26 +6,22 @@
  *
  * http://www.intert3chmedia.net/2011/12/minify-html-javascript-css-without.html
  */
-class WP_HTML_Compression
-{
+class WP_HTML_Compression {
     // Variables
     protected $html;
-    public function __construct($html)
-    {
+    public function __construct($html) {
         if (!empty($html)) {
             $this->parseHTML($html);
         }
     }
-    public function __toString()
-    {
+    public function __toString() {
         return $this->html;
     }
-    protected function minifyHTML($html)
-    {
+    protected function minifyHTML($html) {
         $pattern = '/<(?<script>script).*?<\/script\s*>|<(?<style>style).*?<\/style\s*>|<!(?<comment>--).*?-->|<(?<tag>[\/\w.:-]*)(?:".*?"|\'.*?\'|[^\'">]+)*>|(?<text>((<[^!\/\w.:-])?[^<]*)+)|/si';
         preg_match_all($pattern, $html, $matches, PREG_SET_ORDER);
         $overriding = false;
-        $raw_tag = false;
+        $raw_tag    = false;
         // Variable reused for output
         $html = '';
         foreach ($matches as $token) {
@@ -57,13 +53,11 @@ class WP_HTML_Compression
         return $html;
     }
 
-    public function parseHTML($html)
-    {
+    public function parseHTML($html) {
         $this->html = $this->minifyHTML($html);
     }
 
-    protected function removeWhiteSpace($str)
-    {
+    protected function removeWhiteSpace($str) {
         $str = str_replace("\t", '', $str);
         $str = str_replace("\n",  '', $str);
         $str = str_replace("\r",  '', $str);
@@ -75,12 +69,10 @@ class WP_HTML_Compression
         return $str;
     }
 }
-function wp_html_compression_finish($html)
-{
+function wp_html_compression_finish($html) {
     return new WP_HTML_Compression($html);
 }
-function wp_html_compression_start()
-{
+function wp_html_compression_start() {
     ob_start('wp_html_compression_finish');
 }
 add_action('get_header', 'wp_html_compression_start');

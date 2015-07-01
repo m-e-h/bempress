@@ -5,8 +5,7 @@ namespace Bempress\Titles;
 /**
  * Page titles.
  */
-function title()
-{
+function title() {
     if (is_archive()) {
         return get_the_archive_title();
     } elseif (is_search()) {

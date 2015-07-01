@@ -19,8 +19,7 @@ add_filter('mce_buttons', 'flagship_add_styleselect', 99);
  *
  * @return $buttons array modified TinyMCE buttons
  */
-function flagship_add_styleselect($buttons)
-{
+function flagship_add_styleselect($buttons) {
     // Get rid of styleselect if it's been added somewhere else.
     if (in_array('styleselect', $buttons)) {
         unset($buttons['styleselect']);
@@ -41,8 +40,7 @@ add_filter('mce_buttons_2', 'flagship_disable_styleselect', 99);
  *
  * @return $buttons array modified TinyMCE buttons
  */
-function flagship_disable_styleselect($buttons)
-{
+function flagship_disable_styleselect($buttons) {
     if (in_array('styleselect', $buttons)) {
         unset($buttons['styleselect']);
     }
@@ -62,81 +60,80 @@ add_filter('tiny_mce_before_init', 'flagship_tiny_mce_formats', 99);
  *
  * @see    http://wordpress.stackexchange.com/a/128950/9844
  */
-function flagship_tiny_mce_formats($args)
-{
+function flagship_tiny_mce_formats($args) {
     $flagship_formats = apply_filters('flagship_tiny_mce_formats',
-        array(
-            array(
-                'title' => __('Drop Cap', 'flagship-library'),
-                'inline' => 'span',
+        [
+            [
+                'title'   => __('Drop Cap', 'flagship-library'),
+                'inline'  => 'span',
                 'classes' => 'dropcap',
-            ),
-            array(
-                'title' => __('Pull Quote Left', 'flagship-library'),
-                'block' => 'blockquote',
+            ],
+            [
+                'title'   => __('Pull Quote Left', 'flagship-library'),
+                'block'   => 'blockquote',
                 'classes' => 'pullquote alignleft',
                 'wrapper' => true,
-            ),
-            array(
-                'title' => __('Pull Quote Right', 'flagship-library'),
-                'block' => 'blockquote',
+            ],
+            [
+                'title'   => __('Pull Quote Right', 'flagship-library'),
+                'block'   => 'blockquote',
                 'classes' => 'pullquote alignright',
                 'wrapper' => true,
-            ),
-            array(
-                'title' => __('Intro Paragraph', 'flagship-library'),
+            ],
+            [
+                'title'    => __('Intro Paragraph', 'flagship-library'),
                 'selector' => 'p',
-                'classes' => 'intro-paragraph',
-                'wrapper' => true,
-            ),
-            array(
-                'title' => __('Call to Action', 'flagship-library'),
-                'block' => 'div',
+                'classes'  => 'intro-paragraph',
+                'wrapper'  => true,
+            ],
+            [
+                'title'   => __('Call to Action', 'flagship-library'),
+                'block'   => 'div',
                 'classes' => 'call-to-action',
                 'wrapper' => true,
-                'exact' => true,
-            ),
-            array(
-                'title' => __('Feature Box', 'flagship-library'),
-                'block' => 'div',
+                'exact'   => true,
+            ],
+            [
+                'title'   => __('Feature Box', 'flagship-library'),
+                'block'   => 'div',
                 'classes' => 'feature-box',
                 'wrapper' => true,
-                'exact' => true,
-            ),
-            array(
-                'title' => __('Code Block', 'flagship-library'),
+                'exact'   => true,
+            ],
+            [
+                'title'  => __('Code Block', 'flagship-library'),
                 'format' => 'pre',
-            ),
-            array(
+            ],
+            [
                 'title' => __('Buttons', 'flagship-library'),
-                'items' => array(
-                    array(
-                        'title' => __('Standard', 'flagship-library'),
+                'items' => [
+                    [
+                        'title'    => __('Standard', 'flagship-library'),
                         'selector' => 'a',
-                        'classes' => 'button',
-                        'exact' => true,
-                    ),
-                    array(
-                        'title' => __('Standard Block', 'flagship-library'),
+                        'classes'  => 'button',
+                        'exact'    => true,
+                    ],
+                    [
+                        'title'    => __('Standard Block', 'flagship-library'),
                         'selector' => 'a',
-                        'classes' => 'button block',
-                        'exact' => true,
-                    ),
-                    array(
-                        'title' => __('Call to Action', 'flagship-library'),
+                        'classes'  => 'button block',
+                        'exact'    => true,
+                    ],
+                    [
+                        'title'    => __('Call to Action', 'flagship-library'),
                         'selector' => 'a',
-                        'classes' => 'button secondary cta',
-                        'exact' => true,
-                    ),
-                    array(
-                        'title' => __('Call to Action Block', 'flagship-library'),
+                        'classes'  => 'button secondary cta',
+                        'exact'    => true,
+                    ],
+                    [
+                        'title'    => __('Call to Action Block', 'flagship-library'),
                         'selector' => 'a',
-                        'classes' => 'button secondary cta block',
-                        'exact' => true,
-                    ),
-                ),
-            ),
-        )
+                        'classes'  => 'button secondary cta block',
+                        'exact'    => true,
+                    ],
+                ],
+            ],
+        ]
     );
     // Merge with any existing formats which have been added by plugins.
     if (!empty($args['style_formats'])) {

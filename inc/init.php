@@ -13,8 +13,7 @@ add_action('widgets_init', __NAMESPACE__.'\\widgets', 5);
 add_action('init', __NAMESPACE__.'\\image_sizes', 5);
 add_action('hybrid_register_layouts', __NAMESPACE__.'\\layouts');
 
-function setup()
-{
+function setup() {
 
     // http://codex.wordpress.org/Automatic_Feed_Links
     add_theme_support('automatic-feed-links');
@@ -55,29 +54,27 @@ function setup()
 /**
  * Register sidebars.
  */
-function widgets()
-{
+function widgets() {
     hybrid_register_sidebar([
-    'name' => __('Primary', 'bempress'),
-    'id' => 'primary',
+    'name'          => __('Primary', 'bempress'),
+    'id'            => 'primary',
     'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget' => '</section>',
-    'before_title' => '<h3 class="widget-title">',
-    'after_title' => '</h3>',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3 class="widget-title">',
+    'after_title'   => '</h3>',
   ]);
 
     hybrid_register_sidebar([
-    'name' => __('Footer', 'bempress'),
-    'id' => 'footer',
+    'name'          => __('Footer', 'bempress'),
+    'id'            => 'footer',
     'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget' => '</section>',
-    'before_title' => '<h3 class="widget-title">',
-    'after_title' => '</h3>',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3 class="widget-title">',
+    'after_title'   => '</h3>',
   ]);
 }
 
-function image_sizes()
-{
+function image_sizes() {
     // Set the 'post-thumbnail' size.
     set_post_thumbnail_size(150, 150, true);
     // Add the 'bempress-full' image size.
@@ -89,35 +86,34 @@ function image_sizes()
     add_image_size('bempress-sm', 640, 360, true);
 }
 
-function layouts()
-{
+function layouts() {
     hybrid_get_layout('default')->image = '%s/assets/images/default.svg';
 
     hybrid_register_layout('single-column', [
-        'label' => _x('Single Column', 'theme layout', 'bempress'),
+        'label'            => _x('Single Column', 'theme layout', 'bempress'),
         'is_global_layout' => true,
-        'is_post_layout' => true,
-        'image' => '%s/assets/images/single-column.svg',
+        'is_post_layout'   => true,
+        'image'            => '%s/assets/images/single-column.svg',
     ]);
 
     hybrid_register_layout('single-column--wide', [
-        'label' => _x('Single Column Wide', 'theme layout', 'bempress'),
+        'label'            => _x('Single Column Wide', 'theme layout', 'bempress'),
         'is_global_layout' => true,
-        'is_post_layout' => true,
-        'image' => '%s/assets/images/single-column-wide.svg',
+        'is_post_layout'   => true,
+        'image'            => '%s/assets/images/single-column-wide.svg',
     ]);
 
     hybrid_register_layout('sidebar-right', [
-        'label' => _x('Sidebar Right', 'theme layout', 'bempress'),
+        'label'            => _x('Sidebar Right', 'theme layout', 'bempress'),
         'is_global_layout' => true,
-        'is_post_layout' => true,
-        'image' => '%s/assets/images/sidebar-right.svg',
+        'is_post_layout'   => true,
+        'image'            => '%s/assets/images/sidebar-right.svg',
     ]);
 
     hybrid_register_layout('sidebar-left', [
-        'label' => _x('Sidebar Left', 'theme layout', 'bempress'),
+        'label'            => _x('Sidebar Left', 'theme layout', 'bempress'),
         'is_global_layout' => true,
-        'is_post_layout' => true,
-        'image' => '%s/assets/images/sidebar-left.svg',
+        'is_post_layout'   => true,
+        'image'            => '%s/assets/images/sidebar-left.svg',
     ]);
 }

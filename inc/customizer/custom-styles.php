@@ -10,8 +10,7 @@ use Mexitek\PHPColors\Color;
  *
  * @since  1.0.0
  */
-final class Bempress_Custom_Styles
-{
+final class Bempress_Custom_Styles {
     /**
      * Holds the instance of this class.
      *
@@ -26,22 +25,21 @@ final class Bempress_Custom_Styles
      *
      * @since  1.0.0
      */
-    public function __construct()
-    {
+    public function __construct() {
 
         /* Output CSS into <head>. */
-        add_action('wp_head', array($this, 'wp_head_callback'));
+        add_action('wp_head', [$this, 'wp_head_callback']);
 
         /* Add a '.custom-styles' <body> class. */
-        add_filter('body_class', array($this, 'body_class'));
+        add_filter('body_class', [$this, 'body_class']);
 
         /* Filter the default colors late. */
-        add_filter('theme_mod_primary_color',      array($this, 'primary_color_default'), 95);
-        add_filter('theme_mod_secondary_color',    array($this, 'secondary_color_default'), 95);
-        add_filter('theme_mod_accent_color',       array($this, 'accent_color_default'), 95);
+        add_filter('theme_mod_primary_color',      [$this, 'primary_color_default'], 95);
+        add_filter('theme_mod_secondary_color',    [$this, 'secondary_color_default'], 95);
+        add_filter('theme_mod_accent_color',       [$this, 'accent_color_default'], 95);
 
         /* Delete the cached data for this feature. */
-        add_action('update_option_theme_mods_'.get_stylesheet(), array($this, 'cache_delete'));
+        add_action('update_option_theme_mods_'.get_stylesheet(), [$this, 'cache_delete']);
     }
 
     /**
@@ -54,18 +52,15 @@ final class Bempress_Custom_Styles
      *
      * @return string
      */
-    public function primary_color_default($hex)
-    {
+    public function primary_color_default($hex) {
         return $hex ? $hex : '004899';
     }
 
-    public function secondary_color_default($hex)
-    {
+    public function secondary_color_default($hex) {
         return $hex ? $hex : 'ffe192';
     }
 
-    public function accent_color_default($hex)
-    {
+    public function accent_color_default($hex) {
         return $hex ? $hex : 'eeeeee';
     }
 
@@ -78,8 +73,7 @@ final class Bempress_Custom_Styles
      *
      * @return array
      */
-    public function body_class($classes)
-    {
+    public function body_class($classes) {
         $classes[] = 'custom-styles';
 
         return $classes;
@@ -90,8 +84,7 @@ final class Bempress_Custom_Styles
      *
      * @since  1.0.0
      */
-    public function wp_head_callback()
-    {
+    public function wp_head_callback() {
         $stylesheet = get_stylesheet();
         /* Get the cached style. */
         $style = wp_cache_get("{$stylesheet}_custom_colors");
@@ -119,25 +112,24 @@ final class Bempress_Custom_Styles
      *
      * @return string
      */
-    public function get_primary_styles()
-    {
+    public function get_primary_styles() {
         $style = '';
-        $hex = get_theme_mod('primary_color', '');
+        $hex   = get_theme_mod('primary_color', '');
         $hfont = get_theme_mod('heading_font', '');
         $bfont = get_theme_mod('body_font', '');
-        $rgb = implode(', ', hybrid_hex_to_rgb($hex));
+        $rgb   = implode(', ', hybrid_hex_to_rgb($hex));
 
         $primaryColor = new Color($hex);
-        $color50 = $primaryColor->lighten(45);
-        $color100 = $primaryColor->lighten(40);
-        $color200 = $primaryColor->lighten(30);
-        $color300 = $primaryColor->lighten(20);
-        $color400 = $primaryColor->lighten(10);
-        $color500 = $hex;
-        $color600 = $primaryColor->darken(10);
-        $color700 = $primaryColor->darken(20);
-        $color800 = $primaryColor->darken(30);
-        $color900 = $primaryColor->darken(40);
+        $color50      = $primaryColor->lighten(45);
+        $color100     = $primaryColor->lighten(40);
+        $color200     = $primaryColor->lighten(30);
+        $color300     = $primaryColor->lighten(20);
+        $color400     = $primaryColor->lighten(10);
+        $color500     = $hex;
+        $color600     = $primaryColor->darken(10);
+        $color700     = $primaryColor->darken(20);
+        $color800     = $primaryColor->darken(30);
+        $color900     = $primaryColor->darken(40);
 
         /* === Color === */
 
@@ -182,7 +174,7 @@ final class Bempress_Custom_Styles
                 { font-family: '$bfont'; }
             ";
         /* Return the styles. */
-        return str_replace(array("\r", "\n", "\t"), '', $style);
+        return str_replace(["\r", "\n", "\t"], '', $style);
     }
 
     /**
@@ -192,23 +184,22 @@ final class Bempress_Custom_Styles
      *
      * @return string
      */
-    public function get_secondary_styles()
-    {
+    public function get_secondary_styles() {
         $style = '';
-        $hex = get_theme_mod('secondary_color', '');
-        $rgb = implode(', ', hybrid_hex_to_rgb($hex));
+        $hex   = get_theme_mod('secondary_color', '');
+        $rgb   = implode(', ', hybrid_hex_to_rgb($hex));
 
         $secondaryColor = new Color($hex);
-        $color50 = $secondaryColor->lighten(45);
-        $color100 = $secondaryColor->lighten(40);
-        $color200 = $secondaryColor->lighten(30);
-        $color300 = $secondaryColor->lighten(20);
-        $color400 = $secondaryColor->lighten(10);
-        $color500 = $hex;
-        $color600 = $secondaryColor->darken(10);
-        $color700 = $secondaryColor->darken(20);
-        $color800 = $secondaryColor->darken(30);
-        $color900 = $secondaryColor->darken(40);
+        $color50        = $secondaryColor->lighten(45);
+        $color100       = $secondaryColor->lighten(40);
+        $color200       = $secondaryColor->lighten(30);
+        $color300       = $secondaryColor->lighten(20);
+        $color400       = $secondaryColor->lighten(10);
+        $color500       = $hex;
+        $color600       = $secondaryColor->darken(10);
+        $color700       = $secondaryColor->darken(20);
+        $color800       = $secondaryColor->darken(30);
+        $color900       = $secondaryColor->darken(40);
 
         /* === Color === */
 
@@ -245,7 +236,7 @@ final class Bempress_Custom_Styles
                 { fill: #{$color600}; }
                 ";
         /* Return the styles. */
-        return str_replace(array("\r", "\n", "\t"), '', $style);
+        return str_replace(["\r", "\n", "\t"], '', $style);
     }
 
     /**
@@ -255,23 +246,22 @@ final class Bempress_Custom_Styles
      *
      * @return string
      */
-    public function get_accent_styles()
-    {
+    public function get_accent_styles() {
         $style = '';
-        $hex = get_theme_mod('accent_color', '');
-        $rgb = implode(', ', hybrid_hex_to_rgb($hex));
+        $hex   = get_theme_mod('accent_color', '');
+        $rgb   = implode(', ', hybrid_hex_to_rgb($hex));
 
         $accentColor = new Color($hex);
-        $color50 = $accentColor->lighten(45);
-        $color100 = $accentColor->lighten(40);
-        $color200 = $accentColor->lighten(30);
-        $color300 = $accentColor->lighten(20);
-        $color400 = $accentColor->lighten(10);
-        $color500 = $hex;
-        $color600 = $accentColor->darken(10);
-        $color700 = $accentColor->darken(20);
-        $color800 = $accentColor->darken(30);
-        $color900 = $accentColor->darken(40);
+        $color50     = $accentColor->lighten(45);
+        $color100    = $accentColor->lighten(40);
+        $color200    = $accentColor->lighten(30);
+        $color300    = $accentColor->lighten(20);
+        $color400    = $accentColor->lighten(10);
+        $color500    = $hex;
+        $color600    = $accentColor->darken(10);
+        $color700    = $accentColor->darken(20);
+        $color800    = $accentColor->darken(30);
+        $color900    = $accentColor->darken(40);
 
         /* === Color === */
 
@@ -308,7 +298,7 @@ final class Bempress_Custom_Styles
                 { fill: #{$color600}; }
                 ";
         /* Return the styles. */
-        return str_replace(array("\r", "\n", "\t"), '', $style);
+        return str_replace(["\r", "\n", "\t"], '', $style);
     }
 
     /**
@@ -316,8 +306,7 @@ final class Bempress_Custom_Styles
      *
      * @since  1.0.0
      */
-    public function cache_delete()
-    {
+    public function cache_delete() {
         wp_cache_delete(get_stylesheet().'_custom_colors');
     }
     /**
@@ -327,8 +316,7 @@ final class Bempress_Custom_Styles
      *
      * @return object
      */
-    public static function get_instance()
-    {
+    public static function get_instance() {
         if (!self::$instance) {
             self::$instance = new self();
         }

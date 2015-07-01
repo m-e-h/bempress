@@ -13,12 +13,11 @@ if (!function_exists('customizer_library_get_font_choices')) :
  *
  * @return array    The fonts in value/label pairs.
  */
-function customizer_library_get_all_fonts()
-{
-    $heading1 = array(1 => array('label' => sprintf('--- %s ---', __('Standard Fonts', 'customizer-library'))));
+function customizer_library_get_all_fonts() {
+    $heading1       = [1 => ['label' => sprintf('--- %s ---', __('Standard Fonts', 'customizer-library'))]];
     $standard_fonts = customizer_library_get_standard_fonts();
-    $heading2 = array(2 => array('label' => sprintf('--- %s ---', __('Google Fonts', 'customizer-library'))));
-    $google_fonts = customizer_library_get_google_fonts();
+    $heading2       = [2 => ['label' => sprintf('--- %s ---', __('Google Fonts', 'customizer-library'))]];
+    $google_fonts   = customizer_library_get_google_fonts();
 
     /*
      * Allow for developers to modify the full list of fonts.
@@ -39,10 +38,9 @@ if (!function_exists('customizer_library_get_font_choices')) :
  *
  * @return array    The fonts in value/label pairs.
  */
-function customizer_library_get_font_choices()
-{
-    $fonts = customizer_library_get_all_fonts();
-    $choices = array();
+function customizer_library_get_font_choices() {
+    $fonts   = customizer_library_get_all_fonts();
+    $choices = [];
 
     // Repackage the fonts into value/label pairs
     foreach ($fonts as $key => $font) {
@@ -61,13 +59,12 @@ if (!function_exists('customizer_library_get_google_font_uri')) :
  *
  * @return string    The URL for including Google Fonts.
  */
-function customizer_library_get_google_font_uri($fonts)
-{
+function customizer_library_get_google_font_uri($fonts) {
 
     // De-dupe the fonts
-    $fonts = array_unique($fonts);
+    $fonts         = array_unique($fonts);
     $allowed_fonts = customizer_library_get_google_fonts();
-    $family = array();
+    $family        = [];
 
     // Validate each font and convert to URL format
     foreach ($fonts as $font) {
@@ -99,10 +96,10 @@ function customizer_library_get_google_font_uri($fonts)
         // Build the array
         $subsets = array_keys($subsets_available);
     } else {
-        $subsets = array(
+        $subsets = [
             'latin',
             $subset,
-        );
+        ];
     }
 
     // Append the subset string
@@ -122,20 +119,19 @@ if (!function_exists('customizer_library_get_google_font_subsets')) :
  *
  * @return array    The available subsets.
  */
-function customizer_library_get_google_font_subsets()
-{
-    return array(
-        'all' => __('All', 'textdomain'),
-        'cyrillic' => __('Cyrillic', 'textdomain'),
+function customizer_library_get_google_font_subsets() {
+    return [
+        'all'          => __('All', 'textdomain'),
+        'cyrillic'     => __('Cyrillic', 'textdomain'),
         'cyrillic-ext' => __('Cyrillic Extended', 'textdomain'),
-        'devanagari' => __('Devanagari', 'textdomain'),
-        'greek' => __('Greek', 'textdomain'),
-        'greek-ext' => __('Greek Extended', 'textdomain'),
-        'khmer' => __('Khmer', 'textdomain'),
-        'latin' => __('Latin', 'textdomain'),
-        'latin-ext' => __('Latin Extended', 'textdomain'),
-        'vietnamese' => __('Vietnamese', 'textdomain'),
-    );
+        'devanagari'   => __('Devanagari', 'textdomain'),
+        'greek'        => __('Greek', 'textdomain'),
+        'greek-ext'    => __('Greek Extended', 'textdomain'),
+        'khmer'        => __('Khmer', 'textdomain'),
+        'latin'        => __('Latin', 'textdomain'),
+        'latin-ext'    => __('Latin Extended', 'textdomain'),
+        'vietnamese'   => __('Vietnamese', 'textdomain'),
+    ];
 }
 endif;
 
@@ -153,9 +149,8 @@ if (!function_exists('customizer_library_choose_google_font_variants')) :
  *
  * @return array                  The chosen variants.
  */
-function customizer_library_choose_google_font_variants($font, $variants = array())
-{
-    $chosen_variants = array();
+function customizer_library_choose_google_font_variants($font, $variants = []) {
+    $chosen_variants = [];
     if (empty($variants)) {
         $fonts = customizer_library_get_google_fonts();
 
@@ -208,22 +203,21 @@ if (!function_exists('customizer_library_get_standard_fonts')) :
  *
  * @return array    Standard websafe fonts.
  */
-function customizer_library_get_standard_fonts()
-{
-    return array(
-        'serif' => array(
+function customizer_library_get_standard_fonts() {
+    return [
+        'serif' => [
             'label' => _x('Serif', 'font style', 'textdomain'),
             'stack' => 'Georgia,Times,"Times New Roman",serif',
-        ),
-        'sans-serif' => array(
+        ],
+        'sans-serif' => [
             'label' => _x('Sans Serif', 'font style', 'textdomain'),
             'stack' => '"Helvetica Neue",Helvetica,Arial,sans-serif',
-        ),
-        'monospace' => array(
+        ],
+        'monospace' => [
             'label' => _x('Monospaced', 'font style', 'textdomain'),
             'stack' => 'Monaco,"Lucida Sans Typewriter","Lucida Typewriter","Courier New",Courier,monospace',
-        ),
-    );
+        ],
+    ];
 }
 endif;
 
@@ -237,14 +231,13 @@ if (!function_exists('customizer_library_get_font_stack')) :
  *
  * @return string             The full font stack.
  */
-function customizer_library_get_font_stack($font)
-{
+function customizer_library_get_font_stack($font) {
     $all_fonts = customizer_library_get_all_fonts();
 
     // Sanitize font choice
     $font = customizer_library_sanitize_font_choice($font);
 
-    $sans = '"Helvetica Neue",sans-serif';
+    $sans  = '"Helvetica Neue",sans-serif';
     $serif = 'Georgia, serif';
 
     // Use stack if one is identified
@@ -268,8 +261,7 @@ if (!function_exists('customizer_library_sanitize_font_choice')) :
  *
  * @return string              The sanitized font choice.
  */
-function customizer_library_sanitize_font_choice($value)
-{
+function customizer_library_sanitize_font_choice($value) {
     if (is_int($value)) {
         // The array key is an integer, so the chosen option is a heading, not a real choice
         return '';
@@ -289,18 +281,17 @@ if (!function_exists('customizer_library_get_google_fonts')) :
  *
  * @return array    All Google Fonts.
  */
-function customizer_library_get_google_fonts()
-{
-    return apply_filters('customizer_library_get_google_fonts', array(
-        'Arimo' => array(
-            'label' => 'Arimo',
-            'variants' => array(
+function customizer_library_get_google_fonts() {
+    return apply_filters('customizer_library_get_google_fonts', [
+        'Arimo' => [
+            'label'    => 'Arimo',
+            'variants' => [
                 'regular',
                 'italic',
                 '700',
                 '700italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'greek-ext',
                 'cyrillic',
@@ -308,23 +299,23 @@ function customizer_library_get_google_fonts()
                 'vietnamese',
                 'latin-ext',
                 'cyrillic-ext',
-            ),
-        ),
-        'Arvo' => array(
-            'label' => 'Arvo',
-            'variants' => array(
+            ],
+        ],
+        'Arvo' => [
+            'label'    => 'Arvo',
+            'variants' => [
                 'regular',
                 'italic',
                 '700',
                 '700italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Cabin' => array(
-            'label' => 'Cabin',
-            'variants' => array(
+            ],
+        ],
+        'Cabin' => [
+            'label'    => 'Cabin',
+            'variants' => [
                 'regular',
                 'italic',
                 '500',
@@ -333,125 +324,125 @@ function customizer_library_get_google_fonts()
                 '600italic',
                 '700',
                 '700italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Cabin Condensed' => array(
-            'label' => 'Cabin Condensed',
-            'variants' => array(
+            ],
+        ],
+        'Cabin Condensed' => [
+            'label'    => 'Cabin Condensed',
+            'variants' => [
                 'regular',
                 '500',
                 '600',
                 '700',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Cabin Sketch' => array(
-            'label' => 'Cabin Sketch',
-            'variants' => array(
+            ],
+        ],
+        'Cabin Sketch' => [
+            'label'    => 'Cabin Sketch',
+            'variants' => [
                 'regular',
                 '700',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Cinzel' => array(
-            'label' => 'Cinzel',
-            'variants' => array(
-                'regular',
-                '700',
-                '900',
-            ),
-            'subsets' => array(
-                'latin',
-            ),
-        ),
-        'Cinzel Decorative' => array(
-            'label' => 'Cinzel Decorative',
-            'variants' => array(
+            ],
+        ],
+        'Cinzel' => [
+            'label'    => 'Cinzel',
+            'variants' => [
                 'regular',
                 '700',
                 '900',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Crimson Text' => array(
-            'label' => 'Crimson Text',
-            'variants' => array(
+            ],
+        ],
+        'Cinzel Decorative' => [
+            'label'    => 'Cinzel Decorative',
+            'variants' => [
+                'regular',
+                '700',
+                '900',
+            ],
+            'subsets' => [
+                'latin',
+            ],
+        ],
+        'Crimson Text' => [
+            'label'    => 'Crimson Text',
+            'variants' => [
                 'regular',
                 'italic',
                 '600',
                 '600italic',
                 '700',
                 '700italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Droid Sans' => array(
-            'label' => 'Droid Sans',
-            'variants' => array(
+            ],
+        ],
+        'Droid Sans' => [
+            'label'    => 'Droid Sans',
+            'variants' => [
                 'regular',
                 '700',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Droid Sans Mono' => array(
-            'label' => 'Droid Sans Mono',
-            'variants' => array(
+            ],
+        ],
+        'Droid Sans Mono' => [
+            'label'    => 'Droid Sans Mono',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Droid Serif' => array(
-            'label' => 'Droid Serif',
-            'variants' => array(
+            ],
+        ],
+        'Droid Serif' => [
+            'label'    => 'Droid Serif',
+            'variants' => [
                 'regular',
                 'italic',
                 '700',
                 '700italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'EB Garamond' => array(
-            'label' => 'EB Garamond',
-            'variants' => array(
+            ],
+        ],
+        'EB Garamond' => [
+            'label'    => 'EB Garamond',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'cyrillic',
                 'vietnamese',
                 'latin-ext',
                 'cyrillic-ext',
-            ),
-        ),
-        'Finger Paint' => array(
-            'label' => 'Finger Paint',
-            'variants' => array(
+            ],
+        ],
+        'Finger Paint' => [
+            'label'    => 'Finger Paint',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Fira Sans' => array(
-            'label' => 'Fira Sans',
-            'variants' => array(
+            ],
+        ],
+        'Fira Sans' => [
+            'label'    => 'Fira Sans',
+            'variants' => [
                 '300',
                 '300italic',
                 '400',
@@ -460,173 +451,173 @@ function customizer_library_get_google_fonts()
                 '500italic',
                 '700',
                 '700italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'greek',
                 'cyrillic',
                 'latin-ext',
                 'cyrillic-ext',
-            ),
-        ),
-        'Fira Mono' => array(
-            'label' => 'Fira Mono',
-            'variants' => array(
+            ],
+        ],
+        'Fira Mono' => [
+            'label'    => 'Fira Mono',
+            'variants' => [
                 '400',
                 '700',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'greek',
                 'cyrillic',
                 'latin-ext',
                 'cyrillic-ext',
-            ),
-        ),
-        'Forum' => array(
-            'label' => 'Forum',
-            'variants' => array(
+            ],
+        ],
+        'Forum' => [
+            'label'    => 'Forum',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'cyrillic',
                 'latin-ext',
                 'cyrillic-ext',
-            ),
-        ),
-        'Gentium Basic' => array(
-            'label' => 'Gentium Basic',
-            'variants' => array(
+            ],
+        ],
+        'Gentium Basic' => [
+            'label'    => 'Gentium Basic',
+            'variants' => [
                 'regular',
                 'italic',
                 '700',
                 '700italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'latin-ext',
-            ),
-        ),
-        'Gentium Book Basic' => array(
-            'label' => 'Gentium Book Basic',
-            'variants' => array(
+            ],
+        ],
+        'Gentium Book Basic' => [
+            'label'    => 'Gentium Book Basic',
+            'variants' => [
                 'regular',
                 'italic',
                 '700',
                 '700italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'latin-ext',
-            ),
-        ),
-        'Give You Glory' => array(
-            'label' => 'Give You Glory',
-            'variants' => array(
+            ],
+        ],
+        'Give You Glory' => [
+            'label'    => 'Give You Glory',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Glass Antiqua' => array(
-            'label' => 'Glass Antiqua',
-            'variants' => array(
+            ],
+        ],
+        'Glass Antiqua' => [
+            'label'    => 'Glass Antiqua',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
-                'latin',
-                'latin-ext',
-            ),
-        ),
-        'Glegoo' => array(
-            'label' => 'Glegoo',
-            'variants' => array(
-                'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'latin-ext',
-            ),
-        ),
-        'Gloria Hallelujah' => array(
-            'label' => 'Gloria Hallelujah',
-            'variants' => array(
+            ],
+        ],
+        'Glegoo' => [
+            'label'    => 'Glegoo',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Goblin One' => array(
-            'label' => 'Goblin One',
-            'variants' => array(
+                'latin-ext',
+            ],
+        ],
+        'Gloria Hallelujah' => [
+            'label'    => 'Gloria Hallelujah',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Gochi Hand' => array(
-            'label' => 'Gochi Hand',
-            'variants' => array(
+            ],
+        ],
+        'Goblin One' => [
+            'label'    => 'Goblin One',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Gorditas' => array(
-            'label' => 'Gorditas',
-            'variants' => array(
+            ],
+        ],
+        'Gochi Hand' => [
+            'label'    => 'Gochi Hand',
+            'variants' => [
+                'regular',
+            ],
+            'subsets' => [
+                'latin',
+            ],
+        ],
+        'Gorditas' => [
+            'label'    => 'Gorditas',
+            'variants' => [
                 'regular',
                 '700',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Goudy Bookletter 1911' => array(
-            'label' => 'Goudy Bookletter 1911',
-            'variants' => array(
+            ],
+        ],
+        'Goudy Bookletter 1911' => [
+            'label'    => 'Goudy Bookletter 1911',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Graduate' => array(
-            'label' => 'Graduate',
-            'variants' => array(
+            ],
+        ],
+        'Graduate' => [
+            'label'    => 'Graduate',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Italiana' => array(
-            'label' => 'Italiana',
-            'variants' => array(
+            ],
+        ],
+        'Italiana' => [
+            'label'    => 'Italiana',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Italianno' => array(
-            'label' => 'Italianno',
-            'variants' => array(
+            ],
+        ],
+        'Italianno' => [
+            'label'    => 'Italianno',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'latin-ext',
-            ),
-        ),
-        'Josefin Sans' => array(
-            'label' => 'Josefin Sans',
-            'variants' => array(
+            ],
+        ],
+        'Josefin Sans' => [
+            'label'    => 'Josefin Sans',
+            'variants' => [
                 '100',
                 '100italic',
                 '300',
@@ -637,14 +628,14 @@ function customizer_library_get_google_fonts()
                 '600italic',
                 '700',
                 '700italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Josefin Slab' => array(
-            'label' => 'Josefin Slab',
-            'variants' => array(
+            ],
+        ],
+        'Josefin Slab' => [
+            'label'    => 'Josefin Slab',
+            'variants' => [
                 '100',
                 '100italic',
                 '300',
@@ -655,24 +646,24 @@ function customizer_library_get_google_fonts()
                 '600italic',
                 '700',
                 '700italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Kotta One' => array(
-            'label' => 'Kotta One',
-            'variants' => array(
+            ],
+        ],
+        'Kotta One' => [
+            'label'    => 'Kotta One',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'latin-ext',
-            ),
-        ),
-        'Lato' => array(
-            'label' => 'Lato',
-            'variants' => array(
+            ],
+        ],
+        'Lato' => [
+            'label'    => 'Lato',
+            'variants' => [
                 '100',
                 '100italic',
                 '300',
@@ -683,143 +674,143 @@ function customizer_library_get_google_fonts()
                 '700italic',
                 '900',
                 '900italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'League Script' => array(
-            'label' => 'League Script',
-            'variants' => array(
+            ],
+        ],
+        'League Script' => [
+            'label'    => 'League Script',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Ledger' => array(
-            'label' => 'Ledger',
-            'variants' => array(
+            ],
+        ],
+        'Ledger' => [
+            'label'    => 'Ledger',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'cyrillic',
                 'latin-ext',
-            ),
-        ),
-        'Libre Baskerville' => array(
-            'label' => 'Libre Baskerville',
-            'variants' => array(
+            ],
+        ],
+        'Libre Baskerville' => [
+            'label'    => 'Libre Baskerville',
+            'variants' => [
                 'regular',
                 'italic',
                 '700',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'latin-ext',
-            ),
-        ),
-        'Lobster' => array(
-            'label' => 'Lobster',
-            'variants' => array(
+            ],
+        ],
+        'Lobster' => [
+            'label'    => 'Lobster',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'cyrillic',
                 'latin-ext',
                 'cyrillic-ext',
-            ),
-        ),
-        'Lobster Two' => array(
-            'label' => 'Lobster Two',
-            'variants' => array(
+            ],
+        ],
+        'Lobster Two' => [
+            'label'    => 'Lobster Two',
+            'variants' => [
                 'regular',
                 'italic',
                 '700',
                 '700italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Lora' => array(
-            'label' => 'Lora',
-            'variants' => array(
+            ],
+        ],
+        'Lora' => [
+            'label'    => 'Lora',
+            'variants' => [
                 'regular',
                 'italic',
                 '700',
                 '700italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'cyrillic',
                 'latin-ext',
-            ),
-        ),
-        'Love Ya Like A Sister' => array(
-            'label' => 'Love Ya Like A Sister',
-            'variants' => array(
+            ],
+        ],
+        'Love Ya Like A Sister' => [
+            'label'    => 'Love Ya Like A Sister',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Loved by the King' => array(
-            'label' => 'Loved by the King',
-            'variants' => array(
+            ],
+        ],
+        'Loved by the King' => [
+            'label'    => 'Loved by the King',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Lustria' => array(
-            'label' => 'Lustria',
-            'variants' => array(
+            ],
+        ],
+        'Lustria' => [
+            'label'    => 'Lustria',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Marcellus' => array(
-            'label' => 'Marcellus',
-            'variants' => array(
+            ],
+        ],
+        'Marcellus' => [
+            'label'    => 'Marcellus',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
-                'latin',
-                'latin-ext',
-            ),
-        ),
-        'Marcellus SC' => array(
-            'label' => 'Marcellus SC',
-            'variants' => array(
-                'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'latin-ext',
-            ),
-        ),
-        'Marvel' => array(
-            'label' => 'Marvel',
-            'variants' => array(
+            ],
+        ],
+        'Marcellus SC' => [
+            'label'    => 'Marcellus SC',
+            'variants' => [
+                'regular',
+            ],
+            'subsets' => [
+                'latin',
+                'latin-ext',
+            ],
+        ],
+        'Marvel' => [
+            'label'    => 'Marvel',
+            'variants' => [
                 'regular',
                 'italic',
                 '700',
                 '700italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Merriweather' => array(
-            'label' => 'Merriweather',
-            'variants' => array(
+            ],
+        ],
+        'Merriweather' => [
+            'label'    => 'Merriweather',
+            'variants' => [
                 '300',
                 '300italic',
                 'regular',
@@ -828,15 +819,15 @@ function customizer_library_get_google_fonts()
                 '700italic',
                 '900',
                 '900italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'latin-ext',
-            ),
-        ),
-        'Merriweather Sans' => array(
-            'label' => 'Merriweather Sans',
-            'variants' => array(
+            ],
+        ],
+        'Merriweather Sans' => [
+            'label'    => 'Merriweather Sans',
+            'variants' => [
                 '300',
                 '300italic',
                 'regular',
@@ -845,31 +836,31 @@ function customizer_library_get_google_fonts()
                 '700italic',
                 '800',
                 '800italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'latin-ext',
-            ),
-        ),
-        'Modern Antiqua' => array(
-            'label' => 'Modern Antiqua',
-            'variants' => array(
+            ],
+        ],
+        'Modern Antiqua' => [
+            'label'    => 'Modern Antiqua',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'latin-ext',
-            ),
-        ),
-        'Noto Sans' => array(
-            'label' => 'Noto Sans',
-            'variants' => array(
+            ],
+        ],
+        'Noto Sans' => [
+            'label'    => 'Noto Sans',
+            'variants' => [
                 'regular',
                 'italic',
                 '700',
                 '700italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'greek-ext',
                 'cyrillic',
@@ -878,17 +869,17 @@ function customizer_library_get_google_fonts()
                 'latin-ext',
                 'devanagari',
                 'cyrillic-ext',
-            ),
-        ),
-        'Noto Serif' => array(
-            'label' => 'Noto Serif',
-            'variants' => array(
+            ],
+        ],
+        'Noto Serif' => [
+            'label'    => 'Noto Serif',
+            'variants' => [
                 'regular',
                 'italic',
                 '700',
                 '700italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'greek-ext',
                 'cyrillic',
@@ -896,54 +887,54 @@ function customizer_library_get_google_fonts()
                 'vietnamese',
                 'latin-ext',
                 'cyrillic-ext',
-            ),
-        ),
-        'Old Standard TT' => array(
-            'label' => 'Old Standard TT',
-            'variants' => array(
+            ],
+        ],
+        'Old Standard TT' => [
+            'label'    => 'Old Standard TT',
+            'variants' => [
                 'regular',
                 'italic',
                 '700',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Oldenburg' => array(
-            'label' => 'Oldenburg',
-            'variants' => array(
+            ],
+        ],
+        'Oldenburg' => [
+            'label'    => 'Oldenburg',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'latin-ext',
-            ),
-        ),
-        'Oleo Script' => array(
-            'label' => 'Oleo Script',
-            'variants' => array(
-                'regular',
-                '700',
-            ),
-            'subsets' => array(
-                'latin',
-                'latin-ext',
-            ),
-        ),
-        'Oleo Script Swash Caps' => array(
-            'label' => 'Oleo Script Swash Caps',
-            'variants' => array(
+            ],
+        ],
+        'Oleo Script' => [
+            'label'    => 'Oleo Script',
+            'variants' => [
                 'regular',
                 '700',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'latin-ext',
-            ),
-        ),
-        'Open Sans' => array(
-            'label' => 'Open Sans',
-            'variants' => array(
+            ],
+        ],
+        'Oleo Script Swash Caps' => [
+            'label'    => 'Oleo Script Swash Caps',
+            'variants' => [
+                'regular',
+                '700',
+            ],
+            'subsets' => [
+                'latin',
+                'latin-ext',
+            ],
+        ],
+        'Open Sans' => [
+            'label'    => 'Open Sans',
+            'variants' => [
                 '300',
                 '300italic',
                 'regular',
@@ -954,8 +945,8 @@ function customizer_library_get_google_fonts()
                 '700italic',
                 '800',
                 '800italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'greek-ext',
                 'cyrillic',
@@ -964,16 +955,16 @@ function customizer_library_get_google_fonts()
                 'latin-ext',
                 'devanagari',
                 'cyrillic-ext',
-            ),
-        ),
-        'Open Sans Condensed' => array(
-            'label' => 'Open Sans Condensed',
-            'variants' => array(
+            ],
+        ],
+        'Open Sans Condensed' => [
+            'label'    => 'Open Sans Condensed',
+            'variants' => [
                 '300',
                 '300italic',
                 '700',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'greek-ext',
                 'cyrillic',
@@ -981,209 +972,209 @@ function customizer_library_get_google_fonts()
                 'vietnamese',
                 'latin-ext',
                 'cyrillic-ext',
-            ),
-        ),
-        'Oswald' => array(
-            'label' => 'Oswald',
-            'variants' => array(
+            ],
+        ],
+        'Oswald' => [
+            'label'    => 'Oswald',
+            'variants' => [
                 '300',
                 'regular',
                 '700',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'latin-ext',
-            ),
-        ),
-        'Ovo' => array(
-            'label' => 'Ovo',
-            'variants' => array(
+            ],
+        ],
+        'Ovo' => [
+            'label'    => 'Ovo',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Oxygen' => array(
-            'label' => 'Oxygen',
-            'variants' => array(
+            ],
+        ],
+        'Oxygen' => [
+            'label'    => 'Oxygen',
+            'variants' => [
                 '300',
                 'regular',
                 '700',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'latin-ext',
-            ),
-        ),
-        'Oxygen Mono' => array(
-            'label' => 'Oxygen Mono',
-            'variants' => array(
+            ],
+        ],
+        'Oxygen Mono' => [
+            'label'    => 'Oxygen Mono',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'latin-ext',
-            ),
-        ),
-        'PT Mono' => array(
-            'label' => 'PT Mono',
-            'variants' => array(
+            ],
+        ],
+        'PT Mono' => [
+            'label'    => 'PT Mono',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'cyrillic',
                 'latin-ext',
                 'cyrillic-ext',
-            ),
-        ),
-        'PT Sans' => array(
-            'label' => 'PT Sans',
-            'variants' => array(
+            ],
+        ],
+        'PT Sans' => [
+            'label'    => 'PT Sans',
+            'variants' => [
                 'regular',
                 'italic',
                 '700',
                 '700italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'cyrillic',
                 'latin-ext',
                 'cyrillic-ext',
-            ),
-        ),
-        'PT Sans Caption' => array(
-            'label' => 'PT Sans Caption',
-            'variants' => array(
+            ],
+        ],
+        'PT Sans Caption' => [
+            'label'    => 'PT Sans Caption',
+            'variants' => [
                 'regular',
                 '700',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'cyrillic',
                 'latin-ext',
                 'cyrillic-ext',
-            ),
-        ),
-        'PT Sans Narrow' => array(
-            'label' => 'PT Sans Narrow',
-            'variants' => array(
+            ],
+        ],
+        'PT Sans Narrow' => [
+            'label'    => 'PT Sans Narrow',
+            'variants' => [
                 'regular',
                 '700',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'cyrillic',
                 'latin-ext',
                 'cyrillic-ext',
-            ),
-        ),
-        'PT Serif' => array(
-            'label' => 'PT Serif',
-            'variants' => array(
+            ],
+        ],
+        'PT Serif' => [
+            'label'    => 'PT Serif',
+            'variants' => [
                 'regular',
                 'italic',
                 '700',
                 '700italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'cyrillic',
                 'latin-ext',
                 'cyrillic-ext',
-            ),
-        ),
-        'PT Serif Caption' => array(
-            'label' => 'PT Serif Caption',
-            'variants' => array(
+            ],
+        ],
+        'PT Serif Caption' => [
+            'label'    => 'PT Serif Caption',
+            'variants' => [
                 'regular',
                 'italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'cyrillic',
                 'latin-ext',
                 'cyrillic-ext',
-            ),
-        ),
-        'Pacifico' => array(
-            'label' => 'Pacifico',
-            'variants' => array(
+            ],
+        ],
+        'Pacifico' => [
+            'label'    => 'Pacifico',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Playfair Display' => array(
-            'label' => 'Playfair Display',
-            'variants' => array(
+            ],
+        ],
+        'Playfair Display' => [
+            'label'    => 'Playfair Display',
+            'variants' => [
                 'regular',
                 'italic',
                 '700',
                 '700italic',
                 '900',
                 '900italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'cyrillic',
                 'latin-ext',
-            ),
-        ),
-        'Playfair Display SC' => array(
-            'label' => 'Playfair Display SC',
-            'variants' => array(
+            ],
+        ],
+        'Playfair Display SC' => [
+            'label'    => 'Playfair Display SC',
+            'variants' => [
                 'regular',
                 'italic',
                 '700',
                 '700italic',
                 '900',
                 '900italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'cyrillic',
                 'latin-ext',
-            ),
-        ),
-        'Poiret One' => array(
-            'label' => 'Poiret One',
-            'variants' => array(
+            ],
+        ],
+        'Poiret One' => [
+            'label'    => 'Poiret One',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'cyrillic',
                 'latin-ext',
-            ),
-        ),
-        'Puritan' => array(
-            'label' => 'Puritan',
-            'variants' => array(
+            ],
+        ],
+        'Puritan' => [
+            'label'    => 'Puritan',
+            'variants' => [
                 'regular',
                 'italic',
                 '700',
                 '700italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Purple Purse' => array(
-            'label' => 'Purple Purse',
-            'variants' => array(
+            ],
+        ],
+        'Purple Purse' => [
+            'label'    => 'Purple Purse',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'latin-ext',
-            ),
-        ),
-        'Raleway' => array(
-            'label' => 'Raleway',
-            'variants' => array(
+            ],
+        ],
+        'Raleway' => [
+            'label'    => 'Raleway',
+            'variants' => [
                 '100',
                 '200',
                 '300',
@@ -1193,14 +1184,14 @@ function customizer_library_get_google_fonts()
                 '700',
                 '800',
                 '900',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Roboto' => array(
-            'label' => 'Roboto',
-            'variants' => array(
+            ],
+        ],
+        'Roboto' => [
+            'label'    => 'Roboto',
+            'variants' => [
                 '100',
                 '100italic',
                 '300',
@@ -1213,8 +1204,8 @@ function customizer_library_get_google_fonts()
                 '700italic',
                 '900',
                 '900italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'greek-ext',
                 'cyrillic',
@@ -1222,19 +1213,19 @@ function customizer_library_get_google_fonts()
                 'vietnamese',
                 'latin-ext',
                 'cyrillic-ext',
-            ),
-        ),
-        'Roboto Condensed' => array(
-            'label' => 'Roboto Condensed',
-            'variants' => array(
+            ],
+        ],
+        'Roboto Condensed' => [
+            'label'    => 'Roboto Condensed',
+            'variants' => [
                 '300',
                 '300italic',
                 'regular',
                 'italic',
                 '700',
                 '700italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'greek-ext',
                 'cyrillic',
@@ -1242,17 +1233,17 @@ function customizer_library_get_google_fonts()
                 'vietnamese',
                 'latin-ext',
                 'cyrillic-ext',
-            ),
-        ),
-        'Roboto Slab' => array(
-            'label' => 'Roboto Slab',
-            'variants' => array(
+            ],
+        ],
+        'Roboto Slab' => [
+            'label'    => 'Roboto Slab',
+            'variants' => [
                 '100',
                 '300',
                 'regular',
                 '700',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'greek-ext',
                 'cyrillic',
@@ -1260,52 +1251,52 @@ function customizer_library_get_google_fonts()
                 'vietnamese',
                 'latin-ext',
                 'cyrillic-ext',
-            ),
-        ),
-        'Rokkitt' => array(
-            'label' => 'Rokkitt',
-            'variants' => array(
+            ],
+        ],
+        'Rokkitt' => [
+            'label'    => 'Rokkitt',
+            'variants' => [
                 'regular',
                 '700',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
-            ),
-        ),
-        'Rubik One' => array(
-            'label' => 'Rubik One',
-            'variants' => array(
+            ],
+        ],
+        'Rubik One' => [
+            'label'    => 'Rubik One',
+            'variants' => [
                 '400',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'latin-ext',
-            ),
-        ),
-        'Rubik Mono One' => array(
-            'label' => 'Rubik Mono One',
-            'variants' => array(
+            ],
+        ],
+        'Rubik Mono One' => [
+            'label'    => 'Rubik Mono One',
+            'variants' => [
                 '400',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'latin-ext',
-            ),
-        ),
-        'Rufina' => array(
-            'label' => 'Rufina',
-            'variants' => array(
+            ],
+        ],
+        'Rufina' => [
+            'label'    => 'Rufina',
+            'variants' => [
                 'regular',
                 '700',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'latin-ext',
-            ),
-        ),
-        'Source Code Pro' => array(
-            'label' => 'Source Code Pro',
-            'variants' => array(
+            ],
+        ],
+        'Source Code Pro' => [
+            'label'    => 'Source Code Pro',
+            'variants' => [
                 '200',
                 '300',
                 'regular',
@@ -1313,15 +1304,15 @@ function customizer_library_get_google_fonts()
                 '600',
                 '700',
                 '900',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'latin-ext',
-            ),
-        ),
-        'Source Sans Pro' => array(
-            'label' => 'Source Sans Pro',
-            'variants' => array(
+            ],
+        ],
+        'Source Sans Pro' => [
+            'label'    => 'Source Sans Pro',
+            'variants' => [
                 '200',
                 '200italic',
                 '300',
@@ -1334,34 +1325,34 @@ function customizer_library_get_google_fonts()
                 '700italic',
                 '900',
                 '900italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'vietnamese',
                 'latin-ext',
-            ),
-        ),
-        'Source Serif Pro' => array(
-            'label' => 'Source Serif Pro',
-            'variants' => array(
+            ],
+        ],
+        'Source Serif Pro' => [
+            'label'    => 'Source Serif Pro',
+            'variants' => [
                 '400',
                 '600',
                 '700',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'latin-ext',
-            ),
-        ),
-        'Tinos' => array(
-            'label' => 'Tinos',
-            'variants' => array(
+            ],
+        ],
+        'Tinos' => [
+            'label'    => 'Tinos',
+            'variants' => [
                 'regular',
                 'italic',
                 '700',
                 '700italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'greek-ext',
                 'cyrillic',
@@ -1369,11 +1360,11 @@ function customizer_library_get_google_fonts()
                 'vietnamese',
                 'latin-ext',
                 'cyrillic-ext',
-            ),
-        ),
-        'Ubuntu' => array(
-            'label' => 'Ubuntu',
-            'variants' => array(
+            ],
+        ],
+        'Ubuntu' => [
+            'label'    => 'Ubuntu',
+            'variants' => [
                 '300',
                 '300italic',
                 'regular',
@@ -1382,30 +1373,30 @@ function customizer_library_get_google_fonts()
                 '500italic',
                 '700',
                 '700italic',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'greek-ext',
                 'cyrillic',
                 'greek',
                 'latin-ext',
                 'cyrillic-ext',
-            ),
-        ),
-        'Ubuntu Condensed' => array(
-            'label' => 'Ubuntu Condensed',
-            'variants' => array(
+            ],
+        ],
+        'Ubuntu Condensed' => [
+            'label'    => 'Ubuntu Condensed',
+            'variants' => [
                 'regular',
-            ),
-            'subsets' => array(
+            ],
+            'subsets' => [
                 'latin',
                 'greek-ext',
                 'cyrillic',
                 'greek',
                 'latin-ext',
                 'cyrillic-ext',
-            ),
-        ),
-    ));
+            ],
+        ],
+    ]);
 }
 endif;

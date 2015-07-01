@@ -13,11 +13,10 @@ class AttrTrumps {
      * Filter hybrid attributes.
      *
      */
-     public function __construct( $args = array() ) {
+     public function __construct( $args = [] ) {
 
  		$this->args = wp_parse_args(
- 			$args,
- 			array(
+ 			$args, [
                 'body'                    => '',
                 'site_container'          => '',
                 'container'               => '',
@@ -64,7 +63,7 @@ class AttrTrumps {
                 'menu_primary'            => 't-bg__grey',
 
                 // SIDEBAR
-                'sidebar_primary'        => 'grid__item t-bg--white u-p u-mb',
+                'sidebar_primary'         => 'grid__item t-bg--white u-p u-mb',
                 'sidebar_horizontal'      => 'flex flex--w flex--j-sb flex--row@md',
                 'sidebar_right'           => 'u-1/3@md',
                 'sidebar_left'            => 'u-1/3@md',
@@ -74,8 +73,7 @@ class AttrTrumps {
 
                 // FOOTER
                 'footer'                  => 't-bg--white'
-        )
-    );
+        ]);
 
         // CONTAINERS
         add_filter('hybrid_attr_body',                  [$this,'body']);

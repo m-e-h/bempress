@@ -10,9 +10,9 @@ global $mehsc_atts;
 <div class="<?php echo esc_attr($mehsc_atts['card_color']); ?> card shadow--z1 u-radius">
         <?php
             get_the_image([
-                'size' => 'bempress-sm',
-                'before' => '<div class="card__figure">',
-                'after' => '</div>',
+                'size'         => 'bempress-sm',
+                'before'       => '<div class="card__figure">',
+                'after'        => '</div>',
                 'link_to_post' => false,
             ]);
         ?>

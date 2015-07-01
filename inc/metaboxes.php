@@ -5,18 +5,17 @@
 add_action('edit_page_form', 'bempress_add_extra_wysiwyg_field');
 add_action('save_post', 'bempress_save_extra_wysiwyg', 1, 2);
 
-function bempress_add_extra_wysiwyg_field()
-{
+function bempress_add_extra_wysiwyg_field() {
     global $post;
 
     $extra_wysiwyg = stripslashes(get_post_meta($post->ID, 'bempress_extra_wysiwyg', true));
-    $settings = array(
+    $settings      = [
         'textarea_name' => 'bempress_extra_wysiwyg',
         'media_buttons' => true,
-        'tinymce' => array(
-            'toolbar1' => ' '),
-    );
-    
+        'tinymce'       => [
+            'toolbar1' => ' '],
+    ];
+
     // Insert editor
     wp_editor($extra_wysiwyg, 'bempress_extra_wysiwyg', $settings);
     ?>
@@ -27,8 +26,7 @@ function bempress_add_extra_wysiwyg_field()
     wp_nonce_field('bempress-add-page-wysiwyg-nonce', 'bempress-add-page-wysiwyg-process');
 }
 
-function bempress_save_extra_wysiwyg($post_id, $post)
-{
+function bempress_save_extra_wysiwyg($post_id, $post) {
     // Verify data came from edit screen
     if (!wp_verify_nonce($_POST['bempress-add-page-wysiwyg-process'], 'bempress-add-page-wysiwyg-nonce')) {
         return $post->ID;
@@ -46,8 +44,7 @@ function bempress_save_extra_wysiwyg($post_id, $post)
     }
 }
 
-function bempress_wysiwyg_output($meta_key, $post_id = 0)
-{
+function bempress_wysiwyg_output($meta_key, $post_id = 0) {
     global $wp_embed;
     $post_id = $post_id ? $post_id : get_the_id();
     $content = get_post_meta($post_id, $meta_key, 1);
