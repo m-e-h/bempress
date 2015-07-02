@@ -11,6 +11,7 @@
   + li:before {
     content: "/\00a0";
     opacity: $opacity;
+    padding: $spacing-tiny;
     }
   }
 }
@@ -18,4 +19,3 @@
 .trail-end span {
     display: none;
 }
-

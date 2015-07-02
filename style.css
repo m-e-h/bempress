@@ -10,6 +10,147 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: bempress-rooted
 GitHub Theme URI: https://github.com/m-e-h/bempress
 */
+/* #PAGE
+\*------------------------------------*/
+:root {
+    overflow-y: scroll;
+    box-sizing: border-box;
+    min-height: 100%;
+    background-color: #fff; 
+    font: 16px/1.5 sans-serif;
+    cursor: default;
+
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+@media screen and (max-width: 35.5em) {
+    :root {
+        font: 14px/1.7 sans-serif;
+    }
+}
+
+body {
+    color: #34495e;
+    background-color: #fff;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+* {
+    flex-direction: column;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    vertical-align: middle;
+
+    -webkit-box-direction: normal;
+    -webkit-box-flex: 0;
+    -webkit-box-orient: vertical;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto; 
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+    border-width: 0; 
+    border-style: solid;
+}
+
+::after,
+::before {
+    vertical-align: inherit;
+}
+
+span {
+    vertical-align: bottom;
+}
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE.
+ */
+article,
+aside,
+cite,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    margin: 24px 0; 
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+::-moz-selection {
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+canvas {
+    -ms-touch-action: double-tap-zoom;
+}
+
+iframe[src*="google.com/maps"] {
+    width: 100%; 
+    max-width: 100%;
+}
+
+[hidden],
+audio:not([controls]),
+template {
+    display: none;
+}
+
+@media screen {
+    [hidden~=screen] {
+        display: inherit;
+    }
+    [hidden~=screen]:not(:active):not(:focus):not(:target) {
+        clip: rect(0 0 0 0) !important;
+        position: absolute !important;
+    }
+}
+
+/* #BREADCRUMBS
+\*------------------------------------*/
+.breadcrumbs {
+    text-transform: uppercase;
+}
+.breadcrumbs li + li:before {
+    padding: 6px; 
+    opacity: 0.8;
+    content: "/\00a0";
+}
+
+.trail-end span {
+    display: none;
+}
+
 /*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
 /*
  * Normalization
