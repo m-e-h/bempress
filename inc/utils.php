@@ -11,9 +11,9 @@ add_action('after_setup_theme', __NAMESPACE__.'\\responsive_videos', 99);
 
 function template_hierarchy($templates) {
     if (is_search()) {
-        $templates = array_merge(['content/search.php'], $templates);
+        $templates = array_merge(array('content/search.php'), $templates);
     } elseif (is_404()) {
-        $templates = array_merge(['content/404.php'], $templates);
+        $templates = array_merge(array('content/404.php'), $templates);
     }
 
     return $templates;

@@ -28,18 +28,18 @@ final class Bempress_Custom_Styles {
     public function __construct() {
 
         /* Output CSS into <head>. */
-        add_action('wp_head', [$this, 'wp_head_callback']);
+        add_action('wp_head', array($this, 'wp_head_callback'));
 
         /* Add a '.custom-styles' <body> class. */
-        add_filter('body_class', [$this, 'body_class']);
+        add_filter('body_class', array($this, 'body_class'));
 
         /* Filter the default colors late. */
-        add_filter('theme_mod_primary_color',      [$this, 'primary_color_default'], 95);
-        add_filter('theme_mod_secondary_color',    [$this, 'secondary_color_default'], 95);
-        add_filter('theme_mod_accent_color',       [$this, 'accent_color_default'], 95);
+        add_filter('theme_mod_primary_color',      array($this, 'primary_color_default'), 95);
+        add_filter('theme_mod_secondary_color',    array($this, 'secondary_color_default'), 95);
+        add_filter('theme_mod_accent_color',       array($this, 'accent_color_default'), 95);
 
         /* Delete the cached data for this feature. */
-        add_action('update_option_theme_mods_'.get_stylesheet(), [$this, 'cache_delete']);
+        add_action('update_option_theme_mods_'.get_stylesheet(), array($this, 'cache_delete'));
     }
 
     /**
@@ -174,7 +174,7 @@ final class Bempress_Custom_Styles {
                 { font-family: '$bfont'; }
             ";
         /* Return the styles. */
-        return str_replace(["\r", "\n", "\t"], '', $style);
+        return str_replace(array("\r", "\n", "\t"), '', $style);
     }
 
     /**
@@ -236,7 +236,7 @@ final class Bempress_Custom_Styles {
                 { fill: #{$color600}; }
                 ";
         /* Return the styles. */
-        return str_replace(["\r", "\n", "\t"], '', $style);
+        return str_replace(array("\r", "\n", "\t"), '', $style);
     }
 
     /**
@@ -298,7 +298,7 @@ final class Bempress_Custom_Styles {
                 { fill: #{$color600}; }
                 ";
         /* Return the styles. */
-        return str_replace(["\r", "\n", "\t"], '', $style);
+        return str_replace(array("\r", "\n", "\t"), '', $style);
     }
 
     /**

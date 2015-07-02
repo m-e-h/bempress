@@ -70,7 +70,7 @@ class Color {
         $G = hexdec($color[2].$color[3]);
         $B = hexdec($color[4].$color[5]);
 
-        $HSL = [];
+        $HSL = array();
 
         $var_R = ($R / 255);
         $var_G = ($G / 255);
@@ -128,13 +128,13 @@ class Color {
      *
      * @throws Exception "Bad HSL Array"
      */
-    public static function hslToHex($hsl = []) {
+    public static function hslToHex($hsl = array()) {
         // Make sure it's HSL
         if (empty($hsl) || !isset($hsl['H']) || !isset($hsl['S']) || !isset($hsl['L'])) {
             throw new Exception('Param was not an HSL array');
         }
 
-        list($H, $S, $L) = [$hsl['H'] / 360,$hsl['S'],$hsl['L']];
+        list($H, $S, $L) = array($hsl['H'] / 360,$hsl['S'],$hsl['L']);
 
         if ($S == 0) {
             $r = $L * 255;
@@ -200,7 +200,7 @@ class Color {
      *
      * @throws Exception "Bad RGB Array"
      */
-    public static function rgbToHex($rgb = []) {
+    public static function rgbToHex($rgb = array()) {
         // Make sure it's RGB
         if (empty($rgb) || !isset($rgb['R']) || !isset($rgb['G']) || !isset($rgb['B'])) {
             throw new Exception('Param was not an RGB array');
@@ -277,7 +277,7 @@ class Color {
         }
 
         // Return our gradient array
-        return ['light' => $lightColor, 'dark' => $darkColor];
+        return array('light' => $lightColor, 'dark' => $darkColor);
     }
 
     /**
@@ -468,7 +468,7 @@ class Color {
         $gmix = (($rgb1['G'] * $r1) + ($rgb2['G'] * $r2)) / 2;
         $bmix = (($rgb1['B'] * $r1) + ($rgb2['B'] * $r2)) / 2;
 
-        return ['R' => $rmix, 'G' => $gmix, 'B' => $bmix];
+        return array('R' => $rmix, 'G' => $gmix, 'B' => $bmix);
     }
 
     /**

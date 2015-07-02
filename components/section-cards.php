@@ -9,12 +9,12 @@ global $mehsc_atts;
 
 <div class="<?php echo esc_attr($mehsc_atts['card_color']); ?> card shadow--z1 u-radius">
         <?php
-            get_the_image([
+            get_the_image(array(
                 'size'         => 'bempress-sm',
                 'before'       => '<div class="card__figure">',
                 'after'        => '</div>',
                 'link_to_post' => false,
-            ]);
+            ));
         ?>
     <div class="card-divider">
     <?php the_title(sprintf('<a class="u-h3 card__title--link" href="%s" rel="bookmark">', esc_url(get_permalink())), '</a>'); ?>

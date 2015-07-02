@@ -28,23 +28,23 @@ function setup() {
     add_theme_support('hybrid-core-template-hierarchy');
 
     // Layouts
-    add_theme_support('theme-layouts', ['default' => 'single-column']);
+    add_theme_support('theme-layouts', array('default' => 'single-column'));
 
     // http://codex.wordpress.org/Function_Reference/register_nav_menus
-    register_nav_menus([
+    register_nav_menus(array(
       'primary' => __('Primary', 'bempress'),
-    ]);
+    ));
 
   // http://codex.wordpress.org/Post_Formats
-    add_theme_support('post-formats', [
+    add_theme_support('post-formats', array(
         'aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio',
-    ]);
+    ));
 
     add_theme_support('custom-background',
-        apply_filters('bempress_background_args', [
+        apply_filters('bempress_background_args', array(
         'default-color' => 'ffffff',
         'default-image' => '',
-        ])
+        ))
    );
 
   // Tell the TinyMCE editor to use a custom stylesheet
@@ -55,23 +55,23 @@ function setup() {
  * Register sidebars.
  */
 function widgets() {
-    hybrid_register_sidebar([
+    hybrid_register_sidebar(array(
     'name'          => __('Primary', 'bempress'),
     'id'            => 'primary',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3 class="widget-title">',
     'after_title'   => '</h3>',
-  ]);
+  ));
 
-    hybrid_register_sidebar([
+    hybrid_register_sidebar(array(
     'name'          => __('Footer', 'bempress'),
     'id'            => 'footer',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3 class="widget-title">',
     'after_title'   => '</h3>',
-  ]);
+  ));
 }
 
 function image_sizes() {
@@ -89,31 +89,31 @@ function image_sizes() {
 function layouts() {
     hybrid_get_layout('default')->image = '%s/assets/images/default.svg';
 
-    hybrid_register_layout('single-column', [
+    hybrid_register_layout('single-column', array(
         'label'            => _x('Single Column', 'theme layout', 'bempress'),
         'is_global_layout' => true,
         'is_post_layout'   => true,
         'image'            => '%s/assets/images/single-column.svg',
-    ]);
+    ));
 
-    hybrid_register_layout('single-column--wide', [
+    hybrid_register_layout('single-column--wide', array(
         'label'            => _x('Single Column Wide', 'theme layout', 'bempress'),
         'is_global_layout' => true,
         'is_post_layout'   => true,
         'image'            => '%s/assets/images/single-column-wide.svg',
-    ]);
+    ));
 
-    hybrid_register_layout('sidebar-right', [
+    hybrid_register_layout('sidebar-right', array(
         'label'            => _x('Sidebar Right', 'theme layout', 'bempress'),
         'is_global_layout' => true,
         'is_post_layout'   => true,
         'image'            => '%s/assets/images/sidebar-right.svg',
-    ]);
+    ));
 
-    hybrid_register_layout('sidebar-left', [
+    hybrid_register_layout('sidebar-left', array(
         'label'            => _x('Sidebar Left', 'theme layout', 'bempress'),
         'is_global_layout' => true,
         'is_post_layout'   => true,
         'image'            => '%s/assets/images/sidebar-left.svg',
-    ]);
+    ));
 }

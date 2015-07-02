@@ -13,23 +13,23 @@ function meh_add_shortcodes() {
  */
 function meh_cards_shortcode($atts, $content = null) {
     global $mehsc_atts;
-    $mehsc_atts = shortcode_atts([
+    $mehsc_atts = shortcode_atts(array(
         'width'        => '',
         'card_color'   => '',
         'page'         => '',
         'show_content' => '',
-   ], $atts, 'meh_cards');
+   ), $atts, 'meh_cards');
 
     $output = '<section class="row pages-highlight"><div class="card-row grid container">';
 
 // Get pages set (if any)
 $pages = $mehsc_atts['page'];
 
-    $args = [
+    $args = array(
     'post_type' => 'page',
     'post__in'  => explode(',', $pages),
     'orderby'   => 'post__in',
-];
+);
 
     $query1 = new WP_Query($args);
     while ($query1->have_posts()) : $query1->the_post();
@@ -50,25 +50,25 @@ $pages = $mehsc_atts['page'];
  */
 function meh_block_shortcode($atts, $content = null) {
     global $mehsc_atts;
-    $mehsc_atts = shortcode_atts([
+    $mehsc_atts = shortcode_atts(array(
         'block_type'   => '',
         'icon'         => '',
         'width'        => '',
         'page'         => '',
         'show_image'   => '',
         'show_content' => '',
-   ], $atts, 'meh_block');
+   ), $atts, 'meh_block');
 
     $output = '<section class="row pages-highlight"><div class="block-row grid container flex flex--row@md flex--w">';
 
 // Get pages set (if any)
 $pages = $mehsc_atts['page'];
 
-    $args = [
+    $args = array(
     'post_type' => 'page',
     'post__in'  => explode(',', $pages),
     'orderby'   => 'post__in',
-];
+);
 
     $query2 = new WP_Query($args);
     while ($query2->have_posts()) : $query2->the_post();
@@ -91,20 +91,20 @@ function meh_tabs_shortcode($atts, $content = null) {
     wp_enqueue_script('meh_tabs');
 
     global $mehsc_atts;
-    $mehsc_atts = shortcode_atts([
+    $mehsc_atts = shortcode_atts(array(
         'page'         => '',
         'bg_color'     => '',
         'show_content' => '',
-   ], $atts, 'meh_tabs');
+   ), $atts, 'meh_tabs');
 
 // Get pages set (if any)
 $pages = $mehsc_atts['page'];
 
-    $args = [
+    $args = array(
     'post_type' => 'page',
     'post__in'  => explode(',', $pages),
     'orderby'   => 'post__in',
-];
+);
 
     $query3 = new WP_Query($args);
 
@@ -150,20 +150,20 @@ function meh_toggles_shortcode($atts, $content = null) {
     wp_enqueue_script('meh_toggles');
 
     global $mehsc_atts;
-    $mehsc_atts = shortcode_atts([
+    $mehsc_atts = shortcode_atts(array(
         'page'         => '',
         'bg_color'     => '',
         'show_content' => '',
-   ], $atts, 'meh_toggles');
+   ), $atts, 'meh_toggles');
 
 // Get pages set (if any)
 $pages = $mehsc_atts['page'];
 
-    $args = [
+    $args = array(
     'post_type' => 'page',
     'post__in'  => explode(',', $pages),
     'orderby'   => 'post__in',
-];
+);
 
     $query4 = new WP_Query($args);
 

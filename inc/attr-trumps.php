@@ -18,9 +18,9 @@ class Attr_Trumps {
      * Filter hybrid attributes.
      *
      */
-     public function __construct( $args = [] ) {
+     public function __construct( $args = array() ) {
 
- 		$defaults = [
+ 		$defaults = array(
                 'body'                    => '',
                 'site_container'          => '',
                 'container'               => '',
@@ -79,54 +79,54 @@ class Attr_Trumps {
                 'footer'                  => 't-bg--white',
 
                 'menu_link'                 => 'btn'
-        ];
+        );
 
         $this->args = apply_filters( 'attr_trumps_args', wp_parse_args( $args, $defaults ) );
 
         // CONTAINERS
-        add_filter('hybrid_attr_body',                  [$this,'body']);
-        add_filter('hybrid_attr_site-container',        [$this,'site_container']);
-        add_filter('hybrid_attr_container',             [$this,'container'],10,2);
-        add_filter('hybrid_attr_row',                   [$this,'row'],10,2);
+        add_filter('hybrid_attr_body',                  array($this,'body'));
+        add_filter('hybrid_attr_site-container',        array($this,'site_container'));
+        add_filter('hybrid_attr_container',             array($this,'container'),10,2);
+        add_filter('hybrid_attr_row',                   array($this,'row'),10,2);
 
         // SITE HEADER
-        add_filter('hybrid_attr_header',                [$this,'header']);
-        add_filter('hybrid_attr_branding',              [$this,'branding']);
-        add_filter('hybrid_attr_site-title',            [$this,'site_title']);
-        add_filter('hybrid_attr_site-description',      [$this,'site_description']);
+        add_filter('hybrid_attr_header',                array($this,'header'));
+        add_filter('hybrid_attr_branding',              array($this,'branding'));
+        add_filter('hybrid_attr_site-title',            array($this,'site_title'));
+        add_filter('hybrid_attr_site-description',      array($this,'site_description'));
 
         // CONTENT
-        add_filter('hybrid_attr_content',               [$this,'content']);
+        add_filter('hybrid_attr_content',               array($this,'content'));
 
         // ENTRY
-        add_filter('hybrid_attr_post',                  [$this,'post']);
-        add_filter('hybrid_attr_archive-header',        [$this,'page_header']);
-        add_filter('hybrid_attr_archive-title',         [$this,'archive_title']);
-        add_filter('hybrid_attr_archive-description',   [$this,'archive_description']);
-        add_filter('hybrid_attr_entry-header',          [$this,'entry_header']);
-        add_filter('hybrid_attr_entry-title',           [$this,'entry_title']);
-        add_filter('hybrid_attr_entry-content',         [$this,'entry_content']);
-        add_filter('hybrid_attr_entry-summary',         [$this,'entry_summary']);
-        add_filter('hybrid_attr_entry-footer',          [$this,'entry_footer']);
+        add_filter('hybrid_attr_post',                  array($this,'post'));
+        add_filter('hybrid_attr_archive-header',        array($this,'page_header'));
+        add_filter('hybrid_attr_archive-title',         array($this,'archive_title'));
+        add_filter('hybrid_attr_archive-description',   array($this,'archive_description'));
+        add_filter('hybrid_attr_entry-header',          array($this,'entry_header'));
+        add_filter('hybrid_attr_entry-title',           array($this,'entry_title'));
+        add_filter('hybrid_attr_entry-content',         array($this,'entry_content'));
+        add_filter('hybrid_attr_entry-summary',         array($this,'entry_summary'));
+        add_filter('hybrid_attr_entry-footer',          array($this,'entry_footer'));
 
         // ENTRY META
-        add_filter('hybrid_attr_entry-author',          [$this,'entry_author']);
-        add_filter('hybrid_attr_entry-published',       [$this,'entry_published']);
-        add_filter('hybrid_attr_entry-terms',           [$this,'entry_terms']);
+        add_filter('hybrid_attr_entry-author',          array($this,'entry_author'));
+        add_filter('hybrid_attr_entry-published',       array($this,'entry_published'));
+        add_filter('hybrid_attr_entry-terms',           array($this,'entry_terms'));
 
         // NAVIGATION
-        add_filter('hybrid_attr_menu',                  [$this,'menu'],10,2);
+        add_filter('hybrid_attr_menu',                  array($this,'menu'),10,2);
 
         // SIDEBAR
-        add_filter('hybrid_attr_sidebar',               [$this,'sidebar'],10,2);
+        add_filter('hybrid_attr_sidebar',               array($this,'sidebar'),10,2);
 
         // FOOTER
-        add_filter('hybrid_attr_footer',                [$this,'footer']);
+        add_filter('hybrid_attr_footer',                array($this,'footer'));
 
         // COMMENTS
-        add_filter('hybrid_attr_comments-area',         [$this,'comments_area']);
+        add_filter('hybrid_attr_comments-area',         array($this,'comments_area'));
 
-        add_filter('nav_menu_link_attributes',          [$this,'menu_link'],10,3);
+        add_filter('nav_menu_link_attributes',          array($this,'menu_link'),10,3);
     }
 
 

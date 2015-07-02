@@ -5,7 +5,7 @@
  *
  * @link https://github.com/roots/sage/pull/1042
  */
-$bempress_includes = [
+$bempress_includes = array(
     'library/hybrid.php',           // Hybrid Core library
     'inc/attr-trumps.php',              // Css class selectors
     'inc/utils.php',                    // Utility functions
@@ -18,7 +18,7 @@ $bempress_includes = [
     'inc/shortcodes-ui.php',            // Shortcake interface
     'inc/metaboxes.php',                // Custom admin sections
     'inc/customizer/customizer.php',    // Customizer
-];
+);
 
 foreach ($bempress_includes as $file) {
     if (!$filepath = locate_template($file)) {

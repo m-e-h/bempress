@@ -19,7 +19,7 @@ function assets() {
         wp_enqueue_style(
         'parent',
         trailingslashit(get_template_directory_uri())."style{$suffix}.css"
-    );
+        );
     }
     wp_enqueue_style(
         'style',

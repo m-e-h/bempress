@@ -11,10 +11,10 @@
             </div>
 
             <footer <?php hybrid_attr('entry-footer'); ?>>
-                <?php wp_link_pages([
+                <?php wp_link_pages(array(
                     'before' => '<nav class="page-nav"><p>'.__('Pages:', 'bempress'),
                     'after'  => '</p></nav>',
-                ]); ?>
+                )); ?>
             </footer>
 
             <?php comments_template('', true); ?>

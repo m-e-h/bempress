@@ -9,12 +9,12 @@ function bempress_add_extra_wysiwyg_field() {
     global $post;
 
     $extra_wysiwyg = stripslashes(get_post_meta($post->ID, 'bempress_extra_wysiwyg', true));
-    $settings      = [
+    $settings      = array(
         'textarea_name' => 'bempress_extra_wysiwyg',
         'media_buttons' => true,
-        'tinymce'       => [
-            'toolbar1' => ' '],
-    ];
+        'tinymce'       => array(
+            'toolbar1' => ' '),
+    );
 
     // Insert editor
     wp_editor($extra_wysiwyg, 'bempress_extra_wysiwyg', $settings);

@@ -21,17 +21,17 @@ global $mehsc_atts;
 
     <?php
     if ('block' === $mehsc_atts['block_type']) {
-        get_the_image([
+        get_the_image(array(
             'size'   => 'bempress-sm',
             'before' => '<div class="block__figure">',
             'after'  => '</div>',
-        ]);
+        ));
     } elseif ('flag' === $mehsc_atts['block_type']) {
-        get_the_image([
+        get_the_image(array(
             'size'   => 'thumbnail',
             'before' => '<div class="block__figure u-left flag-image u-round u-p-">',
             'after'  => '</div>',
-        ]);
+        ));
     }
     ?>
 
