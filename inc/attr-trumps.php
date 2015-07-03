@@ -15,70 +15,79 @@ function attr_trumps( $args = array() ) {
 class Attr_Trumps {
 
     /**
+     * @since  0.1.0
+     * @access public
+     * @var    array
+     */
+    public $args = array();
+
+
+
+    /**
      * Filter hybrid attributes.
      *
      */
-     public function __construct( $args = array() ) {
+    public function __construct( $args = array() ) {
 
  		$defaults = array(
-                'body'                    => '',
-                'site_container'          => '',
-                'container'               => '',
-                'container_header'        => 'flex flex--row@md flex--w flex--j-sb flex--ai-c',
-                'container_wide'          => 'container--wide',
-                'row'                     => '',
-                'row_layout'              => 'grid',
-                'row_layout_sidebar_l'    => 'grid grid--rev',
-                'row_layout_sidebar_r'    => 'grid',
+            'body'                    => '',
+            'site_container'          => '',
+            'container'               => '',
+            'container_header'        => 'flex flex--row@md flex-justify flex-center',
+            'container_wide'          => 'container--wide',
+            'row'                     => '',
+            'row_layout'              => 'grid',
+            'row_layout_sidebar_l'    => 'grid grid--rev',
+            'row_layout_sidebar_r'    => 'grid',
 
-                // SITE HEADER
-                'header'                  => 'bg-teal border-bottom',
-                'branding'                => 'mt3 py2 inline-block',
-                'site_title'              => 'm0',
-                'site_description'        => 'h3 bold mt0 mb2',
+            // SITE HEADER
+            'header'                  => 'bg-teal border-bottom',
+            'branding'                => 'mt3 py2 inline-block',
+            'site_title'              => 'm0',
+            'site_description'        => 'h3 bold mt0 mb2',
 
-                // CONTENT
-                'content'                 => 'grid__item u-mb',
-                'content_with_sidebar'    => 'grid__item u-mb u-2/3@md u-pr@md',
+            // CONTENT
+            'content'                 => 'grid__item mb2',
+            'content_with_sidebar'    => 'grid__item mb2 col-8',
 
-                // ENTRY
-                'post'                    => '',
+            // ENTRY
+            'post'                    => '',
 
-                'page_header'             => 'u-1/1 u-text-center',
+            'page_header'             => 'col-12 center',
 
-                'entry_title'             => 'u-h1',
-                'archive_title'           => 'u-h1',
-                'archive_description'     => '',
+            'entry_title'             => 'h1',
+            'archive_title'           => 'h1',
+            'archive_description'     => '',
 
-                'entry_header'            => 'container',
-                'entry_content'           => 'u-p container',
-                'entry_summary'           => 'u-p container',
-                'entry_footer'            => 'container',
+            'entry_header'            => 'container',
+            'entry_content'           => 'p2 container',
+            'entry_summary'           => 'p2 container',
+            'entry_footer'            => 'container',
 
-                'nav_single'              => '',
-                'nav_archive'             => '',
+            'nav_single'              => '',
+            'nav_archive'             => '',
 
-                // ENTRY META
-                'entry_author'            => '',
-                'entry_published'         => '',
-                'entry_terms'             => '',
+            // ENTRY META
+            'entry_author'            => '',
+            'entry_published'         => '',
+            'entry_terms'             => '',
 
-                // NAVIGATION
-                'menu_primary'            => 't-bg__grey',
+            // NAVIGATION
+            'menu_primary'            => 't-bg__grey',
 
-                // SIDEBAR
-                'sidebar_primary'         => 'grid__item t-bg--white u-p u-mb',
-                'sidebar_horizontal'      => 'flex flex--w flex--j-sb flex--row@md',
-                'sidebar_right'           => 'u-1/3@md',
-                'sidebar_left'            => 'u-1/3@md',
+            // SIDEBAR
+            'sidebar_primary'         => 'grid__item t-bg--white u-p mb2',
+            'sidebar_horizontal'      => 'flex flex--w flex--j-sb flex--row@md',
+            'sidebar_right'           => 'u-1/3@md',
+            'sidebar_left'            => 'u-1/3@md',
 
-                // COMMENTS
-                'comments_area'           => '',
+            // COMMENTS
+            'comments_area'           => '',
 
-                // FOOTER
-                'footer'                  => 't-bg--white',
+            // FOOTER
+            'footer'                  => 't-bg--white',
 
-                'menu_link'                 => 'btn'
+            'menu_link'                 => 'btn'
         );
 
         $this->args = apply_filters( 'attr_trumps_args', wp_parse_args( $args, $defaults ) );
@@ -152,15 +161,14 @@ class Attr_Trumps {
         if (empty($context)) {
             return $attr;
         }
-        $attr['class']      = "container container--{$context}";
-
-        $attr['class']      .= $this->args['container'];
         if ('single-column--wide' == get_theme_mod('theme_layout') && 'content' === $context) :
-        $attr['class']      .= $this->args['container_wide'];
+        $attr['class']      = $this->args['container_wide'];
         endif;
         if ('header' === $context) :
-        $attr['class']      .= $this->args['container_header'];
+        $attr['class']      = $this->args['container_header'];
         endif;
+        $attr['class']      .= " container container--{$context}";
+        $attr['class']      .= $this->args['container'];
         return $attr;
     }
 
@@ -168,21 +176,22 @@ class Attr_Trumps {
         if (empty($context)) {
             return $attr;
         }
-        $attr['class']      = "row row--{$context}";
-        $attr['class']      .= $this->args['row'];
         if ('layout' === $context) {
 
 
         if ('sidebar-right'     == get_theme_mod('theme_layout')) :
-        $attr['class']      .= $this->args['row_layout_sidebar_r'];
+        $attr['class']      = $this->args['row_layout_sidebar_r'];
 
         elseif ('sidebar-left'     == get_theme_mod('theme_layout')) :
-        $attr['class']      .= $this->args['row_layout_sidebar_l'];
+        $attr['class']      = $this->args['row_layout_sidebar_l'];
 
-        else : $attr['class']      .= $this->args['row_layout'];
+        else : $attr['class']      = $this->args['row_layout'];
 
         endif;
         }
+
+        $attr['class']      .= $this->args['row'];
+        $attr['class']      .= " row row--{$context}";
         return $attr;
     }
 
@@ -221,16 +230,16 @@ class Attr_Trumps {
     public function content($attr) {
 
         if ('single-column--wide'   == get_theme_mod('theme_layout')) :
-        $attr['class']      .= $this->args['content'];
+        $attr['class']      = $this->args['content'];
 
         elseif ('single-column'    == get_theme_mod('theme_layout')) :
-        $attr['class']      .= $this->args['content'];
+        $attr['class']      = $this->args['content'];
 
         elseif ('sidebar-right'     == get_theme_mod('theme_layout')) :
-        $attr['class']      .= $this->args['content_with_sidebar'];
+        $attr['class']      = $this->args['content_with_sidebar'];
 
         elseif ('sidebar-left'     == get_theme_mod('theme_layout')) :
-        $attr['class']      .= $this->args['content_with_sidebar'];
+        $attr['class']      = $this->args['content_with_sidebar'];
         endif;
 
         return $attr;
