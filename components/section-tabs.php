@@ -1,10 +1,7 @@
 <?php
 /**
  * This is the template for the different block-type shortcodes.
- *
- * @package Bempress
  */
-
 global $mehsc_atts;
 ?>
 
@@ -12,7 +9,7 @@ global $mehsc_atts;
 
     <div id="post-<?php the_ID(); ?>" class="<?php echo esc_attr($mehsc_atts['block_type']); ?> block__content shadow--z1 flexed--auto t-bg--white u-radius flex">
 
-    <?php if(! empty($mehsc_atts['icon'])) : ?>
+    <?php if (!empty($mehsc_atts['icon'])) : ?>
 
     <div class="block__figure">
             <?php get_template_part('images/vector/svg', esc_attr($mehsc_atts['icon'])); ?>
@@ -24,17 +21,17 @@ global $mehsc_atts;
 
     <?php
     if ('block' === $mehsc_atts['block_type']) {
-        get_the_image([
-            'size' => 'bempress-sm',
+        get_the_image(array(
+            'size'   => 'bempress-sm',
             'before' => '<div class="block__figure">',
-            'after' => '</div>',
-        ]);
+            'after'  => '</div>',
+        ));
     } elseif ('flag' === $mehsc_atts['block_type']) {
-        get_the_image([
-            'size' => 'thumbnail',
+        get_the_image(array(
+            'size'   => 'thumbnail',
             'before' => '<div class="block__figure u-left flag-image u-round u-p-">',
-            'after' => '</div>',
-        ]);
+            'after'  => '</div>',
+        ));
     }
     ?>
 

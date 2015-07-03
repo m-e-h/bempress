@@ -1,120 +1,132 @@
 <?php
 
-namespace Bempress\AttrTrumps;
+//namespace Bempress\Attr_Trumps;
 
+function attr_trumps( $args = array() ) {
+	$trump = apply_filters( 'attr_trumps_object', null, $args );
+	if ( !is_object( $trump ) )
+		$trump = new Attr_Trumps( $args );
+}
 
 /**
  * Add class selectors to hybrid attributes.
  *
  */
-class AttrTrumps {
-
-    // CONTAINERS
-    public $body                    = '';
-    public $site_container          = '';
-    public $container               = '';
-    public $container_header        = 'py3 sm-flex flex-wrap flex-center';
-    public $container_wide          = 'container--wide';
-    public $row                     = '';
-    public $row_layout              = 'grid';
-    public $row_layout_sidebar_l    = 'grid grid--rev';
-    public $row_layout_sidebar_r    = 'grid';
-
-    // SITE HEADER
-    public $header                  = '';
-    public $branding                = 'flex-auto mxn1';
-    public $site_title              = 'u-h2 m0';
-    public $site_description        = 'u-h4 m0';
-
-    // CONTENT
-    public $content                 = 'grid__item u-mb';
-    public $content_with_sidebar    = 'u-2/3@md u-pr@md';
-
-    // ENTRY
-    public $post                    = '';
-
-    public $page_header             = 'u-1/1 u-text-center';
-
-    public $entry_title             = 'u-h1';
-    public $archive_title           = 'u-h1';
-    public $archive_description     = '';
-
-    public $entry_content           = 'u-p container';
-    public $entry_summary           = '';
-
-    public $nav_single              = '';
-    public $nav_archive             = '';
-
-    // ENTRY META
-    public $entry_author            = '';
-    public $entry_published         = '';
-    public $entry_terms             = '';
-
-    // NAVIGATION
-    public $menu_primary            = 'mxn1';
-
-    // SIDEBAR
-    public $sidebar_primary        = 'grid__item t-bg--white u-p u-mb';
-    public $sidebar_horizontal      = 'flex flex--w flex--j-sb flex--row@md';
-    public $sidebar_right           = 'u-1/3@md';
-    public $sidebar_left            = 'u-1/3@md';
-
-    // COMMENTS
-    public $comments_area           = '';
-
-    // FOOTER
-    public $footer                  = 't-bg--white';
-
-
-
+class Attr_Trumps {
 
     /**
      * Filter hybrid attributes.
      *
      */
-    public function __construct() {
+     public function __construct( $args = array() ) {
+
+ 		$defaults = array(
+                'body'                    => '',
+                'site_container'          => '',
+                'container'               => '',
+                'container_header'        => 'flex flex--row@md flex--w flex--j-sb flex--ai-c',
+                'container_wide'          => 'container--wide',
+                'row'                     => '',
+                'row_layout'              => 'grid',
+                'row_layout_sidebar_l'    => 'grid grid--rev',
+                'row_layout_sidebar_r'    => 'grid',
+
+                // SITE HEADER
+                'header'                  => 'bg-teal border-bottom',
+                'branding'                => 'mt3 py2 inline-block',
+                'site_title'              => 'm0',
+                'site_description'        => 'h3 bold mt0 mb2',
+
+                // CONTENT
+                'content'                 => 'grid__item u-mb',
+                'content_with_sidebar'    => 'grid__item u-mb u-2/3@md u-pr@md',
+
+                // ENTRY
+                'post'                    => '',
+
+                'page_header'             => 'u-1/1 u-text-center',
+
+                'entry_title'             => 'u-h1',
+                'archive_title'           => 'u-h1',
+                'archive_description'     => '',
+
+                'entry_header'            => 'container',
+                'entry_content'           => 'u-p container',
+                'entry_summary'           => 'u-p container',
+                'entry_footer'            => 'container',
+
+                'nav_single'              => '',
+                'nav_archive'             => '',
+
+                // ENTRY META
+                'entry_author'            => '',
+                'entry_published'         => '',
+                'entry_terms'             => '',
+
+                // NAVIGATION
+                'menu_primary'            => 't-bg__grey',
+
+                // SIDEBAR
+                'sidebar_primary'         => 'grid__item t-bg--white u-p u-mb',
+                'sidebar_horizontal'      => 'flex flex--w flex--j-sb flex--row@md',
+                'sidebar_right'           => 'u-1/3@md',
+                'sidebar_left'            => 'u-1/3@md',
+
+                // COMMENTS
+                'comments_area'           => '',
+
+                // FOOTER
+                'footer'                  => 't-bg--white',
+
+                'menu_link'                 => 'btn'
+        );
+
+        $this->args = apply_filters( 'attr_trumps_args', wp_parse_args( $args, $defaults ) );
 
         // CONTAINERS
-        add_filter('hybrid_attr_body',                  [$this,'body']);
-        add_filter('hybrid_attr_site-container',        [$this,'site_container']);
-        add_filter('hybrid_attr_container',             [$this,'container'],10,2);
-        add_filter('hybrid_attr_row',                   [$this,'row'],10,2);
+        add_filter('hybrid_attr_body',                  array($this,'body'));
+        add_filter('hybrid_attr_site-container',        array($this,'site_container'));
+        add_filter('hybrid_attr_container',             array($this,'container'),10,2);
+        add_filter('hybrid_attr_row',                   array($this,'row'),10,2);
 
         // SITE HEADER
-        add_filter('hybrid_attr_header',                [$this,'header']);
-        add_filter('hybrid_attr_branding',              [$this,'branding']);
-        add_filter('hybrid_attr_site-title',            [$this,'site_title']);
-        add_filter('hybrid_attr_site-description',      [$this,'site_description']);
+        add_filter('hybrid_attr_header',                array($this,'header'));
+        add_filter('hybrid_attr_branding',              array($this,'branding'));
+        add_filter('hybrid_attr_site-title',            array($this,'site_title'));
+        add_filter('hybrid_attr_site-description',      array($this,'site_description'));
 
         // CONTENT
-        add_filter('hybrid_attr_content',               [$this,'content']);
+        add_filter('hybrid_attr_content',               array($this,'content'));
 
         // ENTRY
-        add_filter('hybrid_attr_post',                  [$this,'post']);
-        add_filter('hybrid_attr_archive-header',        [$this,'page_header']);
-        add_filter('hybrid_attr_entry-title',           [$this,'entry_title']);
-        add_filter('hybrid_attr_archive-title',         [$this,'archive_title']);
-        add_filter('hybrid_attr_archive-description',   [$this,'archive_description']);
-        add_filter('hybrid_attr_entry-content',         [$this,'entry_content']);
-        add_filter('hybrid_attr_entry-summary',         [$this,'entry_summary']);
+        add_filter('hybrid_attr_post',                  array($this,'post'));
+        add_filter('hybrid_attr_archive-header',        array($this,'page_header'));
+        add_filter('hybrid_attr_archive-title',         array($this,'archive_title'));
+        add_filter('hybrid_attr_archive-description',   array($this,'archive_description'));
+        add_filter('hybrid_attr_entry-header',          array($this,'entry_header'));
+        add_filter('hybrid_attr_entry-title',           array($this,'entry_title'));
+        add_filter('hybrid_attr_entry-content',         array($this,'entry_content'));
+        add_filter('hybrid_attr_entry-summary',         array($this,'entry_summary'));
+        add_filter('hybrid_attr_entry-footer',          array($this,'entry_footer'));
 
         // ENTRY META
-        add_filter('hybrid_attr_entry-author',          [$this,'entry_author']);
-        add_filter('hybrid_attr_entry-published',       [$this,'entry_published']);
-        add_filter('hybrid_attr_entry-terms',           [$this,'entry_terms']);
+        add_filter('hybrid_attr_entry-author',          array($this,'entry_author'));
+        add_filter('hybrid_attr_entry-published',       array($this,'entry_published'));
+        add_filter('hybrid_attr_entry-terms',           array($this,'entry_terms'));
 
         // NAVIGATION
-        add_filter('hybrid_attr_menu',                  [$this,'menu'],10,2);
+        add_filter('hybrid_attr_menu',                  array($this,'menu'),10,2);
 
         // SIDEBAR
-        add_filter('hybrid_attr_sidebar',               [$this,'sidebar'],10,2);
+        add_filter('hybrid_attr_sidebar',               array($this,'sidebar'),10,2);
 
         // FOOTER
-        add_filter('hybrid_attr_footer',                [$this,'footer']);
+        add_filter('hybrid_attr_footer',                array($this,'footer'));
 
         // COMMENTS
-        add_filter('hybrid_attr_comments-area',         [$this,'comments_area']);
+        add_filter('hybrid_attr_comments-area',         array($this,'comments_area'));
 
+        add_filter('nav_menu_link_attributes',          array($this,'menu_link'),10,3);
     }
 
 
@@ -123,14 +135,16 @@ class AttrTrumps {
     /* === OBJECTS === */
 
     public function body($attr) {
+        $something = '.=';
         $attr['class']      .= ' ';
-        $attr['class']      .= $this->body;
+        $attr['class']      .= $this->args['body'];
         return $attr;
     }
 
     public function site_container($attr) {
-        $attr['class']      .= ' ';
-        $attr['class']      .= $this->site_container;
+        if ($this->args['site_container']) {
+        $attr['class']      = $this->args['site_container'];
+    }
         return $attr;
     }
 
@@ -139,13 +153,13 @@ class AttrTrumps {
             return $attr;
         }
         $attr['class']      = "container container--{$context}";
-        $attr['class']      .= ' ';
-        $attr['class']      .= $this->container;
+
+        $attr['class']      .= $this->args['container'];
         if ('single-column--wide' == get_theme_mod('theme_layout') && 'content' === $context) :
-        $attr['class']      .= $this->container_wide;
+        $attr['class']      .= $this->args['container_wide'];
         endif;
         if ('header' === $context) :
-        $attr['class']      .= $this->container_header;
+        $attr['class']      .= $this->args['container_header'];
         endif;
         return $attr;
     }
@@ -155,17 +169,17 @@ class AttrTrumps {
             return $attr;
         }
         $attr['class']      = "row row--{$context}";
-        $attr['class']      .= $this->row;
+        $attr['class']      .= $this->args['row'];
         if ('layout' === $context) {
-        $attr['class']      .= ' ';
+
 
         if ('sidebar-right'     == get_theme_mod('theme_layout')) :
-        $attr['class']      .= $this->row_layout_sidebar_r;
+        $attr['class']      .= $this->args['row_layout_sidebar_r'];
 
         elseif ('sidebar-left'     == get_theme_mod('theme_layout')) :
-        $attr['class']      .= $this->row_layout_sidebar_l;
+        $attr['class']      .= $this->args['row_layout_sidebar_l'];
 
-        else : $attr['class']      .= $this->row_layout;
+        else : $attr['class']      .= $this->args['row_layout'];
 
         endif;
         }
@@ -173,51 +187,52 @@ class AttrTrumps {
     }
 
     public function nav($attr, $context) {
-        $attr['class']      .= ' ';
+
         if ('single' === $context) {
-        $attr['class']      .= $this->nav_single;
+        $attr['class']      .= $this->args['nav_single'];
         }
         if ('archive' === $context) {
-        $attr['class']      .= $this->nav_archive;
+        $attr['class']      .= $this->args['nav_archive'];
         }
         return $attr;
     }
 
     public function comments_area($attr) {
-        $attr['class']      .= ' ';
-        $attr['class']      .= $this->comments_area;
+        if ($this->args['comments_area']) {
+        $attr['class']      = $this->args['comments_area'];
+    }
         return $attr;
     }
 
     public function header($attr) {
-        $attr['class']      .= ' ';
-        $attr['class']      .= $this->header;
+        if ($this->args['header']) {
+        $attr['class']      = $this->args['header'];
+    }
         return $attr;
     }
 
     public function footer($attr) {
-        $attr['class']      .= ' ';
-        $attr['class']      .= $this->footer;
-        return $attr;
+        if ($this->args['footer']) {
+        $attr['class']      = $this->args['footer'];
+    }
+    return $attr;
     }
 
     public function content($attr) {
-        $attr['class']      .= ' ';
+
         if ('single-column--wide'   == get_theme_mod('theme_layout')) :
-        $attr['class']      .= $this->content;
+        $attr['class']      .= $this->args['content'];
 
         elseif ('single-column'    == get_theme_mod('theme_layout')) :
-        $attr['class']      .= $this->content;
+        $attr['class']      .= $this->args['content'];
 
         elseif ('sidebar-right'     == get_theme_mod('theme_layout')) :
-        $attr['class']      .= $this->content_with_sidebar;
+        $attr['class']      .= $this->args['content_with_sidebar'];
 
         elseif ('sidebar-left'     == get_theme_mod('theme_layout')) :
-        $attr['class']      .= $this->content_with_sidebar;
+        $attr['class']      .= $this->args['content_with_sidebar'];
         endif;
 
-        $attr['class']      .= ' ';
-        $attr['class']      .= $this->content;
         return $attr;
     }
 
@@ -226,28 +241,28 @@ class AttrTrumps {
             return $attr;
         }
         if ('primary' === $context) {
-        $attr['class']      .= ' ';
+
         if ('single-column--wide'   == get_theme_mod('theme_layout')) :
-        $attr['class']      .= $this->sidebar_horizontal;
+        $attr['class']      .= $this->args['sidebar_horizontal'];
         $attr['class']      .= ' sidebar-horizontal';
         elseif ('single-column'    == get_theme_mod('theme_layout')) :
-        $attr['class']      .= $this->sidebar_horizontal;
+        $attr['class']      .= $this->args['sidebar_horizontal'];
         $attr['class']      .= ' sidebar-horizontal';
 
         elseif ('sidebar-right' == get_theme_mod('theme_layout')) :
-        $attr['class']      .= $this->sidebar_right;
+        $attr['class']      .= $this->args['sidebar_right'];
         elseif ('sidebar-left' == get_theme_mod('theme_layout')) :
-        $attr['class']      .= $this->sidebar_left;
+        $attr['class']      .= $this->args['sidebar_left'];
         endif;
 
-        $attr['class']      .= ' ';
-        $attr['class']      .= $this->sidebar_primary;
+
+        $attr['class']      .= $this->args['sidebar_primary'];
         }
 
         if ('primary' !== $context) {
         $attr['class']      .= ' sidebar-horizontal';
-        $attr['class']      .= ' ';
-        $attr['class']      .= $this->sidebar_horizontal;
+
+        $attr['class']      .= $this->args['sidebar_horizontal'];
         }
         return $attr;
     }
@@ -256,12 +271,12 @@ class AttrTrumps {
         if (empty($context)) {
         return $attr;
         }
-        $attr['class']      .= ' ';
+
         if ('primary' === $context) {
-        $attr['class']      .= $this->menu_primary;
+        $attr['class']      .= $this->args['menu_primary'];
         }
         if ('secondary' === $context) {
-        $attr['class']      .= $this->menu_secondary;
+        $attr['class']      .= $this->args['menu_secondary'];
         }
         return $attr;
     }
@@ -269,90 +284,119 @@ class AttrTrumps {
     /* === COMPONENTS === */
 
     public function branding($attr) {
-        $attr['class']      .= ' ';
-        $attr['class']      .= $this->branding;
+        if (!$this->args['branding']) {
         return $attr;
+        }
+        $attr['class']      = $this->args['branding'];
+    return $attr;
     }
 
 
     public function site_title($attr) {
-        $attr['class']      .= ' ';
-        $attr['class']      .= $this->site_title;
+        if ($this->args['site_title']) {
+        $attr['class']      = $this->args['site_title'];
         return $attr;
+    }
     }
 
     public function site_description($attr) {
-        $attr['class']      .= ' ';
-        $attr['class']      .= $this->site_description;
+        if ($this->args['site_description']) {
+        $attr['class']      = $this->args['site_description'];
         return $attr;
+    }
     }
 
     /* === LOOP === */
 
     public function page_header($attr) {
         $attr['class']      = 'page-header';
-        $attr['class']      .= ' ';
-        $attr['class']      .= $this->page_header;
+        if ($this->args['page_header']) {
+        $attr['class']      = $this->args['page_header'];
+        $attr['class']      .= ' page-header';
+    }
         return $attr;
     }
 
     public function archive_title($attr) {
-        $attr['class']      .= ' ';
-        $attr['class']      .= $this->archive_title;
+    if ($this->args['archive_title']) {
+        $attr['class']      = $this->args['archive_title'];
+    }
         return $attr;
     }
 
     public function archive_description($attr) {
-        $attr['class']      .= ' ';
-        $attr['class']      .= $this->archive_description;
+    if ($this->args['archive_description']) {
+        $attr['class']      = $this->args['archive_description'];
+    }
         return $attr;
     }
 
     /* === POSTS === */
 
     public function post($attr) {
-        $attr['class']      .= ' ';
-        $attr['class']      .= $this->post;
+
+        $attr['class']      .= $this->args['post'];
         return $attr;
     }
 
     public function entry_title($attr) {
-        $attr['class']      .= ' ';
-        $attr['class']      .= $this->entry_title;
+
+        $attr['class']      .= $this->args['entry_title'];
         return $attr;
     }
 
     public function entry_author($attr) {
-        $attr['class']      .= ' ';
-        $attr['class']      .= $this->entry_author;
+
+        $attr['class']      .= $this->args['entry_author'];
         return $attr;
     }
 
 
     public function entry_published($attr) {
-        $attr['class']      .= ' ';
-        $attr['class']      .= $this->entry_published;
+
+        $attr['class']      .= $this->args['entry_published'];
+        return $attr;
+    }
+
+    public function entry_header($attr) {
+        $attr['class']      = "entry-header";
+
+        $attr['class']      .= $this->args['entry_header'];
         return $attr;
     }
 
     public function entry_content($attr) {
-        $attr['class']      .= ' ';
-        $attr['class']      .= $this->entry_content;
+
+        $attr['class']      .= $this->args['entry_content'];
         return $attr;
     }
 
     public function entry_summary($attr) {
-        $attr['class']      .= ' ';
-        $attr['class']      .= $this->entry_summary;
+
+        $attr['class']      .= $this->args['entry_summary'];
+        return $attr;
+    }
+
+    public function entry_footer($attr) {
+        $attr['class']      = "entry-footer";
+
+        $attr['class']      .= $this->args['entry_footer'];
         return $attr;
     }
 
     public function entry_terms($attr) {
-        $attr['class']      .= ' ';
-        $attr['class']      .= $this->entry_terms;
+
+        $attr['class']      .= $this->args['entry_terms'];
+        return $attr;
+    }
+
+
+
+    public function menu_link( $attr, $item, $args ) {
+    	$attr['class'] = $this->args['menu_link'];
         return $attr;
     }
 
 }
 
-new AttrTrumps();
+new Attr_Trumps();

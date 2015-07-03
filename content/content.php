@@ -10,18 +10,18 @@
               <?php the_content(); ?>
             </div>
 
-            <footer class="entry-footer">
-                <?php wp_link_pages([
-                    'before' => '<nav class="page-nav"><p>' . __('Pages:', 'bempress'),
-                    'after' => '</p></nav>'
-                ]); ?>
+            <footer <?php hybrid_attr('entry-footer'); ?>>
+                <?php wp_link_pages(array(
+                    'before' => '<nav class="page-nav"><p>'.__('Pages:', 'bempress'),
+                    'after'  => '</p></nav>',
+                )); ?>
             </footer>
 
             <?php comments_template('', true); ?>
 
         <?php else : // If not viewing a single post. ?>
 
-            <header class="entry-header">
+            <header <?php hybrid_attr('entry-header'); ?>>
                 <h2 <?php hybrid_attr('entry-title'); ?>>
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h2>
@@ -32,13 +32,13 @@
                 <?php the_excerpt(); ?>
             </div>
 
-            <?php the_posts_navigation(); ?>
-
     	<?php endif; // End check for posts. ?>
 
     </article>
 
     <?php endwhile; ?>
+
+    <?php the_posts_navigation(); ?>
 
 <?php
 endif;

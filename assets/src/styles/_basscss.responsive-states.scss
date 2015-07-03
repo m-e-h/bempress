@@ -1,0 +1,41 @@
+/* #RESPONSIVE STATES
+\*------------------------------------*/
+
+.sm-show, .md-show, .lg-show {
+  display: none !important
+}
+
+@include sm {
+  .sm-show { display: block !important }
+}
+
+@include md {
+  .md-show { display: block !important }
+}
+
+@include lg {
+  .lg-show { display: block !important }
+}
+
+
+@include sm {
+  .sm-hide { display: none !important }
+}
+
+@include md {
+  .md-hide { display: none !important }
+}
+
+@include lg {
+  .lg-hide { display: none !important }
+}
+
+.display-none { display: none !important }
+
+.hide {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}

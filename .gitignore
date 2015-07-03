@@ -9,4 +9,4 @@
 # Generated theme files
 *.map
 *.lock
-src/composer/
+vendor

@@ -1,12 +1,12 @@
 <?php
+
 /**
- * Theme includes
+ * Theme includes.
  *
  * @link https://github.com/roots/sage/pull/1042
  */
-
-$bempress_includes = [
-    'hybrid-core/hybrid.php',           // Hybrid Core library
+$bempress_includes = array(
+    'library/hybrid.php',           // Hybrid Core library
     'inc/attr-trumps.php',              // Css class selectors
     'inc/utils.php',                    // Utility functions
     'inc/init.php',                     // Initial theme setup
@@ -18,13 +18,13 @@ $bempress_includes = [
     'inc/shortcodes-ui.php',            // Shortcake interface
     'inc/metaboxes.php',                // Custom admin sections
     'inc/customizer/customizer.php',    // Customizer
-];
+);
 
 foreach ($bempress_includes as $file) {
     if (!$filepath = locate_template($file)) {
         trigger_error(sprintf(__(
-        'Error locating %s','bempress'
-        ),$file),E_USER_ERROR);
+        'Error locating %s', 'bempress'
+        ), $file), E_USER_ERROR);
     }
     require_once $filepath;
 }

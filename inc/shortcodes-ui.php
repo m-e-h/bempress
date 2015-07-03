@@ -1,33 +1,31 @@
 <?php
 /**
  * SHORTCAKE
- * https://github.com/fusioneng/Shortcake
+ * https://github.com/fusioneng/Shortcake.
  */
-
 add_action('init', 'meh_add_shortcake');
 
 function meh_add_shortcake() {
 
     /* Make sure the Shortcake plugin is active. */
-if (! function_exists('shortcode_ui_register_for_shortcode'))
+if (!function_exists('shortcode_ui_register_for_shortcode')) {
     return;
-$bempress_dir = trailingslashit( get_template_directory_uri() );
-
-
+}
+    $bempress_dir = trailingslashit(get_template_directory_uri());
 
     shortcode_ui_register_for_shortcode(
         'meh_cards',
         array(
-            'label' => 'Cards',
-            'listItemImage' => '<img width="60px" height="60px" src="' . esc_url( $bempress_dir . 'images/sidebar-left.svg' ) . '" />',
+            'label'         => 'Cards',
+            'listItemImage' => '<img width="60px" height="60px" src="'.esc_url($bempress_dir.'images/sidebar-left.svg').'" />',
             // Attribute model expects 'attr', 'type' and 'label'
             // Supported field types: text, checkbox, textarea, radio, select, email, url, number, and date.
             'attrs' => array(
                 array(
-                    'label' => 'Cards Per Row',
-                    'attr'  => 'width',
-                    'type' => 'select',
-                    'value' => 'u-1of1@md',
+                    'label'   => 'Cards Per Row',
+                    'attr'    => 'width',
+                    'type'    => 'select',
+                    'value'   => 'u-1of1@md',
                     'options' => array(
                         'u-1/1@md' => 'One',
                         'u-1/2@md' => 'Two',
@@ -38,28 +36,28 @@ $bempress_dir = trailingslashit( get_template_directory_uri() );
                ),
 
                 array(
-                    'label' => 'Card Color',
-                    'attr'  => 'card_color',
-                    'type' => 'select',
-                    'value' => 't-bg--white',
+                    'label'   => 'Card Color',
+                    'attr'    => 'card_color',
+                    'type'    => 'select',
+                    'value'   => 't-bg--white',
                     'options' => array(
-                        't-bg--white' => 'White',
-                        't-bg--1' => 'Primary Color',
-                        't-bg--2' => 'Secondary Color',
+                        't-bg--white'      => 'White',
+                        't-bg--1'          => 'Primary Color',
+                        't-bg--2'          => 'Secondary Color',
                         't-bg--grey-light' => 'Neutral',
                    ),
                     'description' => 'Background color of your content card',
                ),
 
                 array(
-                    'label' => 'Content to Show',
-                    'attr'  => 'show_content',
-                    'type' => 'select',
-                    'value' => 'excerpt',
+                    'label'   => 'Content to Show',
+                    'attr'    => 'show_content',
+                    'type'    => 'select',
+                    'value'   => 'excerpt',
                     'options' => array(
                         'excerpt' => 'Excerpt',
                         'content' => 'Content',
-                        'none' => 'None',
+                        'none'    => 'None',
                    ),
                ),
 
@@ -74,42 +72,40 @@ $bempress_dir = trailingslashit( get_template_directory_uri() );
        )
    );
 
-
-
-    /**
+    /*
      * PANEL
      */
     shortcode_ui_register_for_shortcode(
         'meh_block',
         array(
-            'label' => 'Block',
-            'listItemImage' => '<img width="60px" height="60px" src="' . esc_url( $bempress_dir . 'images/sidebar-left.svg' ) . '" />',
+            'label'         => 'Block',
+            'listItemImage' => '<img width="60px" height="60px" src="'.esc_url($bempress_dir.'images/sidebar-left.svg').'" />',
             // Attribute model expects 'attr', 'type' and 'label'
             // Supported field types: text, checkbox, textarea, radio, select, email, url, number, and date.
             'attrs' => array(
                 array(
-                    'label' => 'Icon',
-                    'attr'  => 'icon',
-                    'type' => 'select',
+                    'label'   => 'Icon',
+                    'attr'    => 'icon',
+                    'type'    => 'select',
                     'options' => array(
-                        '' => 'None',
-                        'quote' => 'Quote',
-                        'book' => 'Book',
+                        ''         => 'None',
+                        'quote'    => 'Quote',
+                        'book'     => 'Book',
                         'calendar' => 'Calendar',
-                        'church' => 'Church',
-                        'sports' => 'Sports',
-                        'image' => 'Image',
-                        'chat' => 'Chat',
-                        'pencils' => 'Pencils',
+                        'church'   => 'Church',
+                        'sports'   => 'Sports',
+                        'image'    => 'Image',
+                        'chat'     => 'Chat',
+                        'pencils'  => 'Pencils',
                    ),
                         'description' => 'Don\'t use this if you are using an image.',
                ),
 
                 array(
-                    'label' => 'Blocks Per Row',
-                    'attr'  => 'width',
-                    'type' => 'select',
-                    'value' => 'u-1of1@md',
+                    'label'   => 'Blocks Per Row',
+                    'attr'    => 'width',
+                    'type'    => 'select',
+                    'value'   => 'u-1of1@md',
                     'options' => array(
                         'u-1/1@md' => 'One',
                         'u-1/2@md' => 'Two',
@@ -120,22 +116,22 @@ $bempress_dir = trailingslashit( get_template_directory_uri() );
                ),
 
                 array(
-                    'label' => 'Content to Show',
-                    'attr'  => 'show_content',
-                    'type' => 'select',
-                    'value' => 'excerpt',
+                    'label'   => 'Content to Show',
+                    'attr'    => 'show_content',
+                    'type'    => 'select',
+                    'value'   => 'excerpt',
                     'options' => array(
                         'excerpt' => 'Excerpt',
                         'content' => 'Content',
-                        'none' => 'None',
+                        'none'    => 'None',
                    ),
                ),
 
                 array(
-                    'label' => 'Show Featured Image',
-                    'attr'  => 'show_image',
-                    'type' => 'select',
-                    'value' => 'show_img',
+                    'label'   => 'Show Featured Image',
+                    'attr'    => 'show_image',
+                    'type'    => 'select',
+                    'value'   => 'show_img',
                     'options' => array(
                         'show_img' => 'Show Image',
                         'hide_img' => 'Hide Image',
@@ -143,15 +139,15 @@ $bempress_dir = trailingslashit( get_template_directory_uri() );
                ),
 
                 array(
-                    'label' => 'Block Type',
-                    'attr'  => 'block_type',
-                    'type' => 'select',
-                    'value' => 'block',
+                    'label'   => 'Block Type',
+                    'attr'    => 'block_type',
+                    'type'    => 'select',
+                    'value'   => 'block',
                     'options' => array(
                         'block' => 'Block',
-                        'flag' => 'Panel',
+                        'flag'  => 'Panel',
                    ),
-                    'multiple' => false,
+                    'multiple'    => false,
                     'description' => '*Block = Large image on top. *Panel = Small image to the left.',
                ),
 
@@ -166,23 +162,21 @@ $bempress_dir = trailingslashit( get_template_directory_uri() );
        )
    );
 
-
-
-    /**
+    /*
      * Tabs
      */
     shortcode_ui_register_for_shortcode(
         'meh_tabs',
         array(
-            'label' => 'Tabs',
+            'label'         => 'Tabs',
             'listItemImage' => 'dashicons-images-alt2',
-            'attrs' => array(
+            'attrs'         => array(
 
                 array(
-                    'label' => 'Content to Show',
-                    'attr'  => 'show_content',
-                    'type' => 'select',
-                    'value' => 'excerpt',
+                    'label'   => 'Content to Show',
+                    'attr'    => 'show_content',
+                    'type'    => 'select',
+                    'value'   => 'excerpt',
                     'options' => array(
                         'excerpt' => 'Excerpt',
                         'content' => 'Content',
@@ -200,21 +194,21 @@ $bempress_dir = trailingslashit( get_template_directory_uri() );
        )
    );
 
-    /**
+    /*
      * Toggles
      */
     shortcode_ui_register_for_shortcode(
         'meh_toggles',
         array(
-            'label' => 'Toggles',
+            'label'         => 'Toggles',
             'listItemImage' => 'dashicons-menu',
-            'attrs' => array(
+            'attrs'         => array(
 
                 array(
-                    'label' => 'Content to Show',
-                    'attr'  => 'show_content',
-                    'type' => 'select',
-                    'value' => 'excerpt',
+                    'label'   => 'Content to Show',
+                    'attr'    => 'show_content',
+                    'type'    => 'select',
+                    'value'   => 'excerpt',
                     'options' => array(
                         'excerpt' => 'Excerpt',
                         'content' => 'Content',
@@ -231,5 +225,4 @@ $bempress_dir = trailingslashit( get_template_directory_uri() );
            ),
        )
    );
-
 }
