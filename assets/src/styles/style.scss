@@ -17,6 +17,9 @@ GitHub Theme URI: https://github.com/m-e-h/bempress
 @import "settings.responsive";
 
 @import 'basscss.base-reset';
+
+@import 'elements.nav';
+
 @import 'basscss.base-forms';
 @import 'basscss.base-tables';
 @import 'basscss.base-typography';
@@ -35,4 +38,6 @@ GitHub Theme URI: https://github.com/m-e-h/bempress
 @import 'basscss.flex-object';
 @import 'basscss.borders';
 @import 'basscss.colors';
+
+@import "components.breadcrumbs";
 

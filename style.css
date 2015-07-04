@@ -22,6 +22,20 @@ svg {
     max-height: 100%;
 }
 
+/* #NAV
+\*------------------------------------*/
+nav ol,
+nav ul {
+    margin: 0; 
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0;
+}
+
 /* #FORMS
 \*------------------------------------*/
 input,
@@ -199,58 +213,61 @@ hr {
     border-bottom-color: rgba(0, 0, 0, 0.125);
 }
 
-.field {
+input,
+textarea {
+    display: block; 
     border-width: 1px;
     border-style: solid;
     border-color: rgba(0, 0, 0, 0.125);
     border-radius: 3px;
 }
 
-.field:focus,
-.field.is-focused {
+input:focus,
+input.is-focused,
+textarea:focus,
+textarea.is-focused {
     border-color: #0074d9;
     outline: none;
     box-shadow: 0 0 0 2px color(#0074d9, 0.5);
 }
 
-.field:disabled,
-.field.is-disabled {
+input:disabled,
+input.is-disabled {
     opacity: 0.5; 
     background-color: rgba(0, 0, 0, 0.125);
 }
 
-.field:read-only:not(select),
-.field.is-read-only {
+input:read-only:not(select),
+input.is-read-only {
     background-color: rgba(0, 0, 0, 0.125);
 }
 
-.field.is-success {
+input.is-success {
     border-color: #2ecc40;
 }
 
-.field.is-success:focus,
-.field.is-success.is-focused {
+input.is-success:focus,
+input.is-success.is-focused {
     box-shadow: 0 0 0 2px color(#2ecc40, 0.5);
 }
 
-.field.is-warning {
+input.is-warning {
     border-color: #ffdc00;
 }
 
-.field.is-warning:focus,
-.field.is-warning.is-focused {
+input.is-warning:focus,
+input.is-warning.is-focused {
     box-shadow: 0 0 0 2px color(#ffdc00, 0.5);
 }
 
-.field:invalid,
-.field.is-error {
+input.is-error {
     border-color: #ff4136;
 }
 
-.field:invalid:focus,
-.field:invalid.is-focused,
-.field.is-error:focus,
-.field.is-error.is-focused {
+input:invalid:focus,
+input:invalid.is-focused,
+input.is-error:focus,
+input.is-error.is-focused {
     box-shadow: 0 0 0 2px color(#ff4136, 0.5);
 }
 
@@ -269,7 +286,8 @@ hr {
 
 /* #BUTTONS
 \*------------------------------------*/
-.btn {
+.btn,
+nav li > a {
     display: inline-block;
     height: auto;
     margin: 0;
@@ -279,7 +297,7 @@ hr {
     background-color: transparent; 
     font-family: inherit;
     font-size: inherit;
-    font-weight: bold;
+    font-weight: normal;
     line-height: 1.125rem;
     vertical-align: middle;
     text-decoration: none;
@@ -288,11 +306,13 @@ hr {
     -webkit-appearance: none;
 }
 
-.btn:hover {
+.btn:hover,
+nav li > a:hover {
     text-decoration: none;
 }
 
-.btn:focus {
+.btn:focus,
+nav li > a:focus {
     border-color: rgba(0, 0, 0, 0.125);
     outline: none;
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
@@ -1355,4 +1375,16 @@ hr {
 
 .bg-darken-4 {
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* #BREADCRUMBS
+\*------------------------------------*/
+.breadcrumbs li + li:before {
+    padding: 0.5rem; 
+    opacity: 0.8;
+    content: "/\00a0";
+}
+
+.trail-end span {
+    display: none;
 }
