@@ -32,7 +32,7 @@ class Attr_Trumps {
  		$defaults = array(
             'body'                    => '',
             'site_container'          => '',
-            'container'               => '',
+            'container'               => 'YO',
             'container_header'        => 'flex flex--row@md flex-justify flex-center',
             'container_wide'          => 'container--wide',
             'row'                     => '',
@@ -144,8 +144,6 @@ class Attr_Trumps {
     /* === OBJECTS === */
 
     public function body($attr) {
-        $something = '.=';
-        $attr['class']      .= ' ';
         $attr['class']      .= $this->args['body'];
         return $attr;
     }
@@ -161,14 +159,15 @@ class Attr_Trumps {
         if (empty($context)) {
             return $attr;
         }
-        if ('single-column--wide' == get_theme_mod('theme_layout') && 'content' === $context) :
-        $attr['class']      = $this->args['container_wide'];
-        endif;
-        if ('header' === $context) :
-        $attr['class']      = $this->args['container_header'];
-        endif;
+        $attr['class']      = $this->args['container'];
         $attr['class']      .= " container container--{$context}";
-        $attr['class']      .= $this->args['container'];
+
+        if ('single-column--wide' == get_theme_mod('theme_layout') && 'content' === $context) {
+        $attr['class']      = " {$this->args['container_wide']}";
+        }
+        if ('header' === $context) {
+        $attr['class']      .= " {$this->args['container_header']}";
+        }
         return $attr;
     }
 
@@ -176,22 +175,22 @@ class Attr_Trumps {
         if (empty($context)) {
             return $attr;
         }
+        $attr['class']      = $this->args['row'];
+        $attr['class']      .= " row row--{$context}";
+
         if ('layout' === $context) {
 
-
         if ('sidebar-right'     == get_theme_mod('theme_layout')) :
-        $attr['class']      = $this->args['row_layout_sidebar_r'];
+        $attr['class']      .= " {$this->args['row_layout_sidebar_r']}";
 
         elseif ('sidebar-left'     == get_theme_mod('theme_layout')) :
-        $attr['class']      = $this->args['row_layout_sidebar_l'];
+        $attr['class']      .= " {$this->args['row_layout_sidebar_l']}";
 
-        else : $attr['class']      = $this->args['row_layout'];
+        else : $attr['class']      .= " {$this->args['row_layout']}";
 
         endif;
         }
 
-        $attr['class']      .= $this->args['row'];
-        $attr['class']      .= " row row--{$context}";
         return $attr;
     }
 
@@ -320,8 +319,7 @@ class Attr_Trumps {
     public function page_header($attr) {
         $attr['class']      = 'page-header';
         if ($this->args['page_header']) {
-        $attr['class']      = $this->args['page_header'];
-        $attr['class']      .= ' page-header';
+        $attr['class']      = " {$this->args['page_header']}";
     }
         return $attr;
     }
@@ -349,14 +347,16 @@ class Attr_Trumps {
     }
 
     public function entry_title($attr) {
-
-        $attr['class']      .= $this->args['entry_title'];
+    if ($this->args['entry_title']) {
+        $attr['class']      = $this->args['entry_title'];
+    }
         return $attr;
     }
 
     public function entry_author($attr) {
-
-        $attr['class']      .= $this->args['entry_author'];
+    if ($this->args['entry_author']) {
+        $attr['class']      = $this->args['entry_author'];
+    }
         return $attr;
     }
 

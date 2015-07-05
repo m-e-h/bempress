@@ -1,7 +1,7 @@
 <?php
 /**
  * Layout class.  This class is for creating new layout objects.  Layout registration is handled via
- * the `Hybrid_Layout_Factory` class in `class-layout-factory.php`.  Theme authors should utilize
+ * the `Hybrid_Layout_Factory` class in `inc/class-layout-factory.php`.  Theme authors should utilize
  * the API functions in `inc/layouts.php`.
  *
  * @package    HybridCore
@@ -41,7 +41,7 @@ class Hybrid_Layout {
 	 */
 	public function __get( $property ) {
 
-		return isset( $this->args[ $property ] ) ? $this->args[ $property ] : null;
+		return isset( $this->$property ) ? $this->args[ $property ] : null;
 	}
 
 	/**
@@ -55,7 +55,8 @@ class Hybrid_Layout {
 	 */
 	public function __set( $property, $value ) {
 
-		$this->args[ $property ] = $value;
+		if ( isset( $this->$property ) )
+			$this->args[ $property ] = $value;
 	}
 
 	/**

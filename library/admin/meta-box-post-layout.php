@@ -68,25 +68,48 @@ function hybrid_post_layout_meta_box( $post, $box ) {
 
 	wp_nonce_field( basename( __FILE__ ), 'hybrid-post-layout-nonce' ); ?>
 
-	<div class="buttonset">
+	<?php foreach ( hybrid_get_layouts() as $layout ) : ?>
 
-		<?php foreach ( hybrid_get_layouts() as $layout ) : ?>
+		<?php if ( true === $layout->is_post_layout && $layout->image && ! ( !empty( $layout->post_types ) && !in_array( $post->post_type, $layout->post_types ) ) ) : ?>
 
-			<?php if ( true === $layout->is_post_layout && $layout->image && ! ( !empty( $layout->post_types ) && !in_array( $post->post_type, $layout->post_types ) ) ) : ?>
+			<label class="has-img">
+				<input type="radio" value="<?php echo esc_attr( $layout->name ); ?>" name="hybrid-post-layout" <?php checked( $post_layout, $layout->name ); ?> />
 
-				<label>
-					<input type="radio" value="<?php echo esc_attr( $layout->name ); ?>" name="hybrid-post-layout" <?php checked( $post_layout, $layout->name ); ?> />
+				<span class="screen-reader-text"><?php echo esc_html( $layout->label ); ?></span>
 
-					<span class="screen-reader-text"><?php echo esc_html( $layout->label ); ?></span>
+				<img src="<?php echo esc_url( sprintf( $layout->image, get_template_directory_uri(), get_stylesheet_directory_uri() ) ); ?>" alt="<?php echo esc_attr( $layout->label ); ?>" />
+			</label>
 
-					<img src="<?php echo esc_url( sprintf( $layout->image, get_template_directory_uri(), get_stylesheet_directory_uri() ) ); ?>" alt="<?php echo esc_attr( $layout->label ); ?>" />
-				</label>
+		<?php endif; ?>
 
-			<?php endif; ?>
+	<?php endforeach; ?>
 
-		<?php endforeach; ?>
-	</div>
-<?php }
+	<script type="text/javascript">
+	jQuery( document ).ready( function( $ ) {
+
+		// Add the `.checked` class to whichever radio is checked.
+		$( '#hybrid-post-layout input:checked' ).addClass( 'checked' );
+
+		// When a radio is clicked.
+		$( "#hybrid-post-layout input" ).click( function() {
+
+			// If the radio has the `.checked` class, remove it and uncheck the radio.
+			if ( $( this ).hasClass( 'checked' ) ) {
+
+				$( "#hybrid-post-layout input" ).removeClass( 'checked' );
+				$( this ).prop( 'checked', false );
+
+			// If the radio is not checked, ad the `.checked` class and check it.
+			} else {
+
+				$( "#hybrid-post-layout input" ).removeClass( 'checked' );
+				$( this ).addClass( 'checked' );
+			}
+		} );
+	} );
+	</script>
+<?php
+}
 
 /**
  * Saves the post layout when submitted via the layout meta box.

@@ -4,7 +4,7 @@
 
 /* === Radio Image Control (Post Layout) === */
 
-#hybrid-post-layout input[type="radio"] {
+#hybrid-post-layout .has-img input[type="radio"] {
 	clip:     rect(1px, 1px, 1px, 1px);
 	height:   1px;
 	overflow: hidden;
