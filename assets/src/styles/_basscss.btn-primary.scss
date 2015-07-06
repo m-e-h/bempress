@@ -5,13 +5,13 @@
   $button-background-color: $blue;
 
 
-.btn-primary {
+.btn-primary,
+button {
   color: $button-color;
   background-color: $button-background-color;
   border-radius: $border-radius;
-}
 
-.btn-primary:hover {
+&:hover {
   box-shadow: inset 0 0 0 20rem $darken-1;
 }
 
@@ -19,6 +19,7 @@
   box-shadow: inset 0 0 0 20rem $darken-2,
     inset 0 3px 4px 0 $darken-3,
     0 0 1px $darken-2;
+}
 }
 
 .btn-primary:disabled,

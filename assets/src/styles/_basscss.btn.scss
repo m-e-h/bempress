@@ -9,7 +9,11 @@
   $button-padding-x: 1rem;
 
 
-.btn {
+.btn,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   font-family: $button-font-family;
   font-size: $button-font-size;
   font-weight: $button-font-weight;
@@ -25,16 +29,16 @@
   -webkit-appearance: none;
   color: inherit;
   background-color: transparent;
-}
 
-.btn:hover {
+&:hover {
   text-decoration: none;
 }
 
-.btn:focus {
+&:focus {
   outline: none;
   border-color: $darken-2;
   box-shadow: 0 0 0 3px $darken-3;
+}
 }
 
 ::-moz-focus-inner {

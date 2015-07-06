@@ -16,7 +16,7 @@ $bempress_includes = array(
     'inc/tiny-mce.php',                 // Extra wysiwyg actions
     'inc/shortcodes.php',               // Shortcodes
     'inc/shortcodes-ui.php',            // Shortcake interface
-    'inc/metaboxes.php',                // Custom admin sections
+    //'inc/metaboxes.php',                // Custom admin sections
     'inc/customizer/customizer.php',    // Customizer
 );
 

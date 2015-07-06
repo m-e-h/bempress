@@ -25,16 +25,19 @@
 // small
 @include sm {
   .sm-flex { display: flex }
+  .flex-column\@sm  { flex-direction: column }
 }
 
 
 // medium
 @include md {
   .md-flex { display: flex }
+  .flex-row\@md  { flex-direction: row }
 }
 
 
 // large
 @include lg {
   .lg-flex { display: flex }
+  .flex-row\@lg  { flex-direction: row }
 }

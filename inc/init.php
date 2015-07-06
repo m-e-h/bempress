@@ -28,7 +28,7 @@ function setup() {
     add_theme_support('hybrid-core-template-hierarchy');
 
     // Layouts
-    add_theme_support('theme-layouts', array('default' => 'single-column'));
+    add_theme_support('theme-layouts', array('default' => '1column'));
 
     // http://codex.wordpress.org/Function_Reference/register_nav_menus
     register_nav_menus(array(
@@ -95,16 +95,15 @@ function image_sizes() {
 }
 
 function layouts() {
-    hybrid_get_layout('default')->image = '%s/assets/images/default.svg';
 
-    hybrid_register_layout('single-column', array(
+    hybrid_register_layout('1column', array(
         'label'            => _x('Single Column', 'theme layout', 'bempress'),
         'is_global_layout' => true,
         'is_post_layout'   => true,
         'image'            => '%s/assets/images/single-column.svg',
     ));
 
-    hybrid_register_layout('single-column--wide', array(
+    hybrid_register_layout('1column-wide', array(
         'label'            => _x('Single Column Wide', 'theme layout', 'bempress'),
         'is_global_layout' => true,
         'is_post_layout'   => true,

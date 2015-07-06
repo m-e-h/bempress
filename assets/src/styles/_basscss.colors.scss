@@ -1,6 +1,14 @@
 /* #COLORS
 \*------------------------------------*/
 
+.color1 { color: $color1 }
+.color2 { color: $color2 }
+.color3 { color: $color3 }
+
+.bg1 { background-color: $color1 }
+.bg2 { background-color: $color2 }
+.bg3 { background-color: $color3 }
+
 .black  { color: $black }
 .gray   { color: $gray }
 .silver { color: $silver }
@@ -21,8 +29,17 @@
 .purple  { color: $purple }
 .maroon  { color: $maroon }
 
-.color-inherit { color: inherit }
-.muted { opacity: .5 }
+.color-inherit,
+.color-inherit a {
+    color: inherit;
+}
+
+.currentcolor,
+.currentcolor a {
+    color: currentColor;
+}
+
+.muted { opacity: .6 }
 
 
 /* Basscss Background Colors */
