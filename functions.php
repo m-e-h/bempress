@@ -6,7 +6,7 @@
  * @link https://github.com/roots/sage/pull/1042
  */
 $bempress_includes = array(
-    'library/hybrid.php',           // Hybrid Core library
+    'inc/hybrid-core/hybrid.php',       // Hybrid Core library
     'inc/attr-trumps.php',              // Css class selectors
     'inc/utils.php',                    // Utility functions
     'inc/init.php',                     // Initial theme setup
@@ -29,5 +29,8 @@ foreach ($bempress_includes as $file) {
     require_once $filepath;
 }
 unset($file, $filepath);
+
+define('HYBRID_DIR', trailingslashit( get_template_directory()) . 'inc/hybrid-core/');
+define('HYBRID_URI', trailingslashit( get_template_directory_uri()) . 'inc/hybrid-core/');
 
 new Hybrid();
