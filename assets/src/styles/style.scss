@@ -14,6 +14,10 @@ GitHub Theme URI: https://github.com/m-e-h/bempress
 
 @import 'basscss.defaults';
 
+@import 'color-definitions';
+@import 'variables';
+@import 'mixins';
+
 @import "settings.responsive";
 
 @import 'basscss.base-reset';
@@ -44,4 +48,3 @@ GitHub Theme URI: https://github.com/m-e-h/bempress
 @import 'basscss.colors';
 
 @import "components.breadcrumbs";
-

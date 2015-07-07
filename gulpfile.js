@@ -53,7 +53,7 @@ gulp.task('hybrid', function() {
 	return gulp.src([
 			'vendor/justintadlock/hybrid-core/**/*'
 		])
-		.pipe(gulp.dest('library'));
+		.pipe(gulp.dest('inc/hybrid-core'));
 });
 
 // Compile and Automatically Prefix Stylesheets
@@ -145,7 +145,7 @@ gulp.task('serve', ['styles'], function() {
 	browserSync.init({
 		//proxy: "local.wordpress.dev"
 		//proxy: "local.wordpress-trunk.dev"
-		proxy: "july.dev"
+		proxy: "june.dev"
 			//proxy: "stmark.dev"
 			//proxy: "127.0.0.1:8080/wordpress/"
 	});

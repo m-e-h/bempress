@@ -10,6 +10,159 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: bempress-rooted
 GitHub Theme URI: https://github.com/m-e-h/bempress
 */
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* ==========  Color Palettes  ========== */
+/* colors.scss */
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/*------------------------------------*    $CONTENTS
+\*------------------------------------*/
+/**
+ * STYLE GUIDE VARIABLES------------------Declarations of Sass variables
+ * -----Typography
+ * -----Colors
+ * -----Textfield
+ * -----Switch
+ * -----Spinner
+ * -----Radio
+ * -----Menu
+ * -----List
+ * -----Layout
+ * -----Icon toggles
+ * -----Footer
+ * -----Column
+ * -----Checkbox
+ * -----Card
+ * -----Button
+ * -----Animation
+ * -----Progress
+ * -----Badge
+ * -----Shadows
+ * -----Grid
+ * -----Data table
+ */
+/* ==========  TYPOGRAPHY  ========== */
+/* We're splitting fonts into "preferred" and "performance" in order to optimize
+   page loading. For important text, such as the body, we want it to load
+   immediately and not wait for the web font load, whereas for other sections,
+   such as headers and titles, we're OK with things taking a bit longer to load.
+   We do have some optional classes and parameters in the mixins, in case you
+   definitely want to make sure you're using the preferred font and don't mind
+   the performance hit.
+   We should be able to improve on this once CSS Font Loading L3 becomes more
+   widely available.
+*/
+/* ==========  COLORS  ========== */
+/**
+*
+* Material design color palettes.
+* @see http://www.google.com/design/spec/style/color.html
+*
+**/
+/* ==========  Color & Themes  ========== */
+/* ==========  Typography  ========== */
+/* ==========  Components  ========== */
+/* ==========  Standard Buttons  ========== */
+/* ==========  Icon Toggles  ========== */
+/* ==========  Radio Buttons  ========== */
+/* ==========  Ripple effect  ========== */
+/* ==========  Layout  ========== */
+/* ==========  Content Tabs  ========== */
+/* ==========  Checkboxes  ========== */
+/* ==========  Switches  ========== */
+/* ==========  Spinner  ========== */
+/* ==========  Text fields  ========== */
+/* ==========  Card  ========== */
+/* ==========  Sliders ========== */
+/* ========== Progress ========== */
+/* ==========  List ========== */
+/* ==========  Item ========== */
+/* ==========  Dropdown menu ========== */
+/* ==========  Tooltips  ========== */
+/* ==========  Footer  ========== */
+/* TEXTFIELD */
+/* SWITCH */
+/* SPINNER */
+/* RADIO */
+/* MENU */
+/* LIST */
+/* ICONS */
+/* ICON TOGGLE */
+/* FOOTER */
+/*mega-footer*/
+/**************
+ *
+ * Sizes
+ *
+ *************/
+/*mini-footer*/
+/**************
+ *
+ * Sizes
+ *
+ *************/
+/* COLUMN LAYOUT */
+/* CHECKBOX */
+/* CARD */
+/* Card dimensions */
+/* Cover image */
+/* BUTTON */
+/**
+ *
+ * Dimensions
+ *
+ */
+/* ANIMATION */
+/* PROGRESS */
+/* BADGE */
+/* SHADOWS */
+/* GRID */
+/* DATA TABLE */
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* Typography */
+/* Shadows */
+/* Animations */
 img {
     max-width: 100%;
 }
@@ -621,21 +774,37 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
     display: inline-block;
-    height: auto;
-    margin: 0;
-    padding: 0.5rem 1rem;
-    border: 1px solid transparent;
+    overflow: hidden;
+    position: relative;
+    min-width: 64px;
+    height: 36px;
+    padding: 0 8px;
+    border: none;
+    border-radius: 2px;
+    outline: none;
     color: inherit;
-    background-color: transparent; 
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: normal;
-    line-height: 1.125rem;
-    vertical-align: middle;
+    background: transparent;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    line-height: 36px;
+    text-align: center;
+    vertical-align: middle; 
     text-decoration: none;
+    letter-spacing: 0;
+    text-transform: uppercase;
     cursor: pointer;
-
-    -webkit-appearance: none;
+    -webkit-transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn::-moz-focus-inner,
+nav li > a::-moz-focus-inner,
+button::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner {
+    border: 0;
 }
 .btn:hover,
 nav li > a:hover,
@@ -643,22 +812,33 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-    text-decoration: none;
+    background-color: rgba(158,158,158, 0.20);
 }
-.btn:focus,
-nav li > a:focus,
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus {
-    border-color: rgba(0, 0, 0, 0.125);
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
+.btn:focus:not(:active),
+nav li > a:focus:not(:active),
+button:focus:not(:active),
+input[type="button"]:focus:not(:active),
+input[type="reset"]:focus:not(:active),
+input[type="submit"]:focus:not(:active) {
+    background-color: rgba(0,0,0, 0.12);
 }
-
-::-moz-focus-inner {
-    padding: 0; 
-    border: 0;
+.btn:active,
+nav li > a:active,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+    background-color: rgba(158,158,158, 0.40);
+}
+.btn[disabled][disabled],
+nav li > a[disabled][disabled],
+button[disabled][disabled],
+input[type="button"][disabled][disabled],
+input[type="reset"][disabled][disabled],
+input[type="submit"][disabled][disabled] {
+    color: rgba(0,0,0, 0.26);
+    background-color: transparent; 
+    cursor: auto;
 }
 
 /* #BUTTONS PRIMARY
@@ -689,21 +869,14 @@ button .btn-primary:active {
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    border-color: currentcolor; 
+    border: 2px solid currentcolor; 
     border-radius: 3px;
 }
 .btn-outline:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-    border-color: currentcolor; 
-    box-shadow: inset 0 0 0 20rem rgba(0, 0, 0, 0.0625);
-}
-.btn-outline:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
-    box-shadow: inset 0 0 0 20rem rgba(0, 0, 0, 0.125), inset 0 3px 4px 0 rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.125);
+    border-color: currentcolor;
 }
 
 .btn-outline:disabled,

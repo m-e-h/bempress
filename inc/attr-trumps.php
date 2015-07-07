@@ -73,7 +73,7 @@ class Attr_Trumps {
             'entry_terms'             => '',
 
             // NAVIGATION
-            'menu_primary'            => 'bg-darken-1',
+            'menu_primary'            => '',
 
             // SIDEBAR
             'sidebar_primary'         => 'grid__item bg-white p2 mb2',
