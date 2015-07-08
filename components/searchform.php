@@ -9,7 +9,7 @@
         <input type="search" value="<?= get_search_query(); ?>" name="s" class="search-field form-control" placeholder="<?php _e('Search', 'bempress'); ?> <?php bloginfo('name'); ?>" required>
 
         <span class="input-group-btn">
-            <button type="submit" class="search-submit btn btn--transparent">
+            <button type="submit" class="search-submit btn button--raised button--colored">
             <i class="material-icons"><?php _e('&#xE8B6;', 'bempress'); ?></i>
             </button>
         </span>

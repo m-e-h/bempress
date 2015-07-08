@@ -28,7 +28,7 @@ function setup() {
     add_theme_support('hybrid-core-template-hierarchy');
 
     // Layouts
-    add_theme_support('theme-layouts', array('default' => '1column'));
+    add_theme_support('theme-layouts', array('default' => '1-column'));
 
     // http://codex.wordpress.org/Function_Reference/register_nav_menus
     register_nav_menus(array(
@@ -66,7 +66,7 @@ function widgets() {
     hybrid_register_sidebar(array(
     'name'          => __('Primary', 'bempress'),
     'id'            => 'primary',
-    'before_widget' => '<section class="widget %1$s %2$s">',
+    'before_widget' => '<section ' .hybrid_get_attr('widgets', 'primary').'>',
     'after_widget'  => '</section>',
     'before_title'  => '<h3 class="widget-title">',
     'after_title'   => '</h3>',
@@ -75,12 +75,14 @@ function widgets() {
     hybrid_register_sidebar(array(
     'name'          => __('Footer', 'bempress'),
     'id'            => 'footer',
-    'before_widget' => '<section class="widget %1$s %2$s">',
+    'before_widget' => '<section ' .hybrid_get_attr('widgets', 'footer').'>',
     'after_widget'  => '</section>',
     'before_title'  => '<h3 class="widget-title">',
     'after_title'   => '</h3>',
   ));
 }
+
+
 
 function image_sizes() {
     // Set the 'post-thumbnail' size.
@@ -96,14 +98,14 @@ function image_sizes() {
 
 function layouts() {
 
-    hybrid_register_layout('1column', array(
+    hybrid_register_layout('1-column', array(
         'label'            => _x('Single Column', 'theme layout', 'bempress'),
         'is_global_layout' => true,
         'is_post_layout'   => true,
         'image'            => '%s/assets/images/single-column.svg',
     ));
 
-    hybrid_register_layout('1column-wide', array(
+    hybrid_register_layout('1-column-wide', array(
         'label'            => _x('Single Column Wide', 'theme layout', 'bempress'),
         'is_global_layout' => true,
         'is_post_layout'   => true,

@@ -58,6 +58,9 @@
 $preferred_font: 'Roboto', 'Helvetica', 'Arial', sans-serif !default;
 $performance_font: 'Helvetica', 'Arial', sans-serif !default;
 
+$base-font-size:             16px !default;
+$base-line-height:           $base-font-size * 1.5 !default;
+
 /* ==========  COLORS  ========== */
 
 /**
@@ -112,7 +115,7 @@ $button-focus-color: unquote("rgba(#{$color-black}, 0.12)") !default;
 // Colored button colors.
 $button-primary-color-alt: unquote("rgb(#{$color-primary})") !default;
 $button-secondary-color-alt: unquote("rgb(#{$color-primary-contrast})") !default;
-$button-hover-color-alt: unquote("rgb(#{$color-primary})") !default;
+$button-hover-color-alt: unquote("rgb(#{$color-primary-dark})") !default;
 $button-active-color-alt: unquote("rgb(#{$color-primary})") !default;
 $button-focus-color-alt: $button-focus-color !default;
 

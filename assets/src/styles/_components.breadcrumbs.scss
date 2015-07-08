@@ -9,9 +9,11 @@
   li {
 
   + li:before {
-    content: "/\00a0";
+    content: "\E5CC";
     opacity: $opacity;
     padding: $space-1;
+    font-family: 'Material Icons';
+    @include font-size(24px, false);
     }
   }
 }

@@ -1,5 +1,8 @@
 <?php use Bempress\Titles;
 
+if (is_home() || is_front_page()) {
+    return;
+}
 ?>
 
 <div <?php hybrid_attr('archive-header'); ?>>

@@ -1,10 +1,5 @@
 ///* #RESET
 //\*------------------------------------*/
-
-img { max-width: 100% }
-svg { max-height: 100% }
-
-
 :root {
     -ms-overflow-style: -ms-autohiding-scrollbar;
     overflow-y: scroll;
@@ -13,17 +8,11 @@ svg { max-height: 100% }
     cursor: default;
     font: 16px/1.5 sans-serif;
     min-height: 100%;
-    background-color: #ffffff;
-
+    background-color: #fff;
     @include sm {
         font: 14px/1.7 sans-serif;
     }
-}
 
-body {
-    background-color: #fff;
-    color: $color-text;
-    font-family: $font-family;
 }
 
 * {
@@ -40,6 +29,94 @@ body {
 ::after,
 ::before {
     box-sizing: inherit;
+    vertical-align: middle;
     border-style: solid;
     border-width: 0;
+}
+
+input[type="submit"] {
+    -webkit-appearance: none;
+}
+
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE.
+ */
+article,
+aside,
+cite,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+span, a {
+    vertical-align: baseline;
+}
+
+::-moz-selection {
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+svg {
+    max-height: 100%;
+}
+
+canvas {
+    -ms-touch-action: double-tap-zoom;
+}
+
+iframe[src*="google.com/maps"] {
+    max-width: 100%;
+    width: 100%;
+}
+
+[hidden],
+audio:not([controls]),
+template {
+    display: none;
+}
+
+@media screen {
+    [hidden~=screen] {
+        display: inherit;
+    }
+
+[hidden~=screen]:not(:active):not(:focus):not(:target) {
+        clip: rect(0 0 0 0)!important;
+        position: absolute!important;
+    }
+
+}
+
+p {
+    &:empty {
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+    }
+
+&:last-child {
+        margin-bottom: 0;
+    }
+
 }

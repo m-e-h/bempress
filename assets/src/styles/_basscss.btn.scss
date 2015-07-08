@@ -2,176 +2,112 @@
 \*------------------------------------*/
 
 .btn,
+.button,
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    background: transparent;
-    border: none;
-    border-radius: $button-border-radius;
-    color: inherit;
-    position: relative;
-    height: $button-height;
-    min-width: $button-min-width;
-    padding: 0 $button-padding;
-    display: inline-block;
-    @include typo-button();
-    overflow: hidden;
-    transition: background-color 0.2s $animation-curve-default,
-                color 0.2s $animation-curve-default;
-    outline: none;
-    cursor: pointer;
+  background: transparent;
+  border: none;
+  border-radius: $button-border-radius;
+  color: inherit;
+  display: block;
+  position: relative;
+  height: $button-height;
+  min-width: $button-min-width;
+  padding: 0 $button-padding;
+  display: inline-block;
+  @include typo-button();
+  overflow: hidden;
+  will-change: box-shadow, transform;
+  transition: box-shadow 0.2s $animation-curve-fast-out-linear-in,
+              background-color 0.2s $animation-curve-default,
+              color 0.2s $animation-curve-default;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  line-height: $button-height;
+  vertical-align: middle;
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  &:hover {
+    background-color: $button-hover-color;
     text-decoration: none;
-    text-align: center;
-    line-height: $button-height;
-    vertical-align: middle;
+  }
 
-    &::-moz-focus-inner {
-      border: 0;
-    }
+  &:focus:not(:active) {
+    background-color: $button-focus-color;
+  }
 
-    &:hover {
-      background-color: $button-hover-color;
-    }
+  &:active {
+    background-color: $button-active-color;
+  }
+
+  // Bump up specificity by using [disabled] twice.
+  &[disabled][disabled] {
+    color: $button-secondary-color-disabled;
+    cursor: auto;
+    background-color: transparent;
+  }
+
+  &.button--colored {
+    color: $button-primary-color-alt;
 
     &:focus:not(:active) {
-      background-color: $button-focus-color;
+      background-color: $button-focus-color-alt;
     }
-
-    &:active {
-      background-color: $button-active-color;
-    }
-
-    // Bump up specificity by using [disabled] twice.
-    &[disabled][disabled] {
-      color: $button-secondary-color-disabled;
-      cursor: auto;
-      background-color: transparent;
-    }
+  }
 }
 
 
+// Raised buttons
+.button--raised,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background: $button-primary-color;
+  //@include shadow-2dp();
 
+  &:active,
+  &:hover {
+    //@include shadow-4dp();
+    background-color: $button-active-color;
+  }
 
+  &:focus:not(:active) {
+    //@include focus-shadow();
+    background-color: $button-active-color;
+  }
 
+  &.button--colored {
+    background: $button-primary-color-alt;
+    color: $button-secondary-color-alt;
 
+    &:hover {
+      background-color: $button-hover-color-alt;
+    }
 
+    &:active {
+      background-color: $button-active-color-alt;
+    }
 
+    &:focus:not(:active) {
+      background-color: $button-active-color-alt;
+    }
 
+    & .ripple {
+      background: $button-ripple-color-alt;
+    }
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// $btn-bg:                    transparent;
-// $btn-primary-bg:            $color-primary;
-// $btn-bg-hover:              $color-primary-light;
-// $btn-bg-active:             $color-primary-dark;
-
-// $btn-color:             inherit !default;
-// $btn-color-bg:          $color-primary !default;
-// $btn-color-bg-hover:    $color-primary-light!default;
-// $btn-padding-x:         $font-size !default;
-// $btn-padding-y:         $spacing-small !default;
-// $btn-font-size:         inherit !default;
-// $btn-font-family:       inherit !default;
-
-
-// .btn,
-// button,
-// input[type="button"],
-// input[type="reset"],
-// input[type="submit"] {
-//     letter-spacing: 0.04em;
-//     display: inline-block;
-//     font: inherit;
-//     text-align: center;
-//     cursor: pointer;
-//     background-color: $btn-bg;
-//     border-radius: $radius;
-//     border: 1px solid transparent;
-//     padding: $btn-padding-y $btn-padding-x;
-//     transition: $transition;
-//     opacity: 1;
-
-//     &:hover,
-//     &:focus {
-//         outline: 0;
-//         text-decoration: none;
-//         background-color: rgba($color-grey-ui-dark,.0625);
-//         opacity: 1;
-//     }
-
-//     &:disabled,
-//     &.is-disabled {
-//       opacity: .5;
-//     }
-// }
-
-// .btn--primary {
-//     color: white;
-//     background-color: $btn-primary-bg;
-//     &:hover,
-//     &:focus {
-//         background-color: $btn-bg-hover;
-//     }
-// }
-
-// .btn--outline,
-// input[type="button"],
-// input[type="reset"],
-// input[type="submit"] {
-//     color: currentcolor;
-//     border-color: currentcolor;
-
-//     &:hover,
-//     &:focus {
-//     border-color: $color-primary;
-//     background-color: $color-primary;
-//     color: white;
-//   }
-// }
-
-// .btn--transparent {
-//     background-color: transparent;
-//     color: currentColor;
-
-//     &:hover,
-//     &:focus {
-//         background-color: rgba($grey-800, 0.1);;
-//     }
-// }
-
-// .btn--small {
-//     padding: round(0.5 * $btn-padding-y) round(0.5 * $btn-padding-x);
-//     @include font-size($font-size - 2);
-//     letter-spacing: .02em;
-// }
-
-// .btn--large {
-//     padding: round(1.5 * $btn-padding-y) round(1.5 * $btn-padding-x);
-// }
-
-// .btn--full {
-//     padding-right: 0;
-//     padding-left:  0;
-//     width: 100%;
-// }
-
-// .search-form button[type=submit],
-// .post-password-form input[type="submit"] {
-//     border-bottom-left-radius: 0;
-//     border-top-left-radius: 0;
-//     position: absolute;
-//     right: 0;
-//     height: $spacing-large;
-// }
+  // Bump up specificity by using [disabled] twice.
+  &[disabled][disabled] {
+    background-color: $button-primary-color-disabled;
+    color: $button-secondary-color-disabled;
+    @include shadow-2dp();
+  }
+}

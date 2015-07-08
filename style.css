@@ -163,14 +163,6 @@ GitHub Theme URI: https://github.com/m-e-h/bempress
 /* Typography */
 /* Shadows */
 /* Animations */
-img {
-    max-width: 100%;
-}
-
-svg {
-    max-height: 100%;
-}
-
 :root {
     overflow-y: scroll;
     box-sizing: border-box;
@@ -188,12 +180,6 @@ svg {
     :root {
         font: 14px/1.7 sans-serif;
     }
-}
-
-body {
-    color: #111;
-    background-color: #fff;
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
 * {
@@ -216,6 +202,89 @@ body {
     box-sizing: inherit;
     border-width: 0; 
     border-style: solid;
+    vertical-align: middle;
+}
+
+input[type="submit"] {
+    -webkit-appearance: none;
+}
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE.
+ */
+article,
+aside,
+cite,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+span,
+a {
+    vertical-align: baseline;
+}
+
+::-moz-selection {
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+svg {
+    max-height: 100%;
+}
+
+canvas {
+    -ms-touch-action: double-tap-zoom;
+}
+
+iframe[src*="google.com/maps"] {
+    width: 100%; 
+    max-width: 100%;
+}
+
+[hidden],
+audio:not([controls]),
+template {
+    display: none;
+}
+
+@media screen {
+    [hidden~=screen] {
+        display: inherit;
+    }
+    [hidden~=screen]:not(:active):not(:focus):not(:target) {
+        clip: rect(0 0 0 0) !important;
+        position: absolute !important;
+    }
+}
+
+p:empty {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+p:last-child {
+    margin-bottom: 0;
 }
 
 /* #NAV
@@ -238,15 +307,9 @@ input,
 select,
 textarea,
 fieldset {
-    box-sizing: border-box;
-    margin-top: 0;
-    margin-bottom: 0; 
+    max-width: 100%; 
     font-family: inherit;
     font-size: 1rem;
-}
-
-label {
-    vertical-align: middle;
 }
 
 input[type=text],
@@ -264,7 +327,6 @@ input[type=url],
 input[type=week] {
     height: 2.25rem;
     padding: 0.5rem 0.5rem;
-    vertical-align: middle;
 
     -webkit-appearance: none;
 }
@@ -276,12 +338,26 @@ select {
 
 select:not([multiple]) {
     height: 2.25rem;
-    vertical-align: middle;
 }
 
 textarea {
     padding: 0.5rem 0.5rem; 
     line-height: 1.75;
+    resize: vertical;
+}
+
+.input-group-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2rem; 
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+section.widget_search {
+    padding: 0;
+    background-color: transparent;
 }
 
 /* #TABLES
@@ -329,7 +405,7 @@ h6 {
     margin-top: 1em;
     margin-bottom: 0.5em; 
     font-family: "Helvetica Neue", Helvetica, sans-serif;
-    font-weight: bold;
+    font-weight: 300;
     line-height: 1.25;
 }
 
@@ -384,7 +460,7 @@ h6 {
 
 body {
     color: #111;
-    background-color: #fff;
+    background-color: #f3f3f3;
 }
 
 a {
@@ -696,11 +772,12 @@ hr {
 
 input,
 textarea {
-    display: block; 
+    display: block;
     border-width: 1px;
     border-style: solid;
-    border-color: rgba(0, 0, 0, 0.125);
+    border-color: #e6e6e6;
     border-radius: 3px;
+    background-color: #e6e6e6;
 }
 
 input:focus,
@@ -709,6 +786,7 @@ textarea:focus,
 textarea.is-focused {
     border-color: #0074d9;
     outline: none;
+    background-color: #fff;
     box-shadow: 0 0 0 2px color(#0074d9, 0.5);
 }
 
@@ -768,11 +846,12 @@ input.is-error.is-focused {
 /* #BUTTONS
 \*------------------------------------*/
 .btn,
-nav li > a,
+.button,
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+    display: block;
     display: inline-block;
     overflow: hidden;
     position: relative;
@@ -795,11 +874,13 @@ input[type="submit"] {
     letter-spacing: 0;
     text-transform: uppercase;
     cursor: pointer;
-    -webkit-transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+    will-change: box-shadow, transform;
 }
 .btn::-moz-focus-inner,
-nav li > a::-moz-focus-inner,
+.button::-moz-focus-inner,
 button::-moz-focus-inner,
 input[type="button"]::-moz-focus-inner,
 input[type="reset"]::-moz-focus-inner,
@@ -807,15 +888,16 @@ input[type="submit"]::-moz-focus-inner {
     border: 0;
 }
 .btn:hover,
-nav li > a:hover,
+.button:hover,
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
     background-color: rgba(158,158,158, 0.20);
+    text-decoration: none;
 }
 .btn:focus:not(:active),
-nav li > a:focus:not(:active),
+.button:focus:not(:active),
 button:focus:not(:active),
 input[type="button"]:focus:not(:active),
 input[type="reset"]:focus:not(:active),
@@ -823,7 +905,7 @@ input[type="submit"]:focus:not(:active) {
     background-color: rgba(0,0,0, 0.12);
 }
 .btn:active,
-nav li > a:active,
+.button:active,
 button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
@@ -831,7 +913,7 @@ input[type="submit"]:active {
     background-color: rgba(158,158,158, 0.40);
 }
 .btn[disabled][disabled],
-nav li > a[disabled][disabled],
+.button[disabled][disabled],
 button[disabled][disabled],
 input[type="button"][disabled][disabled],
 input[type="reset"][disabled][disabled],
@@ -840,48 +922,83 @@ input[type="submit"][disabled][disabled] {
     background-color: transparent; 
     cursor: auto;
 }
-
-/* #BUTTONS PRIMARY
-\*------------------------------------*/
-.btn-primary,
-button {
-    border-radius: 3px; 
-    color: #fff;
-    background-color: #0074d9;
+.btn.button--colored,
+.button.button--colored,
+button.button--colored,
+input[type="button"].button--colored,
+input[type="reset"].button--colored,
+input[type="submit"].button--colored {
+    color: rgb(63,81,181);
 }
-.btn-primary:hover,
-button:hover {
-    box-shadow: inset 0 0 0 20rem rgba(0, 0, 0, 0.0625);
-}
-.btn-primary .btn-primary:active,
-button .btn-primary:active {
-    box-shadow: inset 0 0 0 20rem rgba(0, 0, 0, 0.125), inset 0 3px 4px 0 rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.125);
-}
-
-.btn-primary:disabled,
-.btn-primary.is-disabled {
-    opacity: 0.5;
+.btn.button--colored:focus:not(:active),
+.button.button--colored:focus:not(:active),
+button.button--colored:focus:not(:active),
+input[type="button"].button--colored:focus:not(:active),
+input[type="reset"].button--colored:focus:not(:active),
+input[type="submit"].button--colored:focus:not(:active) {
+    background-color: rgba(0,0,0, 0.12);
 }
 
-/* #BUTTONS OUTLINE
-\*------------------------------------*/
-.btn-outline,
+.button--raised,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    border: 2px solid currentcolor; 
-    border-radius: 3px;
+    background: rgba(158,158,158, 0.20);
 }
-.btn-outline:hover,
+.button--raised:active,
+.button--raised:hover,
+input[type="button"]:active,
 input[type="button"]:hover,
+input[type="reset"]:active,
 input[type="reset"]:hover,
+input[type="submit"]:active,
 input[type="submit"]:hover {
-    border-color: currentcolor;
+    background-color: rgba(158,158,158, 0.40);
 }
-
-.btn-outline:disabled,
-.btn-outline.is-disabled {
-    opacity: 0.5;
+.button--raised:focus:not(:active),
+input[type="button"]:focus:not(:active),
+input[type="reset"]:focus:not(:active),
+input[type="submit"]:focus:not(:active) {
+    background-color: rgba(158,158,158, 0.40);
+}
+.button--raised.button--colored,
+input[type="button"].button--colored,
+input[type="reset"].button--colored,
+input[type="submit"].button--colored {
+    color: rgb(255,255,255); 
+    background: rgb(63,81,181);
+}
+.button--raised.button--colored:hover,
+input[type="button"].button--colored:hover,
+input[type="reset"].button--colored:hover,
+input[type="submit"].button--colored:hover {
+    background-color: rgb(48,63,159);
+}
+.button--raised.button--colored:active,
+input[type="button"].button--colored:active,
+input[type="reset"].button--colored:active,
+input[type="submit"].button--colored:active {
+    background-color: rgb(63,81,181);
+}
+.button--raised.button--colored:focus:not(:active),
+input[type="button"].button--colored:focus:not(:active),
+input[type="reset"].button--colored:focus:not(:active),
+input[type="submit"].button--colored:focus:not(:active) {
+    background-color: rgb(63,81,181);
+}
+.button--raised.button--colored .ripple,
+input[type="button"].button--colored .ripple,
+input[type="reset"].button--colored .ripple,
+input[type="submit"].button--colored .ripple {
+    background: rgb(255,255,255);
+}
+.button--raised[disabled][disabled],
+input[type="button"][disabled][disabled],
+input[type="reset"][disabled][disabled],
+input[type="submit"][disabled][disabled] {
+    color: rgba(0,0,0, 0.26);
+    background-color: rgba(0,0,0, 0.12);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 /* #TYPOGRAPHY UTILITY
@@ -959,6 +1076,11 @@ input[type="submit"]:hover {
 }
 
 .list-reset {
+    padding-left: 0; 
+    list-style: none;
+}
+.list-reset ul,
+.list-reset li {
     padding-left: 0; 
     list-style: none;
 }
@@ -1168,6 +1290,14 @@ input[type="submit"]:hover {
     padding-left: 0.5rem;
 }
 
+.pt1 {
+    padding-top: 0.5rem;
+}
+
+.pb1 {
+    padding-bottom: 0.5rem;
+}
+
 .p2 {
     padding: 1rem;
 }
@@ -1180,6 +1310,14 @@ input[type="submit"]:hover {
 .px2 {
     padding-right: 1rem; 
     padding-left: 1rem;
+}
+
+.pt2 {
+    padding-top: 1rem;
+}
+
+.pb2 {
+    padding-bottom: 1rem;
 }
 
 .p3 {
@@ -1196,6 +1334,14 @@ input[type="submit"]:hover {
     padding-left: 2rem;
 }
 
+.pt3 {
+    padding-top: 2rem;
+}
+
+.pb3 {
+    padding-bottom: 2rem;
+}
+
 .p4 {
     padding: 4rem;
 }
@@ -1208,6 +1354,104 @@ input[type="submit"]:hover {
 .px4 {
     padding-right: 4rem; 
     padding-left: 4rem;
+}
+
+.pt4 {
+    padding-top: 4rem;
+}
+
+.pb4 {
+    padding-bottom: 4rem;
+}
+
+@media screen and (min-width: 52em) {
+    .m3\@md {
+        margin: 2rem;
+    }
+    .mt3\@md {
+        margin-top: 2rem;
+    }
+    .mr3\@md {
+        margin-right: 2rem;
+    }
+    .mb3\@md {
+        margin-bottom: 2rem;
+    }
+    .ml3\@md {
+        margin-left: 2rem;
+    }
+    .m4\@md {
+        margin: 4rem;
+    }
+    .mt4\@md {
+        margin-top: 4rem;
+    }
+    .mr4\@md {
+        margin-right: 4rem;
+    }
+    .mb4\@md {
+        margin-bottom: 4rem;
+    }
+    .ml4\@md {
+        margin-left: 4rem;
+    }
+    .mxn3\@md {
+        margin-right: -2rem; 
+        margin-left: -2rem;
+    }
+    .mxn4\@md {
+        margin-right: -4rem; 
+        margin-left: -4rem;
+    }
+    .mx-auto\@md {
+        margin-right: auto; 
+        margin-left: auto;
+    }
+    .p2\@md {
+        padding: 1rem;
+    }
+    .py2\@md {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .px2\@md {
+        padding-right: 1rem; 
+        padding-left: 1rem;
+    }
+    .p3\@md {
+        padding: 2rem;
+    }
+    .py3\@md {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .px3\@md {
+        padding-right: 2rem; 
+        padding-left: 2rem;
+    }
+    .pt3\@md {
+        padding-top: 2rem;
+    }
+    .pb3\@md {
+        padding-bottom: 2rem;
+    }
+    .p4\@md {
+        padding: 4rem;
+    }
+    .py4\@md {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    .px4\@md {
+        padding-right: 4rem; 
+        padding-left: 4rem;
+    }
+    .pt4\@md {
+        padding-top: 4rem;
+    }
+    .pb4\@md {
+        padding-bottom: 4rem;
+    }
 }
 
 /* #POSITIONS
@@ -1500,11 +1744,11 @@ input[type="submit"]:hover {
     border: 0;
 }
 
-.rounded {
+.br {
     border-radius: 3px;
 }
 
-.circle {
+.round {
     border-radius: 50%;
 }
 
@@ -1524,7 +1768,7 @@ input[type="submit"]:hover {
     border-radius: 3px 0 0 3px;
 }
 
-.not-rounded {
+.br-0 {
     border-radius: 0;
 }
 
@@ -1535,7 +1779,7 @@ input[type="submit"]:hover {
 }
 
 .color2 {
-    color: #2ecc40;
+    color: #3d9970;
 }
 
 .color3 {
@@ -1547,7 +1791,7 @@ input[type="submit"]:hover {
 }
 
 .bg2 {
-    background-color: #2ecc40;
+    background-color: #3d9970;
 }
 
 .bg3 {
@@ -1559,7 +1803,7 @@ input[type="submit"]:hover {
 }
 
 .gray {
-    color: #aaa;
+    color: #808080;
 }
 
 .silver {
@@ -1642,7 +1886,7 @@ input[type="submit"]:hover {
 }
 
 .bg-gray {
-    background-color: #aaa;
+    background-color: #808080;
 }
 
 .bg-silver {
@@ -1724,11 +1968,62 @@ input[type="submit"]:hover {
 /* #BREADCRUMBS
 \*------------------------------------*/
 .breadcrumbs li + li:before {
-    padding: 0.5rem; 
+    padding: 0.5rem;
     opacity: 0.8;
-    content: "/\00a0";
+    font-family: "Material Icons";
+    font-size: 24px;
+    font-size: 1.5rem; 
+    content: "\E5CC";
 }
 
 .trail-end span {
     display: none;
+}
+
+/* #HELPERS
+\*------------------------------------*/
+.screen-reader-text {
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+    width: 1px; 
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+.dropcap {
+    float: left;
+    opacity: 0.6; 
+    font-size: 300%;
+    line-height: 1;
+}
+
+/**
+ * WP specific.
+ */
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+    display: table; 
+    content: "";
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+    clear: both;
 }

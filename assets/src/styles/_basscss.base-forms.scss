@@ -1,25 +1,12 @@
 /* #FORMS
 \*------------------------------------*/
-
-  // $form-field-font-family: inherit;
-  // $form-field-font-size: 1rem;
-  // $form-field-height: 2.25rem;
-  // $form-field-padding-y: .5rem;
-  // $form-field-padding-x: .5rem;
-
 input,
 select,
 textarea,
 fieldset {
-  font-family: $form-field-font-family;
-  font-size: $form-field-font-size;
-  box-sizing: border-box;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-label {
-  vertical-align: middle;
+    font-family: $form-field-font-family;
+    font-size: $form-field-font-size;
+    max-width: 100%;
 }
 
 input[type=text],
@@ -35,115 +22,36 @@ input[type=tel],
 input[type=time],
 input[type=url],
 input[type=week] {
-  height: $form-field-height;
-  padding: $form-field-padding-y $form-field-padding-x;
-  vertical-align: middle;
-  -webkit-appearance: none;
+    height: $form-field-height;
+    padding: $form-field-padding-y $form-field-padding-x;
+    -webkit-appearance: none;
 }
 
 select {
-  line-height: 1.75;
-  padding: $form-field-padding-y $form-field-padding-x;
+    line-height: 1.75;
+    padding: $form-field-padding-y $form-field-padding-x;
 }
 
 select:not([multiple]) {
-  height: $form-field-height;
-  vertical-align: middle;
+    height: $form-field-height;
 }
 
 textarea {
-  line-height: 1.75;
-  padding: $form-field-padding-y $form-field-padding-x;
+    resize: vertical;
+    line-height: 1.75;
+    padding: $form-field-padding-y $form-field-padding-x;
 }
 
+.input-group-btn {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: $space-3;
+}
 
-
-
-
-
-
-
-// input,
-// select,
-// textarea {
-//     border: 1px solid $color-grey-ui;
-//     border-radius: $radius;
-//     font-family: inherit;
-//     font-style: inherit;
-//     font-weight: inherit;
-//     display: inline-block;
-//     background-color: $color-grey-ui;
-//     @include rem(min-height, $spacing-large);
-//     @include rem(padding-left, $spacing);
-//     @include rem(padding-right, $spacing);
-// }
-
-// textarea {
-//     resize: vertical;
-//     @include rem(padding, $spacing);
-//     overflow: auto;
-// }
-
-// input[type="text"], input[type="email"], input[type="url"],
-// input[type="password"], input[type="search"], textarea {
-//     width: 100%;
-// }
-
-// input[type="color"] {
-//     padding: $spacing-small $spacing;
-// }
-
-// input:focus,
-// select:focus,
-// textarea:focus {
-//     border-color: $color-primary-light;
-//     outline: 0;
-//     background-color: $white;
-// }
-
-// input[type=number] {
-//     width: auto;
-// }
-
-// input[type=search] {
-//     -webkit-appearance: textfield;
-// }
-
-// input[type=search]::-webkit-search-cancel-button,
-// input[type=search]::-webkit-search-decoration {
-//     -webkit-appearance: none;
-// }
-
-// input[type="file"]:focus,
-// input[type="radio"]:focus,
-// input[type="checkbox"]:focus {
-//     outline: .1rem solid thin $color-text;
-// }
-
-// select {
-//     padding: $spacing-tiny $spacing;
-//     background-color: #fff;
-//     text-transform: none;
-//     -moz-appearance: none;
-//     -webkit-appearance: none;
-// }
-
-// select[multiple] {
-//     height: auto;
-// }
-
-// select::-ms-expand {
-//     display: none;
-// }
-
-// select::-ms-value {
-//     color: currentColor;
-// }
-
-// label {
-//     line-height: 2;
-// }
-
-// [unselectable] {
-//     user-select: none;
-// }
+section.widget_search {
+    padding: 0;
+    background-color: transparent;
+}
