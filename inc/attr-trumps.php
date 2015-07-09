@@ -41,7 +41,7 @@ class Attr_Trumps {
             'row_layout_sidebar_r'    => 'grid mxn3@md',
 
             // SITE HEADER
-            'header'                  => 'bg1 white',
+            'header'                  => 'bg-1 white',
             'branding'                => 'py2@md inline-block color-inherit',
             'site_title'              => 'm0',
             'site_description'        => 'h3 bold m0 muted',
@@ -91,7 +91,7 @@ class Attr_Trumps {
             'comments_area'           => 'bg-white p3 p4@md mb2 mb3@md',
 
             // FOOTER
-            'footer'                  => 'bg2',
+            'footer'                  => 'bg-2',
 
             'menu_link'                 => 'btn'
         );

@@ -53,4 +53,5 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
     @extend .button;
+    width: auto;
 }

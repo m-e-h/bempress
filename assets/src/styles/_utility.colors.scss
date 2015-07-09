@@ -1,13 +1,17 @@
 /* #COLORS
 \*------------------------------------*/
 
-.color1 { color: $color1 }
-.color2 { color: $color2 }
-.color3 { color: $color3 }
+.color-1 { color: $color-1 }
+.color-2 { color: $color-2 }
+.color-3 { color: $color-3 }
 
-.bg1 { background-color: $color1 }
-.bg2 { background-color: $color2 }
-.bg3 { background-color: $color3 }
+.bg-1 { background-color: $color-1 }
+.bg-2 { background-color: $color-2 }
+.bg-3 { background-color: $color-3 }
+
+.fill-1 { fill: $color-1 }
+.fill-2 { fill: $color-2 }
+.fill-3 { fill: $color-3 }
 
 .black  { color: $black }
 .gray   { color: $gray }

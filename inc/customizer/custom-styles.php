@@ -134,35 +134,35 @@ final class Bempress_Custom_Styles {
         /* === Color === */
 
         $style .= "
-                a, .t-color--1
+                a, .color-1
                 { color: #{$color500}; }
             ";
         $style .= "
-            .t-bg--1
+            .bg-1
                 { background-color: #{$color500}; }
             ";
         $style .= "
-            .t-bg--1--light
+            .bg-1--light
                 { background-color: #{$color400}; }
             ";
         $style .= "
-                .t-bg--1--dark
+                .bg-1--dark
                 { background-color: #{$color600}; }
             ";
         $style .= "
-                .t-bg--1--glass
+                .bg-1--glass
                 { background-color: #{$color100}; }
             ";
         $style .= "
-                .t-fill--1
+                .fill-1
                 { fill: #{$color500}; }
             ";
         $style .= "
-                .t-fill--1--light
+                .fill-1--light
                 { fill: #{$color400}; }
             ";
         $style .= "
-                .t-fill--1--dark
+                .fill-1--dark
                 { fill: #{$color600}; }
             ";
         $style .= "
@@ -204,35 +204,35 @@ final class Bempress_Custom_Styles {
         /* === Color === */
 
         $style .= "
-                .t-color--2
+                .color-2
                 { color: #{$color500}; }
             ";
         $style .= "
-                .t-bg--2
+                .bg-2
                 { background-color: #{$color500}; }
             ";
         $style .= "
-                .t-bg--2--light
+                .bg-2--light
                 { background-color: #{$color400}; }
             ";
         $style .= "
-                .t-bg--2--dark
+                .bg-2--dark
                 { background-color: #{$color600}; }
             ";
         $style .= "
-                .t-bg--2--glass
+                .bg-2--glass
                 { background-color: #{$color100}; }
             ";
         $style .= "
-                .t-fill--2
+                .fill-2
                 { fill: #{$color500}; }
             ";
         $style .= "
-                .t-fill--2--light
+                .fill-2--light
                 { fill: #{$color400}; }
             ";
         $style .= "
-                .t-fill--2--dark
+                .fill-2--dark
                 { fill: #{$color600}; }
                 ";
         /* Return the styles. */
@@ -266,35 +266,35 @@ final class Bempress_Custom_Styles {
         /* === Color === */
 
         $style .= "
-                .t-color--3
+                .color-3
                 { color: #{$color500}; }
             ";
         $style .= "
-                .t-bg--3
+                .bg-3
                 { background-color: #{$color500}; }
             ";
         $style .= "
-                .t-bg--3--light
+                .bg-3--light
                 { background-color: #{$color400}; }
             ";
         $style .= "
-                .t-bg--3--dark
+                .bg-3--dark
                 { background-color: #{$color600}; }
             ";
         $style .= "
-                .t-bg--3--glass
+                .bg-3--glass
                 { background-color: #{$color100}; }
             ";
         $style .= "
-                .t-fill--3
+                .fill-3
                 { fill: #{$color500}; }
             ";
         $style .= "
-                .t-fill--3--light
+                .fill-3--light
                 { fill: #{$color400}; }
             ";
         $style .= "
-                .t-fill--3--dark
+                .fill-3--dark
                 { fill: #{$color600}; }
                 ";
         /* Return the styles. */
