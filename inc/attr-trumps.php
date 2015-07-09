@@ -83,7 +83,7 @@ class Attr_Trumps {
             'sidebar_right'           => 'u-1/3@md',
             'sidebar_left'            => 'u-1/3@md',
 
-			'widgets'                 => 'widget br mb2 mb3@md px2 ml1 mr1 list-reset flex-auto',
+			'widgets'                 => 'widget br mb2 mb3@md p2 ml1 mr1 list-reset flex-auto',
 			'primary_widgets'         => 'bg-white',
 			'footer_widgets'          => 'bg-darken-1',
 

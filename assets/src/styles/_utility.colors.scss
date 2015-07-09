@@ -14,6 +14,8 @@
 .silver { color: $silver }
 .white  { color: $white }
 
+.muted { opacity: $opacity; }
+
 .color-inherit,
 .color-inherit a {
     color: inherit;
@@ -23,9 +25,6 @@
 .currentcolor a {
     color: currentColor;
 }
-
-.muted { opacity: .7 }
-
 
 /* Basscss Background Colors */
 

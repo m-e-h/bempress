@@ -51,7 +51,6 @@ $breakpoints: (
 }
 
 
-// Just some helpers for the lazy...
 @mixin sm {
     @include media-query(sm) {
         @content;

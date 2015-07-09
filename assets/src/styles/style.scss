@@ -19,34 +19,29 @@ GitHub Theme URI: https://github.com/m-e-h/bempress
 @import 'mixins';
 
 @import "settings.colors";
+@import 'settings.variables';
 @import "settings.responsive";
-@import 'basscss.defaults';
 
-@import 'basscss.base-reset';
-
+@import 'elements.page';
 @import 'elements.nav';
+@import 'elements.forms';
+@import 'elements.tables';
+@import 'elements.typography';
+@import 'elements.links';
 
-@import 'basscss.base-forms';
-@import 'basscss.base-tables';
-@import 'basscss.base-typography';
-@import 'basscss.color-base';
-
-
+@import 'objects.button';
 @import 'objects.grid';
 @import 'objects.widths';
 
-@import 'basscss.color-forms';
-@import 'basscss.color-tables';
-@import 'basscss.btn';
-@import 'basscss.utility-typography';
-@import 'basscss.utility-layout';
-@import 'basscss.white-space';
-@import 'basscss.positions';
-@import 'basscss.responsive-states';
-@import 'basscss.flex-object';
-@import 'basscss.borders';
-@import 'basscss.colors';
-
+@import 'components.button';
 @import "components.breadcrumbs";
+
+@import 'utility.typography';
+@import 'utility.spacing';
+@import 'utility.colors';
+@import 'utility.borders';
+@import 'utility.tables';
+@import 'utility.layout-states';
+@import 'utility.flex';
 
 @import "trumps.helpers";

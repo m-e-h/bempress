@@ -15,6 +15,11 @@
 
 }
 
+body {
+    color: $body-color;
+    background-color: $body-background-color;
+}
+
 * {
     position: relative;
     font-size: inherit;
@@ -38,6 +43,19 @@ input[type="submit"] {
     -webkit-appearance: none;
 }
 
+hr {
+    border: 0;
+    border-bottom-style: $rule-border-style;
+    border-bottom-width: $rule-border-width;
+    border-bottom-color: $rule-border-color;
+}
+
+pre,
+code {
+    background-color: $pre-background-color;
+    border-radius: $pre-border-radius;
+}
+
 
 /**
  * Correct `block` display not defined for any HTML5 element in IE.
@@ -59,7 +77,8 @@ summary {
     display: block;
 }
 
-span, a {
+span,
+a {
     vertical-align: baseline;
 }
 
@@ -108,15 +127,13 @@ template {
 
 }
 
-p {
-    &:empty {
+p:empty {
         margin: 0;
         padding: 0;
         line-height: 0;
     }
 
-&:last-child {
+p:last-child,
+ul:last-child {
         margin-bottom: 0;
     }
-
-}
