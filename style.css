@@ -405,7 +405,7 @@ h6 {
     margin-top: 1em;
     margin-bottom: 0.5em; 
     font-family: "Helvetica Neue", Helvetica, sans-serif;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 1.25;
 }
 
@@ -851,10 +851,8 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    display: block;
     display: inline-block;
     overflow: hidden;
-    position: relative;
     min-width: 64px;
     height: 36px;
     padding: 0 8px;
@@ -870,7 +868,6 @@ input[type="submit"] {
     line-height: 36px;
     text-align: center;
     vertical-align: middle; 
-    text-decoration: none;
     letter-spacing: 0;
     text-transform: uppercase;
     cursor: pointer;
@@ -1502,60 +1499,6 @@ input[type="submit"][disabled][disabled] {
 
 /* #RESPONSIVE STATES
 \*------------------------------------*/
-.sm-show,
-.md-show,
-.lg-show {
-    display: none !important;
-}
-
-@media screen and (max-width: 51em) {
-    .sm-show {
-        display: block !important;
-    }
-}
-
-@media screen and (min-width: 52em) {
-    .md-show {
-        display: block !important;
-    }
-}
-
-@media screen and (min-width: 64em) {
-    .lg-show {
-        display: block !important;
-    }
-}
-
-@media screen and (max-width: 51em) {
-    .sm-hide {
-        display: none !important;
-    }
-}
-
-@media screen and (min-width: 52em) {
-    .md-hide {
-        display: none !important;
-    }
-}
-
-@media screen and (min-width: 64em) {
-    .lg-hide {
-        display: none !important;
-    }
-}
-
-.display-none {
-    display: none !important;
-}
-
-.hide {
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px); 
-    position: absolute !important;
-    width: 1px;
-    height: 1px;
-}
-
 /* #FLEX OBJECT
 \*------------------------------------*/
 .flex {
@@ -1814,58 +1757,6 @@ input[type="submit"][disabled][disabled] {
     color: #fff;
 }
 
-.aqua {
-    color: #7fdbff;
-}
-
-.blue {
-    color: #0074d9;
-}
-
-.navy {
-    color: #001f3f;
-}
-
-.teal {
-    color: #39cccc;
-}
-
-.green {
-    color: #2ecc40;
-}
-
-.olive {
-    color: #3d9970;
-}
-
-.lime {
-    color: #01ff70;
-}
-
-.yellow {
-    color: #ffdc00;
-}
-
-.orange {
-    color: #ff851b;
-}
-
-.red {
-    color: #ff4136;
-}
-
-.fuchsia {
-    color: #f012be;
-}
-
-.purple {
-    color: #b10dc9;
-}
-
-.maroon {
-    color: #85144b;
-}
-
 .color-inherit,
 .color-inherit a {
     color: inherit;
@@ -1877,7 +1768,7 @@ input[type="submit"][disabled][disabled] {
 }
 
 .muted {
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
 /* Basscss Background Colors */
@@ -1895,58 +1786,6 @@ input[type="submit"][disabled][disabled] {
 
 .bg-white {
     background-color: #fff;
-}
-
-.bg-aqua {
-    background-color: #7fdbff;
-}
-
-.bg-blue {
-    background-color: #0074d9;
-}
-
-.bg-navy {
-    background-color: #001f3f;
-}
-
-.bg-teal {
-    background-color: #39cccc;
-}
-
-.bg-green {
-    background-color: #2ecc40;
-}
-
-.bg-olive {
-    background-color: #3d9970;
-}
-
-.bg-lime {
-    background-color: #01ff70;
-}
-
-.bg-yellow {
-    background-color: #ffdc00;
-}
-
-.bg-orange {
-    background-color: #ff851b;
-}
-
-.bg-red {
-    background-color: #ff4136;
-}
-
-.bg-fuchsia {
-    background-color: #f012be;
-}
-
-.bg-purple {
-    background-color: #b10dc9;
-}
-
-.bg-maroon {
-    background-color: #85144b;
 }
 
 .bg-darken-1 {

@@ -9,5 +9,5 @@ if (is_home() || is_front_page()) {
 
     <?php hybrid_get_menu('breadcrumbs'); ?>
 
-    <h1 <?php hybrid_attr('entry-title'); ?>><?= Titles\title(); ?></h1>
+    <h1 <?php hybrid_attr('archive-title'); ?>><?= Titles\title(); ?></h1>
 </div>

@@ -56,20 +56,20 @@ class Attr_Trumps {
 
             'page_header'             => 'u-1/1 center',
 
-            'entry_title'             => 'h1 mt0',
-            'archive_title'           => 'h1',
+            'entry_title'             => 'h2 mt0 color-inherit muted',
+            'page_title'    		  => 'h1 m0',
             'archive_description'     => '',
 
-            'entry_header'            => 'container',
+            'entry_header'            => 'container mb2',
             'entry_content'           => 'container bg-white br p3 p4@md mb3@md',
-            'entry_summary'           => 'py2 container',
+            'entry_summary'           => 'container',
             'entry_footer'            => 'container',
 
             'nav_single'              => '',
             'nav_archive'             => '',
 
             // ENTRY META
-            'entry_author'            => 'inline-block',
+            'entry_author'            => 'inline-block px1',
             'entry_published'         => 'inline-block',
             'entry_terms'             => '',
 
@@ -85,7 +85,7 @@ class Attr_Trumps {
 
 			'widgets'                 => 'widget br mb2 mb3@md px2 ml1 mr1 list-reset flex-auto',
 			'primary_widgets'         => 'bg-white',
-			'footer_widgets'          => 'bg-darken-1 py2 py3@md',
+			'footer_widgets'          => 'bg-darken-1',
 
             // COMMENTS
             'comments_area'           => 'bg-white p3 p4@md mb2 mb3@md',
@@ -115,7 +115,7 @@ class Attr_Trumps {
         // ENTRY
         add_filter('hybrid_attr_post',                  array($this, 'post'));
         add_filter('hybrid_attr_archive-header',        array($this, 'page_header'));
-        add_filter('hybrid_attr_archive-title',         array($this, 'archive_title'));
+        add_filter('hybrid_attr_archive-title',         array($this, 'page_title'));
         add_filter('hybrid_attr_archive-description',   array($this, 'archive_description'));
         add_filter('hybrid_attr_entry-header',          array($this, 'entry_header'));
         add_filter('hybrid_attr_entry-title',           array($this, 'entry_title'));
@@ -340,14 +340,14 @@ class Attr_Trumps {
     public function page_header($attr) {
         $attr['class']      = 'page-header';
         if ($this->args['page_header']) {
-        $attr['class']      = " {$this->args['page_header']}";
+        $attr['class']      .= " {$this->args['page_header']}";
     }
         return $attr;
     }
 
-    public function archive_title($attr) {
-    if ($this->args['archive_title']) {
-        $attr['class']      = $this->args['archive_title'];
+    public function page_title($attr) {
+    if ($this->args['page_title']) {
+        $attr['class']      = $this->args['page_title'];
     }
         return $attr;
     }

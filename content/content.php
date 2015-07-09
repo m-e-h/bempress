@@ -25,7 +25,6 @@
                 <h2 <?php hybrid_attr('entry-title'); ?>>
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h2>
-                <?php get_template_part('components/entry-meta'); ?>
             </header>
 
             <div <?php hybrid_attr('entry-summary'); ?>>
