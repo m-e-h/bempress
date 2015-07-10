@@ -12,9 +12,10 @@ GitHub Theme URI: https://github.com/m-e-h/bempress
 */
 :root {
     overflow-y: scroll;
+    position: relative; 
     box-sizing: border-box;
     min-height: 100%;
-    background-color: #fff; 
+    background-color: #fff;
     font: 16px/1.5 sans-serif;
     cursor: default;
 
@@ -35,7 +36,6 @@ body {
 }
 
 * {
-    position: relative;
     margin: 0;
     padding: 0;
     color: inherit;
@@ -51,8 +51,9 @@ body {
 *,
 ::after,
 ::before {
+    position: inherit; 
     box-sizing: inherit;
-    border-width: 0; 
+    border-width: 0;
     border-style: solid;
     vertical-align: middle;
 }
@@ -1527,6 +1528,10 @@ input[type="submit"] {
 
 .fixed {
     position: fixed;
+}
+
+.static {
+    position: static;
 }
 
 .top-0 {
