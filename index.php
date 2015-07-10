@@ -13,9 +13,9 @@ get_header(); ?>
 
         <?php hybrid_get_sidebar('primary'); ?>
 
-    </div><!-- /.content -->
-
-</div><!-- /.wrap -->
+    </div><!-- /.row -->
+    
+</div><!-- /.content -->
 
 <?php
 get_footer();

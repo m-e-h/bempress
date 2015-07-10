@@ -68,7 +68,7 @@ function widgets() {
     'id'            => 'primary',
     'before_widget' => '<section ' .hybrid_get_attr('widgets', 'primary').'>',
     'after_widget'  => '</section>',
-    'before_title'  => '<h3 class="widget-title mt0">',
+    'before_title'  => '<h3 class="h2 widget-title mt0">',
     'after_title'   => '</h3>',
   ));
 
@@ -77,7 +77,7 @@ function widgets() {
     'id'            => 'footer',
     'before_widget' => '<section ' .hybrid_get_attr('widgets', 'footer').'>',
     'after_widget'  => '</section>',
-    'before_title'  => '<h3 class="widget-title mt0">',
+    'before_title'  => '<h3 class="h2 widget-title mt0">',
     'after_title'   => '</h3>',
   ));
 }

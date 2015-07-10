@@ -1,7 +1,7 @@
 <?php if (!have_posts()) : ?>
 <section <?php hybrid_attr('post'); ?>>
 
-    <div <?php hybrid_attr('entry-content'); ?>>
+    <div <?php hybrid_attr('entry-summary'); ?>>
 
         <?php _e('Sorry, no results were found.', 'bempress'); ?>
     </div>

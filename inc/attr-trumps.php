@@ -33,36 +33,36 @@ class Attr_Trumps {
             'body'                    => '',
             'site_container'          => 'mt2 mt3@md',
             'container'               => '',
-            'container_header'        => 'flex flex-column@sm flex-justify flex-center',
+            'container_header'        => '',
             'container_wide'          => 'container--wide',
-            'row'                     => '',
+            'row'                     => 'mxn2',
             'row_layout'              => 'grid',
-            'row_layout_sidebar_l'    => 'grid grid--rev mxn3@md',
-            'row_layout_sidebar_r'    => 'grid mxn3@md',
+            'row_layout_sidebar_l'    => 'grid grid--rev flex',
+            'row_layout_sidebar_r'    => 'grid flex',
 
             // SITE HEADER
-            'header'                  => 'bg-1 white',
+            'header'                  => 'bg-1 white flex flex-column@sm flex-justify flex-center',
             'branding'                => 'py2@md inline-block color-inherit',
-            'site_title'              => 'm0',
+            'site_title'              => 'm0 color-inherit',
             'site_description'        => 'h3 bold m0 muted',
 
             // CONTENT
             'content'                 => 'grid__item',
-            'content_with_sidebar'    => 'grid__item px3@md u-2/3@md',
-
+            'content_with_sidebar'    => 'grid__item px1@md u-2/3@md',
+            'content_archive'         => 'flex flex-wrap flex-justify',
             // ENTRY
-            'post'                    => '',
-			'post_archive'            => 'br bg-white p2 p3@md mb2 mb3@md',
+            'post'                    => 'ml2@md mr2@md',
+			'post_archive'            => 'br bg-white mb2 mb3@md pb2 pb3@md flex-auto u-1/3@md',
 
             'page_header'             => 'u-1/1 center',
 
-            'entry_title'             => 'h2 mt0 color-inherit muted',
+            'entry_title'             => 'h2 lh-1 px2 px3@md color-inherit muted',
             'page_title'    		  => 'h1 m0',
             'archive_description'     => '',
 
-            'entry_header'            => 'container mb2',
-            'entry_content'           => 'container bg-white br p3 p4@md mb3@md',
-            'entry_summary'           => 'container',
+            'entry_header'            => 'container',
+            'entry_content'           => 'container bg-white br p2 p3@md mb3@md',
+            'entry_summary'           => 'container px2 px3@md',
             'entry_footer'            => 'container',
 
             'nav_single'              => '',
@@ -83,15 +83,15 @@ class Attr_Trumps {
             'sidebar_right'           => 'u-1/3@md',
             'sidebar_left'            => 'u-1/3@md',
 
-			'widgets'                 => 'widget br mb2 mb3@md p2 ml1 mr1 list-reset flex-auto',
+			'widgets'                 => 'widget br mb2 mb3@md p2 ml2@md mr2@md list-reset flex-auto',
 			'primary_widgets'         => 'bg-white',
 			'footer_widgets'          => 'bg-darken-1',
 
             // COMMENTS
-            'comments_area'           => 'bg-white p3 p4@md mb2 mb3@md',
+            'comments_area'           => 'bg-white p2 p3@md mb2 mb3@md',
 
             // FOOTER
-            'footer'                  => 'bg-2',
+            'footer'                  => 'bg-2 color-inherit',
 
             'menu_link'                 => 'btn'
         );
@@ -244,6 +244,10 @@ class Attr_Trumps {
         $attr['class']      = $this->args['content_with_sidebar'];
         endif;
 
+        if (hybrid_is_plural()) {
+            $attr['class']      .= " {$this->args['content_archive']}";
+        }
+
         return $attr;
     }
 
@@ -302,7 +306,7 @@ class Attr_Trumps {
         }
 
         if ('primary' === $context) {
-        $attr['class']      .= " {$this->args['menu_primary']}";
+        $attr['class']      .= "{$this->args['menu_primary']} ";
         }
         if ('secondary' === $context) {
         $attr['class']      .= " {$this->args['menu_secondary']}";
@@ -323,7 +327,7 @@ class Attr_Trumps {
 
     public function site_title($attr) {
         if ($this->args['site_title']) {
-        $attr['class']      = $this->args['site_title'];
+        $attr['class']      .= " {$this->args['site_title']}";
         return $attr;
     }
     }
@@ -362,10 +366,9 @@ class Attr_Trumps {
     /* === POSTS === */
 
     public function post($attr) {
+        $attr['class']      .= " {$this->args['post']}";
 	if (hybrid_is_plural()) {
 		$attr['class']      .= " {$this->args['post_archive']}";
-	} else {
-        $attr['class']      .= " {$this->args['post']}";
 	}
         return $attr;
     }

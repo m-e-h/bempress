@@ -4,7 +4,7 @@ namespace Bempress\Utils;
 
 add_filter('hybrid_content_template_hierarchy', __NAMESPACE__.'\\template_hierarchy');
 add_filter('get_search_form', __NAMESPACE__.'\\get_search_form');
-//add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 add_filter('excerpt_length', __NAMESPACE__.'\\excerpt_length');
 add_filter('the_content', __NAMESPACE__.'\\remove_empty_p', 20, 1);
 add_action('after_setup_theme', __NAMESPACE__.'\\responsive_videos', 99);
@@ -33,7 +33,7 @@ function get_search_form() {
  * Clean up the_excerpt().
  */
 function excerpt_more() {
-    return ' &hellip; <a class="" href="'.get_permalink().'">'.__('Continued', 'bempress').'</a>';
+    return '<a class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored absolute right-0" href="'.get_permalink().'"><i class="material-icons">more_horiz</i></a>';
 }
 
 function excerpt_length($length) {

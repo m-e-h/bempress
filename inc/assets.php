@@ -35,18 +35,18 @@ function assets() {
     wp_enqueue_script(
         'bempress_js',
         trailingslashit(get_template_directory_uri())."assets/js/main{$suffix}.js",
-        false, false, true
+        false, null, true
     );
 
     wp_register_script(
         'meh_tabs',
         trailingslashit(get_template_directory_uri())."assets/js/tabby{$suffix}.js",
-        false, false, true
+        false, null, true
     );
 
     wp_register_script(
         'meh_toggles',
         trailingslashit(get_template_directory_uri())."assets/js/houdini{$suffix}.js",
-        false, false, true
+        false, null, true
     );
 }

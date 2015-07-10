@@ -70,7 +70,7 @@ hr {
 
 pre,
 code {
-    border-radius: 3px; 
+    border-radius: 2px; 
     background-color: transparent;
 }
 
@@ -110,7 +110,9 @@ a {
 }
 
 img {
+    width: 100%;
     max-width: 100%;
+    height: auto;
 }
 
 svg {
@@ -232,7 +234,7 @@ textarea {
     border-width: 1px;
     border-style: solid;
     border-color: #e6e6e6;
-    border-radius: 3px;
+    border-radius: 2px;
     background-color: #e6e6e6;
 }
 
@@ -240,10 +242,9 @@ input:focus,
 input.is-focused,
 textarea:focus,
 textarea.is-focused {
-    border-color: #0074d9;
+    border-color: #0074d9; 
     outline: none;
     background-color: #fff;
-    box-shadow: 0 0 0 2px color(#0074d9, 0.5);
 }
 
 input:disabled,
@@ -480,6 +481,12 @@ button.button--colored:focus:not(:active) {
 \*------------------------------------*/
 .container {
     max-width: 64em;
+    margin-right: auto; 
+    margin-left: auto;
+}
+
+.container--wide {
+    max-width: 100%;
     margin-right: auto; 
     margin-left: auto;
 }
@@ -842,6 +849,10 @@ input[type="submit"] {
     content: "\E5CC";
 }
 
+.breadcrumbs a {
+    color: inherit;
+}
+
 .trail-end span {
     display: none;
 }
@@ -870,6 +881,10 @@ input[type="submit"] {
 
 .h6 {
     font-size: 0.75rem;
+}
+
+.lh-1 {
+    line-height: 1;
 }
 
 .bold {
@@ -1058,7 +1073,7 @@ input[type="submit"] {
 }
 
 .p0 {
-    padding: 0;
+    padding: 0 !important;
 }
 
 .p1 {
@@ -1150,6 +1165,21 @@ input[type="submit"] {
 }
 
 @media screen and (min-width: 52em) {
+    .m2\@md {
+        margin: 1rem;
+    }
+    .mt2\@md {
+        margin-top: 1rem;
+    }
+    .mr2\@md {
+        margin-right: 1rem;
+    }
+    .mb2\@md {
+        margin-bottom: 1rem;
+    }
+    .ml2\@md {
+        margin-left: 1rem;
+    }
     .m3\@md {
         margin: 2rem;
     }
@@ -1324,20 +1354,40 @@ input[type="submit"] {
     background-color: #fff;
 }
 
+.bg-transparent {
+    background-color: transparent !important;
+}
+
+.bg-lighten-1 {
+    background-color: rgba(255, 255, 255, 0.0625) !important;
+}
+
+.bg-lighten-2 {
+    background-color: rgba(255, 255, 255, 0.125) !important;
+}
+
+.bg-lighten-3 {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.bg-lighten-4 {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
 .bg-darken-1 {
-    background-color: rgba(0, 0, 0, 0.0625);
+    background-color: rgba(0, 0, 0, 0.0625) !important;
 }
 
 .bg-darken-2 {
-    background-color: rgba(0, 0, 0, 0.125);
+    background-color: rgba(0, 0, 0, 0.125) !important;
 }
 
 .bg-darken-3 {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.25) !important;
 }
 
 .bg-darken-4 {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
 /* #BORDERS
@@ -1373,34 +1423,34 @@ input[type="submit"] {
 }
 
 .border-none {
-    border: 0;
+    border: 0 !important;
 }
 
 .br {
-    border-radius: 3px;
+    border-radius: 2px;
 }
 
 .round {
     border-radius: 50%;
 }
 
-.rounded-top {
-    border-radius: 3px 3px 0 0;
+.br-top {
+    border-radius: 2px 2px 0 0;
 }
 
-.rounded-right {
-    border-radius: 0 3px 3px 0;
+.br-right {
+    border-radius: 0 2px 2px 0;
 }
 
-.rounded-bottom {
-    border-radius: 0 0 3px 3px;
+.br-bottom {
+    border-radius: 0 0 2px 2px;
 }
 
-.rounded-left {
-    border-radius: 3px 0 0 3px;
+.br-left {
+    border-radius: 2px 0 0 2px;
 }
 
-.br-0 {
+.br0 {
     border-radius: 0;
 }
 
@@ -1424,7 +1474,7 @@ input[type="submit"] {
 }
 
 .block {
-    display: block;
+    display: block !important;
 }
 
 .inline-block {
@@ -1472,7 +1522,7 @@ input[type="submit"] {
 }
 
 .absolute {
-    position: absolute;
+    position: absolute !important;
 }
 
 .fixed {
@@ -1532,6 +1582,15 @@ input[type="submit"] {
     display: flex;
 }
 
+.flex-rev {
+    flex-direction: row-reverse; 
+
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+}
+
 .flex-column {
     flex-direction: column; 
 
@@ -1587,6 +1646,13 @@ input[type="submit"] {
     -ms-flex-pack: justify;
     -webkit-justify-content: space-between;
     justify-content: space-between;
+}
+
+.flex-justify-end {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
 }
 
 .flex-auto {
@@ -1721,4 +1787,8 @@ input[type="submit"] {
 .site-content:after,
 .site-footer:after {
     clear: both;
+}
+
+body.custom-background {
+    background-size: cover;
 }

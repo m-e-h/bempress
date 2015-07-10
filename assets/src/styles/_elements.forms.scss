@@ -80,7 +80,6 @@ textarea.is-focused {
     background-color: $white;
     outline: none;
     border-color: $field-focus-color;
-    box-shadow: 0 0 0 2px color($field-focus-color, .5);
 }
 
 input:disabled,

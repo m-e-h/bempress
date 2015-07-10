@@ -22,6 +22,11 @@
         <?php else : // If not viewing a single post. ?>
 
             <header <?php hybrid_attr('entry-header'); ?>>
+                <?php
+    get_the_image(array(
+        'size'         => 'bempress-lg',
+    ));
+?>
                 <h2 <?php hybrid_attr('entry-title'); ?>>
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h2>

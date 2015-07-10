@@ -12,15 +12,11 @@
 
     <header <?php hybrid_attr('header'); ?>>
 
-        <div <?php hybrid_attr('container', 'header'); ?>>
-
             <div <?php hybrid_attr('branding'); ?>>
                 <?php hybrid_site_title(); ?>
                 <?php hybrid_site_description(); ?>
             </div>
 
             <?php hybrid_get_menu('primary'); ?>
-
-        </div>
 
     </header>

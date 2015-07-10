@@ -2,7 +2,7 @@
 \*------------------------------------*/
 
 .inline       { display: inline }
-.block        { display: block }
+.block        { display: block!important; }
 .inline-block { display: inline-block }
 .table        { display: table }
 .table-cell   { display: table-cell }
@@ -17,7 +17,7 @@
 .overflow-auto   { overflow: auto }
 
 .relative { position: relative }
-.absolute { position: absolute }
+.absolute { position: absolute!important; }
 .fixed    { position: fixed }
 
 .top-0    { top: 0 }
