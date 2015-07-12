@@ -35,10 +35,10 @@ class Attr_Trumps {
             'container'               => '',
             'container_header'        => '',
             'container_wide'          => 'container--wide',
-            'row'                     => 'mxn2',
-            'row_layout'              => 'grid',
-            'row_layout_sidebar_l'    => 'grid grid--rev flex',
-            'row_layout_sidebar_r'    => 'grid flex',
+            'row'                     => '',
+            'row_layout'              => 'grid mxn2@md',
+            'row_layout_sidebar_l'    => 'grid mxn2@md grid--rev flex',
+            'row_layout_sidebar_r'    => 'grid mxn2@md flex',
 
             // SITE HEADER
             'header'                  => 'bg-1 white flex flex-column@sm flex-justify flex-center',

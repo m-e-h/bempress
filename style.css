@@ -1085,6 +1085,10 @@ input[type="submit"] {
     .ml4\@md {
         margin-left: 4rem;
     }
+    .mxn2\@md {
+        margin-right: -1rem; 
+        margin-left: -1rem;
+    }
     .mxn3\@md {
         margin-right: -2rem; 
         margin-left: -2rem;
