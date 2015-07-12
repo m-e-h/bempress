@@ -61,7 +61,7 @@ class Attr_Trumps {
             'archive_description'     => '',
 
             'entry_header'            => 'container',
-            'entry_content'           => 'overflow-hidden container bg-white br p2 p3@md mb3@md',
+            'entry_content'           => 'overflow-hidden container bg-white br p2 p3@md mb2 mb3@md',
             'entry_summary'           => 'container px2 px3@md',
             'entry_footer'            => 'container',
 
@@ -88,7 +88,7 @@ class Attr_Trumps {
 			'footer_widgets'          => 'bg-darken-1',
 
             // COMMENTS
-            'comments_area'           => 'bg-white p2 p3@md mb2 mb3@md',
+            'comments_area'           => 'bg-white br p2 p3@md mb2 mb3@md',
 
             // FOOTER
             'footer'                  => 'bg-2 color-inherit',
