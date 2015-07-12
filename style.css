@@ -51,11 +51,12 @@ body {
 *,
 ::after,
 ::before {
-    position: inherit; 
+    position: inherit;
     box-sizing: inherit;
     border-width: 0;
     border-style: solid;
     vertical-align: middle;
+    word-wrap: break-word;
 }
 
 input[type="submit"] {
@@ -111,7 +112,6 @@ a {
 }
 
 img {
-    width: 100%;
     max-width: 100%;
     height: auto;
 }
@@ -389,15 +389,43 @@ h6 {
 a {
     color: #0074d9;
     text-decoration: none;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition-duration: 0.28s;
+    transition-duration: 0.28s;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
 }
 
 a:hover {
+    opacity: 0.8; 
     text-decoration: underline;
+}
+
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+    border-bottom: 1px solid transparent;
+    -webkit-transition-property: all;
+    transition-property: all;
+}
+h1 > a:hover,
+h2 > a:hover,
+h3 > a:hover,
+h4 > a:hover,
+h5 > a:hover,
+h6 > a:hover {
+    border-bottom-color: currentColor; 
+    text-decoration: none;
 }
 
 /* #BUTTONS
 \*------------------------------------*/
 .btn,
+.nav-links a,
 .button,
 input[type="button"],
 input[type="reset"],
@@ -429,6 +457,7 @@ button {
     will-change: box-shadow, transform;
 }
 .btn::-moz-focus-inner,
+.nav-links a::-moz-focus-inner,
 .button::-moz-focus-inner,
 input[type="button"]::-moz-focus-inner,
 input[type="reset"]::-moz-focus-inner,
@@ -437,6 +466,7 @@ button::-moz-focus-inner {
     border: 0;
 }
 .btn:hover,
+.nav-links a:hover,
 .button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
@@ -446,6 +476,7 @@ button:hover {
     text-decoration: none;
 }
 .btn:focus:not(:active),
+.nav-links a:focus:not(:active),
 .button:focus:not(:active),
 input[type="button"]:focus:not(:active),
 input[type="reset"]:focus:not(:active),
@@ -454,6 +485,7 @@ button:focus:not(:active) {
     background-color: rgba(0,0,0, 0.12);
 }
 .btn:active,
+.nav-links a:active,
 .button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
@@ -462,6 +494,7 @@ button:active {
     background-color: rgba(158,158,158, 0.40);
 }
 .btn.button--colored,
+.nav-links a.button--colored,
 .button.button--colored,
 input.button--colored[type="button"],
 input.button--colored[type="reset"],
@@ -470,6 +503,7 @@ button.button--colored {
     color: rgb(63,81,181);
 }
 .btn.button--colored:focus:not(:active),
+.nav-links a.button--colored:focus:not(:active),
 .button.button--colored:focus:not(:active),
 input.button--colored[type="button"]:focus:not(:active),
 input.button--colored[type="reset"]:focus:not(:active),
@@ -771,14 +805,11 @@ button.button--colored:focus:not(:active) {
 
 /* #BUTTONS
 \*------------------------------------*/
-.button--raised,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
     background: rgba(158,158,158, 0.20);
 }
-.button--raised:active,
-.button--raised:hover,
 input[type="button"]:active,
 input[type="button"]:hover,
 input[type="reset"]:active,
@@ -787,44 +818,37 @@ input[type="submit"]:active,
 input[type="submit"]:hover {
     background-color: rgba(158,158,158, 0.40);
 }
-.button--raised:focus:not(:active),
 input[type="button"]:focus:not(:active),
 input[type="reset"]:focus:not(:active),
 input[type="submit"]:focus:not(:active) {
     background-color: rgba(158,158,158, 0.40);
 }
-.button--raised.button--colored,
 input[type="button"].button--colored,
 input[type="reset"].button--colored,
 input[type="submit"].button--colored {
     color: rgb(255,255,255); 
     background: rgb(63,81,181);
 }
-.button--raised.button--colored:hover,
 input[type="button"].button--colored:hover,
 input[type="reset"].button--colored:hover,
 input[type="submit"].button--colored:hover {
     background-color: rgb(48,63,159);
 }
-.button--raised.button--colored:active,
 input[type="button"].button--colored:active,
 input[type="reset"].button--colored:active,
 input[type="submit"].button--colored:active {
     background-color: rgb(63,81,181);
 }
-.button--raised.button--colored:focus:not(:active),
 input[type="button"].button--colored:focus:not(:active),
 input[type="reset"].button--colored:focus:not(:active),
 input[type="submit"].button--colored:focus:not(:active) {
     background-color: rgb(63,81,181);
 }
-.button--raised.button--colored .ripple,
 input[type="button"].button--colored .ripple,
 input[type="reset"].button--colored .ripple,
 input[type="submit"].button--colored .ripple {
     background: rgb(255,255,255);
 }
-.button--raised[disabled][disabled],
 input[type="button"][disabled][disabled],
 input[type="reset"][disabled][disabled],
 input[type="submit"][disabled][disabled] {
@@ -1294,6 +1318,30 @@ input[type="submit"] {
 
 .bg-3 {
     background-color: #ffdc00;
+}
+
+.bg-1--light {
+    background-color: #0d8eff;
+}
+
+.bg-2--light {
+    background-color: #50b98a;
+}
+
+.bg-3--light {
+    background-color: #ffe333;
+}
+
+.bg-1--dark {
+    background-color: #0059a6;
+}
+
+.bg-2--dark {
+    background-color: #2e7555;
+}
+
+.bg-3--dark {
+    background-color: #ccb000;
 }
 
 .fill-1 {
@@ -1796,4 +1844,77 @@ input[type="submit"] {
 
 body.custom-background {
     background-size: cover;
+}
+
+.posts-navigation {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+@media screen and (min-width: 52em) {
+    .posts-navigation {
+        margin-bottom: 2rem;
+    }
+}
+
+.nav-links {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+    margin-bottom: 1.5em;
+}
+
+.gallery-item {
+    display: inline-block;
+    width: 100%; 
+    text-align: center;
+    vertical-align: top;
+}
+
+.gallery-columns-2 .gallery-item {
+    max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+    max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+    max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+    max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+    max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+    max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+    max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+    max-width: 11.11%;
+}
+
+.gallery-caption {
+    display: block;
 }

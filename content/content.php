@@ -42,7 +42,10 @@
 
     <?php endwhile; ?>
 
-    <?php the_posts_navigation(); ?>
+    <?php the_posts_navigation( array(
+    'prev_text'          => __( 'Previous page', 'bempress' ),
+    'next_text'          => __( 'Next page', 'bempress' ),
+) ); ?>
 
 <?php
 endif;

@@ -212,7 +212,7 @@ final class Bempress_Custom_Styles {
                 { background-color: #{$color500}; }
             ";
         $style .= "
-                .bg-2--light
+                .custom-styles .bg-2--light
                 { background-color: #{$color400}; }
             ";
         $style .= "

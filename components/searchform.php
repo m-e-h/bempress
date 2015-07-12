@@ -1,19 +1,8 @@
-<form role="search" method="get" class="search-form form-inline" action="<?= esc_url(home_url('/')); ?>">
-
-    <label class="screen-reader-text">
-        <?php _e('Search for:', 'bempress'); ?>
+<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+    <label>
+        <span class="screen-reader-text"><?php _ex( 'Search for:', 'label', 'bempress' ); ?></span>
+        <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'bempress' ); ?>" value="<?php echo esc_attr( get_search_query() ); ?>" name="s">
     </label>
-
-    <div class="input-group">
-
-        <input type="search" value="<?= get_search_query(); ?>" name="s" class="search-field form-control" placeholder="<?php _e('Search', 'bempress'); ?> <?php bloginfo('name'); ?>" required>
-
-        <span class="input-group-btn">
-            <button type="submit" class="search-submit btn button--raised button--colored rounded-right">
-            <i class="material-icons"><?php _e('&#xE8B6;', 'bempress'); ?></i>
-            </button>
-        </span>
-
-    </div>
-
+    <button type="submit" class="search-submit material-icons btn button--raised button--colored rounded-right" value="<?php echo esc_attr_x( '&#xE8B6;', 'submit button', 'bempress' ); ?>">
+    </button>
 </form>

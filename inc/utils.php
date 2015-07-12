@@ -33,7 +33,7 @@ function get_search_form() {
  * Clean up the_excerpt().
  */
 function excerpt_more() {
-    return '<a class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored absolute btn-readmore right-0 bottom-0" href="'.get_permalink().'"><i class="material-icons">more_horiz</i></a>';
+    return '<a class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab bg-2--light absolute btn-readmore right-0 bottom-0" href="'.get_permalink().'"><i class="material-icons">more_horiz</i></a>';
 }
 
 function excerpt_length($length) {
