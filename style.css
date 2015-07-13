@@ -33,6 +33,9 @@ GitHub Theme URI: https://github.com/m-e-h/bempress
 body {
     color: #111;
     background-color: #f3f3f3;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.03125;
 }
 
 * {
@@ -320,7 +323,7 @@ td {
 \*------------------------------------*/
 body {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 100%; 
+    font-size: 16px; 
     line-height: 1.5;
 }
 
@@ -1230,8 +1233,7 @@ input[type="submit"] {
     opacity: 0.8;
 }
 
-.color-inherit,
-.color-inherit a {
+.color-inherit * {
     color: inherit;
 }
 

@@ -12,6 +12,9 @@ $color-3: $yellow;
 
 $color-text: $black;
 
+$base-font-size: 16px;
+$base-line-height: 1.5;
+
 // Base Styles
 $font-family: 'Helvetica Neue', Helvetica, sans-serif;
 $line-height: 1.5;
@@ -25,7 +28,7 @@ $h3: 1.25rem;
 $h4: 1rem;
 $h5: .875rem;
 $h6: .75rem;
-$body-font-size: 100%;
+$body-font-size: $base-font-size;
 $bold-font-weight: bold;
 $pre-font-size: inherit;
 

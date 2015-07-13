@@ -1,11 +1,10 @@
 <?php
 /**
- * Customize control class to handle theme layouts.  This class extends the framework's
- * `Hybrid_Customize_Control_Radio_Image` class.  Only layouts that have an image will
- * be shown.
+ * Customize control class to handle theme layouts.  By default, it simply outputs a custom set of
+ * radio inputs.  Theme authors can extend this class and do something even cooler.
  *
  * @package    Hybrid
- * @subpackage Customize
+ * @subpackage Classes
  * @author     Justin Tadlock <justin@justintadlock.com>
  * @copyright  Copyright (c) 2008 - 2015, Justin Tadlock
  * @link       http://themehybrid.com/hybrid-core

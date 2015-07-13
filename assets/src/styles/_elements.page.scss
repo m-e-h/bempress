@@ -19,6 +19,7 @@
 body {
     color: $body-color;
     background-color: $body-background-color;
+    @include font-size($base-font-size);
 }
 
 * {

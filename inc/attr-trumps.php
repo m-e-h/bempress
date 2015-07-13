@@ -36,7 +36,7 @@ class Attr_Trumps {
             'container_header'        => '',
             'container_wide'          => 'container--wide',
             'row'                     => '',
-            'row_layout'              => 'grid mxn2@md',
+            'row_layout'              => 'grid',
             'row_layout_sidebar_l'    => 'grid mxn2@md grid--rev flex',
             'row_layout_sidebar_r'    => 'grid mxn2@md flex',
 
