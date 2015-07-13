@@ -782,6 +782,10 @@ input[type="submit"] {
     text-transform: uppercase;
 }
 
+.text-shadow {
+    text-shadow: 1px 1px 5px rgba(17, 17, 17, 0.6);
+}
+
 .left-align {
     text-align: left;
 }
