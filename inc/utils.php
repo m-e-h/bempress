@@ -10,12 +10,18 @@ add_filter('the_content', __NAMESPACE__.'\\remove_empty_p', 20, 1);
 add_action('after_setup_theme', __NAMESPACE__.'\\responsive_videos', 99);
 
 function template_hierarchy($templates) {
+        $post_type = get_post_type();
     if (is_search()) {
         $templates = array_merge(array('content/search.php'), $templates);
-    } elseif (is_404()) {
+    } 
+    if (is_404()) {
         $templates = array_merge(array('content/404.php'), $templates);
     }
-
+    if (is_singular()) {
+        $templates = array_merge(array("content/{$post_type}-single.php"), $templates);
+    } else {
+        $templates = array_merge(array("content/{$post_type}-archive.php"), $templates);
+    }
     return $templates;
 }
 
