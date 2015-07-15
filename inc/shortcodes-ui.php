@@ -22,6 +22,27 @@ if (!function_exists('shortcode_ui_register_for_shortcode')) {
             // Supported field types: text, checkbox, textarea, radio, select, email, url, number, and date.
             'attrs' => array(
                 array(
+                    'label'   => 'Row Color',
+                    'attr'    => 'row_color',
+                    'type'    => 'select',
+                    'value'   => 'bg-white',
+                    'options' => array(
+                        'bg-white black'      => 'White',
+                        'bg-1 white'    => 'Primary Color',
+                        'bg-2 black'          => 'Secondary Color',
+                        'bg-silver black' => 'Neutral',
+                   ),
+                    'description' => 'Background color of your row',
+               ),
+
+               array(
+                   'label'   => 'Intro Text',
+                   'attr'    => 'row_intro',
+                   'type'    => 'text',
+                   'description' => 'Introduce your row with a heading',
+              ),
+
+                array(
                     'label'   => 'Cards Per Row',
                     'attr'    => 'width',
                     'type'    => 'select',
@@ -39,12 +60,12 @@ if (!function_exists('shortcode_ui_register_for_shortcode')) {
                     'label'   => 'Card Color',
                     'attr'    => 'card_color',
                     'type'    => 'select',
-                    'value'   => 't-bg--white',
+                    'value'   => 'bg-white',
                     'options' => array(
-                        't-bg--white'      => 'White',
-                        't-bg--1'          => 'Primary Color',
-                        't-bg--2'          => 'Secondary Color',
-                        't-bg--grey-light' => 'Neutral',
+                        'bg-white black'      => 'White',
+                        'bg-1 white'          => 'Primary Color',
+                        'bg-2 black'          => 'Secondary Color',
+                        'bg-silver black' => 'Neutral',
                    ),
                     'description' => 'Background color of your content card',
                ),

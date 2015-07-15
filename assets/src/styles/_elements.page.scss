@@ -9,7 +9,6 @@
     font: 16px/1.5 sans-serif;
     min-height: 100%;
     background-color: #fff;
-    position: relative;
     @include sm {
         font: 14px/1.7 sans-serif;
     }
@@ -29,6 +28,7 @@ body {
     margin: 0;
     padding: 0;
     flex: 0 1 auto;
+    position: relative;
 }
 
 *,
@@ -38,7 +38,6 @@ body {
     vertical-align: middle;
     border-style: solid;
     border-width: 0;
-    position: inherit;
     word-wrap: break-word;
 }
 

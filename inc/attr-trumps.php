@@ -51,7 +51,7 @@ class Attr_Trumps {
             'content_with_sidebar'    => 'grid__item px1@md u-2/3@md',
             'content_archive'         => 'flex flex-wrap flex-justify',
             // ENTRY
-            'post'                    => 'ml2@md mr2@md',
+            'post'                    => '',
 			'post_archive'            => 'br bg-white mb2 mb3@md pb2 pb3@md flex-auto u-1/3@md',
 
             'page_header'             => 'u-1/1 center',
@@ -62,6 +62,7 @@ class Attr_Trumps {
 
             'entry_header'            => 'container',
             'entry_content'           => 'overflow-hidden container bg-white br p2 p3@md mb2 mb3@md',
+            'entry_content_wide'      => '',
             'entry_summary'           => 'container px2 px3@md',
             'entry_footer'            => 'container',
 
@@ -162,7 +163,7 @@ class Attr_Trumps {
         $attr['class']      = $this->args['container'];
         $attr['class']      .= " container container--{$context}";
 
-        if ('1-column-wide' == get_theme_mod('theme_layout') && 'content' === $context) {
+        if ('1-column-wide' ==  hybrid_get_theme_layout('theme_layout') && 'content' === $context) {
         $attr['class']      .= " {$this->args['container_wide']}";
         }
         if ('header' === $context) {
@@ -183,10 +184,10 @@ class Attr_Trumps {
 
         if ('layout' === $context) {
 
-        if ('sidebar-right'     == get_theme_mod('theme_layout')) :
+        if ('sidebar-right'     ==  hybrid_get_theme_layout('theme_layout')) :
         $attr['class']      .= " {$this->args['row_layout_sidebar_r']}";
 
-        elseif ('sidebar-left'     == get_theme_mod('theme_layout')) :
+        elseif ('sidebar-left'     ==  hybrid_get_theme_layout('theme_layout')) :
         $attr['class']      .= " {$this->args['row_layout_sidebar_l']}";
 
         else : $attr['class']      .= " {$this->args['row_layout']}";
@@ -231,16 +232,16 @@ class Attr_Trumps {
 
     public function content($attr) {
 
-        if ('1-column-wide'   == get_theme_mod('theme_layout')) :
+        if ('1-column-wide'   ==  hybrid_get_theme_layout('theme_layout')) :
         $attr['class']      = $this->args['content'];
 
-        elseif ('1-column'    == get_theme_mod('theme_layout')) :
+        elseif ('1-column'    ==  hybrid_get_theme_layout('theme_layout')) :
         $attr['class']      = $this->args['content'];
 
-        elseif ('sidebar-right'     == get_theme_mod('theme_layout')) :
+        elseif ('sidebar-right'     ==  hybrid_get_theme_layout('theme_layout')) :
         $attr['class']      = $this->args['content_with_sidebar'];
 
-        elseif ('sidebar-left'     == get_theme_mod('theme_layout')) :
+        elseif ('sidebar-left'     ==  hybrid_get_theme_layout('theme_layout')) :
         $attr['class']      = $this->args['content_with_sidebar'];
         endif;
 
@@ -257,14 +258,14 @@ class Attr_Trumps {
         }
         if ('primary' === $context) {
 
-        if ('1-column-wide'   == get_theme_mod('theme_layout')) :
+        if ('1-column-wide'   ==  hybrid_get_theme_layout('theme_layout')) :
         $attr['class']      .= " {$this->args['sidebar_horizontal']}";
-        elseif ('1-column'    == get_theme_mod('theme_layout')) :
+        elseif ('1-column'    ==  hybrid_get_theme_layout('theme_layout')) :
         $attr['class']      .= " {$this->args['sidebar_horizontal']}";
 
-        elseif ('sidebar-right' == get_theme_mod('theme_layout')) :
+        elseif ('sidebar-right' ==  hybrid_get_theme_layout('theme_layout')) :
         $attr['class']      .= " {$this->args['sidebar_right']}";
-        elseif ('sidebar-left' == get_theme_mod('theme_layout')) :
+        elseif ('sidebar-left' ==  hybrid_get_theme_layout('theme_layout')) :
         $attr['class']      .= " {$this->args['sidebar_left']}";
         endif;
 
@@ -402,8 +403,11 @@ class Attr_Trumps {
     }
 
     public function entry_content($attr) {
-
+    if ('1-column-wide'   ==  hybrid_get_theme_layout('theme_layout')) {
+        $attr['class']      .= " {$this->args['entry_content_wide']}";
+    } else {
         $attr['class']      .= " {$this->args['entry_content']}";
+    }
         return $attr;
     }
 

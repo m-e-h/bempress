@@ -13,6 +13,8 @@
             )); ?>
         </footer>
 
+        <?php the_field('bem_shortcake'); ?>
+
     </article>
 
 <?php endwhile; ?>

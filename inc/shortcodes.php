@@ -14,13 +14,15 @@ function meh_add_shortcodes() {
 function meh_cards_shortcode($atts, $content = null) {
     global $mehsc_atts;
     $mehsc_atts = shortcode_atts(array(
+        'row_color'    => '',
+        'row_intro'    => '',
         'width'        => '',
         'card_color'   => '',
         'page'         => '',
         'show_content' => '',
    ), $atts, 'meh_cards');
 
-    $output = '<section class="row pages-highlight"><div class="card-row grid container">';
+    $output = '<section class="' . $mehsc_atts['row_color'] . ' row pt3 pt4@md pb4@md pages-highlight"><div class="card-row container"><div class="h1 center mb3">' . $mehsc_atts['row_intro'] . '</div>';
 
 // Get pages set (if any)
 $pages = $mehsc_atts['page'];
@@ -59,7 +61,7 @@ function meh_block_shortcode($atts, $content = null) {
         'show_content' => '',
    ), $atts, 'meh_block');
 
-    $output = '<section class="row pages-highlight"><div class="block-row grid container flex flex--row@md flex--w">';
+    $output = '<section class="row pages-highlight"><div class="block-row grid container flex flex-row@md flex--w">';
 
 // Get pages set (if any)
 $pages = $mehsc_atts['page'];
@@ -108,7 +110,7 @@ $pages = $mehsc_atts['page'];
 
     $query3 = new WP_Query($args);
 
-    $output = '<section class="row pages-highlight u-pt+ u-pb+ t-bg--1"><div class="container tabs">';
+    $output = '<section class="row pages-highlight pt3 pb3 bg1"><div class="container tabs">';
     ob_start();
     while ($query3->have_posts()) {
         $query3->the_post();
@@ -120,7 +122,7 @@ $pages = $mehsc_atts['page'];
     }
     ?>
 
-<div class="tabs-content t-bg--frost u-radius u-p">
+<div class="tabs-content bg-darken-2 br p2">
 
 <?php while ($query3->have_posts()) {
     $query3->the_post();

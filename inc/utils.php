@@ -13,7 +13,7 @@ function template_hierarchy($templates) {
         $post_type = get_post_type();
     if (is_search()) {
         $templates = array_merge(array('content/search.php'), $templates);
-    } 
+    }
     if (is_404()) {
         $templates = array_merge(array('content/404.php'), $templates);
     }
@@ -39,7 +39,7 @@ function get_search_form() {
  * Clean up the_excerpt().
  */
 function excerpt_more() {
-    return '<a class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab bg-2--light absolute btn-readmore z1 right-0 bottom-0" href="'.get_permalink().'"><i class="material-icons">more_horiz</i></a>';
+    return '<a class="absolute btn-readmore z1 right-0 bottom-0" href="'.get_permalink().'"><i class="material-icons">more_horiz</i></a>';
 }
 
 function excerpt_length($length) {
