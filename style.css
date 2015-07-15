@@ -1632,7 +1632,7 @@ input[type="submit"] {
 }
 
 @media screen and (max-width: 51em) {
-    .sm-flex {
+    .flex\@sm {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -1649,7 +1649,7 @@ input[type="submit"] {
 }
 
 @media screen and (min-width: 52em) {
-    .md-flex {
+    .flex\@md {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -1666,7 +1666,7 @@ input[type="submit"] {
 }
 
 @media screen and (min-width: 64em) {
-    .lg-flex {
+    .flex\@lg {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
