@@ -48,8 +48,8 @@ function bempress_header_style() {
         // Has the text been hidden?
         if ('blank' == $header_text_color) :
     ?>
-        .site-title,
-        .site-description {
+        #site-title,
+        #site-description {
             position: absolute;
             clip: rect(1px, 1px, 1px, 1px);
         }
@@ -57,9 +57,9 @@ function bempress_header_style() {
         // If the user has set a custom color for the text use that
         else :
     ?>
-        .site-title,
-        .site-description,
-        .menu-primary {
+        #site-title,
+        #site-description,
+        #menu-primary {
             color: #<?= esc_attr($header_text_color);
     ?>;
         }
@@ -69,12 +69,8 @@ function bempress_header_style() {
         // Is there an image?
         if (get_header_image()) :
     ?>
-        .site-header {
-            background: url(<?php header_image(); ?>) no-repeat 50% 50%;
-            -webkit-background-size: cover;
-            -moz-background-size:    cover;
-            -o-background-size:      cover;
-            background-size:         cover;
+        #header {
+            background-image: url(<?php header_image(); ?>);
         }
         <?php endif; // End header image check. ?>
     </style>

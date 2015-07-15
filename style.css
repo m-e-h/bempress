@@ -1422,6 +1422,10 @@ input[type="submit"] {
     background-attachment: fixed;
 }
 
+.bg-no-repeat {
+    background-repeat: no-repeat;
+}
+
 /* #COLOR TABLES
 \*------------------------------------*/
 .table-light th,
