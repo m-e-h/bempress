@@ -833,19 +833,19 @@ input[type="submit"] {
 }
 
 .mt0 {
-    margin-top: 0;
+    margin-top: 0 !important;
 }
 
 .mr0 {
-    margin-right: 0;
+    margin-right: 0 !important;
 }
 
 .mb0 {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 }
 
 .ml0 {
-    margin-left: 0;
+    margin-left: 0 !important;
 }
 
 .m1 {
@@ -1412,6 +1412,10 @@ input[type="submit"] {
 
 .bg-left {
     background-position: left;
+}
+
+.bg-fixed {
+    background-attachment: fixed;
 }
 
 /* #COLOR TABLES

@@ -34,7 +34,7 @@ class Attr_Trumps {
             'site_container'          => 'mt2 mt3@md',
             'container'               => '',
             'container_header'        => '',
-            'container_wide'          => 'container--wide',
+            'container_wide'          => 'mt0 container--wide',
             'row'                     => '',
             'row_layout'              => 'grid',
             'row_layout_sidebar_l'    => 'grid mxn2@md grid--rev flex',
@@ -42,7 +42,7 @@ class Attr_Trumps {
 
             // SITE HEADER
             'header'                  => 'bg-1 white flex flex-column@sm flex-justify flex-center',
-            'branding'                => 'py2@md inline-block color-inherit',
+            'branding'                => 'px3@md py2@md inline-block color-inherit',
             'site_title'              => 'm0 color-inherit',
             'site_description'        => 'h3 bold m0 muted',
 
@@ -75,7 +75,7 @@ class Attr_Trumps {
             'entry_terms'             => '',
 
             // NAVIGATION
-            'menu_primary'            => '',
+            'menu_primary'            => 'px3@md',
 
             // SIDEBAR
             'sidebar_primary'         => 'grid__item',
@@ -307,7 +307,7 @@ class Attr_Trumps {
         }
 
         if ('primary' === $context) {
-        $attr['class']      .= "{$this->args['menu_primary']} ";
+        $attr['class']      .= " {$this->args['menu_primary']}";
         }
         if ('secondary' === $context) {
         $attr['class']      .= " {$this->args['menu_secondary']}";
