@@ -43,6 +43,13 @@
 
 .br0 { border-radius: 0 }
 
+.shadow0 {
+    box-shadow: none!important;
+}
+
+.shadow1 {
+  @include focus-shadow();
+}
 
 .shadow2 {
   @include shadow-2dp();
@@ -62,8 +69,4 @@
 
 .shadow8 {
   @include shadow-8dp();
-}
-
-.shadow16 {
-  @include shadow-16dp();
 }
