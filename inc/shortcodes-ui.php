@@ -17,7 +17,7 @@ if (!function_exists('shortcode_ui_register_for_shortcode')) {
         'meh_cards',
         array(
             'label'         => 'Cards',
-            'listItemImage' => '<img width="60px" height="60px" src="'.esc_url($bempress_dir.'images/sidebar-left.svg').'" />',
+            'listItemImage' => 'dashicons-grid-view',
             // Attribute model expects 'attr', 'type' and 'label'
             // Supported field types: text, checkbox, textarea, radio, select, email, url, number, and date.
             'attrs' => array(
@@ -89,7 +89,7 @@ if (!function_exists('shortcode_ui_register_for_shortcode')) {
                     'label'    => 'Select Page',
                     'attr'     => 'page',
                     'type'     => 'post_select',
-                    'query'    => array('post_type' => 'page'),
+                    'query'    => array('post_type' => 'department'),
                     'multiple' => true,
                ),
            ),

@@ -28,7 +28,7 @@ function meh_cards_shortcode($atts, $content = null) {
 $pages = $mehsc_atts['page'];
 
     $args = array(
-    'post_type' => 'page',
+    'post_type' => 'department',
     'post__in'  => explode(',', $pages),
     'orderby'   => 'post__in',
 );
