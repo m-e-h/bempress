@@ -42,3 +42,28 @@
 .br-left   { border-radius: $border-radius 0 0 $border-radius }
 
 .br0 { border-radius: 0 }
+
+
+.shadow2 {
+  @include shadow-2dp();
+}
+
+.shadow3 {
+  @include shadow-3dp();
+}
+
+.shadow4 {
+  @include shadow-4dp();
+}
+
+.shadow6 {
+  @include shadow-6dp();
+}
+
+.shadow8 {
+  @include shadow-8dp();
+}
+
+.shadow16 {
+  @include shadow-16dp();
+}
