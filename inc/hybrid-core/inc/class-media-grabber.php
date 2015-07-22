@@ -330,8 +330,18 @@ class Hybrid_Media_Grabber {
 				$embed = trim( apply_filters( 'hybrid_media_grabber_autoembed_media', $value[0] ) );
 
 				if ( !empty( $embed ) ) {
+
+					// If we're given a shortcode, roll with it.
+					if ( preg_match( "/\[{$this->type}\s/", $embed ) ) {
+
+						if ( 'video' === $this->type )
+							$embed = $this->filter_dimensions( $embed );
+
+						$embed = do_shortcode( $embed );
+					}
+
 					$this->original_media = $value[0];
-					$this->media = $embed;
+					$this->media          = $embed;
 					break;
 				}
 			}
