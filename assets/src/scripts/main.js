@@ -235,3 +235,5 @@ if (objCtr.defineProperty) {
 }
 
 }
+
+drop.init();

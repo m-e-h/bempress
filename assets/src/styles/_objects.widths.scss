@@ -86,6 +86,10 @@
 .u-4\/5\@md {
         width: 80%;
     }
+
+    .u-width-auto\@md {
+            width: auto;
+        }
 }
 
 @include lg {

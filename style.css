@@ -620,6 +620,9 @@ button.button--colored:focus:not(:active) {
     .u-4\/5\@md {
         width: 80%;
     }
+    .u-width-auto\@md {
+        width: auto;
+    }
 }
 
 @media screen and (min-width: 64em) {
@@ -758,6 +761,10 @@ input[type="submit"] {
 
 .h6 {
     font-size: 0.75rem;
+}
+
+.small {
+    font-size: 75%;
 }
 
 .lh-1 {
@@ -1840,4 +1847,113 @@ body.custom-background {
 
 .gallery-caption {
     display: block;
+}
+
+.login-remember {
+    display: inline-block;
+    width: 60%;
+    margin: 0;
+    font-size: 14px;
+}
+
+#rememberme {
+    display: inline-block;
+    width: auto;
+}
+
+.login-submit {
+    display: inline-block;
+    width: 40%;
+    text-align: right;
+}
+
+/**
+ * Sets dropdown link to relative positioning
+ */
+/* line 4, ../components/_drop-basic.scss */
+.dropdown-basic {
+    position: relative;
+}
+
+/**
+ * Styling for expand/collapse icons
+ */
+/* line 11, ../components/_drop-basic.scss */
+.dropdown-basic > a .dropdown-show,
+.dropdown-basic > a .dropdown-hide,
+.js-drop .dropdown-basic > a.active .dropdown-show {
+    display: none;
+    visibility: hidden;
+}
+
+/* line 18, ../components/_drop-basic.scss */
+.js-drop .dropdown-basic > a .dropdown-show,
+.js-drop .dropdown-basic > a.active .dropdown-hide {
+    display: inline-block;
+    visibility: visible;
+}
+
+/**
+ * Styling for the dropdown content.
+ * Hides the content by default.
+ */
+/* line 28, ../components/_drop-basic.scss */
+.dropdown-menu-basic {
+    display: none;
+    visibility: hidden;
+    float: left;
+    position: absolute;
+    z-index: 1000; 
+    top: 100%;
+    min-width: 10em;
+    margin-top: 0.5em;
+    margin-left: 0;
+    text-align: left;
+}
+
+/**
+ * Remove list-style and margin-left from dropdown menu lists
+ */
+/* line 49, ../components/_drop-basic.scss */
+.dropdown-menu-basic ul,
+.dropdown-menu-basic ol {
+    margin-left: 0;
+    list-style: none;
+}
+
+/**
+ * When a dropdown is active, display it.
+ */
+/* line 58, ../components/_drop-basic.scss */
+.dropdown-menu-basic.active {
+    display: block;
+    visibility: visible;
+}
+
+/**
+ * If dropdown link is near the right edge of the screen, shift the dropdown menu position to avoid content clipping.
+ */
+/* line 67, ../components/_drop-basic.scss */
+.dropdown-menu-basic.dropdown-right {
+    right: 0;
+    left: auto;
+    min-width: 300px;
+}
+
+/**
+ * Optional small screen styling for use with collapse-and-toggle navigation menus.
+ * @link http://cferdinandi.github.com/astro/
+ */
+@media (max-width: 40em) {
+    /**
+   * Switch dropdown content to relative positioning.
+   * Remove styling.
+   */
+    /* line 82, ../components/_drop-basic.scss */
+    .js-drop .dropdown-menu-basic {
+        float: none;
+        position: relative;
+        border: none;
+        box-shadow: none;
+    }
 }

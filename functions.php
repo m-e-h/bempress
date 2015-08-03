@@ -18,6 +18,8 @@ $bempress_includes = array(
     'inc/shortcodes-ui.php',            // Shortcake interface
     //'inc/metaboxes.php',                // Custom admin sections
     'inc/customizer/customizer.php',    // Customizer
+
+    'inc/log-in-form.php',               // Shortcodes
 );
 
 foreach ($bempress_includes as $file) {
