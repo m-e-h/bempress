@@ -38,12 +38,11 @@ body {
 }
 
 * {
-    position: relative; 
+    position: relative;
     margin: 0;
     padding: 0;
-    color: inherit;
-    font-size: inherit;
-    line-height: inherit;
+    background-repeat: no-repeat;
+    background-position: 50%; 
 
     -webkit-box-flex: 0;
     -webkit-flex: 0 1 auto;
@@ -52,8 +51,8 @@ body {
 }
 
 *,
-::after,
-::before {
+*:before,
+*:after {
     box-sizing: inherit;
     border-width: 0;
     border-style: solid;
@@ -488,11 +487,18 @@ button:focus:not(:active) {
 }
 .btn:active,
 .nav-links a:active,
+.btn.active,
+.nav-links a.active,
 .button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active,
-button:active {
+.button.active,
+input.active[type="button"],
+input.active[type="reset"],
+input.active[type="submit"],
+button:active,
+button.active {
     background-color: rgba(158,158,158, 0.40);
 }
 .btn.button--colored,
@@ -690,8 +696,11 @@ input[type="submit"].button--colored:hover {
     background-color: rgb(48,63,159);
 }
 input[type="button"].button--colored:active,
+input[type="button"].button--colored.active,
 input[type="reset"].button--colored:active,
-input[type="submit"].button--colored:active {
+input[type="reset"].button--colored.active,
+input[type="submit"].button--colored:active,
+input[type="submit"].button--colored.active {
     background-color: rgb(63,81,181);
 }
 input[type="button"].button--colored:focus:not(:active),
@@ -1865,6 +1874,10 @@ body.custom-background {
     display: inline-block;
     width: 40%;
     text-align: right;
+}
+
+.favorites-list > li {
+    display: block;
 }
 
 /**

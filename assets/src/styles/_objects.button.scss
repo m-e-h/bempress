@@ -37,7 +37,7 @@ button {
     background-color: $button-focus-color;
   }
 
-  &:active {
+  &:active, &.active {
     background-color: $button-active-color;
   }
 

@@ -22,18 +22,20 @@ body {
 }
 
 * {
-    font-size: inherit;
-    line-height: inherit;
-    color: inherit;
+    // font-size: inherit;
+    // line-height: inherit;
+    // color: inherit;
     margin: 0;
     padding: 0;
     flex: 0 1 auto;
     position: relative;
+    background-repeat: no-repeat;
+    background-position: 50%;
 }
 
 *,
-::after,
-::before {
+*:before,
+*:after {
     box-sizing: inherit;
     vertical-align: middle;
     border-style: solid;

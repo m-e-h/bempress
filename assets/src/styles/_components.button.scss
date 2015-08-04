@@ -27,7 +27,7 @@ input[type="submit"] {
       background-color: $button-hover-color-alt;
     }
 
-    &:active {
+    &:active, &.active {
       background-color: $button-active-color-alt;
     }
 
