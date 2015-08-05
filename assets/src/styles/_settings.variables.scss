@@ -10,6 +10,13 @@ $color-1: $blue;
 $color-2: $olive;
 $color-3: $yellow;
 
+$color1-light:  lighten($color-1, 10);
+$color2-light:  lighten($color-2, 10);
+$color3-light:  lighten($color-3, 10);
+$color1-dark:  darken($color-1, 10);
+$color2-dark:  darken($color-2, 10);
+$color3-dark:  darken($color-3, 10);
+
 $color-text: $grey-700;
 
 $base-font-size: 16px;

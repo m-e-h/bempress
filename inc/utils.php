@@ -8,6 +8,8 @@ add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 add_filter('excerpt_length', __NAMESPACE__.'\\excerpt_length');
 add_filter('the_content', __NAMESPACE__.'\\remove_empty_p', 20, 1);
 add_action('after_setup_theme', __NAMESPACE__.'\\responsive_videos', 99);
+add_action('gform_user_registered', __NAMESPACE__.'\\autologin', 10, 4);
+add_filter('show_admin_bar', '__return_false');
 
 function template_hierarchy($templates) {
         $post_type = get_post_type();
@@ -74,4 +76,10 @@ function responsive_videos_embed_html($html) {
     }
 
     return '<div class="flex-embed"><div class="flex-embed__ratio flex-embed__ratio--16by9"></div>'.$html.'</div>';
+}
+
+
+
+function autologin($user_id, $config, $entry, $password) {
+        wp_set_auth_cookie($user_id, false, '');
 }

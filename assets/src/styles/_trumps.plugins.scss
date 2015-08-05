@@ -107,11 +107,19 @@ text-align: right;
 }
 
 
+.simplefavorite-button {
+    color: $color1-dark;
+}
+
+.simplefavorite-button.active {
+    background-color: $color1-light;
+    color: white;
+}
 
 
-
-
-
+.avatar-60 {
+    border-radius: 50%;
+}
 
 
 
