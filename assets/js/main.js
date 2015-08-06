@@ -1,239 +1,80 @@
-/*
- * classList.js: Cross-browser full element.classList implementation.
- * 1.1.20150312
+( function() {
+    drop.init({
+    toggleActiveClass: 'is-active',
+    contentActiveClass: 'is-active',
+    toggleClass: 'menu-item-has-children',
+    contentClass: 'sub-menu',
+        });
+})();
+
+/**
+ * navigation.js
  *
- * By Eli Grey, http://eligrey.com
- * License: Dedicated to the public domain.
- *   See https://github.com/eligrey/classList.js/blob/master/LICENSE.md
+ * Handles toggling the navigation menu for small screens.
  */
 
-/*global self, document, DOMException */
-
-/*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js */
-
-if ("document" in self) {
-
-// Full polyfill for browsers with no classList support
-if (!("classList" in document.createElement("_"))) {
-
-(function (view) {
-
-"use strict";
-
-if (!('Element' in view)) return;
-
-var
-    classListProp = "classList"
-  , protoProp = "prototype"
-  , elemCtrProto = view.Element[protoProp]
-  , objCtr = Object
-  , strTrim = String[protoProp].trim || function () {
-    return this.replace(/^\s+|\s+$/g, "");
-  }
-  , arrIndexOf = Array[protoProp].indexOf || function (item) {
-    var
-        i = 0
-      , len = this.length
-    ;
-    for (; i < len; i++) {
-      if (i in this && this[i] === item) {
-        return i;
-      }
-    }
-    return -1;
-  }
-  // Vendors: please allow content code to instantiate DOMExceptions
-  , DOMEx = function (type, message) {
-    this.name = type;
-    this.code = DOMException[type];
-    this.message = message;
-  }
-  , checkTokenAndGetIndex = function (classList, token) {
-    if (token === "") {
-      throw new DOMEx(
-          "SYNTAX_ERR"
-        , "An invalid or illegal string was specified"
-      );
-    }
-    if (/\s/.test(token)) {
-      throw new DOMEx(
-          "INVALID_CHARACTER_ERR"
-        , "String contains an invalid character"
-      );
-    }
-    return arrIndexOf.call(classList, token);
-  }
-  , ClassList = function (elem) {
-    var
-        trimmedClasses = strTrim.call(elem.getAttribute("class") || "")
-      , classes = trimmedClasses ? trimmedClasses.split(/\s+/) : []
-      , i = 0
-      , len = classes.length
-    ;
-    for (; i < len; i++) {
-      this.push(classes[i]);
-    }
-    this._updateClassName = function () {
-      elem.setAttribute("class", this.toString());
-    };
-  }
-  , classListProto = ClassList[protoProp] = []
-  , classListGetter = function () {
-    return new ClassList(this);
-  }
-;
-// Most DOMException implementations don't allow calling DOMException's toString()
-// on non-DOMExceptions. Error's toString() is sufficient here.
-DOMEx[protoProp] = Error[protoProp];
-classListProto.item = function (i) {
-  return this[i] || null;
-};
-classListProto.contains = function (token) {
-  token += "";
-  return checkTokenAndGetIndex(this, token) !== -1;
-};
-classListProto.add = function () {
-  var
-      tokens = arguments
-    , i = 0
-    , l = tokens.length
-    , token
-    , updated = false
-  ;
-  do {
-    token = tokens[i] + "";
-    if (checkTokenAndGetIndex(this, token) === -1) {
-      this.push(token);
-      updated = true;
-    }
-  }
-  while (++i < l);
-
-  if (updated) {
-    this._updateClassName();
-  }
-};
-classListProto.remove = function () {
-  var
-      tokens = arguments
-    , i = 0
-    , l = tokens.length
-    , token
-    , updated = false
-    , index
-  ;
-  do {
-    token = tokens[i] + "";
-    index = checkTokenAndGetIndex(this, token);
-    while (index !== -1) {
-      this.splice(index, 1);
-      updated = true;
-      index = checkTokenAndGetIndex(this, token);
-    }
-  }
-  while (++i < l);
-
-  if (updated) {
-    this._updateClassName();
-  }
-};
-classListProto.toggle = function (token, force) {
-  token += "";
-
-  var
-      result = this.contains(token)
-    , method = result ?
-      force !== true && "remove"
-    :
-      force !== false && "add"
-  ;
-
-  if (method) {
-    this[method](token);
-  }
-
-  if (force === true || force === false) {
-    return force;
-  } else {
-    return !result;
-  }
-};
-classListProto.toString = function () {
-  return this.join(" ");
-};
-
-if (objCtr.defineProperty) {
-  var classListPropDesc = {
-      get: classListGetter
-    , enumerable: true
-    , configurable: true
-  };
-  try {
-    objCtr.defineProperty(elemCtrProto, classListProp, classListPropDesc);
-  } catch (ex) { // IE 8 doesn't support enumerable:true
-    if (ex.number === -0x7FF5EC54) {
-      classListPropDesc.enumerable = false;
-      objCtr.defineProperty(elemCtrProto, classListProp, classListPropDesc);
-    }
-  }
-} else if (objCtr[protoProp].__defineGetter__) {
-  elemCtrProto.__defineGetter__(classListProp, classListGetter);
-}
-
-}(self));
-
-} else {
-// There is full or partial native classList support, so just check if we need
-// to normalize the add/remove and toggle APIs.
-
 (function () {
-  "use strict";
+  'use strict';
 
-  var testElement = document.createElement("_");
+  var querySelector = document.querySelector.bind(document);
 
-  testElement.classList.add("c1", "c2");
+  var navdrawerContainer = querySelector('.menu-primary');
+  var body = document.body;
+  var menuBtn = querySelector('.menu-toggle');
+  var navdrawerOverlay = querySelector('.layout__obfuscator');
 
-  // Polyfill for IE 10/11 and Firefox <26, where classList.add and
-  // classList.remove exist but support only one argument at a time.
-  if (!testElement.classList.contains("c2")) {
-    var createMethod = function(method) {
-      var original = DOMTokenList.prototype[method];
-
-      DOMTokenList.prototype[method] = function(token) {
-        var i, len = arguments.length;
-
-        for (i = 0; i < len; i++) {
-          token = arguments[i];
-          original.call(this, token);
-        }
-      };
-    };
-    createMethod('add');
-    createMethod('remove');
+  function closeMenu() {
+    body.classList.remove('is-visible');
+    navdrawerOverlay.classList.remove('is-visible');
+    navdrawerContainer.classList.remove('is-visible');
   }
 
-  testElement.classList.toggle("c3", false);
-
-  // Polyfill for IE 10 and Firefox <24, where classList.toggle does not
-  // support the second argument.
-  if (testElement.classList.contains("c3")) {
-    var _toggle = DOMTokenList.prototype.toggle;
-
-    DOMTokenList.prototype.toggle = function(token, force) {
-      if (1 in arguments && !this.contains(token) === !force) {
-        return force;
-      } else {
-        return _toggle.call(this, token);
-      }
-    };
-
+  function toggleMenu() {
+    body.classList.toggle('is-visible');
+    navdrawerOverlay.classList.toggle('is-visible');
+    navdrawerContainer.classList.toggle('is-visible');
   }
 
-  testElement = null;
-}());
+  navdrawerOverlay.addEventListener('click', closeMenu);
+  menuBtn.addEventListener('click', toggleMenu);
+  // navdrawerContainer.addEventListener('click', function (event) {
+  //   if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {
+  //     closeMenu();
+  //   }
+  // });
+})();
 
-}
 
-}
 
-drop.init();
+
+
+
+
+// grab an element
+var headerBar = document.querySelector(".site-header");
+// construct an instance of Headroom, passing the element
+var headroom  = new Headroom(headerBar, {
+    // vertical offset in px before element is first unpinned
+    offset : 60,
+    // scroll tolerance in px before state changes
+    //tolerance : 0,
+    // or you can specify tolerance individually for up/down scroll
+    tolerance : {
+        up : 5,
+        down : 40
+    },
+    // css classes to apply
+    classes : {
+        // when element is initialised
+        initial : "header",
+        // when scrolling up
+        pinned : "header--pinned",
+        // when scrolling down
+        unpinned : "header--unpinned",
+        // when above offset
+        top : "header--top",
+        // when below offset
+        notTop : "header--not-top"
+    },
+});
+headroom.init();

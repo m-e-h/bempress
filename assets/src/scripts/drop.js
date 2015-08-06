@@ -171,9 +171,9 @@
 	drop.closeDrops = function () {
 
 		// Selectors and variables
-		var dropToggle = document.querySelectorAll('[data-dropdown] > a.' + settings.toggleActiveClass);
-		var dropWrapper = document.querySelectorAll('[data-dropdown].' + settings.toggleActiveClass);
-		var dropContent = document.querySelectorAll('[data-dropdown-menu].' + settings.contentActiveClass);
+		var dropToggle = document.querySelectorAll('.menu-item-has-children > a.' + settings.toggleActiveClass);
+		var dropWrapper = document.querySelectorAll('.menu-item-has-children.' + settings.toggleActiveClass);
+		var dropContent = document.querySelectorAll('.sub-menu.' + settings.contentActiveClass);
 
 		if ( dropToggle.length > 0 || dropWrapper.length > 0 || dropContent.length > 0 ) {
 
@@ -204,21 +204,21 @@
 	 * Handle toggle and document click events
 	 * @private
 	 */
-	var eventHandler = function (event) {
-		var toggle = event.target;
-		var menu = getClosest(toggle, '[data-dropdown-menu]');
-		if ( menu && toggle !== document.documentElement && !toggle.parentNode.hasAttribute( 'data-dropdown' ) ) {
-			// If dropdown menu, do nothing
-			return;
-		} else if ( toggle !== document.documentElement && getClosest(toggle, '[data-dropdown]') ) {
-			// If dropdown toggle element, toggle dropdown menu
-			event.preventDefault();
-			drop.toggleDrop(toggle, settings);
-		} else {
-			// If document body, close open dropdown menus
-			drop.closeDrops();
-		}
-	};
+	 var eventHandler = function (event) {
+			 var toggle = event.target;
+			 var menu = getClosest(toggle, '.sub-menu');
+			 if ( menu && toggle !== document.documentElement && !toggle.parentNode.classList.contains( 'menu-item-has-children' ) ) {
+					 // If dropdown menu, do nothing
+					 return;
+			 } else if ( toggle !== document.documentElement && toggle.parentNode.classList.contains( 'menu-item-has-children' ) ) {
+					 // If dropdown toggle element, toggle dropdown menu
+					 event.preventDefault();
+					 drop.toggleDrop(toggle, settings);
+			 } else {
+					 // If document body, close open dropdown menus
+					 drop.closeDrops();
+			 }
+	 };
 
 	/**
 	 * Destroy the current initialization.

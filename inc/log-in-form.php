@@ -13,9 +13,9 @@ function doc_login_drop() {
 ob_start();
 ?>
 
-    <div class="dropdown-basic inline-block" data-dropdown>
+    <div class="menu-item-has-children inline-block">
     <a class="btn" href="#"><?php echo $username ?></a>
-    <div class="bg-white p2 black dropdown-menu-basic dropdown-right absolute br shadow6" data-dropdown-menu>
+    <div class="sub-menu p2 black dropdown-right br shadow6">
     <?php
         if ( is_user_logged_in() ) {
 

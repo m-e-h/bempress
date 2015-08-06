@@ -26,11 +26,17 @@ function assets() {
         get_stylesheet_uri()
     );
 
-    if (is_single() && comments_open() && get_option('thread_comments')) {
-        wp_enqueue_script(
-        'comment-reply'
-        );
-    }
+    wp_enqueue_script(
+        'meh_classlist',
+        trailingslashit(get_template_directory_uri())."assets/js/classList{$suffix}.js",
+        false, null, true
+    );
+
+    // wp_enqueue_script(
+    //     'meh_buoy',
+    //     trailingslashit(get_template_directory_uri())."assets/js/buoy{$suffix}.js",
+    //     false, null, true
+    // );
 
     wp_register_script(
         'meh_tabs',
