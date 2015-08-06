@@ -79,29 +79,6 @@ gulp.task('styles', function() {
 		}));
 });
 
-// Compile critical.css https://goo.gl/SoxZIL
-gulp.task('critical', function() {
-	return gulp.src([
-			'assets/src/styles/critical.scss'
-		])
-		.pipe(changed('styles', {
-			extension: '.scss'
-		}))
-		.pipe(sass())
-		.on('error', swallowError)
-		.pipe(autoprefixer({
-			browsers: ['last 1 version']
-		}))
-		.pipe(csscomb())
-		.pipe(gulp.dest('assets/css'))
-		.pipe(rename({
-			suffix: '-css',
-			extname: '.php'
-		}))
-		.pipe(minifyCSS())
-		.pipe(gulp.dest('assets/css'));
-});
-
 // Compile Editor Stylesheets
 gulp.task('wpeditor', function() {
 	return gulp.src([
@@ -127,17 +104,17 @@ function swallowError(error) {
 // Concatenate And Minify JavaScript
 gulp.task('scripts', function() {
 	return gulp.src([
-			'src/scripts/**/*.js'
+			'assets/src/scripts/**/*.js'
 		])
 		//.pipe(concat('main.js'))
-		.pipe(gulp.dest('js'))
+		.pipe(gulp.dest('assets/js'))
 		.pipe(rename({
 			suffix: '.min'
 		}))
 		.pipe(uglify({
 			preserveComments: 'some'
 		}))
-		.pipe(gulp.dest('js'));
+		.pipe(gulp.dest('assets/js'));
 });
 
 // Build and serve the output
@@ -159,5 +136,5 @@ gulp.task('serve', ['styles'], function() {
 
 // Build Production Files, the Default Task
 gulp.task('default', function(cb) {
-	runSequence('styles', ['hybrid', 'critical', 'wpeditor', 'scripts', 'images'], cb);
+	runSequence('styles', ['hybrid', 'wpeditor', 'scripts', 'images'], cb);
 });
