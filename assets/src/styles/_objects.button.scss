@@ -12,7 +12,6 @@ button {
   min-width: $button-min-width;
   padding: 0 $button-padding;
   display: inline-block;
-  @include typo-button();
   overflow: hidden;
   will-change: box-shadow, transform;
   transition: box-shadow 0.2s $animation-curve-fast-out-linear-in,

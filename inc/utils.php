@@ -6,10 +6,13 @@ add_filter('hybrid_content_template_hierarchy', __NAMESPACE__.'\\template_hierar
 add_filter('get_search_form', __NAMESPACE__.'\\get_search_form');
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 add_filter('excerpt_length', __NAMESPACE__.'\\excerpt_length');
-add_filter('the_content', __NAMESPACE__.'\\remove_empty_p', 20, 1);
 add_action('after_setup_theme', __NAMESPACE__.'\\responsive_videos', 99);
-add_action('gform_user_registered', __NAMESPACE__.'\\autologin', 10, 4);
+//add_action('gform_user_registered', __NAMESPACE__.'\\autologin', 10, 4);
 add_filter('show_admin_bar', '__return_false');
+
+add_filter( 'gform_replace_merge_tags', __NAMESPACE__.'\\meh_reload_form_replace_merge_tag', 10, 2 );
+
+
 
 function template_hierarchy($templates) {
         $post_type = get_post_type();
@@ -48,14 +51,6 @@ function excerpt_length($length) {
     return 40;
 }
 
-function remove_empty_p($content) {
-    $content = force_balance_tags($content);
-    $return  = preg_replace('#<p>\s*+(<br\s*/*>)?\s*</p>#i', '', $content);
-    $return  = preg_replace('~\s?<p>(\s|&nbsp;)+</p>\s?~', '', $return);
-
-    return $return;
-}
-
 function responsive_videos() {
     add_filter('wp_video_shortcode', __NAMESPACE__.'\\responsive_videos_embed_html');
     add_filter('embed_oembed_html', __NAMESPACE__.'\\responsive_videos_embed_html');
@@ -80,6 +75,22 @@ function responsive_videos_embed_html($html) {
 
 
 
-function autologin($user_id, $config, $entry, $password) {
-        wp_set_auth_cookie($user_id, false, '');
+// function autologin($user_id, $config, $entry, $password) {
+//         wp_set_auth_cookie($user_id, false, '');
+// }
+
+
+function meh_reload_form_replace_merge_tag($text, $form) {
+
+    preg_match_all('/{(reload_form):?([\s\w.,!?\'"]*)}/mi', $text, $matches, PREG_SET_ORDER);
+
+    if(empty($matches))
+        return $text;
+
+    $link_text = rgar($matches[0], 2) ? rgar($matches[0], 2) : 'Reload Form';
+    $reload_link = '<a href="" class="btn btn--default button--colored gws-reload-form">' . $link_text . ' <i class="material-icons">&#xE147;</i></a>';
+    $text = str_replace(rgar($matches[0], 0), $reload_link, $text);
+
+    return $text;
+
 }

@@ -4,7 +4,8 @@
 // Raised buttons
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"],
+.btn--default {
   background: $button-primary-color;
   //@include shadow-2dp();
 
