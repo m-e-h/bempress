@@ -7,7 +7,7 @@ global $mehsc_atts;
 
 <div class="<?php echo esc_attr($mehsc_atts['width']); ?> grid__item px2 mb3">
 
-<div class="<?php echo esc_attr($mehsc_atts['card_color']); ?> card shadow2 overflow-hidden br">
+<div class="<?php echo esc_attr($mehsc_atts['card_color']); ?> card shadow2 overflow-hidden u-br">
         <?php
             get_the_image(array(
                 'size'         => 'bempress-sm',

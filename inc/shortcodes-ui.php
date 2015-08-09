@@ -48,7 +48,7 @@ if (!function_exists('shortcode_ui_register_for_shortcode')) {
                     'label'   => 'Cards Per Row',
                     'attr'    => 'width',
                     'type'    => 'select',
-                    'value'   => 'u-1of1@md',
+                    'value'   => 'u-1/1@md',
                     'options' => array(
                         'u-1/1@md' => 'One',
                         'u-1/2@md' => 'Two',
@@ -129,7 +129,7 @@ if (!function_exists('shortcode_ui_register_for_shortcode')) {
                     'label'   => 'Blocks Per Row',
                     'attr'    => 'width',
                     'type'    => 'select',
-                    'value'   => 'u-1of1@md',
+                    'value'   => 'u-1/1@md',
                     'options' => array(
                         'u-1/1@md' => 'One',
                         'u-1/2@md' => 'Two',

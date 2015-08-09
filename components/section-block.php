@@ -7,7 +7,7 @@ global $mehsc_atts;
 
 <div class="<?php echo esc_attr($mehsc_atts['width']); ?> grid__item flex flexed--auto u-ph- u-pb">
 
-    <div id="post-<?php the_ID(); ?>" class="<?php echo esc_attr($mehsc_atts['block_type']); ?> block__content shadow--z1 flexed--auto t-bg--white u-radius flex">
+    <div id="post-<?php the_ID(); ?>" class="<?php echo esc_attr($mehsc_atts['block_type']); ?> block__content shadow--z1 flexed--auto t-bg--white u-br flex">
 
     <?php if (!empty($mehsc_atts['icon'])) : ?>
 
