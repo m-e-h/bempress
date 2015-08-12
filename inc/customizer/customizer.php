@@ -27,14 +27,7 @@ function bempress_customize_register($wp_customize) {
     // Customize title and tagline sections and labels
     $wp_customize->get_setting('blogname')->transport         = 'postMessage';
     $wp_customize->get_setting('blogdescription')->transport  = 'postMessage';
-    $wp_customize->get_control('header_textcolor')->section   = 'title_tagline';
     $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
-    $wp_customize->get_control('page_for_posts')->label       = esc_html__('Blog page', 'bempress');
-
-    // Customize Background Settings
-    $wp_customize->get_setting('background_color')->transport = 'postMessage';
-    $wp_customize->get_control('background_color')->section   = 'background_image';
-    $wp_customize->get_section('background_image')->title     = esc_html__('Background', 'bempress');
 
     // Theme layouts
     $wp_customize->get_setting('theme_layout')->transport = 'refresh';
@@ -64,6 +57,7 @@ function bempress_customize_register($wp_customize) {
         array(
             'default'    => 1,
             'capability' => 'edit_theme_options',
+            //'transport'  => 'postMessage',
         )
     );
 
@@ -216,10 +210,17 @@ function bempress_customize_register($wp_customize) {
 
 // Custom js for theme customizer
 function bempress_customizer_js() {
+
+    /* Use the .min script if SCRIPT_DEBUG is turned off. */
+    $suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+
     wp_enqueue_script(
-    'bempress_theme_customizer',
-    get_template_directory_uri().'/js/theme-customizer.js',
-    array('jquery', 'customize-preview'), '', true);
+        'bempress_theme_customizer',
+        trailingslashit( get_template_directory_uri() ) . "assets/js/customizer{$suffix}.js",
+        array( 'customize-preview' ),
+        null,
+        true
+    );
 }
 
 /**

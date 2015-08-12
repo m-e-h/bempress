@@ -434,7 +434,6 @@ input[type="submit"],
 button {
     display: inline-block;
     overflow: hidden;
-    min-width: 64px;
     height: 36px;
     padding: 0 8px;
     border: none;

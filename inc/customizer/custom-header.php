@@ -8,8 +8,6 @@
  * Set up the WordPress core custom header feature.
  *
  * @uses bempress_header_style()
- * @uses bempress_admin_header_style()
- * @uses bempress_admin_header_image()
  */
 function bempress_custom_header_setup() {
     add_theme_support('custom-header', apply_filters('bempress_custom_header_args',
@@ -20,8 +18,6 @@ function bempress_custom_header_setup() {
             'height'             => 500,
             'flex-width'         => true,
             'flex-height'        => true,
-            'header-text'        => true,
-            'uploads'            => true,
             'wp-head-callback'   => 'bempress_header_style',
         )
     ));
