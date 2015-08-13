@@ -82,11 +82,56 @@ body.custom-background {
 
 
 // Login Form
+.panel {
+    transform: translateY(-100%);
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    //overflow-y: auto;
+    background: #FFF;
+    //visibility: hidden;
+    transition: .2s;
+
+    &.is-visible {
+        visibility: visible;
+        transform: translateY(0);
+        @include shadow-6dp();
+    }
+}
+
+.panel-btn {
+    position: absolute;
+    color: white;
+    right: 0;
+    z-index: 1011;
+
+    &.is-active {
+        color: black;
+    }
+}
+
+.logged-in .panel-btn {
+font-family: sans-serif;
+position: fixed;
+}
+
+
+
+.login-username {
+    display: inline-block;
+}
+
+.login-password {
+    display: inline-block;
+}
+
 .login-remember {
     display: inline-block;
-    width: 60%;
-    margin: 0;
-    font-size: 14px;
+    // width: 60%;
+    // margin: 0;
+    // font-size: 14px;
 }
 #rememberme {
     display: inline-block;
@@ -95,10 +140,10 @@ body.custom-background {
 
 .login-submit {
 display: inline-block;
-width:40%;
-text-align: right;
-    #wp-submit {
-    }
+// width:40%;
+// text-align: right;
+//     #wp-submit {
+//     }
 }
 
 
@@ -134,7 +179,7 @@ text-align: right;
 /**
  * Sets dropdown link to relative positioning
  */
-.menu-item-has-children {
+.has-dropdown {
   position: relative;
 }
 
@@ -143,7 +188,7 @@ text-align: right;
  * Styling for the dropdown content.
  * Hides the content by default.
  */
-.sub-menu {
+.dropdown {
   position: absolute;
   top: 100%;
   display: none;
@@ -170,8 +215,8 @@ text-align: right;
 /**
  * Remove list-style and margin-left from dropdown menu lists
  */
-.sub-menu ul,
-.sub-menu ol {
+.dropdown ul,
+.dropdown ol {
   margin-left: 0;
   list-style: none;
 }
@@ -179,7 +224,7 @@ text-align: right;
 /**
  * When a dropdown is active, display it.
  */
-.sub-menu.is-active {
+.dropdown.is-active {
   display: block;
   visibility: visible;
 }
@@ -187,7 +232,7 @@ text-align: right;
 /**
  * If dropdown link is near the right edge of the screen, shift the dropdown menu position to avoid content clipping.
  */
-.sub-menu.dropdown-right {
+.dropdown.dropdown-right {
   right: 0;
   left: auto;
   min-width: 300px;
@@ -202,7 +247,7 @@ text-align: right;
    * Switch dropdown content to relative positioning.
    * Remove styling.
    */
-  .js-drop .sub-menu {
+  .js-drop .dropdown {
     position: relative;
     float: none;
     border: none;

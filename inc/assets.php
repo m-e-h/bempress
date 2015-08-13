@@ -27,32 +27,32 @@ function assets() {
     );
 
     wp_enqueue_script(
+        'meh_component-handler',
+        trailingslashit(get_template_directory_uri())."assets/js/mdlComponentHandler{$suffix}.js",
+        false, null, true
+    );
+
+    wp_enqueue_script(
         'meh_classlist',
         trailingslashit(get_template_directory_uri())."assets/js/classList{$suffix}.js",
         false, null, true
     );
 
-    // wp_enqueue_script(
-    //     'meh_buoy',
-    //     trailingslashit(get_template_directory_uri())."assets/js/buoy{$suffix}.js",
-    //     false, null, true
-    // );
+    wp_enqueue_script(
+        'meh_dropdowns',
+        trailingslashit(get_template_directory_uri())."assets/js/dropdowns{$suffix}.js",
+        false, null, true
+    );
 
     wp_register_script(
         'meh_tabs',
-        trailingslashit(get_template_directory_uri())."assets/js/tabby{$suffix}.js",
+        trailingslashit(get_template_directory_uri())."assets/js/tabs{$suffix}.js",
         false, null, true
     );
 
     wp_register_script(
         'meh_toggles',
-        trailingslashit(get_template_directory_uri())."assets/js/houdini{$suffix}.js",
-        false, null, true
-    );
-
-    wp_enqueue_script(
-        'meh_drop',
-        trailingslashit(get_template_directory_uri())."assets/js/drop{$suffix}.js",
+        trailingslashit(get_template_directory_uri())."assets/js/toggles{$suffix}.js",
         false, null, true
     );
 

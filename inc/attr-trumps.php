@@ -94,7 +94,13 @@ class Attr_Trumps {
             // FOOTER
             'footer'                  => 'bg-2 color-inherit',
 
-            'menu_link'                 => 'btn'
+            'menu_link'                 => 'btn menu-link',
+            'current_page_item'         => 'is-active',
+            'current_page_parent'       => 'is-active',
+            'current_page_ancestor'     => 'is-active',
+            'current-menu-item'         => 'is-active',
+            'menu-item-has-children'    => 'has-dropdown js-dropdown',
+            'sub-menu'                  => 'dropdown',
         );
 
         $this->args = apply_filters('attr_trumps_args', wp_parse_args($args, $defaults));
@@ -144,6 +150,8 @@ class Attr_Trumps {
         add_filter('hybrid_attr_comments-area',         array($this, 'comments_area'));
 
         add_filter('nav_menu_link_attributes',          array($this, 'menu_link'), 10, 3);
+
+        add_filter ('wp_nav_menu',                      array($this, 'nav_menu_filters'));
     }
 
 
@@ -436,6 +444,20 @@ class Attr_Trumps {
         $attr['class'] = $this->args['menu_link'];
         return $attr;
     }
+
+    public function nav_menu_filters($text){
+      $replace = array(
+        //List of menu item classes that should be changed to "active"
+        'current_page_item' => $this->args['current_page_item'],
+        'current_page_parent' => $this->args['current_page_parent'],
+        'current_page_ancestor' => $this->args['current_page_ancestor'],
+        'current-menu-item' => $this->args['current-menu-item'],
+        'menu-item-has-children' => $this->args['menu-item-has-children'],
+        'sub-menu' => $this->args['sub-menu'],
+      );
+      $text = str_replace(array_keys($replace), $replace, $text);
+        return $text;
+      }
 
 }
 

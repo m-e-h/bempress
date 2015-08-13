@@ -12,7 +12,6 @@ $bempress_includes = array(
     'inc/init.php',                     // Initial theme setup
     'inc/assets.php',                   // Scripts and styles
     'inc/titles.php',                   // Page titles
-    //'inc/html-min.php',                 // Minify html output
     'inc/tiny-mce.php',                 // Extra wysiwyg actions
     'inc/shortcodes.php',               // Shortcodes
     'inc/shortcodes-ui.php',            // Shortcake interface

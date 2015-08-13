@@ -29,8 +29,8 @@
 
 	// Default settings
 	var defaults = {
-		toggleActiveClass: 'active',
-		contentActiveClass: 'active',
+		toggleActiveClass: 'is-active',
+		contentActiveClass: 'is-active',
 		initClass: 'js-drop',
 		callbackBefore: function () {},
 		callbackAfter: function () {}
@@ -171,9 +171,9 @@
 	drop.closeDrops = function () {
 
 		// Selectors and variables
-		var dropToggle = document.querySelectorAll('.menu-item-has-children > a.' + settings.toggleActiveClass);
-		var dropWrapper = document.querySelectorAll('.menu-item-has-children.' + settings.toggleActiveClass);
-		var dropContent = document.querySelectorAll('.sub-menu.' + settings.contentActiveClass);
+		var dropToggle = document.querySelectorAll('.js-dropdown > a.' + settings.toggleActiveClass);
+		var dropWrapper = document.querySelectorAll('.js-dropdown.' + settings.toggleActiveClass);
+		var dropContent = document.querySelectorAll('.dropdown.' + settings.contentActiveClass);
 
 		if ( dropToggle.length > 0 || dropWrapper.length > 0 || dropContent.length > 0 ) {
 
@@ -206,11 +206,11 @@
 	 */
 	 var eventHandler = function (event) {
 			 var toggle = event.target;
-			 var menu = getClosest(toggle, '.sub-menu');
-			 if ( menu && toggle !== document.documentElement && !toggle.parentNode.classList.contains( 'menu-item-has-children' ) ) {
+			 var menu = getClosest(toggle, '.dropdown');
+			 if ( menu && toggle !== document.documentElement && !toggle.parentNode.classList.contains( 'js-dropdown' ) ) {
 					 // If dropdown menu, do nothing
 					 return;
-			 } else if ( toggle !== document.documentElement && toggle.parentNode.classList.contains( 'menu-item-has-children' ) ) {
+			 } else if ( toggle !== document.documentElement && toggle.parentNode.classList.contains( 'js-dropdown' ) ) {
 					 // If dropdown toggle element, toggle dropdown menu
 					 event.preventDefault();
 					 drop.toggleDrop(toggle, settings);
@@ -264,3 +264,8 @@
 	return drop;
 
 });
+
+
+( function() {
+    drop.init();
+})();

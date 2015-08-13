@@ -11,7 +11,7 @@ if (has_nav_menu('primary')) : ?>
                 'menu_id'        => 'menu-primary__list',
                 'menu_class'     => 'menu__list menu-primary__list inline-block',
                 'fallback_cb'    => '',
-                'items_wrap'     => '<div class="grid"><ul id="%s" class="%s">%s</ul>' . doc_login_drop() . '</div>'
+                'items_wrap'     => '<ul id="%s" class="%s">%s</ul>'
             ));
         ?>
     </nav>

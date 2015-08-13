@@ -7,15 +7,14 @@ function doc_login_drop() {
     if ( is_user_logged_in() ) {
     $username = $current_user->display_name;
 } else {
-    $username = 'Sign In';
+    $username = 'account_circle';
 }
 
 ob_start();
 ?>
 
-    <div class="menu-item-has-children inline-block">
-    <a class="btn" href="#"><?php echo $username ?></a>
-    <div class="sub-menu p2 black dropdown-right br shadow6">
+
+    <div class="panel p2 black">
     <?php
         if ( is_user_logged_in() ) {
 
@@ -33,7 +32,8 @@ ob_start();
     	echo wp_login_form( array( 'echo' => false ) ). '<p class="small mt2 center"><a href="' . wp_lostpassword_url() . '" title="Lost Password">Forgot password?</a></p>';
         } ?>
     </div>
-    </div>
+    <button class="material-icons js-drop-panel panel-btn"><?php echo $username ?></button>
+
 
 <?php
     $output = ob_get_clean();
