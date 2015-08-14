@@ -89,7 +89,7 @@ if (!function_exists('shortcode_ui_register_for_shortcode')) {
                     'label'    => 'Select Page',
                     'attr'     => 'page',
                     'type'     => 'post_select',
-                    'query'    => array('post_type' => 'department'),
+                    'query'    => array('post_type' => 'page'),
                     'multiple' => true,
                ),
            ),
