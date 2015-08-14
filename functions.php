@@ -15,10 +15,9 @@ $bempress_includes = array(
     'inc/tiny-mce.php',                 // Extra wysiwyg actions
     'inc/shortcodes.php',               // Shortcodes
     'inc/shortcodes-ui.php',            // Shortcake interface
-    //'inc/metaboxes.php',                // Custom admin sections
+    'inc/tha-theme-hooks.php',          // Template hooks
+    'inc/template-actions.php',         // Action hooks
     'inc/customizer/customizer.php',    // Customizer
-
-    'inc/log-in-form.php',               // Shortcodes
 );
 
 foreach ($bempress_includes as $file) {

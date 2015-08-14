@@ -1,4 +1,7 @@
 <?php if (!have_posts()) : ?>
+
+<?php tha_entry_before(); ?>
+
 <section <?php hybrid_attr('post'); ?>>
 
     <div <?php hybrid_attr('entry-summary'); ?>>
@@ -9,6 +12,9 @@
     <?php get_search_form(); ?>
 
 </section>
+
+<?php tha_entry_after(); ?>
+
 <?php endif; ?>
 
 <?php while (have_posts()) : the_post(); ?>

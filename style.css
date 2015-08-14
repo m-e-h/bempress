@@ -526,6 +526,12 @@ button.button--colored:focus:not(:active) {
 }
 
 .container--wide {
+    max-width: 84em;
+    margin-right: auto; 
+    margin-left: auto;
+}
+
+.container--full {
     max-width: 100%;
     margin-right: auto; 
     margin-left: auto;
@@ -733,6 +739,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
     width: auto;
+    margin-bottom: 0.5em;
 }
 
 /* #BREADCRUMBS
@@ -1866,80 +1873,6 @@ body.custom-background {
 
 .gallery-caption {
     display: block;
-}
-
-.panel {
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    -webkit-transition: 0.2s;
-    transition: 0.2s; 
-    -webkit-transform: translateY(-100%);
-    -ms-transform: translateY(-100%);
-    transform: translateY(-100%);
-}
-.panel.is-visible {
-    visibility: visible;
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2); 
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-}
-
-.panel-btn {
-    position: absolute;
-    z-index: 1011; 
-    right: 0;
-    color: white;
-}
-.panel-btn.is-active {
-    color: black;
-}
-
-.logged-in .panel-btn {
-    position: fixed; 
-    font-family: sans-serif;
-}
-
-.login-username {
-    display: inline-block;
-}
-
-.login-password {
-    display: inline-block;
-}
-
-.login-remember {
-    display: inline-block;
-}
-
-#rememberme {
-    display: inline-block;
-    width: auto;
-}
-
-.login-submit {
-    display: inline-block;
-}
-
-.favorites-list > li {
-    display: block;
-}
-
-.simplefavorite-button {
-    color: #0059a6;
-}
-
-.simplefavorite-button.active {
-    color: white; 
-    background-color: #0d8eff;
-}
-
-.avatar-60 {
-    border-radius: 50%;
 }
 
 /**

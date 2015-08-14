@@ -54,4 +54,5 @@ input[type="reset"],
 input[type="submit"] {
     @extend .button;
     width: auto;
+    margin-bottom: .5em;
 }

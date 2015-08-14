@@ -3,6 +3,8 @@ function DropPanel(element) {
     'use strict';
     this.element_ = element;
     this.init();
+    document.getElementById("user_login").placeholder = "Username or Email";
+    document.getElementById("user_pass").placeholder = "Password";
 }
 
 DropPanel.prototype.init = function() {

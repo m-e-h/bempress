@@ -33,6 +33,7 @@ function setup() {
     // http://codex.wordpress.org/Function_Reference/register_nav_menus
     register_nav_menus(array(
       'primary' => __('Primary', 'bempress'),
+      'logged-in' => __('Logged In', 'bempress'),
     ));
 
   // http://codex.wordpress.org/Post_Formats

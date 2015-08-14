@@ -34,15 +34,15 @@ class Attr_Trumps {
             'site_container'          => 'mt2 mt3@md',
             'container'               => '',
             'container_header'        => '',
-            'container_wide'          => 'mt0 container--wide',
+            'container_wide'          => 'mt0 container--full',
             'row'                     => '',
             'row_layout'              => 'grid',
             'row_layout_sidebar_l'    => 'grid mxn2@md grid--rev flex',
             'row_layout_sidebar_r'    => 'grid mxn2@md flex',
 
             // SITE HEADER
-            'header'                  => 'bg-1 bg-cover bg-fixed bg-no-repeat bg-center white flex flex-column@sm flex-justify flex-center',
-            'branding'                => 'px3@md py2@md inline-block color-inherit',
+            'header'                  => 'bg-1 bg-cover bg-fixed bg-no-repeat bg-center white',
+            'branding'                => 'mr3 px3 px1@md py2 inline-block color-inherit',
             'site_title'              => 'm0 color-inherit',
             'site_description'        => 'h3 bold m0 muted',
 
